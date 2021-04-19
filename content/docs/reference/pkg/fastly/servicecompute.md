@@ -23,19 +23,60 @@ on their documentation site for guidance.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeBackendArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeBigqueryloggingArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeBlobstorageloggingArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeDomainArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeGcsloggingArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeHealthcheckArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeHttpsloggingArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLogentryArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingCloudfileArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingDatadogArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingDigitaloceanArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingElasticsearchArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingFtpArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingGooglepubsubArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingHerokuArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingHoneycombArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingKafkaArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingKineseArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingLogglyArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingLogshuttleArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingNewrelicArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingOpenstackArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingScalyrArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingSftpArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceComputePackageArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputePapertrailArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeS3loggingArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeSplunkArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeSumologicArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeSyslogArgs]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceCompute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceCompute</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceCompute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceCompute</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceCompute</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceComputeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -70,22 +111,32 @@ on their documentation site for guidance.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceComputeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -94,7 +145,7 @@ on their documentation site for guidance.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -118,7 +169,7 @@ on their documentation site for guidance.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -871,7 +922,7 @@ Defined below.
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">Service<wbr>Compute<wbr>Domain[]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Domain<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-required"
@@ -880,7 +931,7 @@ Defined below.
 <a href="#package_nodejs" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">pulumi<wbr>Input<Service<wbr>Compute<wbr>Package<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
@@ -890,7 +941,7 @@ Defined below.
 <a href="#activate_nodejs" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +950,7 @@ Defined below.
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">Service<wbr>Compute<wbr>Backend[]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Backend<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -910,7 +961,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">Service<wbr>Compute<wbr>Bigquerylogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -920,7 +971,7 @@ Defined below.
 <a href="#blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Service<wbr>Compute<wbr>Blobstoragelogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -930,7 +981,7 @@ Defined below.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +990,7 @@ Defined below.
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -949,7 +1000,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">Service<wbr>Compute<wbr>Gcslogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Gcslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -959,7 +1010,7 @@ Defined below.
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">Service<wbr>Compute<wbr>Healthcheck[]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Healthcheck<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +1019,7 @@ Defined below.
 <a href="#httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">Service<wbr>Compute<wbr>Httpslogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Httpslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -978,7 +1029,7 @@ Defined below.
 <a href="#logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">Service<wbr>Compute<wbr>Logentry[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logentry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -988,7 +1039,7 @@ Defined below.
 <a href="#loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Service<wbr>Compute<wbr>Logging<wbr>Cloudfile[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -998,7 +1049,7 @@ Defined below.
 <a href="#loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">Service<wbr>Compute<wbr>Logging<wbr>Datadog[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1008,7 +1059,7 @@ Defined below.
 <a href="#loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Service<wbr>Compute<wbr>Logging<wbr>Digitalocean[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1018,7 +1069,7 @@ Defined below.
 <a href="#loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1028,7 +1079,7 @@ Defined below.
 <a href="#loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">Service<wbr>Compute<wbr>Logging<wbr>Ftp[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1038,7 +1089,7 @@ Defined below.
 <a href="#logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1048,7 +1099,7 @@ Defined below.
 <a href="#loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">Service<wbr>Compute<wbr>Logging<wbr>Heroku[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1058,7 +1109,7 @@ Defined below.
 <a href="#logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Service<wbr>Compute<wbr>Logging<wbr>Honeycomb[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1068,7 +1119,7 @@ Defined below.
 <a href="#loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">Service<wbr>Compute<wbr>Logging<wbr>Kafka[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1078,7 +1129,7 @@ Defined below.
 <a href="#loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkinese">Service<wbr>Compute<wbr>Logging<wbr>Kinese[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkinese">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -1088,7 +1139,7 @@ Defined below.
 <a href="#logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">Service<wbr>Compute<wbr>Logging<wbr>Loggly[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1098,7 +1149,7 @@ Defined below.
 <a href="#logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Service<wbr>Compute<wbr>Logging<wbr>Logshuttle[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1108,7 +1159,7 @@ Defined below.
 <a href="#loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Service<wbr>Compute<wbr>Logging<wbr>Newrelic[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1118,7 +1169,7 @@ Defined below.
 <a href="#loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">Service<wbr>Compute<wbr>Logging<wbr>Openstack[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1128,7 +1179,7 @@ Defined below.
 <a href="#loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">Service<wbr>Compute<wbr>Logging<wbr>Scalyr[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1138,7 +1189,7 @@ Defined below.
 <a href="#loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">Service<wbr>Compute<wbr>Logging<wbr>Sftp[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -1148,7 +1199,7 @@ Defined below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1157,7 +1208,7 @@ Defined below.
 <a href="#papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">Service<wbr>Compute<wbr>Papertrail[]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Papertrail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -1167,7 +1218,7 @@ Defined below.
 <a href="#s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">Service<wbr>Compute<wbr>S3logging[]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>S3logging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -1177,7 +1228,7 @@ Defined below.
 <a href="#splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">Service<wbr>Compute<wbr>Splunk[]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Splunk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -1187,7 +1238,7 @@ Defined below.
 <a href="#sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">Service<wbr>Compute<wbr>Sumologic[]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Sumologic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -1197,7 +1248,7 @@ Defined below.
 <a href="#syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">Service<wbr>Compute<wbr>Syslog[]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Syslog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -1207,7 +1258,7 @@ Defined below.
 <a href="#versioncomment_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd></dl>
@@ -1220,7 +1271,7 @@ Defined below.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">Sequence[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">Input[Service<wbr>Compute<wbr>Domain<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-required"
@@ -1229,7 +1280,7 @@ Defined below.
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">Input[Service<wbr>Compute<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
@@ -1239,7 +1290,7 @@ Defined below.
 <a href="#activate_python" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1299,7 @@ Defined below.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">Sequence[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">Input[Service<wbr>Compute<wbr>Backend<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1259,7 +1310,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">Sequence[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">Input[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -1269,7 +1320,7 @@ Defined below.
 <a href="#blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Sequence[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Input[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -1279,7 +1330,7 @@ Defined below.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1339,7 @@ Defined below.
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -1298,7 +1349,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">Sequence[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">Input[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -1308,7 +1359,7 @@ Defined below.
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">Sequence[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">Input[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1368,7 @@ Defined below.
 <a href="#httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">Sequence[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">Input[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -1327,7 +1378,7 @@ Defined below.
 <a href="#logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">Sequence[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">Input[Service<wbr>Compute<wbr>Logentry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -1337,7 +1388,7 @@ Defined below.
 <a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Input[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -1347,7 +1398,7 @@ Defined below.
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">Input[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1357,7 +1408,7 @@ Defined below.
 <a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Input[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1367,7 +1418,7 @@ Defined below.
 <a href="#logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Input[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1377,7 +1428,7 @@ Defined below.
 <a href="#logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">Input[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1387,7 +1438,7 @@ Defined below.
 <a href="#logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Input[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1397,7 +1448,7 @@ Defined below.
 <a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">Input[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1407,7 +1458,7 @@ Defined below.
 <a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Input[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1417,7 +1468,7 @@ Defined below.
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">Input[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1427,7 +1478,7 @@ Defined below.
 <a href="#logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkinese">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkinese">Input[Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -1437,7 +1488,7 @@ Defined below.
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">Input[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1447,7 +1498,7 @@ Defined below.
 <a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Input[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1457,7 +1508,7 @@ Defined below.
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Input[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1467,7 +1518,7 @@ Defined below.
 <a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">Input[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1477,7 +1528,7 @@ Defined below.
 <a href="#logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">Input[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1487,7 +1538,7 @@ Defined below.
 <a href="#logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">Input[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -1497,7 +1548,7 @@ Defined below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1506,7 +1557,7 @@ Defined below.
 <a href="#papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">Sequence[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">Input[Service<wbr>Compute<wbr>Papertrail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -1516,7 +1567,7 @@ Defined below.
 <a href="#s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">Sequence[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">Input[Service<wbr>Compute<wbr>S3logging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -1526,7 +1577,7 @@ Defined below.
 <a href="#splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">Sequence[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">Input[Service<wbr>Compute<wbr>Splunk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -1536,7 +1587,7 @@ Defined below.
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">Sequence[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">Input[Service<wbr>Compute<wbr>Sumologic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -1546,7 +1597,7 @@ Defined below.
 <a href="#syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">Sequence[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">Input[Service<wbr>Compute<wbr>Syslog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -1556,7 +1607,7 @@ Defined below.
 <a href="#version_comment_python" style="color: inherit; text-decoration: inherit;">version_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd></dl>
@@ -1693,20 +1744,59 @@ Get an existing ServiceCompute resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceComputeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceCompute</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceComputeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceCompute</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeBlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeDomainArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeGcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeHttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeLoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[ServiceComputePackageArgs]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputePapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeS3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceComputeSyslogArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceCompute</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeBackendArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeBigqueryloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeBlobstorageloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeDomainArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeGcsloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeHealthcheckArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeHttpsloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLogentryArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingCloudfileArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingDatadogArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingDigitaloceanArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingElasticsearchArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingFtpArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingGooglepubsubArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingHerokuArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingHoneycombArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingKafkaArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingKineseArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingLogglyArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingLogshuttleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingNewrelicArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingOpenstackArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingScalyrArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeLoggingSftpArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">package</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceComputePackageArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputePapertrailArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeS3loggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeSplunkArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeSumologicArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceComputeSyslogArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ServiceCompute</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceCompute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceComputeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceCompute</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceCompute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceComputeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceCompute</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceCompute</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceComputeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceCompute</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceComputeState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2547,7 +2637,7 @@ Defined below.
 <a href="#state_activate_nodejs" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2556,7 +2646,7 @@ Defined below.
 <a href="#state_activeversion_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2565,7 +2655,7 @@ Defined below.
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">Service<wbr>Compute<wbr>Backend[]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Backend<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -2576,7 +2666,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">Service<wbr>Compute<wbr>Bigquerylogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -2586,7 +2676,7 @@ Defined below.
 <a href="#state_blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Service<wbr>Compute<wbr>Blobstoragelogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -2596,7 +2686,7 @@ Defined below.
 <a href="#state_clonedversion_nodejs" style="color: inherit; text-decoration: inherit;">cloned<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2694,7 @@ Defined below.
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2703,7 @@ Defined below.
 <a href="#state_domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">Service<wbr>Compute<wbr>Domain[]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Domain<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2712,7 @@ Defined below.
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -2632,7 +2722,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">Service<wbr>Compute<wbr>Gcslogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Gcslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -2642,7 +2732,7 @@ Defined below.
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">Service<wbr>Compute<wbr>Healthcheck[]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Healthcheck<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2741,7 @@ Defined below.
 <a href="#state_httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">Service<wbr>Compute<wbr>Httpslogging[]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Httpslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -2661,7 +2751,7 @@ Defined below.
 <a href="#state_logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">Service<wbr>Compute<wbr>Logentry[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logentry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -2671,7 +2761,7 @@ Defined below.
 <a href="#state_loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Service<wbr>Compute<wbr>Logging<wbr>Cloudfile[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -2681,7 +2771,7 @@ Defined below.
 <a href="#state_loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">Service<wbr>Compute<wbr>Logging<wbr>Datadog[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -2691,7 +2781,7 @@ Defined below.
 <a href="#state_loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Service<wbr>Compute<wbr>Logging<wbr>Digitalocean[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -2701,7 +2791,7 @@ Defined below.
 <a href="#state_loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -2711,7 +2801,7 @@ Defined below.
 <a href="#state_loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">Service<wbr>Compute<wbr>Logging<wbr>Ftp[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -2721,7 +2811,7 @@ Defined below.
 <a href="#state_logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -2731,7 +2821,7 @@ Defined below.
 <a href="#state_loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">Service<wbr>Compute<wbr>Logging<wbr>Heroku[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -2741,7 +2831,7 @@ Defined below.
 <a href="#state_logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Service<wbr>Compute<wbr>Logging<wbr>Honeycomb[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -2751,7 +2841,7 @@ Defined below.
 <a href="#state_loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">Service<wbr>Compute<wbr>Logging<wbr>Kafka[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -2761,7 +2851,7 @@ Defined below.
 <a href="#state_loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkinese">Service<wbr>Compute<wbr>Logging<wbr>Kinese[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkinese">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -2771,7 +2861,7 @@ Defined below.
 <a href="#state_logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">Service<wbr>Compute<wbr>Logging<wbr>Loggly[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -2781,7 +2871,7 @@ Defined below.
 <a href="#state_logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Service<wbr>Compute<wbr>Logging<wbr>Logshuttle[]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -2791,7 +2881,7 @@ Defined below.
 <a href="#state_loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Service<wbr>Compute<wbr>Logging<wbr>Newrelic[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -2801,7 +2891,7 @@ Defined below.
 <a href="#state_loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">Service<wbr>Compute<wbr>Logging<wbr>Openstack[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -2811,7 +2901,7 @@ Defined below.
 <a href="#state_loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">Service<wbr>Compute<wbr>Logging<wbr>Scalyr[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -2821,7 +2911,7 @@ Defined below.
 <a href="#state_loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">Service<wbr>Compute<wbr>Logging<wbr>Sftp[]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -2831,7 +2921,7 @@ Defined below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2930,7 @@ Defined below.
 <a href="#state_package_nodejs" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">pulumi<wbr>Input<Service<wbr>Compute<wbr>Package<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
@@ -2850,7 +2940,7 @@ Defined below.
 <a href="#state_papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">Service<wbr>Compute<wbr>Papertrail[]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Papertrail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -2860,7 +2950,7 @@ Defined below.
 <a href="#state_s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">Service<wbr>Compute<wbr>S3logging[]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>S3logging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -2870,7 +2960,7 @@ Defined below.
 <a href="#state_splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">Service<wbr>Compute<wbr>Splunk[]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Splunk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -2880,7 +2970,7 @@ Defined below.
 <a href="#state_sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">Service<wbr>Compute<wbr>Sumologic[]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Sumologic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -2890,7 +2980,7 @@ Defined below.
 <a href="#state_syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">Service<wbr>Compute<wbr>Syslog[]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Compute<wbr>Syslog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -2900,7 +2990,7 @@ Defined below.
 <a href="#state_versioncomment_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd></dl>
@@ -2913,7 +3003,7 @@ Defined below.
 <a href="#state_activate_python" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2922,7 +3012,7 @@ Defined below.
 <a href="#state_active_version_python" style="color: inherit; text-decoration: inherit;">active_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2931,7 +3021,7 @@ Defined below.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">Sequence[Service<wbr>Compute<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">Input[Service<wbr>Compute<wbr>Backend<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -2942,7 +3032,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">Sequence[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">Input[Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -2952,7 +3042,7 @@ Defined below.
 <a href="#state_blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Sequence[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">Input[Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -2962,7 +3052,7 @@ Defined below.
 <a href="#state_cloned_version_python" style="color: inherit; text-decoration: inherit;">cloned_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2970,7 +3060,7 @@ Defined below.
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2979,7 +3069,7 @@ Defined below.
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">Sequence[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">Input[Service<wbr>Compute<wbr>Domain<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -2988,7 +3078,7 @@ Defined below.
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -2998,7 +3088,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">Sequence[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">Input[Service<wbr>Compute<wbr>Gcslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -3008,7 +3098,7 @@ Defined below.
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">Sequence[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">Input[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3017,7 +3107,7 @@ Defined below.
 <a href="#state_httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">Sequence[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">Input[Service<wbr>Compute<wbr>Httpslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -3027,7 +3117,7 @@ Defined below.
 <a href="#state_logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">Sequence[Service<wbr>Compute<wbr>Logentry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">Input[Service<wbr>Compute<wbr>Logentry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -3037,7 +3127,7 @@ Defined below.
 <a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">Input[Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -3047,7 +3137,7 @@ Defined below.
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">Input[Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -3057,7 +3147,7 @@ Defined below.
 <a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">Input[Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -3067,7 +3157,7 @@ Defined below.
 <a href="#state_logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">Input[Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -3077,7 +3167,7 @@ Defined below.
 <a href="#state_logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">Input[Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -3087,7 +3177,7 @@ Defined below.
 <a href="#state_logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">Input[Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -3097,7 +3187,7 @@ Defined below.
 <a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">Input[Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -3107,7 +3197,7 @@ Defined below.
 <a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">Input[Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -3117,7 +3207,7 @@ Defined below.
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">Input[Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -3127,7 +3217,7 @@ Defined below.
 <a href="#state_logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkinese">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkinese">Input[Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -3137,7 +3227,7 @@ Defined below.
 <a href="#state_logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">Input[Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -3147,7 +3237,7 @@ Defined below.
 <a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">Input[Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -3157,7 +3247,7 @@ Defined below.
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">Input[Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -3167,7 +3257,7 @@ Defined below.
 <a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">Input[Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -3177,7 +3267,7 @@ Defined below.
 <a href="#state_logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">Input[Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -3187,7 +3277,7 @@ Defined below.
 <a href="#state_logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">Sequence[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">Input[Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -3197,7 +3287,7 @@ Defined below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3206,7 +3296,7 @@ Defined below.
 <a href="#state_package_python" style="color: inherit; text-decoration: inherit;">package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">Input[Service<wbr>Compute<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
@@ -3216,7 +3306,7 @@ Defined below.
 <a href="#state_papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">Sequence[Service<wbr>Compute<wbr>Papertrail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">Input[Service<wbr>Compute<wbr>Papertrail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -3226,7 +3316,7 @@ Defined below.
 <a href="#state_s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">Sequence[Service<wbr>Compute<wbr>S3logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">Input[Service<wbr>Compute<wbr>S3logging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -3236,7 +3326,7 @@ Defined below.
 <a href="#state_splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">Sequence[Service<wbr>Compute<wbr>Splunk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">Input[Service<wbr>Compute<wbr>Splunk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -3246,7 +3336,7 @@ Defined below.
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">Sequence[Service<wbr>Compute<wbr>Sumologic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">Input[Service<wbr>Compute<wbr>Sumologic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -3256,7 +3346,7 @@ Defined below.
 <a href="#state_syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">Sequence[Service<wbr>Compute<wbr>Syslog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">Input[Service<wbr>Compute<wbr>Syslog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -3266,7 +3356,7 @@ Defined below.
 <a href="#state_version_comment_python" style="color: inherit; text-decoration: inherit;">version_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd></dl>
@@ -3738,7 +3828,7 @@ Default `200`.
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -3747,7 +3837,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3756,7 +3846,7 @@ Default `200`.
 <a href="#autoloadbalance_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Loadbalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
@@ -3767,7 +3857,7 @@ Default `true`.
 <a href="#betweenbytestimeout_nodejs" style="color: inherit; text-decoration: inherit;">between<wbr>Bytes<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3776,7 +3866,7 @@ Default `true`.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
@@ -3786,7 +3876,7 @@ Default `1000`
 <a href="#errorthreshold_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3795,7 +3885,7 @@ Default `1000`
 <a href="#firstbytetimeout_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Byte<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3804,7 +3894,7 @@ Default `1000`
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3813,7 +3903,7 @@ Default `1000`
 <a href="#maxconn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
@@ -3823,7 +3913,7 @@ Default `200`.
 <a href="#maxtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3832,7 +3922,7 @@ Default `200`.
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3841,7 +3931,7 @@ Default `200`.
 <a href="#overridehost_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3850,7 +3940,7 @@ Default `200`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3859,7 +3949,7 @@ Default `200`.
 <a href="#shield_nodejs" style="color: inherit; text-decoration: inherit;">shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3868,7 +3958,7 @@ Default `200`.
 <a href="#sslcacert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3877,7 +3967,7 @@ Default `200`.
 <a href="#sslcerthostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3886,7 +3976,7 @@ Default `200`.
 <a href="#sslcheckcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Check<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3895,7 +3985,7 @@ Default `200`.
 <a href="#sslciphers_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3904,7 +3994,7 @@ Default `200`.
 <a href="#sslclientcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3913,7 +4003,7 @@ Default `200`.
 <a href="#sslclientkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3922,7 +4012,7 @@ Default `200`.
 <a href="#sslhostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -3931,7 +4021,7 @@ Default `200`.
 <a href="#sslsnihostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sni<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3940,7 +4030,7 @@ Default `200`.
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3949,7 +4039,7 @@ Default `200`.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 {{% /md %}}</dd></dl>
@@ -3962,7 +4052,7 @@ Default `200`.
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -3971,7 +4061,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3980,7 +4070,7 @@ Default `200`.
 <a href="#auto_loadbalance_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>loadbalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
@@ -3991,7 +4081,7 @@ Default `true`.
 <a href="#between_bytes_timeout_python" style="color: inherit; text-decoration: inherit;">between_<wbr>bytes_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4000,7 +4090,7 @@ Default `true`.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
@@ -4010,7 +4100,7 @@ Default `1000`
 <a href="#error_threshold_python" style="color: inherit; text-decoration: inherit;">error_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4019,7 +4109,7 @@ Default `1000`
 <a href="#first_byte_timeout_python" style="color: inherit; text-decoration: inherit;">first_<wbr>byte_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4028,7 +4118,7 @@ Default `1000`
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4037,7 +4127,7 @@ Default `1000`
 <a href="#max_conn_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
@@ -4047,7 +4137,7 @@ Default `200`.
 <a href="#max_tls_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4056,7 +4146,7 @@ Default `200`.
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4065,7 +4155,7 @@ Default `200`.
 <a href="#override_host_python" style="color: inherit; text-decoration: inherit;">override_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4074,7 +4164,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4083,7 +4173,7 @@ Default `200`.
 <a href="#shield_python" style="color: inherit; text-decoration: inherit;">shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4092,7 +4182,7 @@ Default `200`.
 <a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4101,7 +4191,7 @@ Default `200`.
 <a href="#ssl_cert_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4110,7 +4200,7 @@ Default `200`.
 <a href="#ssl_check_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>check_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4119,7 +4209,7 @@ Default `200`.
 <a href="#ssl_ciphers_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4128,7 +4218,7 @@ Default `200`.
 <a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4137,7 +4227,7 @@ Default `200`.
 <a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4146,7 +4236,7 @@ Default `200`.
 <a href="#ssl_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -4155,7 +4245,7 @@ Default `200`.
 <a href="#ssl_sni_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sni_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4164,7 +4254,7 @@ Default `200`.
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4173,7 +4263,7 @@ Default `200`.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 {{% /md %}}</dd></dl>
@@ -4320,7 +4410,7 @@ Default `200`.
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -4329,7 +4419,7 @@ Default `200`.
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-required"
@@ -4338,7 +4428,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -4347,7 +4437,7 @@ Default `200`.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -4356,7 +4446,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -4365,7 +4455,7 @@ Default `200`.
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4374,7 +4464,7 @@ Default `200`.
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4386,7 +4476,7 @@ Default `200`.
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -4395,7 +4485,7 @@ Default `200`.
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-required"
@@ -4404,7 +4494,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -4413,7 +4503,7 @@ Default `200`.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -4422,7 +4512,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -4431,7 +4521,7 @@ Default `200`.
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4440,7 +4530,7 @@ Default `200`.
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4642,7 +4732,7 @@ Default `200`.
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
 {{% /md %}}</dd><dt class="property-required"
@@ -4651,7 +4741,7 @@ Default `200`.
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
 {{% /md %}}</dd><dt class="property-required"
@@ -4660,7 +4750,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -4669,7 +4759,7 @@ Default `200`.
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4678,7 +4768,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4687,7 +4777,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4696,7 +4786,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4705,7 +4795,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4714,7 +4804,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4723,7 +4813,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -4736,7 +4826,7 @@ Default `200`.
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
 {{% /md %}}</dd><dt class="property-required"
@@ -4745,7 +4835,7 @@ Default `200`.
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
 {{% /md %}}</dd><dt class="property-required"
@@ -4754,7 +4844,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -4763,7 +4853,7 @@ Default `200`.
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4772,7 +4862,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4781,7 +4871,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4790,7 +4880,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4799,7 +4889,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4808,7 +4898,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4817,7 +4907,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -4876,7 +4966,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4885,7 +4975,7 @@ Default `200`.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
 {{% /md %}}</dd></dl>
@@ -4898,7 +4988,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4907,7 +4997,7 @@ Default `200`.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
 {{% /md %}}</dd></dl>
@@ -5092,7 +5182,7 @@ Default `200`.
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -5101,7 +5191,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5110,7 +5200,7 @@ Default `200`.
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5119,7 +5209,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5128,7 +5218,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5137,7 +5227,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5146,7 +5236,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5155,7 +5245,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5164,7 +5254,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -5177,7 +5267,7 @@ Default `200`.
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -5186,7 +5276,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5195,7 +5285,7 @@ Default `200`.
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5204,7 +5294,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5213,7 +5303,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5222,7 +5312,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5231,7 +5321,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5240,7 +5330,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5249,7 +5339,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -5470,7 +5560,7 @@ Default `200`.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
 {{% /md %}}</dd><dt class="property-required"
@@ -5479,7 +5569,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -5488,7 +5578,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5497,7 +5587,7 @@ Default `200`.
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5506,7 +5596,7 @@ Default `200`.
 <a href="#expectedresponse_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5515,7 +5605,7 @@ Default `200`.
 <a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5524,7 +5614,7 @@ Default `200`.
 <a href="#initial_nodejs" style="color: inherit; text-decoration: inherit;">initial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5533,7 +5623,7 @@ Default `200`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5542,7 +5632,7 @@ Default `200`.
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5551,7 +5641,7 @@ Default `200`.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5560,7 +5650,7 @@ Default `200`.
 <a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 {{% /md %}}</dd></dl>
@@ -5573,7 +5663,7 @@ Default `200`.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
 {{% /md %}}</dd><dt class="property-required"
@@ -5582,7 +5672,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -5591,7 +5681,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5600,7 +5690,7 @@ Default `200`.
 <a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5609,7 +5699,7 @@ Default `200`.
 <a href="#expected_response_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5618,7 +5708,7 @@ Default `200`.
 <a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5627,7 +5717,7 @@ Default `200`.
 <a href="#initial_python" style="color: inherit; text-decoration: inherit;">initial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5636,7 +5726,7 @@ Default `200`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5645,7 +5735,7 @@ Default `200`.
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5654,7 +5744,7 @@ Default `200`.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5663,7 +5753,7 @@ Default `200`.
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 {{% /md %}}</dd></dl>
@@ -5938,7 +6028,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -5947,7 +6037,7 @@ Default `200`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5956,7 +6046,7 @@ Default `200`.
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the `Content-Type` header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5965,7 +6055,7 @@ Default `200`.
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5974,7 +6064,7 @@ Default `200`.
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5983,7 +6073,7 @@ Default `200`.
 <a href="#jsonformat_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5992,7 +6082,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6001,7 +6091,7 @@ Default `200`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6010,7 +6100,7 @@ Default `200`.
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6019,7 +6109,7 @@ Default `200`.
 <a href="#requestmaxentries_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6028,7 +6118,7 @@ Default `200`.
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6037,7 +6127,7 @@ Default `200`.
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6046,7 +6136,7 @@ Default `200`.
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6055,7 +6145,7 @@ Default `200`.
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -6068,7 +6158,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6077,7 +6167,7 @@ Default `200`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6086,7 +6176,7 @@ Default `200`.
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the `Content-Type` header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6095,7 +6185,7 @@ Default `200`.
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6104,7 +6194,7 @@ Default `200`.
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6113,7 +6203,7 @@ Default `200`.
 <a href="#json_format_python" style="color: inherit; text-decoration: inherit;">json_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6122,7 +6212,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6131,7 +6221,7 @@ Default `200`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6140,7 +6230,7 @@ Default `200`.
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6149,7 +6239,7 @@ Default `200`.
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6158,7 +6248,7 @@ Default `200`.
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6167,7 +6257,7 @@ Default `200`.
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6176,7 +6266,7 @@ Default `200`.
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6185,7 +6275,7 @@ Default `200`.
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -6280,7 +6370,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6289,7 +6379,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6298,7 +6388,7 @@ Default `200`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6307,7 +6397,7 @@ Default `200`.
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -6320,7 +6410,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6329,7 +6419,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6338,7 +6428,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6347,7 +6437,7 @@ Default `200`.
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -6568,7 +6658,7 @@ Default `200`.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6577,7 +6667,7 @@ Default `200`.
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -6586,7 +6676,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6595,7 +6685,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6604,7 +6694,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6613,7 +6703,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6622,7 +6712,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6631,7 +6721,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6640,7 +6730,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6649,7 +6739,7 @@ Default `200`.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6658,7 +6748,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -6671,7 +6761,7 @@ Default `200`.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -6680,7 +6770,7 @@ Default `200`.
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -6689,7 +6779,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6698,7 +6788,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6707,7 +6797,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6716,7 +6806,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6725,7 +6815,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6734,7 +6824,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6743,7 +6833,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6752,7 +6842,7 @@ Default `200`.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6761,7 +6851,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -6838,7 +6928,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6847,7 +6937,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6856,7 +6946,7 @@ Default `200`.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd></dl>
@@ -6869,7 +6959,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -6878,7 +6968,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6887,7 +6977,7 @@ Default `200`.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd></dl>
@@ -7108,7 +7198,7 @@ Default `200`.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -7117,7 +7207,7 @@ Default `200`.
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -7126,7 +7216,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -7135,7 +7225,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7144,7 +7234,7 @@ Default `200`.
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -7153,7 +7243,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7162,7 +7252,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7171,7 +7261,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7180,7 +7270,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7189,7 +7279,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7198,7 +7288,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -7211,7 +7301,7 @@ Default `200`.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -7220,7 +7310,7 @@ Default `200`.
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -7229,7 +7319,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -7238,7 +7328,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7247,7 +7337,7 @@ Default `200`.
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -7256,7 +7346,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7265,7 +7355,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7274,7 +7364,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7283,7 +7373,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7292,7 +7382,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7301,7 +7391,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -7540,7 +7630,7 @@ Default `200`.
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
 {{% /md %}}</dd><dt class="property-required"
@@ -7549,7 +7639,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -7558,7 +7648,7 @@ Default `200`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7567,7 +7657,7 @@ Default `200`.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7576,7 +7666,7 @@ Default `200`.
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7585,7 +7675,7 @@ Default `200`.
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7594,7 +7684,7 @@ Default `200`.
 <a href="#requestmaxentries_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7603,7 +7693,7 @@ Default `200`.
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7612,7 +7702,7 @@ Default `200`.
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7621,7 +7711,7 @@ Default `200`.
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7630,7 +7720,7 @@ Default `200`.
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7639,7 +7729,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -7652,7 +7742,7 @@ Default `200`.
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
 {{% /md %}}</dd><dt class="property-required"
@@ -7661,7 +7751,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -7670,7 +7760,7 @@ Default `200`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7679,7 +7769,7 @@ Default `200`.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7688,7 +7778,7 @@ Default `200`.
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7697,7 +7787,7 @@ Default `200`.
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7706,7 +7796,7 @@ Default `200`.
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7715,7 +7805,7 @@ Default `200`.
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7724,7 +7814,7 @@ Default `200`.
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7733,7 +7823,7 @@ Default `200`.
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7742,7 +7832,7 @@ Default `200`.
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7751,7 +7841,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -7972,7 +8062,7 @@ Default `200`.
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -7981,7 +8071,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -7990,7 +8080,7 @@ Default `200`.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-required"
@@ -7999,7 +8089,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8008,7 +8098,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8017,7 +8107,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8026,7 +8116,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8035,7 +8125,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8044,7 +8134,7 @@ Default `200`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8053,7 +8143,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8062,7 +8152,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -8075,7 +8165,7 @@ Default `200`.
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8084,7 +8174,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8093,7 +8183,7 @@ Default `200`.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-required"
@@ -8102,7 +8192,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8111,7 +8201,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8120,7 +8210,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8129,7 +8219,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8138,7 +8228,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8147,7 +8237,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8156,7 +8246,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8165,7 +8255,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -8278,7 +8368,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8287,7 +8377,7 @@ Default `200`.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -8296,7 +8386,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -8305,7 +8395,7 @@ Default `200`.
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -8314,7 +8404,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -8327,7 +8417,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8336,7 +8426,7 @@ Default `200`.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -8345,7 +8435,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -8354,7 +8444,7 @@ Default `200`.
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -8363,7 +8453,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -8440,7 +8530,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8449,7 +8539,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8458,7 +8548,7 @@ Default `200`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd></dl>
@@ -8471,7 +8561,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8480,7 +8570,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8489,7 +8579,7 @@ Default `200`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd></dl>
@@ -8566,7 +8656,7 @@ Default `200`.
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8575,7 +8665,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8584,7 +8674,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd></dl>
@@ -8597,7 +8687,7 @@ Default `200`.
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -8606,7 +8696,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8615,7 +8705,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd></dl>
@@ -8904,7 +8994,7 @@ Default `200`.
 <a href="#brokers_nodejs" style="color: inherit; text-decoration: inherit;">brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
 {{% /md %}}</dd><dt class="property-required"
@@ -8913,7 +9003,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -8922,7 +9012,7 @@ Default `200`.
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8931,7 +9021,7 @@ Default `200`.
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8939,7 +9029,7 @@ Default `200`.
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8948,7 +9038,7 @@ Default `200`.
 <a href="#parselogkeyvals_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Log<wbr>Keyvals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8956,7 +9046,7 @@ Default `200`.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8965,7 +9055,7 @@ Default `200`.
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8974,7 +9064,7 @@ Default `200`.
 <a href="#requiredacks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Acks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8983,7 +9073,7 @@ Default `200`.
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8992,7 +9082,7 @@ Default `200`.
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9001,7 +9091,7 @@ Default `200`.
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9010,7 +9100,7 @@ Default `200`.
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9019,7 +9109,7 @@ Default `200`.
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9028,7 +9118,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -9041,7 +9131,7 @@ Default `200`.
 <a href="#brokers_python" style="color: inherit; text-decoration: inherit;">brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
 {{% /md %}}</dd><dt class="property-required"
@@ -9050,7 +9140,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9059,7 +9149,7 @@ Default `200`.
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9068,7 +9158,7 @@ Default `200`.
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9076,7 +9166,7 @@ Default `200`.
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9085,7 +9175,7 @@ Default `200`.
 <a href="#parse_log_keyvals_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>log_<wbr>keyvals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9093,7 +9183,7 @@ Default `200`.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9102,7 +9192,7 @@ Default `200`.
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9111,7 +9201,7 @@ Default `200`.
 <a href="#required_acks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>acks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9120,7 +9210,7 @@ Default `200`.
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9129,7 +9219,7 @@ Default `200`.
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9138,7 +9228,7 @@ Default `200`.
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9147,7 +9237,7 @@ Default `200`.
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9156,7 +9246,7 @@ Default `200`.
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9165,7 +9255,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -9278,7 +9368,7 @@ Default `200`.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -9287,7 +9377,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9296,7 +9386,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -9305,7 +9395,7 @@ Default `200`.
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9314,7 +9404,7 @@ Default `200`.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd></dl>
@@ -9327,7 +9417,7 @@ Default `200`.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -9336,7 +9426,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9345,7 +9435,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -9354,7 +9444,7 @@ Default `200`.
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9363,7 +9453,7 @@ Default `200`.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd></dl>
@@ -9422,7 +9512,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9431,7 +9521,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd></dl>
@@ -9444,7 +9534,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9453,7 +9543,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd></dl>
@@ -9530,7 +9620,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9539,7 +9629,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9548,7 +9638,7 @@ Default `200`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd></dl>
@@ -9561,7 +9651,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9570,7 +9660,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9579,7 +9669,7 @@ Default `200`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd></dl>
@@ -9638,7 +9728,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9647,7 +9737,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd></dl>
@@ -9660,7 +9750,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9669,7 +9759,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd></dl>
@@ -9890,7 +9980,7 @@ Default `200`.
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -9899,7 +9989,7 @@ Default `200`.
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -9908,7 +9998,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -9917,7 +10007,7 @@ Default `200`.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-required"
@@ -9926,7 +10016,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9935,7 +10025,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9944,7 +10034,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9953,7 +10043,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9962,7 +10052,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9971,7 +10061,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9980,7 +10070,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -9993,7 +10083,7 @@ Default `200`.
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -10002,7 +10092,7 @@ Default `200`.
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -10011,7 +10101,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10020,7 +10110,7 @@ Default `200`.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-required"
@@ -10029,7 +10119,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10038,7 +10128,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10047,7 +10137,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10056,7 +10146,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10065,7 +10155,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10074,7 +10164,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10083,7 +10173,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -10160,7 +10250,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10169,7 +10259,7 @@ Default `200`.
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10178,7 +10268,7 @@ Default `200`.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd></dl>
@@ -10191,7 +10281,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10200,7 +10290,7 @@ Default `200`.
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10209,7 +10299,7 @@ Default `200`.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd></dl>
@@ -10466,7 +10556,7 @@ Default `200`.
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -10475,7 +10565,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10484,7 +10574,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -10493,7 +10583,7 @@ Default `200`.
 <a href="#sshknownhosts_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
 {{% /md %}}</dd><dt class="property-required"
@@ -10502,7 +10592,7 @@ Default `200`.
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10511,7 +10601,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10520,7 +10610,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10529,7 +10619,7 @@ Default `200`.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10538,7 +10628,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10547,7 +10637,7 @@ Default `200`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10556,7 +10646,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10565,7 +10655,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10574,7 +10664,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -10587,7 +10677,7 @@ Default `200`.
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -10596,7 +10686,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10605,7 +10695,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -10614,7 +10704,7 @@ Default `200`.
 <a href="#ssh_known_hosts_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
 {{% /md %}}</dd><dt class="property-required"
@@ -10623,7 +10713,7 @@ Default `200`.
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10632,7 +10722,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10641,7 +10731,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10650,7 +10740,7 @@ Default `200`.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10659,7 +10749,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10668,7 +10758,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10677,7 +10767,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10686,7 +10776,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10695,7 +10785,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -10752,7 +10842,7 @@ Default `200`.
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to the Wasm deployment package within your local filesystem.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10761,7 +10851,7 @@ Default `200`.
 <a href="#sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10773,7 +10863,7 @@ Default `200`.
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to the Wasm deployment package within your local filesystem.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10782,7 +10872,7 @@ Default `200`.
 <a href="#source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10858,7 +10948,7 @@ Default `200`.
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -10867,7 +10957,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10876,7 +10966,7 @@ Default `200`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd></dl>
@@ -10889,7 +10979,7 @@ Default `200`.
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -10898,7 +10988,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10907,7 +10997,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd></dl>
@@ -11190,7 +11280,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -11199,7 +11289,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11208,7 +11298,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -11217,7 +11307,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11226,7 +11316,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11235,7 +11325,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11244,7 +11334,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11253,7 +11343,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11262,7 +11352,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#redundancy_nodejs" style="color: inherit; text-decoration: inherit;">redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11271,7 +11361,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#s3accesskey_nodejs" style="color: inherit; text-decoration: inherit;">s3Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS Access Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -11283,7 +11373,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 <a href="#s3secretkey_nodejs" style="color: inherit; text-decoration: inherit;">s3Secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS Secret Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -11295,7 +11385,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11303,7 +11393,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#serversideencryptionkmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11311,7 +11401,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -11324,7 +11414,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -11333,7 +11423,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11342,7 +11432,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -11351,7 +11441,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11360,7 +11450,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11369,7 +11459,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11378,7 +11468,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11387,7 +11477,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11396,7 +11486,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#redundancy_python" style="color: inherit; text-decoration: inherit;">redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11405,7 +11495,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#s3_access_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS Access Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -11417,7 +11507,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 <a href="#s3_secret_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS Secret Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -11429,7 +11519,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11437,7 +11527,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#server_side_encryption_kms_key_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11445,7 +11535,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -11558,7 +11648,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -11567,7 +11657,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -11576,7 +11666,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11585,7 +11675,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11594,7 +11684,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -11607,7 +11697,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -11616,7 +11706,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -11625,7 +11715,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11634,7 +11724,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11643,7 +11733,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -11720,7 +11810,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -11729,7 +11819,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11738,7 +11828,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd></dl>
@@ -11751,7 +11841,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -11760,7 +11850,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11769,7 +11859,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd></dl>
@@ -11972,7 +12062,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -11981,7 +12071,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11990,7 +12080,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11999,7 +12089,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12008,7 +12098,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12017,7 +12107,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12026,7 +12116,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12035,7 +12125,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12044,7 +12134,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12053,7 +12143,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -12066,7 +12156,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12075,7 +12165,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12084,7 +12174,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12093,7 +12183,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12102,7 +12192,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12111,7 +12201,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12120,7 +12210,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12129,7 +12219,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12138,7 +12228,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12147,7 +12237,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>

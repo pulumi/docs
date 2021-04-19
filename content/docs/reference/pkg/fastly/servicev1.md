@@ -26,19 +26,74 @@ Fastly Service can be imported using their service ID, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1AclArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1BackendArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1BigqueryloggingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1BlobstorageloggingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1CacheSettingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1ConditionArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DictionaryArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DirectorArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DomainArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DynamicsnippetArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1GcsloggingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1GzipArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1HeaderArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1HealthcheckArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1HttpsloggingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LogentryArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingCloudfileArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingDatadogArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingDigitaloceanArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingElasticsearchArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingFtpArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingGooglepubsubArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingHerokuArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingHoneycombArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingKafkaArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingKineseArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingLogglyArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingLogshuttleArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingNewrelicArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingOpenstackArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingScalyrArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingSftpArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1PapertrailArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1RequestSettingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1ResponseObjectArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1S3loggingArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SnippetArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SplunkArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SumologicArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SyslogArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1VclArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Servicev1WafArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicev1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicev1</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Servicev1</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">Servicev1Args</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +128,32 @@ Fastly Service can be imported using their service ID, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">Servicev1Args</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +162,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +186,7 @@ Fastly Service can be imported using their service ID, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1152,7 +1217,7 @@ Defined below.
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">Servicev1Domain[]</a></span>
+        <span class="property-type"><a href="#servicev1domain">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Domain<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1226,7 @@ Defined below.
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">Servicev1Acl[]</a></span>
+        <span class="property-type"><a href="#servicev1acl">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Acl<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.
 Defined below.
@@ -1171,7 +1236,7 @@ Defined below.
 <a href="#activate_nodejs" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1245,7 @@ Defined below.
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Servicev1Backend[]</a></span>
+        <span class="property-type"><a href="#servicev1backend">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Backend<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1191,7 +1256,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">Servicev1Bigquerylogging[]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Bigquerylogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -1201,7 +1266,7 @@ Defined below.
 <a href="#blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">Servicev1Blobstoragelogging[]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Blobstoragelogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -1211,7 +1276,7 @@ Defined below.
 <a href="#cachesettings_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">Servicev1Cache<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Cache<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override.
 Defined below.
@@ -1221,7 +1286,7 @@ Defined below.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1295,7 @@ Defined below.
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">Servicev1Condition[]</a></span>
+        <span class="property-type"><a href="#servicev1condition">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -1240,7 +1305,7 @@ configuration object in this service. Defined below.
 <a href="#defaulthost_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1314,7 @@ configuration object in this service. Defined below.
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The default Time-to-live (TTL) for
 requests.
@@ -1259,7 +1324,7 @@ requests.
 <a href="#dictionaries_nodejs" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">Servicev1Dictionary[]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Dictionary<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions.
 Defined below.
@@ -1269,7 +1334,7 @@ Defined below.
 <a href="#directors_nodejs" style="color: inherit; text-decoration: inherit;">directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">Servicev1Director[]</a></span>
+        <span class="property-type"><a href="#servicev1director">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Director<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`.
@@ -1280,7 +1345,7 @@ Defined below
 <a href="#dynamicsnippets_nodejs" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">Servicev1Dynamicsnippet[]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Dynamicsnippet<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.
 Defined below.
@@ -1290,7 +1355,7 @@ Defined below.
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -1300,7 +1365,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">Servicev1Gcslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Gcslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -1310,7 +1375,7 @@ Defined below.
 <a href="#gzips_nodejs" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">Servicev1Gzip[]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Gzip<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -1320,7 +1385,7 @@ content. Defined below.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">Servicev1Header[]</a></span>
+        <span class="property-type"><a href="#servicev1header">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Header<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request.
 Defined below.
@@ -1330,7 +1395,7 @@ Defined below.
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">Servicev1Healthcheck[]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Healthcheck<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1404,7 @@ Defined below.
 <a href="#httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Httpslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -1349,7 +1414,7 @@ Defined below.
 <a href="#logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry[]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logentry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -1359,7 +1424,7 @@ Defined below.
 <a href="#loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Cloudfile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -1369,7 +1434,7 @@ Defined below.
 <a href="#loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Datadog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1379,7 +1444,7 @@ Defined below.
 <a href="#loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Digitalocean<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1389,7 +1454,7 @@ Defined below.
 <a href="#loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Elasticsearch<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1399,7 +1464,7 @@ Defined below.
 <a href="#loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">Servicev1Logging<wbr>Ftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Ftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1409,7 +1474,7 @@ Defined below.
 <a href="#logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub[]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Googlepubsub<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1419,7 +1484,7 @@ Defined below.
 <a href="#loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Heroku<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1429,7 +1494,7 @@ Defined below.
 <a href="#logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb[]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Honeycomb<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1439,7 +1504,7 @@ Defined below.
 <a href="#loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Kafka<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1449,7 +1514,7 @@ Defined below.
 <a href="#loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Kinese<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -1459,7 +1524,7 @@ Defined below.
 <a href="#logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">Servicev1Logging<wbr>Loggly[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Loggly<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1469,7 +1534,7 @@ Defined below.
 <a href="#logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle[]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Logshuttle<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1479,7 +1544,7 @@ Defined below.
 <a href="#loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Newrelic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1489,7 +1554,7 @@ Defined below.
 <a href="#loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Openstack<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1499,7 +1564,7 @@ Defined below.
 <a href="#loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Scalyr<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1509,7 +1574,7 @@ Defined below.
 <a href="#loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">Servicev1Logging<wbr>Sftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Sftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -1519,7 +1584,7 @@ Defined below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1593,7 @@ Defined below.
 <a href="#papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">Servicev1Papertrail[]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Papertrail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -1538,7 +1603,7 @@ Defined below.
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">Servicev1Request<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Request<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers.
 Defined below
@@ -1548,7 +1613,7 @@ Defined below
 <a href="#responseobjects_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">Servicev1Response<wbr>Object[]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Response<wbr>Object<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1622,7 @@ Defined below
 <a href="#s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">Servicev1S3logging[]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1S3logging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -1567,7 +1632,7 @@ Defined below.
 <a href="#snippets_nodejs" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">Servicev1Snippet[]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Snippet<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.
 Defined below.
@@ -1577,7 +1642,7 @@ Defined below.
 <a href="#splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">Servicev1Splunk[]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Splunk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -1587,7 +1652,7 @@ Defined below.
 <a href="#sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">Servicev1Sumologic[]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Sumologic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -1597,7 +1662,7 @@ Defined below.
 <a href="#syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">Servicev1Syslog[]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Syslog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -1607,7 +1672,7 @@ Defined below.
 <a href="#vcls_nodejs" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">Servicev1Vcl[]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Vcl<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks.
 Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
@@ -1617,7 +1682,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#versioncomment_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1691,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1waf">Servicev1Waf</a></span>
+        <span class="property-type"><a href="#servicev1waf">pulumi<wbr>Input<Servicev1Waf<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A WAF configuration block.
 Defined below.
@@ -1640,7 +1705,7 @@ Defined below.
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">Sequence[Servicev1Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1domain">Input[Servicev1Domain<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1714,7 @@ Defined below.
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">Sequence[Servicev1Acl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1acl">Input[Servicev1Acl<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.
 Defined below.
@@ -1659,7 +1724,7 @@ Defined below.
 <a href="#activate_python" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1733,7 @@ Defined below.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Sequence[Servicev1Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1backend">Input[Servicev1Backend<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -1679,7 +1744,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">Sequence[Servicev1Bigquerylogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">Input[Servicev1Bigquerylogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -1689,7 +1754,7 @@ Defined below.
 <a href="#blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">Sequence[Servicev1Blobstoragelogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">Input[Servicev1Blobstoragelogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -1699,7 +1764,7 @@ Defined below.
 <a href="#cache_settings_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">Sequence[Servicev1Cache<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">Input[Servicev1Cache<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override.
 Defined below.
@@ -1709,7 +1774,7 @@ Defined below.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1783,7 @@ Defined below.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">Sequence[Servicev1Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1condition">Input[Servicev1Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -1728,7 +1793,7 @@ configuration object in this service. Defined below.
 <a href="#default_host_python" style="color: inherit; text-decoration: inherit;">default_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1802,7 @@ configuration object in this service. Defined below.
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The default Time-to-live (TTL) for
 requests.
@@ -1747,7 +1812,7 @@ requests.
 <a href="#dictionaries_python" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">Sequence[Servicev1Dictionary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">Input[Servicev1Dictionary<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions.
 Defined below.
@@ -1757,7 +1822,7 @@ Defined below.
 <a href="#directors_python" style="color: inherit; text-decoration: inherit;">directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">Sequence[Servicev1Director<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1director">Input[Servicev1Director<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`.
@@ -1768,7 +1833,7 @@ Defined below
 <a href="#dynamicsnippets_python" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">Sequence[Servicev1Dynamicsnippet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">Input[Servicev1Dynamicsnippet<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.
 Defined below.
@@ -1778,7 +1843,7 @@ Defined below.
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -1788,7 +1853,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">Sequence[Servicev1Gcslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">Input[Servicev1Gcslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -1798,7 +1863,7 @@ Defined below.
 <a href="#gzips_python" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">Sequence[Servicev1Gzip<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">Input[Servicev1Gzip<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -1808,7 +1873,7 @@ content. Defined below.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">Sequence[Servicev1Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1header">Input[Servicev1Header<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request.
 Defined below.
@@ -1818,7 +1883,7 @@ Defined below.
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">Sequence[Servicev1Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">Input[Servicev1Healthcheck<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1827,7 +1892,7 @@ Defined below.
 <a href="#httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">Sequence[Servicev1Httpslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">Input[Servicev1Httpslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -1837,7 +1902,7 @@ Defined below.
 <a href="#logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">Sequence[Servicev1Logentry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">Input[Servicev1Logentry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -1847,7 +1912,7 @@ Defined below.
 <a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">Sequence[Servicev1Logging<wbr>Cloudfile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">Input[Servicev1Logging<wbr>Cloudfile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -1857,7 +1922,7 @@ Defined below.
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">Sequence[Servicev1Logging<wbr>Datadog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">Input[Servicev1Logging<wbr>Datadog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -1867,7 +1932,7 @@ Defined below.
 <a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">Sequence[Servicev1Logging<wbr>Digitalocean<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">Input[Servicev1Logging<wbr>Digitalocean<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -1877,7 +1942,7 @@ Defined below.
 <a href="#logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">Sequence[Servicev1Logging<wbr>Elasticsearch<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">Input[Servicev1Logging<wbr>Elasticsearch<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -1887,7 +1952,7 @@ Defined below.
 <a href="#logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">Sequence[Servicev1Logging<wbr>Ftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">Input[Servicev1Logging<wbr>Ftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -1897,7 +1962,7 @@ Defined below.
 <a href="#logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">Sequence[Servicev1Logging<wbr>Googlepubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">Input[Servicev1Logging<wbr>Googlepubsub<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -1907,7 +1972,7 @@ Defined below.
 <a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">Sequence[Servicev1Logging<wbr>Heroku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">Input[Servicev1Logging<wbr>Heroku<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -1917,7 +1982,7 @@ Defined below.
 <a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">Sequence[Servicev1Logging<wbr>Honeycomb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">Input[Servicev1Logging<wbr>Honeycomb<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -1927,7 +1992,7 @@ Defined below.
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">Sequence[Servicev1Logging<wbr>Kafka<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">Input[Servicev1Logging<wbr>Kafka<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -1937,7 +2002,7 @@ Defined below.
 <a href="#logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkinese">Sequence[Servicev1Logging<wbr>Kinese<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Input[Servicev1Logging<wbr>Kinese<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -1947,7 +2012,7 @@ Defined below.
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">Sequence[Servicev1Logging<wbr>Loggly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">Input[Servicev1Logging<wbr>Loggly<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -1957,7 +2022,7 @@ Defined below.
 <a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">Sequence[Servicev1Logging<wbr>Logshuttle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">Input[Servicev1Logging<wbr>Logshuttle<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -1967,7 +2032,7 @@ Defined below.
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">Sequence[Servicev1Logging<wbr>Newrelic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">Input[Servicev1Logging<wbr>Newrelic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -1977,7 +2042,7 @@ Defined below.
 <a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">Sequence[Servicev1Logging<wbr>Openstack<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">Input[Servicev1Logging<wbr>Openstack<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -1987,7 +2052,7 @@ Defined below.
 <a href="#logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">Sequence[Servicev1Logging<wbr>Scalyr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">Input[Servicev1Logging<wbr>Scalyr<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -1997,7 +2062,7 @@ Defined below.
 <a href="#logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">Sequence[Servicev1Logging<wbr>Sftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">Input[Servicev1Logging<wbr>Sftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -2007,7 +2072,7 @@ Defined below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +2081,7 @@ Defined below.
 <a href="#papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">Sequence[Servicev1Papertrail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">Input[Servicev1Papertrail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -2026,7 +2091,7 @@ Defined below.
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">Sequence[Servicev1Request<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">Input[Servicev1Request<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers.
 Defined below
@@ -2036,7 +2101,7 @@ Defined below
 <a href="#response_objects_python" style="color: inherit; text-decoration: inherit;">response_<wbr>objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">Sequence[Servicev1Response<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">Input[Servicev1Response<wbr>Object<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,7 +2110,7 @@ Defined below
 <a href="#s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">Sequence[Servicev1S3logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">Input[Servicev1S3logging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -2055,7 +2120,7 @@ Defined below.
 <a href="#snippets_python" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">Sequence[Servicev1Snippet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">Input[Servicev1Snippet<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.
 Defined below.
@@ -2065,7 +2130,7 @@ Defined below.
 <a href="#splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">Sequence[Servicev1Splunk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">Input[Servicev1Splunk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -2075,7 +2140,7 @@ Defined below.
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">Sequence[Servicev1Sumologic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">Input[Servicev1Sumologic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -2085,7 +2150,7 @@ Defined below.
 <a href="#syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">Sequence[Servicev1Syslog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">Input[Servicev1Syslog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -2095,7 +2160,7 @@ Defined below.
 <a href="#vcls_python" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">Sequence[Servicev1Vcl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">Input[Servicev1Vcl<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks.
 Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
@@ -2105,7 +2170,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#version_comment_python" style="color: inherit; text-decoration: inherit;">version_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2179,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#waf_python" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1waf">Servicev1Waf<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicev1waf">Input[Servicev1Waf<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A WAF configuration block.
 Defined below.
@@ -2256,20 +2321,73 @@ Get an existing Servicev1 resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">Servicev1State</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Servicev1</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">Servicev1State</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Servicev1</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1AclArgs]]</span> = None<span class="p">, </span><span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BackendArgs]]</span> = None<span class="p">, </span><span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BigqueryloggingArgs]]</span> = None<span class="p">, </span><span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1BlobstorageloggingArgs]]</span> = None<span class="p">, </span><span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1CacheSettingArgs]]</span> = None<span class="p">, </span><span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ConditionArgs]]</span> = None<span class="p">, </span><span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DictionaryArgs]]</span> = None<span class="p">, </span><span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DirectorArgs]]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DomainArgs]]</span> = None<span class="p">, </span><span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1DynamicsnippetArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GcsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1GzipArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HeaderArgs]]</span> = None<span class="p">, </span><span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HealthcheckArgs]]</span> = None<span class="p">, </span><span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1HttpsloggingArgs]]</span> = None<span class="p">, </span><span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LogentryArgs]]</span> = None<span class="p">, </span><span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingCloudfileArgs]]</span> = None<span class="p">, </span><span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDatadogArgs]]</span> = None<span class="p">, </span><span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingDigitaloceanArgs]]</span> = None<span class="p">, </span><span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingElasticsearchArgs]]</span> = None<span class="p">, </span><span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingFtpArgs]]</span> = None<span class="p">, </span><span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingGooglepubsubArgs]]</span> = None<span class="p">, </span><span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHerokuArgs]]</span> = None<span class="p">, </span><span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingHoneycombArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKafkaArgs]]</span> = None<span class="p">, </span><span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingKineseArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogglyArgs]]</span> = None<span class="p">, </span><span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingLogshuttleArgs]]</span> = None<span class="p">, </span><span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingNewrelicArgs]]</span> = None<span class="p">, </span><span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingOpenstackArgs]]</span> = None<span class="p">, </span><span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingScalyrArgs]]</span> = None<span class="p">, </span><span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1LoggingSftpArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1PapertrailArgs]]</span> = None<span class="p">, </span><span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1RequestSettingArgs]]</span> = None<span class="p">, </span><span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1ResponseObjectArgs]]</span> = None<span class="p">, </span><span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1S3loggingArgs]]</span> = None<span class="p">, </span><span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SnippetArgs]]</span> = None<span class="p">, </span><span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SplunkArgs]]</span> = None<span class="p">, </span><span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SumologicArgs]]</span> = None<span class="p">, </span><span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1SyslogArgs]]</span> = None<span class="p">, </span><span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[Sequence[Servicev1VclArgs]]</span> = None<span class="p">, </span><span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[Servicev1WafArgs]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">acls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1AclArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">activate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">active_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1BackendArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bigqueryloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1BigqueryloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">blobstorageloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1BlobstorageloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cache_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1CacheSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">cloned_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1ConditionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">default_host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">dictionaries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DictionaryArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">directors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DirectorArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DomainArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">dynamicsnippets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1DynamicsnippetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">gcsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1GcsloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">gzips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1GzipArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1HeaderArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1HealthcheckArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">httpsloggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1HttpsloggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logentries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LogentryArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_cloudfiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingCloudfileArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_datadogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingDatadogArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_digitaloceans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingDigitaloceanArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_elasticsearches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingElasticsearchArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_ftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingFtpArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_googlepubsubs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingGooglepubsubArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_heroku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingHerokuArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_honeycombs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingHoneycombArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_kafkas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingKafkaArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_kineses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingKineseArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_logglies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingLogglyArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_logshuttles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingLogshuttleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_newrelics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingNewrelicArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_openstacks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingOpenstackArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_scalyrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingScalyrArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">logging_sftps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1LoggingSftpArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">papertrails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1PapertrailArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">request_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1RequestSettingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">response_objects</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1ResponseObjectArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">s3loggings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1S3loggingArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">snippets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SnippetArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">splunks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SplunkArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">sumologics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SumologicArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">syslogs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1SyslogArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">vcls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Servicev1VclArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">version_comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">waf</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Servicev1WafArgs]]</span> = None<span class="p">) -&gt;</span> Servicev1</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicev1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">Servicev1State</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicev1<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">Servicev1State</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Servicev1</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Servicev1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">Servicev1State</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Servicev1</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">Servicev1State</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3390,7 +3508,7 @@ Defined below.
 <a href="#state_acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">Servicev1Acl[]</a></span>
+        <span class="property-type"><a href="#servicev1acl">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Acl<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.
 Defined below.
@@ -3400,7 +3518,7 @@ Defined below.
 <a href="#state_activate_nodejs" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3409,7 +3527,7 @@ Defined below.
 <a href="#state_activeversion_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3418,7 +3536,7 @@ Defined below.
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Servicev1Backend[]</a></span>
+        <span class="property-type"><a href="#servicev1backend">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Backend<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -3429,7 +3547,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">Servicev1Bigquerylogging[]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Bigquerylogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -3439,7 +3557,7 @@ Defined below.
 <a href="#state_blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">Servicev1Blobstoragelogging[]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Blobstoragelogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -3449,7 +3567,7 @@ Defined below.
 <a href="#state_cachesettings_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">Servicev1Cache<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Cache<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override.
 Defined below.
@@ -3459,7 +3577,7 @@ Defined below.
 <a href="#state_clonedversion_nodejs" style="color: inherit; text-decoration: inherit;">cloned<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3468,7 +3586,7 @@ Defined below.
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3477,7 +3595,7 @@ Defined below.
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">Servicev1Condition[]</a></span>
+        <span class="property-type"><a href="#servicev1condition">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Condition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -3487,7 +3605,7 @@ configuration object in this service. Defined below.
 <a href="#state_defaulthost_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3496,7 +3614,7 @@ configuration object in this service. Defined below.
 <a href="#state_defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The default Time-to-live (TTL) for
 requests.
@@ -3506,7 +3624,7 @@ requests.
 <a href="#state_dictionaries_nodejs" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">Servicev1Dictionary[]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Dictionary<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions.
 Defined below.
@@ -3516,7 +3634,7 @@ Defined below.
 <a href="#state_directors_nodejs" style="color: inherit; text-decoration: inherit;">directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">Servicev1Director[]</a></span>
+        <span class="property-type"><a href="#servicev1director">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Director<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`.
@@ -3527,7 +3645,7 @@ Defined below
 <a href="#state_domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">Servicev1Domain[]</a></span>
+        <span class="property-type"><a href="#servicev1domain">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Domain<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -3536,7 +3654,7 @@ Defined below
 <a href="#state_dynamicsnippets_nodejs" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">Servicev1Dynamicsnippet[]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Dynamicsnippet<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.
 Defined below.
@@ -3546,7 +3664,7 @@ Defined below.
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -3556,7 +3674,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">Servicev1Gcslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Gcslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -3566,7 +3684,7 @@ Defined below.
 <a href="#state_gzips_nodejs" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">Servicev1Gzip[]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Gzip<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -3576,7 +3694,7 @@ content. Defined below.
 <a href="#state_headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">Servicev1Header[]</a></span>
+        <span class="property-type"><a href="#servicev1header">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Header<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request.
 Defined below.
@@ -3586,7 +3704,7 @@ Defined below.
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">Servicev1Healthcheck[]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Healthcheck<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3595,7 +3713,7 @@ Defined below.
 <a href="#state_httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">Servicev1Httpslogging[]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Httpslogging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -3605,7 +3723,7 @@ Defined below.
 <a href="#state_logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">Servicev1Logentry[]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logentry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -3615,7 +3733,7 @@ Defined below.
 <a href="#state_loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">Servicev1Logging<wbr>Cloudfile[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Cloudfile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -3625,7 +3743,7 @@ Defined below.
 <a href="#state_loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">Servicev1Logging<wbr>Datadog[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Datadog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -3635,7 +3753,7 @@ Defined below.
 <a href="#state_loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">Servicev1Logging<wbr>Digitalocean[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Digitalocean<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -3645,7 +3763,7 @@ Defined below.
 <a href="#state_loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">Servicev1Logging<wbr>Elasticsearch[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Elasticsearch<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -3655,7 +3773,7 @@ Defined below.
 <a href="#state_loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">Servicev1Logging<wbr>Ftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Ftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -3665,7 +3783,7 @@ Defined below.
 <a href="#state_logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">Servicev1Logging<wbr>Googlepubsub[]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Googlepubsub<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -3675,7 +3793,7 @@ Defined below.
 <a href="#state_loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">Servicev1Logging<wbr>Heroku[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Heroku<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -3685,7 +3803,7 @@ Defined below.
 <a href="#state_logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">Servicev1Logging<wbr>Honeycomb[]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Honeycomb<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -3695,7 +3813,7 @@ Defined below.
 <a href="#state_loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">Servicev1Logging<wbr>Kafka[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Kafka<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -3705,7 +3823,7 @@ Defined below.
 <a href="#state_loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkinese">Servicev1Logging<wbr>Kinese[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Kinese<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -3715,7 +3833,7 @@ Defined below.
 <a href="#state_logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">Servicev1Logging<wbr>Loggly[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Loggly<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -3725,7 +3843,7 @@ Defined below.
 <a href="#state_logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">Servicev1Logging<wbr>Logshuttle[]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Logshuttle<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -3735,7 +3853,7 @@ Defined below.
 <a href="#state_loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">Servicev1Logging<wbr>Newrelic[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Newrelic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -3745,7 +3863,7 @@ Defined below.
 <a href="#state_loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">Servicev1Logging<wbr>Openstack[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Openstack<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -3755,7 +3873,7 @@ Defined below.
 <a href="#state_loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">Servicev1Logging<wbr>Scalyr[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Scalyr<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -3765,7 +3883,7 @@ Defined below.
 <a href="#state_loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">Servicev1Logging<wbr>Sftp[]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Logging<wbr>Sftp<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -3775,7 +3893,7 @@ Defined below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3784,7 +3902,7 @@ Defined below.
 <a href="#state_papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">Servicev1Papertrail[]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Papertrail<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -3794,7 +3912,7 @@ Defined below.
 <a href="#state_requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">Servicev1Request<wbr>Setting[]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Request<wbr>Setting<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers.
 Defined below
@@ -3804,7 +3922,7 @@ Defined below
 <a href="#state_responseobjects_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">Servicev1Response<wbr>Object[]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Response<wbr>Object<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3813,7 +3931,7 @@ Defined below
 <a href="#state_s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">Servicev1S3logging[]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1S3logging<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -3823,7 +3941,7 @@ Defined below.
 <a href="#state_snippets_nodejs" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">Servicev1Snippet[]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Snippet<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.
 Defined below.
@@ -3833,7 +3951,7 @@ Defined below.
 <a href="#state_splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">Servicev1Splunk[]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Splunk<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -3843,7 +3961,7 @@ Defined below.
 <a href="#state_sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">Servicev1Sumologic[]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Sumologic<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -3853,7 +3971,7 @@ Defined below.
 <a href="#state_syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">Servicev1Syslog[]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Syslog<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -3863,7 +3981,7 @@ Defined below.
 <a href="#state_vcls_nodejs" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">Servicev1Vcl[]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">pulumi<wbr>Input<pulumi<wbr>Input<Servicev1Vcl<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks.
 Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
@@ -3873,7 +3991,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#state_versioncomment_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3882,7 +4000,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#state_waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1waf">Servicev1Waf</a></span>
+        <span class="property-type"><a href="#servicev1waf">pulumi<wbr>Input<Servicev1Waf<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A WAF configuration block.
 Defined below.
@@ -3896,7 +4014,7 @@ Defined below.
 <a href="#state_acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1acl">Sequence[Servicev1Acl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1acl">Input[Servicev1Acl<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of ACL configuration blocks.
 Defined below.
@@ -3906,7 +4024,7 @@ Defined below.
 <a href="#state_activate_python" style="color: inherit; text-decoration: inherit;">activate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3915,7 +4033,7 @@ Defined below.
 <a href="#state_active_version_python" style="color: inherit; text-decoration: inherit;">active_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3924,7 +4042,7 @@ Defined below.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1backend">Sequence[Servicev1Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1backend">Input[Servicev1Backend<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
@@ -3935,7 +4053,7 @@ Defined below. Backends must be defined in this argument, or defined in the
 <a href="#state_bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1bigquerylogging">Sequence[Servicev1Bigquerylogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1bigquerylogging">Input[Servicev1Bigquerylogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
@@ -3945,7 +4063,7 @@ Defined below.
 <a href="#state_blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1blobstoragelogging">Sequence[Servicev1Blobstoragelogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1blobstoragelogging">Input[Servicev1Blobstoragelogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
@@ -3955,7 +4073,7 @@ Defined below.
 <a href="#state_cache_settings_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1cachesetting">Sequence[Servicev1Cache<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1cachesetting">Input[Servicev1Cache<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Cache Settings, allowing you to override.
 Defined below.
@@ -3965,7 +4083,7 @@ Defined below.
 <a href="#state_cloned_version_python" style="color: inherit; text-decoration: inherit;">cloned_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The latest cloned version by the provider. The value gets only set after running `pulumi up`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3974,7 +4092,7 @@ Defined below.
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3983,7 +4101,7 @@ Defined below.
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1condition">Sequence[Servicev1Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1condition">Input[Servicev1Condition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of conditions to add logic to any basic
 configuration object in this service. Defined below.
@@ -3993,7 +4111,7 @@ configuration object in this service. Defined below.
 <a href="#state_default_host_python" style="color: inherit; text-decoration: inherit;">default_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4002,7 +4120,7 @@ configuration object in this service. Defined below.
 <a href="#state_default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The default Time-to-live (TTL) for
 requests.
@@ -4012,7 +4130,7 @@ requests.
 <a href="#state_dictionaries_python" style="color: inherit; text-decoration: inherit;">dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dictionary">Sequence[Servicev1Dictionary<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1dictionary">Input[Servicev1Dictionary<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries that allow the storing of key values pair for use within VCL functions.
 Defined below.
@@ -4022,7 +4140,7 @@ Defined below.
 <a href="#state_directors_python" style="color: inherit; text-decoration: inherit;">directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1director">Sequence[Servicev1Director<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1director">Input[Servicev1Director<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A director to allow more control over balancing traffic over backends.
 when an item is not to be cached based on an above `condition`.
@@ -4033,7 +4151,7 @@ Defined below
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1domain">Sequence[Servicev1Domain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1domain">Input[Servicev1Domain<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -4042,7 +4160,7 @@ Defined below
 <a href="#state_dynamicsnippets_python" style="color: inherit; text-decoration: inherit;">dynamicsnippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1dynamicsnippet">Sequence[Servicev1Dynamicsnippet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1dynamicsnippet">Input[Servicev1Dynamicsnippet<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "dynamic" VCL Snippet configuration blocks.
 Defined below.
@@ -4052,7 +4170,7 @@ Defined below.
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
@@ -4062,7 +4180,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
 <a href="#state_gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gcslogging">Sequence[Servicev1Gcslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1gcslogging">Input[Servicev1Gcslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
@@ -4072,7 +4190,7 @@ Defined below.
 <a href="#state_gzips_python" style="color: inherit; text-decoration: inherit;">gzips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1gzip">Sequence[Servicev1Gzip<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1gzip">Input[Servicev1Gzip<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of gzip rules to control automatic gzipping of
 content. Defined below.
@@ -4082,7 +4200,7 @@ content. Defined below.
 <a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1header">Sequence[Servicev1Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1header">Input[Servicev1Header<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Headers to manipulate for each request.
 Defined below.
@@ -4092,7 +4210,7 @@ Defined below.
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1healthcheck">Sequence[Servicev1Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1healthcheck">Input[Servicev1Healthcheck<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4101,7 +4219,7 @@ Defined below.
 <a href="#state_httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1httpslogging">Sequence[Servicev1Httpslogging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1httpslogging">Input[Servicev1Httpslogging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
@@ -4111,7 +4229,7 @@ Defined below.
 <a href="#state_logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logentry">Sequence[Servicev1Logentry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logentry">Input[Servicev1Logentry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
@@ -4121,7 +4239,7 @@ Defined below.
 <a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingcloudfile">Sequence[Servicev1Logging<wbr>Cloudfile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingcloudfile">Input[Servicev1Logging<wbr>Cloudfile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
@@ -4131,7 +4249,7 @@ Defined below.
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdatadog">Sequence[Servicev1Logging<wbr>Datadog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdatadog">Input[Servicev1Logging<wbr>Datadog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
@@ -4141,7 +4259,7 @@ Defined below.
 <a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingdigitalocean">Sequence[Servicev1Logging<wbr>Digitalocean<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingdigitalocean">Input[Servicev1Logging<wbr>Digitalocean<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
@@ -4151,7 +4269,7 @@ Defined below.
 <a href="#state_logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingelasticsearch">Sequence[Servicev1Logging<wbr>Elasticsearch<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingelasticsearch">Input[Servicev1Logging<wbr>Elasticsearch<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
@@ -4161,7 +4279,7 @@ Defined below.
 <a href="#state_logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingftp">Sequence[Servicev1Logging<wbr>Ftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingftp">Input[Servicev1Logging<wbr>Ftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
@@ -4171,7 +4289,7 @@ Defined below.
 <a href="#state_logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginggooglepubsub">Sequence[Servicev1Logging<wbr>Googlepubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logginggooglepubsub">Input[Servicev1Logging<wbr>Googlepubsub<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
@@ -4181,7 +4299,7 @@ Defined below.
 <a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingheroku">Sequence[Servicev1Logging<wbr>Heroku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingheroku">Input[Servicev1Logging<wbr>Heroku<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
@@ -4191,7 +4309,7 @@ Defined below.
 <a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginghoneycomb">Sequence[Servicev1Logging<wbr>Honeycomb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logginghoneycomb">Input[Servicev1Logging<wbr>Honeycomb<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
@@ -4201,7 +4319,7 @@ Defined below.
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkafka">Sequence[Servicev1Logging<wbr>Kafka<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkafka">Input[Servicev1Logging<wbr>Kafka<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
@@ -4211,7 +4329,7 @@ Defined below.
 <a href="#state_logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingkinese">Sequence[Servicev1Logging<wbr>Kinese<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingkinese">Input[Servicev1Logging<wbr>Kinese<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
@@ -4221,7 +4339,7 @@ Defined below.
 <a href="#state_logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingloggly">Sequence[Servicev1Logging<wbr>Loggly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingloggly">Input[Servicev1Logging<wbr>Loggly<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
@@ -4231,7 +4349,7 @@ Defined below.
 <a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1logginglogshuttle">Sequence[Servicev1Logging<wbr>Logshuttle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1logginglogshuttle">Input[Servicev1Logging<wbr>Logshuttle<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
@@ -4241,7 +4359,7 @@ Defined below.
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingnewrelic">Sequence[Servicev1Logging<wbr>Newrelic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingnewrelic">Input[Servicev1Logging<wbr>Newrelic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
@@ -4251,7 +4369,7 @@ Defined below.
 <a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingopenstack">Sequence[Servicev1Logging<wbr>Openstack<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingopenstack">Input[Servicev1Logging<wbr>Openstack<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
@@ -4261,7 +4379,7 @@ Defined below.
 <a href="#state_logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingscalyr">Sequence[Servicev1Logging<wbr>Scalyr<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingscalyr">Input[Servicev1Logging<wbr>Scalyr<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
@@ -4271,7 +4389,7 @@ Defined below.
 <a href="#state_logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1loggingsftp">Sequence[Servicev1Logging<wbr>Sftp<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1loggingsftp">Input[Servicev1Logging<wbr>Sftp<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
@@ -4281,7 +4399,7 @@ Defined below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4290,7 +4408,7 @@ Defined below.
 <a href="#state_papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1papertrail">Sequence[Servicev1Papertrail<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1papertrail">Input[Servicev1Papertrail<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
@@ -4300,7 +4418,7 @@ Defined below.
 <a href="#state_request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1requestsetting">Sequence[Servicev1Request<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1requestsetting">Input[Servicev1Request<wbr>Setting<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of Request modifiers.
 Defined below
@@ -4310,7 +4428,7 @@ Defined below
 <a href="#state_response_objects_python" style="color: inherit; text-decoration: inherit;">response_<wbr>objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1responseobject">Sequence[Servicev1Response<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1responseobject">Input[Servicev1Response<wbr>Object<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4319,7 +4437,7 @@ Defined below
 <a href="#state_s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1s3logging">Sequence[Servicev1S3logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1s3logging">Input[Servicev1S3logging<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
@@ -4329,7 +4447,7 @@ Defined below.
 <a href="#state_snippets_python" style="color: inherit; text-decoration: inherit;">snippets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1snippet">Sequence[Servicev1Snippet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1snippet">Input[Servicev1Snippet<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom, "regular" (non-dynamic) VCL Snippet configuration blocks.
 Defined below.
@@ -4339,7 +4457,7 @@ Defined below.
 <a href="#state_splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1splunk">Sequence[Servicev1Splunk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1splunk">Input[Servicev1Splunk<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
@@ -4349,7 +4467,7 @@ Defined below.
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1sumologic">Sequence[Servicev1Sumologic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1sumologic">Input[Servicev1Sumologic<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
@@ -4359,7 +4477,7 @@ Defined below.
 <a href="#state_syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1syslog">Sequence[Servicev1Syslog<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1syslog">Input[Servicev1Syslog<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
@@ -4369,7 +4487,7 @@ Defined below.
 <a href="#state_vcls_python" style="color: inherit; text-decoration: inherit;">vcls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1vcl">Sequence[Servicev1Vcl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicev1vcl">Input[Servicev1Vcl<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A set of custom VCL configuration blocks.
 Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom-vcl/uploading-custom-vcl/) for more information on using custom VCL.
@@ -4379,7 +4497,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#state_version_comment_python" style="color: inherit; text-decoration: inherit;">version_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4388,7 +4506,7 @@ Defined below. See the [Fastly documentation](https://docs.fastly.com/vcl/custom
 <a href="#state_waf_python" style="color: inherit; text-decoration: inherit;">waf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicev1waf">Servicev1Waf<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicev1waf">Input[Servicev1Waf<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A WAF configuration block.
 Defined below.
@@ -4457,7 +4575,7 @@ Defined below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4466,7 +4584,7 @@ Defined below.
 <a href="#aclid_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ACL.
 {{% /md %}}</dd></dl>
@@ -4479,7 +4597,7 @@ Defined below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4488,7 +4606,7 @@ Defined below.
 <a href="#acl_id_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ACL.
 {{% /md %}}</dd></dl>
@@ -4969,7 +5087,7 @@ Default `200`.
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -4978,7 +5096,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4987,7 +5105,7 @@ Default `200`.
 <a href="#autoloadbalance_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Loadbalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
@@ -4998,7 +5116,7 @@ Default `true`.
 <a href="#betweenbytestimeout_nodejs" style="color: inherit; text-decoration: inherit;">between<wbr>Bytes<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5007,7 +5125,7 @@ Default `true`.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
@@ -5017,7 +5135,7 @@ Default `1000`
 <a href="#errorthreshold_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5026,7 +5144,7 @@ Default `1000`
 <a href="#firstbytetimeout_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Byte<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5035,7 +5153,7 @@ Default `1000`
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5044,7 +5162,7 @@ Default `1000`
 <a href="#maxconn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
@@ -5054,7 +5172,7 @@ Default `200`.
 <a href="#maxtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5063,7 +5181,7 @@ Default `200`.
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5072,7 +5190,7 @@ Default `200`.
 <a href="#overridehost_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5081,7 +5199,7 @@ Default `200`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5090,7 +5208,7 @@ Default `200`.
 <a href="#requestcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5099,7 +5217,7 @@ Default `200`.
 <a href="#shield_nodejs" style="color: inherit; text-decoration: inherit;">shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5108,7 +5226,7 @@ Default `200`.
 <a href="#sslcacert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5117,7 +5235,7 @@ Default `200`.
 <a href="#sslcerthostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5126,7 +5244,7 @@ Default `200`.
 <a href="#sslcheckcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Check<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5135,7 +5253,7 @@ Default `200`.
 <a href="#sslciphers_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5144,7 +5262,7 @@ Default `200`.
 <a href="#sslclientcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5153,7 +5271,7 @@ Default `200`.
 <a href="#sslclientkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -5162,7 +5280,7 @@ Default `200`.
 <a href="#sslhostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -5171,7 +5289,7 @@ Default `200`.
 <a href="#sslsnihostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sni<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5180,7 +5298,7 @@ Default `200`.
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5189,7 +5307,7 @@ Default `200`.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 {{% /md %}}</dd></dl>
@@ -5202,7 +5320,7 @@ Default `200`.
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -5211,7 +5329,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5220,7 +5338,7 @@ Default `200`.
 <a href="#auto_loadbalance_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>loadbalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
@@ -5231,7 +5349,7 @@ Default `true`.
 <a href="#between_bytes_timeout_python" style="color: inherit; text-decoration: inherit;">between_<wbr>bytes_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5240,7 +5358,7 @@ Default `true`.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
@@ -5250,7 +5368,7 @@ Default `1000`
 <a href="#error_threshold_python" style="color: inherit; text-decoration: inherit;">error_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5259,7 +5377,7 @@ Default `1000`
 <a href="#first_byte_timeout_python" style="color: inherit; text-decoration: inherit;">first_<wbr>byte_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5268,7 +5386,7 @@ Default `1000`
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5277,7 +5395,7 @@ Default `1000`
 <a href="#max_conn_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
@@ -5287,7 +5405,7 @@ Default `200`.
 <a href="#max_tls_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5296,7 +5414,7 @@ Default `200`.
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5305,7 +5423,7 @@ Default `200`.
 <a href="#override_host_python" style="color: inherit; text-decoration: inherit;">override_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5314,7 +5432,7 @@ Default `200`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5323,7 +5441,7 @@ Default `200`.
 <a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5332,7 +5450,7 @@ Default `200`.
 <a href="#shield_python" style="color: inherit; text-decoration: inherit;">shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5341,7 +5459,7 @@ Default `200`.
 <a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5350,7 +5468,7 @@ Default `200`.
 <a href="#ssl_cert_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5359,7 +5477,7 @@ Default `200`.
 <a href="#ssl_check_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>check_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5368,7 +5486,7 @@ Default `200`.
 <a href="#ssl_ciphers_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5377,7 +5495,7 @@ Default `200`.
 <a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5386,7 +5504,7 @@ Default `200`.
 <a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -5395,7 +5513,7 @@ Default `200`.
 <a href="#ssl_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -5404,7 +5522,7 @@ Default `200`.
 <a href="#ssl_sni_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sni_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5413,7 +5531,7 @@ Default `200`.
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5422,7 +5540,7 @@ Default `200`.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
 {{% /md %}}</dd></dl>
@@ -5625,7 +5743,7 @@ Default `200`.
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -5634,7 +5752,7 @@ Default `200`.
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-required"
@@ -5643,7 +5761,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -5652,7 +5770,7 @@ Default `200`.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -5661,7 +5779,7 @@ Default `200`.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -5670,7 +5788,7 @@ Default `200`.
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5679,7 +5797,7 @@ Default `200`.
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5688,7 +5806,7 @@ Default `200`.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5697,7 +5815,7 @@ Default `200`.
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5706,7 +5824,7 @@ Default `200`.
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Big query table name suffix template. If set will be interpreted as a strftime compatible string and used as the [Template Suffix for your table](https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables).
 {{% /md %}}</dd></dl>
@@ -5719,7 +5837,7 @@ Default `200`.
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -5728,7 +5846,7 @@ Default `200`.
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-required"
@@ -5737,7 +5855,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -5746,7 +5864,7 @@ Default `200`.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -5755,7 +5873,7 @@ Default `200`.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -5764,7 +5882,7 @@ Default `200`.
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5773,7 +5891,7 @@ Default `200`.
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5782,7 +5900,7 @@ Default `200`.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5791,7 +5909,7 @@ Default `200`.
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5800,7 +5918,7 @@ Default `200`.
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Big query table name suffix template. If set will be interpreted as a strftime compatible string and used as the [Template Suffix for your table](https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables).
 {{% /md %}}</dd></dl>
@@ -6075,7 +6193,7 @@ Default `200`.
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
 {{% /md %}}</dd><dt class="property-required"
@@ -6084,7 +6202,7 @@ Default `200`.
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
 {{% /md %}}</dd><dt class="property-required"
@@ -6093,7 +6211,7 @@ Default `200`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -6102,7 +6220,7 @@ Default `200`.
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6111,7 +6229,7 @@ Default `200`.
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6120,7 +6238,7 @@ Default `200`.
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6129,7 +6247,7 @@ Default `200`.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6138,7 +6256,7 @@ Default `200`.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6147,7 +6265,7 @@ Default `200`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6156,7 +6274,7 @@ Default `200`.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6165,7 +6283,7 @@ Default `200`.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6174,7 +6292,7 @@ Default `200`.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6183,7 +6301,7 @@ Default `200`.
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6192,7 +6310,7 @@ Default `200`.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -6205,7 +6323,7 @@ Default `200`.
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
 {{% /md %}}</dd><dt class="property-required"
@@ -6214,7 +6332,7 @@ Default `200`.
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
 {{% /md %}}</dd><dt class="property-required"
@@ -6223,7 +6341,7 @@ Default `200`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -6232,7 +6350,7 @@ Default `200`.
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6241,7 +6359,7 @@ Default `200`.
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6250,7 +6368,7 @@ Default `200`.
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6259,7 +6377,7 @@ Default `200`.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6268,7 +6386,7 @@ Default `200`.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6277,7 +6395,7 @@ Default `200`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6286,7 +6404,7 @@ Default `200`.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6295,7 +6413,7 @@ Default `200`.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6304,7 +6422,7 @@ Default `200`.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6313,7 +6431,7 @@ Default `200`.
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6322,7 +6440,7 @@ Default `200`.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -6439,7 +6557,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6448,7 +6566,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
@@ -6458,7 +6576,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#cachecondition_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -6468,7 +6586,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#stalettl_nodejs" style="color: inherit; text-decoration: inherit;">stale<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max "Time To Live" for stale (unreachable) objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6477,7 +6595,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Time-To-Live (TTL) for the object.
 {{% /md %}}</dd></dl>
@@ -6490,7 +6608,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6499,7 +6617,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
@@ -6509,7 +6627,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -6519,7 +6637,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#stale_ttl_python" style="color: inherit; text-decoration: inherit;">stale_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max "Time To Live" for stale (unreachable) objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6528,7 +6646,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Time-To-Live (TTL) for the object.
 {{% /md %}}</dd></dl>
@@ -6623,7 +6741,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -6632,7 +6750,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#statement_nodejs" style="color: inherit; text-decoration: inherit;">statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The statement used to determine if the condition is met.
 {{% /md %}}</dd><dt class="property-required"
@@ -6641,7 +6759,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6650,7 +6768,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd></dl>
@@ -6663,7 +6781,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -6672,7 +6790,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#statement_python" style="color: inherit; text-decoration: inherit;">statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The statement used to determine if the condition is met.
 {{% /md %}}</dd><dt class="property-required"
@@ -6681,7 +6799,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6690,7 +6808,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd></dl>
@@ -6773,7 +6891,7 @@ the items are managed outside of the provider.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6782,7 +6900,7 @@ the items are managed outside of the provider.
 <a href="#dictionaryid_nodejs" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6791,7 +6909,7 @@ the items are managed outside of the provider.
 <a href="#writeonly_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or
 via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the
@@ -6807,7 +6925,7 @@ the items are managed outside of the provider.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6816,7 +6934,7 @@ the items are managed outside of the provider.
 <a href="#dictionary_id_python" style="color: inherit; text-decoration: inherit;">dictionary_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6825,7 +6943,7 @@ the items are managed outside of the provider.
 <a href="#write_only_python" style="color: inherit; text-decoration: inherit;">write_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, the dictionary is a private dictionary, and items are not readable in the UI or
 via API. Default is `false`. It is important to note that changing this attribute will delete and recreate the
@@ -6995,7 +7113,7 @@ the items are managed outside of the provider.
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
 {{% /md %}}</dd><dt class="property-required"
@@ -7004,7 +7122,7 @@ the items are managed outside of the provider.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7013,7 +7131,7 @@ the items are managed outside of the provider.
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Load balancing weight for the backends. Default `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7022,7 +7140,7 @@ the items are managed outside of the provider.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7031,7 +7149,7 @@ the items are managed outside of the provider.
 <a href="#quorum_nodejs" style="color: inherit; text-decoration: inherit;">quorum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7040,7 +7158,7 @@ the items are managed outside of the provider.
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many backends to search if it fails. Default `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7049,7 +7167,7 @@ the items are managed outside of the provider.
 <a href="#shield_nodejs" style="color: inherit; text-decoration: inherit;">shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7058,7 +7176,7 @@ the items are managed outside of the provider.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd></dl>
@@ -7071,7 +7189,7 @@ the items are managed outside of the provider.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Names of defined backends to map the director to. Example: `[ "origin1", "origin2" ]`
 {{% /md %}}</dd><dt class="property-required"
@@ -7080,7 +7198,7 @@ the items are managed outside of the provider.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7089,7 +7207,7 @@ the items are managed outside of the provider.
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Load balancing weight for the backends. Default `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7098,7 +7216,7 @@ the items are managed outside of the provider.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7107,7 +7225,7 @@ the items are managed outside of the provider.
 <a href="#quorum_python" style="color: inherit; text-decoration: inherit;">quorum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Percentage of capacity that needs to be up for the director itself to be considered up. Default `75`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7116,7 +7234,7 @@ the items are managed outside of the provider.
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many backends to search if it fails. Default `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7125,7 +7243,7 @@ the items are managed outside of the provider.
 <a href="#shield_python" style="color: inherit; text-decoration: inherit;">shield</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Selected POP to serve as a "shield" for backends. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7134,7 +7252,7 @@ the items are managed outside of the provider.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd></dl>
@@ -7193,7 +7311,7 @@ the items are managed outside of the provider.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7202,7 +7320,7 @@ the items are managed outside of the provider.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd></dl>
@@ -7215,7 +7333,7 @@ the items are managed outside of the provider.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7224,7 +7342,7 @@ the items are managed outside of the provider.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Director.
 {{% /md %}}</dd></dl>
@@ -7319,7 +7437,7 @@ the items are managed outside of the provider.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -7328,7 +7446,7 @@ the items are managed outside of the provider.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7337,7 +7455,7 @@ the items are managed outside of the provider.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7346,7 +7464,7 @@ the items are managed outside of the provider.
 <a href="#snippetid_nodejs" style="color: inherit; text-decoration: inherit;">snippet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the dynamic snippet.
 {{% /md %}}</dd></dl>
@@ -7359,7 +7477,7 @@ the items are managed outside of the provider.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -7368,7 +7486,7 @@ the items are managed outside of the provider.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7377,7 +7495,7 @@ the items are managed outside of the provider.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7386,7 +7504,7 @@ the items are managed outside of the provider.
 <a href="#snippet_id_python" style="color: inherit; text-decoration: inherit;">snippet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the dynamic snippet.
 {{% /md %}}</dd></dl>
@@ -7625,7 +7743,7 @@ the items are managed outside of the provider.
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -7634,7 +7752,7 @@ the items are managed outside of the provider.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7643,7 +7761,7 @@ the items are managed outside of the provider.
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7652,7 +7770,7 @@ the items are managed outside of the provider.
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7661,7 +7779,7 @@ the items are managed outside of the provider.
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7670,7 +7788,7 @@ the items are managed outside of the provider.
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7679,7 +7797,7 @@ the items are managed outside of the provider.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7688,7 +7806,7 @@ the items are managed outside of the provider.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7697,7 +7815,7 @@ the items are managed outside of the provider.
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7706,7 +7824,7 @@ the items are managed outside of the provider.
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7715,7 +7833,7 @@ the items are managed outside of the provider.
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7724,7 +7842,7 @@ the items are managed outside of the provider.
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -7737,7 +7855,7 @@ the items are managed outside of the provider.
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -7746,7 +7864,7 @@ the items are managed outside of the provider.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7755,7 +7873,7 @@ the items are managed outside of the provider.
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7764,7 +7882,7 @@ the items are managed outside of the provider.
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7773,7 +7891,7 @@ the items are managed outside of the provider.
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7782,7 +7900,7 @@ the items are managed outside of the provider.
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7791,7 +7909,7 @@ the items are managed outside of the provider.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7800,7 +7918,7 @@ the items are managed outside of the provider.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -7809,7 +7927,7 @@ the items are managed outside of the provider.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7818,7 +7936,7 @@ the items are managed outside of the provider.
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7827,7 +7945,7 @@ the items are managed outside of the provider.
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7836,7 +7954,7 @@ the items are managed outside of the provider.
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -7937,7 +8055,7 @@ gzip. Example: `["css", "js"]`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7946,7 +8064,7 @@ gzip. Example: `["css", "js"]`.
 <a href="#cachecondition_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -7956,7 +8074,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#contenttypes_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The content-type for each type of content you wish to
 have dynamically gzip'ed. Example: `["text/html", "text/css"]`.
@@ -7966,7 +8084,7 @@ have dynamically gzip'ed. Example: `["text/html", "text/css"]`.
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}File extensions for each file type to dynamically
 gzip. Example: `["css", "js"]`.
@@ -7980,7 +8098,7 @@ gzip. Example: `["css", "js"]`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7989,7 +8107,7 @@ gzip. Example: `["css", "js"]`.
 <a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -7999,7 +8117,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#content_types_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The content-type for each type of content you wish to
 have dynamically gzip'ed. Example: `["text/html", "text/css"]`.
@@ -8009,7 +8127,7 @@ have dynamically gzip'ed. Example: `["text/html", "text/css"]`.
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}File extensions for each file type to dynamically
 gzip. Example: `["css", "js"]`.
@@ -8255,7 +8373,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
@@ -8265,7 +8383,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the header that is going to be affected by the Action.
 {{% /md %}}</dd><dt class="property-required"
@@ -8274,7 +8392,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -8283,7 +8401,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8292,7 +8410,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#cachecondition_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -8302,7 +8420,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#ignoreifset_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>If<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not add the header if it is already present. (Only applies to the `set` action.). Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8311,7 +8429,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8320,7 +8438,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Regular expression to use (Only applies to the `regex` and `regex_repeat` actions.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8329,7 +8447,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#requestcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8338,7 +8456,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8347,7 +8465,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variable to be used as a source for the header
 content. (Does not apply to the `delete` action.)
@@ -8357,7 +8475,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#substitution_nodejs" style="color: inherit; text-decoration: inherit;">substitution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value to substitute in place of regular expression. (Only applies to the `regex` and `regex_repeat` actions.)
 {{% /md %}}</dd></dl>
@@ -8370,7 +8488,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
@@ -8380,7 +8498,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the header that is going to be affected by the Action.
 {{% /md %}}</dd><dt class="property-required"
@@ -8389,7 +8507,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -8398,7 +8516,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -8407,7 +8525,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -8417,7 +8535,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#ignore_if_set_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>if_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not add the header if it is already present. (Only applies to the `set` action.). Default `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8426,7 +8544,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8435,7 +8553,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Regular expression to use (Only applies to the `regex` and `regex_repeat` actions.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -8444,7 +8562,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8453,7 +8571,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8462,7 +8580,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variable to be used as a source for the header
 content. (Does not apply to the `delete` action.)
@@ -8472,7 +8590,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#substitution_python" style="color: inherit; text-decoration: inherit;">substitution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value to substitute in place of regular expression. (Only applies to the `regex` and `regex_repeat` actions.)
 {{% /md %}}</dd></dl>
@@ -8693,7 +8811,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
 {{% /md %}}</dd><dt class="property-required"
@@ -8702,7 +8820,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -8711,7 +8829,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8720,7 +8838,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8729,7 +8847,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#expectedresponse_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8738,7 +8856,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8747,7 +8865,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#initial_nodejs" style="color: inherit; text-decoration: inherit;">initial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8756,7 +8874,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8765,7 +8883,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8774,7 +8892,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8783,7 +8901,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 {{% /md %}}</dd></dl>
@@ -8796,7 +8914,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
 {{% /md %}}</dd><dt class="property-required"
@@ -8805,7 +8923,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -8814,7 +8932,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8823,7 +8941,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8832,7 +8950,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#expected_response_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8841,7 +8959,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8850,7 +8968,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#initial_python" style="color: inherit; text-decoration: inherit;">initial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8859,7 +8977,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8868,7 +8986,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8877,7 +8995,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8886,7 +9004,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
 {{% /md %}}</dd></dl>
@@ -9233,7 +9351,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -9242,7 +9360,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9251,7 +9369,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The MIME type of the content.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9260,7 +9378,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9269,7 +9387,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9278,7 +9396,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9287,7 +9405,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9296,7 +9414,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#jsonformat_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9305,7 +9423,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9314,7 +9432,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9323,7 +9441,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9332,7 +9450,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9341,7 +9459,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#requestmaxentries_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9350,7 +9468,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9359,7 +9477,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9368,7 +9486,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9377,7 +9495,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9386,7 +9504,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -9399,7 +9517,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -9408,7 +9526,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9417,7 +9535,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The MIME type of the content.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9426,7 +9544,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9435,7 +9553,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9444,7 +9562,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9453,7 +9571,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9462,7 +9580,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#json_format_python" style="color: inherit; text-decoration: inherit;">json_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9471,7 +9589,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9480,7 +9598,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9489,7 +9607,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9498,7 +9616,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9507,7 +9625,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9516,7 +9634,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9525,7 +9643,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9534,7 +9652,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9543,7 +9661,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9552,7 +9670,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -9719,7 +9837,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -9728,7 +9846,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9737,7 +9855,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9746,7 +9864,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9755,7 +9873,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9764,7 +9882,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9773,7 +9891,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9782,7 +9900,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -9795,7 +9913,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -9804,7 +9922,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9813,7 +9931,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9822,7 +9940,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9831,7 +9949,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9840,7 +9958,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -9849,7 +9967,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9858,7 +9976,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -10151,7 +10269,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -10160,7 +10278,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -10169,7 +10287,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -10178,7 +10296,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10187,7 +10305,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10196,7 +10314,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10205,7 +10323,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10214,7 +10332,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10223,7 +10341,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10232,7 +10350,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10241,7 +10359,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10250,7 +10368,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10259,7 +10377,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10268,7 +10386,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10277,7 +10395,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -10290,7 +10408,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -10299,7 +10417,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -10308,7 +10426,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -10317,7 +10435,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10326,7 +10444,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10335,7 +10453,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10344,7 +10462,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10353,7 +10471,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10362,7 +10480,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10371,7 +10489,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10380,7 +10498,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10389,7 +10507,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10398,7 +10516,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10407,7 +10525,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10416,7 +10534,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -10565,7 +10683,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -10574,7 +10692,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10583,7 +10701,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10592,7 +10710,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10601,7 +10719,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10610,7 +10728,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10619,7 +10737,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -10632,7 +10750,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -10641,7 +10759,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10650,7 +10768,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10659,7 +10777,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10668,7 +10786,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10677,7 +10795,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -10686,7 +10804,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -10979,7 +11097,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -10988,7 +11106,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -10997,7 +11115,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -11006,7 +11124,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11015,7 +11133,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -11024,7 +11142,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11033,7 +11151,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11042,7 +11160,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11051,7 +11169,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11060,7 +11178,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11069,7 +11187,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11078,7 +11196,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11087,7 +11205,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11096,7 +11214,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11105,7 +11223,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -11118,7 +11236,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -11127,7 +11245,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -11136,7 +11254,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -11145,7 +11263,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11154,7 +11272,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -11163,7 +11281,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11172,7 +11290,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11181,7 +11299,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11190,7 +11308,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11199,7 +11317,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11208,7 +11326,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11217,7 +11335,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11226,7 +11344,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11235,7 +11353,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11244,7 +11362,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -11555,7 +11673,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
 {{% /md %}}</dd><dt class="property-required"
@@ -11564,7 +11682,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -11573,7 +11691,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11582,7 +11700,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11591,7 +11709,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11600,7 +11718,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11609,7 +11727,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11618,7 +11736,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11627,7 +11745,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11636,7 +11754,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#requestmaxentries_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11645,7 +11763,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11654,7 +11772,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11663,7 +11781,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11672,7 +11790,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11681,7 +11799,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11690,7 +11808,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -11703,7 +11821,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
 {{% /md %}}</dd><dt class="property-required"
@@ -11712,7 +11830,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -11721,7 +11839,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11730,7 +11848,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11739,7 +11857,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11748,7 +11866,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11757,7 +11875,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11766,7 +11884,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11775,7 +11893,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11784,7 +11902,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11793,7 +11911,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11802,7 +11920,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11811,7 +11929,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11820,7 +11938,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11829,7 +11947,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -11838,7 +11956,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -12131,7 +12249,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12140,7 +12258,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -12149,7 +12267,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-required"
@@ -12158,7 +12276,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12167,7 +12285,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12176,7 +12294,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12185,7 +12303,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12194,7 +12312,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12203,7 +12321,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12212,7 +12330,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12221,7 +12339,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12230,7 +12348,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12239,7 +12357,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12248,7 +12366,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12257,7 +12375,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -12270,7 +12388,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12279,7 +12397,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -12288,7 +12406,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-required"
@@ -12297,7 +12415,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12306,7 +12424,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12315,7 +12433,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12324,7 +12442,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12333,7 +12451,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12342,7 +12460,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12351,7 +12469,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12360,7 +12478,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12369,7 +12487,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12378,7 +12496,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12387,7 +12505,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12396,7 +12514,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -12581,7 +12699,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -12590,7 +12708,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -12599,7 +12717,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -12608,7 +12726,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -12617,7 +12735,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12626,7 +12744,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12635,7 +12753,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12644,7 +12762,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12653,7 +12771,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -12666,7 +12784,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -12675,7 +12793,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
 {{% /md %}}</dd><dt class="property-required"
@@ -12684,7 +12802,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -12693,7 +12811,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-required"
@@ -12702,7 +12820,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12711,7 +12829,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12720,7 +12838,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12729,7 +12847,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12738,7 +12856,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -12887,7 +13005,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -12896,7 +13014,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -12905,7 +13023,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12914,7 +13032,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12923,7 +13041,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12932,7 +13050,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12941,7 +13059,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -12954,7 +13072,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -12963,7 +13081,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -12972,7 +13090,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12981,7 +13099,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12990,7 +13108,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -12999,7 +13117,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13008,7 +13126,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -13157,7 +13275,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -13166,7 +13284,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -13175,7 +13293,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13184,7 +13302,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13193,7 +13311,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -13202,7 +13320,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13211,7 +13329,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -13224,7 +13342,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
 {{% /md %}}</dd><dt class="property-required"
@@ -13233,7 +13351,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -13242,7 +13360,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13251,7 +13369,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13260,7 +13378,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -13269,7 +13387,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13278,7 +13396,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -13639,7 +13757,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#brokers_nodejs" style="color: inherit; text-decoration: inherit;">brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
 {{% /md %}}</dd><dt class="property-required"
@@ -13648,7 +13766,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -13657,7 +13775,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13666,7 +13784,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13674,7 +13792,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13683,7 +13801,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13692,7 +13810,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -13701,7 +13819,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#parselogkeyvals_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Log<wbr>Keyvals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13709,7 +13827,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13718,7 +13836,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13727,7 +13845,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13736,7 +13854,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#requiredacks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Acks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13745,7 +13863,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13754,7 +13872,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13763,7 +13881,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13772,7 +13890,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13781,7 +13899,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -13790,7 +13908,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13799,7 +13917,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -13812,7 +13930,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#brokers_python" style="color: inherit; text-decoration: inherit;">brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
 {{% /md %}}</dd><dt class="property-required"
@@ -13821,7 +13939,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -13830,7 +13948,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13839,7 +13957,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13847,7 +13965,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13856,7 +13974,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13865,7 +13983,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -13874,7 +13992,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#parse_log_keyvals_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>log_<wbr>keyvals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13882,7 +14000,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13891,7 +14009,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13900,7 +14018,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13909,7 +14027,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#required_acks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>acks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13918,7 +14036,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13927,7 +14045,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13936,7 +14054,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13945,7 +14063,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13954,7 +14072,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -13963,7 +14081,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13972,7 +14090,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd></dl>
@@ -14157,7 +14275,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -14166,7 +14284,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14175,7 +14293,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -14184,7 +14302,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14193,7 +14311,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14202,7 +14320,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14211,7 +14329,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14220,7 +14338,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14229,7 +14347,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -14242,7 +14360,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -14251,7 +14369,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14260,7 +14378,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-required"
@@ -14269,7 +14387,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14278,7 +14396,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14287,7 +14405,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14296,7 +14414,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14305,7 +14423,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14314,7 +14432,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -14445,7 +14563,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14454,7 +14572,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14463,7 +14581,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14472,7 +14590,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14481,7 +14599,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14490,7 +14608,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -14503,7 +14621,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14512,7 +14630,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14521,7 +14639,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14530,7 +14648,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14539,7 +14657,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14548,7 +14666,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -14697,7 +14815,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14706,7 +14824,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -14715,7 +14833,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14724,7 +14842,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14733,7 +14851,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14742,7 +14860,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14751,7 +14869,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -14764,7 +14882,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14773,7 +14891,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -14782,7 +14900,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14791,7 +14909,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14800,7 +14918,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14809,7 +14927,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14818,7 +14936,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -14949,7 +15067,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -14958,7 +15076,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14967,7 +15085,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14976,7 +15094,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -14985,7 +15103,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14994,7 +15112,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -15007,7 +15125,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -15016,7 +15134,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15025,7 +15143,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15034,7 +15152,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15043,7 +15161,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15052,7 +15170,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -15345,7 +15463,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -15354,7 +15472,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -15363,7 +15481,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -15372,7 +15490,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-required"
@@ -15381,7 +15499,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15390,7 +15508,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15399,7 +15517,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15408,7 +15526,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15417,7 +15535,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15426,7 +15544,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15435,7 +15553,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15444,7 +15562,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15453,7 +15571,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15462,7 +15580,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15471,7 +15589,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -15484,7 +15602,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
 {{% /md %}}</dd><dt class="property-required"
@@ -15493,7 +15611,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -15502,7 +15620,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -15511,7 +15629,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-required"
@@ -15520,7 +15638,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15529,7 +15647,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15538,7 +15656,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15547,7 +15665,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15556,7 +15674,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15565,7 +15683,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15574,7 +15692,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15583,7 +15701,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15592,7 +15710,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15601,7 +15719,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15610,7 +15728,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -15759,7 +15877,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -15768,7 +15886,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15777,7 +15895,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15786,7 +15904,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15795,7 +15913,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15804,7 +15922,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15813,7 +15931,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -15826,7 +15944,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -15835,7 +15953,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15844,7 +15962,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15853,7 +15971,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15862,7 +15980,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15871,7 +15989,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -15880,7 +15998,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -16209,7 +16327,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -16218,7 +16336,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -16227,7 +16345,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -16236,7 +16354,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#sshknownhosts_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
 {{% /md %}}</dd><dt class="property-required"
@@ -16245,7 +16363,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16254,7 +16372,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16263,7 +16381,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16272,7 +16390,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16281,7 +16399,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16290,7 +16408,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16299,7 +16417,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16308,7 +16426,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16317,7 +16435,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16326,7 +16444,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16335,7 +16453,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16344,7 +16462,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16353,7 +16471,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -16366,7 +16484,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -16375,7 +16493,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -16384,7 +16502,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -16393,7 +16511,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#ssh_known_hosts_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
 {{% /md %}}</dd><dt class="property-required"
@@ -16402,7 +16520,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16411,7 +16529,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16420,7 +16538,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16429,7 +16547,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16438,7 +16556,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16447,7 +16565,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16456,7 +16574,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16465,7 +16583,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16474,7 +16592,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16483,7 +16601,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16492,7 +16610,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16501,7 +16619,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16510,7 +16628,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -16641,7 +16759,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -16650,7 +16768,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -16659,7 +16777,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16668,7 +16786,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16677,7 +16795,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16686,7 +16804,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -16699,7 +16817,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -16708,7 +16826,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -16717,7 +16835,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -16726,7 +16844,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16735,7 +16853,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16744,7 +16862,7 @@ content. (Does not apply to the `delete` action.)
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -16999,7 +17117,7 @@ viewing origin fetch durations.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17008,7 +17126,7 @@ viewing origin fetch durations.
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
@@ -17018,7 +17136,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#bypassbusywait_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Busy<wbr>Wait</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Disable collapsed forwarding, so you don't wait
 for other objects to origin.
@@ -17028,7 +17146,7 @@ for other objects to origin.
 <a href="#defaulthost_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17037,7 +17155,7 @@ for other objects to origin.
 <a href="#forcemiss_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Miss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Force a cache miss for the request. If specified,
 can be `true` or `false`.
@@ -17047,7 +17165,7 @@ can be `true` or `false`.
 <a href="#forcessl_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Forces the request to use SSL (Redirects a non-SSL request to SSL).
 {{% /md %}}</dd><dt class="property-optional"
@@ -17056,7 +17174,7 @@ can be `true` or `false`.
 <a href="#geoheaders_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Injects Fastly-Geo-Country, Fastly-Geo-City, and
 Fastly-Geo-Region into the request headers.
@@ -17066,7 +17184,7 @@ Fastly-Geo-Region into the request headers.
 <a href="#hashkeys_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of varnish request object fields
 that should be in the hash key.
@@ -17076,7 +17194,7 @@ that should be in the hash key.
 <a href="#maxstaleage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Stale<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How old an object is allowed to be to serve
 `stale-if-error` or `stale-while-revalidate`, in seconds.
@@ -17086,7 +17204,7 @@ that should be in the hash key.
 <a href="#requestcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17095,7 +17213,7 @@ that should be in the hash key.
 <a href="#timersupport_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Injects the X-Timer info into the request for
 viewing origin fetch durations.
@@ -17105,7 +17223,7 @@ viewing origin fetch durations.
 <a href="#xff_nodejs" style="color: inherit; text-decoration: inherit;">xff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}X-Forwarded-For, should be `clear`, `leave`, `append`,
 `append_all`, or `overwrite`. Default `append`.
@@ -17119,7 +17237,7 @@ viewing origin fetch durations.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17128,7 +17246,7 @@ viewing origin fetch durations.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allows you to terminate request handling and immediately
 perform an action. When set it can be `lookup` or `pass` (Ignore the cache completely).
@@ -17138,7 +17256,7 @@ perform an action. When set it can be `lookup` or `pass` (Ignore the cache compl
 <a href="#bypass_busy_wait_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>busy_<wbr>wait</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Disable collapsed forwarding, so you don't wait
 for other objects to origin.
@@ -17148,7 +17266,7 @@ for other objects to origin.
 <a href="#default_host_python" style="color: inherit; text-decoration: inherit;">default_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the host header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17157,7 +17275,7 @@ for other objects to origin.
 <a href="#force_miss_python" style="color: inherit; text-decoration: inherit;">force_<wbr>miss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Force a cache miss for the request. If specified,
 can be `true` or `false`.
@@ -17167,7 +17285,7 @@ can be `true` or `false`.
 <a href="#force_ssl_python" style="color: inherit; text-decoration: inherit;">force_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Forces the request to use SSL (Redirects a non-SSL request to SSL).
 {{% /md %}}</dd><dt class="property-optional"
@@ -17176,7 +17294,7 @@ can be `true` or `false`.
 <a href="#geo_headers_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Injects Fastly-Geo-Country, Fastly-Geo-City, and
 Fastly-Geo-Region into the request headers.
@@ -17186,7 +17304,7 @@ Fastly-Geo-Region into the request headers.
 <a href="#hash_keys_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of varnish request object fields
 that should be in the hash key.
@@ -17196,7 +17314,7 @@ that should be in the hash key.
 <a href="#max_stale_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>stale_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How old an object is allowed to be to serve
 `stale-if-error` or `stale-while-revalidate`, in seconds.
@@ -17206,7 +17324,7 @@ that should be in the hash key.
 <a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17215,7 +17333,7 @@ that should be in the hash key.
 <a href="#timer_support_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Injects the X-Timer info into the request for
 viewing origin fetch durations.
@@ -17225,7 +17343,7 @@ viewing origin fetch durations.
 <a href="#xff_python" style="color: inherit; text-decoration: inherit;">xff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}X-Forwarded-For, should be `clear`, `leave`, `append`,
 `append_all`, or `overwrite`. Default `append`.
@@ -17377,7 +17495,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17386,7 +17504,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#cachecondition_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -17396,7 +17514,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The custom VCL code to upload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17405,7 +17523,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The MIME type of the content.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17414,7 +17532,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#requestcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17423,7 +17541,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP Response. Default `Ok`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17432,7 +17550,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The HTTP Status Code. Default `200`.
 {{% /md %}}</dd></dl>
@@ -17445,7 +17563,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17454,7 +17572,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#cache_condition_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to check after we have retrieved an object. If the condition passes then deliver this Request Object instead. This `condition` must be of type `CACHE`. For detailed information about Conditionals,
 see [Fastly's Documentation on Conditionals][fastly-conditionals].
@@ -17464,7 +17582,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The custom VCL code to upload.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17473,7 +17591,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The MIME type of the content.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17482,7 +17600,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#request_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of already defined `condition` to be checked during the request phase. If the condition passes then this object will be delivered. This `condition` must be of type `REQUEST`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17491,7 +17609,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP Response. Default `Ok`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17500,7 +17618,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The HTTP Status Code. Default `200`.
 {{% /md %}}</dd></dl>
@@ -17859,7 +17977,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -17868,7 +17986,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17877,7 +17995,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -17886,7 +18004,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17895,7 +18013,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -17904,7 +18022,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -17913,7 +18031,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17922,7 +18040,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17931,7 +18049,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -17940,7 +18058,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17949,7 +18067,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17958,7 +18076,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#redundancy_nodejs" style="color: inherit; text-decoration: inherit;">redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17967,7 +18085,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17976,7 +18094,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#s3accesskey_nodejs" style="color: inherit; text-decoration: inherit;">s3Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS Access Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -17988,7 +18106,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 <a href="#s3secretkey_nodejs" style="color: inherit; text-decoration: inherit;">s3Secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AWS Secret Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -18000,7 +18118,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specify what type of server side encryption should be used. Can be either `AES256` or `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18009,7 +18127,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#serversideencryptionkmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Server-side KMS Key ID. Must be set if `server_side_encryption` is set to `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18018,7 +18136,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -18031,7 +18149,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
 {{% /md %}}</dd><dt class="property-required"
@@ -18040,7 +18158,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18049,7 +18167,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
 {{% /md %}}</dd><dt class="property-optional"
@@ -18058,7 +18176,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18067,7 +18185,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18076,7 +18194,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18085,7 +18203,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18094,7 +18212,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18103,7 +18221,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18112,7 +18230,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18121,7 +18239,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18130,7 +18248,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#redundancy_python" style="color: inherit; text-decoration: inherit;">redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18139,7 +18257,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18148,7 +18266,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#s3_access_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS Access Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -18160,7 +18278,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 <a href="#s3_secret_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AWS Secret Key of an account with the required
 permissions to post logs. It is **strongly** recommended you create a separate
@@ -18172,7 +18290,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specify what type of server side encryption should be used. Can be either `AES256` or `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18181,7 +18299,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#server_side_encryption_kms_key_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Server-side KMS Key ID. Must be set if `server_side_encryption` is set to `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18190,7 +18308,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
 {{% /md %}}</dd></dl>
@@ -18285,7 +18403,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The custom VCL code to upload.
 {{% /md %}}</dd><dt class="property-required"
@@ -18294,7 +18412,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -18303,7 +18421,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18312,7 +18430,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd></dl>
@@ -18325,7 +18443,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The custom VCL code to upload.
 {{% /md %}}</dd><dt class="property-required"
@@ -18334,7 +18452,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -18343,7 +18461,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location in generated VCL where the snippet should be placed (can be one of `init`, `recv`, `hit`, `miss`, `pass`, `fetch`, `error`, `deliver`, `log` or `none`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18352,7 +18470,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority determines the ordering for multiple snippets. Lower numbers execute first.  Defaults to `100`.
 {{% /md %}}</dd></dl>
@@ -18537,7 +18655,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -18546,7 +18664,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -18555,7 +18673,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18564,7 +18682,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18573,7 +18691,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18582,7 +18700,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18591,7 +18709,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18600,7 +18718,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18609,7 +18727,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -18622,7 +18740,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -18631,7 +18749,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -18640,7 +18758,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18649,7 +18767,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18658,7 +18776,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18667,7 +18785,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18676,7 +18794,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18685,7 +18803,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18694,7 +18812,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd></dl>
@@ -18843,7 +18961,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -18852,7 +18970,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18861,7 +18979,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18870,7 +18988,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18879,7 +18997,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18888,7 +19006,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18897,7 +19015,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -18910,7 +19028,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-required"
@@ -18919,7 +19037,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18928,7 +19046,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18937,7 +19055,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -18946,7 +19064,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18955,7 +19073,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18964,7 +19082,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd></dl>
@@ -19239,7 +19357,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -19248,7 +19366,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19257,7 +19375,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19266,7 +19384,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#formatversion_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -19275,7 +19393,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19284,7 +19402,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19293,7 +19411,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -19302,7 +19420,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#responsecondition_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19311,7 +19429,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19320,7 +19438,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19329,7 +19447,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19338,7 +19456,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -19347,7 +19465,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19356,7 +19474,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -19369,7 +19487,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -19378,7 +19496,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19387,7 +19505,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Apache style log formatting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19396,7 +19514,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The version of the custom logging format used for the configured endpoint. Can be either `1` or `2`. (default: `2`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -19405,7 +19523,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19414,7 +19532,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Where in the generated VCL the logging call should be placed. Can be `none` or `waf_debug`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19423,7 +19541,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -19432,7 +19550,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#response_condition_python" style="color: inherit; text-decoration: inherit;">response_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an existing condition in the configured endpoint, or leave blank to always execute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19441,7 +19559,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19450,7 +19568,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19459,7 +19577,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19468,7 +19586,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
 {{% /md %}}</dd><dt class="property-optional"
@@ -19477,7 +19595,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19486,7 +19604,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
 {{% /md %}}</dd></dl>
@@ -19567,7 +19685,7 @@ marked as the main block. Default is `false`.
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The custom VCL code to upload.
 {{% /md %}}</dd><dt class="property-required"
@@ -19576,7 +19694,7 @@ marked as the main block. Default is `false`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19585,7 +19703,7 @@ marked as the main block. Default is `false`.
 <a href="#main_nodejs" style="color: inherit; text-decoration: inherit;">main</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, use this block as the main configuration. If
 `false`, use this block as an includable library. Only a single VCL block can be
@@ -19600,7 +19718,7 @@ marked as the main block. Default is `false`.
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The custom VCL code to upload.
 {{% /md %}}</dd><dt class="property-required"
@@ -19609,7 +19727,7 @@ marked as the main block. Default is `false`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to identify this dictionary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19618,7 +19736,7 @@ marked as the main block. Default is `false`.
 <a href="#main_python" style="color: inherit; text-decoration: inherit;">main</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, use this block as the main configuration. If
 `false`, use this block as an includable library. Only a single VCL block can be
@@ -19713,7 +19831,7 @@ marked as the main block. Default is `false`.
 <a href="#responseobject_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19722,7 +19840,7 @@ marked as the main block. Default is `false`.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19730,7 +19848,7 @@ marked as the main block. Default is `false`.
 <a href="#prefetchcondition_nodejs" style="color: inherit; text-decoration: inherit;">prefetch<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The `condition` to determine which requests will be run past your Fastly WAF. This `condition` must be of type `PREFETCH`. For detailed information about Conditionals, see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% /md %}}</dd><dt class="property-optional"
@@ -19739,7 +19857,7 @@ marked as the main block. Default is `false`.
 <a href="#wafid_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the WAF.
 {{% /md %}}</dd></dl>
@@ -19752,7 +19870,7 @@ marked as the main block. Default is `false`.
 <a href="#response_object_python" style="color: inherit; text-decoration: inherit;">response_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the response object used by the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -19761,7 +19879,7 @@ marked as the main block. Default is `false`.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19769,7 +19887,7 @@ marked as the main block. Default is `false`.
 <a href="#prefetch_condition_python" style="color: inherit; text-decoration: inherit;">prefetch_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The `condition` to determine which requests will be run past your Fastly WAF. This `condition` must be of type `PREFETCH`. For detailed information about Conditionals, see [Fastly's Documentation on Conditionals][fastly-conditionals].
 {{% /md %}}</dd><dt class="property-optional"
@@ -19778,7 +19896,7 @@ marked as the main block. Default is `false`.
 <a href="#waf_id_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF.
 {{% /md %}}</dd></dl>

@@ -28,19 +28,56 @@ This is an example of the import command being applied to the resource named `fa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_http_versions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_request_content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_request_content_type_charset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arg_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">arg_name_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">combined_file_sizes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">critical_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">crs_validate_utf8_encoding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">high_risk_country_codes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_violation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inbound_anomaly_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_file_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_num_args</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notice_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">paranoia_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">php_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rce_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">restricted_extensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restricted_headers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceWafConfigurationRuleExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceWafConfigurationRuleArgs]]</span> = None<span class="p">, </span><span class="nx">session_fixation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_arg_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">waf_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">warning_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">xss_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">allowed_http_versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">allowed_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">allowed_request_content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">allowed_request_content_type_charset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">arg_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">arg_name_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">combined_file_sizes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">critical_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">crs_validate_utf8_encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                            <span class="nx">error_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">high_risk_country_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">http_violation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">inbound_anomaly_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">lfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">max_file_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">max_num_args</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">notice_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">paranoia_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">php_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">rce_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">restricted_extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">restricted_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">rfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">rule_exclusions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceWafConfigurationRuleExclusionArgs]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceWafConfigurationRuleArgs]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">session_fixation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">sql_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">total_arg_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">waf_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">warning_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">xss_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceWafConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceWafConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServiceWafConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceWafConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServiceWafConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceWafConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +112,32 @@ This is an example of the import command being applied to the resource named `fa
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServiceWafConfigurationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -99,7 +146,7 @@ This is an example of the import command being applied to the resource named `fa
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -123,7 +170,7 @@ This is an example of the import command being applied to the resource named `fa
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -744,7 +791,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#wafid_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +800,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowedhttpversions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Http<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +809,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +818,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowedrequestcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +827,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowedrequestcontenttypecharset_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +836,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#arglength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +845,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#argnamelength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Name<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +854,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#combinedfilesizes_nodejs" style="color: inherit; text-decoration: inherit;">combined<wbr>File<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +863,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#criticalanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +872,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#crsvalidateutf8encoding_nodejs" style="color: inherit; text-decoration: inherit;">crs<wbr>Validate<wbr>Utf8Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +881,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#erroranomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +890,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#highriskcountrycodes_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Risk<wbr>Country<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +899,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#httpviolationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Violation<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +908,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#inboundanomalyscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +917,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#lfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">lfi<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +926,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +935,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#maxnumargs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +944,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#noticeanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">notice<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -906,7 +953,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#paranoialevel_nodejs" style="color: inherit; text-decoration: inherit;">paranoia<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -915,7 +962,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#phpinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Injection<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -924,7 +971,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rcescorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rce<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -933,7 +980,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#restrictedextensions_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -942,7 +989,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#restrictedheaders_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +998,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rfi<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +1007,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#ruleexclusions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion[]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +1016,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationrule">Service<wbr>Waf<wbr>Configuration<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationrule">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +1025,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#sessionfixationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +1034,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#sqlinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +1043,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#totalarglength_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Arg<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +1052,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#warninganomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +1061,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#xssscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
 {{% /md %}}</dd></dl>
@@ -1027,7 +1074,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#waf_id_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1083,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowed_http_versions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>http_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1092,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1101,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowed_request_content_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1110,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#allowed_request_content_type_charset_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type_<wbr>charset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1119,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#arg_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1081,7 +1128,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#arg_name_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>name_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1137,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#combined_file_sizes_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>file_<wbr>sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1146,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#critical_anomaly_score_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1155,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#crs_validate_utf8_encoding_python" style="color: inherit; text-decoration: inherit;">crs_<wbr>validate_<wbr>utf8_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1164,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#error_anomaly_score_python" style="color: inherit; text-decoration: inherit;">error_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1173,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#high_risk_country_codes_python" style="color: inherit; text-decoration: inherit;">high_<wbr>risk_<wbr>country_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1182,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#http_violation_score_threshold_python" style="color: inherit; text-decoration: inherit;">http_<wbr>violation_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1191,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#inbound_anomaly_score_threshold_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>anomaly_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1200,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#lfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">lfi_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1209,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1218,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#max_num_args_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1227,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#notice_anomaly_score_python" style="color: inherit; text-decoration: inherit;">notice_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1236,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#paranoia_level_python" style="color: inherit; text-decoration: inherit;">paranoia_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1198,7 +1245,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#php_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">php_<wbr>injection_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1254,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rce_score_threshold_python" style="color: inherit; text-decoration: inherit;">rce_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1263,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#restricted_extensions_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1272,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#restricted_headers_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1281,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">rfi_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1290,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rule_exclusions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Input[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1252,7 +1299,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationrule">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationrule">Input[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1308,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#session_fixation_score_threshold_python" style="color: inherit; text-decoration: inherit;">session_<wbr>fixation_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1317,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#sql_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>injection_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1326,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#total_arg_length_python" style="color: inherit; text-decoration: inherit;">total_<wbr>arg_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1335,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#warning_anomaly_score_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1344,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#xss_score_threshold_python" style="color: inherit; text-decoration: inherit;">xss_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
 {{% /md %}}</dd></dl>
@@ -1366,20 +1413,53 @@ Get an existing ServiceWafConfiguration resource's state with the given name, ID
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceWafConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceWafConfiguration</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceWafConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServiceWafConfiguration</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_http_versions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_methods</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_request_content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_request_content_type_charset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arg_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">arg_name_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">combined_file_sizes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">critical_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">crs_validate_utf8_encoding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">high_risk_country_codes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_violation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">inbound_anomaly_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_file_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_num_args</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notice_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">paranoia_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">php_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rce_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">restricted_extensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restricted_headers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_exclusions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceWafConfigurationRuleExclusionArgs]]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceWafConfigurationRuleArgs]]</span> = None<span class="p">, </span><span class="nx">session_fixation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_arg_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">waf_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">warning_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">xss_score_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ServiceWafConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allowed_http_versions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_request_content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_request_content_type_charset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">arg_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">arg_name_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">combined_file_sizes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">critical_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">crs_validate_utf8_encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">error_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">high_risk_country_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">http_violation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">inbound_anomaly_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">lfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">max_file_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">max_num_args</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">notice_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">paranoia_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">php_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">rce_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">restricted_extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">restricted_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">rfi_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">rule_exclusions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceWafConfigurationRuleExclusionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceWafConfigurationRuleArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">session_fixation_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">sql_injection_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">total_arg_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">waf_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">warning_anomaly_score</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">xss_score_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> ServiceWafConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceWafConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceWafConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceWafConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceWafConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceWafConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServiceWafConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceWafConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceWafConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServiceWafConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceWafConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2054,7 +2134,7 @@ The following state arguments are supported:
 <a href="#state_allowedhttpversions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Http<wbr>Versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2063,7 +2143,7 @@ The following state arguments are supported:
 <a href="#state_allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2152,7 @@ The following state arguments are supported:
 <a href="#state_allowedrequestcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2161,7 @@ The following state arguments are supported:
 <a href="#state_allowedrequestcontenttypecharset_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_arglength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2099,7 +2179,7 @@ The following state arguments are supported:
 <a href="#state_argnamelength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Name<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2108,7 +2188,7 @@ The following state arguments are supported:
 <a href="#state_combinedfilesizes_nodejs" style="color: inherit; text-decoration: inherit;">combined<wbr>File<wbr>Sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2117,7 +2197,7 @@ The following state arguments are supported:
 <a href="#state_criticalanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2126,7 +2206,7 @@ The following state arguments are supported:
 <a href="#state_crsvalidateutf8encoding_nodejs" style="color: inherit; text-decoration: inherit;">crs<wbr>Validate<wbr>Utf8Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2135,7 +2215,7 @@ The following state arguments are supported:
 <a href="#state_erroranomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_highriskcountrycodes_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Risk<wbr>Country<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2233,7 @@ The following state arguments are supported:
 <a href="#state_httpviolationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Violation<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2242,7 @@ The following state arguments are supported:
 <a href="#state_inboundanomalyscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2251,7 @@ The following state arguments are supported:
 <a href="#state_lfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">lfi<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2260,7 @@ The following state arguments are supported:
 <a href="#state_maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2269,7 @@ The following state arguments are supported:
 <a href="#state_maxnumargs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2278,7 @@ The following state arguments are supported:
 <a href="#state_noticeanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">notice<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2287,7 @@ The following state arguments are supported:
 <a href="#state_paranoialevel_nodejs" style="color: inherit; text-decoration: inherit;">paranoia<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2296,7 @@ The following state arguments are supported:
 <a href="#state_phpinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Injection<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2305,7 @@ The following state arguments are supported:
 <a href="#state_rcescorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rce<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2314,7 @@ The following state arguments are supported:
 <a href="#state_restrictedextensions_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2323,7 @@ The following state arguments are supported:
 <a href="#state_restrictedheaders_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_rfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rfi<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2341,7 @@ The following state arguments are supported:
 <a href="#state_ruleexclusions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion[]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationrule">Service<wbr>Waf<wbr>Configuration<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationrule">pulumi<wbr>Input<pulumi<wbr>Input<Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2359,7 @@ The following state arguments are supported:
 <a href="#state_sessionfixationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2368,7 @@ The following state arguments are supported:
 <a href="#state_sqlinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2377,7 @@ The following state arguments are supported:
 <a href="#state_totalarglength_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Arg<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2386,7 @@ The following state arguments are supported:
 <a href="#state_wafid_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2395,7 @@ The following state arguments are supported:
 <a href="#state_warninganomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Anomaly<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2404,7 @@ The following state arguments are supported:
 <a href="#state_xssscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Score<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
 {{% /md %}}</dd></dl>
@@ -2337,7 +2417,7 @@ The following state arguments are supported:
 <a href="#state_allowed_http_versions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>http_<wbr>versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2346,7 +2426,7 @@ The following state arguments are supported:
 <a href="#state_allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2355,7 +2435,7 @@ The following state arguments are supported:
 <a href="#state_allowed_request_content_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2364,7 +2444,7 @@ The following state arguments are supported:
 <a href="#state_allowed_request_content_type_charset_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type_<wbr>charset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2373,7 +2453,7 @@ The following state arguments are supported:
 <a href="#state_arg_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2382,7 +2462,7 @@ The following state arguments are supported:
 <a href="#state_arg_name_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>name_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2391,7 +2471,7 @@ The following state arguments are supported:
 <a href="#state_combined_file_sizes_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>file_<wbr>sizes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2400,7 +2480,7 @@ The following state arguments are supported:
 <a href="#state_critical_anomaly_score_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2409,7 +2489,7 @@ The following state arguments are supported:
 <a href="#state_crs_validate_utf8_encoding_python" style="color: inherit; text-decoration: inherit;">crs_<wbr>validate_<wbr>utf8_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2498,7 @@ The following state arguments are supported:
 <a href="#state_error_anomaly_score_python" style="color: inherit; text-decoration: inherit;">error_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2427,7 +2507,7 @@ The following state arguments are supported:
 <a href="#state_high_risk_country_codes_python" style="color: inherit; text-decoration: inherit;">high_<wbr>risk_<wbr>country_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2436,7 +2516,7 @@ The following state arguments are supported:
 <a href="#state_http_violation_score_threshold_python" style="color: inherit; text-decoration: inherit;">http_<wbr>violation_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2445,7 +2525,7 @@ The following state arguments are supported:
 <a href="#state_inbound_anomaly_score_threshold_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>anomaly_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2454,7 +2534,7 @@ The following state arguments are supported:
 <a href="#state_lfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">lfi_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2463,7 +2543,7 @@ The following state arguments are supported:
 <a href="#state_max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2472,7 +2552,7 @@ The following state arguments are supported:
 <a href="#state_max_num_args_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2561,7 @@ The following state arguments are supported:
 <a href="#state_notice_anomaly_score_python" style="color: inherit; text-decoration: inherit;">notice_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2570,7 @@ The following state arguments are supported:
 <a href="#state_paranoia_level_python" style="color: inherit; text-decoration: inherit;">paranoia_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2579,7 @@ The following state arguments are supported:
 <a href="#state_php_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">php_<wbr>injection_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2588,7 @@ The following state arguments are supported:
 <a href="#state_rce_score_threshold_python" style="color: inherit; text-decoration: inherit;">rce_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2597,7 @@ The following state arguments are supported:
 <a href="#state_restricted_extensions_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2526,7 +2606,7 @@ The following state arguments are supported:
 <a href="#state_restricted_headers_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2615,7 @@ The following state arguments are supported:
 <a href="#state_rfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">rfi_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2624,7 @@ The following state arguments are supported:
 <a href="#state_rule_exclusions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Input[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2633,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationrule">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationrule">Input[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2562,7 +2642,7 @@ The following state arguments are supported:
 <a href="#state_session_fixation_score_threshold_python" style="color: inherit; text-decoration: inherit;">session_<wbr>fixation_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2571,7 +2651,7 @@ The following state arguments are supported:
 <a href="#state_sql_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>injection_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2580,7 +2660,7 @@ The following state arguments are supported:
 <a href="#state_total_arg_length_python" style="color: inherit; text-decoration: inherit;">total_<wbr>arg_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2669,7 @@ The following state arguments are supported:
 <a href="#state_waf_id_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2678,7 @@ The following state arguments are supported:
 <a href="#state_warning_anomaly_score_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>anomaly_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2607,7 +2687,7 @@ The following state arguments are supported:
 <a href="#state_xss_score_threshold_python" style="color: inherit; text-decoration: inherit;">xss_<wbr>score_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
 {{% /md %}}</dd></dl>
@@ -2693,7 +2773,7 @@ The following state arguments are supported:
 <a href="#modsecruleid_nodejs" style="color: inherit; text-decoration: inherit;">modsec<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's modsecurity ID.
 {{% /md %}}</dd><dt class="property-required"
@@ -2702,7 +2782,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's status. Allowed values are (`log`, `block` and `score`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2791,7 @@ The following state arguments are supported:
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's revision. The latest revision will be used if this is not provided.
 {{% /md %}}</dd></dl>
@@ -2724,7 +2804,7 @@ The following state arguments are supported:
 <a href="#modsec_rule_id_python" style="color: inherit; text-decoration: inherit;">modsec_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's modsecurity ID.
 {{% /md %}}</dd><dt class="property-required"
@@ -2733,7 +2813,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's status. Allowed values are (`log`, `block` and `score`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2822,7 @@ The following state arguments are supported:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's revision. The latest revision will be used if this is not provided.
 {{% /md %}}</dd></dl>
@@ -2855,7 +2935,7 @@ The following state arguments are supported:
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A conditional expression in VCL used to determine if the condition is met.
 {{% /md %}}</dd><dt class="property-required"
@@ -2864,7 +2944,7 @@ The following state arguments are supported:
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of rule exclusion. Values are `rule` to exclude the specified rule(s), or `waf` to disable the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-required"
@@ -2873,7 +2953,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of rule exclusion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2882,7 +2962,7 @@ The following state arguments are supported:
 <a href="#modsecruleids_nodejs" style="color: inherit; text-decoration: inherit;">modsec<wbr>Rule<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}Set of modsecurity IDs to be excluded. No rules should be provided when `exclusion_type` is `waf`. The rules need to be configured on the Web Application Firewall to be excluded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2891,7 +2971,7 @@ The following state arguments are supported:
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The numeric ID assigned to the WAF Rule Exclusion.
 {{% /md %}}</dd></dl>
@@ -2904,7 +2984,7 @@ The following state arguments are supported:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A conditional expression in VCL used to determine if the condition is met.
 {{% /md %}}</dd><dt class="property-required"
@@ -2913,7 +2993,7 @@ The following state arguments are supported:
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of rule exclusion. Values are `rule` to exclude the specified rule(s), or `waf` to disable the Web Application Firewall.
 {{% /md %}}</dd><dt class="property-required"
@@ -2922,7 +3002,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of rule exclusion.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2931,7 +3011,7 @@ The following state arguments are supported:
 <a href="#modsec_rule_ids_python" style="color: inherit; text-decoration: inherit;">modsec_<wbr>rule_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}Set of modsecurity IDs to be excluded. No rules should be provided when `exclusion_type` is `waf`. The rules need to be configured on the Web Application Firewall to be excluded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2940,7 +3020,7 @@ The following state arguments are supported:
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The numeric ID assigned to the WAF Rule Exclusion.
 {{% /md %}}</dd></dl>
