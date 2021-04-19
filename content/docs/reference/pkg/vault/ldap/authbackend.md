@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault/ldap"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -143,19 +143,53 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -190,22 +224,32 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AuthBackendArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,7 +258,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -238,7 +282,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -837,7 +881,7 @@ requests a different type at generation time.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +890,7 @@ requests a different type at generation time.
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +899,7 @@ requests a different type at generation time.
 <a href="#bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +908,7 @@ requests a different type at generation time.
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +917,7 @@ requests a different type at generation time.
 <a href="#denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +925,7 @@ requests a different type at generation time.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +934,7 @@ requests a different type at generation time.
 <a href="#discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +942,7 @@ requests a different type at generation time.
 <a href="#groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +951,7 @@ requests a different type at generation time.
 <a href="#groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +960,7 @@ requests a different type at generation time.
 <a href="#groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +969,7 @@ requests a different type at generation time.
 <a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +978,7 @@ requests a different type at generation time.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +987,7 @@ requests a different type at generation time.
 <a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +996,7 @@ requests a different type at generation time.
 <a href="#tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +1005,7 @@ requests a different type at generation time.
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +1014,7 @@ requests a different type at generation time.
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -981,7 +1025,7 @@ as well.
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -993,7 +1037,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1003,7 +1047,7 @@ Its current value will be referenced at renewal time.
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -1013,7 +1057,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -1024,7 +1068,7 @@ if any, in number of seconds to set on the token.
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -1036,7 +1080,7 @@ value of this field. Specified in seconds.
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -1046,7 +1090,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1056,7 +1100,7 @@ Its current value will be referenced at renewal time.
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1069,7 +1113,7 @@ requests a different type at generation time.
 <a href="#upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1122,7 @@ requests a different type at generation time.
 <a href="#usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1131,7 @@ requests a different type at generation time.
 <a href="#userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1140,7 @@ requests a different type at generation time.
 <a href="#userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd></dl>
@@ -1109,7 +1153,7 @@ requests a different type at generation time.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1162,7 @@ requests a different type at generation time.
 <a href="#binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1171,7 @@ requests a different type at generation time.
 <a href="#bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -1136,7 +1180,7 @@ requests a different type at generation time.
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd><dt class="property-optional"
@@ -1145,7 +1189,7 @@ requests a different type at generation time.
 <a href="#deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1197,7 @@ requests a different type at generation time.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1206,7 @@ requests a different type at generation time.
 <a href="#discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1214,7 @@ requests a different type at generation time.
 <a href="#groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1223,7 @@ requests a different type at generation time.
 <a href="#groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1232,7 @@ requests a different type at generation time.
 <a href="#groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1241,7 @@ requests a different type at generation time.
 <a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1250,7 @@ requests a different type at generation time.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1259,7 @@ requests a different type at generation time.
 <a href="#starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1268,7 @@ requests a different type at generation time.
 <a href="#tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1277,7 @@ requests a different type at generation time.
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1286,7 @@ requests a different type at generation time.
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -1253,7 +1297,7 @@ as well.
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -1265,7 +1309,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1275,7 +1319,7 @@ Its current value will be referenced at renewal time.
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -1285,7 +1329,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -1296,7 +1340,7 @@ if any, in number of seconds to set on the token.
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -1308,7 +1352,7 @@ value of this field. Specified in seconds.
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -1318,7 +1362,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1328,7 +1372,7 @@ Its current value will be referenced at renewal time.
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1341,7 +1385,7 @@ requests a different type at generation time.
 <a href="#upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1394,7 @@ requests a different type at generation time.
 <a href="#use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1403,7 @@ requests a different type at generation time.
 <a href="#userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1412,7 @@ requests a different type at generation time.
 <a href="#userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd></dl>
@@ -1473,20 +1517,51 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackend</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackend</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthBackendState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AuthBackendState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2157,7 +2232,7 @@ requests a different type at generation time.
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2241,7 @@ requests a different type at generation time.
 <a href="#state_binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2250,7 @@ requests a different type at generation time.
 <a href="#state_bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2259,7 @@ requests a different type at generation time.
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd><dt class="property-optional"
@@ -2193,7 +2268,7 @@ requests a different type at generation time.
 <a href="#state_denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2276,7 @@ requests a different type at generation time.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2285,7 @@ requests a different type at generation time.
 <a href="#state_discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2218,7 +2293,7 @@ requests a different type at generation time.
 <a href="#state_groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd><dt class="property-optional"
@@ -2227,7 +2302,7 @@ requests a different type at generation time.
 <a href="#state_groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd><dt class="property-optional"
@@ -2236,7 +2311,7 @@ requests a different type at generation time.
 <a href="#state_groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd><dt class="property-optional"
@@ -2245,7 +2320,7 @@ requests a different type at generation time.
 <a href="#state_insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
@@ -2254,7 +2329,7 @@ requests a different type at generation time.
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd><dt class="property-optional"
@@ -2263,7 +2338,7 @@ requests a different type at generation time.
 <a href="#state_starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2347,7 @@ requests a different type at generation time.
 <a href="#state_tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2356,7 @@ requests a different type at generation time.
 <a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -2290,7 +2365,7 @@ requests a different type at generation time.
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -2301,7 +2376,7 @@ as well.
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -2313,7 +2388,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -2323,7 +2398,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -2333,7 +2408,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -2344,7 +2419,7 @@ if any, in number of seconds to set on the token.
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -2356,7 +2431,7 @@ value of this field. Specified in seconds.
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -2366,7 +2441,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -2376,7 +2451,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2389,7 +2464,7 @@ requests a different type at generation time.
 <a href="#state_upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2473,7 @@ requests a different type at generation time.
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2407,7 +2482,7 @@ requests a different type at generation time.
 <a href="#state_usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd><dt class="property-optional"
@@ -2416,7 +2491,7 @@ requests a different type at generation time.
 <a href="#state_userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd><dt class="property-optional"
@@ -2425,7 +2500,7 @@ requests a different type at generation time.
 <a href="#state_userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd></dl>
@@ -2438,7 +2513,7 @@ requests a different type at generation time.
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2522,7 @@ requests a different type at generation time.
 <a href="#state_binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2531,7 @@ requests a different type at generation time.
 <a href="#state_bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd><dt class="property-optional"
@@ -2465,7 +2540,7 @@ requests a different type at generation time.
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd><dt class="property-optional"
@@ -2474,7 +2549,7 @@ requests a different type at generation time.
 <a href="#state_deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2557,7 @@ requests a different type at generation time.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2566,7 @@ requests a different type at generation time.
 <a href="#state_discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2574,7 @@ requests a different type at generation time.
 <a href="#state_groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2583,7 @@ requests a different type at generation time.
 <a href="#state_groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2592,7 @@ requests a different type at generation time.
 <a href="#state_groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd><dt class="property-optional"
@@ -2526,7 +2601,7 @@ requests a different type at generation time.
 <a href="#state_insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2610,7 @@ requests a different type at generation time.
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2619,7 @@ requests a different type at generation time.
 <a href="#state_starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd><dt class="property-optional"
@@ -2553,7 +2628,7 @@ requests a different type at generation time.
 <a href="#state_tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -2562,7 +2637,7 @@ requests a different type at generation time.
 <a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd><dt class="property-optional"
@@ -2571,7 +2646,7 @@ requests a different type at generation time.
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -2582,7 +2657,7 @@ as well.
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -2594,7 +2669,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -2604,7 +2679,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -2614,7 +2689,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -2625,7 +2700,7 @@ if any, in number of seconds to set on the token.
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -2637,7 +2712,7 @@ value of this field. Specified in seconds.
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -2647,7 +2722,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -2657,7 +2732,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2670,7 +2745,7 @@ requests a different type at generation time.
 <a href="#state_upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd><dt class="property-optional"
@@ -2679,7 +2754,7 @@ requests a different type at generation time.
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd><dt class="property-optional"
@@ -2688,7 +2763,7 @@ requests a different type at generation time.
 <a href="#state_use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd><dt class="property-optional"
@@ -2697,7 +2772,7 @@ requests a different type at generation time.
 <a href="#state_userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd><dt class="property-optional"
@@ -2706,7 +2781,7 @@ requests a different type at generation time.
 <a href="#state_userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd></dl>

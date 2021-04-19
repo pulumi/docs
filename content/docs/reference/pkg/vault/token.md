@@ -26,19 +26,39 @@ Tokens can be imported using its `id` as accessor id, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Token</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TokenArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Token</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TokenArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Token</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_default_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_parent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">num_uses</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">renew_increment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">renew_min_lease</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">renewable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wrapping_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Token</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">no_default_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">no_parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">num_uses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">renew_increment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">renew_min_lease</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">renewable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">wrapping_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Token</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[TokenArgs]</a></span> = None<span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewToken</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TokenArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Token</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewToken</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TokenArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Token</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Token</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TokenArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Token</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TokenArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +93,32 @@ Tokens can be imported using its `id` as accessor id, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TokenArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +127,7 @@ Tokens can be imported using its `id` as accessor id, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +151,7 @@ Tokens can be imported using its `id` as accessor id, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -436,7 +466,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing the token display name
 {{% /md %}}</dd><dt class="property-optional"
@@ -445,7 +475,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#explicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The explicit max TTL of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -454,7 +484,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#nodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Default<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to not attach the default policy to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -463,7 +493,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#noparent_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to create a token without parent
 {{% /md %}}</dd><dt class="property-optional"
@@ -472,7 +502,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#numuses_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of allowed uses of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -481,7 +511,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +520,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#pgpkey_nodejs" style="color: inherit; text-decoration: inherit;">pgp<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP key (base64 encoded) to encrypt the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -499,7 +529,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of policies to attach to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -508,7 +538,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#renewincrement_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Increment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The renew increment
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +547,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#renewminlease_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Min<wbr>Lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimal lease to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -526,7 +556,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -535,7 +565,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The token role name
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +574,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +583,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#wrappingttl_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL period of the wrapped token.
 {{% /md %}}</dd></dl>
@@ -566,7 +596,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing the token display name
 {{% /md %}}</dd><dt class="property-optional"
@@ -575,7 +605,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The explicit max TTL of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +614,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#no_default_policy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>default_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to not attach the default policy to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +623,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#no_parent_python" style="color: inherit; text-decoration: inherit;">no_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to create a token without parent
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +632,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#num_uses_python" style="color: inherit; text-decoration: inherit;">num_<wbr>uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of allowed uses of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +641,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +650,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#pgp_key_python" style="color: inherit; text-decoration: inherit;">pgp_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP key (base64 encoded) to encrypt the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +659,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of policies to attach to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +668,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#renew_increment_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>increment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The renew increment
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +677,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#renew_min_lease_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>min_<wbr>lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimal lease to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +686,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +695,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The token role name
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +704,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +713,7 @@ The Token resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#wrapping_ttl_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL period of the wrapped token.
 {{% /md %}}</dd></dl>
@@ -968,20 +998,42 @@ Get an existing Token resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TokenState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Token</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TokenState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Token</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lease_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lease_started</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_default_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_parent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">num_uses</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">renew_increment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">renew_min_lease</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">renewable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wrapped_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wrapping_accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wrapping_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Token</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">encrypted_client_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">lease_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">lease_started</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">no_default_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">no_parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">num_uses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">renew_increment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">renew_min_lease</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">renewable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wrapped_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wrapping_accessor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">wrapping_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Token</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TokenState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Token</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TokenState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Token</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Token</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TokenState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Token</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TokenState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1458,7 +1510,7 @@ The following state arguments are supported:
 <a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing the client token if stored in present file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1519,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing the token display name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_encryptedclienttoken_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Client<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing the client token encrypted with the given `pgp_key` if stored in present file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_explicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The explicit max TTL of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,7 +1546,7 @@ The following state arguments are supported:
 <a href="#state_leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}String containing the token lease duration if present in state file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1503,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_leasestarted_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Started</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}String containing the token lease started time if present in state file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1564,7 @@ The following state arguments are supported:
 <a href="#state_nodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Default<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to not attach the default policy to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_noparent_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to create a token without parent
 {{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_numuses_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of allowed uses of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_pgpkey_nodejs" style="color: inherit; text-decoration: inherit;">pgp<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PGP key (base64 encoded) to encrypt the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of policies to attach to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1618,7 @@ The following state arguments are supported:
 <a href="#state_renewincrement_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Increment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The renew increment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1575,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_renewminlease_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Min<wbr>Lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimal lease to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The token role name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_wrappedtoken_nodejs" style="color: inherit; text-decoration: inherit;">wrapped<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client wrapped token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1620,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_wrappingaccessor_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client wrapping accessor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1629,7 +1681,7 @@ The following state arguments are supported:
 <a href="#state_wrappingttl_nodejs" style="color: inherit; text-decoration: inherit;">wrapping<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL period of the wrapped token.
 {{% /md %}}</dd></dl>
@@ -1642,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing the client token if stored in present file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing the token display name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_encrypted_client_token_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>client_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing the client token encrypted with the given `pgp_key` if stored in present file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1669,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The explicit max TTL of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}String containing the token lease duration if present in state file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_lease_started_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>started</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}String containing the token lease started time if present in state file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1696,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_no_default_policy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>default_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to not attach the default policy to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_no_parent_python" style="color: inherit; text-decoration: inherit;">no_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to create a token without parent
 {{% /md %}}</dd><dt class="property-optional"
@@ -1714,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_num_uses_python" style="color: inherit; text-decoration: inherit;">num_<wbr>uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of allowed uses of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,7 +1775,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1784,7 @@ The following state arguments are supported:
 <a href="#state_pgp_key_python" style="color: inherit; text-decoration: inherit;">pgp_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PGP key (base64 encoded) to encrypt the token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1793,7 @@ The following state arguments are supported:
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of policies to attach to this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1750,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_renew_increment_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>increment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The renew increment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1759,7 +1811,7 @@ The following state arguments are supported:
 <a href="#state_renew_min_lease_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>min_<wbr>lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimal lease to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1768,7 +1820,7 @@ The following state arguments are supported:
 <a href="#state_renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow to renew this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1777,7 +1829,7 @@ The following state arguments are supported:
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The token role name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1786,7 +1838,7 @@ The following state arguments are supported:
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL period of this token
 {{% /md %}}</dd><dt class="property-optional"
@@ -1795,7 +1847,7 @@ The following state arguments are supported:
 <a href="#state_wrapped_token_python" style="color: inherit; text-decoration: inherit;">wrapped_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client wrapped token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1804,7 +1856,7 @@ The following state arguments are supported:
 <a href="#state_wrapping_accessor_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client wrapping accessor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1813,7 +1865,7 @@ The following state arguments are supported:
 <a href="#state_wrapping_ttl_python" style="color: inherit; text-decoration: inherit;">wrapping_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL period of the wrapped token.
 {{% /md %}}</dd></dl>

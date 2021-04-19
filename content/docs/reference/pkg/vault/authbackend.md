@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -139,19 +139,33 @@ const example = new vault.AuthBackend("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listing_visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">listing_visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthBackendTuneArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,22 +200,32 @@ const example = new vault.AuthBackend("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AuthBackendArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,7 +234,7 @@ const example = new vault.AuthBackend("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -234,7 +258,7 @@ const example = new vault.AuthBackend("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -443,7 +467,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -452,7 +476,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -461,7 +485,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -470,7 +494,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#listingvisibility_nodejs" style="color: inherit; text-decoration: inherit;">listing<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -480,7 +504,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -489,7 +513,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -498,7 +522,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd><dt class="property-optional"
@@ -507,7 +531,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
+        <span class="property-type"><a href="#authbackendtune">pulumi<wbr>Input<Auth<wbr>Backend<wbr>Tune<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -520,7 +544,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -529,7 +553,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -538,7 +562,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -547,7 +571,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#listing_visibility_python" style="color: inherit; text-decoration: inherit;">listing_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -557,7 +581,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -566,7 +590,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -575,7 +599,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +608,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
+        <span class="property-type"><a href="#authbackendtune">Input[Auth<wbr>Backend<wbr>Tune<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -689,20 +713,31 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackend</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackend</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listing_visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">listing_visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthBackendTuneArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthBackendState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AuthBackendState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -983,7 +1018,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -992,7 +1027,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -1001,7 +1036,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1010,7 +1045,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_listingvisibility_nodejs" style="color: inherit; text-decoration: inherit;">listing<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -1020,7 +1055,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1029,7 +1064,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -1038,7 +1073,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1082,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
+        <span class="property-type"><a href="#authbackendtune">pulumi<wbr>Input<Auth<wbr>Backend<wbr>Tune<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1091,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd></dl>
@@ -1069,7 +1104,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1078,7 +1113,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -1087,7 +1122,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1096,7 +1131,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_listing_visibility_python" style="color: inherit; text-decoration: inherit;">listing_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -1106,7 +1141,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1115,7 +1150,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd><dt class="property-optional"
@@ -1124,7 +1159,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1168,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
+        <span class="property-type"><a href="#authbackendtune">Input[Auth<wbr>Backend<wbr>Tune<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1177,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd></dl>
@@ -1338,7 +1373,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 <a href="#allowedresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
@@ -1348,7 +1383,7 @@ a plugin to include them in the response.
 <a href="#auditnonhmacrequestkeys_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
@@ -1358,7 +1393,7 @@ not be HMAC'd by audit devices in the request data object.
 <a href="#auditnonhmacresponsekeys_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
@@ -1368,7 +1403,7 @@ not be HMAC'd by audit devices in the response data object.
 <a href="#defaultleasettl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
@@ -1379,7 +1414,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#listingvisibility_nodejs" style="color: inherit; text-decoration: inherit;">listing<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -1389,7 +1424,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#maxleasettl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
@@ -1400,7 +1435,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#passthroughrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
@@ -1410,7 +1445,7 @@ pass from the request to the backend.
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
@@ -1424,7 +1459,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 <a href="#allowed_response_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
@@ -1434,7 +1469,7 @@ a plugin to include them in the response.
 <a href="#audit_non_hmac_request_keys_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>non_<wbr>hmac_<wbr>request_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
@@ -1444,7 +1479,7 @@ not be HMAC'd by audit devices in the request data object.
 <a href="#audit_non_hmac_response_keys_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>non_<wbr>hmac_<wbr>response_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
@@ -1454,7 +1489,7 @@ not be HMAC'd by audit devices in the response data object.
 <a href="#default_lease_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
@@ -1465,7 +1500,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#listing_visibility_python" style="color: inherit; text-decoration: inherit;">listing_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -1475,7 +1510,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#max_lease_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
@@ -1486,7 +1521,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#passthrough_request_headers_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
@@ -1496,7 +1531,7 @@ pass from the request to the backend.
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".

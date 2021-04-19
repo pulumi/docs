@@ -95,9 +95,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault"
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault/aws"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -231,19 +231,56 @@ const example = new vault.aws.AuthBackendRole("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_instance_migration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bound_account_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_ami_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_ec2_instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_iam_instance_profile_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_iam_principal_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_iam_role_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_vpc_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">disallow_reauthentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inferred_aws_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inferred_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resolve_aws_unique_ids</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">allow_instance_migration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_account_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_ami_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_ec2_instance_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_iam_instance_profile_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_iam_principal_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_iam_role_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">bound_vpc_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">disallow_reauthentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">inferred_aws_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">inferred_entity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">resolve_aws_unique_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">role_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackendRole</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackendRole</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackendRole</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackendRole</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackendRole</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -278,22 +315,32 @@ const example = new vault.aws.AuthBackendRole("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AuthBackendRoleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,7 +349,7 @@ const example = new vault.aws.AuthBackendRole("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -326,7 +373,7 @@ const example = new vault.aws.AuthBackendRole("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1097,7 +1144,7 @@ using this role, provided as a number of seconds.
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1106,7 +1153,7 @@ using this role, provided as a number of seconds.
 <a href="#allowinstancemigration_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Instance<wbr>Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
@@ -1116,7 +1163,7 @@ the underlying instance where the client resides.
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
@@ -1126,7 +1173,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1182,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#boundaccountids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
@@ -1147,7 +1194,7 @@ account ID specified by this field. `auth_type` must be set to `ec2` or
 <a href="#boundamiids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ami<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
@@ -1159,7 +1206,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#boundec2instanceids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ec2Instance<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1215,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#boundiaminstanceprofilearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -1182,7 +1229,7 @@ were a glob ending in `*`. `auth_type` must be set to `ec2` or
 <a href="#boundiamprincipalarns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
@@ -1193,7 +1240,7 @@ supported at the end of the ARN.
 <a href="#boundiamrolearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Role<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
@@ -1205,7 +1252,7 @@ role ARN specified by this field. `auth_type` must be set to `ec2` or
 <a href="#boundregions_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -1218,7 +1265,7 @@ constraint.
 <a href="#boundsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -1231,7 +1278,7 @@ to use this constraint.
 <a href="#boundvpcids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Vpc<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -1244,7 +1291,7 @@ constraint.
 <a href="#disallowreauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Reauthentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
@@ -1255,7 +1302,7 @@ single token to be granted per instance ID. This can only be set when
 <a href="#inferredawsregion_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Aws<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
@@ -1267,7 +1314,7 @@ is the region to search for the inferred entities. Required if
 <a href="#inferredentitytype_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
@@ -1279,7 +1326,7 @@ This only applies when `auth_type` is set to `iam`.
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
@@ -1289,7 +1336,7 @@ issued using this role, provided as a number of seconds.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -1301,7 +1348,7 @@ value of this field. Specified in seconds.
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
@@ -1311,7 +1358,7 @@ specifying the policies to be set on tokens issued using this role.
 <a href="#resolveawsuniqueids_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -1330,7 +1377,7 @@ Once set to `true`, this cannot be changed to `false` without recreating the rol
 <a href="#roletag_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
@@ -1342,7 +1389,7 @@ to use this constraint.
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -1353,7 +1400,7 @@ as well.
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -1365,7 +1412,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1375,7 +1422,7 @@ Its current value will be referenced at renewal time.
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -1385,7 +1432,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -1396,7 +1443,7 @@ if any, in number of seconds to set on the token.
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -1408,7 +1455,7 @@ value of this field. Specified in seconds.
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -1418,7 +1465,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1428,7 +1475,7 @@ Its current value will be referenced at renewal time.
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1441,7 +1488,7 @@ requests a different type at generation time.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
@@ -1455,7 +1502,7 @@ using this role, provided as a number of seconds.
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1511,7 @@ using this role, provided as a number of seconds.
 <a href="#allow_instance_migration_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>instance_<wbr>migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
@@ -1474,7 +1521,7 @@ the underlying instance where the client resides.
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
@@ -1484,7 +1531,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1540,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#bound_account_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>account_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
@@ -1505,7 +1552,7 @@ account ID specified by this field. `auth_type` must be set to `ec2` or
 <a href="#bound_ami_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ami_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
@@ -1517,7 +1564,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#bound_ec2_instance_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ec2_<wbr>instance_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1573,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#bound_iam_instance_profile_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>instance_<wbr>profile_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -1540,7 +1587,7 @@ were a glob ending in `*`. `auth_type` must be set to `ec2` or
 <a href="#bound_iam_principal_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>principal_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
@@ -1551,7 +1598,7 @@ supported at the end of the ARN.
 <a href="#bound_iam_role_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>role_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
@@ -1563,7 +1610,7 @@ role ARN specified by this field. `auth_type` must be set to `ec2` or
 <a href="#bound_regions_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -1576,7 +1623,7 @@ constraint.
 <a href="#bound_subnet_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -1589,7 +1636,7 @@ to use this constraint.
 <a href="#bound_vpc_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>vpc_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -1602,7 +1649,7 @@ constraint.
 <a href="#disallow_reauthentication_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>reauthentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
@@ -1613,7 +1660,7 @@ single token to be granted per instance ID. This can only be set when
 <a href="#inferred_aws_region_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>aws_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
@@ -1625,7 +1672,7 @@ is the region to search for the inferred entities. Required if
 <a href="#inferred_entity_type_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
@@ -1637,7 +1684,7 @@ This only applies when `auth_type` is set to `iam`.
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
@@ -1647,7 +1694,7 @@ issued using this role, provided as a number of seconds.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -1659,7 +1706,7 @@ value of this field. Specified in seconds.
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
@@ -1669,7 +1716,7 @@ specifying the policies to be set on tokens issued using this role.
 <a href="#resolve_aws_unique_ids_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>aws_<wbr>unique_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -1688,7 +1735,7 @@ Once set to `true`, this cannot be changed to `false` without recreating the rol
 <a href="#role_tag_python" style="color: inherit; text-decoration: inherit;">role_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
@@ -1700,7 +1747,7 @@ to use this constraint.
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -1711,7 +1758,7 @@ as well.
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -1723,7 +1770,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1733,7 +1780,7 @@ Its current value will be referenced at renewal time.
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -1743,7 +1790,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -1754,7 +1801,7 @@ if any, in number of seconds to set on the token.
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -1766,7 +1813,7 @@ value of this field. Specified in seconds.
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -1776,7 +1823,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -1786,7 +1833,7 @@ Its current value will be referenced at renewal time.
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1799,7 +1846,7 @@ requests a different type at generation time.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
@@ -1869,20 +1916,53 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendRoleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackendRole</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendRoleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackendRole</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_instance_migration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bound_account_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_ami_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_ec2_instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_iam_instance_profile_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_iam_principal_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_iam_role_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bound_vpc_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">disallow_reauthentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inferred_aws_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inferred_entity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resolve_aws_unique_ids</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AuthBackendRole</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_instance_migration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_account_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_ami_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_ec2_instance_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_iam_instance_profile_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_iam_principal_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_iam_role_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_vpc_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">disallow_reauthentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">inferred_aws_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">inferred_entity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">resolve_aws_unique_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">role_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">token_bound_cidrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">token_explicit_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_no_default_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">token_num_uses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">token_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">token_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> AuthBackendRole</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendRoleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackendRole</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendRoleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackendRole</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackendRole</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthBackendRoleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackendRole</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AuthBackendRoleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2707,7 +2787,7 @@ using this role, provided as a number of seconds.
 <a href="#state_allowinstancemigration_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Instance<wbr>Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
@@ -2717,7 +2797,7 @@ the underlying instance where the client resides.
 <a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
@@ -2727,7 +2807,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2736,7 +2816,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#state_boundaccountids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
@@ -2748,7 +2828,7 @@ account ID specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_boundamiids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ami<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
@@ -2760,7 +2840,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_boundec2instanceids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ec2Instance<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2769,7 +2849,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_boundiaminstanceprofilearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -2783,7 +2863,7 @@ were a glob ending in `*`. `auth_type` must be set to `ec2` or
 <a href="#state_boundiamprincipalarns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
@@ -2794,7 +2874,7 @@ supported at the end of the ARN.
 <a href="#state_boundiamrolearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Role<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
@@ -2806,7 +2886,7 @@ role ARN specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_boundregions_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -2819,7 +2899,7 @@ constraint.
 <a href="#state_boundsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -2832,7 +2912,7 @@ to use this constraint.
 <a href="#state_boundvpcids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Vpc<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -2845,7 +2925,7 @@ constraint.
 <a href="#state_disallowreauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Reauthentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
@@ -2856,7 +2936,7 @@ single token to be granted per instance ID. This can only be set when
 <a href="#state_inferredawsregion_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Aws<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
@@ -2868,7 +2948,7 @@ is the region to search for the inferred entities. Required if
 <a href="#state_inferredentitytype_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
@@ -2880,7 +2960,7 @@ This only applies when `auth_type` is set to `iam`.
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
@@ -2890,7 +2970,7 @@ issued using this role, provided as a number of seconds.
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -2902,7 +2982,7 @@ value of this field. Specified in seconds.
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
@@ -2912,7 +2992,7 @@ specifying the policies to be set on tokens issued using this role.
 <a href="#state_resolveawsuniqueids_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -2931,7 +3011,7 @@ Once set to `true`, this cannot be changed to `false` without recreating the rol
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2940,7 +3020,7 @@ Once set to `true`, this cannot be changed to `false` without recreating the rol
 <a href="#state_roletag_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
@@ -2952,7 +3032,7 @@ to use this constraint.
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -2963,7 +3043,7 @@ as well.
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -2975,7 +3055,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -2985,7 +3065,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -2995,7 +3075,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -3006,7 +3086,7 @@ if any, in number of seconds to set on the token.
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -3018,7 +3098,7 @@ value of this field. Specified in seconds.
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -3028,7 +3108,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -3038,7 +3118,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -3051,7 +3131,7 @@ requests a different type at generation time.
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
@@ -3065,7 +3145,7 @@ using this role, provided as a number of seconds.
 <a href="#state_allow_instance_migration_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>instance_<wbr>migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
@@ -3075,7 +3155,7 @@ the underlying instance where the client resides.
 <a href="#state_auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
@@ -3085,7 +3165,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +3174,7 @@ are `ec2` and `iam`. Defaults to `iam`.
 <a href="#state_bound_account_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>account_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
@@ -3106,7 +3186,7 @@ account ID specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_bound_ami_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ami_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
@@ -3118,7 +3198,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_bound_ec2_instance_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ec2_<wbr>instance_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3127,7 +3207,7 @@ specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_bound_iam_instance_profile_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>instance_<wbr>profile_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -3141,7 +3221,7 @@ were a glob ending in `*`. `auth_type` must be set to `ec2` or
 <a href="#state_bound_iam_principal_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>principal_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
@@ -3152,7 +3232,7 @@ supported at the end of the ARN.
 <a href="#state_bound_iam_role_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>role_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
@@ -3164,7 +3244,7 @@ role ARN specified by this field. `auth_type` must be set to `ec2` or
 <a href="#state_bound_regions_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -3177,7 +3257,7 @@ constraint.
 <a href="#state_bound_subnet_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -3190,7 +3270,7 @@ to use this constraint.
 <a href="#state_bound_vpc_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>vpc_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -3203,7 +3283,7 @@ constraint.
 <a href="#state_disallow_reauthentication_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>reauthentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
@@ -3214,7 +3294,7 @@ single token to be granted per instance ID. This can only be set when
 <a href="#state_inferred_aws_region_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>aws_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
@@ -3226,7 +3306,7 @@ is the region to search for the inferred entities. Required if
 <a href="#state_inferred_entity_type_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
@@ -3238,7 +3318,7 @@ This only applies when `auth_type` is set to `iam`.
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
@@ -3248,7 +3328,7 @@ issued using this role, provided as a number of seconds.
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -3260,7 +3340,7 @@ value of this field. Specified in seconds.
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
@@ -3270,7 +3350,7 @@ specifying the policies to be set on tokens issued using this role.
 <a href="#state_resolve_aws_unique_ids_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>aws_<wbr>unique_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -3289,7 +3369,7 @@ Once set to `true`, this cannot be changed to `false` without recreating the rol
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3298,7 +3378,7 @@ Once set to `true`, this cannot be changed to `false` without recreating the rol
 <a href="#state_role_tag_python" style="color: inherit; text-decoration: inherit;">role_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
@@ -3310,7 +3390,7 @@ to use this constraint.
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
@@ -3321,7 +3401,7 @@ as well.
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
@@ -3333,7 +3413,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -3343,7 +3423,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
@@ -3353,7 +3433,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
@@ -3364,7 +3444,7 @@ if any, in number of seconds to set on the token.
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
@@ -3376,7 +3456,7 @@ value of this field. Specified in seconds.
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
@@ -3386,7 +3466,7 @@ on the auth method, this list may be supplemented by user/group/other values.
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
@@ -3396,7 +3476,7 @@ Its current value will be referenced at renewal time.
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -3409,7 +3489,7 @@ requests a different type at generation time.
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.

@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault/jwt"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault/jwt"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -128,19 +128,40 @@ const example = new vault.jwt.AuthBackend("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">provider_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthBackendTuneArgs]]</span> = None<span class="p">,</span>
+                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AuthBackendArgs]</a></span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthBackendArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,22 +196,32 @@ const example = new vault.jwt.AuthBackend("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AuthBackendArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -199,7 +230,7 @@ const example = new vault.jwt.AuthBackend("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -223,7 +254,7 @@ const example = new vault.jwt.AuthBackend("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -554,7 +585,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#boundissuer_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +594,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#defaultrole_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +603,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +612,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwkscapem_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Ca<wbr>Pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +621,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwksurl_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +630,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwtsupportedalgs_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Supported<wbr>Algs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +639,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwtvalidationpubkeys_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Validation<wbr>Pubkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
@@ -617,7 +648,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidcclientid_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -626,7 +657,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidcclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +666,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidcdiscoverycapem_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +675,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidcdiscoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
 {{% /md %}}</dd><dt class="property-optional"
@@ -653,7 +684,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +693,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#providerconfig_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +702,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
+        <span class="property-type"><a href="#authbackendtune">pulumi.<wbr>Input<Auth<wbr>Backend<wbr>Tune<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -679,7 +710,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
 {{% /md %}}</dd></dl>
@@ -692,7 +723,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#bound_issuer_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +732,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#default_role_python" style="color: inherit; text-decoration: inherit;">default_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
 {{% /md %}}</dd><dt class="property-optional"
@@ -710,7 +741,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -719,7 +750,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwks_ca_pem_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>ca_<wbr>pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -728,7 +759,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwks_url_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
 {{% /md %}}</dd><dt class="property-optional"
@@ -737,7 +768,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwt_supported_algs_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>supported_<wbr>algs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +777,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#jwt_validation_pubkeys_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>validation_<wbr>pubkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +786,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidc_client_id_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +795,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidc_client_secret_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +804,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidc_discovery_ca_pem_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>ca_<wbr>pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +813,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oidc_discovery_url_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +822,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +831,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#provider_config_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +840,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
+        <span class="property-type"><a href="#authbackendtune">Input[Auth<wbr>Backend<wbr>Tune<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +848,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
 {{% /md %}}</dd></dl>
@@ -922,20 +953,38 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackend</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthBackend</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">provider_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthBackendTuneArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AuthBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthBackendState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AuthBackendState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1338,7 +1387,7 @@ The following state arguments are supported:
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1396,7 @@ The following state arguments are supported:
 <a href="#state_boundissuer_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_defaultrole_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1414,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1423,7 @@ The following state arguments are supported:
 <a href="#state_jwkscapem_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Ca<wbr>Pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1432,7 @@ The following state arguments are supported:
 <a href="#state_jwksurl_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1441,7 @@ The following state arguments are supported:
 <a href="#state_jwtsupportedalgs_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Supported<wbr>Algs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1450,7 @@ The following state arguments are supported:
 <a href="#state_jwtvalidationpubkeys_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Validation<wbr>Pubkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_oidcclientid_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_oidcclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_oidcdiscoverycapem_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
 {{% /md %}}</dd><dt class="property-optional"
@@ -1437,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_oidcdiscoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1446,7 +1495,7 @@ The following state arguments are supported:
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1504,7 @@ The following state arguments are supported:
 <a href="#state_providerconfig_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1513,7 @@ The following state arguments are supported:
 <a href="#state_tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
+        <span class="property-type"><a href="#authbackendtune">pulumi.<wbr>Input<Auth<wbr>Backend<wbr>Tune<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1521,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
 {{% /md %}}</dd></dl>
@@ -1485,7 +1534,7 @@ The following state arguments are supported:
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,7 +1543,7 @@ The following state arguments are supported:
 <a href="#state_bound_issuer_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
 {{% /md %}}</dd><dt class="property-optional"
@@ -1503,7 +1552,7 @@ The following state arguments are supported:
 <a href="#state_default_role_python" style="color: inherit; text-decoration: inherit;">default_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1561,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1570,7 @@ The following state arguments are supported:
 <a href="#state_jwks_ca_pem_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>ca_<wbr>pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_jwks_url_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1588,7 @@ The following state arguments are supported:
 <a href="#state_jwt_supported_algs_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>supported_<wbr>algs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1597,7 @@ The following state arguments are supported:
 <a href="#state_jwt_validation_pubkeys_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>validation_<wbr>pubkeys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_oidc_client_id_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1615,7 @@ The following state arguments are supported:
 <a href="#state_oidc_client_secret_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
 {{% /md %}}</dd><dt class="property-optional"
@@ -1575,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_oidc_discovery_ca_pem_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>ca_<wbr>pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1633,7 @@ The following state arguments are supported:
 <a href="#state_oidc_discovery_url_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_provider_config_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
+        <span class="property-type"><a href="#authbackendtune">Input[Auth<wbr>Backend<wbr>Tune<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
 {{% /md %}}</dd></dl>
@@ -1815,7 +1864,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 <a href="#allowedresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
@@ -1825,7 +1874,7 @@ a plugin to include them in the response.
 <a href="#auditnonhmacrequestkeys_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
@@ -1835,7 +1884,7 @@ not be HMAC'd by audit devices in the request data object.
 <a href="#auditnonhmacresponsekeys_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
@@ -1845,7 +1894,7 @@ not be HMAC'd by audit devices in the response data object.
 <a href="#defaultleasettl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
@@ -1856,7 +1905,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#listingvisibility_nodejs" style="color: inherit; text-decoration: inherit;">listing<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -1866,7 +1915,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#maxleasettl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
@@ -1877,7 +1926,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#passthroughrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
@@ -1887,7 +1936,7 @@ pass from the request to the backend.
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
@@ -1901,7 +1950,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
 <a href="#allowed_response_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
@@ -1911,7 +1960,7 @@ a plugin to include them in the response.
 <a href="#audit_non_hmac_request_keys_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>non_<wbr>hmac_<wbr>request_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
@@ -1921,7 +1970,7 @@ not be HMAC'd by audit devices in the request data object.
 <a href="#audit_non_hmac_response_keys_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>non_<wbr>hmac_<wbr>response_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
@@ -1931,7 +1980,7 @@ not be HMAC'd by audit devices in the response data object.
 <a href="#default_lease_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
@@ -1942,7 +1991,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#listing_visibility_python" style="color: inherit; text-decoration: inherit;">listing_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
@@ -1952,7 +2001,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 <a href="#max_lease_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
@@ -1963,7 +2012,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
 <a href="#passthrough_request_headers_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
@@ -1973,7 +2022,7 @@ pass from the request to the backend.
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".

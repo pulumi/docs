@@ -59,8 +59,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkiSecret"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-vault/sdk/v4/go/vault/pkiSecret"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -139,19 +139,63 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_any_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_bare_domains</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_glob_domains</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_ip_sans</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_localhost</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_subdomains</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_domains_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_other_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_uri_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">basic_constraints_valid_for_non_ca</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">code_signing_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">countries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">email_protection_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_hostnames</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ext_key_usages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_lease</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_usages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">localities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_store</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">not_before_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization_unit</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">organizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">postal_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">provinces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">require_cn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">street_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_csr_common_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_csr_sans</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">allow_any_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allow_bare_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allow_glob_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allow_ip_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allow_localhost</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allow_subdomains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allowed_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">allowed_domains_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">allowed_other_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">allowed_uri_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">basic_constraints_valid_for_non_ca</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">client_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">code_signing_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">countries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">email_protection_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">enforce_hostnames</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">ext_key_usages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">generate_lease</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                      <span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">key_usages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">localities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">no_store</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">not_before_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">organization_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">organizations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">policy_identifiers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">postal_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">provinces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">require_cn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">server_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">street_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">use_csr_common_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">use_csr_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendRole</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendRole</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendRole</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendRole</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendRole</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecretBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,22 +230,32 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecretBackendRoleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -210,7 +264,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -234,7 +288,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -981,7 +1035,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -990,7 +1044,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowanyname_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Any<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +1053,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowbaredomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Bare<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -1008,7 +1062,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowglobdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Glob<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1017,7 +1071,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowipsans_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Ip<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1080,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowlocalhost_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Localhost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd><dt class="property-optional"
@@ -1035,7 +1089,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowsubdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd><dt class="property-optional"
@@ -1044,7 +1098,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1053,7 +1107,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#alloweddomainstemplate_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag, if set, `allowed_domains` can be specified using identity template expressions such as `{{identity.entity.aliases.<mount accessor>.name}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1116,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowedothersans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Other<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1125,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowedurisans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Uri<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1134,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#basicconstraintsvalidfornonca_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1143,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#clientflag_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1098,7 +1152,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#codesigningflag_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1161,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#countries_nodejs" style="color: inherit; text-decoration: inherit;">countries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1170,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#emailprotectionflag_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1179,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#enforcehostnames_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1188,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#extkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1197,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#generatelease_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1206,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#keybits_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1215,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1224,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1233,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#localities_nodejs" style="color: inherit; text-decoration: inherit;">localities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1242,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1251,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1260,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#nostore_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1269,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#notbeforeduration_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1278,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#organizationunit_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1287,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#organizations_nodejs" style="color: inherit; text-decoration: inherit;">organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1296,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#policyidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1305,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#postalcodes_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1314,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#provinces_nodejs" style="color: inherit; text-decoration: inherit;">provinces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1323,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#requirecn_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Cn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1332,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#serverflag_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1341,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#streetaddresses_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1350,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1359,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#usecsrcommonname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1368,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#usecsrsans_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd></dl>
@@ -1327,7 +1381,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1390,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allow_any_name_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>any_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1399,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allow_bare_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>bare_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1408,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allow_glob_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>glob_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1417,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allow_ip_sans_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>ip_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1426,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allow_localhost_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>localhost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1435,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allow_subdomains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1444,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1453,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowed_domains_template_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag, if set, `allowed_domains` can be specified using identity template expressions such as `{{identity.entity.aliases.<mount accessor>.name}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1462,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowed_other_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>other_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1471,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#allowed_uri_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uri_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1480,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#basic_constraints_valid_for_non_ca_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>constraints_<wbr>valid_<wbr>for_<wbr>non_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1489,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#client_flag_python" style="color: inherit; text-decoration: inherit;">client_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1498,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#code_signing_flag_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1507,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#countries_python" style="color: inherit; text-decoration: inherit;">countries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1516,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#email_protection_flag_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1525,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#enforce_hostnames_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1534,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#ext_key_usages_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1543,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#generate_lease_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1552,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#key_bits_python" style="color: inherit; text-decoration: inherit;">key_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1561,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1570,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1525,7 +1579,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#localities_python" style="color: inherit; text-decoration: inherit;">localities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1588,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -1543,7 +1597,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1606,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#no_store_python" style="color: inherit; text-decoration: inherit;">no_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1615,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#not_before_duration_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1570,7 +1624,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#organization_unit_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1579,7 +1633,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#organizations_python" style="color: inherit; text-decoration: inherit;">organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,7 +1642,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#policy_identifiers_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1597,7 +1651,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#postal_codes_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1606,7 +1660,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#provinces_python" style="color: inherit; text-decoration: inherit;">provinces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1615,7 +1669,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#require_cn_python" style="color: inherit; text-decoration: inherit;">require_<wbr>cn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1678,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#server_flag_python" style="color: inherit; text-decoration: inherit;">server_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1687,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1696,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1705,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#use_csr_common_name_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1714,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 <a href="#use_csr_sans_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd></dl>
@@ -1729,20 +1783,60 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendRoleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendRole</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendRoleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendRole</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_any_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_bare_domains</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_glob_domains</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_ip_sans</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_localhost</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_subdomains</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_domains</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_domains_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_other_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_uri_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">basic_constraints_valid_for_non_ca</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">code_signing_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">countries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">email_protection_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_hostnames</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ext_key_usages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">generate_lease</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_usages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">localities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_store</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">not_before_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization_unit</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">organizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">policy_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">postal_codes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">provinces</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">require_cn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">street_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_csr_common_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_csr_sans</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendRole</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_any_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_bare_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_glob_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_ip_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_localhost</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allow_subdomains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_domains</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_domains_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_other_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">allowed_uri_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">basic_constraints_valid_for_non_ca</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">client_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">code_signing_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">countries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">email_protection_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">enforce_hostnames</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">ext_key_usages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">generate_lease</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">key_usages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">localities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">no_store</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">not_before_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">organization_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">organizations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">policy_identifiers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">postal_codes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">provinces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">require_cn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">server_flag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">street_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">use_csr_common_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">use_csr_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> SecretBackendRole</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendRoleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendRole</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendRoleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendRole</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendRole</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendRoleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendRole</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecretBackendRoleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2543,7 +2637,7 @@ The following state arguments are supported:
 <a href="#state_allowanyname_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Any<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd><dt class="property-optional"
@@ -2552,7 +2646,7 @@ The following state arguments are supported:
 <a href="#state_allowbaredomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Bare<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -2561,7 +2655,7 @@ The following state arguments are supported:
 <a href="#state_allowglobdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Glob<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2570,7 +2664,7 @@ The following state arguments are supported:
 <a href="#state_allowipsans_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Ip<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2579,7 +2673,7 @@ The following state arguments are supported:
 <a href="#state_allowlocalhost_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Localhost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd><dt class="property-optional"
@@ -2588,7 +2682,7 @@ The following state arguments are supported:
 <a href="#state_allowsubdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd><dt class="property-optional"
@@ -2597,7 +2691,7 @@ The following state arguments are supported:
 <a href="#state_alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2606,7 +2700,7 @@ The following state arguments are supported:
 <a href="#state_alloweddomainstemplate_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag, if set, `allowed_domains` can be specified using identity template expressions such as `{{identity.entity.aliases.<mount accessor>.name}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2615,7 +2709,7 @@ The following state arguments are supported:
 <a href="#state_allowedothersans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Other<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2624,7 +2718,7 @@ The following state arguments are supported:
 <a href="#state_allowedurisans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Uri<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2633,7 +2727,7 @@ The following state arguments are supported:
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2736,7 @@ The following state arguments are supported:
 <a href="#state_basicconstraintsvalidfornonca_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2745,7 @@ The following state arguments are supported:
 <a href="#state_clientflag_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2754,7 @@ The following state arguments are supported:
 <a href="#state_codesigningflag_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd><dt class="property-optional"
@@ -2669,7 +2763,7 @@ The following state arguments are supported:
 <a href="#state_countries_nodejs" style="color: inherit; text-decoration: inherit;">countries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2678,7 +2772,7 @@ The following state arguments are supported:
 <a href="#state_emailprotectionflag_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd><dt class="property-optional"
@@ -2687,7 +2781,7 @@ The following state arguments are supported:
 <a href="#state_enforcehostnames_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd><dt class="property-optional"
@@ -2696,7 +2790,7 @@ The following state arguments are supported:
 <a href="#state_extkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2705,7 +2799,7 @@ The following state arguments are supported:
 <a href="#state_generatelease_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2714,7 +2808,7 @@ The following state arguments are supported:
 <a href="#state_keybits_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -2723,7 +2817,7 @@ The following state arguments are supported:
 <a href="#state_keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -2732,7 +2826,7 @@ The following state arguments are supported:
 <a href="#state_keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2741,7 +2835,7 @@ The following state arguments are supported:
 <a href="#state_localities_nodejs" style="color: inherit; text-decoration: inherit;">localities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2750,7 +2844,7 @@ The following state arguments are supported:
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -2759,7 +2853,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2862,7 @@ The following state arguments are supported:
 <a href="#state_nostore_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2871,7 @@ The following state arguments are supported:
 <a href="#state_notbeforeduration_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2880,7 @@ The following state arguments are supported:
 <a href="#state_organizationunit_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2795,7 +2889,7 @@ The following state arguments are supported:
 <a href="#state_organizations_nodejs" style="color: inherit; text-decoration: inherit;">organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2804,7 +2898,7 @@ The following state arguments are supported:
 <a href="#state_policyidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2907,7 @@ The following state arguments are supported:
 <a href="#state_postalcodes_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2916,7 @@ The following state arguments are supported:
 <a href="#state_provinces_nodejs" style="color: inherit; text-decoration: inherit;">provinces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2831,7 +2925,7 @@ The following state arguments are supported:
 <a href="#state_requirecn_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Cn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2934,7 @@ The following state arguments are supported:
 <a href="#state_serverflag_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2943,7 @@ The following state arguments are supported:
 <a href="#state_streetaddresses_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2858,7 +2952,7 @@ The following state arguments are supported:
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -2867,7 +2961,7 @@ The following state arguments are supported:
 <a href="#state_usecsrcommonname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd><dt class="property-optional"
@@ -2876,7 +2970,7 @@ The following state arguments are supported:
 <a href="#state_usecsrsans_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd></dl>
@@ -2889,7 +2983,7 @@ The following state arguments are supported:
 <a href="#state_allow_any_name_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>any_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2992,7 @@ The following state arguments are supported:
 <a href="#state_allow_bare_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>bare_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +3001,7 @@ The following state arguments are supported:
 <a href="#state_allow_glob_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>glob_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +3010,7 @@ The following state arguments are supported:
 <a href="#state_allow_ip_sans_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>ip_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2925,7 +3019,7 @@ The following state arguments are supported:
 <a href="#state_allow_localhost_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>localhost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +3028,7 @@ The following state arguments are supported:
 <a href="#state_allow_subdomains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>subdomains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +3037,7 @@ The following state arguments are supported:
 <a href="#state_allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2952,7 +3046,7 @@ The following state arguments are supported:
 <a href="#state_allowed_domains_template_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag, if set, `allowed_domains` can be specified using identity template expressions such as `{{identity.entity.aliases.<mount accessor>.name}}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2961,7 +3055,7 @@ The following state arguments are supported:
 <a href="#state_allowed_other_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>other_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2970,7 +3064,7 @@ The following state arguments are supported:
 <a href="#state_allowed_uri_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uri_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -2979,7 +3073,7 @@ The following state arguments are supported:
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2988,7 +3082,7 @@ The following state arguments are supported:
 <a href="#state_basic_constraints_valid_for_non_ca_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>constraints_<wbr>valid_<wbr>for_<wbr>non_<wbr>ca</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -2997,7 +3091,7 @@ The following state arguments are supported:
 <a href="#state_client_flag_python" style="color: inherit; text-decoration: inherit;">client_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd><dt class="property-optional"
@@ -3006,7 +3100,7 @@ The following state arguments are supported:
 <a href="#state_code_signing_flag_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd><dt class="property-optional"
@@ -3015,7 +3109,7 @@ The following state arguments are supported:
 <a href="#state_countries_python" style="color: inherit; text-decoration: inherit;">countries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3024,7 +3118,7 @@ The following state arguments are supported:
 <a href="#state_email_protection_flag_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd><dt class="property-optional"
@@ -3033,7 +3127,7 @@ The following state arguments are supported:
 <a href="#state_enforce_hostnames_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>hostnames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd><dt class="property-optional"
@@ -3042,7 +3136,7 @@ The following state arguments are supported:
 <a href="#state_ext_key_usages_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3051,7 +3145,7 @@ The following state arguments are supported:
 <a href="#state_generate_lease_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>lease</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3060,7 +3154,7 @@ The following state arguments are supported:
 <a href="#state_key_bits_python" style="color: inherit; text-decoration: inherit;">key_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -3069,7 +3163,7 @@ The following state arguments are supported:
 <a href="#state_key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -3078,7 +3172,7 @@ The following state arguments are supported:
 <a href="#state_key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3087,7 +3181,7 @@ The following state arguments are supported:
 <a href="#state_localities_python" style="color: inherit; text-decoration: inherit;">localities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3096,7 +3190,7 @@ The following state arguments are supported:
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3105,7 +3199,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3114,7 +3208,7 @@ The following state arguments are supported:
 <a href="#state_no_store_python" style="color: inherit; text-decoration: inherit;">no_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd><dt class="property-optional"
@@ -3123,7 +3217,7 @@ The following state arguments are supported:
 <a href="#state_not_before_duration_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3132,7 +3226,7 @@ The following state arguments are supported:
 <a href="#state_organization_unit_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3141,7 +3235,7 @@ The following state arguments are supported:
 <a href="#state_organizations_python" style="color: inherit; text-decoration: inherit;">organizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3244,7 @@ The following state arguments are supported:
 <a href="#state_policy_identifiers_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3253,7 @@ The following state arguments are supported:
 <a href="#state_postal_codes_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3262,7 @@ The following state arguments are supported:
 <a href="#state_provinces_python" style="color: inherit; text-decoration: inherit;">provinces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3177,7 +3271,7 @@ The following state arguments are supported:
 <a href="#state_require_cn_python" style="color: inherit; text-decoration: inherit;">require_<wbr>cn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd><dt class="property-optional"
@@ -3186,7 +3280,7 @@ The following state arguments are supported:
 <a href="#state_server_flag_python" style="color: inherit; text-decoration: inherit;">server_<wbr>flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd><dt class="property-optional"
@@ -3195,7 +3289,7 @@ The following state arguments are supported:
 <a href="#state_street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd><dt class="property-optional"
@@ -3204,7 +3298,7 @@ The following state arguments are supported:
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3213,7 +3307,7 @@ The following state arguments are supported:
 <a href="#state_use_csr_common_name_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd><dt class="property-optional"
@@ -3222,7 +3316,7 @@ The following state arguments are supported:
 <a href="#state_use_csr_sans_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd></dl>

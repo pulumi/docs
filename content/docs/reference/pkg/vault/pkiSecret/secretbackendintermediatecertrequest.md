@@ -18,19 +18,44 @@ meta_desc: "Documentation for the vault.pkiSecret.SecretBackendIntermediateCertR
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alt_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">common_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclude_cn_from_sans</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">other_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ou</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">province</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                         <span class="nx">alt_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                         <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">common_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">exclude_cn_from_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                         <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">ip_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                         <span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                                         <span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">locality</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">other_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                         <span class="nx">ou</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">private_key_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">province</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                         <span class="nx">uri_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p">,</span>
+                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendIntermediateCertRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendIntermediateCertRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +90,32 @@ meta_desc: "Documentation for the vault.pkiSecret.SecretBackendIntermediateCertR
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecretBackendIntermediateCertRequestArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +124,7 @@ meta_desc: "Documentation for the vault.pkiSecret.SecretBackendIntermediateCertR
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +148,7 @@ meta_desc: "Documentation for the vault.pkiSecret.SecretBackendIntermediateCertR
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -518,7 +553,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -527,7 +562,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
 {{% /md %}}</dd><dt class="property-required"
@@ -536,7 +571,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of intermediate to create. Must be either \"exported\" or \"internal\"
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +580,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#altnames_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +589,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +598,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#excludecnfromsans_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Cn<wbr>From<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +607,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The format of data
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +616,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#ipsans_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +625,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#keybits_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of bits to use
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +634,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired key type
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +643,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locality
 {{% /md %}}</dd><dt class="property-optional"
@@ -617,7 +652,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization
 {{% /md %}}</dd><dt class="property-optional"
@@ -626,7 +661,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#othersans_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +670,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#ou_nodejs" style="color: inherit; text-decoration: inherit;">ou</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization unit
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +679,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The postal code
 {{% /md %}}</dd><dt class="property-optional"
@@ -653,7 +688,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#privatekeyformat_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private key format
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +697,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The province
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +706,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The street address
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +715,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#urisans_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
 {{% /md %}}</dd></dl>
@@ -693,7 +728,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd><dt class="property-required"
@@ -702,7 +737,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
 {{% /md %}}</dd><dt class="property-required"
@@ -711,7 +746,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of intermediate to create. Must be either \"exported\" or \"internal\"
 {{% /md %}}</dd><dt class="property-optional"
@@ -720,7 +755,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#alt_names_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +764,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country
 {{% /md %}}</dd><dt class="property-optional"
@@ -738,7 +773,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#exclude_cn_from_sans_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>cn_<wbr>from_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -747,7 +782,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The format of data
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +791,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#ip_sans_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +800,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#key_bits_python" style="color: inherit; text-decoration: inherit;">key_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of bits to use
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +809,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired key type
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +818,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locality
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +827,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +836,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#other_sans_python" style="color: inherit; text-decoration: inherit;">other_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +845,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#ou_python" style="color: inherit; text-decoration: inherit;">ou</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization unit
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +854,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The postal code
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +863,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#private_key_format_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private key format
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +872,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The province
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +881,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The street address
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +890,7 @@ The SecretBackendIntermediateCertRequest resource accepts the following [input](
 <a href="#uri_sans_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
 {{% /md %}}</dd></dl>
@@ -1032,20 +1067,44 @@ Get an existing SecretBackendIntermediateCertRequest resource's state with the g
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendIntermediateCertRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendIntermediateCertRequest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendIntermediateCertRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendIntermediateCertRequest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alt_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">common_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">csr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">exclude_cn_from_sans</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">other_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ou</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_key_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">province</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uri_sans</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> SecretBackendIntermediateCertRequest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">alt_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">common_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">country</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">csr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">exclude_cn_from_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ip_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">key_bits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">key_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">locality</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">organization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">other_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">ou</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">postal_code</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_key_format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">private_key_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">province</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">street_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">uri_sans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> SecretBackendIntermediateCertRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendIntermediateCertRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendIntermediateCertRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendIntermediateCertRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendIntermediateCertRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendIntermediateCertRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendIntermediateCertRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendIntermediateCertRequestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendIntermediateCertRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecretBackendIntermediateCertRequestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1558,7 +1617,7 @@ The following state arguments are supported:
 <a href="#state_altnames_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1644,7 @@ The following state arguments are supported:
 <a href="#state_country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1653,7 @@ The following state arguments are supported:
 <a href="#state_csr_nodejs" style="color: inherit; text-decoration: inherit;">csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The CSR
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1662,7 @@ The following state arguments are supported:
 <a href="#state_excludecnfromsans_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Cn<wbr>From<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1671,7 @@ The following state arguments are supported:
 <a href="#state_format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The format of data
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1680,7 @@ The following state arguments are supported:
 <a href="#state_ipsans_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1689,7 @@ The following state arguments are supported:
 <a href="#state_keybits_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of bits to use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1698,7 @@ The following state arguments are supported:
 <a href="#state_keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The desired key type
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1707,7 @@ The following state arguments are supported:
 <a href="#state_locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locality
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1725,7 @@ The following state arguments are supported:
 <a href="#state_othersans_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1734,7 @@ The following state arguments are supported:
 <a href="#state_ou_nodejs" style="color: inherit; text-decoration: inherit;">ou</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The organization unit
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1743,7 @@ The following state arguments are supported:
 <a href="#state_postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The postal code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1752,7 @@ The following state arguments are supported:
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private key
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_privatekeyformat_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private key format
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1770,7 @@ The following state arguments are supported:
 <a href="#state_privatekeytype_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private key type
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1779,7 @@ The following state arguments are supported:
 <a href="#state_province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The province
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The street address
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1797,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of intermediate to create. Must be either \"exported\" or \"internal\"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1806,7 @@ The following state arguments are supported:
 <a href="#state_urisans_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
 {{% /md %}}</dd></dl>
@@ -1760,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_alt_names_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd><dt class="property-optional"
@@ -1769,7 +1828,7 @@ The following state arguments are supported:
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1778,7 +1837,7 @@ The following state arguments are supported:
 <a href="#state_common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
 {{% /md %}}</dd><dt class="property-optional"
@@ -1787,7 +1846,7 @@ The following state arguments are supported:
 <a href="#state_country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country
 {{% /md %}}</dd><dt class="property-optional"
@@ -1796,7 +1855,7 @@ The following state arguments are supported:
 <a href="#state_csr_python" style="color: inherit; text-decoration: inherit;">csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The CSR
 {{% /md %}}</dd><dt class="property-optional"
@@ -1805,7 +1864,7 @@ The following state arguments are supported:
 <a href="#state_exclude_cn_from_sans_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>cn_<wbr>from_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1814,7 +1873,7 @@ The following state arguments are supported:
 <a href="#state_format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The format of data
 {{% /md %}}</dd><dt class="property-optional"
@@ -1823,7 +1882,7 @@ The following state arguments are supported:
 <a href="#state_ip_sans_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1832,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_key_bits_python" style="color: inherit; text-decoration: inherit;">key_<wbr>bits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of bits to use
 {{% /md %}}</dd><dt class="property-optional"
@@ -1841,7 +1900,7 @@ The following state arguments are supported:
 <a href="#state_key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The desired key type
 {{% /md %}}</dd><dt class="property-optional"
@@ -1850,7 +1909,7 @@ The following state arguments are supported:
 <a href="#state_locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locality
 {{% /md %}}</dd><dt class="property-optional"
@@ -1859,7 +1918,7 @@ The following state arguments are supported:
 <a href="#state_organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization
 {{% /md %}}</dd><dt class="property-optional"
@@ -1868,7 +1927,7 @@ The following state arguments are supported:
 <a href="#state_other_sans_python" style="color: inherit; text-decoration: inherit;">other_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd><dt class="property-optional"
@@ -1877,7 +1936,7 @@ The following state arguments are supported:
 <a href="#state_ou_python" style="color: inherit; text-decoration: inherit;">ou</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The organization unit
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1945,7 @@ The following state arguments are supported:
 <a href="#state_postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The postal code
 {{% /md %}}</dd><dt class="property-optional"
@@ -1895,7 +1954,7 @@ The following state arguments are supported:
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private key
 {{% /md %}}</dd><dt class="property-optional"
@@ -1904,7 +1963,7 @@ The following state arguments are supported:
 <a href="#state_private_key_format_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private key format
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1972,7 @@ The following state arguments are supported:
 <a href="#state_private_key_type_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private key type
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1981,7 @@ The following state arguments are supported:
 <a href="#state_province_python" style="color: inherit; text-decoration: inherit;">province</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The province
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1990,7 @@ The following state arguments are supported:
 <a href="#state_street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The street address
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1999,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of intermediate to create. Must be either \"exported\" or \"internal\"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +2008,7 @@ The following state arguments are supported:
 <a href="#state_uri_sans_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>sans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
 {{% /md %}}</dd></dl>

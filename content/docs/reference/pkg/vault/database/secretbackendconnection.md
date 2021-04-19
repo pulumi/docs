@@ -26,19 +26,43 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionCassandraArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+                            <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionElasticsearchArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionHanaArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMongodbArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMongodbatlasArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMssqlArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlAuroraArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlLegacyArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlRdsArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionOracleArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionPostgresqlArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                            <span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackendConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackendConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecretBackendConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +97,32 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecretBackendConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +131,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +155,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -512,7 +546,7 @@ initial configuration or not.
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -521,7 +555,7 @@ initial configuration or not.
 <a href="#allowedroles_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
@@ -531,7 +565,7 @@ connection.
 <a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -540,7 +574,7 @@ connection.
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -549,7 +583,7 @@ connection.
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -558,7 +592,7 @@ connection.
 <a href="#hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +601,7 @@ connection.
 <a href="#mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -576,7 +610,7 @@ connection.
 <a href="#mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +619,7 @@ connection.
 <a href="#mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +628,7 @@ connection.
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +637,7 @@ connection.
 <a href="#mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +646,7 @@ connection.
 <a href="#mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +655,7 @@ connection.
 <a href="#mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +664,7 @@ connection.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +673,7 @@ connection.
 <a href="#oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +682,7 @@ connection.
 <a href="#postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +691,7 @@ connection.
 <a href="#rootrotationstatements_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Rotation<wbr>Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +700,7 @@ connection.
 <a href="#verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
@@ -680,7 +714,7 @@ initial configuration or not.
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +723,7 @@ initial configuration or not.
 <a href="#allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
@@ -699,7 +733,7 @@ connection.
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">Input[Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -708,7 +742,7 @@ connection.
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +751,7 @@ connection.
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Input[Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +760,7 @@ connection.
 <a href="#hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">Input[Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +769,7 @@ connection.
 <a href="#mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +778,7 @@ connection.
 <a href="#mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +787,7 @@ connection.
 <a href="#mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +796,7 @@ connection.
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +805,7 @@ connection.
 <a href="#mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +814,7 @@ connection.
 <a href="#mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +823,7 @@ connection.
 <a href="#mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +832,7 @@ connection.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +841,7 @@ connection.
 <a href="#oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">Input[Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +850,7 @@ connection.
 <a href="#postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Input[Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +859,7 @@ connection.
 <a href="#root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +868,7 @@ connection.
 <a href="#verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
@@ -904,20 +938,40 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackendConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionCassandraArgs]</span> = None<span class="p">, </span><span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionHanaArgs]</span> = None<span class="p">, </span><span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbArgs]</span> = None<span class="p">, </span><span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMongodbatlasArgs]</span> = None<span class="p">, </span><span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMssqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlArgs]</span> = None<span class="p">, </span><span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlAuroraArgs]</span> = None<span class="p">, </span><span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlLegacyArgs]</span> = None<span class="p">, </span><span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionMysqlRdsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionOracleArgs]</span> = None<span class="p">, </span><span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[SecretBackendConnectionPostgresqlArgs]</span> = None<span class="p">, </span><span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allowed_roles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">cassandra</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionCassandraArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
+        <span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionElasticsearchArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">hana</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionHanaArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mongodb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMongodbArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mongodbatlas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMongodbatlasArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mssql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMssqlArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mysql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_aurora</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlAuroraArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_legacy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlLegacyArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">mysql_rds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionMysqlRdsArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">oracle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionOracleArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">postgresql</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecretBackendConnectionPostgresqlArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">root_rotation_statements</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">verify_connection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> SecretBackendConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackendConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackendConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecretBackendConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1362,7 +1416,7 @@ initial configuration or not.
 <a href="#state_allowedroles_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
@@ -1372,7 +1426,7 @@ connection.
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1435,7 @@ connection.
 <a href="#state_cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1444,7 @@ connection.
 <a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1453,7 @@ connection.
 <a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1462,7 @@ connection.
 <a href="#state_hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1471,7 @@ connection.
 <a href="#state_mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1480,7 @@ connection.
 <a href="#state_mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1489,7 @@ connection.
 <a href="#state_mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1498,7 @@ connection.
 <a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1507,7 @@ connection.
 <a href="#state_mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1516,7 @@ connection.
 <a href="#state_mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1525,7 @@ connection.
 <a href="#state_mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1534,7 @@ connection.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1489,7 +1543,7 @@ connection.
 <a href="#state_oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1498,7 +1552,7 @@ connection.
 <a href="#state_postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">pulumi.<wbr>Input<Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1507,7 +1561,7 @@ connection.
 <a href="#state_rootrotationstatements_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Rotation<wbr>Statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1570,7 @@ connection.
 <a href="#state_verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
@@ -1530,7 +1584,7 @@ initial configuration or not.
 <a href="#state_allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
@@ -1540,7 +1594,7 @@ connection.
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1603,7 @@ connection.
 <a href="#state_cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectioncassandra">Input[Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1612,7 @@ connection.
 <a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1621,7 @@ connection.
 <a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Input[Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1630,7 @@ connection.
 <a href="#state_hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionhana">Input[Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1639,7 @@ connection.
 <a href="#state_mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodb">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1648,7 @@ connection.
 <a href="#state_mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1657,7 @@ connection.
 <a href="#state_mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmssql">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1666,7 @@ connection.
 <a href="#state_mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysql">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1675,7 @@ connection.
 <a href="#state_mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1684,7 @@ connection.
 <a href="#state_mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1693,7 @@ connection.
 <a href="#state_mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Input[Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1702,7 @@ connection.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1711,7 @@ connection.
 <a href="#state_oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionoracle">Input[Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1720,7 @@ connection.
 <a href="#state_postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretbackendconnectionpostgresql">Input[Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1729,7 @@ connection.
 <a href="#state_root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1738,7 @@ connection.
 <a href="#state_verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
@@ -1905,7 +1959,7 @@ part of the host.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
@@ -1915,7 +1969,7 @@ timeout.
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1978,7 @@ timeout.
 <a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to skip verification of the server
 certificate when using TLS.
@@ -1934,7 +1988,7 @@ certificate when using TLS.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,7 +1997,7 @@ certificate when using TLS.
 <a href="#pembundle_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Bundle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
@@ -1953,7 +2007,7 @@ chain.
 <a href="#pemjson_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A JSON structure configuring the certificate chain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +2016,7 @@ chain.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
@@ -1972,7 +2026,7 @@ part of the host.
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1981,7 +2035,7 @@ part of the host.
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether to use TLS when connecting to Cassandra.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +2044,7 @@ part of the host.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
 {{% /md %}}</dd></dl>
@@ -2003,7 +2057,7 @@ part of the host.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
@@ -2013,7 +2067,7 @@ timeout.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +2076,7 @@ timeout.
 <a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to skip verification of the server
 certificate when using TLS.
@@ -2032,7 +2086,7 @@ certificate when using TLS.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +2095,7 @@ certificate when using TLS.
 <a href="#pem_bundle_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>bundle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
@@ -2051,7 +2105,7 @@ chain.
 <a href="#pem_json_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A JSON structure configuring the certificate chain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2114,7 @@ chain.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
@@ -2070,7 +2124,7 @@ part of the host.
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2133,7 @@ part of the host.
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS when connecting to Cassandra.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2142,7 @@ part of the host.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
 {{% /md %}}</dd></dl>
@@ -2167,7 +2221,7 @@ by trusted CA if used.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2176,7 +2230,7 @@ by trusted CA if used.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
@@ -2186,7 +2240,7 @@ by trusted CA if used.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
 {{% /md %}}</dd></dl>
@@ -2199,7 +2253,7 @@ by trusted CA if used.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2208,7 +2262,7 @@ by trusted CA if used.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
@@ -2218,7 +2272,7 @@ by trusted CA if used.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
 {{% /md %}}</dd></dl>
@@ -2325,7 +2379,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -2337,7 +2391,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2347,7 +2401,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2357,7 +2411,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -2371,7 +2425,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -2383,7 +2437,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2393,7 +2447,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2403,7 +2457,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -2511,7 +2565,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -2523,7 +2577,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2533,7 +2587,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2543,7 +2597,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -2557,7 +2611,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -2569,7 +2623,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2579,7 +2633,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2589,7 +2643,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -2661,7 +2715,7 @@ use.
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2669,7 +2723,7 @@ use.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2677,7 +2731,7 @@ use.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2689,7 +2743,7 @@ use.
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2697,7 +2751,7 @@ use.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2705,7 +2759,7 @@ use.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2811,7 +2865,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -2823,7 +2877,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2833,7 +2887,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2843,7 +2897,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -2857,7 +2911,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -2869,7 +2923,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -2879,7 +2933,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -2889,7 +2943,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -2997,7 +3051,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3009,7 +3063,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3019,7 +3073,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3029,7 +3083,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3043,7 +3097,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3055,7 +3109,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3065,7 +3119,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3075,7 +3129,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3183,7 +3237,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3195,7 +3249,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3205,7 +3259,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3215,7 +3269,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3229,7 +3283,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3241,7 +3295,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3251,7 +3305,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3261,7 +3315,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3369,7 +3423,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3381,7 +3435,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3391,7 +3445,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3401,7 +3455,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3415,7 +3469,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3427,7 +3481,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3437,7 +3491,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3447,7 +3501,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3555,7 +3609,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3567,7 +3621,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3577,7 +3631,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3587,7 +3641,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3601,7 +3655,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3613,7 +3667,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3623,7 +3677,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3633,7 +3687,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3741,7 +3795,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3753,7 +3807,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3763,7 +3817,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3773,7 +3827,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3787,7 +3841,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3799,7 +3853,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3809,7 +3863,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3819,7 +3873,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3927,7 +3981,7 @@ use.
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3939,7 +3993,7 @@ for an example.
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3949,7 +4003,7 @@ a connection alive for.
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -3959,7 +4013,7 @@ maintain.
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
@@ -3973,7 +4027,7 @@ use.
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A URL containing connection information. See
 the [Vault
@@ -3985,7 +4039,7 @@ for an example.
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
@@ -3995,7 +4049,7 @@ a connection alive for.
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
@@ -4005,7 +4059,7 @@ maintain.
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.

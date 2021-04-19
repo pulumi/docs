@@ -26,19 +26,59 @@ AD secret backend can be imported using the `backend`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">anonymous_group_search</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">case_sensitive_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_tls_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_tls_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">formatter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_rotation_tolerance</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_pre111_group_cn_behavior</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">anonymous_group_search</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">case_sensitive_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">client_tls_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">client_tls_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">formatter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">last_rotation_tolerance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                  <span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">use_pre111_group_cn_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,22 +113,32 @@ AD secret backend can be imported using the `backend`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecretBackendArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -97,7 +147,7 @@ AD secret backend can be imported using the `backend`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -121,7 +171,7 @@ AD secret backend can be imported using the `backend`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -840,7 +890,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
 {{% /md %}}</dd><dt class="property-required"
@@ -849,7 +899,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +908,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#anonymousgroupsearch_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>Group<wbr>Search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
@@ -868,7 +918,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
@@ -878,7 +928,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#casesensitivenames_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
@@ -888,7 +938,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
@@ -898,7 +948,7 @@ x509 PEM encoded.
 <a href="#clienttlscert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +957,7 @@ x509 PEM encoded.
 <a href="#clienttlskey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +966,7 @@ x509 PEM encoded.
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +975,7 @@ x509 PEM encoded.
 <a href="#denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
@@ -935,7 +985,7 @@ defaults to true.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +994,7 @@ defaults to true.
 <a href="#discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -953,7 +1003,7 @@ defaults to true.
 <a href="#formatter_nodejs" style="color: inherit; text-decoration: inherit;">formatter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
@@ -963,7 +1013,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
@@ -973,7 +1023,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +1032,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
@@ -992,7 +1042,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
 <a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
@@ -1002,7 +1052,7 @@ Defaults to `false`.
 <a href="#lastrotationtolerance_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Rotation<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
@@ -1012,7 +1062,7 @@ shows a later rotation, it should be considered out-of-band
 <a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
@@ -1022,7 +1072,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
@@ -1032,7 +1082,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1041,7 +1091,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1100,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1109,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
@@ -1069,7 +1119,7 @@ before returning back an error.
 <a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1128,7 @@ before returning back an error.
 <a href="#tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -1088,7 +1138,7 @@ before returning back an error.
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -1098,7 +1148,7 @@ before returning back an error.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1157,7 @@ before returning back an error.
 <a href="#upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1166,7 @@ before returning back an error.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
@@ -1126,7 +1176,7 @@ them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 <a href="#usepre111groupcnbehavior_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}In Vault 1.1.1 a fix for handling group CN values of
 different cases unfortunately introduced a regression that could cause previously defined groups
@@ -1140,7 +1190,7 @@ new configurations.
 <a href="#usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
@@ -1150,7 +1200,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1209,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 {{% /md %}}</dd></dl>
@@ -1172,7 +1222,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
 {{% /md %}}</dd><dt class="property-required"
@@ -1181,7 +1231,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1240,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#anonymous_group_search_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>group_<wbr>search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
@@ -1200,7 +1250,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
@@ -1210,7 +1260,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#case_sensitive_names_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
@@ -1220,7 +1270,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
@@ -1230,7 +1280,7 @@ x509 PEM encoded.
 <a href="#client_tls_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1289,7 @@ x509 PEM encoded.
 <a href="#client_tls_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1298,7 @@ x509 PEM encoded.
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1307,7 @@ x509 PEM encoded.
 <a href="#deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
@@ -1267,7 +1317,7 @@ defaults to true.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1326,7 @@ defaults to true.
 <a href="#discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1285,7 +1335,7 @@ defaults to true.
 <a href="#formatter_python" style="color: inherit; text-decoration: inherit;">formatter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
@@ -1295,7 +1345,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
@@ -1305,7 +1355,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1364,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
@@ -1324,7 +1374,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
 <a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
@@ -1334,7 +1384,7 @@ Defaults to `false`.
 <a href="#last_rotation_tolerance_python" style="color: inherit; text-decoration: inherit;">last_<wbr>rotation_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
@@ -1344,7 +1394,7 @@ shows a later rotation, it should be considered out-of-band
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
@@ -1354,7 +1404,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
@@ -1364,7 +1414,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1373,7 +1423,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1382,7 +1432,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1441,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
@@ -1401,7 +1451,7 @@ before returning back an error.
 <a href="#starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1460,7 @@ before returning back an error.
 <a href="#tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -1420,7 +1470,7 @@ before returning back an error.
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -1430,7 +1480,7 @@ before returning back an error.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1439,7 +1489,7 @@ before returning back an error.
 <a href="#upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1498,7 @@ before returning back an error.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
@@ -1458,7 +1508,7 @@ them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 <a href="#use_pre111_group_cn_behavior_python" style="color: inherit; text-decoration: inherit;">use_<wbr>pre111_<wbr>group_<wbr>cn_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}In Vault 1.1.1 a fix for handling group CN values of
 different cases unfortunately introduced a regression that could cause previously defined groups
@@ -1472,7 +1522,7 @@ new configurations.
 <a href="#use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
@@ -1482,7 +1532,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1541,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 {{% /md %}}</dd></dl>
@@ -1560,20 +1610,56 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackend</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackend</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">anonymous_group_search</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">case_sensitive_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_tls_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_tls_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">formatter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_rotation_tolerance</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_pre111_group_cn_behavior</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecretBackend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">anonymous_group_search</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">binddn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">bindpass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">case_sensitive_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_tls_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">client_tls_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">deny_null_bind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">discoverdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">formatter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groupattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groupdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">groupfilter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">insecure_tls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">last_rotation_tolerance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">local</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">starttls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">tls_max_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">upndomain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">use_pre111_group_cn_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">use_token_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">userattr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">userdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> SecretBackend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecretBackendState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2346,7 +2432,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_anonymousgroupsearch_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>Group<wbr>Search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
@@ -2356,7 +2442,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
@@ -2366,7 +2452,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#state_binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2375,7 +2461,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#state_bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2470,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#state_casesensitivenames_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
@@ -2394,7 +2480,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
@@ -2404,7 +2490,7 @@ x509 PEM encoded.
 <a href="#state_clienttlscert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2413,7 +2499,7 @@ x509 PEM encoded.
 <a href="#state_clienttlskey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2508,7 @@ x509 PEM encoded.
 <a href="#state_defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2431,7 +2517,7 @@ x509 PEM encoded.
 <a href="#state_denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
@@ -2441,7 +2527,7 @@ defaults to true.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2536,7 @@ defaults to true.
 <a href="#state_discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2459,7 +2545,7 @@ defaults to true.
 <a href="#state_formatter_nodejs" style="color: inherit; text-decoration: inherit;">formatter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
@@ -2469,7 +2555,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#state_groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
@@ -2479,7 +2565,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#state_groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2488,7 +2574,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#state_groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
@@ -2498,7 +2584,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
 <a href="#state_insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
@@ -2508,7 +2594,7 @@ Defaults to `false`.
 <a href="#state_lastrotationtolerance_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Rotation<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
@@ -2518,7 +2604,7 @@ shows a later rotation, it should be considered out-of-band
 <a href="#state_length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
@@ -2528,7 +2614,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
@@ -2538,7 +2624,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2547,7 +2633,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2556,7 +2642,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2565,7 +2651,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
@@ -2575,7 +2661,7 @@ before returning back an error.
 <a href="#state_starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2584,7 +2670,7 @@ before returning back an error.
 <a href="#state_tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -2594,7 +2680,7 @@ before returning back an error.
 <a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -2604,7 +2690,7 @@ before returning back an error.
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2613,7 +2699,7 @@ before returning back an error.
 <a href="#state_upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2622,7 +2708,7 @@ before returning back an error.
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
@@ -2632,7 +2718,7 @@ them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 <a href="#state_usepre111groupcnbehavior_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Pre111Group<wbr>Cn<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}In Vault 1.1.1 a fix for handling group CN values of
 different cases unfortunately introduced a regression that could cause previously defined groups
@@ -2646,7 +2732,7 @@ new configurations.
 <a href="#state_usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
@@ -2656,7 +2742,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2665,7 +2751,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 {{% /md %}}</dd></dl>
@@ -2678,7 +2764,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_anonymous_group_search_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>group_<wbr>search</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use anonymous binds when performing LDAP group searches
 (if true the initial credentials will still be used for the initial connection test).
@@ -2688,7 +2774,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `ad`.
@@ -2698,7 +2784,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#state_binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Distinguished name of object to bind when performing user and group search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2707,7 +2793,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#state_bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password to use along with binddn when performing user search.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2802,7 @@ not begin or end with a `/`. Defaults to `ad`.
 <a href="#state_case_sensitive_names_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set, user and group names assigned to policies within the
 backend will be case sensitive. Otherwise, names will be normalized to lower case.
@@ -2726,7 +2812,7 @@ backend will be case sensitive. Otherwise, names will be normalized to lower cas
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying LDAP server certificate, must be
 x509 PEM encoded.
@@ -2736,7 +2822,7 @@ x509 PEM encoded.
 <a href="#state_client_tls_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2745,7 +2831,7 @@ x509 PEM encoded.
 <a href="#state_client_tls_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the LDAP server, must be x509 PEM encoded.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2754,7 +2840,7 @@ x509 PEM encoded.
 <a href="#state_default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2763,7 +2849,7 @@ x509 PEM encoded.
 <a href="#state_deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Denies an unauthenticated LDAP bind request if the user's password is empty;
 defaults to true.
@@ -2773,7 +2859,7 @@ defaults to true.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2782,7 +2868,7 @@ defaults to true.
 <a href="#state_discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use anonymous bind to discover the bind Distinguished Name of a user.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2791,7 +2877,7 @@ defaults to true.
 <a href="#state_formatter_python" style="color: inherit; text-decoration: inherit;">formatter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Text to insert the password into, ex. "customPrefix{{PASSWORD}}customSuffix". This
 setting is deprecated and should instead use `password_policy`.
@@ -2801,7 +2887,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#state_groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by <groupfilter> in order to enumerate
 user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
@@ -2811,7 +2897,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#state_groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP search base to use for group membership search (eg: ou=Groups,dc=example,dc=org).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2906,7 @@ user group membership. Examples: `cn` or `memberOf`, etc. Defaults to `cn`.
 <a href="#state_groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Go template for querying group membership of user (optional) The template can access
 the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.Username}})(member={{.UserDN}})(uniqueMember={{.UserDN}}))`
@@ -2830,7 +2916,7 @@ the following context variables: UserDN, Username. Defaults to `(|(memberUid={{.
 <a href="#state_insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Skip LDAP server SSL Certificate verification. This is not recommended for production.
 Defaults to `false`.
@@ -2840,7 +2926,7 @@ Defaults to `false`.
 <a href="#state_last_rotation_tolerance_python" style="color: inherit; text-decoration: inherit;">last_<wbr>rotation_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of seconds after a Vault rotation where, if Active Directory
 shows a later rotation, it should be considered out-of-band
@@ -2850,7 +2936,7 @@ shows a later rotation, it should be considered out-of-band
 <a href="#state_length_python" style="color: inherit; text-decoration: inherit;">length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The desired length of passwords that Vault generates. This
 setting is deprecated and should instead use `password_policy`.
@@ -2860,7 +2946,7 @@ setting is deprecated and should instead use `password_policy`.
 <a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
@@ -2870,7 +2956,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2879,7 +2965,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}In seconds, the maximum password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2888,7 +2974,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the password policy to use to generate passwords.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2897,7 +2983,7 @@ replication.Tolerance duration to use when checking the last rotation time.
 <a href="#state_request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Timeout, in seconds, for the connection when making requests against the server
 before returning back an error.
@@ -2907,7 +2993,7 @@ before returning back an error.
 <a href="#state_starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Issue a StartTLS command after establishing unencrypted connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +3002,7 @@ before returning back an error.
 <a href="#state_tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Maximum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -2926,7 +3012,7 @@ before returning back an error.
 <a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimum TLS version to use. Accepted values are `tls10`, `tls11`,
 `tls12` or `tls13`. Defaults to `tls12`.
@@ -2936,7 +3022,7 @@ before returning back an error.
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}In seconds, the default password time-to-live.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2945,7 +3031,7 @@ before returning back an error.
 <a href="#state_upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enables userPrincipalDomain login with [username]@UPNDomain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2954,7 +3040,7 @@ before returning back an error.
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP URL to connect to. Multiple URLs can be specified by concatenating
 them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
@@ -2964,7 +3050,7 @@ them with commas; they will be tried in-order. Defaults to `ldap://127.0.0.1`.
 <a href="#state_use_pre111_group_cn_behavior_python" style="color: inherit; text-decoration: inherit;">use_<wbr>pre111_<wbr>group_<wbr>cn_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}In Vault 1.1.1 a fix for handling group CN values of
 different cases unfortunately introduced a regression that could cause previously defined groups
@@ -2978,7 +3064,7 @@ new configurations.
 <a href="#state_use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, use the Active Directory tokenGroups constructed attribute of the
 user to find the group memberships. This will find all security groups including nested ones.
@@ -2988,7 +3074,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Attribute used when searching users. Defaults to `cn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2997,7 +3083,7 @@ user to find the group memberships. This will find all security groups including
 <a href="#state_userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LDAP domain to use for users (eg: ou=People,dc=example,dc=org)`.
 {{% /md %}}</dd></dl>

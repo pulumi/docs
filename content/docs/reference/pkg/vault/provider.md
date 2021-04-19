@@ -23,19 +23,38 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_address_to_env</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_logins</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderAuthLoginArgs]]</span> = None<span class="p">, </span><span class="nx">ca_cert_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_cert_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_auths</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderClientAuthArgs]]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_tls_verify</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">add_address_to_env</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">auth_logins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProviderAuthLoginArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">ca_cert_dir</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">ca_cert_file</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">client_auths</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProviderClientAuthArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProviderHeaderArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">skip_tls_verify</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">token_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -70,22 +89,32 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -94,7 +123,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -118,7 +147,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -415,7 +444,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL of the root of the target Vault server.
 {{% /md %}}</dd><dt class="property-required"
@@ -424,7 +453,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token to use to authenticate to Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -433,7 +462,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#addaddresstoenv_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Address<wbr>To<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If true, adds the value of the `address` argument to the Terraform process environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -442,7 +471,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authlogins_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Logins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerauthlogin">Provider<wbr>Auth<wbr>Login[]</a></span>
+        <span class="property-type"><a href="#providerauthlogin">pulumi<wbr>Input<pulumi<wbr>Input<Provider<wbr>Auth<wbr>Login<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Login to vault with an existing auth method using auth/<mount>/login
 {{% /md %}}</dd><dt class="property-optional"
@@ -451,7 +480,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cacertdir_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to directory containing CA certificate files to validate the server's certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -460,7 +489,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cacertfile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -469,7 +498,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clientauths_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerclientauth">Provider<wbr>Client<wbr>Auth[]</a></span>
+        <span class="property-type"><a href="#providerclientauth">pulumi<wbr>Input<pulumi<wbr>Input<Provider<wbr>Client<wbr>Auth<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Client authentication credentials.
 {{% /md %}}</dd><dt class="property-optional"
@@ -478,7 +507,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerheader">Provider<wbr>Header[]</a></span>
+        <span class="property-type"><a href="#providerheader">pulumi<wbr>Input<pulumi<wbr>Input<Provider<wbr>Header<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The headers to send with each Vault request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -487,7 +516,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
  It can also be sourced from the following environment variable: `TERRAFORM_VAULT_MAX_TTL`{{% /md %}}</dd><dt class="property-optional"
@@ -496,7 +525,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
  It can also be sourced from the following environment variable: `VAULT_MAX_RETRIES`{{% /md %}}</dd><dt class="property-optional"
@@ -505,7 +534,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace to use. Available only for Vault Enterprise
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +543,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#skiptlsverify_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Tls<wbr>Verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Vault server is an insecure development instance.
  It can also be sourced from the following environment variable: `VAULT_SKIP_VERIFY`{{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +552,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tokenname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Token name to use for creating the Vault child token.
 {{% /md %}}</dd></dl>
@@ -536,7 +565,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL of the root of the target Vault server.
 {{% /md %}}</dd><dt class="property-required"
@@ -545,7 +574,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token to use to authenticate to Vault.
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +583,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#add_address_to_env_python" style="color: inherit; text-decoration: inherit;">add_<wbr>address_<wbr>to_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If true, adds the value of the `address` argument to the Terraform process environment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +592,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#auth_logins_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>logins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerauthlogin">Sequence[Provider<wbr>Auth<wbr>Login<wbr>Args]</a></span>
+        <span class="property-type"><a href="#providerauthlogin">Input[Provider<wbr>Auth<wbr>Login<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Login to vault with an existing auth method using auth/<mount>/login
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +601,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ca_cert_dir_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to directory containing CA certificate files to validate the server's certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +610,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ca_cert_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +619,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#client_auths_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerclientauth">Sequence[Provider<wbr>Client<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#providerclientauth">Input[Provider<wbr>Client<wbr>Auth<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Client authentication credentials.
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +628,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerheader">Sequence[Provider<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#providerheader">Input[Provider<wbr>Header<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The headers to send with each Vault request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +637,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
  It can also be sourced from the following environment variable: `TERRAFORM_VAULT_MAX_TTL`{{% /md %}}</dd><dt class="property-optional"
@@ -617,7 +646,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
  It can also be sourced from the following environment variable: `VAULT_MAX_RETRIES`{{% /md %}}</dd><dt class="property-optional"
@@ -626,7 +655,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace to use. Available only for Vault Enterprise
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +664,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#skip_tls_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>tls_<wbr>verify</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Vault server is an insecure development instance.
  It can also be sourced from the following environment variable: `VAULT_SKIP_VERIFY`{{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +673,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#token_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Token name to use for creating the Vault child token.
 {{% /md %}}</dd></dl>
@@ -780,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -808,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -878,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certfile_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -886,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyfile_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_file_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -906,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_file_python" style="color: inherit; text-decoration: inherit;">key_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -960,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -968,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -980,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -988,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
