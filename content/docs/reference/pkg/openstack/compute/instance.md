@@ -18,51 +18,19 @@ meta_desc: "Documentation for the openstack.compute.Instance resource with examp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceNetworkArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstancePersonalityArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceSchedulerHintArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceVendorOptionsArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceArgs]</a></span> = None<span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -97,32 +65,22 @@ meta_desc: "Documentation for the openstack.compute.Instance resource with examp
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -131,7 +89,7 @@ meta_desc: "Documentation for the openstack.compute.Instance resource with examp
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -155,7 +113,7 @@ meta_desc: "Documentation for the openstack.compute.Instance resource with examp
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -782,7 +740,7 @@ Supported options are described below.
 <a href="#accessipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Ip<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv4 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +749,7 @@ Supported options are described below.
 <a href="#accessipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Ip<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv6 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +758,7 @@ Supported options are described below.
 <a href="#adminpass_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
@@ -810,7 +768,7 @@ Changing this changes the root password on the existing server.
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
 the server. Conflicts with `availability_zone_hints`. Changing this creates
@@ -821,7 +779,7 @@ a new server.
 <a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to
 create the server. This argument is preferred to `availability_zone`, when
@@ -835,7 +793,7 @@ new server.
 <a href="#blockdevices_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instanceblockdevice">Instance<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -849,7 +807,7 @@ for more information.
 <a href="#configdrive_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Drive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
@@ -859,7 +817,7 @@ configure the instance. Changing this creates a new server.
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
@@ -869,7 +827,7 @@ the desired flavor for the server. Changing this resizes the existing server.
 <a href="#flavorname_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
@@ -879,7 +837,7 @@ desired flavor for the server. Changing this resizes the existing server.
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to force the OpenStack instance to be
 forcefully deleted. This is useful for environments that have reclaim / soft
@@ -890,7 +848,7 @@ deletion enabled.
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_name` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The image ID of
@@ -901,7 +859,7 @@ the desired image for the server. Changing this creates a new server.
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_id` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The name of the
@@ -912,7 +870,7 @@ desired image for the server. Changing this creates a new server.
 <a href="#keypair_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a key pair to put on the server. The key
 pair must already be created and associated with the tenant's account.
@@ -923,7 +881,7 @@ Changing this creates a new server.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
@@ -933,7 +891,7 @@ within the instance. Changing this updates the existing server metadata.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
@@ -943,7 +901,7 @@ name of the network. Changing this creates a new server.
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Special string for `network` option to create
 the server. `network_mode` can be `"auto"` or `"none"`.
@@ -954,7 +912,7 @@ Please see the following [reference](https://docs.openstack.org/api-ref/compute/
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Network<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -965,7 +923,7 @@ creates a new server.
 <a href="#personalities_nodejs" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Personality<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancepersonality">Instance<wbr>Personality[]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -976,7 +934,7 @@ is described below.
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide the VM state. Only 'active' and 'shutoff'
 are supported values. *Note*: If the initial power_state is the shutoff
@@ -988,7 +946,7 @@ remote-exec or files are not supported.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the server instance. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -999,7 +957,7 @@ creates a new server.
 <a href="#schedulerhints_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Scheduler<wbr>Hint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">Instance<wbr>Scheduler<wbr>Hint[]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -1009,7 +967,7 @@ the instance should be launched. The available hints are described below.
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of one or more security group names
 to associate with the server. Changing this results in adding/removing
@@ -1023,7 +981,7 @@ trigger unnecessary updates.
 <a href="#stopbeforedestroy_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Before<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to try stop instance gracefully
 before destroying it, thus giving chance for guest OS daemons to stop correctly.
@@ -1034,7 +992,7 @@ If instance doesn't stop within timeout, it will be destroyed anyway.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the instance. Changing this
 updates the existing instance tags.
@@ -1044,7 +1002,7 @@ updates the existing instance tags.
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
 Changing this creates a new server.
@@ -1054,7 +1012,7 @@ Changing this creates a new server.
 <a href="#vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevendoroptions">pulumi.<wbr>Input<Instance<wbr>Vendor<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancevendoroptions">Instance<wbr>Vendor<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -1068,7 +1026,7 @@ Supported options are described below.
 <a href="#access_ip_v4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>ip_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv4 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1035,7 @@ Supported options are described below.
 <a href="#access_ip_v6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>ip_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv6 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1044,7 @@ Supported options are described below.
 <a href="#admin_pass_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
@@ -1096,7 +1054,7 @@ Changing this changes the root password on the existing server.
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
 the server. Conflicts with `availability_zone_hints`. Changing this creates
@@ -1107,7 +1065,7 @@ a new server.
 <a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to
 create the server. This argument is preferred to `availability_zone`, when
@@ -1121,7 +1079,7 @@ new server.
 <a href="#block_devices_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">Input[Instance<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instanceblockdevice">Sequence[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -1135,7 +1093,7 @@ for more information.
 <a href="#config_drive_python" style="color: inherit; text-decoration: inherit;">config_<wbr>drive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
@@ -1145,7 +1103,7 @@ configure the instance. Changing this creates a new server.
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
@@ -1155,7 +1113,7 @@ the desired flavor for the server. Changing this resizes the existing server.
 <a href="#flavor_name_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
@@ -1165,7 +1123,7 @@ desired flavor for the server. Changing this resizes the existing server.
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to force the OpenStack instance to be
 forcefully deleted. This is useful for environments that have reclaim / soft
@@ -1176,7 +1134,7 @@ deletion enabled.
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_name` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The image ID of
@@ -1187,7 +1145,7 @@ the desired image for the server. Changing this creates a new server.
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_id` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The name of the
@@ -1198,7 +1156,7 @@ desired image for the server. Changing this creates a new server.
 <a href="#key_pair_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a key pair to put on the server. The key
 pair must already be created and associated with the tenant's account.
@@ -1209,7 +1167,7 @@ Changing this creates a new server.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
@@ -1219,7 +1177,7 @@ within the instance. Changing this updates the existing server metadata.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
@@ -1229,7 +1187,7 @@ name of the network. Changing this creates a new server.
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Special string for `network` option to create
 the server. `network_mode` can be `"auto"` or `"none"`.
@@ -1240,7 +1198,7 @@ Please see the following [reference](https://docs.openstack.org/api-ref/compute/
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Input[Instance<wbr>Network<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancenetwork">Sequence[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -1251,7 +1209,7 @@ creates a new server.
 <a href="#personalities_python" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">Input[Instance<wbr>Personality<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancepersonality">Sequence[Instance<wbr>Personality<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -1262,7 +1220,7 @@ is described below.
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provide the VM state. Only 'active' and 'shutoff'
 are supported values. *Note*: If the initial power_state is the shutoff
@@ -1274,7 +1232,7 @@ remote-exec or files are not supported.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to create the server instance. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1285,7 +1243,7 @@ creates a new server.
 <a href="#scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">Input[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">Sequence[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -1295,7 +1253,7 @@ the instance should be launched. The available hints are described below.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of one or more security group names
 to associate with the server. Changing this results in adding/removing
@@ -1309,7 +1267,7 @@ trigger unnecessary updates.
 <a href="#stop_before_destroy_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>before_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to try stop instance gracefully
 before destroying it, thus giving chance for guest OS daemons to stop correctly.
@@ -1320,7 +1278,7 @@ If instance doesn't stop within timeout, it will be destroyed anyway.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the instance. Changing this
 updates the existing instance tags.
@@ -1330,7 +1288,7 @@ updates the existing instance tags.
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
 Changing this creates a new server.
@@ -1340,7 +1298,7 @@ Changing this creates a new server.
 <a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevendoroptions">Input[Instance<wbr>Vendor<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancevendoroptions">Instance<wbr>Vendor<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -1482,50 +1440,20 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">all_metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceNetworkArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstancePersonalityArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceSchedulerHintArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceVendorOptionsArgs]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_ip_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_ip_v6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">all_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone_hints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">config_drive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">flavor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">flavor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">personalities</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstancePersonalityArgs]]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduler_hints</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceSchedulerHintArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">stop_before_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[InstanceVendorOptionsArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2242,7 +2170,7 @@ Supported options are described below.
 <a href="#state_accessipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Ip<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv4 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2251,7 +2179,7 @@ Supported options are described below.
 <a href="#state_accessipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Ip<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv6 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2260,7 +2188,7 @@ Supported options are described below.
 <a href="#state_adminpass_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
@@ -2270,7 +2198,7 @@ Changing this changes the root password on the existing server.
 <a href="#state_allmetadata_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2278,7 +2206,7 @@ Changing this changes the root password on the existing server.
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the instance, which have
 been explicitly and implicitly added.
@@ -2288,7 +2216,7 @@ been explicitly and implicitly added.
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
 the server. Conflicts with `availability_zone_hints`. Changing this creates
@@ -2299,7 +2227,7 @@ a new server.
 <a href="#state_availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to
 create the server. This argument is preferred to `availability_zone`, when
@@ -2313,7 +2241,7 @@ new server.
 <a href="#state_blockdevices_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instanceblockdevice">Instance<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -2327,7 +2255,7 @@ for more information.
 <a href="#state_configdrive_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Drive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
@@ -2337,7 +2265,7 @@ configure the instance. Changing this creates a new server.
 <a href="#state_flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
@@ -2347,7 +2275,7 @@ the desired flavor for the server. Changing this resizes the existing server.
 <a href="#state_flavorname_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
@@ -2357,7 +2285,7 @@ desired flavor for the server. Changing this resizes the existing server.
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to force the OpenStack instance to be
 forcefully deleted. This is useful for environments that have reclaim / soft
@@ -2368,7 +2296,7 @@ deletion enabled.
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_name` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The image ID of
@@ -2379,7 +2307,7 @@ the desired image for the server. Changing this creates a new server.
 <a href="#state_imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_id` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The name of the
@@ -2390,7 +2318,7 @@ desired image for the server. Changing this creates a new server.
 <a href="#state_keypair_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a key pair to put on the server. The key
 pair must already be created and associated with the tenant's account.
@@ -2401,7 +2329,7 @@ Changing this creates a new server.
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
@@ -2411,7 +2339,7 @@ within the instance. Changing this updates the existing server metadata.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
@@ -2421,7 +2349,7 @@ name of the network. Changing this creates a new server.
 <a href="#state_networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Special string for `network` option to create
 the server. `network_mode` can be `"auto"` or `"none"`.
@@ -2432,7 +2360,7 @@ Please see the following [reference](https://docs.openstack.org/api-ref/compute/
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Network<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -2443,7 +2371,7 @@ creates a new server.
 <a href="#state_personalities_nodejs" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Personality<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancepersonality">Instance<wbr>Personality[]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -2454,7 +2382,7 @@ is described below.
 <a href="#state_powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide the VM state. Only 'active' and 'shutoff'
 are supported values. *Note*: If the initial power_state is the shutoff
@@ -2466,7 +2394,7 @@ remote-exec or files are not supported.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the server instance. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2477,7 +2405,7 @@ creates a new server.
 <a href="#state_schedulerhints_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Scheduler<wbr>Hint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">Instance<wbr>Scheduler<wbr>Hint[]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -2487,7 +2415,7 @@ the instance should be launched. The available hints are described below.
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of one or more security group names
 to associate with the server. Changing this results in adding/removing
@@ -2501,7 +2429,7 @@ trigger unnecessary updates.
 <a href="#state_stopbeforedestroy_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Before<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to try stop instance gracefully
 before destroying it, thus giving chance for guest OS daemons to stop correctly.
@@ -2512,7 +2440,7 @@ If instance doesn't stop within timeout, it will be destroyed anyway.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the instance. Changing this
 updates the existing instance tags.
@@ -2522,7 +2450,7 @@ updates the existing instance tags.
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
 Changing this creates a new server.
@@ -2532,7 +2460,7 @@ Changing this creates a new server.
 <a href="#state_vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevendoroptions">pulumi.<wbr>Input<Instance<wbr>Vendor<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancevendoroptions">Instance<wbr>Vendor<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -2546,7 +2474,7 @@ Supported options are described below.
 <a href="#state_access_ip_v4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>ip_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv4 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2483,7 @@ Supported options are described below.
 <a href="#state_access_ip_v6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>ip_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first detected Fixed IPv6 address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2492,7 @@ Supported options are described below.
 <a href="#state_admin_pass_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
@@ -2574,7 +2502,7 @@ Changing this changes the root password on the existing server.
 <a href="#state_all_metadata_python" style="color: inherit; text-decoration: inherit;">all_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2582,7 +2510,7 @@ Changing this changes the root password on the existing server.
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the instance, which have
 been explicitly and implicitly added.
@@ -2592,7 +2520,7 @@ been explicitly and implicitly added.
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to create
 the server. Conflicts with `availability_zone_hints`. Changing this creates
@@ -2603,7 +2531,7 @@ a new server.
 <a href="#state_availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to
 create the server. This argument is preferred to `availability_zone`, when
@@ -2617,7 +2545,7 @@ new server.
 <a href="#state_block_devices_python" style="color: inherit; text-decoration: inherit;">block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceblockdevice">Input[Instance<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instanceblockdevice">Sequence[Instance<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of block devices. The block_device
 structure is documented below. Changing this creates a new server.
@@ -2631,7 +2559,7 @@ for more information.
 <a href="#state_config_drive_python" style="color: inherit; text-decoration: inherit;">config_<wbr>drive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
@@ -2641,7 +2569,7 @@ configure the instance. Changing this creates a new server.
 <a href="#state_flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
@@ -2651,7 +2579,7 @@ the desired flavor for the server. Changing this resizes the existing server.
 <a href="#state_flavor_name_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the
 desired flavor for the server. Changing this resizes the existing server.
@@ -2661,7 +2589,7 @@ desired flavor for the server. Changing this resizes the existing server.
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to force the OpenStack instance to be
 forcefully deleted. This is useful for environments that have reclaim / soft
@@ -2672,7 +2600,7 @@ deletion enabled.
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_name` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The image ID of
@@ -2683,7 +2611,7 @@ the desired image for the server. Changing this creates a new server.
 <a href="#state_image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional; Required if `image_id` is empty and not booting
 from a volume. Do not specify if booting from a volume.) The name of the
@@ -2694,7 +2622,7 @@ desired image for the server. Changing this creates a new server.
 <a href="#state_key_pair_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a key pair to put on the server. The key
 pair must already be created and associated with the tenant's account.
@@ -2705,7 +2633,7 @@ Changing this creates a new server.
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
@@ -2715,7 +2643,7 @@ within the instance. Changing this updates the existing server metadata.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
@@ -2725,7 +2653,7 @@ name of the network. Changing this creates a new server.
 <a href="#state_network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Special string for `network` option to create
 the server. `network_mode` can be `"auto"` or `"none"`.
@@ -2736,7 +2664,7 @@ Please see the following [reference](https://docs.openstack.org/api-ref/compute/
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Input[Instance<wbr>Network<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancenetwork">Sequence[Instance<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
@@ -2747,7 +2675,7 @@ creates a new server.
 <a href="#state_personalities_python" style="color: inherit; text-decoration: inherit;">personalities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancepersonality">Input[Instance<wbr>Personality<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancepersonality">Sequence[Instance<wbr>Personality<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize the personality of an instance by
 defining one or more files and their contents. The personality structure
@@ -2758,7 +2686,7 @@ is described below.
 <a href="#state_power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provide the VM state. Only 'active' and 'shutoff'
 are supported values. *Note*: If the initial power_state is the shutoff
@@ -2770,7 +2698,7 @@ remote-exec or files are not supported.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to create the server instance. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -2781,7 +2709,7 @@ creates a new server.
 <a href="#state_scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceschedulerhint">Input[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instanceschedulerhint">Sequence[Instance<wbr>Scheduler<wbr>Hint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
@@ -2791,7 +2719,7 @@ the instance should be launched. The available hints are described below.
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of one or more security group names
 to associate with the server. Changing this results in adding/removing
@@ -2805,7 +2733,7 @@ trigger unnecessary updates.
 <a href="#state_stop_before_destroy_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>before_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to try stop instance gracefully
 before destroying it, thus giving chance for guest OS daemons to stop correctly.
@@ -2816,7 +2744,7 @@ If instance doesn't stop within timeout, it will be destroyed anyway.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the instance. Changing this
 updates the existing instance tags.
@@ -2826,7 +2754,7 @@ updates the existing instance tags.
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance.
 Changing this creates a new server.
@@ -2836,7 +2764,7 @@ Changing this creates a new server.
 <a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevendoroptions">Input[Instance<wbr>Vendor<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancevendoroptions">Instance<wbr>Vendor<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of additional vendor-specific options.
 Supported options are described below.
@@ -3089,7 +3017,7 @@ creates a new server.
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source type of the device. Must be one of
 "blank", "image", "volume", or "snapshot". Changing this creates a new
@@ -3100,7 +3028,7 @@ server.
 <a href="#bootindex_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The boot index of the volume. It defaults to 0.
 Changing this creates a new server.
@@ -3110,7 +3038,7 @@ Changing this creates a new server.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Delete the volume / block device upon
 termination of the instance. Defaults to false. Changing this creates a
@@ -3121,7 +3049,7 @@ new server.
 <a href="#destinationtype_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type that gets created. Possible values
 are "volume" and "local". Changing this creates a new server.
@@ -3131,7 +3059,7 @@ are "volume" and "local". Changing this creates a new server.
 <a href="#devicetype_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The low-level device type that will be used. Most
 common thing is to leave this empty. Changing this creates a new server.
@@ -3141,7 +3069,7 @@ common thing is to leave this empty. Changing this creates a new server.
 <a href="#diskbus_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Bus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The low-level disk bus that will be used. Most common
 thing is to leave this empty. Changing this creates a new server.
@@ -3151,7 +3079,7 @@ thing is to leave this empty. Changing this creates a new server.
 <a href="#guestformat_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the guest server disk file system format,
 such as `ext2`, `ext3`, `ext4`, `xfs` or `swap`. Swap block device mappings
@@ -3165,7 +3093,7 @@ creates a new server.
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of
 the image, volume, or snapshot. Changing this creates a new server.
@@ -3175,7 +3103,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Required
 in the following combinations: source=image and destination=volume,
@@ -3187,7 +3115,7 @@ Changing this creates a new server.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume type that will be used, for example SSD
 or HDD storage. The available options depend on how your specific OpenStack
@@ -3203,7 +3131,7 @@ creates a new server.
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source type of the device. Must be one of
 "blank", "image", "volume", or "snapshot". Changing this creates a new
@@ -3214,7 +3142,7 @@ server.
 <a href="#boot_index_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The boot index of the volume. It defaults to 0.
 Changing this creates a new server.
@@ -3224,7 +3152,7 @@ Changing this creates a new server.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete the volume / block device upon
 termination of the instance. Defaults to false. Changing this creates a
@@ -3235,7 +3163,7 @@ new server.
 <a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type that gets created. Possible values
 are "volume" and "local". Changing this creates a new server.
@@ -3245,7 +3173,7 @@ are "volume" and "local". Changing this creates a new server.
 <a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The low-level device type that will be used. Most
 common thing is to leave this empty. Changing this creates a new server.
@@ -3255,7 +3183,7 @@ common thing is to leave this empty. Changing this creates a new server.
 <a href="#disk_bus_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>bus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The low-level disk bus that will be used. Most common
 thing is to leave this empty. Changing this creates a new server.
@@ -3265,7 +3193,7 @@ thing is to leave this empty. Changing this creates a new server.
 <a href="#guest_format_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the guest server disk file system format,
 such as `ext2`, `ext3`, `ext4`, `xfs` or `swap`. Swap block device mappings
@@ -3279,7 +3207,7 @@ creates a new server.
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of
 the image, volume, or snapshot. Changing this creates a new server.
@@ -3289,7 +3217,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Required
 in the following combinations: source=image and destination=volume,
@@ -3301,7 +3229,7 @@ Changing this creates a new server.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The volume type that will be used, for example SSD
 or HDD storage. The available options depend on how your specific OpenStack
@@ -3475,7 +3403,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#accessnetwork_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if this network should be used for
 provisioning access. Accepts true or false. Defaults to false.
@@ -3485,7 +3413,7 @@ provisioning access. Accepts true or false. Defaults to false.
 <a href="#fixedipv4_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new server.
@@ -3495,7 +3423,7 @@ network. Changing this creates a new server.
 <a href="#fixedipv6_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3431,7 @@ network. Changing this creates a new server.
 <a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,7 +3439,7 @@ network. Changing this creates a new server.
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3519,7 +3447,7 @@ network. Changing this creates a new server.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
@@ -3529,7 +3457,7 @@ name of the network. Changing this creates a new server.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the server. Changing this creates a new server.
@@ -3539,7 +3467,7 @@ network to attach to the server. Changing this creates a new server.
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of
 the image, volume, or snapshot. Changing this creates a new server.
@@ -3553,7 +3481,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#access_network_python" style="color: inherit; text-decoration: inherit;">access_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if this network should be used for
 provisioning access. Accepts true or false. Defaults to false.
@@ -3563,7 +3491,7 @@ provisioning access. Accepts true or false. Defaults to false.
 <a href="#fixed_ip_v4_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new server.
@@ -3573,7 +3501,7 @@ network. Changing this creates a new server.
 <a href="#fixed_ip_v6_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3581,7 +3509,7 @@ network. Changing this creates a new server.
 <a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3589,7 +3517,7 @@ network. Changing this creates a new server.
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3597,7 +3525,7 @@ network. Changing this creates a new server.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable
 name of the network. Changing this creates a new server.
@@ -3607,7 +3535,7 @@ name of the network. Changing this creates a new server.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the server. Changing this creates a new server.
@@ -3617,7 +3545,7 @@ network to attach to the server. Changing this creates a new server.
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of
 the image, volume, or snapshot. Changing this creates a new server.
@@ -3677,7 +3605,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of the file. Limited to 255 bytes.
 {{% /md %}}</dd><dt class="property-required"
@@ -3686,7 +3614,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the destination file.
 {{% /md %}}</dd></dl>
@@ -3699,7 +3627,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contents of the file. Limited to 255 bytes.
 {{% /md %}}</dd><dt class="property-required"
@@ -3708,7 +3636,7 @@ the image, volume, or snapshot. Changing this creates a new server.
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the destination file.
 {{% /md %}}</dd></dl>
@@ -3895,7 +3823,7 @@ scheduled on the same host of those specified.
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
@@ -3905,7 +3833,7 @@ properties to pass to the scheduler.
 <a href="#buildnearhostip_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Near<wbr>Host<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IP Address in CIDR form. The instance
 will be placed on a compute node that is in the same subnet.
@@ -3915,7 +3843,7 @@ will be placed on a compute node that is in the same subnet.
 <a href="#differentcells_nodejs" style="color: inherit; text-decoration: inherit;">different<wbr>Cells</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of cells where not to build the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3924,7 +3852,7 @@ will be placed on a compute node that is in the same subnet.
 <a href="#differenthosts_nodejs" style="color: inherit; text-decoration: inherit;">different<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance UUIDs. The instance will
 be scheduled on a different host than all other instances.
@@ -3934,7 +3862,7 @@ be scheduled on a different host than all other instances.
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A UUID of a Server Group. The instance will be placed
 into that group.
@@ -3944,7 +3872,7 @@ into that group.
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A conditional query that a compute node must pass in
 order to host an instance. The query must use the `JsonFilter` syntax
@@ -3958,7 +3886,7 @@ At this time, only simple queries are supported. Compound queries using
 <a href="#samehosts_nodejs" style="color: inherit; text-decoration: inherit;">same<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance UUIDs. The instance will be
 scheduled on the same host of those specified.
@@ -3968,7 +3896,7 @@ scheduled on the same host of those specified.
 <a href="#targetcell_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Cell</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a cell to host the instance.
 {{% /md %}}</dd></dl>
@@ -3981,7 +3909,7 @@ scheduled on the same host of those specified.
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
@@ -3991,7 +3919,7 @@ properties to pass to the scheduler.
 <a href="#build_near_host_ip_python" style="color: inherit; text-decoration: inherit;">build_<wbr>near_<wbr>host_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IP Address in CIDR form. The instance
 will be placed on a compute node that is in the same subnet.
@@ -4001,7 +3929,7 @@ will be placed on a compute node that is in the same subnet.
 <a href="#different_cells_python" style="color: inherit; text-decoration: inherit;">different_<wbr>cells</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of cells where not to build the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4010,7 +3938,7 @@ will be placed on a compute node that is in the same subnet.
 <a href="#different_hosts_python" style="color: inherit; text-decoration: inherit;">different_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance UUIDs. The instance will
 be scheduled on a different host than all other instances.
@@ -4020,7 +3948,7 @@ be scheduled on a different host than all other instances.
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A UUID of a Server Group. The instance will be placed
 into that group.
@@ -4030,7 +3958,7 @@ into that group.
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A conditional query that a compute node must pass in
 order to host an instance. The query must use the `JsonFilter` syntax
@@ -4044,7 +3972,7 @@ At this time, only simple queries are supported. Compound queries using
 <a href="#same_hosts_python" style="color: inherit; text-decoration: inherit;">same_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance UUIDs. The instance will be
 scheduled on the same host of those specified.
@@ -4054,7 +3982,7 @@ scheduled on the same host of those specified.
 <a href="#target_cell_python" style="color: inherit; text-decoration: inherit;">target_<wbr>cell</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a cell to host the instance.
 {{% /md %}}</dd></dl>
@@ -4123,7 +4051,7 @@ instances after some timeout.
 <a href="#detachportsbeforedestroy_nodejs" style="color: inherit; text-decoration: inherit;">detach<wbr>Ports<wbr>Before<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to try to detach all attached
 ports to the vm before destroying it to make sure the port state is correct
@@ -4134,7 +4062,7 @@ after the vm destruction. This is helpful when the port is not deleted.
 <a href="#ignoreresizeconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Resize<wbr>Confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to control whether
 to ignore manual confirmation of the instance resizing. This can be helpful
@@ -4150,7 +4078,7 @@ instances after some timeout.
 <a href="#detach_ports_before_destroy_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>ports_<wbr>before_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to try to detach all attached
 ports to the vm before destroying it to make sure the port state is correct
@@ -4161,7 +4089,7 @@ after the vm destruction. This is helpful when the port is not deleted.
 <a href="#ignore_resize_confirmation_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>resize_<wbr>confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to control whether
 to ignore manual confirmation of the instance resizing. This can be helpful

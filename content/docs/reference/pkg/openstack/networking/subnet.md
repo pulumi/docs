@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/networking"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -133,45 +133,19 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SubnetAllocationPoolArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SubnetAllocationPoolsCollectionArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SubnetHostRouteArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-           <span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolArgs]]</span> = None<span class="p">, </span><span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolsCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetHostRouteArgs]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSubnet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subnet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSubnet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subnet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Subnet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SubnetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -206,32 +180,22 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SubnetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,7 +204,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -264,7 +228,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -755,7 +719,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -765,7 +729,7 @@ creates a new subnet.
 <a href="#allocationpools_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Allocation<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -779,7 +743,7 @@ The `allocation_pool` block is documented below.
 <a href="#allocationpoolscollection_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -790,7 +754,7 @@ The `allocation_pools` block is documented below.
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -801,7 +765,7 @@ subnet pool.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -811,7 +775,7 @@ updates the name of the existing subnet.
 <a href="#dnsnameservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -822,7 +786,7 @@ subnet.
 <a href="#enabledhcp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -833,7 +797,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a href="#gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -845,7 +809,7 @@ existing subnet.
 <a href="#hostroutes_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Host<wbr>Route<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -858,7 +822,7 @@ for the existing subnet.
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -868,7 +832,7 @@ new subnet.
 <a href="#ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -878,7 +842,7 @@ new subnet.
 <a href="#ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -888,7 +852,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -898,7 +862,7 @@ the existing subnet.
 <a href="#nogateway_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -908,7 +872,7 @@ this removes or adds a default gateway IP of the existing subnet.
 <a href="#prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -920,7 +884,7 @@ creates a new subnet.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -932,7 +896,7 @@ subnet.
 <a href="#subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +905,7 @@ subnet.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +914,7 @@ subnet.
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -960,7 +924,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd></dl>
@@ -973,7 +937,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -983,7 +947,7 @@ creates a new subnet.
 <a href="#allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">Input[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Sequence[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -997,7 +961,7 @@ The `allocation_pool` block is documented below.
 <a href="#allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">Input[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Sequence[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -1008,7 +972,7 @@ The `allocation_pools` block is documented below.
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -1019,7 +983,7 @@ subnet pool.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -1029,7 +993,7 @@ updates the name of the existing subnet.
 <a href="#dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -1040,7 +1004,7 @@ subnet.
 <a href="#enable_dhcp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -1051,7 +1015,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a href="#gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -1063,7 +1027,7 @@ existing subnet.
 <a href="#host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">Input[Subnet<wbr>Host<wbr>Route<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnethostroute">Sequence[Subnet<wbr>Host<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -1076,7 +1040,7 @@ for the existing subnet.
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -1086,7 +1050,7 @@ new subnet.
 <a href="#ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -1096,7 +1060,7 @@ new subnet.
 <a href="#ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -1106,7 +1070,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -1116,7 +1080,7 @@ the existing subnet.
 <a href="#no_gateway_python" style="color: inherit; text-decoration: inherit;">no_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -1126,7 +1090,7 @@ this removes or adds a default gateway IP of the existing subnet.
 <a href="#prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -1138,7 +1102,7 @@ creates a new subnet.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -1150,7 +1114,7 @@ subnet.
 <a href="#subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1123,7 @@ subnet.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1132,7 @@ subnet.
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -1178,7 +1142,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd></dl>
@@ -1287,43 +1251,20 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SubnetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Subnet</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SubnetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Subnet</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SubnetAllocationPoolArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SubnetAllocationPoolsCollectionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SubnetHostRouteArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allocation_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolArgs]]</span> = None<span class="p">, </span><span class="nx">allocation_pools_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetAllocationPoolsCollectionArgs]]</span> = None<span class="p">, </span><span class="nx">cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_nameservers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gateway_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetHostRouteArgs]]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_address_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_ra_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetpool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SubnetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subnet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SubnetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subnet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Subnet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SubnetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Subnet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SubnetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1888,7 +1829,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -1898,7 +1839,7 @@ explicitly and implicitly added.
 <a href="#state_allocationpools_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Allocation<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -1912,7 +1853,7 @@ The `allocation_pool` block is documented below.
 <a href="#state_allocationpoolscollection_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Pools<wbr>Collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -1923,7 +1864,7 @@ The `allocation_pools` block is documented below.
 <a href="#state_cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -1934,7 +1875,7 @@ subnet pool.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -1944,7 +1885,7 @@ updates the name of the existing subnet.
 <a href="#state_dnsnameservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -1955,7 +1896,7 @@ subnet.
 <a href="#state_enabledhcp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -1966,7 +1907,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a href="#state_gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -1978,7 +1919,7 @@ existing subnet.
 <a href="#state_hostroutes_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Host<wbr>Route<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -1991,7 +1932,7 @@ for the existing subnet.
 <a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2001,7 +1942,7 @@ new subnet.
 <a href="#state_ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2011,7 +1952,7 @@ new subnet.
 <a href="#state_ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2021,7 +1962,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -2031,7 +1972,7 @@ the existing subnet.
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -2041,7 +1982,7 @@ creates a new subnet.
 <a href="#state_nogateway_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -2051,7 +1992,7 @@ this removes or adds a default gateway IP of the existing subnet.
 <a href="#state_prefixlength_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2063,7 +2004,7 @@ creates a new subnet.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -2075,7 +2016,7 @@ subnet.
 <a href="#state_subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2025,7 @@ subnet.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2034,7 @@ subnet.
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -2103,7 +2044,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd></dl>
@@ -2116,7 +2057,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -2126,7 +2067,7 @@ explicitly and implicitly added.
 <a href="#state_allocation_pools_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">Input[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Sequence[Subnet<wbr>Allocation<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -2140,7 +2081,7 @@ The `allocation_pool` block is documented below.
 <a href="#state_allocation_pools_collection_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>pools_<wbr>collection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">Input[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Sequence[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
@@ -2151,7 +2092,7 @@ The `allocation_pools` block is documented below.
 <a href="#state_cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -2162,7 +2103,7 @@ subnet pool.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -2172,7 +2113,7 @@ updates the name of the existing subnet.
 <a href="#state_dns_nameservers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -2183,7 +2124,7 @@ subnet.
 <a href="#state_enable_dhcp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -2194,7 +2135,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a href="#state_gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -2206,7 +2147,7 @@ existing subnet.
 <a href="#state_host_routes_python" style="color: inherit; text-decoration: inherit;">host_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">Input[Subnet<wbr>Host<wbr>Route<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnethostroute">Sequence[Subnet<wbr>Host<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -2219,7 +2160,7 @@ for the existing subnet.
 <a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2229,7 +2170,7 @@ new subnet.
 <a href="#state_ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2239,7 +2180,7 @@ new subnet.
 <a href="#state_ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2249,7 +2190,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -2259,7 +2200,7 @@ the existing subnet.
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -2269,7 +2210,7 @@ creates a new subnet.
 <a href="#state_no_gateway_python" style="color: inherit; text-decoration: inherit;">no_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -2279,7 +2220,7 @@ this removes or adds a default gateway IP of the existing subnet.
 <a href="#state_prefix_length_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2291,7 +2232,7 @@ creates a new subnet.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -2303,7 +2244,7 @@ subnet.
 <a href="#state_subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2253,7 @@ subnet.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2321,7 +2262,7 @@ subnet.
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -2331,7 +2272,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd></dl>
@@ -2399,7 +2340,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd><dt class="property-required"
@@ -2408,7 +2349,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd></dl>
@@ -2421,7 +2362,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd><dt class="property-required"
@@ -2430,7 +2371,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd></dl>
@@ -2489,7 +2430,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd><dt class="property-required"
@@ -2498,7 +2439,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd></dl>
@@ -2511,7 +2452,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd><dt class="property-required"
@@ -2520,7 +2461,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd></dl>
@@ -2579,7 +2520,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
 {{% /md %}}</dd><dt class="property-required"
@@ -2588,7 +2529,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
 {{% /md %}}</dd></dl>
@@ -2601,7 +2542,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
 {{% /md %}}</dd><dt class="property-required"
@@ -2610,7 +2551,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
 {{% /md %}}</dd></dl>
