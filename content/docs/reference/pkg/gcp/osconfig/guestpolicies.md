@@ -114,9 +114,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -384,8 +384,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -672,8 +672,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -814,33 +814,19 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GuestPoliciesAssignmentArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GuestPoliciesPackageRepositoryArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GuestPoliciesPackageArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GuestPoliciesRecipeArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[GuestPoliciesAssignmentArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesRecipeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestPolicies</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestPolicies</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestPolicies</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestPolicies</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GuestPolicies</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GuestPoliciesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -875,32 +861,22 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GuestPoliciesArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -909,7 +885,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -933,7 +909,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1176,7 +1152,7 @@ Structure is documented below.
 <a href="#assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignment">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Assignment<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VM instances that are assigned to this policy. This allows you to target sets
 or groups of VM instances by different parameters such as labels, names, OS, or zones.
@@ -1192,7 +1168,7 @@ Structure is documented below.
 <a href="#guestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1206,7 +1182,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1191,7 @@ Structure is documented below.
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1200,7 @@ Structure is documented below.
 <a href="#packagerepositories_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">Guest<wbr>Policies<wbr>Package<wbr>Repository[]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -1236,7 +1212,7 @@ Structure is documented below.
 <a href="#packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">Guest<wbr>Policies<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -1246,7 +1222,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1256,7 +1232,7 @@ If it is not provided, the provider project is used.
 <a href="#recipes_nodejs" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">Guest<wbr>Policies<wbr>Recipe[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -1270,7 +1246,7 @@ Structure is documented below.
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignment">Input[Guest<wbr>Policies<wbr>Assignment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VM instances that are assigned to this policy. This allows you to target sets
 or groups of VM instances by different parameters such as labels, names, OS, or zones.
@@ -1286,7 +1262,7 @@ Structure is documented below.
 <a href="#guest_policy_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1300,7 +1276,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1309,7 +1285,7 @@ Structure is documented below.
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1294,7 @@ Structure is documented below.
 <a href="#package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">Input[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -1330,7 +1306,7 @@ Structure is documented below.
 <a href="#packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">Input[Guest<wbr>Policies<wbr>Package<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -1340,7 +1316,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1350,7 +1326,7 @@ If it is not provided, the provider project is used.
 <a href="#recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -1548,33 +1524,20 @@ Get an existing GuestPolicies resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GuestPoliciesState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GuestPolicies</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GuestPoliciesState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GuestPolicies</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GuestPoliciesAssignmentArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GuestPoliciesPackageRepositoryArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GuestPoliciesPackageArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GuestPoliciesRecipeArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> GuestPolicies</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment</span><span class="p">:</span> <span class="nx">Optional[GuestPoliciesAssignmentArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">package_repositories</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageRepositoryArgs]]</span> = None<span class="p">, </span><span class="nx">packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesPackageArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recipes</span><span class="p">:</span> <span class="nx">Optional[Sequence[GuestPoliciesRecipeArgs]]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GuestPolicies</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGuestPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GuestPoliciesState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestPolicies</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGuestPolicies<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GuestPoliciesState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestPolicies</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GuestPolicies</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GuestPoliciesState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GuestPolicies</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GuestPoliciesState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1935,7 +1898,7 @@ Structure is documented below.
 <a href="#state_assignment_nodejs" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignment">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Assignment<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VM instances that are assigned to this policy. This allows you to target sets
 or groups of VM instances by different parameters such as labels, names, OS, or zones.
@@ -1951,7 +1914,7 @@ Structure is documented below.
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
@@ -1961,7 +1924,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +1933,7 @@ Structure is documented below.
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1979,7 +1942,7 @@ Structure is documented below.
 <a href="#state_guestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1993,7 +1956,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -2005,7 +1968,7 @@ could potentially have conflicting assignments.
 <a href="#state_packagerepositories_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">Guest<wbr>Policies<wbr>Package<wbr>Repository[]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -2017,7 +1980,7 @@ Structure is documented below.
 <a href="#state_packages_nodejs" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">Guest<wbr>Policies<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -2027,7 +1990,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2037,7 +2000,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recipes_nodejs" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">Guest<wbr>Policies<wbr>Recipe[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -2047,7 +2010,7 @@ Structure is documented below.
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
@@ -2061,7 +2024,7 @@ Structure is documented below.
 <a href="#state_assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignment">Input[Guest<wbr>Policies<wbr>Assignment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignment">Guest<wbr>Policies<wbr>Assignment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VM instances that are assigned to this policy. This allows you to target sets
 or groups of VM instances by different parameters such as labels, names, OS, or zones.
@@ -2077,7 +2040,7 @@ Structure is documented below.
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time this guest policy was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
@@ -2087,7 +2050,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the guest policy. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2059,7 @@ Structure is documented below.
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The etag for this guest policy. If this is provided on update, it must match the server's etag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2068,7 @@ Structure is documented below.
 <a href="#state_guest_policy_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logical name of the guest policy in the project with the following restrictions:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2119,7 +2082,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -2131,7 +2094,7 @@ could potentially have conflicting assignments.
 <a href="#state_package_repositories_python" style="color: inherit; text-decoration: inherit;">package_<wbr>repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepository">Input[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepository">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of package repositories to configure on the VM instance.
 This is done before any other configs are applied so they can use these repos.
@@ -2143,7 +2106,7 @@ Structure is documented below.
 <a href="#state_packages_python" style="color: inherit; text-decoration: inherit;">packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackage">Input[Guest<wbr>Policies<wbr>Package<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackage">Sequence[Guest<wbr>Policies<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The software packages to be managed by this policy.
 Structure is documented below.
@@ -2153,7 +2116,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2163,7 +2126,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recipes_python" style="color: inherit; text-decoration: inherit;">recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipe">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipe">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Recipes to install on the VM instance.
 Structure is documented below.
@@ -2173,7 +2136,7 @@ Structure is documented below.
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time this guest policy was updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example:
 "2014-10-02T15:01:23.045123456Z".
@@ -2320,7 +2283,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
 for example "env=prod or env=staging".
@@ -2331,7 +2294,7 @@ Structure is documented below.
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
@@ -2343,7 +2306,7 @@ Only supported for project-level policies.
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -2356,7 +2319,7 @@ Only supported for project-level policies and must reference instances within th
 <a href="#ostypes_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentostype">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentostype">Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types.
 VM instances must match all supplied criteria for a given OsType to be included.
@@ -2367,7 +2330,7 @@ Structure is documented below.
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
@@ -2381,7 +2344,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Input[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentgrouplabel">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
 for example "env=prod or env=staging".
@@ -2392,7 +2355,7 @@ Structure is documented below.
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances whose name starts with one of these prefixes.
 Like labels, this is another way to group VM instances when targeting configs,
@@ -2404,7 +2367,7 @@ Only supported for project-level policies.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the instances specified. Instances are specified by their URI in the form
 zones/[ZONE]/instances/[INSTANCE_NAME].
@@ -2417,7 +2380,7 @@ Only supported for project-level policies and must reference instances within th
 <a href="#os_types_python" style="color: inherit; text-decoration: inherit;">os_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesassignmentostype">Input[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesassignmentostype">Sequence[Guest<wbr>Policies<wbr>Assignment<wbr>Os<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching at least one of the following OS types.
 VM instances must match all supplied criteria for a given OsType to be included.
@@ -2428,7 +2391,7 @@ Structure is documented below.
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets instances in any of these zones. Leave empty to target instances in any zone.
 Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
@@ -2470,7 +2433,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
 {{% /md %}}</dd></dl>
@@ -2483,7 +2446,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
 {{% /md %}}</dd></dl>
@@ -2560,7 +2523,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#osarchitecture_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2569,7 +2532,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#osshortname_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2578,7 +2541,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#osversion_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.
 {{% /md %}}</dd></dl>
@@ -2591,7 +2554,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#os_architecture_python" style="color: inherit; text-decoration: inherit;">os_<wbr>architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS architecture.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2563,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#os_short_name_python" style="color: inherit; text-decoration: inherit;">os_<wbr>short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2609,7 +2572,7 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 <a href="#os_version_python" style="color: inherit; text-decoration: inherit;">os_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Targets VM instances with OS Inventory enabled and having the following following OS version.
 {{% /md %}}</dd></dl>
@@ -2716,7 +2679,7 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -2728,7 +2691,7 @@ could potentially have conflicting assignments.
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -2743,7 +2706,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager,
 the package is not installed or removed no error message is returned. By default, or if you specify ANY,
@@ -2762,7 +2725,7 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -2774,7 +2737,7 @@ could potentially have conflicting assignments.
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -2789,7 +2752,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of package manager that can be used to install this package. If a system does not have the package manager,
 the package is not installed or removed no error message is returned. By default, or if you specify ANY,
@@ -2898,7 +2861,7 @@ Structure is documented below.
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
@@ -2908,7 +2871,7 @@ Structure is documented below.
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
@@ -2918,7 +2881,7 @@ Structure is documented below.
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
@@ -2928,7 +2891,7 @@ Structure is documented below.
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
@@ -2942,7 +2905,7 @@ Structure is documented below.
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Input[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryapt">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Apt Repository.
 Structure is documented below.
@@ -2952,7 +2915,7 @@ Structure is documented below.
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Input[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositorygoo">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Goo Repository.
 Structure is documented below.
@@ -2962,7 +2925,7 @@ Structure is documented below.
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Input[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryyum">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Yum Repository.
 Structure is documented below.
@@ -2972,7 +2935,7 @@ Structure is documented below.
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Input[Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciespackagerepositoryzypper">Guest<wbr>Policies<wbr>Package<wbr>Repository<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Zypper Repository.
 Structure is documented below.
@@ -3092,7 +3055,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd><dt class="property-required"
@@ -3101,7 +3064,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#distribution_nodejs" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Distribution of this repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -3110,7 +3073,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3119,7 +3082,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#archivetype_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.
 Default value is `DEB`.
@@ -3130,7 +3093,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#gpgkey_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at
 /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
@@ -3144,7 +3107,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of components for this repository. Must contain at least one item.
 {{% /md %}}</dd><dt class="property-required"
@@ -3153,7 +3116,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#distribution_python" style="color: inherit; text-decoration: inherit;">distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Distribution of this repository.
 {{% /md %}}</dd><dt class="property-required"
@@ -3162,7 +3125,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3171,7 +3134,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#archive_type_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of archive files in this repository. The default behavior is DEB.
 Default value is `DEB`.
@@ -3182,7 +3145,7 @@ Possible values are `DEB` and `DEB_SRC`.
 <a href="#gpg_key_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the key file for this repository. The agent maintains a keyring at
 /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
@@ -3248,7 +3211,7 @@ could potentially have conflicting assignments.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -3260,7 +3223,7 @@ could potentially have conflicting assignments.
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the repository.
 {{% /md %}}</dd></dl>
@@ -3273,7 +3236,7 @@ could potentially have conflicting assignments.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -3285,7 +3248,7 @@ could potentially have conflicting assignments.
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of the repository.
 {{% /md %}}</dd></dl>
@@ -3382,7 +3345,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd><dt class="property-required"
@@ -3391,7 +3354,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
@@ -3401,7 +3364,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3410,7 +3373,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd></dl>
@@ -3423,7 +3386,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd><dt class="property-required"
@@ -3432,7 +3395,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
@@ -3442,7 +3405,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3451,7 +3414,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd></dl>
@@ -3548,7 +3511,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd><dt class="property-required"
@@ -3557,7 +3520,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
@@ -3567,7 +3530,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3576,7 +3539,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#gpgkeys_nodejs" style="color: inherit; text-decoration: inherit;">gpg<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd></dl>
@@ -3589,7 +3552,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the repository directory.
 {{% /md %}}</dd><dt class="property-required"
@@ -3598,7 +3561,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
@@ -3608,7 +3571,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3617,7 +3580,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#gpg_keys_python" style="color: inherit; text-decoration: inherit;">gpg_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URIs of GPG keys.
 {{% /md %}}</dd></dl>
@@ -3776,7 +3739,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -3788,7 +3751,7 @@ could potentially have conflicting assignments.
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifact">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact[]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
@@ -3798,7 +3761,7 @@ Structure is documented below.
 <a href="#desiredstate_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -3813,7 +3776,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#installsteps_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3824,7 +3787,7 @@ Structure is documented below.
 <a href="#updatesteps_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">pulumi.<wbr>Input<pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3835,7 +3798,7 @@ Structure is documented below.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
 {{% /md %}}</dd></dl>
@@ -3848,7 +3811,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
 Names are also used to identify resources which helps to determine whether guest policies have conflicts.
@@ -3860,7 +3823,7 @@ could potentially have conflicting assignments.
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifact">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resources available to be used in the steps in the recipe.
 Structure is documented below.
@@ -3870,7 +3833,7 @@ Structure is documented below.
 <a href="#desired_state_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default is INSTALLED. The desired state the agent should maintain for this recipe.
 INSTALLED: The software recipe is installed on the instance but won't be updated to new versions.
@@ -3885,7 +3848,7 @@ Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
 <a href="#install_steps_python" style="color: inherit; text-decoration: inherit;">install_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3896,7 +3859,7 @@ Structure is documented below.
 <a href="#update_steps_python" style="color: inherit; text-decoration: inherit;">update_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestep">Sequence[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe.
 Any steps taken (including partially completed steps) are not rolled back.
@@ -3907,7 +3870,7 @@ Structure is documented below.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
 {{% /md %}}</dd></dl>
@@ -4012,7 +3975,7 @@ Structure is documented below.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
@@ -4022,7 +3985,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#allowinsecure_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type:
 Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
@@ -4033,7 +3996,7 @@ GCS: An object generation number must be specified.
 <a href="#gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
@@ -4043,7 +4006,7 @@ Structure is documented below.
 <a href="#remote_nodejs" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
@@ -4057,7 +4020,7 @@ Structure is documented below.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the artifact, which the installation and update steps of this recipe can reference.
 Artifacts in a recipe cannot have the same id.
@@ -4067,7 +4030,7 @@ Artifacts in a recipe cannot have the same id.
 <a href="#allow_insecure_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>insecure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false. When false, recipes are subject to validations based on the artifact type:
 Remote: A checksum must be specified, and only protocols with transport-layer security are permitted.
@@ -4078,7 +4041,7 @@ GCS: An object generation number must be specified.
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactgcs">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage artifact.
 Structure is documented below.
@@ -4088,7 +4051,7 @@ Structure is documented below.
 <a href="#remote_python" style="color: inherit; text-decoration: inherit;">remote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeartifactremote">Guest<wbr>Policies<wbr>Recipe<wbr>Artifact<wbr>Remote<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A generic remote artifact.
 Structure is documented below.
@@ -4172,7 +4135,7 @@ this value would be foo/bar.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be my-bucket.
@@ -4182,7 +4145,7 @@ this value would be my-bucket.
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
@@ -4192,7 +4155,7 @@ https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 123
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be foo/bar.
@@ -4206,7 +4169,7 @@ this value would be foo/bar.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be my-bucket.
@@ -4216,7 +4179,7 @@ this value would be my-bucket.
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. Generation number of the Google Cloud Storage object.
 https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
@@ -4226,7 +4189,7 @@ https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 123
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
 this value would be foo/bar.
@@ -4290,7 +4253,7 @@ of the steps.
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Sum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
 If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
@@ -4301,7 +4264,7 @@ of the steps.
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd></dl>
@@ -4314,7 +4277,7 @@ of the steps.
 <a href="#check_sum_python" style="color: inherit; text-decoration: inherit;">check_<wbr>sum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
 If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any
@@ -4325,7 +4288,7 @@ of the steps.
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
 {{% /md %}}</dd></dl>
@@ -4488,7 +4451,7 @@ Structure is documented below.
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -4498,7 +4461,7 @@ Structure is documented below.
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -4508,7 +4471,7 @@ Structure is documented below.
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -4518,7 +4481,7 @@ Structure is documented below.
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -4528,7 +4491,7 @@ Structure is documented below.
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -4538,7 +4501,7 @@ Structure is documented below.
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -4548,7 +4511,7 @@ Structure is documented below.
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -4562,7 +4525,7 @@ Structure is documented below.
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -4572,7 +4535,7 @@ Structure is documented below.
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -4582,7 +4545,7 @@ Structure is documented below.
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -4592,7 +4555,7 @@ Structure is documented below.
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -4602,7 +4565,7 @@ Structure is documented below.
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -4612,7 +4575,7 @@ Structure is documented below.
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallsteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -4622,7 +4585,7 @@ Structure is documented below.
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeinstallstepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Install<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -4702,7 +4665,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -4711,7 +4674,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
@@ -4721,7 +4684,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd></dl>
@@ -4734,7 +4697,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -4743,7 +4706,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
@@ -4753,7 +4716,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd></dl>
@@ -4794,7 +4757,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -4807,7 +4770,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -4914,7 +4877,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -4923,7 +4886,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4932,7 +4895,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
@@ -4942,7 +4905,7 @@ is not overwritten and the step is considered a success. Defaults to false.
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -4960,7 +4923,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -4969,7 +4932,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4978,7 +4941,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
@@ -4988,7 +4951,7 @@ is not overwritten and the step is considered a success. Defaults to false.
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -5088,7 +5051,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -5097,7 +5060,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5106,7 +5069,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5115,7 +5078,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd></dl>
@@ -5128,7 +5091,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -5137,7 +5100,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5146,7 +5109,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5155,7 +5118,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd></dl>
@@ -5232,7 +5195,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5241,7 +5204,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -5250,7 +5213,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd></dl>
@@ -5263,7 +5226,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5272,7 +5235,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -5281,7 +5244,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd></dl>
@@ -5322,7 +5285,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -5335,7 +5298,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -5416,7 +5379,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5425,7 +5388,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -5434,7 +5397,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
@@ -5449,7 +5412,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5458,7 +5421,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -5467,7 +5430,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
@@ -5632,7 +5595,7 @@ Structure is documented below.
 <a href="#archiveextraction_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -5642,7 +5605,7 @@ Structure is documented below.
 <a href="#dpkginstallation_nodejs" style="color: inherit; text-decoration: inherit;">dpkg<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -5652,7 +5615,7 @@ Structure is documented below.
 <a href="#filecopy_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -5662,7 +5625,7 @@ Structure is documented below.
 <a href="#fileexec_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -5672,7 +5635,7 @@ Structure is documented below.
 <a href="#msiinstallation_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -5682,7 +5645,7 @@ Structure is documented below.
 <a href="#rpminstallation_nodejs" style="color: inherit; text-decoration: inherit;">rpm<wbr>Installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -5692,7 +5655,7 @@ Structure is documented below.
 <a href="#scriptrun_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">pulumi.<wbr>Input<Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args></a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -5706,7 +5669,7 @@ Structure is documented below.
 <a href="#archive_extraction_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>extraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteparchiveextraction">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Archive<wbr>Extraction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extracts an archive into the specified directory.
 Structure is documented below.
@@ -5716,7 +5679,7 @@ Structure is documented below.
 <a href="#dpkg_installation_python" style="color: inherit; text-decoration: inherit;">dpkg_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepdpkginstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Dpkg<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs a deb file via dpkg.
 Structure is documented below.
@@ -5726,7 +5689,7 @@ Structure is documented below.
 <a href="#file_copy_python" style="color: inherit; text-decoration: inherit;">file_<wbr>copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfilecopy">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a file onto the instance.
 Structure is documented below.
@@ -5736,7 +5699,7 @@ Structure is documented below.
 <a href="#file_exec_python" style="color: inherit; text-decoration: inherit;">file_<wbr>exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepfileexec">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>File<wbr>Exec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes an artifact or local file.
 Structure is documented below.
@@ -5746,7 +5709,7 @@ Structure is documented below.
 <a href="#msi_installation_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepmsiinstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Msi<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an MSI file.
 Structure is documented below.
@@ -5756,7 +5719,7 @@ Structure is documented below.
 <a href="#rpm_installation_python" style="color: inherit; text-decoration: inherit;">rpm_<wbr>installation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatesteprpminstallation">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Rpm<wbr>Installation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Installs an rpm file via the rpm utility.
 Structure is documented below.
@@ -5766,7 +5729,7 @@ Structure is documented below.
 <a href="#script_run_python" style="color: inherit; text-decoration: inherit;">script_<wbr>run</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Input[Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args]</a></span>
+        <span class="property-type"><a href="#guestpoliciesrecipeupdatestepscriptrun">Guest<wbr>Policies<wbr>Recipe<wbr>Update<wbr>Step<wbr>Script<wbr>Run<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runs commands in a shell.
 Structure is documented below.
@@ -5846,7 +5809,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -5855,7 +5818,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
@@ -5865,7 +5828,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd></dl>
@@ -5878,7 +5841,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -5887,7 +5850,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the archive to extract.
 Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
@@ -5897,7 +5860,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd></dl>
@@ -5938,7 +5901,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -5951,7 +5914,7 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -6058,7 +6021,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -6067,7 +6030,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6076,7 +6039,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
@@ -6086,7 +6049,7 @@ is not overwritten and the step is considered a success. Defaults to false.
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -6104,7 +6067,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-required"
@@ -6113,7 +6076,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6122,7 +6085,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
 is not overwritten and the step is considered a success. Defaults to false.
@@ -6132,7 +6095,7 @@ is not overwritten and the step is considered a success. Defaults to false.
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users
 for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit
@@ -6232,7 +6195,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -6241,7 +6204,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6250,7 +6213,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6259,7 +6222,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd></dl>
@@ -6272,7 +6235,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -6281,7 +6244,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the provided executable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6290,7 +6253,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6299,7 +6262,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path of the file on the local filesystem.
 {{% /md %}}</dd></dl>
@@ -6376,7 +6339,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6385,7 +6348,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -6394,7 +6357,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd></dl>
@@ -6407,7 +6370,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6416,7 +6379,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -6425,7 +6388,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The flags to use when installing the MSI. Defaults to the install flag.
 {{% /md %}}</dd></dl>
@@ -6466,7 +6429,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -6479,7 +6442,7 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the relevant artifact in the recipe.
 {{% /md %}}</dd></dl>
@@ -6560,7 +6523,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6569,7 +6532,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowedexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Exit<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -6578,7 +6541,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.
@@ -6593,7 +6556,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shell script to be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6602,7 +6565,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_exit_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>exit_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
 {{% /md %}}</dd><dt class="property-optional"
@@ -6611,7 +6574,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script is executed directly,
 which likely only succeed for scripts with shebang lines.

@@ -71,8 +71,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -186,8 +186,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -327,8 +327,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -482,8 +482,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -634,8 +634,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -834,8 +834,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -967,48 +967,19 @@ const _default = new gcp.compute.BackendService("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BackendServiceBackendArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceCdnPolicyArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceCircuitBreakersArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceConsistentHashArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceIapArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceLogConfigArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceOutlierDetectionArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[BackendServiceArgs]</a></span> = None<span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackendService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1043,32 +1014,22 @@ const _default = new gcp.compute.BackendService("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BackendServiceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1077,7 +1038,7 @@ const _default = new gcp.compute.BackendService("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1101,7 +1062,7 @@ const _default = new gcp.compute.BackendService("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1710,7 +1671,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 <a href="#affinitycookiettlsec_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -1723,7 +1684,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Backend<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicebackend">Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this BackendService.
 Structure is documented below.
@@ -1733,7 +1694,7 @@ Structure is documented below.
 <a href="#cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -1743,7 +1704,7 @@ Structure is documented below.
 <a href="#circuitbreakers_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -1754,7 +1715,7 @@ Structure is documented below.
 <a href="#connectiondrainingtimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
@@ -1764,7 +1725,7 @@ connections, but still work to finish started).
 <a href="#consistenthash_nodejs" style="color: inherit; text-decoration: inherit;">consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -1781,7 +1742,7 @@ Structure is documented below.
 <a href="#customrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
@@ -1791,7 +1752,7 @@ requests.
 <a href="#customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 responses.
@@ -1801,7 +1762,7 @@ responses.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
@@ -1811,7 +1772,7 @@ Provide this property when you create the resource.
 <a href="#enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendService.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1781,7 @@ Provide this property when you create the resource.
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -1834,7 +1795,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Iap<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 Structure is documented below.
@@ -1844,7 +1805,7 @@ Structure is documented below.
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
@@ -1857,7 +1818,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#localitylbpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locality<wbr>Lb<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -1888,7 +1849,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -1899,7 +1860,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1908,7 +1869,7 @@ Structure is documented below.
 <a href="#outlierdetection_nodejs" style="color: inherit; text-decoration: inherit;">outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
@@ -1920,7 +1881,7 @@ Structure is documented below.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
@@ -1931,7 +1892,7 @@ scheme is EXTERNAL.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1941,7 +1902,7 @@ If it is not provided, the provider project is used.
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
@@ -1953,7 +1914,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +1923,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
@@ -1973,7 +1934,7 @@ Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROT
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -1987,7 +1948,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 <a href="#affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -2000,7 +1961,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">Input[Backend<wbr>Service<wbr>Backend<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicebackend">Sequence[Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this BackendService.
 Structure is documented below.
@@ -2010,7 +1971,7 @@ Structure is documented below.
 <a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Input[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -2020,7 +1981,7 @@ Structure is documented below.
 <a href="#circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">Input[Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -2031,7 +1992,7 @@ Structure is documented below.
 <a href="#connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
@@ -2041,7 +2002,7 @@ connections, but still work to finish started).
 <a href="#consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">Input[Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -2058,7 +2019,7 @@ Structure is documented below.
 <a href="#custom_request_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
@@ -2068,7 +2029,7 @@ requests.
 <a href="#custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 responses.
@@ -2078,7 +2039,7 @@ responses.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
@@ -2088,7 +2049,7 @@ Provide this property when you create the resource.
 <a href="#enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendService.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2058,7 @@ Provide this property when you create the resource.
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -2111,7 +2072,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Input[Backend<wbr>Service<wbr>Iap<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 Structure is documented below.
@@ -2121,7 +2082,7 @@ Structure is documented below.
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
@@ -2134,7 +2095,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#locality_lb_policy_python" style="color: inherit; text-decoration: inherit;">locality_<wbr>lb_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -2165,7 +2126,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Input[Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -2176,7 +2137,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2146,7 @@ Structure is documented below.
 <a href="#outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">Input[Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
@@ -2197,7 +2158,7 @@ Structure is documented below.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
@@ -2208,7 +2169,7 @@ scheme is EXTERNAL.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2218,7 +2179,7 @@ If it is not provided, the provider project is used.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
@@ -2230,7 +2191,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2200,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
@@ -2250,7 +2211,7 @@ Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROT
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -2428,48 +2389,20 @@ Get an existing BackendService resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BackendServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BackendService</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BackendServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BackendService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BackendServiceBackendArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceCdnPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceCircuitBreakersArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceConsistentHashArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceIapArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceLogConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendServiceOutlierDetectionArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> BackendService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[BackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[BackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_request_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">custom_response_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[BackendServiceIapArgs]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[BackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[BackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackendService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BackendServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BackendServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BackendService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BackendServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BackendService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BackendServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3186,7 +3119,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 <a href="#state_affinitycookiettlsec_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -3199,7 +3132,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Backend<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicebackend">Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this BackendService.
 Structure is documented below.
@@ -3209,7 +3142,7 @@ Structure is documented below.
 <a href="#state_cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -3219,7 +3152,7 @@ Structure is documented below.
 <a href="#state_circuitbreakers_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -3230,7 +3163,7 @@ Structure is documented below.
 <a href="#state_connectiondrainingtimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
@@ -3240,7 +3173,7 @@ connections, but still work to finish started).
 <a href="#state_consistenthash_nodejs" style="color: inherit; text-decoration: inherit;">consistent<wbr>Hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -3257,7 +3190,7 @@ Structure is documented below.
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3266,7 +3199,7 @@ Structure is documented below.
 <a href="#state_customrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
@@ -3276,7 +3209,7 @@ requests.
 <a href="#state_customresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Response<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 responses.
@@ -3286,7 +3219,7 @@ responses.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
@@ -3296,7 +3229,7 @@ Provide this property when you create the resource.
 <a href="#state_enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendService.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3305,7 +3238,7 @@ Provide this property when you create the resource.
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3314,7 +3247,7 @@ Provide this property when you create the resource.
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -3328,7 +3261,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#state_iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Iap<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 Structure is documented below.
@@ -3338,7 +3271,7 @@ Structure is documented below.
 <a href="#state_loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
@@ -3351,7 +3284,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#state_localitylbpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locality<wbr>Lb<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -3382,7 +3315,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -3393,7 +3326,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3402,7 +3335,7 @@ Structure is documented below.
 <a href="#state_outlierdetection_nodejs" style="color: inherit; text-decoration: inherit;">outlier<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
@@ -3414,7 +3347,7 @@ Structure is documented below.
 <a href="#state_portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
@@ -3425,7 +3358,7 @@ scheme is EXTERNAL.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -3435,7 +3368,7 @@ If it is not provided, the provider project is used.
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
@@ -3447,7 +3380,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#state_securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3456,7 +3389,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3398,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#state_sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
@@ -3476,7 +3409,7 @@ Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROT
 <a href="#state_timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -3490,7 +3423,7 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 <a href="#state_affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -3503,7 +3436,7 @@ When the load balancing scheme is INTERNAL, this field is not used.
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicebackend">Input[Backend<wbr>Service<wbr>Backend<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicebackend">Sequence[Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this BackendService.
 Structure is documented below.
@@ -3513,7 +3446,7 @@ Structure is documented below.
 <a href="#state_cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicy">Input[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud CDN configuration for this BackendService.
 Structure is documented below.
@@ -3523,7 +3456,7 @@ Structure is documented below.
 <a href="#state_circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakers">Input[Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakers">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling the volume of connections to a backend service. This field
 is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED.
@@ -3534,7 +3467,7 @@ Structure is documented below.
 <a href="#state_connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
@@ -3544,7 +3477,7 @@ connections, but still work to finish started).
 <a href="#state_consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthash">Input[Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthash">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
@@ -3561,7 +3494,7 @@ Structure is documented below.
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3570,7 +3503,7 @@ Structure is documented below.
 <a href="#state_custom_request_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 requests.
@@ -3580,7 +3513,7 @@ requests.
 <a href="#state_custom_response_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>response_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Headers that the HTTP/S load balancer should add to proxied
 responses.
@@ -3590,7 +3523,7 @@ responses.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
@@ -3600,7 +3533,7 @@ Provide this property when you create the resource.
 <a href="#state_enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable Cloud CDN for this BackendService.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3609,7 +3542,7 @@ Provide this property when you create the resource.
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3618,7 +3551,7 @@ Provide this property when you create the resource.
 <a href="#state_health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -3632,7 +3565,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
 <a href="#state_iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceiap">Input[Backend<wbr>Service<wbr>Iap<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceiap">Backend<wbr>Service<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 Structure is documented below.
@@ -3642,7 +3575,7 @@ Structure is documented below.
 <a href="#state_load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
@@ -3655,7 +3588,7 @@ Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
 <a href="#state_locality_lb_policy_python" style="color: inherit; text-decoration: inherit;">locality_<wbr>lb_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -3686,7 +3619,7 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicelogconfig">Input[Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicelogconfig">Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver.
@@ -3697,7 +3630,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3706,7 +3639,7 @@ Structure is documented below.
 <a href="#state_outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetection">Input[Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetection">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
@@ -3718,7 +3651,7 @@ Structure is documented below.
 <a href="#state_port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
@@ -3729,7 +3662,7 @@ scheme is EXTERNAL.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -3739,7 +3672,7 @@ If it is not provided, the provider project is used.
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
@@ -3751,7 +3684,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#state_security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3760,7 +3693,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3769,7 +3702,7 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
 <a href="#state_session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
@@ -3780,7 +3713,7 @@ Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROT
 <a href="#state_timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -4105,7 +4038,7 @@ range is [0.0, 1.0].
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -4127,7 +4060,7 @@ partial URL.
 <a href="#balancingmode_nodejs" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
 For global HTTP(S) or TCP/SSL load balancing, the default is
@@ -4141,7 +4074,7 @@ Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 <a href="#capacityscaler_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
@@ -4155,7 +4088,7 @@ setting of 0 means the group is completely drained, offering
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
@@ -4165,7 +4098,7 @@ Provide this property when you create the resource.
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
@@ -4175,7 +4108,7 @@ Defaults to 1024.
 <a href="#maxconnectionsperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. This is used to calculate the
@@ -4189,7 +4122,7 @@ maxConnections or maxConnectionsPerEndpoint must be set.
 <a href="#maxconnectionsperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. This is used to calculate the
@@ -4203,7 +4136,7 @@ maxConnectionsPerInstance must be set.
 <a href="#maxrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group.
 Can be used with either RATE or UTILIZATION balancing modes,
@@ -4216,7 +4149,7 @@ group type, must be set.
 <a href="#maxrateperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
@@ -4228,7 +4161,7 @@ either maxRate or maxRatePerEndpoint must be set.
 <a href="#maxrateperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
@@ -4240,7 +4173,7 @@ either maxRate or maxRatePerInstance must be set.
 <a href="#maxutilization_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. The default is 0.8. Valid
@@ -4255,7 +4188,7 @@ range is [0.0, 1.0].
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -4277,7 +4210,7 @@ partial URL.
 <a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
 For global HTTP(S) or TCP/SSL load balancing, the default is
@@ -4291,7 +4224,7 @@ Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 <a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
@@ -4305,7 +4238,7 @@ setting of 0 means the group is completely drained, offering
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
@@ -4315,7 +4248,7 @@ Provide this property when you create the resource.
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
@@ -4325,7 +4258,7 @@ Defaults to 1024.
 <a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. This is used to calculate the
@@ -4339,7 +4272,7 @@ maxConnections or maxConnectionsPerEndpoint must be set.
 <a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. This is used to calculate the
@@ -4353,7 +4286,7 @@ maxConnectionsPerInstance must be set.
 <a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group.
 Can be used with either RATE or UTILIZATION balancing modes,
@@ -4366,7 +4299,7 @@ group type, must be set.
 <a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
@@ -4378,7 +4311,7 @@ either maxRate or maxRatePerEndpoint must be set.
 <a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
@@ -4390,7 +4323,7 @@ either maxRate or maxRatePerInstance must be set.
 <a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. The default is 0.8. Valid
@@ -4605,7 +4538,7 @@ responses will not be altered.
 <a href="#cachekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4615,7 +4548,7 @@ Structure is documented below.
 <a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend.
 The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
@@ -4626,7 +4559,7 @@ Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STAT
 <a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4635,7 +4568,7 @@ Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STAT
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses
 that do not have an existing valid TTL (max-age or s-max-age).
@@ -4645,7 +4578,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4654,7 +4587,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4663,7 +4596,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -4674,7 +4607,7 @@ Structure is documented below.
 <a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4683,7 +4616,7 @@ Structure is documented below.
 <a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request
 will be considered fresh, defaults to 1hr (3600s). After this
@@ -4704,7 +4637,7 @@ responses will not be altered.
 <a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Input[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicycachekeypolicy">Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
 Structure is documented below.
@@ -4714,7 +4647,7 @@ Structure is documented below.
 <a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the cache setting for all responses from this backend.
 The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC
@@ -4725,7 +4658,7 @@ Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STAT
 <a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4734,7 +4667,7 @@ Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STAT
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for cached content served by this origin for responses
 that do not have an existing valid TTL (max-age or s-max-age).
@@ -4744,7 +4677,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum allowed TTL for cached content served by this origin.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4753,7 +4686,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4762,7 +4695,7 @@ that do not have an existing valid TTL (max-age or s-max-age).
 <a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Input[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#backendservicecdnpolicynegativecachingpolicy">Sequence[Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.
@@ -4773,7 +4706,7 @@ Structure is documented below.
 <a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4782,7 +4715,7 @@ Structure is documented below.
 <a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the response to a signed URL request
 will be considered fresh, defaults to 1hr (3600s). After this
@@ -4929,7 +4862,7 @@ delimiters.
 <a href="#includehost_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true requests to different hosts will be cached separately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4938,7 +4871,7 @@ delimiters.
 <a href="#includeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, http and https requests will be cached separately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4947,7 +4880,7 @@ delimiters.
 <a href="#includequerystring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, include query string parameters in the cache key
 according to query_string_whitelist and
@@ -4961,7 +4894,7 @@ key entirely.
 <a href="#querystringblacklists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Blacklists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to exclude in cache keys.
 All other parameters will be included. Either specify
@@ -4974,7 +4907,7 @@ delimiters.
 <a href="#querystringwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to include in cache keys.
 All other parameters will be excluded. Either specify
@@ -4991,7 +4924,7 @@ delimiters.
 <a href="#include_host_python" style="color: inherit; text-decoration: inherit;">include_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true requests to different hosts will be cached separately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5000,7 +4933,7 @@ delimiters.
 <a href="#include_protocol_python" style="color: inherit; text-decoration: inherit;">include_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, http and https requests will be cached separately.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5009,7 +4942,7 @@ delimiters.
 <a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, include query string parameters in the cache key
 according to query_string_whitelist and
@@ -5023,7 +4956,7 @@ key entirely.
 <a href="#query_string_blacklists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to exclude in cache keys.
 All other parameters will be included. Either specify
@@ -5036,7 +4969,7 @@ delimiters.
 <a href="#query_string_whitelists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of query string parameters to include in cache keys.
 All other parameters will be excluded. Either specify
@@ -5103,7 +5036,7 @@ can be specified as values, and you cannot specify a status code more than once.
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
 can be specified as values, and you cannot specify a status code more than once.
@@ -5113,7 +5046,7 @@ can be specified as values, and you cannot specify a status code more than once.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5127,7 +5060,7 @@ can be specified as values, and you cannot specify a status code more than once.
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
 can be specified as values, and you cannot specify a status code more than once.
@@ -5137,7 +5070,7 @@ can be specified as values, and you cannot specify a status code more than once.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5283,7 +5216,7 @@ Defaults to 3.
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5292,7 +5225,7 @@ Defaults to 3.
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
@@ -5302,7 +5235,7 @@ Defaults to 1024.
 <a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
@@ -5312,7 +5245,7 @@ Defaults to 1024.
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
@@ -5322,7 +5255,7 @@ Defaults to 1024.
 <a href="#maxrequestsperconnection_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
@@ -5334,7 +5267,7 @@ will effectively disable keep alive.
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
@@ -5348,7 +5281,7 @@ Defaults to 3.
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Input[Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendservicecircuitbreakersconnecttimeout">Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5357,7 +5290,7 @@ Defaults to 3.
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
@@ -5367,7 +5300,7 @@ Defaults to 1024.
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
@@ -5377,7 +5310,7 @@ Defaults to 1024.
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
@@ -5387,7 +5320,7 @@ Defaults to 1024.
 <a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
@@ -5399,7 +5332,7 @@ will effectively disable keep alive.
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
@@ -5465,7 +5398,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -5475,7 +5408,7 @@ inclusive.
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -5490,7 +5423,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -5500,7 +5433,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -5599,7 +5532,7 @@ Defaults to 1024.
 <a href="#httpcookie_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5612,7 +5545,7 @@ Structure is documented below.
 <a href="#httpheadername_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD.
@@ -5622,7 +5555,7 @@ This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 <a href="#minimumringsize_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -5640,7 +5573,7 @@ Defaults to 1024.
 <a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Input[Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookie">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
@@ -5653,7 +5586,7 @@ Structure is documented below.
 <a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD.
@@ -5663,7 +5596,7 @@ This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 <a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -5747,7 +5680,7 @@ Defaults to 1024.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5756,7 +5689,7 @@ Defaults to 1024.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5765,7 +5698,7 @@ Defaults to 1024.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5779,7 +5712,7 @@ Defaults to 1024.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5788,7 +5721,7 @@ Defaults to 1024.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5797,7 +5730,7 @@ Defaults to 1024.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Input[Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceconsistenthashhttpcookiettl">Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
 (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
@@ -5863,7 +5796,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -5873,7 +5806,7 @@ inclusive.
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -5888,7 +5821,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -5898,7 +5831,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -5983,7 +5916,7 @@ OAuth2 Client Secret SHA-256 for IAP
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 Client ID for IAP
 {{% /md %}}</dd><dt class="property-required"
@@ -5992,7 +5925,7 @@ OAuth2 Client Secret SHA-256 for IAP
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 Client Secret for IAP
 **Note**: This property is sensitive and will not be displayed in the plan.
@@ -6002,7 +5935,7 @@ OAuth2 Client Secret SHA-256 for IAP
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 OAuth2 Client Secret SHA-256 for IAP
@@ -6017,7 +5950,7 @@ OAuth2 Client Secret SHA-256 for IAP
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 Client ID for IAP
 {{% /md %}}</dd><dt class="property-required"
@@ -6026,7 +5959,7 @@ OAuth2 Client Secret SHA-256 for IAP
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 Client Secret for IAP
 **Note**: This property is sensitive and will not be displayed in the plan.
@@ -6036,7 +5969,7 @@ OAuth2 Client Secret SHA-256 for IAP
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 OAuth2 Client Secret SHA-256 for IAP
@@ -6103,7 +6036,7 @@ The default value is 1.0.
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable logging for the load balancer traffic served by this backend service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6112,7 +6045,7 @@ The default value is 1.0.
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
@@ -6128,7 +6061,7 @@ The default value is 1.0.
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable logging for the load balancer traffic served by this backend service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6137,7 +6070,7 @@ The default value is 1.0.
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
@@ -6417,7 +6350,7 @@ runtime value should be 1900. Defaults to 1900.
 <a href="#baseejectiontime_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6429,7 +6362,7 @@ Structure is documented below.
 <a href="#consecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
@@ -6440,7 +6373,7 @@ Defaults to 5.
 <a href="#consecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
@@ -6451,7 +6384,7 @@ gateway failure ejection occurs. Defaults to 5.
 <a href="#enforcingconsecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
@@ -6462,7 +6395,7 @@ ejection or to ramp it up slowly. Defaults to 100.
 <a href="#enforcingconsecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
@@ -6473,7 +6406,7 @@ used to disable ejection or to ramp it up slowly. Defaults to 0.
 <a href="#enforcingsuccessrate_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
@@ -6484,7 +6417,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args></a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
@@ -6495,7 +6428,7 @@ Structure is documented below.
 <a href="#maxejectionpercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
@@ -6505,7 +6438,7 @@ that can be ejected. Defaults to 10%.
 <a href="#successrateminimumhosts_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
@@ -6517,7 +6450,7 @@ cluster. Defaults to 5.
 <a href="#successraterequestvolume_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -6530,7 +6463,7 @@ to 100.
 <a href="#successratestdevfactor_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -6548,7 +6481,7 @@ runtime value should be 1900. Defaults to 1900.
 <a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Input[Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectionbaseejectiontime">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
@@ -6560,7 +6493,7 @@ Structure is documented below.
 <a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
@@ -6571,7 +6504,7 @@ Defaults to 5.
 <a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
@@ -6582,7 +6515,7 @@ gateway failure ejection occurs. Defaults to 5.
 <a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
@@ -6593,7 +6526,7 @@ ejection or to ramp it up slowly. Defaults to 100.
 <a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
@@ -6604,7 +6537,7 @@ used to disable ejection or to ramp it up slowly. Defaults to 0.
 <a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
@@ -6615,7 +6548,7 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Input[Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backendserviceoutlierdetectioninterval">Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time interval between ejection sweep analysis. This can result in both new
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
@@ -6626,7 +6559,7 @@ Structure is documented below.
 <a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
@@ -6636,7 +6569,7 @@ that can be ejected. Defaults to 10%.
 <a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
@@ -6648,7 +6581,7 @@ cluster. Defaults to 5.
 <a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -6661,7 +6594,7 @@ to 100.
 <a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -6731,7 +6664,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -6741,7 +6674,7 @@ inclusive.
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -6756,7 +6689,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -6766,7 +6699,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -6833,7 +6766,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -6843,7 +6776,7 @@ inclusive.
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
@@ -6858,7 +6791,7 @@ less than one second are represented with a 0 `seconds` field and a positive
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
@@ -6868,7 +6801,7 @@ inclusive.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive

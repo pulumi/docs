@@ -84,9 +84,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudfunctions"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -265,9 +265,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudfunctions"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -414,47 +414,19 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Function</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">available_memory_mb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">build_environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">entry_point</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-             <span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FunctionEventTriggerArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">https_trigger_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-             <span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">source_archive_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">source_archive_object</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FunctionSourceRepositoryArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">trigger_http</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Function</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">available_memory_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">build_environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_point</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[FunctionEventTriggerArgs]</span> = None<span class="p">, </span><span class="nx">https_trigger_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_archive_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_archive_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[FunctionSourceRepositoryArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">trigger_http</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Function</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -489,32 +461,22 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FunctionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -523,7 +485,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -547,7 +509,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1010,7 +972,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
@@ -1020,7 +982,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#availablememorymb_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +991,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1000,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1009,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1018,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1065,7 +1027,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#eventtrigger_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">pulumi.<wbr>Input<Function<wbr>Event<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1074,7 +1036,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#httpstriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Trigger<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1045,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1054,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1063,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1072,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1119,7 +1081,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1090,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1099,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1108,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#sourcearchivebucket_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1117,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#sourcearchiveobject_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1126,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">pulumi.<wbr>Input<Function<wbr>Source<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -1174,7 +1136,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1145,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#triggerhttp_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1192,7 +1154,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#vpcconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1201,7 +1163,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
 {{% /md %}}</dd></dl>
@@ -1214,7 +1176,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
@@ -1224,7 +1186,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1233,7 +1195,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1204,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1213,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1222,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1231,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#event_trigger_python" style="color: inherit; text-decoration: inherit;">event_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Input[Function<wbr>Event<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1240,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#https_trigger_url_python" style="color: inherit; text-decoration: inherit;">https_<wbr>trigger_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1249,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1258,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1267,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1276,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1285,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1294,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1303,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1312,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#source_archive_bucket_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1321,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#source_archive_object_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1330,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Input[Function<wbr>Source<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -1378,7 +1340,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1349,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#trigger_http_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1358,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#vpc_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1367,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
 {{% /md %}}</dd></dl>
@@ -1474,44 +1436,20 @@ Get an existing Function resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FunctionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Function</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FunctionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Function</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">available_memory_mb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">build_environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">entry_point</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FunctionEventTriggerArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">https_trigger_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_archive_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_archive_object</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FunctionSourceRepositoryArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">trigger_http</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Function</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">available_memory_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">build_environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_point</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">event_trigger</span><span class="p">:</span> <span class="nx">Optional[FunctionEventTriggerArgs]</span> = None<span class="p">, </span><span class="nx">https_trigger_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ingress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">max_instances</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_archive_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_archive_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_repository</span><span class="p">:</span> <span class="nx">Optional[FunctionSourceRepositoryArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">trigger_http</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vpc_connector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_connector_egress_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Function</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FunctionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FunctionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Function</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Function</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FunctionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Function</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FunctionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2028,7 +1966,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_availablememorymb_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +1975,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +1984,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2055,7 +1993,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2002,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2073,7 +2011,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_eventtrigger_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">pulumi.<wbr>Input<Function<wbr>Event<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2082,7 +2020,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_httpstriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Trigger<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2029,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2100,7 +2038,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2047,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2056,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2065,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2074,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2083,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
@@ -2155,7 +2093,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2164,7 +2102,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_sourcearchivebucket_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2173,7 +2111,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_sourcearchiveobject_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2120,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">pulumi.<wbr>Input<Function<wbr>Source<wbr>Repository<wbr>Args></a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -2192,7 +2130,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2139,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_triggerhttp_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2148,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_vpcconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2157,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
 {{% /md %}}</dd></dl>
@@ -2232,7 +2170,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2179,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2188,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2197,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2206,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2215,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_event_trigger_python" style="color: inherit; text-decoration: inherit;">event_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtrigger">Input[Function<wbr>Event<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2224,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_https_trigger_url_python" style="color: inherit; text-decoration: inherit;">https_<wbr>trigger_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2233,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2242,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2251,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2260,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2269,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2278,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2287,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"`, `"go113"`.
@@ -2359,7 +2297,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2368,7 +2306,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_source_archive_bucket_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2315,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_source_archive_object_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2324,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"nodejs12"`, `"python37"`, `"python38"`,`"go111"
 <a href="#state_source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionsourcerepository">Input[Function<wbr>Source<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functionsourcerepository">Function<wbr>Source<wbr>Repository<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
@@ -2396,7 +2334,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2405,7 +2343,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_trigger_http_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2414,7 +2352,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_vpc_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2423,7 +2361,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <a href="#state_vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
 {{% /md %}}</dd></dl>
@@ -2515,7 +2453,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
@@ -2526,7 +2464,7 @@ full reference of accepted triggers.
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. The name or partial URI of the resource from
 which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
@@ -2536,7 +2474,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#failurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">pulumi.<wbr>Input<Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2549,7 +2487,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
@@ -2560,7 +2498,7 @@ full reference of accepted triggers.
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. The name or partial URI of the resource from
 which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
@@ -2570,7 +2508,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#failure_policy_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Input[Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
 {{% /md %}}</dd></dl>
@@ -2611,7 +2549,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2624,7 +2562,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2681,7 +2619,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2690,7 +2628,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#deployedurl_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2702,7 +2640,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2649,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 <a href="#deployed_url_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

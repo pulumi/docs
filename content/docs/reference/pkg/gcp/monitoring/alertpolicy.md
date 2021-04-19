@@ -85,8 +85,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -201,33 +201,19 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertPolicyConditionArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertPolicyDocumentationArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -262,32 +248,22 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AlertPolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -296,7 +272,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -320,7 +296,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -579,7 +555,7 @@ must begin with a letter.
 <a href="#combiner_nodejs" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
@@ -590,7 +566,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -603,7 +579,7 @@ Structure is documented below.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -616,7 +592,7 @@ policy.
 <a href="#documentation_nodejs" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Documentation<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
@@ -630,7 +606,7 @@ Structure is documented below.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +615,7 @@ Structure is documented below.
 <a href="#notificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -654,7 +630,7 @@ entries in this field is
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -664,7 +640,7 @@ If it is not provided, the provider project is used.
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
@@ -681,7 +657,7 @@ must begin with a letter.
 <a href="#combiner_python" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
@@ -692,7 +668,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">Input[Alert<wbr>Policy<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -705,7 +681,7 @@ Structure is documented below.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -718,7 +694,7 @@ policy.
 <a href="#documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Input[Alert<wbr>Policy<wbr>Documentation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
@@ -732,7 +708,7 @@ Structure is documented below.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +717,7 @@ Structure is documented below.
 <a href="#notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -756,7 +732,7 @@ entries in this field is
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -766,7 +742,7 @@ If it is not provided, the provider project is used.
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
@@ -939,32 +915,20 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertPolicyConditionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_records</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertPolicyCreationRecordArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlertPolicyDocumentationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">creation_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertPolicyCreationRecordArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AlertPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AlertPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AlertPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AlertPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1327,7 +1291,7 @@ must begin with a letter.
 <a href="#state_combiner_nodejs" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
@@ -1338,7 +1302,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -1351,7 +1315,7 @@ Structure is documented below.
 <a href="#state_creationrecords_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1361,7 +1325,7 @@ ignored.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1374,7 +1338,7 @@ policy.
 <a href="#state_documentation_nodejs" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Documentation<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
@@ -1388,7 +1352,7 @@ Structure is documented below.
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1361,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1412,7 +1376,7 @@ policy.
 <a href="#state_notificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -1427,7 +1391,7 @@ entries in this field is
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1437,7 +1401,7 @@ If it is not provided, the provider project is used.
 <a href="#state_userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
@@ -1454,7 +1418,7 @@ must begin with a letter.
 <a href="#state_combiner_python" style="color: inherit; text-decoration: inherit;">combiner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
@@ -1465,7 +1429,7 @@ Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">Input[Alert<wbr>Policy<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
@@ -1478,7 +1442,7 @@ Structure is documented below.
 <a href="#state_creation_records_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Input[Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Sequence[Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1488,7 +1452,7 @@ ignored.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1501,7 +1465,7 @@ policy.
 <a href="#state_documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Input[Alert<wbr>Policy<wbr>Documentation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
@@ -1515,7 +1479,7 @@ Structure is documented below.
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1488,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1539,7 +1503,7 @@ policy.
 <a href="#state_notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -1554,7 +1518,7 @@ entries in this field is
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1564,7 +1528,7 @@ If it is not provided, the provider project is used.
 <a href="#state_user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
@@ -1720,7 +1684,7 @@ policy.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1733,7 +1697,7 @@ policy.
 <a href="#conditionabsent_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
@@ -1744,7 +1708,7 @@ Structure is documented below.
 <a href="#conditionmonitoringquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
@@ -1754,7 +1718,7 @@ Structure is documented below.
 <a href="#conditionthreshold_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
 threshold.
@@ -1765,7 +1729,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1784,7 +1748,7 @@ policy.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1797,7 +1761,7 @@ policy.
 <a href="#condition_absent_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>absent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
 continues to receive new data points.
@@ -1808,7 +1772,7 @@ Structure is documented below.
 <a href="#condition_monitoring_query_language_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>monitoring_<wbr>query_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
@@ -1818,7 +1782,7 @@ Structure is documented below.
 <a href="#condition_threshold_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
 threshold.
@@ -1829,7 +1793,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -2022,7 +1986,7 @@ Structure is documented below.
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2045,7 +2009,7 @@ alerted on quickly.
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -2067,7 +2031,7 @@ Structure is documented below.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -2087,7 +2051,7 @@ in length.
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2108,7 +2072,7 @@ Structure is documented below.
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2131,7 +2095,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -2153,7 +2117,7 @@ Structure is documented below.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -2173,7 +2137,7 @@ in length.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2418,7 +2382,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -2440,7 +2404,7 @@ otherwise an error is returned.
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -2466,7 +2430,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2499,7 +2463,7 @@ ignored.
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -2529,7 +2493,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -2551,7 +2515,7 @@ otherwise an error is returned.
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -2577,7 +2541,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2610,7 +2574,7 @@ ignored.
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -2694,7 +2658,7 @@ condition to be triggered.
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -2705,7 +2669,7 @@ condition to be triggered.
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
@@ -2720,7 +2684,7 @@ condition to be triggered.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -2731,7 +2695,7 @@ condition to be triggered.
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
@@ -2854,7 +2818,7 @@ Structure is documented below.
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2877,7 +2841,7 @@ alerted on quickly.
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2886,7 +2850,7 @@ alerted on quickly.
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2907,7 +2871,7 @@ Structure is documented below.
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2930,7 +2894,7 @@ alerted on quickly.
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2939,7 +2903,7 @@ alerted on quickly.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3014,7 +2978,7 @@ condition to be triggered.
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -3025,7 +2989,7 @@ condition to be triggered.
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
@@ -3040,7 +3004,7 @@ condition to be triggered.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -3051,7 +3015,7 @@ condition to be triggered.
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
@@ -3390,7 +3354,7 @@ Structure is documented below.
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -3407,7 +3371,7 @@ Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARIS
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3430,7 +3394,7 @@ alerted on quickly.
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3452,7 +3416,7 @@ Structure is documented below.
 <a href="#denominatoraggregations_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -3477,7 +3441,7 @@ Structure is documented below.
 <a href="#denominatorfilter_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies a time series that
 should be used as the denominator of a ratio
@@ -3500,7 +3464,7 @@ in length.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -3520,7 +3484,7 @@ in length.
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time
 series.
@@ -3530,7 +3494,7 @@ series.
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">pulumi.<wbr>Input<Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3551,7 +3515,7 @@ Structure is documented below.
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -3568,7 +3532,7 @@ Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARIS
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3591,7 +3555,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3613,7 +3577,7 @@ Structure is documented below.
 <a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -3638,7 +3602,7 @@ Structure is documented below.
 <a href="#denominator_filter_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter that identifies a time series that
 should be used as the denominator of a ratio
@@ -3661,7 +3625,7 @@ in length.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -3681,7 +3645,7 @@ in length.
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time
 series.
@@ -3691,7 +3655,7 @@ series.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Input[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3936,7 +3900,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -3958,7 +3922,7 @@ otherwise an error is returned.
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -3984,7 +3948,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4017,7 +3981,7 @@ ignored.
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4047,7 +4011,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4069,7 +4033,7 @@ otherwise an error is returned.
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4095,7 +4059,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4128,7 +4092,7 @@ ignored.
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4382,7 +4346,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4404,7 +4368,7 @@ otherwise an error is returned.
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4430,7 +4394,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4463,7 +4427,7 @@ ignored.
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4493,7 +4457,7 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4515,7 +4479,7 @@ otherwise an error is returned.
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4541,7 +4505,7 @@ Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `R
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4574,7 +4538,7 @@ ignored.
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4658,7 +4622,7 @@ condition to be triggered.
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -4669,7 +4633,7 @@ condition to be triggered.
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
@@ -4684,7 +4648,7 @@ condition to be triggered.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
@@ -4695,7 +4659,7 @@ condition to be triggered.
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
@@ -4752,7 +4716,7 @@ condition to be triggered.
 <a href="#mutatetime_nodejs" style="color: inherit; text-decoration: inherit;">mutate<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4760,7 +4724,7 @@ condition to be triggered.
 <a href="#mutatedby_nodejs" style="color: inherit; text-decoration: inherit;">mutated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4772,7 +4736,7 @@ condition to be triggered.
 <a href="#mutate_time_python" style="color: inherit; text-decoration: inherit;">mutate_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4780,7 +4744,7 @@ condition to be triggered.
 <a href="#mutated_by_python" style="color: inherit; text-decoration: inherit;">mutated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4846,7 +4810,7 @@ whichever is smaller.
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
@@ -4858,7 +4822,7 @@ whichever is smaller.
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value
 "text/markdown" is supported.
@@ -4872,7 +4836,7 @@ whichever is smaller.
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
@@ -4884,7 +4848,7 @@ whichever is smaller.
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value
 "text/markdown" is supported.

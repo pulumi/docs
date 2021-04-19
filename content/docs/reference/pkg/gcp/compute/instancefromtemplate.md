@@ -90,8 +90,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -223,52 +223,19 @@ const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateAttachedDiskArgs]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateBootDiskArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateConfidentialInstanceConfigArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateGuestAcceleratorArgs]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateSchedulingArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateScratchDiskArgs]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateServiceAccountArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateShieldedInstanceConfigArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateAttachedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateBootDiskArgs]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateScratchDiskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceFromTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFromTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceFromTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFromTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceFromTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceFromTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -303,32 +270,22 @@ const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanc
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">InstanceFromTemplateArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,7 +294,7 @@ const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanc
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -361,7 +318,7 @@ const tplInstanceFromTemplate = new gcp.compute.InstanceFromTemplate("tplInstanc
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -928,7 +885,7 @@ set, the provider zone is used.
 <a href="#sourceinstancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or self link of an instance
 template to create the instance based on.
@@ -938,7 +895,7 @@ template to create the instance based on.
 <a href="#allowstoppingforupdate_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Stopping<wbr>For<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
 stopping the instance without setting this field, the update will fail.
@@ -948,7 +905,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#attacheddisks_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +914,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#bootdisk_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdisk">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +923,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +932,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -985,7 +942,7 @@ to create.
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +951,7 @@ to create.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +960,7 @@ to create.
 <a href="#desiredstatus_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +969,7 @@ to create.
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance has virtual displays enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +978,7 @@ to create.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +987,7 @@ to create.
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
 labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
@@ -1041,7 +998,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1007,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1016,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1025,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata startup scripts made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1034,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1043,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
@@ -1096,7 +1053,7 @@ Changing this forces a new resource to be created.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1062,7 @@ Changing this forces a new resource to be created.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
@@ -1115,7 +1072,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
 instance to recreate. Currently a max of 1 resource policy is supported.
@@ -1125,7 +1082,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescheduling">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1091,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scratchdisks_nodejs" style="color: inherit; text-decoration: inherit;">scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1100,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateserviceaccount">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1109,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1118,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1127,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone that the machine should be created in. If not
 set, the provider zone is used.
@@ -1184,7 +1141,7 @@ set, the provider zone is used.
 <a href="#source_instance_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name or self link of an instance
 template to create the instance based on.
@@ -1194,7 +1151,7 @@ template to create the instance based on.
 <a href="#allow_stopping_for_update_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stopping_<wbr>for_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
 stopping the instance without setting this field, the update will fail.
@@ -1204,7 +1161,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Input[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1170,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#boot_disk_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdisk">Input[Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1179,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1188,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Input[Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -1241,7 +1198,7 @@ to create.
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1207,7 @@ to create.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1216,7 @@ to create.
 <a href="#desired_status_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1225,7 @@ to create.
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance has virtual displays enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1234,7 @@ to create.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Input[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Sequence[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1243,7 @@ to create.
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
 labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
@@ -1297,7 +1254,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1263,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1272,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1281,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata startup scripts made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1290,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1299,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
@@ -1352,7 +1309,7 @@ Changing this forces a new resource to be created.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Input[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1318,7 @@ Changing this forces a new resource to be created.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
@@ -1371,7 +1328,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
 instance to recreate. Currently a max of 1 resource policy is supported.
@@ -1381,7 +1338,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescheduling">Input[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1347,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Input[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1356,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Input[Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1365,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Input[Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1374,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1383,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone that the machine should be created in. If not
 set, the provider zone is used.
@@ -1748,56 +1705,20 @@ Get an existing InstanceFromTemplate resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceFromTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InstanceFromTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceFromTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InstanceFromTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateAttachedDiskArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateBootDiskArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateConfidentialInstanceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateGuestAcceleratorArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateSchedulingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceFromTemplateScratchDiskArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateServiceAccountArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFromTemplateShieldedInstanceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> InstanceFromTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_stopping_for_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">attached_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateAttachedDiskArgs]]</span> = None<span class="p">, </span><span class="nx">boot_disk</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateBootDiskArgs]</span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">scratch_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceFromTemplateScratchDiskArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceFromTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_instance_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceFromTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceFromTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceFromTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFromTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceFromTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceFromTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFromTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InstanceFromTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceFromTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InstanceFromTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceFromTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2544,7 +2465,7 @@ set, the provider zone is used.
 <a href="#state_allowstoppingforupdate_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Stopping<wbr>For<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
 stopping the instance without setting this field, the update will fail.
@@ -2554,7 +2475,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_attacheddisks_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -2563,7 +2484,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_bootdisk_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdisk">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2572,7 +2493,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2581,7 +2502,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -2591,7 +2512,7 @@ to create.
 <a href="#state_cpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2521,7 @@ to create.
 <a href="#state_currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2609,7 +2530,7 @@ to create.
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2618,7 +2539,7 @@ to create.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2627,7 +2548,7 @@ to create.
 <a href="#state_desiredstatus_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2636,7 +2557,7 @@ to create.
 <a href="#state_enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance has virtual displays enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2566,7 @@ to create.
 <a href="#state_guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2654,7 +2575,7 @@ to create.
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
 labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
@@ -2665,7 +2586,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2674,7 +2595,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2683,7 +2604,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2692,7 +2613,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2701,7 +2622,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2631,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_metadatafingerprint_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2719,7 +2640,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata startup scripts made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2728,7 +2649,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2658,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
@@ -2747,7 +2668,7 @@ Changing this forces a new resource to be created.
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2677,7 @@ Changing this forces a new resource to be created.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
@@ -2766,7 +2687,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#state_resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
 instance to recreate. Currently a max of 1 resource policy is supported.
@@ -2776,7 +2697,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescheduling">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2785,7 +2706,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scratchdisks_nodejs" style="color: inherit; text-decoration: inherit;">scratch<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2794,7 +2715,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2803,7 +2724,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateserviceaccount">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2812,7 +2733,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2742,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_sourceinstancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or self link of an instance
 template to create the instance based on.
@@ -2831,7 +2752,7 @@ template to create the instance based on.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2840,7 +2761,7 @@ template to create the instance based on.
 <a href="#state_tagsfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2770,7 @@ template to create the instance based on.
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone that the machine should be created in. If not
 set, the provider zone is used.
@@ -2863,7 +2784,7 @@ set, the provider zone is used.
 <a href="#state_allow_stopping_for_update_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stopping_<wbr>for_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, allows Terraform to stop the instance to update its properties. If you try to update a property that requires
 stopping the instance without setting this field, the update will fail.
@@ -2873,7 +2794,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Input[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateattacheddisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance
 {{% /md %}}</dd><dt class="property-optional"
@@ -2882,7 +2803,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_boot_disk_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdisk">Input[Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2891,7 +2812,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2900,7 +2821,7 @@ stopping the instance without setting this field, the update will fail.
 <a href="#state_confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Input[Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateconfidentialinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail
 to create.
@@ -2910,7 +2831,7 @@ to create.
 <a href="#state_cpu_platform_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2919,7 +2840,7 @@ to create.
 <a href="#state_current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current status of the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2928,7 +2849,7 @@ to create.
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2937,7 +2858,7 @@ to create.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2946,7 +2867,7 @@ to create.
 <a href="#state_desired_status_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired status of the instance. Either "RUNNING" or "TERMINATED".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2955,7 +2876,7 @@ to create.
 <a href="#state_enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance has virtual displays enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2964,7 +2885,7 @@ to create.
 <a href="#state_guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Input[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateguestaccelerator">Sequence[Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2973,7 +2894,7 @@ to create.
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of
 labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The
@@ -2984,7 +2905,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2993,7 +2914,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3002,7 +2923,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3011,7 +2932,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3020,7 +2941,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3029,7 +2950,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_metadata_fingerprint_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +2959,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata startup scripts made available within the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3047,7 +2968,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3056,7 +2977,7 @@ entire hostname must not exceed 253 characters. Changing this forces a new resou
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
@@ -3066,7 +2987,7 @@ Changing this forces a new resource to be created.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Input[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterface">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3075,7 +2996,7 @@ Changing this forces a new resource to be created.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If self_link is provided, this value is ignored. If neither
 self_link nor project are provided, the provider project is used.
@@ -3085,7 +3006,7 @@ self_link nor project are provided, the provider project is used.
 <a href="#state_resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the
 instance to recreate. Currently a max of 1 resource policy is supported.
@@ -3095,7 +3016,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescheduling">Input[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3104,7 +3025,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Input[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatescratchdisk">Sequence[Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3113,7 +3034,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3122,7 +3043,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Input[Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3131,7 +3052,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Input[Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3061,7 @@ instance to recreate. Currently a max of 1 resource policy is supported.
 <a href="#state_source_instance_template_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name or self link of an instance
 template to create the instance based on.
@@ -3150,7 +3071,7 @@ template to create the instance based on.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3080,7 @@ template to create the instance based on.
 <a href="#state_tags_fingerprint_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3089,7 @@ template to create the instance based on.
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone that the machine should be created in. If not
 set, the provider zone is used.
@@ -3297,7 +3218,7 @@ set, the provider zone is used.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3305,7 +3226,7 @@ set, the provider zone is used.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3234,7 @@ set, the provider zone is used.
 <a href="#diskencryptionkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3242,7 @@ set, the provider zone is used.
 <a href="#diskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3250,7 @@ set, the provider zone is used.
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3258,7 @@ set, the provider zone is used.
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3349,7 +3270,7 @@ set, the provider zone is used.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3357,7 +3278,7 @@ set, the provider zone is used.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3286,7 @@ set, the provider zone is used.
 <a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3294,7 @@ set, the provider zone is used.
 <a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3302,7 @@ set, the provider zone is used.
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3389,7 +3310,7 @@ set, the provider zone is used.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3539,7 +3460,7 @@ set, the provider zone is used.
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3547,7 +3468,7 @@ set, the provider zone is used.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3555,7 +3476,7 @@ set, the provider zone is used.
 <a href="#diskencryptionkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3563,7 +3484,7 @@ set, the provider zone is used.
 <a href="#diskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3571,7 +3492,7 @@ set, the provider zone is used.
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3579,7 +3500,7 @@ set, the provider zone is used.
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3587,7 +3508,7 @@ set, the provider zone is used.
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3595,7 +3516,7 @@ set, the provider zone is used.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3607,7 +3528,7 @@ set, the provider zone is used.
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3615,7 +3536,7 @@ set, the provider zone is used.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3623,7 +3544,7 @@ set, the provider zone is used.
 <a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3631,7 +3552,7 @@ set, the provider zone is used.
 <a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +3560,7 @@ set, the provider zone is used.
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Input[Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3647,7 +3568,7 @@ set, the provider zone is used.
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3655,7 +3576,7 @@ set, the provider zone is used.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3663,7 +3584,7 @@ set, the provider zone is used.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3749,7 +3670,7 @@ set, the provider zone is used.
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,7 +3678,7 @@ set, the provider zone is used.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3765,7 +3686,7 @@ set, the provider zone is used.
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +3694,7 @@ set, the provider zone is used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3785,7 +3706,7 @@ set, the provider zone is used.
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3714,7 @@ set, the provider zone is used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3722,7 @@ set, the provider zone is used.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3730,7 @@ set, the provider zone is used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3847,7 +3768,7 @@ set, the provider zone is used.
 <a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3859,7 +3780,7 @@ set, the provider zone is used.
 <a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3913,7 +3834,7 @@ set, the provider zone is used.
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3921,7 +3842,7 @@ set, the provider zone is used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3933,7 +3854,7 @@ set, the provider zone is used.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3941,7 +3862,7 @@ set, the provider zone is used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4095,7 +4016,7 @@ Changing this forces a new resource to be created.
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4103,7 +4024,7 @@ Changing this forces a new resource to be created.
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4032,7 @@ Changing this forces a new resource to be created.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
@@ -4121,7 +4042,7 @@ Changing this forces a new resource to be created.
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4129,7 +4050,7 @@ Changing this forces a new resource to be created.
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4137,7 +4058,7 @@ Changing this forces a new resource to be created.
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4145,7 +4066,7 @@ Changing this forces a new resource to be created.
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4153,7 +4074,7 @@ Changing this forces a new resource to be created.
 <a href="#subnetworkproject_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4165,7 +4086,7 @@ Changing this forces a new resource to be created.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Input[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4173,7 +4094,7 @@ Changing this forces a new resource to be created.
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Input[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4181,7 +4102,7 @@ Changing this forces a new resource to be created.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by GCE.
 Changing this forces a new resource to be created.
@@ -4191,7 +4112,7 @@ Changing this forces a new resource to be created.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4199,7 +4120,7 @@ Changing this forces a new resource to be created.
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4207,7 +4128,7 @@ Changing this forces a new resource to be created.
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4215,7 +4136,7 @@ Changing this forces a new resource to be created.
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4223,7 +4144,7 @@ Changing this forces a new resource to be created.
 <a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4293,7 +4214,7 @@ Changing this forces a new resource to be created.
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4301,7 +4222,7 @@ Changing this forces a new resource to be created.
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4309,7 +4230,7 @@ Changing this forces a new resource to be created.
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4321,7 +4242,7 @@ Changing this forces a new resource to be created.
 <a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4329,7 +4250,7 @@ Changing this forces a new resource to be created.
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4337,7 +4258,7 @@ Changing this forces a new resource to be created.
 <a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4391,7 +4312,7 @@ Changing this forces a new resource to be created.
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4399,7 +4320,7 @@ Changing this forces a new resource to be created.
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4411,7 +4332,7 @@ Changing this forces a new resource to be created.
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4419,7 +4340,7 @@ Changing this forces a new resource to be created.
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4521,7 +4442,7 @@ Changing this forces a new resource to be created.
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4529,7 +4450,7 @@ Changing this forces a new resource to be created.
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4537,7 +4458,7 @@ Changing this forces a new resource to be created.
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4545,7 +4466,7 @@ Changing this forces a new resource to be created.
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4553,7 +4474,7 @@ Changing this forces a new resource to be created.
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4565,7 +4486,7 @@ Changing this forces a new resource to be created.
 <a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4573,7 +4494,7 @@ Changing this forces a new resource to be created.
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4581,7 +4502,7 @@ Changing this forces a new resource to be created.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Input[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancefromtemplateschedulingnodeaffinity">Sequence[Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4589,7 +4510,7 @@ Changing this forces a new resource to be created.
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4597,7 +4518,7 @@ Changing this forces a new resource to be created.
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4667,7 +4588,7 @@ Changing this forces a new resource to be created.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4675,7 +4596,7 @@ Changing this forces a new resource to be created.
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4683,7 +4604,7 @@ Changing this forces a new resource to be created.
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4695,7 +4616,7 @@ Changing this forces a new resource to be created.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4703,7 +4624,7 @@ Changing this forces a new resource to be created.
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4711,7 +4632,7 @@ Changing this forces a new resource to be created.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4749,7 +4670,7 @@ Changing this forces a new resource to be created.
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4761,7 +4682,7 @@ Changing this forces a new resource to be created.
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4815,7 +4736,7 @@ Changing this forces a new resource to be created.
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4823,7 +4744,7 @@ Changing this forces a new resource to be created.
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4835,7 +4756,7 @@ Changing this forces a new resource to be created.
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4843,7 +4764,7 @@ Changing this forces a new resource to be created.
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4913,7 +4834,7 @@ Changing this forces a new resource to be created.
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4921,7 +4842,7 @@ Changing this forces a new resource to be created.
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4929,7 +4850,7 @@ Changing this forces a new resource to be created.
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4941,7 +4862,7 @@ Changing this forces a new resource to be created.
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4949,7 +4870,7 @@ Changing this forces a new resource to be created.
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4957,7 +4878,7 @@ Changing this forces a new resource to be created.
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

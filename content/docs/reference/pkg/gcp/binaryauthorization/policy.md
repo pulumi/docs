@@ -98,9 +98,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/binaryauthorization"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/containeranalysis"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -286,9 +286,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/binaryauthorization"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/containeranalysis"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -402,31 +402,19 @@ const policy = new gcp.binaryauthorization.Policy("policy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PolicyAdmissionWhitelistPatternArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PolicyClusterAdmissionRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyDefaultAdmissionRuleArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -461,32 +449,22 @@ const policy = new gcp.binaryauthorization.Policy("policy", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -495,7 +473,7 @@ const policy = new gcp.binaryauthorization.Policy("policy", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -519,7 +497,7 @@ const policy = new gcp.binaryauthorization.Policy("policy", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -716,7 +694,7 @@ If it is not provided, the provider project is used.
 <a href="#defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">pulumi.<wbr>Input<Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
@@ -727,7 +705,7 @@ Structure is documented below.
 <a href="#admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">pulumi.<wbr>Input<pulumi.<wbr>Input<Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -739,7 +717,7 @@ Structure is documented below.
 <a href="#clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -752,7 +730,7 @@ admission rule per cluster spec.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +739,7 @@ admission rule per cluster spec.
 <a href="#globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
@@ -773,7 +751,7 @@ Possible values are `ENABLE` and `DISABLE`.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -787,7 +765,7 @@ If it is not provided, the provider project is used.
 <a href="#default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Input[Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
@@ -798,7 +776,7 @@ Structure is documented below.
 <a href="#admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Input[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Sequence[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -810,7 +788,7 @@ Structure is documented below.
 <a href="#cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">Input[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Sequence[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -823,7 +801,7 @@ admission rule per cluster spec.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +810,7 @@ admission rule per cluster spec.
 <a href="#global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
@@ -844,7 +822,7 @@ Possible values are `ENABLE` and `DISABLE`.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -914,28 +892,20 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Policy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Policy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PolicyAdmissionWhitelistPatternArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PolicyClusterAdmissionRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PolicyDefaultAdmissionRuleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Policy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Policy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1186,7 +1156,7 @@ If it is not provided, the provider project is used.
 <a href="#state_admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">pulumi.<wbr>Input<pulumi.<wbr>Input<Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -1198,7 +1168,7 @@ Structure is documented below.
 <a href="#state_clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1211,7 +1181,7 @@ admission rule per cluster spec.
 <a href="#state_defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">pulumi.<wbr>Input<Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
@@ -1222,7 +1192,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1201,7 @@ Structure is documented below.
 <a href="#state_globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
@@ -1243,7 +1213,7 @@ Possible values are `ENABLE` and `DISABLE`.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1257,7 +1227,7 @@ If it is not provided, the provider project is used.
 <a href="#state_admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Input[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Sequence[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
@@ -1269,7 +1239,7 @@ Structure is documented below.
 <a href="#state_cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">Input[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Sequence[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1282,7 +1252,7 @@ admission rule per cluster spec.
 <a href="#state_default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Input[Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
@@ -1293,7 +1263,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1272,7 @@ Structure is documented below.
 <a href="#state_global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
@@ -1314,7 +1284,7 @@ Possible values are `ENABLE` and `DISABLE`.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1371,7 +1341,7 @@ part.
 <a href="#namepattern_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An image name pattern to whitelist, in the form
 `registry/path/to/image`. This supports a trailing * as a
@@ -1387,7 +1357,7 @@ part.
 <a href="#name_pattern_python" style="color: inherit; text-decoration: inherit;">name_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An image name pattern to whitelist, in the form
 `registry/path/to/image`. This supports a trailing * as a
@@ -1503,7 +1473,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1512,7 +1482,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
@@ -1522,7 +1492,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 <a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
@@ -1532,7 +1502,7 @@ Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 <a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1552,7 +1522,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1561,7 +1531,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
@@ -1571,7 +1541,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 <a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
@@ -1581,7 +1551,7 @@ Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 <a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1683,7 +1653,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
@@ -1693,7 +1663,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 <a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
@@ -1703,7 +1673,7 @@ Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 <a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1723,7 +1693,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
@@ -1733,7 +1703,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 <a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
@@ -1743,7 +1713,7 @@ Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 <a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the

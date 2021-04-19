@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -240,9 +240,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/osconfig"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -856,34 +856,19 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentInstanceFilterArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentOneTimeScheduleArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentPatchConfigArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentRecurringScheduleArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentRolloutArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchDeployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -918,32 +903,22 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PatchDeploymentArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -952,7 +927,7 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -976,7 +951,7 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1225,7 +1200,7 @@ Structure is documented below.
 <a href="#instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -1235,7 +1210,7 @@ Structure is documented below.
 <a href="#patchdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1249,7 +1224,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1233,7 @@ Structure is documented below.
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
@@ -1268,7 +1243,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -1278,7 +1253,7 @@ Structure is documented below.
 <a href="#patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -1288,7 +1263,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1298,7 +1273,7 @@ If it is not provided, the provider project is used.
 <a href="#recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -1308,7 +1283,7 @@ Structure is documented below.
 <a href="#rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Rollout<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -1322,7 +1297,7 @@ Structure is documented below.
 <a href="#instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">Input[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -1332,7 +1307,7 @@ Structure is documented below.
 <a href="#patch_deployment_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1346,7 +1321,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1355,7 +1330,7 @@ Structure is documented below.
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
@@ -1365,7 +1340,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Input[Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -1375,7 +1350,7 @@ Structure is documented below.
 <a href="#patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -1385,7 +1360,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1395,7 +1370,7 @@ If it is not provided, the provider project is used.
 <a href="#recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -1405,7 +1380,7 @@ Structure is documented below.
 <a href="#rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">Input[Patch<wbr>Deployment<wbr>Rollout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -1639,35 +1614,20 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PatchDeploymentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PatchDeployment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PatchDeploymentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PatchDeployment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentInstanceFilterArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">last_execute_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentOneTimeScheduleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentPatchConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentRecurringScheduleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PatchDeploymentRolloutArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PatchDeployment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_filter</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentInstanceFilterArgs]</span> = None<span class="p">, </span><span class="nx">last_execute_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">one_time_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentOneTimeScheduleArgs]</span> = None<span class="p">, </span><span class="nx">patch_config</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentPatchConfigArgs]</span> = None<span class="p">, </span><span class="nx">patch_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recurring_schedule</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRecurringScheduleArgs]</span> = None<span class="p">, </span><span class="nx">rollout</span><span class="p">:</span> <span class="nx">Optional[PatchDeploymentRolloutArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PatchDeployment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PatchDeploymentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PatchDeploymentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchDeployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PatchDeployment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PatchDeploymentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PatchDeployment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PatchDeploymentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2052,7 +2012,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -2062,7 +2022,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2031,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#state_duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
@@ -2081,7 +2041,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#state_instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -2091,7 +2051,7 @@ Structure is documented below.
 <a href="#state_lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
@@ -2102,7 +2062,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
@@ -2112,7 +2072,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
 <a href="#state_onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -2122,7 +2082,7 @@ Structure is documented below.
 <a href="#state_patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -2132,7 +2092,7 @@ Structure is documented below.
 <a href="#state_patchdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2146,7 +2106,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2156,7 +2116,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -2166,7 +2126,7 @@ Structure is documented below.
 <a href="#state_rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Rollout<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -2176,7 +2136,7 @@ Structure is documented below.
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -2190,7 +2150,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -2200,7 +2160,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2209,7 +2169,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#state_duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
@@ -2219,7 +2179,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#state_instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefilter">Input[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
@@ -2229,7 +2189,7 @@ Structure is documented below.
 <a href="#state_last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
@@ -2240,7 +2200,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
@@ -2250,7 +2210,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
 <a href="#state_one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Input[Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
@@ -2260,7 +2220,7 @@ Structure is documented below.
 <a href="#state_patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfig">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
@@ -2270,7 +2230,7 @@ Structure is documented below.
 <a href="#state_patch_deployment_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2284,7 +2244,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2294,7 +2254,7 @@ If it is not provided, the provider project is used.
 <a href="#state_recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
@@ -2304,7 +2264,7 @@ Structure is documented below.
 <a href="#state_rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrollout">Input[Patch<wbr>Deployment<wbr>Rollout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
@@ -2314,7 +2274,7 @@ Structure is documented below.
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -2445,7 +2405,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2454,7 +2414,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -2464,7 +2424,7 @@ Structure is documented below.
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
@@ -2474,7 +2434,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
@@ -2485,7 +2445,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd></dl>
@@ -2498,7 +2458,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2507,7 +2467,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Input[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Sequence[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
@@ -2517,7 +2477,7 @@ Structure is documented below.
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
@@ -2527,7 +2487,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
@@ -2538,7 +2498,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd></dl>
@@ -2579,7 +2539,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
 {{% /md %}}</dd></dl>
@@ -2592,7 +2552,7 @@ VMs when targeting configs, for example prefix="prod-".
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
 {{% /md %}}</dd></dl>
@@ -2635,7 +2595,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#executetime_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -2649,7 +2609,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <a href="#execute_time_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -2833,7 +2793,7 @@ Structure is documented below.
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
@@ -2843,7 +2803,7 @@ Structure is documented below.
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
@@ -2853,7 +2813,7 @@ Structure is documented below.
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
@@ -2863,7 +2823,7 @@ Structure is documented below.
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
@@ -2873,7 +2833,7 @@ Structure is documented below.
 <a href="#rebootconfig_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
@@ -2883,7 +2843,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
@@ -2893,7 +2853,7 @@ Structure is documented below.
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
@@ -2903,7 +2863,7 @@ Structure is documented below.
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
@@ -2917,7 +2877,7 @@ Structure is documented below.
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
@@ -2927,7 +2887,7 @@ Structure is documented below.
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
@@ -2937,7 +2897,7 @@ Structure is documented below.
 <a href="#post_step_python" style="color: inherit; text-decoration: inherit;">post_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
@@ -2947,7 +2907,7 @@ Structure is documented below.
 <a href="#pre_step_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
@@ -2957,7 +2917,7 @@ Structure is documented below.
 <a href="#reboot_config_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
@@ -2967,7 +2927,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 <a href="#windows_update_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
@@ -2977,7 +2937,7 @@ Structure is documented below.
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
@@ -2987,7 +2947,7 @@ Structure is documented below.
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
@@ -3071,7 +3031,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3080,7 +3040,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
@@ -3091,7 +3051,7 @@ any other patch configuration fields.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
@@ -3105,7 +3065,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3114,7 +3074,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
@@ -3125,7 +3085,7 @@ any other patch configuration fields.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
@@ -3167,7 +3127,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 {{% /md %}}</dd></dl>
@@ -3180,7 +3140,7 @@ Possible values are `DIST` and `UPGRADE`.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 {{% /md %}}</dd></dl>
@@ -3243,7 +3203,7 @@ Structure is documented below.
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3253,7 +3213,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3267,7 +3227,7 @@ Structure is documented below.
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3277,7 +3237,7 @@ Structure is documented below.
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3379,7 +3339,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3388,7 +3348,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3398,7 +3358,7 @@ Structure is documented below.
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -3409,7 +3369,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -3422,7 +3382,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3431,7 +3391,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3441,7 +3401,7 @@ Structure is documented below.
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -3452,7 +3412,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -3529,7 +3489,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -3538,7 +3498,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -3547,7 +3507,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -3560,7 +3520,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -3569,7 +3529,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -3578,7 +3538,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -3679,7 +3639,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3688,7 +3648,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3698,7 +3658,7 @@ Structure is documented below.
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -3709,7 +3669,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -3722,7 +3682,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3731,7 +3691,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -3741,7 +3701,7 @@ Structure is documented below.
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -3752,7 +3712,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -3829,7 +3789,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -3838,7 +3798,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -3847,7 +3807,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -3860,7 +3820,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -3869,7 +3829,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -3878,7 +3838,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -3941,7 +3901,7 @@ Structure is documented below.
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3951,7 +3911,7 @@ Structure is documented below.
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3965,7 +3925,7 @@ Structure is documented below.
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
@@ -3975,7 +3935,7 @@ Structure is documented below.
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
@@ -4077,7 +4037,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4086,7 +4046,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4096,7 +4056,7 @@ Structure is documented below.
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -4107,7 +4067,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -4120,7 +4080,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4129,7 +4089,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4139,7 +4099,7 @@ Structure is documented below.
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -4150,7 +4110,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -4227,7 +4187,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -4236,7 +4196,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -4245,7 +4205,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -4258,7 +4218,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -4267,7 +4227,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -4276,7 +4236,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -4377,7 +4337,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4386,7 +4346,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4396,7 +4356,7 @@ Structure is documented below.
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -4407,7 +4367,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -4420,7 +4380,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4429,7 +4389,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Input[Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
@@ -4439,7 +4399,7 @@ Structure is documented below.
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
@@ -4450,7 +4410,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd></dl>
@@ -4527,7 +4487,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -4536,7 +4496,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -4545,7 +4505,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -4558,7 +4518,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd><dt class="property-required"
@@ -4567,7 +4527,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd><dt class="property-required"
@@ -4576,7 +4536,7 @@ Possible values are `SHELL` and `POWERSHELL`.
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd></dl>
@@ -4657,7 +4617,7 @@ This field must not be used with other patch configurations.
 <a href="#classifications_nodejs" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
@@ -4667,7 +4627,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4676,7 +4636,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
@@ -4690,7 +4650,7 @@ This field must not be used with other patch configurations.
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
@@ -4700,7 +4660,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4709,7 +4669,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
@@ -4809,7 +4769,7 @@ any other patch configuration fields.
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4818,7 +4778,7 @@ any other patch configuration fields.
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
@@ -4829,7 +4789,7 @@ any other patch configuration fields.
 <a href="#minimal_nodejs" style="color: inherit; text-decoration: inherit;">minimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4838,7 +4798,7 @@ any other patch configuration fields.
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
 {{% /md %}}</dd></dl>
@@ -4851,7 +4811,7 @@ any other patch configuration fields.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4860,7 +4820,7 @@ any other patch configuration fields.
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
@@ -4871,7 +4831,7 @@ any other patch configuration fields.
 <a href="#minimal_python" style="color: inherit; text-decoration: inherit;">minimal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4880,7 +4840,7 @@ any other patch configuration fields.
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
 {{% /md %}}</dd></dl>
@@ -5013,7 +4973,7 @@ This field must not be used with other patch configurations.
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5022,7 +4982,7 @@ This field must not be used with other patch configurations.
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5031,7 +4991,7 @@ This field must not be used with other patch configurations.
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
@@ -5041,7 +5001,7 @@ This field must not be used with other patch configurations.
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5050,7 +5010,7 @@ This field must not be used with other patch configurations.
 <a href="#withoptional_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5059,7 +5019,7 @@ This field must not be used with other patch configurations.
 <a href="#withupdate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
 {{% /md %}}</dd></dl>
@@ -5072,7 +5032,7 @@ This field must not be used with other patch configurations.
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5081,7 +5041,7 @@ This field must not be used with other patch configurations.
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5090,7 +5050,7 @@ This field must not be used with other patch configurations.
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
@@ -5100,7 +5060,7 @@ This field must not be used with other patch configurations.
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5109,7 +5069,7 @@ This field must not be used with other patch configurations.
 <a href="#with_optional_python" style="color: inherit; text-decoration: inherit;">with_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5118,7 +5078,7 @@ This field must not be used with other patch configurations.
 <a href="#with_update_python" style="color: inherit; text-decoration: inherit;">with_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
 {{% /md %}}</dd></dl>
@@ -5307,7 +5267,7 @@ Structure is documented below.
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
@@ -5317,7 +5277,7 @@ Structure is documented below.
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
@@ -5328,7 +5288,7 @@ Structure is documented below.
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -5338,7 +5298,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
@@ -5349,7 +5309,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
@@ -5359,7 +5319,7 @@ Structure is documented below.
 <a href="#nextexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Execute<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
@@ -5370,7 +5330,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -5380,7 +5340,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
@@ -5394,7 +5354,7 @@ Structure is documented below.
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
@@ -5404,7 +5364,7 @@ Structure is documented below.
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
@@ -5415,7 +5375,7 @@ Structure is documented below.
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -5425,7 +5385,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
@@ -5436,7 +5396,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#monthly_python" style="color: inherit; text-decoration: inherit;">monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
@@ -5446,7 +5406,7 @@ Structure is documented below.
 <a href="#next_execute_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>execute_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
@@ -5457,7 +5417,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -5467,7 +5427,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#weekly_python" style="color: inherit; text-decoration: inherit;">weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
@@ -5533,7 +5493,7 @@ Structure is documented below.
 <a href="#monthday_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
@@ -5544,7 +5504,7 @@ will not run in February, April, June, etc.
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
@@ -5558,7 +5518,7 @@ Structure is documented below.
 <a href="#month_day_python" style="color: inherit; text-decoration: inherit;">month_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
@@ -5569,7 +5529,7 @@ will not run in February, April, June, etc.
 <a href="#week_day_of_month_python" style="color: inherit; text-decoration: inherit;">week_<wbr>day_<wbr>of_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Input[Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
@@ -5631,7 +5591,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
@@ -5641,7 +5601,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#weekordinal_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Ordinal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd></dl>
@@ -5654,7 +5614,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
@@ -5664,7 +5624,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#week_ordinal_python" style="color: inherit; text-decoration: inherit;">week_<wbr>ordinal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd></dl>
@@ -5761,7 +5721,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
@@ -5771,7 +5731,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5780,7 +5740,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5789,7 +5749,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd></dl>
@@ -5802,7 +5762,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
@@ -5812,7 +5772,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5821,7 +5781,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5830,7 +5790,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd></dl>
@@ -5889,7 +5849,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
 {{% /md %}}</dd><dt class="property-optional"
@@ -5898,7 +5858,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
 {{% /md %}}</dd></dl>
@@ -5911,7 +5871,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
 {{% /md %}}</dd><dt class="property-optional"
@@ -5920,7 +5880,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
 {{% /md %}}</dd></dl>
@@ -5963,7 +5923,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
@@ -5977,7 +5937,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
@@ -6049,7 +6009,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">pulumi.<wbr>Input<Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args></a></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
@@ -6063,7 +6023,7 @@ Structure is documented below.
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
@@ -6077,7 +6037,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Input[Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args]</a></span>
+        <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
@@ -6091,7 +6051,7 @@ Structure is documented below.
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
@@ -6151,7 +6111,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6160,7 +6120,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd></dl>
@@ -6173,7 +6133,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6182,7 +6142,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd></dl>

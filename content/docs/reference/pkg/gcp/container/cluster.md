@@ -80,9 +80,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/container"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -264,73 +264,19 @@ const primary = new gcp.container.Cluster("primary", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAddonsConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAuthenticatorGroupsConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterClusterAutoscalingArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterClusterTelemetryArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterConfidentialNodesArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterDatabaseEncryptionArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterDefaultSnatStatusArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterIpAllocationPolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMaintenancePolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterAuthArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterAuthorizedNetworksConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterNetworkPolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterNodeConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterNodePoolArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterNotificationConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterPodSecurityPolicyConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterPrivateClusterConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterReleaseChannelArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterResourceUsageExportConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterVerticalPodAutoscalingArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterWorkloadIdentityConfigArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterArgs]</a></span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -365,32 +311,22 @@ const primary = new gcp.container.Cluster("primary", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -399,7 +335,7 @@ const primary = new gcp.container.Cluster("primary", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -423,7 +359,7 @@ const primary = new gcp.container.Cluster("primary", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1572,7 +1508,7 @@ Structure is documented below.
 <a href="#addonsconfig_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -1582,7 +1518,7 @@ Structure is documented below.
 <a href="#authenticatorgroupsconfig_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Groups<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">pulumi.<wbr>Input<Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -1593,7 +1529,7 @@ Structure is documented below.
 <a href="#clusterautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">pulumi.<wbr>Input<Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -1606,7 +1542,7 @@ for more details. Structure is documented below.
 <a href="#clusteripv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Kubernetes pods
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
@@ -1618,7 +1554,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#clustertelemetry_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">pulumi.<wbr>Input<Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -1629,7 +1565,7 @@ Structure is documented below.
 <a href="#confidentialnodes_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">pulumi.<wbr>Input<Cluster<wbr>Confidential<wbr>Nodes<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -1639,7 +1575,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#databaseencryption_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">pulumi.<wbr>Input<Cluster<wbr>Database<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1584,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#datapathprovider_nodejs" style="color: inherit; text-decoration: inherit;">datapath<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1593,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#defaultmaxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default maximum number of pods
 per node in this cluster. This doesn't work on "routes-based" clusters, clusters
@@ -1669,7 +1605,7 @@ for more information.
 <a href="#defaultsnatstatus_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Snat<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">pulumi.<wbr>Input<Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1678,7 +1614,7 @@ for more information.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1687,7 +1623,7 @@ for more information.
 <a href="#enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
 Note that when this option is enabled, certain features of Standard GKE are not available.
@@ -1699,7 +1635,7 @@ for available features.
 <a href="#enablebinaryauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binary<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
@@ -1709,7 +1645,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#enableintranodevisibility_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Intranode<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1654,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#enablekubernetesalpha_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kubernetes<wbr>Alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
@@ -1729,7 +1665,7 @@ and will be automatically deleted after 30 days.
 <a href="#enablel4ilbsubsetting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>L4Ilb<wbr>Subsetting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}})
 Whether L4ILB Subsetting is enabled for this cluster.
@@ -1739,7 +1675,7 @@ Whether L4ILB Subsetting is enabled for this cluster.
 <a href="#enablelegacyabac_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Legacy<wbr>Abac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the ABAC authorizer is enabled for this cluster.
 When enabled, identities in the system, including service accounts, nodes, and controllers,
@@ -1751,7 +1687,7 @@ Defaults to `false`
 <a href="#enableshieldednodes_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Shielded<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1760,7 +1696,7 @@ Defaults to `false`
 <a href="#enabletpu_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
@@ -1770,7 +1706,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -1784,7 +1720,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">pulumi.<wbr>Input<Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -1796,7 +1732,7 @@ below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
@@ -1810,7 +1746,7 @@ the region, and with default node locations in those zones as well
 <a href="#loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logging service that the cluster should
 write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
@@ -1821,7 +1757,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">pulumi.<wbr>Input<Cluster<wbr>Maintenance<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -1831,7 +1767,7 @@ documented below.
 <a href="#masterauth_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Auth<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -1845,7 +1781,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -1856,7 +1792,7 @@ external access (except the cluster node IPs, which GKE automatically whitelists
 <a href="#minmasterversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Master<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
@@ -1873,7 +1809,7 @@ describe the various acceptable formats for this field.
 <a href="#monitoringservice_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitoring service that the cluster
 should write metrics to.
@@ -1888,7 +1824,7 @@ Defaults to `monitoring.googleapis.com/kubernetes`
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 location.
@@ -1898,7 +1834,7 @@ location.
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to which the cluster is connected. For Shared VPC, set this to the self link of the
@@ -1909,7 +1845,7 @@ shared network.
 <a href="#networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">pulumi.<wbr>Input<Cluster<wbr>Network<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -1920,7 +1856,7 @@ feature. Structure is documented below.
 <a href="#networkingmode_nodejs" style="color: inherit; text-decoration: inherit;">networking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
 Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -1931,7 +1867,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -1944,7 +1880,7 @@ Structure is documented below.
 <a href="#nodelocations_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -1956,7 +1892,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusternodepool">Cluster<wbr>Node<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -1970,7 +1906,7 @@ gcp.container.NodePool resource instead of this property.
 <a href="#nodeversion_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes version on the nodes. Must either be unset
 or set to the same value as `min_master_version` on create. Defaults to the default
@@ -1986,7 +1922,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">pulumi.<wbr>Input<Cluster<wbr>Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The notification config for sending cluster upgrade notifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -1995,7 +1931,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#podsecuritypolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">pulumi.<wbr>Input<Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -2006,7 +1942,7 @@ Structure is documented below.
 <a href="#privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">pulumi.<wbr>Input<Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -2016,7 +1952,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +1961,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2035,7 +1971,7 @@ is not provided, the provider project is used.
 <a href="#releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">pulumi.<wbr>Input<Cluster<wbr>Release<wbr>Channel<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -2052,7 +1988,7 @@ channel. Structure is documented below.
 <a href="#removedefaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Default<wbr>Node<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, deletes the default node
 pool upon cluster creation. If you're using `gcp.container.NodePool`
@@ -2064,7 +2000,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#resourcelabels_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2073,7 +2009,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#resourceusageexportconfig_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Usage<wbr>Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">pulumi.<wbr>Input<Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -2084,7 +2020,7 @@ Structure is documented below.
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
@@ -2094,7 +2030,7 @@ subnetwork in which the cluster's instances are launched.
 <a href="#verticalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">pulumi.<wbr>Input<Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -2104,7 +2040,7 @@ Structure is documented below.
 <a href="#workloadidentityconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">pulumi.<wbr>Input<Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -2119,7 +2055,7 @@ Structure is documented below.
 <a href="#addons_config_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -2129,7 +2065,7 @@ Structure is documented below.
 <a href="#authenticator_groups_config_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>groups_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Input[Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -2140,7 +2076,7 @@ Structure is documented below.
 <a href="#cluster_autoscaling_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">Input[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -2153,7 +2089,7 @@ for more details. Structure is documented below.
 <a href="#cluster_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Kubernetes pods
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
@@ -2165,7 +2101,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#cluster_telemetry_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">Input[Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -2176,7 +2112,7 @@ Structure is documented below.
 <a href="#confidential_nodes_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">Input[Cluster<wbr>Confidential<wbr>Nodes<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -2186,7 +2122,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#database_encryption_python" style="color: inherit; text-decoration: inherit;">database_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">Input[Cluster<wbr>Database<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2131,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#datapath_provider_python" style="color: inherit; text-decoration: inherit;">datapath_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2140,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#default_max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default maximum number of pods
 per node in this cluster. This doesn't work on "routes-based" clusters, clusters
@@ -2216,7 +2152,7 @@ for more information.
 <a href="#default_snat_status_python" style="color: inherit; text-decoration: inherit;">default_<wbr>snat_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">Input[Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2161,7 @@ for more information.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2170,7 @@ for more information.
 <a href="#enable_autopilot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>autopilot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
 Note that when this option is enabled, certain features of Standard GKE are not available.
@@ -2246,7 +2182,7 @@ for available features.
 <a href="#enable_binary_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binary_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
@@ -2256,7 +2192,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#enable_intranode_visibility_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>intranode_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2201,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#enable_kubernetes_alpha_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kubernetes_<wbr>alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
@@ -2276,7 +2212,7 @@ and will be automatically deleted after 30 days.
 <a href="#enable_l4_ilb_subsetting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>l4_<wbr>ilb_<wbr>subsetting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}})
 Whether L4ILB Subsetting is enabled for this cluster.
@@ -2286,7 +2222,7 @@ Whether L4ILB Subsetting is enabled for this cluster.
 <a href="#enable_legacy_abac_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>legacy_<wbr>abac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the ABAC authorizer is enabled for this cluster.
 When enabled, identities in the system, including service accounts, nodes, and controllers,
@@ -2298,7 +2234,7 @@ Defaults to `false`
 <a href="#enable_shielded_nodes_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>shielded_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2307,7 +2243,7 @@ Defaults to `false`
 <a href="#enable_tpu_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
@@ -2317,7 +2253,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -2331,7 +2267,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">Input[Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -2343,7 +2279,7 @@ below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
@@ -2357,7 +2293,7 @@ the region, and with default node locations in those zones as well
 <a href="#logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logging service that the cluster should
 write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
@@ -2368,7 +2304,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#maintenance_policy_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">Input[Cluster<wbr>Maintenance<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -2378,7 +2314,7 @@ documented below.
 <a href="#master_auth_python" style="color: inherit; text-decoration: inherit;">master_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">Input[Cluster<wbr>Master<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -2392,7 +2328,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#master_authorized_networks_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>networks_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Input[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -2403,7 +2339,7 @@ external access (except the cluster node IPs, which GKE automatically whitelists
 <a href="#min_master_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>master_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
@@ -2420,7 +2356,7 @@ describe the various acceptable formats for this field.
 <a href="#monitoring_service_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitoring service that the cluster
 should write metrics to.
@@ -2435,7 +2371,7 @@ Defaults to `monitoring.googleapis.com/kubernetes`
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 location.
@@ -2445,7 +2381,7 @@ location.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to which the cluster is connected. For Shared VPC, set this to the self link of the
@@ -2456,7 +2392,7 @@ shared network.
 <a href="#network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">Input[Cluster<wbr>Network<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -2467,7 +2403,7 @@ feature. Structure is documented below.
 <a href="#networking_mode_python" style="color: inherit; text-decoration: inherit;">networking_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
 Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -2478,7 +2414,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -2491,7 +2427,7 @@ Structure is documented below.
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -2503,7 +2439,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">Input[Cluster<wbr>Node<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusternodepool">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -2517,7 +2453,7 @@ gcp.container.NodePool resource instead of this property.
 <a href="#node_version_python" style="color: inherit; text-decoration: inherit;">node_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes version on the nodes. Must either be unset
 or set to the same value as `min_master_version` on create. Defaults to the default
@@ -2533,7 +2469,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">Input[Cluster<wbr>Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification config for sending cluster upgrade notifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -2542,7 +2478,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#pod_security_policy_config_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Input[Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -2553,7 +2489,7 @@ Structure is documented below.
 <a href="#private_cluster_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">Input[Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -2563,7 +2499,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2572,7 +2508,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2582,7 +2518,7 @@ is not provided, the provider project is used.
 <a href="#release_channel_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">Input[Cluster<wbr>Release<wbr>Channel<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -2599,7 +2535,7 @@ channel. Structure is documented below.
 <a href="#remove_default_node_pool_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>default_<wbr>node_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, deletes the default node
 pool upon cluster creation. If you're using `gcp.container.NodePool`
@@ -2611,7 +2547,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#resource_labels_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2556,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#resource_usage_export_config_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>usage_<wbr>export_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">Input[Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -2631,7 +2567,7 @@ Structure is documented below.
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
@@ -2641,7 +2577,7 @@ subnetwork in which the cluster's instances are launched.
 <a href="#vertical_pod_autoscaling_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>pod_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">Input[Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -2651,7 +2587,7 @@ Structure is documented below.
 <a href="#workload_identity_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">Input[Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -3038,78 +2974,20 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAddonsConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterAuthenticatorGroupsConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterClusterAutoscalingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterClusterTelemetryArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterConfidentialNodesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterDatabaseEncryptionArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterDefaultSnatStatusArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterIpAllocationPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMaintenancePolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterAuthArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterMasterAuthorizedNetworksConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterNetworkPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterNodeConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClusterNodePoolArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterNotificationConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterPodSecurityPolicyConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterPrivateClusterConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterReleaseChannelArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterResourceUsageExportConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterVerticalPodAutoscalingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterWorkloadIdentityConfigArgs]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAddonsConfigArgs]</span> = None<span class="p">, </span><span class="nx">authenticator_groups_config</span><span class="p">:</span> <span class="nx">Optional[ClusterAuthenticatorGroupsConfigArgs]</span> = None<span class="p">, </span><span class="nx">cluster_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">cluster_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_telemetry</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterTelemetryArgs]</span> = None<span class="p">, </span><span class="nx">confidential_nodes</span><span class="p">:</span> <span class="nx">Optional[ClusterConfidentialNodesArgs]</span> = None<span class="p">, </span><span class="nx">database_encryption</span><span class="p">:</span> <span class="nx">Optional[ClusterDatabaseEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">datapath_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">default_snat_status</span><span class="p">:</span> <span class="nx">Optional[ClusterDefaultSnatStatusArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_autopilot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_binary_authorization</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_intranode_visibility</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_kubernetes_alpha</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_l4_ilb_subsetting</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_legacy_abac</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_shielded_nodes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_tpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_group_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_allocation_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterIpAllocationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterMaintenancePolicyArgs]</span> = None<span class="p">, </span><span class="nx">master_auth</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthArgs]</span> = None<span class="p">, </span><span class="nx">master_authorized_networks_config</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterAuthorizedNetworksConfigArgs]</span> = None<span class="p">, </span><span class="nx">master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_master_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_policy</span><span class="p">:</span> <span class="nx">Optional[ClusterNetworkPolicyArgs]</span> = None<span class="p">, </span><span class="nx">networking_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterNodePoolArgs]]</span> = None<span class="p">, </span><span class="nx">node_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[ClusterNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_security_policy_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPodSecurityPolicyConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterPrivateClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_channel</span><span class="p">:</span> <span class="nx">Optional[ClusterReleaseChannelArgs]</span> = None<span class="p">, </span><span class="nx">remove_default_node_pool</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_usage_export_config</span><span class="p">:</span> <span class="nx">Optional[ClusterResourceUsageExportConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services_ipv4_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tpu_ipv4_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vertical_pod_autoscaling</span><span class="p">:</span> <span class="nx">Optional[ClusterVerticalPodAutoscalingArgs]</span> = None<span class="p">, </span><span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[ClusterWorkloadIdentityConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4470,7 +4348,7 @@ Structure is documented below.
 <a href="#state_addonsconfig_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -4480,7 +4358,7 @@ Structure is documented below.
 <a href="#state_authenticatorgroupsconfig_nodejs" style="color: inherit; text-decoration: inherit;">authenticator<wbr>Groups<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">pulumi.<wbr>Input<Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -4491,7 +4369,7 @@ Structure is documented below.
 <a href="#state_clusterautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">pulumi.<wbr>Input<Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -4504,7 +4382,7 @@ for more details. Structure is documented below.
 <a href="#state_clusteripv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Kubernetes pods
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
@@ -4516,7 +4394,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#state_clustertelemetry_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">pulumi.<wbr>Input<Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -4527,7 +4405,7 @@ Structure is documented below.
 <a href="#state_confidentialnodes_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">pulumi.<wbr>Input<Cluster<wbr>Confidential<wbr>Nodes<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -4537,7 +4415,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_databaseencryption_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">pulumi.<wbr>Input<Cluster<wbr>Database<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4546,7 +4424,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_datapathprovider_nodejs" style="color: inherit; text-decoration: inherit;">datapath<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4555,7 +4433,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_defaultmaxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default maximum number of pods
 per node in this cluster. This doesn't work on "routes-based" clusters, clusters
@@ -4567,7 +4445,7 @@ for more information.
 <a href="#state_defaultsnatstatus_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Snat<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">pulumi.<wbr>Input<Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4576,7 +4454,7 @@ for more information.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4585,7 +4463,7 @@ for more information.
 <a href="#state_enableautopilot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Autopilot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
 Note that when this option is enabled, certain features of Standard GKE are not available.
@@ -4597,7 +4475,7 @@ for available features.
 <a href="#state_enablebinaryauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binary<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
@@ -4607,7 +4485,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#state_enableintranodevisibility_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Intranode<wbr>Visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4616,7 +4494,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#state_enablekubernetesalpha_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kubernetes<wbr>Alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
@@ -4627,7 +4505,7 @@ and will be automatically deleted after 30 days.
 <a href="#state_enablel4ilbsubsetting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>L4Ilb<wbr>Subsetting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}})
 Whether L4ILB Subsetting is enabled for this cluster.
@@ -4637,7 +4515,7 @@ Whether L4ILB Subsetting is enabled for this cluster.
 <a href="#state_enablelegacyabac_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Legacy<wbr>Abac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the ABAC authorizer is enabled for this cluster.
 When enabled, identities in the system, including service accounts, nodes, and controllers,
@@ -4649,7 +4527,7 @@ Defaults to `false`
 <a href="#state_enableshieldednodes_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Shielded<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4658,7 +4536,7 @@ Defaults to `false`
 <a href="#state_enabletpu_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Tpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
@@ -4668,7 +4546,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of this cluster's Kubernetes master.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4677,7 +4555,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#state_initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -4691,7 +4569,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#state_instancegroupurls_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -4701,7 +4579,7 @@ to the cluster.
 <a href="#state_ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">pulumi.<wbr>Input<Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -4713,7 +4591,7 @@ below.
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the set of labels for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4722,7 +4600,7 @@ below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
@@ -4736,7 +4614,7 @@ the region, and with default node locations in those zones as well
 <a href="#state_loggingservice_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logging service that the cluster should
 write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
@@ -4747,7 +4625,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#state_maintenancepolicy_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">pulumi.<wbr>Input<Cluster<wbr>Maintenance<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -4757,7 +4635,7 @@ documented below.
 <a href="#state_masterauth_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Auth<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -4771,7 +4649,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#state_masterauthorizednetworksconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Authorized<wbr>Networks<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -4782,7 +4660,7 @@ external access (except the cluster node IPs, which GKE automatically whitelists
 <a href="#state_masterversion_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the master in the cluster. This may
 be different than the `min_master_version` set in the config if the master
@@ -4793,7 +4671,7 @@ has been updated by GKE.
 <a href="#state_minmasterversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Master<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
@@ -4810,7 +4688,7 @@ describe the various acceptable formats for this field.
 <a href="#state_monitoringservice_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitoring service that the cluster
 should write metrics to.
@@ -4825,7 +4703,7 @@ Defaults to `monitoring.googleapis.com/kubernetes`
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 location.
@@ -4835,7 +4713,7 @@ location.
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to which the cluster is connected. For Shared VPC, set this to the self link of the
@@ -4846,7 +4724,7 @@ shared network.
 <a href="#state_networkpolicy_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">pulumi.<wbr>Input<Cluster<wbr>Network<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -4857,7 +4735,7 @@ feature. Structure is documented below.
 <a href="#state_networkingmode_nodejs" style="color: inherit; text-decoration: inherit;">networking<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
 Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -4868,7 +4746,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#state_nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -4881,7 +4759,7 @@ Structure is documented below.
 <a href="#state_nodelocations_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -4893,7 +4771,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#state_nodepools_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusternodepool">Cluster<wbr>Node<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -4907,7 +4785,7 @@ gcp.container.NodePool resource instead of this property.
 <a href="#state_nodeversion_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes version on the nodes. Must either be unset
 or set to the same value as `min_master_version` on create. Defaults to the default
@@ -4923,7 +4801,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">pulumi.<wbr>Input<Cluster<wbr>Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The notification config for sending cluster upgrade notifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -4932,7 +4810,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4940,7 +4818,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_podsecuritypolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Security<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">pulumi.<wbr>Input<Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -4951,7 +4829,7 @@ Structure is documented below.
 <a href="#state_privateclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">pulumi.<wbr>Input<Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -4961,7 +4839,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#state_privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4970,7 +4848,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -4980,7 +4858,7 @@ is not provided, the provider project is used.
 <a href="#state_releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">pulumi.<wbr>Input<Cluster<wbr>Release<wbr>Channel<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -4997,7 +4875,7 @@ channel. Structure is documented below.
 <a href="#state_removedefaultnodepool_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Default<wbr>Node<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, deletes the default node
 pool upon cluster creation. If you're using `gcp.container.NodePool`
@@ -5009,7 +4887,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#state_resourcelabels_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5018,7 +4896,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#state_resourceusageexportconfig_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Usage<wbr>Export<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">pulumi.<wbr>Input<Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -5029,7 +4907,7 @@ Structure is documented below.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5038,7 +4916,7 @@ Structure is documented below.
 <a href="#state_servicesipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Kubernetes services in this
 cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
@@ -5050,7 +4928,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
 <a href="#state_subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
@@ -5060,7 +4938,7 @@ subnetwork in which the cluster's instances are launched.
 <a href="#state_tpuipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">tpu<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
 [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
@@ -5071,7 +4949,7 @@ notation (e.g. `1.2.3.4/29`).
 <a href="#state_verticalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">pulumi.<wbr>Input<Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -5081,7 +4959,7 @@ Structure is documented below.
 <a href="#state_workloadidentityconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">pulumi.<wbr>Input<Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -5096,7 +4974,7 @@ Structure is documented below.
 <a href="#state_addons_config_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for addons supported by GKE.
 Structure is documented below.
@@ -5106,7 +4984,7 @@ Structure is documented below.
 <a href="#state_authenticator_groups_config_python" style="color: inherit; text-decoration: inherit;">authenticator_<wbr>groups_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Input[Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [Google Groups for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control#groups-setup-gsuite) feature.
@@ -5117,7 +4995,7 @@ Structure is documented below.
 <a href="#state_cluster_autoscaling_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscaling">Input[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster configuration of Node Auto-Provisioning with Cluster Autoscaler to
 automatically adjust the size of the cluster and create/delete node pools based
@@ -5130,7 +5008,7 @@ for more details. Structure is documented below.
 <a href="#state_cluster_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Kubernetes pods
 in this cluster in CIDR notation (e.g. `10.96.0.0/14`). Leave blank to have one
@@ -5142,7 +5020,7 @@ only work for routes-based clusters, where `ip_allocation_policy` is not defined
 <a href="#state_cluster_telemetry_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>telemetry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclustertelemetry">Input[Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclustertelemetry">Cluster<wbr>Cluster<wbr>Telemetry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for
 [ClusterTelemetry](https://cloud.google.com/monitoring/kubernetes-engine/installing#controlling_the_collection_of_application_logs) feature,
@@ -5153,7 +5031,7 @@ Structure is documented below.
 <a href="#state_confidential_nodes_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterconfidentialnodes">Input[Cluster<wbr>Confidential<wbr>Nodes<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterconfidentialnodes">Cluster<wbr>Confidential<wbr>Nodes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration
 can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster.
@@ -5163,7 +5041,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_database_encryption_python" style="color: inherit; text-decoration: inherit;">database_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdatabaseencryption">Input[Cluster<wbr>Database<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5172,7 +5050,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_datapath_provider_python" style="color: inherit; text-decoration: inherit;">datapath_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5181,7 +5059,7 @@ can't be changed (or added/removed) after cluster creation without deleting and 
 <a href="#state_default_max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">default_<wbr>max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default maximum number of pods
 per node in this cluster. This doesn't work on "routes-based" clusters, clusters
@@ -5193,7 +5071,7 @@ for more information.
 <a href="#state_default_snat_status_python" style="color: inherit; text-decoration: inherit;">default_<wbr>snat_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultsnatstatus">Input[Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterdefaultsnatstatus">Cluster<wbr>Default<wbr>Snat<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5202,7 +5080,7 @@ for more information.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5211,7 +5089,7 @@ for more information.
 <a href="#state_enable_autopilot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>autopilot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Autopilot for this cluster. Defaults to `false`.
 Note that when this option is enabled, certain features of Standard GKE are not available.
@@ -5223,7 +5101,7 @@ for available features.
 <a href="#state_enable_binary_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binary_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
@@ -5233,7 +5111,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#state_enable_intranode_visibility_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>intranode_<wbr>visibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5242,7 +5120,7 @@ If enabled, all container images will be validated by Google Binary Authorizatio
 <a href="#state_enable_kubernetes_alpha_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kubernetes_<wbr>alpha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Kubernetes Alpha features for
 this cluster. Note that when this option is enabled, the cluster cannot be upgraded
@@ -5253,7 +5131,7 @@ and will be automatically deleted after 30 days.
 <a href="#state_enable_l4_ilb_subsetting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>l4_<wbr>ilb_<wbr>subsetting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}})
 Whether L4ILB Subsetting is enabled for this cluster.
@@ -5263,7 +5141,7 @@ Whether L4ILB Subsetting is enabled for this cluster.
 <a href="#state_enable_legacy_abac_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>legacy_<wbr>abac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the ABAC authorizer is enabled for this cluster.
 When enabled, identities in the system, including service accounts, nodes, and controllers,
@@ -5275,7 +5153,7 @@ Defaults to `false`
 <a href="#state_enable_shielded_nodes_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>shielded_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5284,7 +5162,7 @@ Defaults to `false`
 <a href="#state_enable_tpu_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>tpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Cloud TPU resources in this cluster.
 See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
@@ -5294,7 +5172,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of this cluster's Kubernetes master.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5303,7 +5181,7 @@ See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-en
 <a href="#state_initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -5317,7 +5195,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#state_instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -5327,7 +5205,7 @@ to the cluster.
 <a href="#state_ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteripallocationpolicy">Input[Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of cluster IP allocation for
 VPC-native clusters. Adding this block enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -5339,7 +5217,7 @@ below.
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the set of labels for this cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5348,7 +5226,7 @@ below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location (region or zone) in which the cluster
 master will be created, as well as the default node location. If you specify a
@@ -5362,7 +5240,7 @@ the region, and with default node locations in those zones as well
 <a href="#state_logging_service_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logging service that the cluster should
 write logs to. Available options include `logging.googleapis.com`(Legacy Stackdriver),
@@ -5373,7 +5251,7 @@ write logs to. Available options include `logging.googleapis.com`(Legacy Stackdr
 <a href="#state_maintenance_policy_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicy">Input[Cluster<wbr>Maintenance<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The maintenance policy to use for the cluster. Structure is
 documented below.
@@ -5383,7 +5261,7 @@ documented below.
 <a href="#state_master_auth_python" style="color: inherit; text-decoration: inherit;">master_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauth">Input[Cluster<wbr>Master<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauth">Cluster<wbr>Master<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information for accessing the
 Kubernetes master. Some values in this block are only returned by the API if
@@ -5397,7 +5275,7 @@ Structure is documented below. This has been deprecated as of GKE 1.19.
 <a href="#state_master_authorized_networks_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>authorized_<wbr>networks_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Input[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The desired configuration options
 for master authorized networks. Omit the nested `cidr_blocks` attribute to disallow
@@ -5408,7 +5286,7 @@ external access (except the cluster node IPs, which GKE automatically whitelists
 <a href="#state_master_version_python" style="color: inherit; text-decoration: inherit;">master_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the master in the cluster. This may
 be different than the `min_master_version` set in the config if the master
@@ -5419,7 +5297,7 @@ has been updated by GKE.
 <a href="#state_min_master_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>master_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum version of the master. GKE
 will auto-update the master to new versions, so this does not guarantee the
@@ -5436,7 +5314,7 @@ describe the various acceptable formats for this field.
 <a href="#state_monitoring_service_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitoring service that the cluster
 should write metrics to.
@@ -5451,7 +5329,7 @@ Defaults to `monitoring.googleapis.com/kubernetes`
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 location.
@@ -5461,7 +5339,7 @@ location.
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to which the cluster is connected. For Shared VPC, set this to the self link of the
@@ -5472,7 +5350,7 @@ shared network.
 <a href="#state_network_policy_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternetworkpolicy">Input[Cluster<wbr>Network<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the
 [NetworkPolicy](https://kubernetes.io/docs/concepts/services-networking/networkpolicies/)
@@ -5483,7 +5361,7 @@ feature. Structure is documented below.
 <a href="#state_networking_mode_python" style="color: inherit; text-decoration: inherit;">networking_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines whether alias IPs or routes will be used for pod IPs in the cluster.
 Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
@@ -5494,7 +5372,7 @@ and requires the `ip_allocation_policy` block to be defined. By default when thi
 <a href="#state_node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -5507,7 +5385,7 @@ Structure is documented below.
 <a href="#state_node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -5519,7 +5397,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#state_node_pools_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepool">Input[Cluster<wbr>Node<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusternodepool">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of node pools associated with this cluster.
 See gcp.container.NodePool for schema.
@@ -5533,7 +5411,7 @@ gcp.container.NodePool resource instead of this property.
 <a href="#state_node_version_python" style="color: inherit; text-decoration: inherit;">node_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes version on the nodes. Must either be unset
 or set to the same value as `min_master_version` on create. Defaults to the default
@@ -5549,7 +5427,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfig">Input[Cluster<wbr>Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternotificationconfig">Cluster<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The notification config for sending cluster upgrade notifications
 {{% /md %}}</dd><dt class="property-optional"
@@ -5558,7 +5436,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5566,7 +5444,7 @@ To update nodes in other node pools, use the `version` attribute on the node poo
 <a href="#state_pod_security_policy_config_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>security_<wbr>policy_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Input[Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
@@ -5577,7 +5455,7 @@ Structure is documented below.
 <a href="#state_private_cluster_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfig">Input[Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
 clusters with private nodes. Structure is documented below.
@@ -5587,7 +5465,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#state_private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5596,7 +5474,7 @@ clusters with private nodes. Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -5606,7 +5484,7 @@ is not provided, the provider project is used.
 <a href="#state_release_channel_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreleasechannel">Input[Cluster<wbr>Release<wbr>Channel<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterreleasechannel">Cluster<wbr>Release<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for the [Release channel](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels)
 feature, which provide more control over automatic upgrades of your GKE clusters.
@@ -5623,7 +5501,7 @@ channel. Structure is documented below.
 <a href="#state_remove_default_node_pool_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>default_<wbr>node_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, deletes the default node
 pool upon cluster creation. If you're using `gcp.container.NodePool`
@@ -5635,7 +5513,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#state_resource_labels_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5644,7 +5522,7 @@ setting `initial_node_count` to at least `1`.
 <a href="#state_resource_usage_export_config_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>usage_<wbr>export_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfig">Input[Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the
 [ResourceUsageExportConfig](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-usage-metering) feature.
@@ -5655,7 +5533,7 @@ Structure is documented below.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-defined URL for the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5664,7 +5542,7 @@ Structure is documented below.
 <a href="#state_services_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Kubernetes services in this
 cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
@@ -5676,7 +5554,7 @@ notation (e.g. `1.2.3.4/29`). Service addresses are typically put in the last
 <a href="#state_subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork in which the cluster's instances are launched.
@@ -5686,7 +5564,7 @@ subnetwork in which the cluster's instances are launched.
 <a href="#state_tpu_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">tpu_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the Cloud TPUs in this cluster, in
 [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
@@ -5697,7 +5575,7 @@ notation (e.g. `1.2.3.4/29`).
 <a href="#state_vertical_pod_autoscaling_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>pod_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterverticalpodautoscaling">Input[Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
 Structure is documented below.
@@ -5707,7 +5585,7 @@ Structure is documented below.
 <a href="#state_workload_identity_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterworkloadidentityconfig">Input[Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Workload Identity allows Kubernetes service accounts to act as a user-managed
 [Google IAM Service Account](https://cloud.google.com/iam/docs/service-accounts#user-managed_service_accounts).
@@ -5939,7 +5817,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#cloudrunconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloudrun<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5948,7 +5826,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#configconnectorconfig_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Connector<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
@@ -5958,7 +5836,7 @@ The status of the ConfigConnector addon. It is disabled by default; Set `enabled
 <a href="#dnscacheconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Cache<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the NodeLocal DNSCache addon. It is disabled by default.
@@ -5969,7 +5847,7 @@ Set `enabled = true` to enable.
 <a href="#gcepersistentdiskcsidriverconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
@@ -5979,7 +5857,7 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
 <a href="#horizontalpodautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Pod<wbr>Autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
@@ -5993,7 +5871,7 @@ set `disabled = true` to disable.
 <a href="#httploadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</a></span>
     </dt>
     <dd>{{% md %}}The status of the HTTP (L7) load balancing
 controller addon, which makes it easy to set up HTTP load balancers for services in a
@@ -6004,7 +5882,7 @@ cluster. It is enabled by default; set `disabled = true` to disable.
 <a href="#istioconfig_nodejs" style="color: inherit; text-decoration: inherit;">istio<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Structure is documented below.
@@ -6014,7 +5892,7 @@ Structure is documented below.
 <a href="#kalmconfig_nodejs" style="color: inherit; text-decoration: inherit;">kalm<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}.
 Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
@@ -6024,7 +5902,7 @@ Configuration for the KALM addon, which manages the lifecycle of k8s. It is disa
 <a href="#networkpolicyconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Policy<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">pulumi.<wbr>Input<Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
@@ -6042,7 +5920,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#cloudrun_config_python" style="color: inherit; text-decoration: inherit;">cloudrun_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6051,7 +5929,7 @@ Defaults to disabled; set `disabled = false` to enable.
 <a href="#config_connector_config_python" style="color: inherit; text-decoration: inherit;">config_<wbr>connector_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigconfigconnectorconfig">Cluster<wbr>Addons<wbr>Config<wbr>Config<wbr>Connector<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
@@ -6061,7 +5939,7 @@ The status of the ConfigConnector addon. It is disabled by default; Set `enabled
 <a href="#dns_cache_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>cache_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 The status of the NodeLocal DNSCache addon. It is disabled by default.
@@ -6072,7 +5950,7 @@ Set `enabled = true` to enable.
 <a href="#gce_persistent_disk_csi_driver_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk_<wbr>csi_<wbr>driver_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfiggcepersistentdiskcsidriverconfig">Cluster<wbr>Addons<wbr>Config<wbr>Gce<wbr>Persistent<wbr>Disk<wbr>Csi<wbr>Driver<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
@@ -6082,7 +5960,7 @@ Whether this cluster should enable the Google Compute Engine Persistent Disk Con
 <a href="#horizontal_pod_autoscaling_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>pod_<wbr>autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Input[Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the Horizontal Pod Autoscaling
 addon, which increases or decreases the number of replica pods a replication controller
@@ -6096,7 +5974,7 @@ set `disabled = true` to disable.
 <a href="#http_load_balancing_python" style="color: inherit; text-decoration: inherit;">http_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Input[Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The status of the HTTP (L7) load balancing
 controller addon, which makes it easy to set up HTTP load balancers for services in a
@@ -6107,7 +5985,7 @@ cluster. It is enabled by default; set `disabled = true` to disable.
 <a href="#istio_config_python" style="color: inherit; text-decoration: inherit;">istio_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 Structure is documented below.
@@ -6117,7 +5995,7 @@ Structure is documented below.
 <a href="#kalm_config_python" style="color: inherit; text-decoration: inherit;">kalm_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfigkalmconfig">Cluster<wbr>Addons<wbr>Config<wbr>Kalm<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}.
 Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
@@ -6127,7 +6005,7 @@ Configuration for the KALM addon, which manages the lifecycle of k8s. It is disa
 <a href="#network_policy_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>policy_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Input[Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether we should enable the network policy addon
 for the master.  This must be enabled in order to enable network policy for the nodes.
@@ -6195,7 +6073,7 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6205,7 +6083,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer type of CloudRun ingress service. It is external load balancer by default.
 Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
@@ -6219,7 +6097,7 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6229,7 +6107,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer type of CloudRun ingress service. It is external load balancer by default.
 Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
@@ -6273,7 +6151,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6287,7 +6165,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6331,7 +6209,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6345,7 +6223,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6389,7 +6267,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6403,7 +6281,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6447,7 +6325,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6461,7 +6339,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6505,7 +6383,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6519,7 +6397,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6581,7 +6459,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6591,7 +6469,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
 {{% /md %}}</dd></dl>
@@ -6604,7 +6482,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6614,7 +6492,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
 {{% /md %}}</dd></dl>
@@ -6657,7 +6535,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6671,7 +6549,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6715,7 +6593,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6729,7 +6607,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -6771,7 +6649,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
 {{% /md %}}</dd></dl>
@@ -6784,7 +6662,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#security_group_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
 {{% /md %}}</dd></dl>
@@ -6895,7 +6773,7 @@ in addition to node auto-provisioning. Structure is documented below.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6905,7 +6783,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#autoprovisioningdefaults_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">pulumi.<wbr>Input<Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}Contains defaults for a node pool created by NAP.
 Structure is documented below.
@@ -6915,7 +6793,7 @@ Structure is documented below.
 <a href="#autoscalingprofile_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}) Configuration
 options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
@@ -6927,7 +6805,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit[]</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -6943,7 +6821,7 @@ in addition to node auto-provisioning. Structure is documented below.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -6953,7 +6831,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#auto_provisioning_defaults_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Input[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains defaults for a node pool created by NAP.
 Structure is documented below.
@@ -6963,7 +6841,7 @@ Structure is documented below.
 <a href="#autoscaling_profile_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}) Configuration
 options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
@@ -6975,7 +6853,7 @@ when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTI
 <a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Input[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusterclusterautoscalingresourcelimit">Sequence[Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Global constraints for machine resources in the
 cluster. Configuring the `cpu` and `memory` types is required if node
@@ -7069,7 +6947,7 @@ If not specified, the "default" service account is used.
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance.
 The instance may be scheduled on the specified or newer CPU platform. Applicable
@@ -7082,7 +6960,7 @@ for more information.
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account.
@@ -7093,7 +6971,7 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
@@ -7107,7 +6985,7 @@ If not specified, the "default" service account is used.
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance.
 The instance may be scheduled on the specified or newer CPU platform. Applicable
@@ -7120,7 +6998,7 @@ for more information.
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account.
@@ -7131,7 +7009,7 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
@@ -7213,7 +7091,7 @@ for a list of types.
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. For example, `cpu` and
 `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -7224,7 +7102,7 @@ for a list of types.
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum amount of the resource in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7233,7 +7111,7 @@ for a list of types.
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum amount of the resource in the cluster.
 {{% /md %}}</dd></dl>
@@ -7246,7 +7124,7 @@ for a list of types.
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. For example, `cpu` and
 `memory`.  See the [guide to using Node Auto-Provisioning](https://cloud.google.com/kubernetes-engine/docs/how-to/node-auto-provisioning)
@@ -7257,7 +7135,7 @@ for a list of types.
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum amount of the resource in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7266,7 +7144,7 @@ for a list of types.
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum amount of the resource in the cluster.
 {{% /md %}}</dd></dl>
@@ -7307,7 +7185,7 @@ for a list of types.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -7320,7 +7198,7 @@ for a list of types.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -7363,7 +7241,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -7377,7 +7255,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -7437,7 +7315,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`ENCRYPTED` or `DECRYPTED`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7446,7 +7324,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
 {{% /md %}}</dd></dl>
@@ -7459,7 +7337,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`ENCRYPTED` or `DECRYPTED`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7468,7 +7346,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
 {{% /md %}}</dd></dl>
@@ -7511,7 +7389,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -7525,7 +7403,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The status of the Istio addon, which makes it easy to set up Istio for services in a
 cluster. It is disabled by default. Set `disabled = false` to enable.
@@ -7647,7 +7525,7 @@ GKE-managed one.
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range for the cluster pod IPs.
 Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
@@ -7660,7 +7538,7 @@ pick a specific range to use.
 <a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the existing secondary
 range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
@@ -7671,7 +7549,7 @@ range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address range of the services IPs in this cluster.
 Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
@@ -7684,7 +7562,7 @@ pick a specific range to use.
 <a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the existing
 secondary range in the cluster's subnetwork to use for service `ClusterIP`s.
@@ -7700,7 +7578,7 @@ GKE-managed one.
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range for the cluster pod IPs.
 Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
@@ -7713,7 +7591,7 @@ pick a specific range to use.
 <a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the existing secondary
 range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
@@ -7724,7 +7602,7 @@ range in the cluster's subnetwork to use for pod IP addresses. Alternatively,
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address range of the services IPs in this cluster.
 Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14)
@@ -7737,7 +7615,7 @@ pick a specific range to use.
 <a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the existing
 secondary range in the cluster's subnetwork to use for service `ClusterIP`s.
@@ -7821,7 +7699,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#dailymaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">pulumi.<wbr>Input<Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window specified for daily maintenance operations.
 Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
@@ -7832,7 +7710,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#maintenanceexclusions_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7841,7 +7719,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurringwindow_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">pulumi.<wbr>Input<Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd></dl>
@@ -7854,7 +7732,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#daily_maintenance_window_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Input[Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time window specified for daily maintenance operations.
 Specify `start_time` in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”,
@@ -7865,7 +7743,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#maintenance_exclusions_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Input[Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicymaintenanceexclusion">Sequence[Cluster<wbr>Maintenance<wbr>Policy<wbr>Maintenance<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
 {{% /md %}}</dd><dt class="property-optional"
@@ -7874,7 +7752,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurring_window_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Input[Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time window for recurring maintenance operations.
 {{% /md %}}</dd></dl>
@@ -7929,7 +7807,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7937,7 +7815,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7949,7 +7827,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7957,7 +7835,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8027,7 +7905,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8035,7 +7913,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#exclusionname_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8043,7 +7921,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8055,7 +7933,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8063,7 +7941,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#exclusion_name_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8071,7 +7949,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8141,7 +8019,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8149,7 +8027,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8157,7 +8035,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8169,7 +8047,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8177,7 +8055,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8185,7 +8063,7 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8313,7 +8191,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8321,7 +8199,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#clientcertificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Whether client certificate authorization is enabled for this cluster.  For example:
 {{% /md %}}</dd><dt class="property-optional"
@@ -8330,7 +8208,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8338,7 +8216,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#clustercacertificate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8346,7 +8224,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use for HTTP basic authentication when accessing
 the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
@@ -8356,7 +8234,7 @@ the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use for HTTP basic authentication when accessing
 the Kubernetes master endpoint. If not present basic auth will be disabled. This has been deprecated as of GKE 1.19.
@@ -8370,7 +8248,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8378,7 +8256,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#client_certificate_config_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Input[Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Whether client certificate authorization is enabled for this cluster.  For example:
 {{% /md %}}</dd><dt class="property-optional"
@@ -8387,7 +8265,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8395,7 +8273,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#cluster_ca_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8403,7 +8281,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to use for HTTP basic authentication when accessing
 the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
@@ -8413,7 +8291,7 @@ the Kubernetes master endpoint. This has been deprecated as of GKE 1.19.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to use for HTTP basic authentication when accessing
 the Kubernetes master endpoint. If not present basic auth will be disabled. This has been deprecated as of GKE 1.19.
@@ -8453,7 +8331,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#issueclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8465,7 +8343,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 <a href="#issue_client_certificate_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8507,7 +8385,7 @@ Kubernetes cluster master through HTTPS.
 <a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block[]</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -8521,7 +8399,7 @@ Kubernetes cluster master through HTTPS.
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Input[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clustermasterauthorizednetworksconfigcidrblock">Sequence[Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}External networks that can access the
 Kubernetes cluster master through HTTPS.
@@ -8583,7 +8461,7 @@ Must be specified in CIDR notation.
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External network that can access Kubernetes master through HTTPS.
 Must be specified in CIDR notation.
@@ -8593,7 +8471,7 @@ Must be specified in CIDR notation.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field for users to identify CIDR blocks.
 {{% /md %}}</dd></dl>
@@ -8606,7 +8484,7 @@ Must be specified in CIDR notation.
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External network that can access Kubernetes master through HTTPS.
 Must be specified in CIDR notation.
@@ -8616,7 +8494,7 @@ Must be specified in CIDR notation.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field for users to identify CIDR blocks.
 {{% /md %}}</dd></dl>
@@ -8677,7 +8555,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -8687,7 +8565,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
 {{% /md %}}</dd></dl>
@@ -8700,7 +8578,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -8710,7 +8588,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
 {{% /md %}}</dd></dl>
@@ -9177,7 +9055,7 @@ Structure is documented below.
 <a href="#bootdiskkmskey_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -9186,7 +9064,7 @@ Structure is documented below.
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified
 in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
@@ -9196,7 +9074,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
@@ -9206,7 +9084,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9215,7 +9093,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -9225,7 +9103,7 @@ Structure documented below.
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that changing the image type
 will delete and recreate all nodes in the node pool.
@@ -9235,7 +9113,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -9245,7 +9123,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
 reserved by Kubernetes Core components and cannot be specified.
@@ -9255,7 +9133,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -9266,7 +9144,7 @@ Structure is documented below.
 <a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9275,7 +9153,7 @@ Structure is documented below.
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type.
 Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
@@ -9286,7 +9164,7 @@ Defaults to `e2-medium`. To create a custom machine type, value should be set as
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in
 the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
@@ -9299,7 +9177,7 @@ value in your config.
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance.
 The instance may be scheduled on the specified or newer CPU platform. Applicable
@@ -9312,7 +9190,7 @@ for more information.
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account.
@@ -9323,7 +9201,7 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that represents whether or not the underlying node VMs
 are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
@@ -9334,7 +9212,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -9344,7 +9222,7 @@ Structure is documented below.
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
@@ -9354,7 +9232,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9363,7 +9241,7 @@ If not specified, the "default" service account is used.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify
 valid sources or targets for network firewalls.
@@ -9373,7 +9251,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">Cluster<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -9389,7 +9267,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -9403,7 +9281,7 @@ Structure is documented below.
 <a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -9412,7 +9290,7 @@ Structure is documented below.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified
 in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
@@ -9422,7 +9300,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
@@ -9432,7 +9310,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9441,7 +9319,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Input[Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -9451,7 +9329,7 @@ Structure documented below.
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that changing the image type
 will delete and recreate all nodes in the node pool.
@@ -9461,7 +9339,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -9471,7 +9349,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
 reserved by Kubernetes Core components and cannot be specified.
@@ -9481,7 +9359,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -9492,7 +9370,7 @@ Structure is documented below.
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9501,7 +9379,7 @@ Structure is documented below.
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type.
 Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
@@ -9512,7 +9390,7 @@ Defaults to `e2-medium`. To create a custom machine type, value should be set as
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in
 the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
@@ -9525,7 +9403,7 @@ value in your config.
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance.
 The instance may be scheduled on the specified or newer CPU platform. Applicable
@@ -9538,7 +9416,7 @@ for more information.
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account.
@@ -9549,7 +9427,7 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that represents whether or not the underlying node VMs
 are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
@@ -9560,7 +9438,7 @@ for more information. Defaults to false.
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -9570,7 +9448,7 @@ Structure is documented below.
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
@@ -9580,7 +9458,7 @@ If not specified, the "default" service account is used.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9589,7 +9467,7 @@ If not specified, the "default" service account is used.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify
 valid sources or targets for network firewalls.
@@ -9599,7 +9477,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigtaint">Input[Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -9615,7 +9493,7 @@ recommended. Structure is documented below.
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Input[Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -9657,7 +9535,7 @@ Structure is documented below.
 <a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd></dl>
@@ -9670,7 +9548,7 @@ Structure is documented below.
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd></dl>
@@ -9729,7 +9607,7 @@ Structure is documented below.
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -9738,7 +9616,7 @@ Structure is documented below.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -9751,7 +9629,7 @@ Structure is documented below.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -9760,7 +9638,7 @@ Structure is documented below.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -9849,7 +9727,7 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 <a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU management policy on the node. See
 [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
@@ -9860,7 +9738,7 @@ One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset
 <a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enables CPU CFS quota enforcement for
 containers that specify CPU limits.
@@ -9870,7 +9748,7 @@ containers that specify CPU limits.
 <a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU CFS quota period value. Specified
 as a sequence of decimal numbers, each with optional fraction and a unit suffix,
@@ -9886,7 +9764,7 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 <a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU management policy on the node. See
 [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
@@ -9897,7 +9775,7 @@ One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset
 <a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables CPU CFS quota enforcement for
 containers that specify CPU limits.
@@ -9907,7 +9785,7 @@ containers that specify CPU limits.
 <a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU CFS quota period value. Specified
 as a sequence of decimal numbers, each with optional fraction and a unit suffix,
@@ -9955,7 +9833,7 @@ and all pods running on the nodes. Specified as a map from the key, such as
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes
 and all pods running on the nodes. Specified as a map from the key, such as
@@ -9970,7 +9848,7 @@ and all pods running on the nodes. Specified as a map from the key, such as
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes
 and all pods running on the nodes. Specified as a map from the key, such as
@@ -10015,7 +9893,7 @@ Accepted values are:
 <a href="#sandboxtype_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which sandbox to use for pods in the node pool.
 Accepted values are:
@@ -10029,7 +9907,7 @@ Accepted values are:
 <a href="#sandbox_type_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which sandbox to use for pods in the node pool.
 Accepted values are:
@@ -10089,7 +9967,7 @@ Accepted values are:
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has integrity monitoring enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10098,7 +9976,7 @@ Accepted values are:
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has Secure Boot enabled.
 {{% /md %}}</dd></dl>
@@ -10111,7 +9989,7 @@ Accepted values are:
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has integrity monitoring enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10120,7 +9998,7 @@ Accepted values are:
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has Secure Boot enabled.
 {{% /md %}}</dd></dl>
@@ -10197,7 +10075,7 @@ Accepted values are:
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -10206,7 +10084,7 @@ Accepted values are:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for taint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10215,7 +10093,7 @@ Accepted values are:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for taint.
 {{% /md %}}</dd></dl>
@@ -10228,7 +10106,7 @@ Accepted values are:
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -10237,7 +10115,7 @@ Accepted values are:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key for taint.
 {{% /md %}}</dd><dt class="property-required"
@@ -10246,7 +10124,7 @@ Accepted values are:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for taint.
 {{% /md %}}</dd></dl>
@@ -10297,7 +10175,7 @@ Accepted values are:
 <a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
@@ -10315,7 +10193,7 @@ Accepted values are:
 <a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
@@ -10573,7 +10451,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autoscaling_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolautoscaling">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10581,7 +10459,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#initialnodecount_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -10595,7 +10473,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#instancegroupurls_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -10605,7 +10483,7 @@ to the cluster.
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolmanagement">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10613,7 +10491,7 @@ to the cluster.
 <a href="#maxpodspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pods<wbr>Per<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10621,7 +10499,7 @@ to the cluster.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 location.
@@ -10631,7 +10509,7 @@ location.
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10639,7 +10517,7 @@ location.
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -10652,7 +10530,7 @@ Structure is documented below.
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10660,7 +10538,7 @@ Structure is documented below.
 <a href="#nodelocations_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -10672,7 +10550,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolupgradesettings">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10680,7 +10558,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10692,7 +10570,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autoscaling_python" style="color: inherit; text-decoration: inherit;">autoscaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolautoscaling">Input[Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10700,7 +10578,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#initial_node_count_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes to create in this
 cluster's default node pool. In regional or multi-zonal clusters, this is the
@@ -10714,7 +10592,7 @@ set this to a value of at least `1`, alongside setting
 <a href="#instance_group_urls_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of instance group URLs which have been assigned
 to the cluster.
@@ -10724,7 +10602,7 @@ to the cluster.
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolmanagement">Input[Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10732,7 +10610,7 @@ to the cluster.
 <a href="#max_pods_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pods_<wbr>per_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10740,7 +10618,7 @@ to the cluster.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 location.
@@ -10750,7 +10628,7 @@ location.
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10758,7 +10636,7 @@ location.
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used in creating the default node pool.
 Generally, this field should not be used at the same time as a
@@ -10771,7 +10649,7 @@ Structure is documented below.
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10779,7 +10657,7 @@ Structure is documented below.
 <a href="#node_locations_python" style="color: inherit; text-decoration: inherit;">node_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of zones in which the cluster's nodes
 are located. Nodes must be in the region of their regional cluster or in the
@@ -10791,7 +10669,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolupgradesettings">Input[Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10799,7 +10677,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10853,7 +10731,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10861,7 +10739,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10873,7 +10751,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10881,7 +10759,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10935,7 +10813,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autorepair_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10943,7 +10821,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#autoupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10955,7 +10833,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#auto_repair_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>repair</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10963,7 +10841,7 @@ a zonal cluster, omit the cluster's zone.
 <a href="#auto_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11429,7 +11307,7 @@ Structure is documented below.
 <a href="#bootdiskkmskey_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Kms<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -11438,7 +11316,7 @@ Structure is documented below.
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified
 in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
@@ -11448,7 +11326,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
@@ -11458,7 +11336,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeralstorageconfig_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11467,7 +11345,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -11477,7 +11355,7 @@ Structure documented below.
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that changing the image type
 will delete and recreate all nodes in the node pool.
@@ -11487,7 +11365,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -11497,7 +11375,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
 reserved by Kubernetes Core components and cannot be specified.
@@ -11507,7 +11385,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linuxnodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -11518,7 +11396,7 @@ Structure is documented below.
 <a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11527,7 +11405,7 @@ Structure is documented below.
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type.
 Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
@@ -11538,7 +11416,7 @@ Defaults to `e2-medium`. To create a custom machine type, value should be set as
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in
 the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
@@ -11551,7 +11429,7 @@ value in your config.
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance.
 The instance may be scheduled on the specified or newer CPU platform. Applicable
@@ -11564,7 +11442,7 @@ for more information.
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account.
@@ -11575,7 +11453,7 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that represents whether or not the underlying node VMs
 are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
@@ -11586,7 +11464,7 @@ for more information. Defaults to false.
 <a href="#sandboxconfig_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -11596,7 +11474,7 @@ Structure is documented below.
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
@@ -11606,7 +11484,7 @@ If not specified, the "default" service account is used.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11615,7 +11493,7 @@ If not specified, the "default" service account is used.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify
 valid sources or targets for network firewalls.
@@ -11625,7 +11503,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -11641,7 +11519,7 @@ recommended. Structure is documented below.
 <a href="#workloadmetadataconfig_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Metadata<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">pulumi.<wbr>Input<Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -11655,7 +11533,7 @@ Structure is documented below.
 <a href="#boot_disk_kms_key_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>kms_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
 {{% /md %}}</dd><dt class="property-optional"
@@ -11664,7 +11542,7 @@ Structure is documented below.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk attached to each node, specified
 in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
@@ -11674,7 +11552,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node
 (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
@@ -11684,7 +11562,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#ephemeral_storage_config_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigephemeralstorageconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Ephemeral<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11693,7 +11571,7 @@ in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigguestaccelerator">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance.
 Structure documented below.
@@ -11703,7 +11581,7 @@ Structure documented below.
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image type to use for this node. Note that changing the image type
 will delete and recreate all nodes in the node pool.
@@ -11713,7 +11591,7 @@ will delete and recreate all nodes in the node pool.
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigkubeletconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Structure is documented below.
@@ -11723,7 +11601,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
 reserved by Kubernetes Core components and cannot be specified.
@@ -11733,7 +11611,7 @@ reserved by Kubernetes Core components and cannot be specified.
 <a href="#linux_node_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfiglinuxnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Linux<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linux node configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
 Note that validations happen all server side. All attributes are optional.
@@ -11744,7 +11622,7 @@ Structure is documented below.
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11753,7 +11631,7 @@ Structure is documented below.
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type.
 Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
@@ -11764,7 +11642,7 @@ Defaults to `e2-medium`. To create a custom machine type, value should be set as
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key/value pairs assigned to instances in
 the cluster. From GKE `1.12` onwards, `disable-legacy-endpoints` is set to
@@ -11777,7 +11655,7 @@ value in your config.
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum CPU platform to be used by this instance.
 The instance may be scheduled on the specified or newer CPU platform. Applicable
@@ -11790,7 +11668,7 @@ for more information.
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes to be made available
 on all of the node VMs under the "default" service account.
@@ -11801,7 +11679,7 @@ Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access t
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that represents whether or not the underlying node VMs
 are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
@@ -11812,7 +11690,7 @@ for more information. Defaults to false.
 <a href="#sandbox_config_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
 Structure is documented below.
@@ -11822,7 +11700,7 @@ Structure is documented below.
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
@@ -11832,7 +11710,7 @@ If not specified, the "default" service account is used.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Shielded Instance options. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11841,7 +11719,7 @@ If not specified, the "default" service account is used.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to all nodes. Tags are used to identify
 valid sources or targets for network firewalls.
@@ -11851,7 +11729,7 @@ valid sources or targets for network firewalls.
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigtaint">Sequence[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of [Kubernetes taints](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/)
 to apply to nodes. GKE's API can only set this field on cluster creation.
@@ -11867,7 +11745,7 @@ recommended. Structure is documented below.
 <a href="#workload_metadata_config_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>metadata_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Input[Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata configuration to expose to workloads on the node pool.
 Structure is documented below.
@@ -11909,7 +11787,7 @@ Structure is documented below.
 <a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd></dl>
@@ -11922,7 +11800,7 @@ Structure is documented below.
 <a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
 {{% /md %}}</dd></dl>
@@ -11981,7 +11859,7 @@ Structure is documented below.
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -11990,7 +11868,7 @@ Structure is documented below.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -12003,7 +11881,7 @@ Structure is documented below.
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -12012,7 +11890,7 @@ Structure is documented below.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -12101,7 +11979,7 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 <a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU management policy on the node. See
 [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
@@ -12112,7 +11990,7 @@ One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset
 <a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enables CPU CFS quota enforcement for
 containers that specify CPU limits.
@@ -12122,7 +12000,7 @@ containers that specify CPU limits.
 <a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU CFS quota period value. Specified
 as a sequence of decimal numbers, each with optional fraction and a unit suffix,
@@ -12138,7 +12016,7 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 <a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU management policy on the node. See
 [K8S CPU Management Policies](https://kubernetes.io/docs/tasks/administer-cluster/cpu-management-policies/).
@@ -12149,7 +12027,7 @@ One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset
 <a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables CPU CFS quota enforcement for
 containers that specify CPU limits.
@@ -12159,7 +12037,7 @@ containers that specify CPU limits.
 <a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU CFS quota period value. Specified
 as a sequence of decimal numbers, each with optional fraction and a unit suffix,
@@ -12207,7 +12085,7 @@ and all pods running on the nodes. Specified as a map from the key, such as
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes
 and all pods running on the nodes. Specified as a map from the key, such as
@@ -12222,7 +12100,7 @@ and all pods running on the nodes. Specified as a map from the key, such as
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The Linux kernel parameters to be applied to the nodes
 and all pods running on the nodes. Specified as a map from the key, such as
@@ -12267,7 +12145,7 @@ Accepted values are:
 <a href="#sandboxtype_nodejs" style="color: inherit; text-decoration: inherit;">sandbox<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which sandbox to use for pods in the node pool.
 Accepted values are:
@@ -12281,7 +12159,7 @@ Accepted values are:
 <a href="#sandbox_type_python" style="color: inherit; text-decoration: inherit;">sandbox_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which sandbox to use for pods in the node pool.
 Accepted values are:
@@ -12341,7 +12219,7 @@ Accepted values are:
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has integrity monitoring enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12350,7 +12228,7 @@ Accepted values are:
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has Secure Boot enabled.
 {{% /md %}}</dd></dl>
@@ -12363,7 +12241,7 @@ Accepted values are:
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has integrity monitoring enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12372,7 +12250,7 @@ Accepted values are:
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines if the instance has Secure Boot enabled.
 {{% /md %}}</dd></dl>
@@ -12449,7 +12327,7 @@ Accepted values are:
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -12458,7 +12336,7 @@ Accepted values are:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for taint.
 {{% /md %}}</dd><dt class="property-required"
@@ -12467,7 +12345,7 @@ Accepted values are:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for taint.
 {{% /md %}}</dd></dl>
@@ -12480,7 +12358,7 @@ Accepted values are:
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -12489,7 +12367,7 @@ Accepted values are:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key for taint.
 {{% /md %}}</dd><dt class="property-required"
@@ -12498,7 +12376,7 @@ Accepted values are:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for taint.
 {{% /md %}}</dd></dl>
@@ -12549,7 +12427,7 @@ Accepted values are:
 <a href="#nodemetadata_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
@@ -12567,7 +12445,7 @@ Accepted values are:
 <a href="#node_metadata_python" style="color: inherit; text-decoration: inherit;">node_<wbr>metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to expose the node metadata to the workload running on the node.
 Accepted values are:
@@ -12627,7 +12505,7 @@ Accepted values are:
 <a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12635,7 +12513,7 @@ Accepted values are:
 <a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12647,7 +12525,7 @@ Accepted values are:
 <a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12655,7 +12533,7 @@ Accepted values are:
 <a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12693,7 +12571,7 @@ Accepted values are:
 <a href="#pubsub_nodejs" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfigpubsub">pulumi.<wbr>Input<Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12705,7 +12583,7 @@ Accepted values are:
 <a href="#pubsub_python" style="color: inherit; text-decoration: inherit;">pubsub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternotificationconfigpubsub">Input[Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusternotificationconfigpubsub">Cluster<wbr>Notification<wbr>Config<wbr>Pubsub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12763,7 +12641,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -12773,7 +12651,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12785,7 +12663,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -12795,7 +12673,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12837,7 +12715,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -12851,7 +12729,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -13029,7 +12907,7 @@ for more details. This field only applies to private clusters, when
 <a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the cluster's private
 endpoint is used as the cluster endpoint and access through the public endpoint
@@ -13041,7 +12919,7 @@ to private clusters, when `enable_private_nodes` is `true`.
 <a href="#enableprivatenodes_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the private cluster feature,
 creating a private endpoint on the cluster. In a private cluster, nodes only
@@ -13053,7 +12931,7 @@ endpoint via private networking.
 <a href="#masterglobalaccessconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Global<wbr>Access<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">pulumi.<wbr>Input<Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Controls cluster master global
 access settings. If unset, the provider will no longer manage this field and will
@@ -13064,7 +12942,7 @@ not modify the previously-set value. Structure is documented below.
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for
 the hosted master network. This range will be used for assigning private IP
@@ -13079,7 +12957,7 @@ for more details. This field only applies to private clusters, when
 <a href="#peeringname_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering between this cluster and the Google owned VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13088,7 +12966,7 @@ for more details. This field only applies to private clusters, when
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal IP address of this cluster's master endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13097,7 +12975,7 @@ for more details. This field only applies to private clusters, when
 <a href="#publicendpoint_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external IP address of this cluster's master endpoint.
 {{% /md %}}</dd></dl>
@@ -13110,7 +12988,7 @@ for more details. This field only applies to private clusters, when
 <a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the cluster's private
 endpoint is used as the cluster endpoint and access through the public endpoint
@@ -13122,7 +13000,7 @@ to private clusters, when `enable_private_nodes` is `true`.
 <a href="#enable_private_nodes_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the private cluster feature,
 creating a private endpoint on the cluster. In a private cluster, nodes only
@@ -13134,7 +13012,7 @@ endpoint via private networking.
 <a href="#master_global_access_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>global_<wbr>access_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Input[Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterprivateclusterconfigmasterglobalaccessconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config<wbr>Master<wbr>Global<wbr>Access<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls cluster master global
 access settings. If unset, the provider will no longer manage this field and will
@@ -13145,7 +13023,7 @@ not modify the previously-set value. Structure is documented below.
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for
 the hosted master network. This range will be used for assigning private IP
@@ -13160,7 +13038,7 @@ for more details. This field only applies to private clusters, when
 <a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering between this cluster and the Google owned VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13169,7 +13047,7 @@ for more details. This field only applies to private clusters, when
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internal IP address of this cluster's master endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13178,7 +13056,7 @@ for more details. This field only applies to private clusters, when
 <a href="#public_endpoint_python" style="color: inherit; text-decoration: inherit;">public_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external IP address of this cluster's master endpoint.
 {{% /md %}}</dd></dl>
@@ -13221,7 +13099,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -13235,7 +13113,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -13287,7 +13165,7 @@ Accepted values are:
 <a href="#channel_nodejs" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The selected release channel.
 Accepted values are:
@@ -13305,7 +13183,7 @@ Accepted values are:
 <a href="#channel_python" style="color: inherit; text-decoration: inherit;">channel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The selected release channel.
 Accepted values are:
@@ -13397,7 +13275,7 @@ billing export. Defaults to `true`.
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">pulumi.<wbr>Input<Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Parameters for using BigQuery as the destination of resource usage export.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13406,7 +13284,7 @@ billing export. Defaults to `true`.
 <a href="#enablenetworkegressmetering_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Network<wbr>Egress<wbr>Metering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
 in the cluster to meter network egress traffic.
@@ -13416,7 +13294,7 @@ in the cluster to meter network egress traffic.
 <a href="#enableresourceconsumptionmetering_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Resource<wbr>Consumption<wbr>Metering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable resource
 consumption metering on this cluster. When enabled, a table will be created in
@@ -13433,7 +13311,7 @@ billing export. Defaults to `true`.
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Input[Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for using BigQuery as the destination of resource usage export.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13442,7 +13320,7 @@ billing export. Defaults to `true`.
 <a href="#enable_network_egress_metering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>network_<wbr>egress_<wbr>metering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
 in the cluster to meter network egress traffic.
@@ -13452,7 +13330,7 @@ in the cluster to meter network egress traffic.
 <a href="#enable_resource_consumption_metering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>resource_<wbr>consumption_<wbr>metering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable resource
 consumption metering on this cluster. When enabled, a table will be created in
@@ -13495,7 +13373,7 @@ billing export. Defaults to `true`.
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13507,7 +13385,7 @@ billing export. Defaults to `true`.
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13549,7 +13427,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -13563,7 +13441,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the PodSecurityPolicy controller for this cluster.
 If enabled, pods must be valid under a PodSecurityPolicy to be created.
@@ -13605,7 +13483,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#identitynamespace_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Currently, the only supported identity namespace is the project's default.
 {{% /md %}}</dd></dl>
@@ -13618,7 +13496,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 <a href="#identity_namespace_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Currently, the only supported identity namespace is the project's default.
 {{% /md %}}</dd></dl>

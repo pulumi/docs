@@ -83,8 +83,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -275,8 +275,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -432,41 +432,19 @@ const natManual = new gcp.compute.RouterNat("natManual", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">enable_endpoint_independent_mapping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RouterNatLogConfigArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RouterNatSubnetworkArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_endpoint_independent_mapping</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouterNat</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouterNat</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRouterNat</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouterNat</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RouterNat</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouterNatArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -501,32 +479,22 @@ const natManual = new gcp.compute.RouterNat("natManual", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RouterNatArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -535,7 +503,7 @@ const natManual = new gcp.compute.RouterNat("natManual", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -559,7 +527,7 @@ const natManual = new gcp.compute.RouterNat("natManual", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -954,7 +922,7 @@ Defaults to 30s if not set.
 <a href="#natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
@@ -966,7 +934,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
 {{% /md %}}</dd><dt class="property-required"
@@ -975,7 +943,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How NAT should be configured per Subnetwork.
 If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
@@ -994,7 +962,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
@@ -1004,7 +972,7 @@ valid static external IPs that have been assigned to the NAT.
 <a href="#enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
@@ -1014,7 +982,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +991,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">pulumi.<wbr>Input<Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
@@ -1033,7 +1001,7 @@ Structure is documented below.
 <a href="#minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1010,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1019,7 @@ Structure is documented below.
 <a href="#natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
@@ -1061,7 +1029,7 @@ is set to MANUAL_ONLY.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1071,7 +1039,7 @@ If it is not provided, the provider project is used.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1048,7 @@ If it is not provided, the provider project is used.
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Nat<wbr>Subnetwork<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork[]</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -1091,7 +1059,7 @@ Structure is documented below.
 <a href="#tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
@@ -1101,7 +1069,7 @@ Defaults to 1200s if not set.
 <a href="#tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
@@ -1111,7 +1079,7 @@ Defaults to 30s if not set.
 <a href="#udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
 {{% /md %}}</dd></dl>
@@ -1124,7 +1092,7 @@ Defaults to 30s if not set.
 <a href="#nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
@@ -1136,7 +1104,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
 {{% /md %}}</dd><dt class="property-required"
@@ -1145,7 +1113,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How NAT should be configured per Subnetwork.
 If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
@@ -1164,7 +1132,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
@@ -1174,7 +1142,7 @@ valid static external IPs that have been assigned to the NAT.
 <a href="#enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
@@ -1184,7 +1152,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1193,7 +1161,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">Input[Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
@@ -1203,7 +1171,7 @@ Structure is documented below.
 <a href="#min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1180,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1189,7 @@ Structure is documented below.
 <a href="#nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
@@ -1231,7 +1199,7 @@ is set to MANUAL_ONLY.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1241,7 +1209,7 @@ If it is not provided, the provider project is used.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1218,7 @@ If it is not provided, the provider project is used.
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">Input[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">Sequence[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -1261,7 +1229,7 @@ Structure is documented below.
 <a href="#tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
@@ -1271,7 +1239,7 @@ Defaults to 1200s if not set.
 <a href="#tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
@@ -1281,7 +1249,7 @@ Defaults to 30s if not set.
 <a href="#udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
 {{% /md %}}</dd></dl>
@@ -1350,38 +1318,20 @@ Get an existing RouterNat resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RouterNatState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RouterNat</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RouterNatState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RouterNat</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_endpoint_independent_mapping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RouterNatLogConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[RouterNatSubnetworkArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> RouterNat</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">drain_nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_endpoint_independent_mapping</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">icmp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RouterNatLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">min_ports_per_vm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_allocate_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_subnetwork_ip_ranges_to_nat</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetworks</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterNatSubnetworkArgs]]</span> = None<span class="p">, </span><span class="nx">tcp_established_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tcp_transitory_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">udp_idle_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RouterNat</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterNat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RouterNatState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouterNat</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterNat<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RouterNatState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RouterNat</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RouterNat</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RouterNatState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RouterNat</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RouterNatState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1830,7 +1780,7 @@ Defaults to 30s if not set.
 <a href="#state_drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
@@ -1840,7 +1790,7 @@ valid static external IPs that have been assigned to the NAT.
 <a href="#state_enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
@@ -1850,7 +1800,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#state_icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1859,7 +1809,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">pulumi.<wbr>Input<Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
@@ -1869,7 +1819,7 @@ Structure is documented below.
 <a href="#state_minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1828,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1837,7 @@ Structure is documented below.
 <a href="#state_natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
@@ -1899,7 +1849,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#state_natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
@@ -1909,7 +1859,7 @@ is set to MANUAL_ONLY.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1919,7 +1869,7 @@ If it is not provided, the provider project is used.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1928,7 +1878,7 @@ If it is not provided, the provider project is used.
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1937,7 +1887,7 @@ If it is not provided, the provider project is used.
 <a href="#state_sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How NAT should be configured per Subnetwork.
 If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
@@ -1956,7 +1906,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#state_subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">pulumi.<wbr>Input<pulumi.<wbr>Input<Router<wbr>Nat<wbr>Subnetwork<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork[]</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -1967,7 +1917,7 @@ Structure is documented below.
 <a href="#state_tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
@@ -1977,7 +1927,7 @@ Defaults to 1200s if not set.
 <a href="#state_tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
@@ -1987,7 +1937,7 @@ Defaults to 30s if not set.
 <a href="#state_udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
 {{% /md %}}</dd></dl>
@@ -2000,7 +1950,7 @@ Defaults to 30s if not set.
 <a href="#state_drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
@@ -2010,7 +1960,7 @@ valid static external IPs that have been assigned to the NAT.
 <a href="#state_enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
@@ -2020,7 +1970,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#state_icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +1979,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatlogconfig">Input[Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
@@ -2039,7 +1989,7 @@ Structure is documented below.
 <a href="#state_min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +1998,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2007,7 @@ Structure is documented below.
 <a href="#state_nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How external IPs should be allocated for this NAT. Valid values are
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
@@ -2069,7 +2019,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
 <a href="#state_nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
@@ -2079,7 +2029,7 @@ is set to MANUAL_ONLY.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2089,7 +2039,7 @@ If it is not provided, the provider project is used.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2048,7 @@ If it is not provided, the provider project is used.
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2057,7 @@ If it is not provided, the provider project is used.
 <a href="#state_source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How NAT should be configured per Subnetwork.
 If `ALL_SUBNETWORKS_ALL_IP_RANGES`, all of the
@@ -2126,7 +2076,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
 <a href="#state_subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routernatsubnetwork">Input[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#routernatsubnetwork">Sequence[Router<wbr>Nat<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
@@ -2137,7 +2087,7 @@ Structure is documented below.
 <a href="#state_tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
@@ -2147,7 +2097,7 @@ Defaults to 1200s if not set.
 <a href="#state_tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
@@ -2157,7 +2107,7 @@ Defaults to 30s if not set.
 <a href="#state_udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
 {{% /md %}}</dd></dl>
@@ -2227,7 +2177,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs.
 {{% /md %}}</dd><dt class="property-required"
@@ -2236,7 +2186,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
@@ -2250,7 +2200,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs.
 {{% /md %}}</dd><dt class="property-required"
@@ -2259,7 +2209,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
@@ -2349,7 +2299,7 @@ sourceIpRangesToNat
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd><dt class="property-required"
@@ -2358,7 +2308,7 @@ sourceIpRangesToNat
 <a href="#sourceiprangestonats_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of options for which source IPs in the subnetwork
 should have NAT enabled. Supported values include:
@@ -2370,7 +2320,7 @@ should have NAT enabled. Supported values include:
 <a href="#secondaryiprangenames_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Range<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
 to use NAT. This can be populated only if
@@ -2386,7 +2336,7 @@ sourceIpRangesToNat
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
 {{% /md %}}</dd><dt class="property-required"
@@ -2395,7 +2345,7 @@ sourceIpRangesToNat
 <a href="#source_ip_ranges_to_nats_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of options for which source IPs in the subnetwork
 should have NAT enabled. Supported values include:
@@ -2407,7 +2357,7 @@ should have NAT enabled. Supported values include:
 <a href="#secondary_ip_range_names_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>range_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the secondary ranges of the subnetwork that are allowed
 to use NAT. This can be populated only if

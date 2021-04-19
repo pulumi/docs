@@ -147,8 +147,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataloss"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -398,29 +398,19 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                 <span class="nx">deidentify_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionDeidentifyTemplateDeidentifyConfigArgs]]</span> = None<span class="p">,</span>
-                                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                 <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p">,</span>
-                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deidentify_config</span><span class="p">:</span> <span class="nx">Optional[PreventionDeidentifyTemplateDeidentifyConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionDeidentifyTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionDeidentifyTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PreventionDeidentifyTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -455,32 +445,22 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PreventionDeidentifyTemplateArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -489,7 +469,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -513,7 +493,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -658,7 +638,7 @@ Structure is documented below.
 <a href="#deidentifyconfig_nodejs" style="color: inherit; text-decoration: inherit;">deidentify<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
@@ -668,7 +648,7 @@ Structure is documented below.
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the template in any of the following formats:
 * `projects/{{project}}`
@@ -681,7 +661,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -690,7 +670,7 @@ Structure is documented below.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
 {{% /md %}}</dd></dl>
@@ -703,7 +683,7 @@ Structure is documented below.
 <a href="#deidentify_config_python" style="color: inherit; text-decoration: inherit;">deidentify_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
@@ -713,7 +693,7 @@ Structure is documented below.
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the template in any of the following formats:
 * `projects/{{project}}`
@@ -726,7 +706,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -735,7 +715,7 @@ Structure is documented below.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
 {{% /md %}}</dd></dl>
@@ -840,27 +820,20 @@ Get an existing PreventionDeidentifyTemplate resource's state with the given nam
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionDeidentifyTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionDeidentifyTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PreventionDeidentifyTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PreventionDeidentifyTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">deidentify_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PreventionDeidentifyTemplateDeidentifyConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PreventionDeidentifyTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deidentify_config</span><span class="p">:</span> <span class="nx">Optional[PreventionDeidentifyTemplateDeidentifyConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PreventionDeidentifyTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionDeidentifyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionDeidentifyTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionDeidentifyTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionDeidentifyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PreventionDeidentifyTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PreventionDeidentifyTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionDeidentifyTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PreventionDeidentifyTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PreventionDeidentifyTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PreventionDeidentifyTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1077,7 +1050,7 @@ Structure is documented below.
 <a href="#state_deidentifyconfig_nodejs" style="color: inherit; text-decoration: inherit;">deidentify<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
@@ -1087,7 +1060,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1069,7 @@ Structure is documented below.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1078,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1087,7 @@ Structure is documented below.
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the template in any of the following formats:
 * `projects/{{project}}`
@@ -1131,7 +1104,7 @@ Structure is documented below.
 <a href="#state_deidentify_config_python" style="color: inherit; text-decoration: inherit;">deidentify_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the deidentify template
 Structure is documented below.
@@ -1141,7 +1114,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1123,7 @@ Structure is documented below.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1132,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1141,7 @@ Structure is documented below.
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the template in any of the following formats:
 * `projects/{{project}}`
@@ -1224,7 +1197,7 @@ Structure is documented below.
 <a href="#infotypetransformations_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type<wbr>Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations</a></span>
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
@@ -1238,7 +1211,7 @@ Structure is documented below.
 <a href="#info_type_transformations_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type_<wbr>transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformations">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies free-text based transformations to be applied to the dataset.
 Structure is documented below.
@@ -1282,7 +1255,7 @@ Structure is documented below.
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">pulumi.<wbr>Input<pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation[]</a></span>
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
@@ -1296,7 +1269,7 @@ Structure is documented below.
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformation">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Transformation for each infoType. Cannot specify more than one for a given infoType.
 Structure is documented below.
@@ -1362,7 +1335,7 @@ Structure is documented below.
 <a href="#primitivetransformation_nodejs" style="color: inherit; text-decoration: inherit;">primitive<wbr>Transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation</a></span>
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
@@ -1372,7 +1345,7 @@ Structure is documented below.
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">pulumi.<wbr>Input<pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
@@ -1387,7 +1360,7 @@ Structure is documented below.
 <a href="#primitive_transformation_python" style="color: inherit; text-decoration: inherit;">primitive_<wbr>transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformation">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Primitive transformation to apply to the infoType.
 Structure is documented below.
@@ -1397,7 +1370,7 @@ Structure is documented below.
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationinfotype">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
 all findings that correspond to infoTypes that were requested in InspectConfig.
@@ -1440,7 +1413,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
 {{% /md %}}</dd></dl>
@@ -1453,7 +1426,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the information type.
 {{% /md %}}</dd></dl>
@@ -1518,7 +1491,7 @@ Structure is documented below.
 <a href="#charactermaskconfig_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>Mask<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
@@ -1529,7 +1502,7 @@ Structure is documented below.
 <a href="#replaceconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1543,7 +1516,7 @@ Structure is documented below.
 <a href="#character_mask_config_python" style="color: inherit; text-decoration: inherit;">character_<wbr>mask_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
@@ -1554,7 +1527,7 @@ Structure is documented below.
 <a href="#replace_config_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1658,7 +1631,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
 <a href="#characterstoignores_nodejs" style="color: inherit; text-decoration: inherit;">characters<wbr>To<wbr>Ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">pulumi.<wbr>Input<pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore[]</a></span>
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
@@ -1668,7 +1641,7 @@ Structure is documented below.
 <a href="#maskingcharacter_nodejs" style="color: inherit; text-decoration: inherit;">masking<wbr>Character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
@@ -1679,7 +1652,7 @@ strings, and 0 for digits.
 <a href="#numbertomask_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>To<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1661,7 @@ strings, and 0 for digits.
 <a href="#reverseorder_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
 input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
@@ -1702,7 +1675,7 @@ input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
 <a href="#characters_to_ignores_python" style="color: inherit; text-decoration: inherit;">characters_<wbr>to_<wbr>ignores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcharactermaskconfigcharacterstoignore">Sequence[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Character<wbr>Mask<wbr>Config<wbr>Characters<wbr>To<wbr>Ignore<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Characters to skip when doing de-identification of a value. These will be left alone and skipped.
 Structure is documented below.
@@ -1712,7 +1685,7 @@ Structure is documented below.
 <a href="#masking_character_python" style="color: inherit; text-decoration: inherit;">masking_<wbr>character</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Character to use to mask the sensitive values—for example, * for an alphabetic string such as a name, or 0 for a numeric string
 such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to * for
@@ -1723,7 +1696,7 @@ strings, and 0 for digits.
 <a href="#number_to_mask_python" style="color: inherit; text-decoration: inherit;">number_<wbr>to_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1705,7 @@ strings, and 0 for digits.
 <a href="#reverse_order_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mask characters in reverse order. For example, if masking_character is 0, number_to_mask is 14, and reverse_order is `false`, then the
 input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
@@ -1794,7 +1767,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
 <a href="#charactertoskip_nodejs" style="color: inherit; text-decoration: inherit;">character<wbr>To<wbr>Skip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Characters to not transform when masking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1803,7 +1776,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
 <a href="#commoncharacterstoignore_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Characters<wbr>To<wbr>Ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
@@ -1817,7 +1790,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
 <a href="#character_to_skip_python" style="color: inherit; text-decoration: inherit;">character_<wbr>to_<wbr>skip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Characters to not transform when masking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1799,7 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
 <a href="#common_characters_to_ignore_python" style="color: inherit; text-decoration: inherit;">common_<wbr>characters_<wbr>to_<wbr>ignore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
@@ -1870,7 +1843,7 @@ Structure is documented below.
 <a href="#newvalue_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -1884,7 +1857,7 @@ Structure is documented below.
 <a href="#new_value_python" style="color: inherit; text-decoration: inherit;">new_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
@@ -2060,7 +2033,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 <a href="#booleanvalue_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2042,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 <a href="#datevalue_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
@@ -2079,7 +2052,7 @@ Structure is documented below.
 <a href="#dayofweekvalue_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents a day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
@@ -2089,7 +2062,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#floatvalue_nodejs" style="color: inherit; text-decoration: inherit;">float<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A float value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2098,7 +2071,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#integervalue_nodejs" style="color: inherit; text-decoration: inherit;">integer<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2080,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2116,7 +2089,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#timevalue_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">pulumi.<wbr>Input<Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value<wbr>Args></a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value</a></span>
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
@@ -2126,7 +2099,7 @@ Structure is documented below.
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
@@ -2140,7 +2113,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 <a href="#boolean_value_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2122,7 @@ Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 <a href="#date_value_python" style="color: inherit; text-decoration: inherit;">date_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluedatevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Date<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents a whole or partial calendar date.
 Structure is documented below.
@@ -2159,7 +2132,7 @@ Structure is documented below.
 <a href="#day_of_week_value_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents a day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
@@ -2169,7 +2142,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#float_value_python" style="color: inherit; text-decoration: inherit;">float_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A float value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2178,7 +2151,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#integer_value_python" style="color: inherit; text-decoration: inherit;">integer_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2187,7 +2160,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2196,7 +2169,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 <a href="#time_value_python" style="color: inherit; text-decoration: inherit;">time_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Input[Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationreplaceconfignewvaluetimevalue">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Replace<wbr>Config<wbr>New<wbr>Value<wbr>Time<wbr>Value<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents a time of day.
 Structure is documented below.
@@ -2206,7 +2179,7 @@ Structure is documented below.
 <a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
 Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
@@ -2286,7 +2259,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
@@ -2296,7 +2269,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,7 +2278,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
 {{% /md %}}</dd></dl>
@@ -2318,7 +2291,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
 year by itself or a year and month where the day is not significant.
@@ -2328,7 +2301,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2310,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
 {{% /md %}}</dd></dl>
@@ -2432,7 +2405,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2441,7 +2414,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2423,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2459,7 +2432,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd></dl>
@@ -2472,7 +2445,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2454,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2463,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2472,7 @@ year by itself or a year and month where the day is not significant.
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd></dl>

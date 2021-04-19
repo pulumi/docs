@@ -83,9 +83,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/billing"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -238,9 +238,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/billing"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -415,9 +415,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/billing"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -637,10 +637,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/billing"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/billing"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -816,31 +816,19 @@ const budget = new gcp.billing.Budget("budget", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetAllUpdatesRuleArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetAmountArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetBudgetFilterArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BudgetThresholdRuleArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetThresholdRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -875,32 +863,22 @@ const budget = new gcp.billing.Budget("budget", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BudgetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -909,7 +887,7 @@ const budget = new gcp.billing.Budget("budget", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -933,7 +911,7 @@ const budget = new gcp.billing.Budget("budget", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1122,7 +1100,7 @@ Structure is documented below.
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">pulumi.<wbr>Input<Budget<wbr>Amount<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
@@ -1132,7 +1110,7 @@ Structure is documented below.
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd><dt class="property-required"
@@ -1141,7 +1119,7 @@ Structure is documented below.
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Budget<wbr>Threshold<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">Budget<wbr>Threshold<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1153,7 +1131,7 @@ Structure is documented below.
 <a href="#allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">pulumi.<wbr>Input<Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
@@ -1165,7 +1143,7 @@ Structure is documented below.
 <a href="#budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">pulumi.<wbr>Input<Budget<wbr>Budget<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
@@ -1176,7 +1154,7 @@ Structure is documented below.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd></dl>
@@ -1189,7 +1167,7 @@ Structure is documented below.
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">Input[Budget<wbr>Amount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
@@ -1199,7 +1177,7 @@ Structure is documented below.
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd><dt class="property-required"
@@ -1208,7 +1186,7 @@ Structure is documented below.
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">Input[Budget<wbr>Threshold<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">Sequence[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1220,7 +1198,7 @@ Structure is documented below.
 <a href="#all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">Input[Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
@@ -1232,7 +1210,7 @@ Structure is documented below.
 <a href="#budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">Input[Budget<wbr>Budget<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
@@ -1243,7 +1221,7 @@ Structure is documented below.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd></dl>
@@ -1352,29 +1330,20 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BudgetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Budget</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BudgetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Budget</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetAllUpdatesRuleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetAmountArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetBudgetFilterArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BudgetThresholdRuleArgs]]]]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetThresholdRuleArgs]]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BudgetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BudgetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Budget</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BudgetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Budget</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BudgetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1637,7 +1606,7 @@ Structure is documented below.
 <a href="#state_allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">pulumi.<wbr>Input<Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
@@ -1649,7 +1618,7 @@ Structure is documented below.
 <a href="#state_amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">pulumi.<wbr>Input<Budget<wbr>Amount<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
@@ -1659,7 +1628,7 @@ Structure is documented below.
 <a href="#state_billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1637,7 @@ Structure is documented below.
 <a href="#state_budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">pulumi.<wbr>Input<Budget<wbr>Budget<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
@@ -1679,7 +1648,7 @@ Structure is documented below.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1657,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
@@ -1698,7 +1667,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 <a href="#state_thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Budget<wbr>Threshold<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">Budget<wbr>Threshold<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1714,7 +1683,7 @@ Structure is documented below.
 <a href="#state_all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">Input[Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
@@ -1726,7 +1695,7 @@ Structure is documented below.
 <a href="#state_amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">Input[Budget<wbr>Amount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
@@ -1736,7 +1705,7 @@ Structure is documented below.
 <a href="#state_billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1745,7 +1714,7 @@ Structure is documented below.
 <a href="#state_budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">Input[Budget<wbr>Budget<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
@@ -1756,7 +1725,7 @@ Structure is documented below.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1734,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
@@ -1775,7 +1744,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 <a href="#state_threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">Input[Budget<wbr>Threshold<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">Sequence[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
@@ -1904,7 +1873,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 <a href="#disabledefaultiamrecipients_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to true, disables default notifications sent
 when a threshold is exceeded. Default recipients are
@@ -1916,7 +1885,7 @@ Account Users IAM roles for the target account.
 <a href="#monitoringnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Notification<wbr>Channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
@@ -1928,7 +1897,7 @@ A maximum of 5 channels are allowed.
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Pub/Sub topic where budget related
 messages will be published, in the form
@@ -1940,7 +1909,7 @@ at regular intervals to the topic.
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
@@ -1955,7 +1924,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 <a href="#disable_default_iam_recipients_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>default_<wbr>iam_<wbr>recipients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean. When set to true, disables default notifications sent
 when a threshold is exceeded. Default recipients are
@@ -1967,7 +1936,7 @@ Account Users IAM roles for the target account.
 <a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The full resource name of a monitoring notification
 channel in the form
@@ -1979,7 +1948,7 @@ A maximum of 5 channels are allowed.
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Pub/Sub topic where budget related
 messages will be published, in the form
@@ -1991,7 +1960,7 @@ at regular intervals to the topic.
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
@@ -2064,7 +2033,7 @@ Structure is documented below.
 <a href="#lastperiodamount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Period<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
 last period's spend.
@@ -2076,7 +2045,7 @@ use the `specified_amount` block.
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamountspecifiedamount">pulumi.<wbr>Input<Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
@@ -2092,7 +2061,7 @@ Structure is documented below.
 <a href="#last_period_amount_python" style="color: inherit; text-decoration: inherit;">last_<wbr>period_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
 last period's spend.
@@ -2104,7 +2073,7 @@ use the `specified_amount` block.
 <a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamountspecifiedamount">Input[Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
@@ -2198,7 +2167,7 @@ is "USD", then 1 unit is one US dollar.
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2176,7 @@ is "USD", then 1 unit is one US dollar.
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -2222,7 +2191,7 @@ nanos=-750,000,000.
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
@@ -2236,7 +2205,7 @@ is "USD", then 1 unit is one US dollar.
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2245,7 +2214,7 @@ is "USD", then 1 unit is one US dollar.
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nano (10^-9) units of the amount.
 The value must be between -999,999,999 and +999,999,999
@@ -2260,7 +2229,7 @@ nanos=-750,000,000.
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
@@ -2438,7 +2407,7 @@ account and all subaccounts, if they exist.
 <a href="#credittypes_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of subaccounts of the form billingAccounts/{account_id},
 specifying that usage from only this set of subaccounts should
@@ -2452,7 +2421,7 @@ account and all subaccounts, if they exist.
 <a href="#credittypestreatment_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types<wbr>Treatment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
@@ -2464,7 +2433,7 @@ Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_S
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A single label and value pair specifying that usage from only
 this set of labeled resources should be included in the budget.
@@ -2474,7 +2443,7 @@ this set of labeled resources should be included in the budget.
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_number},
 specifying that usage from only this set of projects should be
@@ -2487,7 +2456,7 @@ the usage occurred on.
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
@@ -2501,7 +2470,7 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
 <a href="#subaccounts_nodejs" style="color: inherit; text-decoration: inherit;">subaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of subaccounts of the form billingAccounts/{account_id},
 specifying that usage from only this set of subaccounts should
@@ -2519,7 +2488,7 @@ account and all subaccounts, if they exist.
 <a href="#credit_types_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of subaccounts of the form billingAccounts/{account_id},
 specifying that usage from only this set of subaccounts should
@@ -2533,7 +2502,7 @@ account and all subaccounts, if they exist.
 <a href="#credit_types_treatment_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types_<wbr>treatment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
@@ -2545,7 +2514,7 @@ Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_S
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A single label and value pair specifying that usage from only
 this set of labeled resources should be included in the budget.
@@ -2555,7 +2524,7 @@ this set of labeled resources should be included in the budget.
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of projects of the form projects/{project_number},
 specifying that usage from only this set of projects should be
@@ -2568,7 +2537,7 @@ the usage occurred on.
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
@@ -2582,7 +2551,7 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
 <a href="#subaccounts_python" style="color: inherit; text-decoration: inherit;">subaccounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of subaccounts of the form billingAccounts/{account_id},
 specifying that usage from only this set of subaccounts should
@@ -2654,7 +2623,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 <a href="#thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
@@ -2664,7 +2633,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 <a href="#spendbasis_nodejs" style="color: inherit; text-decoration: inherit;">spend<wbr>Basis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
@@ -2680,7 +2649,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 <a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
@@ -2690,7 +2659,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 <a href="#spend_basis_python" style="color: inherit; text-decoration: inherit;">spend_<wbr>basis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.

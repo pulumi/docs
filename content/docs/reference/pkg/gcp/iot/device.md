@@ -60,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/iot"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -248,32 +248,19 @@ const test_device = new gcp.iot.Device("test-device", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceCredentialArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeviceGatewayConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">registry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[DeviceGatewayConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -308,32 +295,22 @@ const test_device = new gcp.iot.Device("test-device", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -342,7 +319,7 @@ const test_device = new gcp.iot.Device("test-device", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -366,7 +343,7 @@ const test_device = new gcp.iot.Device("test-device", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -561,7 +538,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -570,7 +547,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -579,7 +556,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Credential<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicecredential">Device<wbr>Credential[]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
@@ -589,7 +566,7 @@ Structure is documented below.
 <a href="#gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegatewayconfig">pulumi.<wbr>Input<Device<wbr>Gateway<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
@@ -599,7 +576,7 @@ Structure is documented below.
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
@@ -609,7 +586,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -618,7 +595,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
 {{% /md %}}</dd></dl>
@@ -631,7 +608,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +617,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +626,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">Input[Device<wbr>Credential<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicecredential">Sequence[Device<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
@@ -659,7 +636,7 @@ Structure is documented below.
 <a href="#gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegatewayconfig">Input[Device<wbr>Gateway<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
@@ -669,7 +646,7 @@ Structure is documented below.
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
@@ -679,7 +656,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +665,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
 {{% /md %}}</dd></dl>
@@ -1121,39 +1098,20 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceCredentialArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeviceGatewayConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">last_config_ack_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_config_send_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_error_statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceLastErrorStatusArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">last_error_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_event_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">registry</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">states</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceStateArgs]]]]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_config</span><span class="p">:</span> <span class="nx">Optional[DeviceGatewayConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_config_ack_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_config_send_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_error_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceLastErrorStatusArgs]]</span> = None<span class="p">, </span><span class="nx">last_error_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_event_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_heartbeat_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_state_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">states</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceStateArgs]]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1584,7 +1542,7 @@ unique.
 <a href="#state_blocked_nodejs" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1551,7 @@ unique.
 <a href="#state_configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deviceconfig">Device<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1560,7 @@ unique.
 <a href="#state_credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Credential<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicecredential">Device<wbr>Credential[]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
@@ -1612,7 +1570,7 @@ Structure is documented below.
 <a href="#state_gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegatewayconfig">pulumi.<wbr>Input<Device<wbr>Gateway<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
@@ -1622,7 +1580,7 @@ Structure is documented below.
 <a href="#state_lastconfigacktime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Ack<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1589,7 @@ Structure is documented below.
 <a href="#state_lastconfigsendtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Send<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1598,7 @@ Structure is documented below.
 <a href="#state_lasterrorstatuses_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">Device<wbr>Last<wbr>Error<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1607,7 @@ Structure is documented below.
 <a href="#state_lasterrortime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Error<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1616,7 @@ Structure is documented below.
 <a href="#state_lasteventtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1625,7 @@ Structure is documented below.
 <a href="#state_lastheartbeattime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1634,7 @@ Structure is documented below.
 <a href="#state_laststatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>State<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1643,7 @@ Structure is documented below.
 <a href="#state_loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
@@ -1695,7 +1653,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1662,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1671,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_numid_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
@@ -1723,7 +1681,7 @@ unique.
 <a href="#state_registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1690,7 @@ unique.
 <a href="#state_states_nodejs" style="color: inherit; text-decoration: inherit;">states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>State<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicestate">Device<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd></dl>
@@ -1745,7 +1703,7 @@ unique.
 <a href="#state_blocked_python" style="color: inherit; text-decoration: inherit;">blocked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If a device is blocked, connections or requests from this device will fail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1712,7 @@ unique.
 <a href="#state_configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceconfig">Input[Device<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deviceconfig">Sequence[Device<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1721,7 @@ unique.
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredential">Input[Device<wbr>Credential<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicecredential">Sequence[Device<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The credentials used to authenticate this device.
 Structure is documented below.
@@ -1773,7 +1731,7 @@ Structure is documented below.
 <a href="#state_gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegatewayconfig">Input[Device<wbr>Gateway<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#devicegatewayconfig">Device<wbr>Gateway<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gateway-related configuration and state.
 Structure is documented below.
@@ -1783,7 +1741,7 @@ Structure is documented below.
 <a href="#state_last_config_ack_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>ack_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version acknowledgment was received from the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1750,7 @@ Structure is documented below.
 <a href="#state_last_config_send_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>send_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a cloud-to-device config version was sent to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1759,7 @@ Structure is documented below.
 <a href="#state_last_error_statuses_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicelasterrorstatus">Input[Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicelasterrorstatus">Sequence[Device<wbr>Last<wbr>Error<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1768,7 @@ Structure is documented below.
 <a href="#state_last_error_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>error_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1777,7 @@ Structure is documented below.
 <a href="#state_last_event_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a telemetry event was received.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1786,7 @@ Structure is documented below.
 <a href="#state_last_heartbeat_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time an MQTT PINGREQ was received.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1795,7 @@ Structure is documented below.
 <a href="#state_last_state_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>state_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a state event was received.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1804,7 @@ Structure is documented below.
 <a href="#state_log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logging verbosity for device activity.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
@@ -1856,7 +1814,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata key-value pairs assigned to the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1823,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1832,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 <a href="#state_num_id_python" style="color: inherit; text-decoration: inherit;">num_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally
 unique.
@@ -1884,7 +1842,7 @@ unique.
 <a href="#state_registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the device registry where this device should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1851,7 @@ unique.
 <a href="#state_states_python" style="color: inherit; text-decoration: inherit;">states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicestate">Input[Device<wbr>State<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicestate">Sequence[Device<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The state most recently received from the device.
 {{% /md %}}</dd></dl>
@@ -1989,7 +1947,7 @@ unique.
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +1955,7 @@ unique.
 <a href="#cloudupdatetime_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +1963,7 @@ unique.
 <a href="#deviceacktime_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Ack<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +1971,7 @@ unique.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2025,7 +1983,7 @@ unique.
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +1991,7 @@ unique.
 <a href="#cloud_update_time_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +1999,7 @@ unique.
 <a href="#device_ack_time_python" style="color: inherit; text-decoration: inherit;">device_<wbr>ack_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2007,7 @@ unique.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2109,7 +2067,7 @@ Structure is documented below.
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredentialpublickey">pulumi.<wbr>Input<Device<wbr>Credential<wbr>Public<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
@@ -2119,7 +2077,7 @@ Structure is documented below.
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this credential becomes invalid.
 {{% /md %}}</dd></dl>
@@ -2132,7 +2090,7 @@ Structure is documented below.
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicecredentialpublickey">Input[Device<wbr>Credential<wbr>Public<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#devicecredentialpublickey">Device<wbr>Credential<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key used to verify the signature of JSON Web Tokens (JWTs).
 Structure is documented below.
@@ -2142,7 +2100,7 @@ Structure is documented below.
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which this credential becomes invalid.
 {{% /md %}}</dd></dl>
@@ -2203,7 +2161,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the key.
 Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
@@ -2213,7 +2171,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key data.
 {{% /md %}}</dd></dl>
@@ -2226,7 +2184,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the key.
 Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
@@ -2236,7 +2194,7 @@ Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key data.
 {{% /md %}}</dd></dl>
@@ -2341,7 +2299,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#gatewayauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Auth<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
@@ -2351,7 +2309,7 @@ Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATI
 <a href="#gatewaytype_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Default value is `NON_GATEWAY`.
@@ -2362,7 +2320,7 @@ Possible values are `GATEWAY` and `NON_GATEWAY`.
 <a href="#lastaccessedgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The ID of the gateway the device accessed most recently.
@@ -2372,7 +2330,7 @@ The ID of the gateway the device accessed most recently.
 <a href="#lastaccessedgatewaytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Gateway<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
@@ -2386,7 +2344,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#gateway_auth_method_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>auth_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
@@ -2396,7 +2354,7 @@ Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATI
 <a href="#gateway_type_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the device is a gateway.
 Default value is `NON_GATEWAY`.
@@ -2407,7 +2365,7 @@ Possible values are `GATEWAY` and `NON_GATEWAY`.
 <a href="#last_accessed_gateway_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The ID of the gateway the device accessed most recently.
@@ -2417,7 +2375,7 @@ The ID of the gateway the device accessed most recently.
 <a href="#last_accessed_gateway_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>gateway_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
@@ -2489,7 +2447,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<{[key: string]: any}>[]></span>
+        <span class="property-type">{[key: string]: any}[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2455,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2463,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2517,7 +2475,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]]]</span>
+        <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2483,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2491,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2587,7 +2545,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#binarydata_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2553,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2607,7 +2565,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#binary_data_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2615,7 +2573,7 @@ The most recent time at which the device accessed the gateway specified in last_
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
