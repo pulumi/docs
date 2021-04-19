@@ -88,8 +88,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-signalfx/sdk/v5/go/signalfx"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -222,19 +222,52 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">axes_include_zero</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">axes_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">axis_left</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisLeftArgs]</span> = None<span class="p">, </span><span class="nx">axis_right</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisRightArgs]</span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartEventOptionArgs]]</span> = None<span class="p">, </span><span class="nx">histogram_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartHistogramOptionArgs]]</span> = None<span class="p">, </span><span class="nx">legend_fields_to_hides</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">legend_options_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartLegendOptionsFieldArgs]]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_chart_legend_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plot_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_data_markers</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">show_event_lines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stacked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartVizOptionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">axes_include_zero</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">axes_precision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">axis_left</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TimeChartAxisLeftArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">axis_right</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TimeChartAxisRightArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">event_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartEventOptionArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">histogram_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartHistogramOptionArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">legend_fields_to_hides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">legend_options_fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartLegendOptionsFieldArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">on_chart_legend_dimension</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">plot_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">show_data_markers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">show_event_lines</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">stacked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartVizOptionArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTimeChart</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TimeChart</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTimeChart</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TimeChart</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TimeChart</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TimeChartArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -269,22 +302,32 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TimeChartArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -293,7 +336,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -317,7 +360,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -866,7 +909,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +918,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axesincludezero_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Include<wbr>Zero</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
 {{% /md %}}</dd><dt class="property-optional"
@@ -884,7 +927,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axesprecision_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -893,7 +936,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axisleft_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">pulumi<wbr>Input<Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -902,7 +945,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axisright_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
+        <span class="property-type"><a href="#timechartaxisright">pulumi<wbr>Input<Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -911,7 +954,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#colorby_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -920,7 +963,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +972,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
 {{% /md %}}</dd><dt class="property-optional"
@@ -938,7 +981,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -947,7 +990,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#eventoptions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">Time<wbr>Chart<wbr>Event<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#timecharteventoption">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +999,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#histogramoptions_nodejs" style="color: inherit; text-decoration: inherit;">histogram<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">Time<wbr>Chart<wbr>Histogram<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -965,7 +1008,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legendfieldstohides_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Fields<wbr>To<wbr>Hides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
@@ -974,7 +1017,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legendoptionsfields_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Options<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field[]</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -983,7 +1026,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +1035,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +1044,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +1053,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#onchartlegenddimension_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Chart<wbr>Legend<wbr>Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +1062,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +1071,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#showdatamarkers_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Data<wbr>Markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1080,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#showeventlines_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Event<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1089,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#stacked_nodejs" style="color: inherit; text-decoration: inherit;">stacked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1098,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1064,7 +1107,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
@@ -1073,7 +1116,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1125,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1134,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1143,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">Time<wbr>Chart<wbr>Viz<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#timechartvizoption">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -1113,7 +1156,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1165,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axes_include_zero_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>include_<wbr>zero</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1174,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axes_precision_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +1183,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axis_left_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">Input[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1192,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axis_right_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#timechartaxisright">Input[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1201,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#color_by_python" style="color: inherit; text-decoration: inherit;">color_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1210,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1219,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1228,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1237,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#event_options_python" style="color: inherit; text-decoration: inherit;">event_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">Sequence[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timecharteventoption">Input[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1246,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#histogram_options_python" style="color: inherit; text-decoration: inherit;">histogram_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">Sequence[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">Input[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1212,7 +1255,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legend_fields_to_hides_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>fields_<wbr>to_<wbr>hides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
@@ -1221,7 +1264,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legend_options_fields_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>options_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">Sequence[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">Input[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1273,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1282,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1291,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1300,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#on_chart_legend_dimension_python" style="color: inherit; text-decoration: inherit;">on_<wbr>chart_<wbr>legend_<wbr>dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1309,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1318,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#show_data_markers_python" style="color: inherit; text-decoration: inherit;">show_<wbr>data_<wbr>markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1327,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#show_event_lines_python" style="color: inherit; text-decoration: inherit;">show_<wbr>event_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1336,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#stacked_python" style="color: inherit; text-decoration: inherit;">stacked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1345,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1311,7 +1354,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
@@ -1320,7 +1363,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1372,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1381,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1390,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">Sequence[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartvizoption">Input[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -1452,20 +1495,50 @@ Get an existing TimeChart resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TimeChartState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TimeChart</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TimeChartState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TimeChart</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">axes_include_zero</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">axes_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">axis_left</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisLeftArgs]</span> = None<span class="p">, </span><span class="nx">axis_right</span><span class="p">:</span> <span class="nx">Optional[TimeChartAxisRightArgs]</span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartEventOptionArgs]]</span> = None<span class="p">, </span><span class="nx">histogram_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartHistogramOptionArgs]]</span> = None<span class="p">, </span><span class="nx">legend_fields_to_hides</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">legend_options_fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartLegendOptionsFieldArgs]]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">on_chart_legend_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plot_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_data_markers</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">show_event_lines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stacked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[TimeChartVizOptionArgs]]</span> = None<span class="p">) -&gt;</span> TimeChart</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">axes_include_zero</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">axes_precision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">axis_left</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TimeChartAxisLeftArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">axis_right</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TimeChartAxisRightArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">disable_sampling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">event_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartEventOptionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">histogram_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartHistogramOptionArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">legend_fields_to_hides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">legend_options_fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartLegendOptionsFieldArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_resolution</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">on_chart_legend_dimension</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">plot_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">show_data_markers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">show_event_lines</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">stacked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TimeChartVizOptionArgs]]]]</span> = None<span class="p">) -&gt;</span> TimeChart</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTimeChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TimeChartState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TimeChart</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTimeChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TimeChartState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TimeChart</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TimeChart</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TimeChartState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TimeChart</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TimeChartState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2086,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_axesincludezero_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Include<wbr>Zero</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_axesprecision_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_axisleft_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">pulumi<wbr>Input<Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2113,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_axisright_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
+        <span class="property-type"><a href="#timechartaxisright">pulumi<wbr>Input<Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2122,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_colorby_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2131,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2140,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2222,7 @@ The following state arguments are supported:
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2158,7 +2231,7 @@ The following state arguments are supported:
 <a href="#state_eventoptions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">Time<wbr>Chart<wbr>Event<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#timecharteventoption">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2167,7 +2240,7 @@ The following state arguments are supported:
 <a href="#state_histogramoptions_nodejs" style="color: inherit; text-decoration: inherit;">histogram<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">Time<wbr>Chart<wbr>Histogram<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2176,7 +2249,7 @@ The following state arguments are supported:
 <a href="#state_legendfieldstohides_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Fields<wbr>To<wbr>Hides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
@@ -2185,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_legendoptionsfields_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Options<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field[]</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2267,7 @@ The following state arguments are supported:
 <a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2203,7 +2276,7 @@ The following state arguments are supported:
 <a href="#state_minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2212,7 +2285,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2294,7 @@ The following state arguments are supported:
 <a href="#state_onchartlegenddimension_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Chart<wbr>Legend<wbr>Dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2303,7 @@ The following state arguments are supported:
 <a href="#state_plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2312,7 @@ The following state arguments are supported:
 <a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2248,7 +2321,7 @@ The following state arguments are supported:
 <a href="#state_showdatamarkers_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Data<wbr>Markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2257,7 +2330,7 @@ The following state arguments are supported:
 <a href="#state_showeventlines_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Event<wbr>Lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2339,7 @@ The following state arguments are supported:
 <a href="#state_stacked_nodejs" style="color: inherit; text-decoration: inherit;">stacked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2348,7 @@ The following state arguments are supported:
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2284,7 +2357,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
@@ -2293,7 +2366,7 @@ The following state arguments are supported:
 <a href="#state_timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2375,7 @@ The following state arguments are supported:
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2311,7 +2384,7 @@ The following state arguments are supported:
 <a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2393,7 @@ The following state arguments are supported:
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2402,7 @@ The following state arguments are supported:
 <a href="#state_vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">Time<wbr>Chart<wbr>Viz<wbr>Option[]</a></span>
+        <span class="property-type"><a href="#timechartvizoption">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -2342,7 +2415,7 @@ The following state arguments are supported:
 <a href="#state_axes_include_zero_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>include_<wbr>zero</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2351,7 +2424,7 @@ The following state arguments are supported:
 <a href="#state_axes_precision_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2433,7 @@ The following state arguments are supported:
 <a href="#state_axis_left_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">Input[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2369,7 +2442,7 @@ The following state arguments are supported:
 <a href="#state_axis_right_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#timechartaxisright">Input[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2378,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_color_by_python" style="color: inherit; text-decoration: inherit;">color_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,7 +2460,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2396,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
 {{% /md %}}</dd><dt class="property-optional"
@@ -2405,7 +2478,7 @@ The following state arguments are supported:
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2414,7 +2487,7 @@ The following state arguments are supported:
 <a href="#state_event_options_python" style="color: inherit; text-decoration: inherit;">event_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">Sequence[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timecharteventoption">Input[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2423,7 +2496,7 @@ The following state arguments are supported:
 <a href="#state_histogram_options_python" style="color: inherit; text-decoration: inherit;">histogram_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">Sequence[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">Input[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2432,7 +2505,7 @@ The following state arguments are supported:
 <a href="#state_legend_fields_to_hides_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>fields_<wbr>to_<wbr>hides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
@@ -2441,7 +2514,7 @@ The following state arguments are supported:
 <a href="#state_legend_options_fields_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>options_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">Sequence[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">Input[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2523,7 @@ The following state arguments are supported:
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2459,7 +2532,7 @@ The following state arguments are supported:
 <a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2468,7 +2541,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2477,7 +2550,7 @@ The following state arguments are supported:
 <a href="#state_on_chart_legend_dimension_python" style="color: inherit; text-decoration: inherit;">on_<wbr>chart_<wbr>legend_<wbr>dimension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2486,7 +2559,7 @@ The following state arguments are supported:
 <a href="#state_plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2495,7 +2568,7 @@ The following state arguments are supported:
 <a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2577,7 @@ The following state arguments are supported:
 <a href="#state_show_data_markers_python" style="color: inherit; text-decoration: inherit;">show_<wbr>data_<wbr>markers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2586,7 @@ The following state arguments are supported:
 <a href="#state_show_event_lines_python" style="color: inherit; text-decoration: inherit;">show_<wbr>event_<wbr>lines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2522,7 +2595,7 @@ The following state arguments are supported:
 <a href="#state_stacked_python" style="color: inherit; text-decoration: inherit;">stacked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2531,7 +2604,7 @@ The following state arguments are supported:
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2540,7 +2613,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
@@ -2549,7 +2622,7 @@ The following state arguments are supported:
 <a href="#state_time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2558,7 +2631,7 @@ The following state arguments are supported:
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2640,7 @@ The following state arguments are supported:
 <a href="#state_unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2576,7 +2649,7 @@ The following state arguments are supported:
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2585,7 +2658,7 @@ The following state arguments are supported:
 <a href="#state_viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">Sequence[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartvizoption">Input[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -2759,7 +2832,7 @@ The following state arguments are supported:
 <a href="#highwatermark_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2841,7 @@ The following state arguments are supported:
 <a href="#highwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2850,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2859,7 @@ The following state arguments are supported:
 <a href="#lowwatermark_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2795,7 +2868,7 @@ The following state arguments are supported:
 <a href="#lowwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2804,7 +2877,7 @@ The following state arguments are supported:
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2813,7 +2886,7 @@ The following state arguments are supported:
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2822,7 +2895,7 @@ The following state arguments are supported:
 <a href="#watermarks_nodejs" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleftwatermark">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark[]</a></span>
+        <span class="property-type"><a href="#timechartaxisleftwatermark">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2834,7 +2907,7 @@ The following state arguments are supported:
 <a href="#high_watermark_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2843,7 +2916,7 @@ The following state arguments are supported:
 <a href="#high_watermark_label_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2852,7 +2925,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2861,7 +2934,7 @@ The following state arguments are supported:
 <a href="#low_watermark_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2870,7 +2943,7 @@ The following state arguments are supported:
 <a href="#low_watermark_label_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2879,7 +2952,7 @@ The following state arguments are supported:
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2888,7 +2961,7 @@ The following state arguments are supported:
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2897,7 +2970,7 @@ The following state arguments are supported:
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleftwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartaxisleftwatermark">Input[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2953,7 +3026,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +3034,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd></dl>
@@ -2974,7 +3047,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2982,7 +3055,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd></dl>
@@ -3147,7 +3220,7 @@ The following state arguments are supported:
 <a href="#highwatermark_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3156,7 +3229,7 @@ The following state arguments are supported:
 <a href="#highwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3165,7 +3238,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3174,7 +3247,7 @@ The following state arguments are supported:
 <a href="#lowwatermark_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3183,7 +3256,7 @@ The following state arguments are supported:
 <a href="#lowwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3192,7 +3265,7 @@ The following state arguments are supported:
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3201,7 +3274,7 @@ The following state arguments are supported:
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3210,7 +3283,7 @@ The following state arguments are supported:
 <a href="#watermarks_nodejs" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisrightwatermark">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark[]</a></span>
+        <span class="property-type"><a href="#timechartaxisrightwatermark">pulumi<wbr>Input<pulumi<wbr>Input<Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3222,7 +3295,7 @@ The following state arguments are supported:
 <a href="#high_watermark_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3231,7 +3304,7 @@ The following state arguments are supported:
 <a href="#high_watermark_label_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3240,7 +3313,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3322,7 @@ The following state arguments are supported:
 <a href="#low_watermark_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3331,7 @@ The following state arguments are supported:
 <a href="#low_watermark_label_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3267,7 +3340,7 @@ The following state arguments are supported:
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3276,7 +3349,7 @@ The following state arguments are supported:
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3358,7 @@ The following state arguments are supported:
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisrightwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartaxisrightwatermark">Input[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3341,7 +3414,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3349,7 +3422,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd></dl>
@@ -3362,7 +3435,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3370,7 +3443,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd></dl>
@@ -3447,7 +3520,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3456,7 +3529,7 @@ The following state arguments are supported:
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3538,7 @@ The following state arguments are supported:
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd></dl>
@@ -3478,7 +3551,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3487,7 +3560,7 @@ The following state arguments are supported:
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3496,7 +3569,7 @@ The following state arguments are supported:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd></dl>
@@ -3537,7 +3610,7 @@ The following state arguments are supported:
 <a href="#colortheme_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
 {{% /md %}}</dd></dl>
@@ -3550,7 +3623,7 @@ The following state arguments are supported:
 <a href="#color_theme_python" style="color: inherit; text-decoration: inherit;">color_<wbr>theme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
 {{% /md %}}</dd></dl>
@@ -3609,7 +3682,7 @@ The following state arguments are supported:
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the property to display. Note the special values of `plot_label` (corresponding with the API's `sf_metric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3618,7 +3691,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True or False depending on if you want the property to be shown or hidden.
 {{% /md %}}</dd></dl>
@@ -3631,7 +3704,7 @@ The following state arguments are supported:
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the property to display. Note the special values of `plot_label` (corresponding with the API's `sf_metric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3640,7 +3713,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True or False depending on if you want the property to be shown or hidden.
 {{% /md %}}</dd></dl>
@@ -3805,7 +3878,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3814,7 +3887,7 @@ The following state arguments are supported:
 <a href="#axis_nodejs" style="color: inherit; text-decoration: inherit;">axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Y-axis associated with values for this plot. Must be either `right` or `left`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3823,7 +3896,7 @@ The following state arguments are supported:
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3832,7 +3905,7 @@ The following state arguments are supported:
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3841,7 +3914,7 @@ The following state arguments are supported:
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3850,7 +3923,7 @@ The following state arguments are supported:
 <a href="#valueprefix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3858,7 +3931,7 @@ The following state arguments are supported:
 <a href="#valuesuffix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3866,7 +3939,7 @@ The following state arguments are supported:
 <a href="#valueunit_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
@@ -3880,7 +3953,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3889,7 +3962,7 @@ The following state arguments are supported:
 <a href="#axis_python" style="color: inherit; text-decoration: inherit;">axis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Y-axis associated with values for this plot. Must be either `right` or `left`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3898,7 +3971,7 @@ The following state arguments are supported:
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3907,7 +3980,7 @@ The following state arguments are supported:
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3916,7 +3989,7 @@ The following state arguments are supported:
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3925,7 +3998,7 @@ The following state arguments are supported:
 <a href="#value_prefix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +4006,7 @@ The following state arguments are supported:
 <a href="#value_suffix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +4014,7 @@ The following state arguments are supported:
 <a href="#value_unit_python" style="color: inherit; text-decoration: inherit;">value_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.

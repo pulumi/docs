@@ -18,19 +18,43 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardChartArgs]]</span> = None<span class="p">, </span><span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardColumnArgs]]</span> = None<span class="p">, </span><span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardFilterArgs]]</span> = None<span class="p">, </span><span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGridArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSelectedEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardVariableArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardChartArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardColumnArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardEventOverlayArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardFilterArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardGridArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardSelectedEventOverlayArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardVariableArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDashboard</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Dashboard</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +89,32 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DashboardArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +123,7 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +147,7 @@ meta_desc: "Documentation for the signalfx.Dashboard resource with examples, inp
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -496,7 +530,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboardgroup_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -505,7 +539,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +548,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +557,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart[]</a></span>
+        <span class="property-type"><a href="#dashboardchart">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Chart<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -532,7 +566,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#chartsresolution_nodejs" style="color: inherit; text-decoration: inherit;">charts<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -541,7 +575,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Column<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -550,7 +584,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variable description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -559,7 +593,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#discoveryoptionsquery_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +601,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#discoveryoptionsselectors_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +609,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -584,7 +618,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#eventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Event<wbr>Overlay<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -593,7 +627,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -602,7 +636,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grids_nodejs" style="color: inherit; text-decoration: inherit;">grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid[]</a></span>
+        <span class="property-type"><a href="#dashboardgrid">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Grid<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -611,7 +645,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -620,7 +654,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selectedeventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +663,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +672,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +681,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#dashboardvariable">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -660,7 +694,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dashboard_group_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -669,7 +703,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +712,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +721,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">Sequence[Dashboard<wbr>Chart<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardchart">Input[Dashboard<wbr>Chart<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +730,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#charts_resolution_python" style="color: inherit; text-decoration: inherit;">charts_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +739,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">Sequence[Dashboard<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">Input[Dashboard<wbr>Column<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +748,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variable description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +757,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#discovery_options_query_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -731,7 +765,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#discovery_options_selectors_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -739,7 +773,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,7 +782,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#event_overlays_python" style="color: inherit; text-decoration: inherit;">event_<wbr>overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">Input[Dashboard<wbr>Event<wbr>Overlay<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -757,7 +791,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Sequence[Dashboard<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">Input[Dashboard<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +800,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grids_python" style="color: inherit; text-decoration: inherit;">grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">Sequence[Dashboard<wbr>Grid<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardgrid">Input[Dashboard<wbr>Grid<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +809,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,7 +818,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selected_event_overlays_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>event_<wbr>overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">Input[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +827,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +836,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +845,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">Sequence[Dashboard<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardvariable">Input[Dashboard<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -916,20 +950,41 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Dashboard</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardChartArgs]]</span> = None<span class="p">, </span><span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardColumnArgs]]</span> = None<span class="p">, </span><span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardFilterArgs]]</span> = None<span class="p">, </span><span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardGridArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardSelectedEventOverlayArgs]]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[DashboardVariableArgs]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">authorized_writer_teams</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">authorized_writer_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">charts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardChartArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">charts_resolution</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardColumnArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">dashboard_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">discovery_options_query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">discovery_options_selectors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+        <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">event_overlays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardEventOverlayArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardFilterArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">grids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardGridArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">selected_event_overlays</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardSelectedEventOverlayArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">time_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DashboardVariableArgs]]]]</span> = None<span class="p">) -&gt;</span> Dashboard</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DashboardState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Dashboard</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Dashboard</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DashboardState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1384,7 +1439,7 @@ The following state arguments are supported:
 <a href="#state_authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1402,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart[]</a></span>
+        <span class="property-type"><a href="#dashboardchart">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Chart<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_chartsresolution_nodejs" style="color: inherit; text-decoration: inherit;">charts<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1475,7 @@ The following state arguments are supported:
 <a href="#state_columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Column<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1484,7 @@ The following state arguments are supported:
 <a href="#state_dashboardgroup_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variable description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1447,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_discoveryoptionsquery_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1510,7 @@ The following state arguments are supported:
 <a href="#state_discoveryoptionsselectors_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1518,7 @@ The following state arguments are supported:
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_eventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Event<wbr>Overlay<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter[]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Filter<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_grids_nodejs" style="color: inherit; text-decoration: inherit;">grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid[]</a></span>
+        <span class="property-type"><a href="#dashboardgrid">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Grid<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_selectedeventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1581,7 @@ The following state arguments are supported:
 <a href="#state_timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable[]</a></span>
+        <span class="property-type"><a href="#dashboardvariable">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Variable<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -1557,7 +1612,7 @@ The following state arguments are supported:
 <a href="#state_authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1575,7 +1630,7 @@ The following state arguments are supported:
 <a href="#state_charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">Sequence[Dashboard<wbr>Chart<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardchart">Input[Dashboard<wbr>Chart<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1639,7 @@ The following state arguments are supported:
 <a href="#state_charts_resolution_python" style="color: inherit; text-decoration: inherit;">charts_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1648,7 @@ The following state arguments are supported:
 <a href="#state_columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">Sequence[Dashboard<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">Input[Dashboard<wbr>Column<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1657,7 @@ The following state arguments are supported:
 <a href="#state_dashboard_group_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1666,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variable description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1620,7 +1675,7 @@ The following state arguments are supported:
 <a href="#state_discovery_options_query_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1683,7 @@ The following state arguments are supported:
 <a href="#state_discovery_options_selectors_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1636,7 +1691,7 @@ The following state arguments are supported:
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1645,7 +1700,7 @@ The following state arguments are supported:
 <a href="#state_event_overlays_python" style="color: inherit; text-decoration: inherit;">event_<wbr>overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">Input[Dashboard<wbr>Event<wbr>Overlay<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1654,7 +1709,7 @@ The following state arguments are supported:
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">Sequence[Dashboard<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardfilter">Input[Dashboard<wbr>Filter<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1663,7 +1718,7 @@ The following state arguments are supported:
 <a href="#state_grids_python" style="color: inherit; text-decoration: inherit;">grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">Sequence[Dashboard<wbr>Grid<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardgrid">Input[Dashboard<wbr>Grid<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1672,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1736,7 @@ The following state arguments are supported:
 <a href="#state_selected_event_overlays_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>event_<wbr>overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">Input[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1690,7 +1745,7 @@ The following state arguments are supported:
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1754,7 @@ The following state arguments are supported:
 <a href="#state_time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1708,7 +1763,7 @@ The following state arguments are supported:
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1772,7 @@ The following state arguments are supported:
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">Sequence[Dashboard<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardvariable">Input[Dashboard<wbr>Variable<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -1839,7 +1894,7 @@ The following state arguments are supported:
 <a href="#chartid_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the chart to display.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1848,7 +1903,7 @@ The following state arguments are supported:
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1857,7 +1912,7 @@ The following state arguments are supported:
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1866,7 +1921,7 @@ The following state arguments are supported:
 <a href="#row_nodejs" style="color: inherit; text-decoration: inherit;">row</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1930,7 @@ The following state arguments are supported:
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 {{% /md %}}</dd></dl>
@@ -1888,7 +1943,7 @@ The following state arguments are supported:
 <a href="#chart_id_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the chart to display.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1897,7 +1952,7 @@ The following state arguments are supported:
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1906,7 +1961,7 @@ The following state arguments are supported:
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1970,7 @@ The following state arguments are supported:
 <a href="#row_python" style="color: inherit; text-decoration: inherit;">row</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1979,7 @@ The following state arguments are supported:
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 {{% /md %}}</dd></dl>
@@ -2019,7 +2074,7 @@ The following state arguments are supported:
 <a href="#chartids_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +2083,7 @@ The following state arguments are supported:
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +2092,7 @@ The following state arguments are supported:
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +2101,7 @@ The following state arguments are supported:
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 {{% /md %}}</dd></dl>
@@ -2059,7 +2114,7 @@ The following state arguments are supported:
 <a href="#chart_ids_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2123,7 @@ The following state arguments are supported:
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2077,7 +2132,7 @@ The following state arguments are supported:
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2141,7 @@ The following state arguments are supported:
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 {{% /md %}}</dd></dl>
@@ -2217,7 +2272,7 @@ The following state arguments are supported:
 <a href="#signal_nodejs" style="color: inherit; text-decoration: inherit;">signal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2281,7 @@ The following state arguments are supported:
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2290,7 @@ The following state arguments are supported:
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Text shown in the dropdown when selecting this overlay from the menu.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2299,7 @@ The following state arguments are supported:
 <a href="#line_nodejs" style="color: inherit; text-decoration: inherit;">line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Show a vertical line for the event. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2308,7 @@ The following state arguments are supported:
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlaysource">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2317,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
 {{% /md %}}</dd></dl>
@@ -2275,7 +2330,7 @@ The following state arguments are supported:
 <a href="#signal_python" style="color: inherit; text-decoration: inherit;">signal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2339,7 @@ The following state arguments are supported:
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2293,7 +2348,7 @@ The following state arguments are supported:
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Text shown in the dropdown when selecting this overlay from the menu.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2357,7 @@ The following state arguments are supported:
 <a href="#line_python" style="color: inherit; text-decoration: inherit;">line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Show a vertical line for the event. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2311,7 +2366,7 @@ The following state arguments are supported:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlaysource">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlaysource">Input[Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2375,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
 {{% /md %}}</dd></dl>
@@ -2397,7 +2452,7 @@ The following state arguments are supported:
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-required"
@@ -2406,7 +2461,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2415,7 +2470,7 @@ The following state arguments are supported:
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2428,7 +2483,7 @@ The following state arguments are supported:
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-required"
@@ -2437,7 +2492,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2501,7 @@ The following state arguments are supported:
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2541,7 +2596,7 @@ The following state arguments are supported:
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-required"
@@ -2550,7 +2605,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2614,7 @@ The following state arguments are supported:
 <a href="#applyifexist_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>If<wbr>Exist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2623,7 @@ The following state arguments are supported:
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2581,7 +2636,7 @@ The following state arguments are supported:
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-required"
@@ -2590,7 +2645,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2654,7 @@ The following state arguments are supported:
 <a href="#apply_if_exist_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>if_<wbr>exist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2663,7 @@ The following state arguments are supported:
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2685,7 +2740,7 @@ The following state arguments are supported:
 <a href="#chartids_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2694,7 +2749,7 @@ The following state arguments are supported:
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2703,7 +2758,7 @@ The following state arguments are supported:
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 {{% /md %}}</dd></dl>
@@ -2716,7 +2771,7 @@ The following state arguments are supported:
 <a href="#chart_ids_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2725,7 +2780,7 @@ The following state arguments are supported:
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2734,7 +2789,7 @@ The following state arguments are supported:
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
 {{% /md %}}</dd></dl>
@@ -2811,7 +2866,7 @@ The following state arguments are supported:
 <a href="#signal_nodejs" style="color: inherit; text-decoration: inherit;">signal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2875,7 @@ The following state arguments are supported:
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">pulumi<wbr>Input<pulumi<wbr>Input<Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2829,7 +2884,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
 {{% /md %}}</dd></dl>
@@ -2842,7 +2897,7 @@ The following state arguments are supported:
 <a href="#signal_python" style="color: inherit; text-decoration: inherit;">signal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2851,7 +2906,7 @@ The following state arguments are supported:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Input[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2860,7 +2915,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
 {{% /md %}}</dd></dl>
@@ -2937,7 +2992,7 @@ The following state arguments are supported:
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-required"
@@ -2946,7 +3001,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2955,7 +3010,7 @@ The following state arguments are supported:
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2968,7 +3023,7 @@ The following state arguments are supported:
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-required"
@@ -2977,7 +3032,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2986,7 +3041,7 @@ The following state arguments are supported:
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3171,7 +3226,7 @@ The following state arguments are supported:
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
 {{% /md %}}</dd><dt class="property-required"
@@ -3180,7 +3235,7 @@ The following state arguments are supported:
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3189,7 +3244,7 @@ The following state arguments are supported:
 <a href="#applyifexist_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>If<wbr>Exist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3198,7 +3253,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variable description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3207,7 +3262,7 @@ The following state arguments are supported:
 <a href="#replaceonly_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, this variable will only apply to charts that have a filter for the property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3216,7 +3271,7 @@ The following state arguments are supported:
 <a href="#restrictedsuggestions_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Suggestions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If `true`, this variable may only be set to the values listed in `values_suggested` and only these values will appear in autosuggestion menus. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3225,7 +3280,7 @@ The following state arguments are supported:
 <a href="#valuerequired_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3234,7 +3289,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3243,7 +3298,7 @@ The following state arguments are supported:
 <a href="#valuessuggesteds_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>Suggesteds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 {{% /md %}}</dd></dl>
@@ -3256,7 +3311,7 @@ The following state arguments are supported:
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
 {{% /md %}}</dd><dt class="property-required"
@@ -3265,7 +3320,7 @@ The following state arguments are supported:
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3274,7 +3329,7 @@ The following state arguments are supported:
 <a href="#apply_if_exist_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>if_<wbr>exist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3283,7 +3338,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variable description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3292,7 +3347,7 @@ The following state arguments are supported:
 <a href="#replace_only_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable will only apply to charts that have a filter for the property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3301,7 +3356,7 @@ The following state arguments are supported:
 <a href="#restricted_suggestions_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>suggestions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable may only be set to the values listed in `values_suggested` and only these values will appear in autosuggestion menus. `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3310,7 +3365,7 @@ The following state arguments are supported:
 <a href="#value_required_python" style="color: inherit; text-decoration: inherit;">value_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3319,7 +3374,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3328,7 +3383,7 @@ The following state arguments are supported:
 <a href="#values_suggesteds_python" style="color: inherit; text-decoration: inherit;">values_<wbr>suggesteds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 {{% /md %}}</dd></dl>
