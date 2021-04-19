@@ -61,7 +61,7 @@ package main
 
 import (
 	subscription "github.com/pulumi/pulumi-azure-native/sdk/go/azure/subscription"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -143,19 +143,27 @@ const alias = new azure_native.subscription.Alias("alias", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[PutAliasRequestPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">alias_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PutAliasRequestPropertiesArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlias</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alias</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlias</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alias</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alias</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AliasArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -190,22 +198,32 @@ const alias = new azure_native.subscription.Alias("alias", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AliasArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -333,7 +351,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#putaliasrequestproperties">Put<wbr>Alias<wbr>Request<wbr>Properties</a></span>
+        <span class="property-type"><a href="#putaliasrequestproperties">pulumi.<wbr>Input<Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Put alias request properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -341,7 +359,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#aliasname_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Alias Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -353,7 +371,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#putaliasrequestproperties">Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#putaliasrequestproperties">Input[Put<wbr>Alias<wbr>Request<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Put alias request properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -361,7 +379,7 @@ The Alias resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alias_name_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Alias Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -592,7 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billingscope_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines whether subscription is fieldLed, partnerLed or LegacyEA{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The friendly name of the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resellerid_nodejs" style="color: inherit; text-decoration: inherit;">reseller<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reseller ID, basically MPN Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This parameter can be used to create alias for existing subscription Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_nodejs" style="color: inherit; text-decoration: inherit;">workload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workload">Workload</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workload">pulumi.<wbr>Input<Workload></a></span>
     </dt>
     <dd>{{% md %}}The workload type of the subscription. It can be either Production or DevTest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -636,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#billing_scope_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines whether subscription is fieldLed, partnerLed or LegacyEA{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The friendly name of the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reseller_id_python" style="color: inherit; text-decoration: inherit;">reseller_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reseller ID, basically MPN Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This parameter can be used to create alias for existing subscription Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_python" style="color: inherit; text-decoration: inherit;">workload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#workload">Workload</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workload">Input[Workload]</a></span>
     </dt>
     <dd>{{% md %}}The workload type of the subscription. It can be either Production or DevTest.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -722,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Newly created subscription Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -742,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Newly created subscription Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

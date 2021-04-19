@@ -123,19 +123,32 @@ const assessment = new azure_native.security.Assessment("assessment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs, OnPremiseSqlResourceDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatusArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecurityAssessmentMetadataPropertiesArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecurityAssessmentPartnerDataArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs, OnPremiseSqlResourceDetailsArgs]]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AssessmentStatusArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,22 +183,32 @@ const assessment = new azure_native.security.Assessment("assessment", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -393,7 +416,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">pulumi.<wbr>Input<Azure<wbr>Resource<wbr>Details<wbr>Args></a> | <a href="#onpremiseresourcedetails">pulumi.<wbr>Input<On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args></a> | <a href="#onpremisesqlresourcedetails">pulumi.<wbr>Input<On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -401,7 +424,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -409,7 +432,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">pulumi.<wbr>Input<Assessment<wbr>Status<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -417,7 +440,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#additionaldata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +448,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessmentname_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +456,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadataproperties">pulumi.<wbr>Input<Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -441,7 +464,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partnersdata_nodejs" style="color: inherit; text-decoration: inherit;">partners<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdata">pulumi.<wbr>Input<Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -453,7 +476,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Input[Azure<wbr>Resource<wbr>Details<wbr>Args]</a> | <a href="#onpremiseresourcedetails">Input[On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args]</a> | <a href="#onpremisesqlresourcedetails">Input[On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -461,7 +484,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -469,7 +492,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Input[Assessment<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The result of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -477,7 +500,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Additional data regarding the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +508,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessment_name_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Assessment Key - Unique key for the assessment type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +516,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadataproperties">Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadataproperties">Input[Security<wbr>Assessment<wbr>Metadata<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes properties of an assessment metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -501,7 +524,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#partners_data_python" style="color: inherit; text-decoration: inherit;">partners_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentpartnerdata">Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentpartnerdata">Input[Security<wbr>Assessment<wbr>Partner<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data regarding 3rd party partner integration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -732,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureportaluri_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Portal<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -744,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_portal_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>portal_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Link to assessment in Azure Portal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmentstatuscode">Assessment<wbr>Status<wbr>Code</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#assessmentstatuscode">pulumi.<wbr>Input<Assessment<wbr>Status<wbr>Code></a></span>
     </dt>
     <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -842,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#assessmentstatuscode">Assessment<wbr>Status<wbr>Code</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#assessmentstatuscode">Input[Assessment<wbr>Status<wbr>Code]</a></span>
     </dt>
     <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -958,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_nodejs" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -986,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Programmatic code for the status of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cause_python" style="color: inherit; text-decoration: inherit;">cause</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Programmatic code for the cause of the assessment status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1092,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1104,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the assessed resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1258,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1266,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1274,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1282,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1294,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1302,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1310,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1318,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1404,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1412,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1420,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1428,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1448,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1456,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1464,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1582,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1590,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1598,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1606,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1614,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1622,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1642,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1650,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1658,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1666,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1674,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1792,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1800,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1808,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1816,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1824,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1832,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1844,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1852,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1860,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1868,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1876,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1884,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1954,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1962,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1970,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1982,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1990,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2068,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2076,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2084,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2096,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2104,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Secret to authenticate the partner and verify it created the assessment - write only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the product of the partner that created the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2310,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmenttype">Assessment<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#assessmenttype">pulumi.<wbr>Input<Assessment<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2318,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2326,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#severity">Severity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#severity">pulumi.<wbr>Input<Severity></a></span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Category[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Category>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#implementationeffort">Implementation<wbr>Effort</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#implementationeffort">pulumi.<wbr>Input<Implementation<wbr>Effort></a></span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2358,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">pulumi.<wbr>Input<Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2374,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remediationdescription_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Threats[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Threats>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#userimpact">User<wbr>Impact</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#userimpact">pulumi.<wbr>Input<User<wbr>Impact></a></span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2402,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessment_type_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#assessmenttype">Assessment<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#assessmenttype">Input[Assessment<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2410,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2418,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#severity">Severity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#severity">Input[Severity]</a></span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2426,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Category]]</span>
+        <span class="property-type">Input[Union[str, Category]]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2434,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2442,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#implementationeffort">Implementation<wbr>Effort</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#implementationeffort">Input[Implementation<wbr>Effort]</a></span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2450,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdata">Input[Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2458,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2466,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remediation_description_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2474,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Threats]]</span>
+        <span class="property-type">Input[Union[str, Threats]]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#userimpact">User<wbr>Impact</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#userimpact">Input[User<wbr>Impact]</a></span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2696,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2704,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2712,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2720,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2728,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2736,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementationeffort_nodejs" style="color: inherit; text-decoration: inherit;">implementation<wbr>Effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2752,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnerdata_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">pulumi.<wbr>Input<Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2760,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2768,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remediationdescription_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2776,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_nodejs" style="color: inherit; text-decoration: inherit;">threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2784,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userimpact_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2796,7 +2819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessment_type_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2804,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User friendly display name of the assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2812,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource ID of the policy definition that turns this assessment calculation on{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2820,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The severity level of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2828,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable description of the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#implementation_effort_python" style="color: inherit; text-decoration: inherit;">implementation_<wbr>effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The implementation effort required to remediate this assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_data_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#securityassessmentmetadatapartnerdataresponse">Input[Security<wbr>Assessment<wbr>Metadata<wbr>Partner<wbr>Data<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the partner that created the assessment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}True if this assessment is in preview release status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remediation_description_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Human readable description of what you should do to mitigate this security issue{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2876,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threats_python" style="color: inherit; text-decoration: inherit;">threats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2884,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_impact_python" style="color: inherit; text-decoration: inherit;">user_<wbr>impact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user impact of the assessment{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2938,7 +2961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2946,7 +2969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2958,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2966,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3020,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3028,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3040,7 +3063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the company of the partner{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3048,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}secret to authenticate the partner - write only{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -320,7 +320,7 @@ package main
 
 import (
 	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -444,19 +444,42 @@ const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, CompatibilityLevel]]</span> = None<span class="p">, </span><span class="nx">data_locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events_late_arrival_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">events_out_of_order_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, EventsOutOfOrderPolicy]]</span> = None<span class="p">, </span><span class="nx">functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[FunctionArgs]]</span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputArgs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_error_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, OutputErrorPolicy]]</span> = None<span class="p">, </span><span class="nx">output_start_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, OutputStartMode]]</span> = None<span class="p">, </span><span class="nx">output_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[OutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transformation</span><span class="p">:</span> <span class="nx">Optional[TransformationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">compatibility_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CompatibilityLevel]]]</span> = None<span class="p">,</span>
+                 <span class="nx">data_locale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">events_late_arrival_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">events_out_of_order_max_delay_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                 <span class="nx">events_out_of_order_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EventsOutOfOrderPolicy]]]</span> = None<span class="p">,</span>
+                 <span class="nx">functions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FunctionArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InputArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">output_error_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OutputErrorPolicy]]]</span> = None<span class="p">,</span>
+                 <span class="nx">output_start_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OutputStartMode]]]</span> = None<span class="p">,</span>
+                 <span class="nx">output_start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OutputArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">transformation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TransformationArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -491,22 +514,32 @@ const streamingJob = new azure_native.streamanalytics.StreamingJob("streamingJob
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -874,7 +907,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +915,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compatibilitylevel">Compatibility<wbr>Level</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#compatibilitylevel">pulumi.<wbr>Input<Compatibility<wbr>Level></a></span>
     </dt>
     <dd>{{% md %}}Controls certain runtime behaviors of the streaming job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +923,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#datalocale_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +931,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#eventslatearrivalmaxdelayinseconds_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Late<wbr>Arrival<wbr>Max<wbr>Delay<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +939,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#eventsoutofordermaxdelayinseconds_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Out<wbr>Of<wbr>Order<wbr>Max<wbr>Delay<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +947,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#eventsoutoforderpolicy_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Out<wbr>Of<wbr>Order<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#eventsoutoforderpolicy">Events<wbr>Out<wbr>Of<wbr>Order<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#eventsoutoforderpolicy">pulumi.<wbr>Input<Events<wbr>Out<wbr>Of<wbr>Order<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}Indicates the policy to apply to events that arrive out of order in the input event stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +955,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#functions_nodejs" style="color: inherit; text-decoration: inherit;">functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#function">Function[]</a></span>
+        <span class="property-type"><a href="#function">pulumi.<wbr>Input<pulumi.<wbr>Input<Function<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +963,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#input">Input[]</a></span>
+        <span class="property-type"><a href="#input">pulumi.<wbr>Input<pulumi.<wbr>Input<Input<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +971,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +979,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +987,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputerrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Error<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#outputerrorpolicy">Output<wbr>Error<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#outputerrorpolicy">pulumi.<wbr>Input<Output<wbr>Error<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +995,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputstartmode_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Start<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#outputstartmode">Output<wbr>Start<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#outputstartmode">pulumi.<wbr>Input<Output<wbr>Start<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +1003,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputstarttime_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +1011,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#output">Output[]</a></span>
+        <span class="property-type"><a href="#output">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +1019,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1027,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1035,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#transformation_nodejs" style="color: inherit; text-decoration: inherit;">transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">Transformation</a></span>
+        <span class="property-type"><a href="#transformation">pulumi.<wbr>Input<Transformation<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1014,7 +1047,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1055,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#compatibilitylevel">Compatibility<wbr>Level</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#compatibilitylevel">Input[Compatibility<wbr>Level]</a></span>
     </dt>
     <dd>{{% md %}}Controls certain runtime behaviors of the streaming job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1030,7 +1063,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#data_locale_python" style="color: inherit; text-decoration: inherit;">data_<wbr>locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1071,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#events_late_arrival_max_delay_in_seconds_python" style="color: inherit; text-decoration: inherit;">events_<wbr>late_<wbr>arrival_<wbr>max_<wbr>delay_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1079,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#events_out_of_order_max_delay_in_seconds_python" style="color: inherit; text-decoration: inherit;">events_<wbr>out_<wbr>of_<wbr>order_<wbr>max_<wbr>delay_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1054,7 +1087,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#events_out_of_order_policy_python" style="color: inherit; text-decoration: inherit;">events_<wbr>out_<wbr>of_<wbr>order_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#eventsoutoforderpolicy">Events<wbr>Out<wbr>Of<wbr>Order<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#eventsoutoforderpolicy">Input[Events<wbr>Out<wbr>Of<wbr>Order<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Indicates the policy to apply to events that arrive out of order in the input event stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1095,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#functions_python" style="color: inherit; text-decoration: inherit;">functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#function">Sequence[Function<wbr>Args]</a></span>
+        <span class="property-type"><a href="#function">Input[Function<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1103,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#input">Sequence[Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#input">Input[Input<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1111,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1119,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1127,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#output_error_policy_python" style="color: inherit; text-decoration: inherit;">output_<wbr>error_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#outputerrorpolicy">Output<wbr>Error<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#outputerrorpolicy">Input[Output<wbr>Error<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1135,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#output_start_mode_python" style="color: inherit; text-decoration: inherit;">output_<wbr>start_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#outputstartmode">Output<wbr>Start<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#outputstartmode">Input[Output<wbr>Start<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1143,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#output_start_time_python" style="color: inherit; text-decoration: inherit;">output_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1151,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#output">Sequence[Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#output">Input[Output<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1159,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1167,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1175,7 @@ The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#transformation_python" style="color: inherit; text-decoration: inherit;">transformation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformation">Transformation<wbr>Args</a></span>
+        <span class="property-type"><a href="#transformation">Input[Transformation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1649,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepathprefix_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1923,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepathprefix_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1979,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1991,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_prefix_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2015,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2023,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2031,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2039,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2149,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2193,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2327,7 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2343,7 +2376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2371,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2387,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2395,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2473,7 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapto_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2501,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2509,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2587,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mapto_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2603,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2615,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2623,7 +2656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2631,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2685,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2705,7 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2775,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2787,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2795,7 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2849,7 +2882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2857,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2869,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2877,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2931,7 +2964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2951,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3061,7 +3094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3069,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3085,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3093,7 +3126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3105,7 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3113,7 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3121,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3129,7 +3162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3137,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3239,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3247,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3255,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3271,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3283,7 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3291,7 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3299,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SQL server containing the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3307,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the table in the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3315,7 +3348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name that will be used to connect to the Azure SQL database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3449,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3457,7 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3465,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3473,7 +3506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnstoremove_nodejs" style="color: inherit; text-decoration: inherit;">columns<wbr>To<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3481,7 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3489,7 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowkey_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3497,7 +3530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3509,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3525,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_to_remove_python" style="color: inherit; text-decoration: inherit;">columns_<wbr>to_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +3574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3557,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3691,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3699,7 +3732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3707,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3715,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columnstoremove_nodejs" style="color: inherit; text-decoration: inherit;">columns<wbr>To<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3723,7 +3756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3731,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rowkey_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3739,7 +3772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3751,7 +3784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3759,7 +3792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3767,7 +3800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of rows to write to the Azure Table at a time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_to_remove_python" style="color: inherit; text-decoration: inherit;">columns_<wbr>to_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}If specified, each item in the array is the name of a column to remove (if present) from output event entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3783,7 +3816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3799,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Table. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3901,7 +3934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3917,7 +3950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3925,7 +3958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#storageaccount">pulumi.<wbr>Input<pulumi.<wbr>Input<Storage<wbr>Account<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3945,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3953,7 +3986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3961,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3969,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Input[Storage<wbr>Account<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3977,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4079,7 +4112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4087,7 +4120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4095,7 +4128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4103,7 +4136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Storage<wbr>Account<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4123,7 +4156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4131,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4139,7 +4172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4147,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Input[Storage<wbr>Account<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4155,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4257,7 +4290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4265,7 +4298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4273,7 +4306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4281,7 +4314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#storageaccount">pulumi.<wbr>Input<pulumi.<wbr>Input<Storage<wbr>Account<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4289,7 +4322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4301,7 +4334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4309,7 +4342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4317,7 +4350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4325,7 +4358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Input[Storage<wbr>Account<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4333,7 +4366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4435,7 +4468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4443,7 +4476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4451,7 +4484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4459,7 +4492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Storage<wbr>Account<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4467,7 +4500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4479,7 +4512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4487,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4495,7 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4503,7 +4536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Input[Storage<wbr>Account<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4511,7 +4544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4629,7 +4662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4637,7 +4670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4645,7 +4678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4653,7 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4661,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
+        <span class="property-type"><a href="#storageaccount">pulumi.<wbr>Input<pulumi.<wbr>Input<Storage<wbr>Account<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4669,7 +4702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4681,7 +4714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4689,7 +4722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4697,7 +4730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4705,7 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_partition_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4713,7 +4746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccount">Input[Storage<wbr>Account<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4721,7 +4754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4839,7 +4872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4847,7 +4880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4855,7 +4888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4863,7 +4896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4871,7 +4904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Storage<wbr>Account<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4879,7 +4912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4891,7 +4924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4899,7 +4932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4907,7 +4940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4915,7 +4948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_partition_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4923,7 +4956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageaccountresponse">Input[Storage<wbr>Account<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4931,7 +4964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5007,7 +5040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encoding">Encoding</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encoding">pulumi.<wbr>Input<Encoding></a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5015,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5027,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encoding">Encoding</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encoding">Input[Encoding]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5035,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5089,7 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5097,7 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5109,7 +5142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5117,7 +5150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5187,7 +5220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The opaque diagnostic code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5195,7 +5228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5203,7 +5236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#since_nodejs" style="color: inherit; text-decoration: inherit;">since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5215,7 +5248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The opaque diagnostic code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5223,7 +5256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5231,7 +5264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#since_python" style="color: inherit; text-decoration: inherit;">since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5269,7 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Diagnostic<wbr>Condition<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5281,7 +5314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diagnosticconditionresponse">Input[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5399,7 +5432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5407,7 +5440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5415,7 +5448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collectionnamepattern_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Name<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5423,7 +5456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5431,7 +5464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documentid_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the primary key which insert or update operations are based on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5439,7 +5472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5451,7 +5484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5459,7 +5492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5467,7 +5500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collection_name_pattern_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5475,7 +5508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5483,7 +5516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_id_python" style="color: inherit; text-decoration: inherit;">document_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the primary key which insert or update operations are based on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5491,7 +5524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5609,7 +5642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5617,7 +5650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5625,7 +5658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collectionnamepattern_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Name<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5633,7 +5666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5641,7 +5674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documentid_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the primary key which insert or update operations are based on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5649,7 +5682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5661,7 +5694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5669,7 +5702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5677,7 +5710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#collection_name_pattern_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5685,7 +5718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5693,7 +5726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_id_python" style="color: inherit; text-decoration: inherit;">document_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the primary key which insert or update operations are based on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5701,7 +5734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5825,7 +5858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5833,7 +5866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key/column that is used to determine to which partition to send event data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5841,7 +5874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5849,7 +5882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5857,7 +5890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5869,7 +5902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5877,7 +5910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key/column that is used to determine to which partition to send event data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5885,7 +5918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5893,7 +5926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5901,7 +5934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6003,7 +6036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6011,7 +6044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key/column that is used to determine to which partition to send event data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6019,7 +6052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6027,7 +6060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6035,7 +6068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6047,7 +6080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6055,7 +6088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key/column that is used to determine to which partition to send event data.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6063,7 +6096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6071,7 +6104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6079,7 +6112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6181,7 +6214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6189,7 +6222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6197,7 +6230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6205,7 +6238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6213,7 +6246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6225,7 +6258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6233,7 +6266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6241,7 +6274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6249,7 +6282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6257,7 +6290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6359,7 +6392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6367,7 +6400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6375,7 +6408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6383,7 +6416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6391,7 +6424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6403,7 +6436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6411,7 +6444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6419,7 +6452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6427,7 +6460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6435,7 +6468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6515,7 +6548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6523,7 +6556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">pulumi.<wbr>Input<Scalar<wbr>Function<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6535,7 +6568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6543,7 +6576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionproperties">Input[Scalar<wbr>Function<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6597,7 +6630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6605,7 +6638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isconfigurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6617,7 +6650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6625,7 +6658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6679,7 +6712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6687,7 +6720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isconfigurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6699,7 +6732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6707,7 +6740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6745,7 +6778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6757,7 +6790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6795,7 +6828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6807,7 +6840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6893,7 +6926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6901,7 +6934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6909,7 +6942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6917,7 +6950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">pulumi.<wbr>Input<Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6929,7 +6962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6937,7 +6970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6945,7 +6978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6953,7 +6986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalarfunctionpropertiesresponse">Input[Scalar<wbr>Function<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7007,7 +7040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7015,7 +7048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">pulumi.<wbr>Input<Reference<wbr>Input<wbr>Properties<wbr>Args></a> | <a href="#streaminputproperties">pulumi.<wbr>Input<Stream<wbr>Input<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7027,7 +7060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7035,7 +7068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Input[Reference<wbr>Input<wbr>Properties<wbr>Args]</a> | <a href="#streaminputproperties">Input[Stream<wbr>Input<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7121,7 +7154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7129,7 +7162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7137,7 +7170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7145,7 +7178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response</a> | <a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">pulumi.<wbr>Input<Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args></a> | <a href="#streaminputpropertiesresponse">pulumi.<wbr>Input<Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7157,7 +7190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7165,7 +7198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7173,7 +7206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7181,7 +7214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a> | <a href="#streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputpropertiesresponse">Input[Reference<wbr>Input<wbr>Properties<wbr>Response<wbr>Args]</a> | <a href="#streaminputpropertiesresponse">Input[Stream<wbr>Input<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7283,7 +7316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7291,7 +7324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7299,7 +7332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iothubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hub<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7307,7 +7340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7315,7 +7348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7327,7 +7360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7335,7 +7368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7343,7 +7376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iot_hub_namespace_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hub_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7351,7 +7384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7359,7 +7392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7461,7 +7494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7469,7 +7502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7477,7 +7510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iothubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hub<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7485,7 +7518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7493,7 +7526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7505,7 +7538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7513,7 +7546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7521,7 +7554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iot_hub_namespace_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hub_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7529,7 +7562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7537,7 +7570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7575,7 +7608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7587,7 +7620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7625,7 +7658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7637,7 +7670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7717,7 +7750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encoding">Encoding</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encoding">pulumi.<wbr>Input<Encoding></a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7725,7 +7758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#jsonoutputserializationformat">Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#jsonoutputserializationformat">pulumi.<wbr>Input<Json<wbr>Output<wbr>Serialization<wbr>Format></a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7737,7 +7770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encoding">Encoding</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encoding">Input[Encoding]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7745,7 +7778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#jsonoutputserializationformat">Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#jsonoutputserializationformat">Input[Json<wbr>Output<wbr>Serialization<wbr>Format]</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7799,7 +7832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7807,7 +7840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7819,7 +7852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7827,7 +7860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7897,7 +7930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">pulumi.<wbr>Input<Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#azuresqldatabaseoutputdatasource">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#azuretableoutputdatasource">pulumi.<wbr>Input<Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#bloboutputdatasource">pulumi.<wbr>Input<Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#documentdboutputdatasource">pulumi.<wbr>Input<Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#eventhuboutputdatasource">pulumi.<wbr>Input<Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#powerbioutputdatasource">pulumi.<wbr>Input<Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#servicebusqueueoutputdatasource">pulumi.<wbr>Input<Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#servicebustopicoutputdatasource">pulumi.<wbr>Input<Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7905,7 +7938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7913,7 +7946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">pulumi.<wbr>Input<Avro<wbr>Serialization<wbr>Args></a> | <a href="#csvserialization">pulumi.<wbr>Input<Csv<wbr>Serialization<wbr>Args></a> | <a href="#jsonserialization">pulumi.<wbr>Input<Json<wbr>Serialization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7925,7 +7958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasource">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#azuretableoutputdatasource">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#bloboutputdatasource">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#documentdboutputdatasource">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhuboutputdatasource">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#powerbioutputdatasource">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebusqueueoutputdatasource">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#servicebustopicoutputdatasource">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasource">Input[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#azuresqldatabaseoutputdatasource">Input[Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#azuretableoutputdatasource">Input[Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#bloboutputdatasource">Input[Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#documentdboutputdatasource">Input[Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#eventhuboutputdatasource">Input[Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#powerbioutputdatasource">Input[Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#servicebusqueueoutputdatasource">Input[Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#servicebustopicoutputdatasource">Input[Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7933,7 +7966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7941,7 +7974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Input[Avro<wbr>Serialization<wbr>Args]</a> | <a href="#csvserialization">Input[Csv<wbr>Serialization<wbr>Args]</a> | <a href="#jsonserialization">Input[Json<wbr>Serialization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8101,7 +8134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">pulumi.<wbr>Input<Diagnostics<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8109,7 +8142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8117,7 +8150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8125,7 +8158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8133,7 +8166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">pulumi.<wbr>Input<Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#azuresqldatabaseoutputdatasourceresponse">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#azuretableoutputdatasourceresponse">pulumi.<wbr>Input<Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#bloboutputdatasourceresponse">pulumi.<wbr>Input<Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#documentdboutputdatasourceresponse">pulumi.<wbr>Input<Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#eventhuboutputdatasourceresponse">pulumi.<wbr>Input<Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#powerbioutputdatasourceresponse">pulumi.<wbr>Input<Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#servicebusqueueoutputdatasourceresponse">pulumi.<wbr>Input<Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#servicebustopicoutputdatasourceresponse">pulumi.<wbr>Input<Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8141,7 +8174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8149,7 +8182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">pulumi.<wbr>Input<Avro<wbr>Serialization<wbr>Response<wbr>Args></a> | <a href="#csvserializationresponse">pulumi.<wbr>Input<Csv<wbr>Serialization<wbr>Response<wbr>Args></a> | <a href="#jsonserializationresponse">pulumi.<wbr>Input<Json<wbr>Serialization<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8161,7 +8194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Input[Diagnostics<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8169,7 +8202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8177,7 +8210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8185,7 +8218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8193,7 +8226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#bloboutputdatasourceresponse">Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhuboutputdatasourceresponse">Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueoutputdatasourceresponse">Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicebustopicoutputdatasourceresponse">Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakestoreoutputdatasourceresponse">Input[Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#azuresqldatabaseoutputdatasourceresponse">Input[Azure<wbr>Sql<wbr>Database<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#azuretableoutputdatasourceresponse">Input[Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#bloboutputdatasourceresponse">Input[Blob<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#documentdboutputdatasourceresponse">Input[Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#eventhuboutputdatasourceresponse">Input[Event<wbr>Hub<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#powerbioutputdatasourceresponse">Input[Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#servicebusqueueoutputdatasourceresponse">Input[Service<wbr>Bus<wbr>Queue<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#servicebustopicoutputdatasourceresponse">Input[Service<wbr>Bus<wbr>Topic<wbr>Output<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8201,7 +8234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8209,7 +8242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Input[Avro<wbr>Serialization<wbr>Response<wbr>Args]</a> | <a href="#csvserializationresponse">Input[Csv<wbr>Serialization<wbr>Response<wbr>Args]</a> | <a href="#jsonserializationresponse">Input[Json<wbr>Serialization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8373,7 +8406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8381,7 +8414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Power BI group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8389,7 +8422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8397,7 +8430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8405,7 +8438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8413,7 +8446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8421,7 +8454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8433,7 +8466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8441,7 +8474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Power BI group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8449,7 +8482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8457,7 +8490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8465,7 +8498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8473,7 +8506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8481,7 +8514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8615,7 +8648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8623,7 +8656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the Power BI group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8631,7 +8664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8639,7 +8672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8647,7 +8680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8655,7 +8688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8663,7 +8696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>User<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8675,7 +8708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8683,7 +8716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the Power BI group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8691,7 +8724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8699,7 +8732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_token_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8707,7 +8740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8715,7 +8748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_display_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8723,7 +8756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_user_principal_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8777,7 +8810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">pulumi.<wbr>Input<Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8785,7 +8818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">pulumi.<wbr>Input<Avro<wbr>Serialization<wbr>Args></a> | <a href="#csvserialization">pulumi.<wbr>Input<Csv<wbr>Serialization<wbr>Args></a> | <a href="#jsonserialization">pulumi.<wbr>Input<Json<wbr>Serialization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8797,7 +8830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasource">Input[Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8805,7 +8838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Input[Avro<wbr>Serialization<wbr>Args]</a> | <a href="#csvserialization">Input[Csv<wbr>Serialization<wbr>Args]</a> | <a href="#jsonserialization">Input[Json<wbr>Serialization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8891,7 +8924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">pulumi.<wbr>Input<Diagnostics<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8899,7 +8932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8907,7 +8940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">pulumi.<wbr>Input<Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8915,7 +8948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">pulumi.<wbr>Input<Avro<wbr>Serialization<wbr>Response<wbr>Args></a> | <a href="#csvserializationresponse">pulumi.<wbr>Input<Csv<wbr>Serialization<wbr>Response<wbr>Args></a> | <a href="#jsonserializationresponse">pulumi.<wbr>Input<Json<wbr>Serialization<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8927,7 +8960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Input[Diagnostics<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8935,7 +8968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8943,7 +8976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Input[Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8951,7 +8984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Input[Avro<wbr>Serialization<wbr>Response<wbr>Args]</a> | <a href="#csvserializationresponse">Input[Csv<wbr>Serialization<wbr>Response<wbr>Args]</a> | <a href="#jsonserializationresponse">Input[Json<wbr>Serialization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9021,7 +9054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args></a> | <a href="#javascriptfunctionbinding">pulumi.<wbr>Input<Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9029,7 +9062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">Function<wbr>Input[]</a></span>
+        <span class="property-type"><a href="#functioninput">pulumi.<wbr>Input<pulumi.<wbr>Input<Function<wbr>Input<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9037,7 +9070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
+        <span class="property-type"><a href="#functionoutput">pulumi.<wbr>Input<Function<wbr>Output<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9049,7 +9082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args]</a> | <a href="#javascriptfunctionbinding">Input[Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9057,7 +9090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">Sequence[Function<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioninput">Input[Function<wbr>Input<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9065,7 +9098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutput">Input[Function<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9151,7 +9184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9159,7 +9192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">pulumi.<wbr>Input<Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args></a> | <a href="#javascriptfunctionbindingresponse">pulumi.<wbr>Input<Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9167,7 +9200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">Function<wbr>Input<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Function<wbr>Input<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9175,7 +9208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">pulumi.<wbr>Input<Function<wbr>Output<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9187,7 +9220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9195,7 +9228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Input[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args]</a> | <a href="#javascriptfunctionbindingresponse">Input[Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9203,7 +9236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functioninputresponse">Input[Function<wbr>Input<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9211,7 +9244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionoutputresponse">Input[Function<wbr>Output<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9313,7 +9346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9321,7 +9354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9329,7 +9362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9337,7 +9370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9345,7 +9378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9357,7 +9390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9365,7 +9398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9373,7 +9406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9381,7 +9414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9389,7 +9422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9491,7 +9524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9499,7 +9532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9507,7 +9540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9515,7 +9548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9523,7 +9556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9535,7 +9568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9543,7 +9576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9551,7 +9584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9559,7 +9592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9567,7 +9600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9669,7 +9702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9677,7 +9710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9685,7 +9718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9693,7 +9726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9701,7 +9734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9713,7 +9746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9721,7 +9754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9729,7 +9762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9737,7 +9770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9745,7 +9778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9847,7 +9880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9855,7 +9888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9863,7 +9896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9871,7 +9904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9879,7 +9912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9891,7 +9924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A string array of the names of output columns to be attached to Service Bus messages as custom properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9899,7 +9932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9907,7 +9940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9915,7 +9948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9923,7 +9956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Topic. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9961,7 +9994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9973,7 +10006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10033,7 +10066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10045,7 +10078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10099,7 +10132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10107,7 +10140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10119,7 +10152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10127,7 +10160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10181,7 +10214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10189,7 +10222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10201,7 +10234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10209,7 +10242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10263,7 +10296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">pulumi.<wbr>Input<Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#eventhubstreaminputdatasource">pulumi.<wbr>Input<Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args></a> | <a href="#iothubstreaminputdatasource">pulumi.<wbr>Input<Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10271,7 +10304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">pulumi.<wbr>Input<Avro<wbr>Serialization<wbr>Args></a> | <a href="#csvserialization">pulumi.<wbr>Input<Csv<wbr>Serialization<wbr>Args></a> | <a href="#jsonserialization">pulumi.<wbr>Input<Json<wbr>Serialization<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10283,7 +10316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Input[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#eventhubstreaminputdatasource">Input[Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args]</a> | <a href="#iothubstreaminputdatasource">Input[Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10291,7 +10324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Input[Avro<wbr>Serialization<wbr>Args]</a> | <a href="#csvserialization">Input[Csv<wbr>Serialization<wbr>Args]</a> | <a href="#jsonserialization">Input[Json<wbr>Serialization<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10377,7 +10410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">pulumi.<wbr>Input<Diagnostics<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10385,7 +10418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10393,7 +10426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">pulumi.<wbr>Input<Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#eventhubstreaminputdatasourceresponse">pulumi.<wbr>Input<Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a> | <a href="#iothubstreaminputdatasourceresponse">pulumi.<wbr>Input<Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10401,7 +10434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">pulumi.<wbr>Input<Avro<wbr>Serialization<wbr>Response<wbr>Args></a> | <a href="#csvserializationresponse">pulumi.<wbr>Input<Csv<wbr>Serialization<wbr>Response<wbr>Args></a> | <a href="#jsonserializationresponse">pulumi.<wbr>Input<Json<wbr>Serialization<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10413,7 +10446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diagnosticsresponse">Input[Diagnostics<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10421,7 +10454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10429,7 +10462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Input[Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#eventhubstreaminputdatasourceresponse">Input[Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a> | <a href="#iothubstreaminputdatasourceresponse">Input[Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10437,7 +10470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Input[Avro<wbr>Serialization<wbr>Response<wbr>Args]</a> | <a href="#csvserializationresponse">Input[Csv<wbr>Serialization<wbr>Response<wbr>Args]</a> | <a href="#jsonserializationresponse">Input[Json<wbr>Serialization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10507,7 +10540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10515,7 +10548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10523,7 +10556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingunits_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10535,7 +10568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10543,7 +10576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10551,7 +10584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_units_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10669,7 +10702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10677,7 +10710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10685,7 +10718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10693,7 +10726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10701,7 +10734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10709,7 +10742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streamingunits_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10721,7 +10754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10729,7 +10762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10737,7 +10770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10745,7 +10778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10753,7 +10786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10761,7 +10794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#streaming_units_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd></dl>
 {{% /choosable %}}

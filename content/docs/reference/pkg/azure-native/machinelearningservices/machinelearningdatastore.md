@@ -62,7 +62,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -182,7 +182,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -303,7 +303,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -415,7 +415,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -521,7 +521,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -637,7 +637,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -756,7 +756,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -875,7 +875,7 @@ package main
 
 import (
 	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -963,19 +963,59 @@ const machineLearningDatastore = new azure_native.machinelearningservices.Machin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adls_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">adls_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authority_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_store_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatastoreTypeArm]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datastore_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">file_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sas_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_account_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">store_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_system_assigned_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                             <span class="nx">account_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">adls_resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">adls_subscription_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">authority_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">data_store_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DatastoreTypeArm]]]</span> = None<span class="p">,</span>
+                             <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">datastore_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">enforce_ssl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">file_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">include_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">resource_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">sas_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">share_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">skip_validation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                             <span class="nx">storage_account_resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">storage_account_subscription_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">store_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                             <span class="nx">workspace_system_assigned_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">,</span>
+                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDatastore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDatastore</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachineLearningDatastore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MachineLearningDatastore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MachineLearningDatastore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MachineLearningDatastoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1010,22 +1050,32 @@ const machineLearningDatastore = new azure_native.machinelearningservices.Machin
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MachineLearningDatastoreArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1665,7 +1715,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#datastoretypearm">Datastore<wbr>Type<wbr>Arm</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datastoretypearm">pulumi.<wbr>Input<Datastore<wbr>Type<wbr>Arm></a></span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1673,7 +1723,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1681,7 +1731,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1739,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account Key of storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1747,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1755,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#adlsresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">adls<wbr>Resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group the ADLS store belongs to. Defaults to selected resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1763,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#adlssubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">adls<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the subscription the ADLS store belongs to. Defaults to selected subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1771,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#authorityurl_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authority url used to authenticate the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1729,7 +1779,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service principal's client/application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1787,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service principal's secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1795,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the azure blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1803,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1811,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1819,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of the datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1827,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The endpoint of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1835,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#enforcessl_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>SSL</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This sets the ssl value of the server. Defaults to true if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1843,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file system name of the ADLS Gen2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1851,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#includesecret_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Include datastore secret in response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1859,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1867,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1875,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1883,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol to be used{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1891,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#resourceurl_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines what operations will be performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1899,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sas Token of storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1907,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SQL/MySQL/PostgreSQL server name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1915,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the file share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1923,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#skipvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1931,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#storageaccountresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group of the storage account. Defaults to selected resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1939,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#storageaccountsubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The subscription ID of the storage account. Defaults to selected subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1947,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ADLS store name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1955,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service principal Tenant ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1963,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1971,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username of the database user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1929,7 +1979,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#workspacesystemassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>System<wbr>Assigned<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If set to true, datastore support data access authenticated with Workspace MSI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1941,7 +1991,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#datastoretypearm">Datastore<wbr>Type<wbr>Arm</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datastoretypearm">Input[Datastore<wbr>Type<wbr>Arm]</a></span>
     </dt>
     <dd>{{% md %}}Specifies datastore type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1949,7 +1999,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1957,7 +2007,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +2015,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account Key of storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1973,7 +2023,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1981,7 +2031,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#adls_resource_group_python" style="color: inherit; text-decoration: inherit;">adls_<wbr>resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group the ADLS store belongs to. Defaults to selected resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +2039,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#adls_subscription_id_python" style="color: inherit; text-decoration: inherit;">adls_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the subscription the ADLS store belongs to. Defaults to selected subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2047,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#authority_url_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authority url used to authenticate the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2055,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service principal's client/application ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2063,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service principal's secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2071,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the azure blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2079,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2087,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2045,7 +2095,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of the datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2103,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The endpoint of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2111,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#enforce_ssl_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This sets the ssl value of the server. Defaults to true if not set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2119,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file system name of the ADLS Gen2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2077,7 +2127,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#include_secret_python" style="color: inherit; text-decoration: inherit;">include_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Include datastore secret in response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2135,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2143,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2151,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2159,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol to be used{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2167,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#resource_url_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines what operations will be performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2175,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sas Token of storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2183,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SQL/MySQL/PostgreSQL server name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2141,7 +2191,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the file share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2199,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#skip_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2207,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#storage_account_resource_group_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group of the storage account. Defaults to selected resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2215,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#storage_account_subscription_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The subscription ID of the storage account. Defaults to selected subscription{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2223,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ADLS store name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2231,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service principal Tenant ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2239,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2247,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username of the database user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2255,7 @@ The MachineLearningDatastore resource accepts the following [input]({{< relref "
 <a href="#workspace_system_assigned_identity_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>system_<wbr>assigned_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If set to true, datastore support data access authenticated with Workspace MSI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2692,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorityurl_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2700,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2708,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2716,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2724,7 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Data Lake credential type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2732,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscertauth_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cert<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2740,7 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2748,7 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2756,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedataaccessauthidentity_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Data<wbr>Access<wbr>Auth<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2764,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Data Lake store name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2780,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2788,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2800,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_url_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2808,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2824,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2832,7 +2882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Data Lake credential type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2840,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cert_auth_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cert_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2848,7 +2898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2856,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_data_access_auth_identity_python" style="color: inherit; text-decoration: inherit;">service_<wbr>data_<wbr>access_<wbr>auth_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2872,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Data Lake store name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2880,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2888,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2896,7 +2946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3206,7 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorityurl_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3214,7 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3222,7 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3230,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3238,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sql Authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3246,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3254,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server host endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3262,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscertauth_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cert<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portnumber_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/ The Azure SQL port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3278,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3286,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3294,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3302,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedataaccessauthidentity_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Data<wbr>Access<wbr>Auth<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3310,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3318,7 +3368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3326,7 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3334,7 +3384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL user id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3342,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userpassword_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3354,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_url_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3362,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3370,7 +3420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3378,7 +3428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3386,7 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sql Authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3394,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3402,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server host endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3410,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cert_auth_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cert_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3418,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_number_python" style="color: inherit; text-decoration: inherit;">port_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/ The Azure SQL port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3426,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3434,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3442,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3450,7 +3500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_data_access_auth_identity_python" style="color: inherit; text-decoration: inherit;">service_<wbr>data_<wbr>access_<wbr>auth_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3458,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3466,7 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3474,7 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3482,7 +3532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL user id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3490,7 +3540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_password_python" style="color: inherit; text-decoration: inherit;">user_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3816,7 +3866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorityurl_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3824,7 +3874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3832,7 +3882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3840,7 +3890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3848,7 +3898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sql Authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3856,7 +3906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3864,7 +3914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablessl_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates SSL requirement of Azure Postgresql server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3872,7 +3922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server host endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscertauth_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cert<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3888,7 +3938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portnumber_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/ The Azure SQL port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3896,7 +3946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3904,7 +3954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3912,7 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3920,7 +3970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedataaccessauthidentity_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Data<wbr>Access<wbr>Auth<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3928,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3936,7 +3986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3944,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3952,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL user id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3960,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userpassword_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3972,7 +4022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_url_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3980,7 +4030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3988,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3996,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4004,7 +4054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sql Authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4012,7 +4062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4020,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_ssl_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates SSL requirement of Azure Postgresql server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4028,7 +4078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server host endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4036,7 +4086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cert_auth_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cert_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4044,7 +4094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_number_python" style="color: inherit; text-decoration: inherit;">port_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/ The Azure SQL port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4052,7 +4102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4060,7 +4110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4068,7 +4118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4076,7 +4126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_data_access_auth_identity_python" style="color: inherit; text-decoration: inherit;">service_<wbr>data_<wbr>access_<wbr>auth_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4084,7 +4134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4092,7 +4142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4100,7 +4150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4108,7 +4158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL user id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4116,7 +4166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_password_python" style="color: inherit; text-decoration: inherit;">user_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4426,7 +4476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorityurl_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4434,7 +4484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4442,7 +4492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4450,7 +4500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4458,7 +4508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sql Authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4466,7 +4516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4474,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server host endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4482,7 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscertauth_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cert<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4490,7 +4540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portnumber_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/ The Azure SQL port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4498,7 +4548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4506,7 +4556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4514,7 +4564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4522,7 +4572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedataaccessauthidentity_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Data<wbr>Access<wbr>Auth<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4530,7 +4580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4538,7 +4588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4546,7 +4596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4554,7 +4604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL user id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4562,7 +4612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userpassword_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure SQL user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4574,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_url_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4582,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4590,7 +4640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4598,7 +4648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4606,7 +4656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sql Authentication type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4614,7 +4664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4622,7 +4672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server host endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4630,7 +4680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cert_auth_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cert_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4638,7 +4688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_number_python" style="color: inherit; text-decoration: inherit;">port_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/ The Azure SQL port number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4646,7 +4696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4654,7 +4704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4662,7 +4712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL server name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4670,7 +4720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_data_access_auth_identity_python" style="color: inherit; text-decoration: inherit;">service_<wbr>data_<wbr>access_<wbr>auth_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4678,7 +4728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4686,7 +4736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4694,7 +4744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4702,7 +4752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL user id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4710,7 +4760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_password_python" style="color: inherit; text-decoration: inherit;">user_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure SQL user password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4972,7 +5022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} Storage Account Key (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4980,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage Account Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4988,7 +5038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#areworkspacemanagedidentitiesallowed_nodejs" style="color: inherit; text-decoration: inherit;">are<wbr>Workspace<wbr>Managed<wbr>Identities<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4996,7 +5046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blobcachetimeout_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Cache<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}} If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5004,7 +5054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcredentials_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">pulumi.<wbr>Input<Client<wbr>Credentials<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5012,7 +5062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The storage container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5020,7 +5070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5028,7 +5078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialtype_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} The credential type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5036,7 +5086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The host of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5044,7 +5094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issas_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Sas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicate if we are using SAS token or Account Key (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5052,7 +5102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The protocol to use. Defaults to https.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5060,7 +5110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5068,7 +5118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} SAS Token for the container (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5076,7 +5126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedataaccessauthidentity_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Data<wbr>Access<wbr>Auth<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5084,7 +5134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5096,7 +5146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} Storage Account Key (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5104,7 +5154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage Account Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5112,7 +5162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#are_workspace_managed_identities_allowed_python" style="color: inherit; text-decoration: inherit;">are_<wbr>workspace_<wbr>managed_<wbr>identities_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5120,7 +5170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blob_cache_timeout_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>cache_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}} If this is an "DataStoreType.AzureBlob", the length of time (in seconds) to cache files locally after they are accessed (downloaded).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5128,7 +5178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_credentials_python" style="color: inherit; text-decoration: inherit;">client_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcredentialsresponse">Client<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#clientcredentialsresponse">Input[Client<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5136,7 +5186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The storage container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5144,7 +5194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5152,7 +5202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_type_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} The credential type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5160,7 +5210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The host of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5168,7 +5218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_sas_python" style="color: inherit; text-decoration: inherit;">is_<wbr>sas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicate if we are using SAS token or Account Key (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5176,7 +5226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The protocol to use. Defaults to https.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5184,7 +5234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5192,7 +5242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} SAS Token for the container (Deprecated).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5200,7 +5250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_data_access_auth_identity_python" style="color: inherit; text-decoration: inherit;">service_<wbr>data_<wbr>access_<wbr>auth_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5208,7 +5258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5406,7 +5456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorityurl_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5414,7 +5464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5422,7 +5472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5430,7 +5480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5438,7 +5488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscertauth_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cert<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5446,7 +5496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5454,7 +5504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5462,7 +5512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicedataaccessauthidentity_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Data<wbr>Access<wbr>Auth<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5470,7 +5520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5478,7 +5528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5486,7 +5536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5498,7 +5548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_url_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authority URL used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5506,7 +5556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The content of the certificate used for authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5514,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Client ID/Application ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5522,7 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5530,7 +5580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_cert_auth_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cert_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} Is it using certificate to authenticate. If false then use client secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5538,7 +5588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5546,7 +5596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource the service principal/app has access to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5554,7 +5604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_data_access_auth_identity_python" style="color: inherit; text-decoration: inherit;">service_<wbr>data_<wbr>access_<wbr>auth_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which identity to use to authenticate service data access to customer's storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5562,7 +5612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Subscription ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5570,7 +5620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the tenant the service principal/app belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5578,7 +5628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the certificate above.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5856,7 +5906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#userinforesponse">pulumi.<wbr>Input<User<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5864,7 +5914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the datastore was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5872,7 +5922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedby_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#userinforesponse">pulumi.<wbr>Input<User<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5880,7 +5930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when the datastore was last modified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5888,7 +5938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Tags for this datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5896,7 +5946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredatalakesection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Data<wbr>Lake<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">pulumi.<wbr>Input<Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5904,7 +5954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremysqlsection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>My<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">pulumi.<wbr>Input<Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5912,7 +5962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepostgresqlsection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Postgre<wbr>Sql<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">pulumi.<wbr>Input<Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5920,7 +5970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuresqldatabasesection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Sql<wbr>Database<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5928,7 +5978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestoragesection_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5936,7 +5986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The datastore type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5944,7 +5994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5952,7 +6002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#glusterfssection_nodejs" style="color: inherit; text-decoration: inherit;">gluster<wbr>Fs<wbr>Section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">pulumi.<wbr>Input<Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5960,7 +6010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hasbeenvalidated_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Been<wbr>Validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A read only property that denotes whether the service datastore has been validated with credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5968,7 +6018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedinfo_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">pulumi.<wbr>Input<Linked<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5976,7 +6026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5988,7 +6038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Input[User<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The User who created the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5996,7 +6046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the datastore was created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6004,7 +6054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_by_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#userinforesponse">Input[User<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The User who modified the datastore.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6012,7 +6062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when the datastore was last modified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6020,7 +6070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Tags for this datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6028,7 +6078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_data_lake_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>data_<wbr>lake_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatalakesectionresponse">Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuredatalakesectionresponse">Input[Azure<wbr>Data<wbr>Lake<wbr>Section<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6036,7 +6086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_my_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>my_<wbr>sql_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremysqlsectionresponse">Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremysqlsectionresponse">Input[Azure<wbr>My<wbr>Sql<wbr>Section<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6044,7 +6094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_postgre_sql_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>postgre_<wbr>sql_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurepostgresqlsectionresponse">Input[Azure<wbr>Postgre<wbr>Sql<wbr>Section<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6052,7 +6102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_sql_database_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>sql_<wbr>database_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqldatabasesectionresponse">Input[Azure<wbr>Sql<wbr>Database<wbr>Section<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6060,7 +6110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_storage_section_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragesectionresponse">Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurestoragesectionresponse">Input[Azure<wbr>Storage<wbr>Section<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6068,7 +6118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The datastore type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6076,7 +6126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the datastore.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6084,7 +6134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gluster_fs_section_python" style="color: inherit; text-decoration: inherit;">gluster_<wbr>fs_<wbr>section</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfssectionresponse">Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#glusterfssectionresponse">Input[Gluster<wbr>Fs<wbr>Section<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Data specific to GlusterFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6092,7 +6142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#has_been_validated_python" style="color: inherit; text-decoration: inherit;">has_<wbr>been_<wbr>validated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A read only property that denotes whether the service datastore has been validated with credentials.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6100,7 +6150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedinforesponse">Linked<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#linkedinforesponse">Input[Linked<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Info about origin if it is linked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6108,7 +6158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6212,7 +6262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serveraddress_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6220,7 +6270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the created GlusterFS volume.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6232,7 +6282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_address_python" style="color: inherit; text-decoration: inherit;">server_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6240,7 +6290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the created GlusterFS volume.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6326,7 +6376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6334,7 +6384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6342,7 +6392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6350,7 +6400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6362,7 +6412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6370,7 +6420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6378,7 +6428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6386,7 +6436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6456,7 +6506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedid_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}LinkedId id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6464,7 +6514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linkedresourcename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linked resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6472,7 +6522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Datastore origin{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6484,7 +6534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_id_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}LinkedId id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6492,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#linked_resource_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linked resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6500,7 +6550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Datastore origin{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6554,7 +6604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6562,7 +6612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6574,7 +6624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6582,7 +6632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6652,7 +6702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6660,7 +6710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6668,7 +6718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6680,7 +6730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6688,7 +6738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6696,7 +6746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6830,7 +6880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useraltsecid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Alt<wbr>Sec<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6838,7 +6888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useridp_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Idp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6846,7 +6896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useriss_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Iss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6854,7 +6904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6862,7 +6912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userobjectid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6870,7 +6920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userpuid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pu<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6878,7 +6928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usertenantid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6890,7 +6940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_alt_sec_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>alt_<wbr>sec_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6898,7 +6948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_idp_python" style="color: inherit; text-decoration: inherit;">user_<wbr>idp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6906,7 +6956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_iss_python" style="color: inherit; text-decoration: inherit;">user_<wbr>iss</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6914,7 +6964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6922,7 +6972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_object_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6930,7 +6980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_pu_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pu_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6938,7 +6988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_tenant_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}

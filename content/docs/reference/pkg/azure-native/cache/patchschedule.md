@@ -71,7 +71,7 @@ package main
 
 import (
 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -177,19 +177,29 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_entries</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleEntryArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">default</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">schedule_entries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScheduleEntryArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchSchedule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchSchedule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchSchedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PatchScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,22 +234,32 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">PatchScheduleArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -399,7 +419,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -407,7 +427,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -415,7 +435,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#scheduleentries_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentry">Schedule<wbr>Entry[]</a></span>
+        <span class="property-type"><a href="#scheduleentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Schedule<wbr>Entry<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -423,7 +443,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -435,7 +455,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -443,7 +463,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -451,7 +471,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedule_entries_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleentry">Sequence[Schedule<wbr>Entry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduleentry">Input[Schedule<wbr>Entry<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +479,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -680,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<Day<wbr>Of<wbr>Week></a></span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -688,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starthourutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -708,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -716,7 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -794,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -802,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starthourutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -810,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -822,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -830,7 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}

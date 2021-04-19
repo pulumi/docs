@@ -28,19 +28,33 @@ $ pulumi import azure-native:web:WebAppVnetConnection myresource1 /subscriptions
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cert_blob</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_swift</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">cert_blob</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">is_swift</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">vnet_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">vnet_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppVnetConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppVnetConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppVnetConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppVnetConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppVnetConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppVnetConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +89,32 @@ $ pulumi import azure-native:web:WebAppVnetConnection myresource1 /subscriptions
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WebAppVnetConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -316,7 +340,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -324,7 +348,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -332,7 +356,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#certblob_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
 Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
@@ -341,7 +365,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -349,7 +373,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#isswift_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Swift</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -357,7 +381,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -365,7 +389,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of an existing Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -373,7 +397,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#vnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -385,7 +409,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -393,7 +417,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -401,7 +425,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#cert_blob_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A certificate file (.cer) blob containing the public key of the private key used to authenticate a 
 Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
@@ -410,7 +434,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +442,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#is_swift_python" style="color: inherit; text-decoration: inherit;">is_<wbr>swift</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag that is used to denote if this is VNET injection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -426,7 +450,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +458,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of an existing Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +466,7 @@ Point-To-Site VPN connection.{{% /md %}}</dd><dt class="property-optional"
 <a href="#vnet_resource_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Virtual Network's resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +803,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +811,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -795,7 +819,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -803,7 +827,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#endaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -811,7 +835,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -819,7 +843,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#routetype_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
@@ -832,7 +856,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#startaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -844,7 +868,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -852,7 +876,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -860,7 +884,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +892,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#end_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +900,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +908,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#route_type_python" style="color: inherit; text-decoration: inherit;">route_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of route this is:
 DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
@@ -897,7 +921,7 @@ These values will be used for syncing an app's routes with those from a Virtual 
 <a href="#start_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}

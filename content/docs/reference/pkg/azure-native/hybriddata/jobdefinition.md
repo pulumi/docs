@@ -80,7 +80,7 @@ package main
 
 import (
 	hybriddata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybriddata"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -205,19 +205,38 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomerSecretArgs]]</span> = None<span class="p">, </span><span class="nx">data_manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_service_input</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">data_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_sink_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_location</span><span class="p">:</span> <span class="nx">Optional[RunLocation]</span> = None<span class="p">, </span><span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScheduleArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[State]</span> = None<span class="p">, </span><span class="nx">user_confirmation</span><span class="p">:</span> <span class="nx">Optional[UserConfirmation]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">customer_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CustomerSecretArgs]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">data_manager_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">data_service_input</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                  <span class="nx">data_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">data_sink_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">data_source_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">job_definition_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">run_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RunLocation]]</span> = None<span class="p">,</span>
+                  <span class="nx">schedules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScheduleArgs]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[State]]</span> = None<span class="p">,</span>
+                  <span class="nx">user_confirmation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserConfirmation]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJobDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">JobDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">JobDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -252,22 +271,32 @@ const jobDefinition = new azure_native.hybriddata.JobDefinition("jobDefinition",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">JobDefinitionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -571,7 +600,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#datamanagername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manager<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -579,7 +608,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#dataservicename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -587,7 +616,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#datasinkid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Sink<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -595,7 +624,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +632,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -611,7 +640,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#state">State</a></span>
+        <span class="property-type"><a href="#state">pulumi.<wbr>Input<State></a></span>
     </dt>
     <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +648,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customersecrets_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecret">Customer<wbr>Secret[]</a></span>
+        <span class="property-type"><a href="#customersecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Customer<wbr>Secret<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +664,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#jobdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Definition<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +672,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +680,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#runlocation_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runlocation">Run<wbr>Location</a></span>
+        <span class="property-type"><a href="#runlocation">pulumi.<wbr>Input<Run<wbr>Location></a></span>
     </dt>
     <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +688,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Schedule[]</a></span>
+        <span class="property-type"><a href="#schedule">pulumi.<wbr>Input<pulumi.<wbr>Input<Schedule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +696,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#userconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userconfirmation">User<wbr>Confirmation</a></span>
+        <span class="property-type"><a href="#userconfirmation">pulumi.<wbr>Input<User<wbr>Confirmation></a></span>
     </dt>
     <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -679,7 +708,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#data_manager_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manager_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -687,7 +716,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#data_service_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data service type of the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +724,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#data_sink_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>sink_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data Sink Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -703,7 +732,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data Source Id associated to the job definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -711,7 +740,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -719,7 +748,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#state">State</a></span>
+        <span class="property-type"><a href="#state">Input[State]</a></span>
     </dt>
     <dd>{{% md %}}State of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +756,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customersecret">Sequence[Customer<wbr>Secret<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customersecret">Input[Customer<wbr>Secret<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +772,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#job_definition_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>definition_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The job definition name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +780,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last modified time of the job definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +788,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#run_location_python" style="color: inherit; text-decoration: inherit;">run_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runlocation">Run<wbr>Location</a></span>
+        <span class="property-type"><a href="#runlocation">Input[Run<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}This is the preferred geo location for the job to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +796,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedule">Sequence[Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#schedule">Input[Schedule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Schedule for running the job definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +804,7 @@ The JobDefinition resource accepts the following [input]({{< relref "/docs/intro
 <a href="#user_confirmation_python" style="color: inherit; text-decoration: inherit;">user_<wbr>confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userconfirmation">User<wbr>Confirmation</a></span>
+        <span class="property-type"><a href="#userconfirmation">Input[User<wbr>Confirmation]</a></span>
     </dt>
     <dd>{{% md %}}Enum to detect if user confirmation is required. If not passed will default to NotRequired.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -974,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#supportedalgorithm">pulumi.<wbr>Input<Supported<wbr>Algorithm></a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -982,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -990,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1002,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#supportedalgorithm">Input[Supported<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1010,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1018,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1088,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1096,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1104,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1116,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1124,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1132,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1312,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policylist_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1332,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1340,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_list_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1394,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1402,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policylist_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1422,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_list_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of repetition intervals in ISO 8601 format.{{% /md %}}</dd></dl>
 {{% /choosable %}}

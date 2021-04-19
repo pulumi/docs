@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var roleManagementPolicyAssignment = new AzureNative.Authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment", new AzureNative.Authorization.RoleManagementPolicyAssignmentArgs
         {
-            PolicyId = "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+            PolicyId = "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
             RoleDefinitionId = "/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
             RoleManagementPolicyAssignmentName = "b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
             Scope = "/subscriptions/129ff972-28f8-46b8-a726-e497be039368",
@@ -58,13 +58,13 @@ package main
 
 import (
 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := authorization.NewRoleManagementPolicyAssignment(ctx, "roleManagementPolicyAssignment", &authorization.RoleManagementPolicyAssignmentArgs{
-			PolicyId:                           pulumi.String("/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9"),
+			PolicyId:                           pulumi.String("/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9"),
 			RoleDefinitionId:                   pulumi.String("/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24"),
 			RoleManagementPolicyAssignmentName: pulumi.String("b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24"),
 			Scope:                              pulumi.String("/subscriptions/129ff972-28f8-46b8-a726-e497be039368"),
@@ -90,7 +90,7 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 role_management_policy_assignment = azure_native.authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment",
-    policy_id="/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+    policy_id="/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
     role_definition_id="/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
     role_management_policy_assignment_name="b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
     scope="/subscriptions/129ff972-28f8-46b8-a726-e497be039368")
@@ -109,7 +109,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
 const roleManagementPolicyAssignment = new azure_native.authorization.RoleManagementPolicyAssignment("roleManagementPolicyAssignment", {
-    policyId: "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
+    policyId: "/providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicies/b959d571-f0b5-4042-88a7-01be6cb22db9",
     roleDefinitionId: "/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleDefinitions/a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
     roleManagementPolicyAssignmentName: "b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24",
     scope: "/subscriptions/129ff972-28f8-46b8-a726-e497be039368",
@@ -134,19 +134,29 @@ const roleManagementPolicyAssignment = new azure_native.authorization.RoleManage
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_management_policy_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                   <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">role_management_policy_assignment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleManagementPolicyAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleManagementPolicyAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleManagementPolicyAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -181,22 +191,32 @@ const roleManagementPolicyAssignment = new azure_native.authorization.RoleManage
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RoleManagementPolicyAssignmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -356,7 +376,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -364,7 +384,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -372,7 +392,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -380,7 +400,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#rolemanagementpolicyassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Management<wbr>Policy<wbr>Assignment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to upsert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -392,7 +412,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role management policy scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -400,7 +420,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy id role management policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -408,7 +428,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role definition of management policy assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -416,7 +436,7 @@ The RoleManagementPolicyAssignment resource accepts the following [input]({{< re
 <a href="#role_management_policy_assignment_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>management_<wbr>policy_<wbr>assignment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of format {guid_guid} the role management policy assignment to upsert.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">pulumi.<wbr>Input<Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinition_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">pulumi.<wbr>Input<Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">pulumi.<wbr>Input<Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -675,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsepolicy">Input[Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_definition_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponseroledefinition">Input[Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Role<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args</a></span>
+        <span class="property-type"><a href="#policyassignmentpropertiesresponsescope">Input[Policy<wbr>Assignment<wbr>Properties<wbr>Response<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource scope{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response</a></span>
+        <span class="property-type"><a href="#principalresponse">pulumi.<wbr>Input<Principal<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifieddatetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The last modified date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -789,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#principalresponse">Principal<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#principalresponse">Input[Principal<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the entity last modified it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_date_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The last modified date time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of the role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the role definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of the role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -911,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the role definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -919,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the role definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Scope id of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1017,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1025,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Scope id of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1119,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the principal made changes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Email of principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The id of the principal made changes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of principal such as user , group etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the principal made changes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Email of principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The id of the principal made changes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of principal such as user , group etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:authorization:RoleManagementPolicyAssignment b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 /providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/RoleManagementPolicyAssignment/b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 
+$ pulumi import azure-native:authorization:RoleManagementPolicyAssignment b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 /providers/Microsoft.Subscription/subscriptions/129ff972-28f8-46b8-a726-e497be039368/providers/Microsoft.Authorization/roleManagementPolicyAssignment/b959d571-f0b5-4042-88a7-01be6cb22db9_a1705bd2-3a8f-45a5-8683-466fcfd5cc24 
 ```
 
 

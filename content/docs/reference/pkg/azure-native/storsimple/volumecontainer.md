@@ -66,7 +66,7 @@ package main
 
 import (
 	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -163,19 +163,34 @@ const volumeContainer = new azure_native.storsimple.VolumeContainer("volumeConta
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">band_width_rate_in_mbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bandwidth_setting_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Kind]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">band_width_rate_in_mbps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                    <span class="nx">bandwidth_setting_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AsymmetricEncryptedSecretArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Kind]]</span> = None<span class="p">,</span>
+                    <span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">storage_account_credential_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">volume_container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolumeContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VolumeContainer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolumeContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VolumeContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VolumeContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VolumeContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -210,22 +225,32 @@ const volumeContainer = new azure_native.storsimple.VolumeContainer("volumeConta
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VolumeContainerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -465,7 +490,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -473,7 +498,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -481,7 +506,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -489,7 +514,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#storageaccountcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Credential<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The path ID of storage account associated with the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +522,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#bandwidthrateinmbps_nodejs" style="color: inherit; text-decoration: inherit;">band<wbr>Width<wbr>Rate<wbr>In<wbr>Mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bandwidth-rate set on the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +530,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#bandwidthsettingid_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Setting<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the bandwidth setting associated with the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -513,7 +538,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">pulumi.<wbr>Input<Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -521,7 +546,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Kind</a></span>
+        <span class="property-type"><a href="#kind">pulumi.<wbr>Input<Kind></a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -529,7 +554,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#volumecontainername_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the volume container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -541,7 +566,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The device name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -549,7 +574,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -557,7 +582,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -565,7 +590,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#storage_account_credential_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The path ID of storage account associated with the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +598,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#band_width_rate_in_mbps_python" style="color: inherit; text-decoration: inherit;">band_<wbr>width_<wbr>rate_<wbr>in_<wbr>mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bandwidth-rate set on the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +606,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#bandwidth_setting_id_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>setting_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the bandwidth setting associated with the volume container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +614,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Input[Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +622,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kind">Kind</a></span>
+        <span class="property-type"><a href="#kind">Input[Kind]</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +630,7 @@ The VolumeContainer resource accepts the following [input]({{< relref "/docs/int
 <a href="#volume_container_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the volume container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -932,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#encryptionalgorithm">pulumi.<wbr>Input<Encryption<wbr>Algorithm></a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -940,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -960,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#encryptionalgorithm">Input[Encryption<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -968,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1046,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1054,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1074,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1082,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}

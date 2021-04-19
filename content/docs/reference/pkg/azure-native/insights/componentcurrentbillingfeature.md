@@ -66,7 +66,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -160,19 +160,29 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">current_billing_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_volume_cap</span><span class="p">:</span> <span class="nx">Optional[ApplicationInsightsComponentDataVolumeCapArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                   <span class="nx">current_billing_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                   <span class="nx">data_volume_cap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationInsightsComponentDataVolumeCapArgs]]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComponentCurrentBillingFeature</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComponentCurrentBillingFeature</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,22 +217,32 @@ const componentCurrentBillingFeature = new azure_native.insights.ComponentCurren
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ComponentCurrentBillingFeatureArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -382,7 +402,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -390,7 +410,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -398,7 +418,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#currentbillingfeatures_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Billing<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -406,7 +426,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#datavolumecap_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Volume<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">pulumi.<wbr>Input<Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -418,7 +438,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -426,7 +446,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -434,7 +454,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#current_billing_features_python" style="color: inherit; text-decoration: inherit;">current_<wbr>billing_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +462,7 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 <a href="#data_volume_cap_python" style="color: inherit; text-decoration: inherit;">data_<wbr>volume_<wbr>cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Input[Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -593,7 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cap_nodejs" style="color: inherit; text-decoration: inherit;">cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stopsendnotificationwhenhitcap_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stopsendnotificationwhenhitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -617,7 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warningthreshold_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -629,7 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cap_python" style="color: inherit; text-decoration: inherit;">cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_send_notification_when_hit_cap_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_send_notification_when_hit_threshold_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warning_threshold_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -771,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxhistorycap_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>History<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -779,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resettime_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cap_nodejs" style="color: inherit; text-decoration: inherit;">cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -795,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stopsendnotificationwhenhitcap_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -803,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stopsendnotificationwhenhitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -811,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warningthreshold_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_history_cap_python" style="color: inherit; text-decoration: inherit;">max_<wbr>history_<wbr>cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reset_time_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cap_python" style="color: inherit; text-decoration: inherit;">cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_send_notification_when_hit_cap_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>cap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stop_send_notification_when_hit_threshold_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#warning_threshold_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd></dl>
 {{% /choosable %}}

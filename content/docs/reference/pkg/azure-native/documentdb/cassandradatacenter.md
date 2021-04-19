@@ -64,7 +64,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -155,19 +155,29 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_center_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DataCenterResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">data_center_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataCenterResourcePropertiesArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraDataCenter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraDataCenter</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraDataCenter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraDataCenter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraDataCenter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CassandraDataCenterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,22 +212,32 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CassandraDataCenterArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -377,7 +397,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -385,7 +405,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -393,7 +413,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#datacentername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Center<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -401,7 +421,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#datacenterresourceproperties">pulumi.<wbr>Input<Data<wbr>Center<wbr>Resource<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -413,7 +433,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -421,7 +441,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +449,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#data_center_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>center_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -437,7 +457,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#datacenterresourceproperties">Input[Data<wbr>Center<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -668,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64encodedcassandrayamlfragment_nodejs" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacenterlocation_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Center<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegatedsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedcassandraprovisioningstate">pulumi.<wbr>Input<Managed<wbr>Cassandra<wbr>Provisioning<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -712,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64_encoded_cassandra_yaml_fragment_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encoded_<wbr>cassandra_<wbr>yaml_<wbr>fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_center_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>center_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegated_subnet_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedcassandraprovisioningstate">Input[Managed<wbr>Cassandra<wbr>Provisioning<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -862,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seednodes_nodejs" style="color: inherit; text-decoration: inherit;">seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Seed<wbr>Node<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64encodedcassandrayamlfragment_nodejs" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datacenterlocation_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Center<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegatedsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -914,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seed_nodes_python" style="color: inherit; text-decoration: inherit;">seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Input[Seed<wbr>Node<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64_encoded_cassandra_yaml_fragment_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encoded_<wbr>cassandra_<wbr>yaml_<wbr>fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_center_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>center_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegated_subnet_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1034,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1046,7 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -59,7 +59,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -164,7 +164,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -237,19 +237,32 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_encryption_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deny_encryption_scope_override</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">public_access</span><span class="p">:</span> <span class="nx">Optional[PublicAccess]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                  <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">default_encryption_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">deny_encryption_scope_override</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                  <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                  <span class="nx">public_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PublicAccess]]</span> = None<span class="p">,</span>
+                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobContainer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BlobContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -284,22 +297,32 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BlobContainerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -507,7 +530,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -515,7 +538,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +546,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -531,7 +554,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#defaultencryptionscope_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +562,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#denyencryptionscopeoverride_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Encryption<wbr>Scope<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +570,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +578,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicaccess">Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#publicaccess">pulumi.<wbr>Input<Public<wbr>Access></a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -567,7 +590,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -575,7 +598,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +606,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +614,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#default_encryption_scope_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +622,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#deny_encryption_scope_override_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>encryption_<wbr>scope_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +630,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +638,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicaccess">Public<wbr>Access</a></span>
+        <span class="property-type"><a href="#publicaccess">Input[Public<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1270,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1278,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatehistory_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Update<wbr>History<wbr>Property<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowprotectedappendwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Protected<wbr>Append<wbr>Writes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutabilityperiodsincecreationindays_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1306,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1314,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1322,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_history_python" style="color: inherit; text-decoration: inherit;">update_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#updatehistorypropertyresponse">Sequence[Update<wbr>History<wbr>Property<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#updatehistorypropertyresponse">Input[Update<wbr>History<wbr>Property<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1330,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_protected_append_writes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>protected_<wbr>append_<wbr>writes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1392,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#haslegalhold_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Legal<wbr>Hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1400,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">Tag<wbr>Property<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Tag<wbr>Property<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1412,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#has_legal_hold_python" style="color: inherit; text-decoration: inherit;">has_<wbr>legal_<wbr>hold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagpropertyresponse">Sequence[Tag<wbr>Property<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tagpropertyresponse">Input[Tag<wbr>Property<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1552,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectidentifier_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1560,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1568,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1576,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1584,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1596,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1604,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1612,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1620,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1628,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1746,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutabilityperiodsincecreationindays_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1754,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectidentifier_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1762,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1770,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1778,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1786,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1798,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1806,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1814,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1822,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1830,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1838,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}

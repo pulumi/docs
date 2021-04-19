@@ -67,7 +67,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -167,19 +167,38 @@ const server = new azure_native.sql.Server("server", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Server</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[ServerExternalAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityWithUserAssignedIdentitiesArgs]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServerPublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">administrators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServerExternalAdministratorArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdentityWithUserAssignedIdentitiesArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">minimal_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">primary_user_assigned_identity_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ServerPublicNetworkAccess]]]</span> = None<span class="p">,</span>
+           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+           <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Server</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Server</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Server</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,22 +233,32 @@ const server = new azure_native.sql.Server("server", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -533,7 +562,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,7 +570,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Administrator username for the server. Once created it cannot be changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -549,7 +578,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The administrator login password (required for server creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +586,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#administrators_nodejs" style="color: inherit; text-decoration: inherit;">administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverexternaladministrator">Server<wbr>External<wbr>Administrator</a></span>
+        <span class="property-type"><a href="#serverexternaladministrator">pulumi.<wbr>Input<Server<wbr>External<wbr>Administrator<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -565,7 +594,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +602,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +610,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +618,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#minimaltlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +626,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#primaryuserassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>User<wbr>Assigned<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +634,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#serverpublicnetworkaccess">Server<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serverpublicnetworkaccess">pulumi.<wbr>Input<Server<wbr>Public<wbr>Network<wbr>Access></a></span>
     </dt>
     <dd>{{% md %}}Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +642,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +650,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +658,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -641,7 +670,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +678,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Administrator username for the server. Once created it cannot be changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +686,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The administrator login password (required for server creation).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +694,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#administrators_python" style="color: inherit; text-decoration: inherit;">administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverexternaladministrator">Server<wbr>External<wbr>Administrator<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverexternaladministrator">Input[Server<wbr>External<wbr>Administrator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +702,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentitywithuserassignedidentities">Input[Resource<wbr>Identity<wbr>With<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +710,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A CMK URI of the key to use for encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +718,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +726,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#minimal_tls_version_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -705,7 +734,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#primary_user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>user_<wbr>assigned_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id of a user assigned identity to be used by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -713,7 +742,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#serverpublicnetworkaccess">Server<wbr>Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serverpublicnetworkaccess">Input[Server<wbr>Public<wbr>Network<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +750,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +758,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +766,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1178,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1206,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}State of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Input[Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1260,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1272,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1342,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1350,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1358,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1370,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The actions required for private link service connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1378,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1386,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1440,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#identitytype">pulumi.<wbr>Input<Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1460,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#identitytype">Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#identitytype">Input[Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Any]</span>
+        <span class="property-type">Input[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1554,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1562,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1570,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1598,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Identity<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1732,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#administratortype">Administrator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#administratortype">pulumi.<wbr>Input<Administrator<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureadonlyauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ADOnly<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#principaltype">Principal<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#principaltype">pulumi.<wbr>Input<Principal<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1784,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#administratortype">Administrator<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#administratortype">Input[Administrator<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_ad_only_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>ad_<wbr>only_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#principaltype">Principal<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#principaltype">Input[Principal<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureadonlyauthentication_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ADOnly<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1958,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaltype_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_ad_only_authentication_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>ad_<wbr>only_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory only Authentication enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Login name of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_type_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Principal Type of the sever administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SID (object ID) of the server administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2034,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tenant ID of the administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2088,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2096,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2108,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2116,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Input[Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2196,7 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2204,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory client id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2224,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd></dl>
 {{% /choosable %}}

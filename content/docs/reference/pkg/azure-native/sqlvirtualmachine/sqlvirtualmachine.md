@@ -65,7 +65,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -473,7 +473,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -711,7 +711,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -787,19 +787,42 @@ const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[AutoBackupSettingsArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[AutoPatchingSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[KeyVaultCredentialSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[ServerConfigurationsManagementSettingsArgs]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlImageSku]]</span> = None<span class="p">, </span><span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlManagementMode]]</span> = None<span class="p">, </span><span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlServerLicenseType]]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[StorageConfigurationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainCredentialsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">auto_backup_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoBackupSettingsArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">auto_patching_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoPatchingSettingsArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdentityArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">key_vault_credential_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KeyVaultCredentialSettingsArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">server_configurations_management_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServerConfigurationsManagementSettingsArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SqlImageSku]]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_management</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SqlManagementMode]]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_server_license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SqlServerLicenseType]]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">sql_virtual_machine_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">storage_configuration_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StorageConfigurationSettingsArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">virtual_machine_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">wsfc_domain_credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WsfcDomainCredentialsArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SqlVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -834,22 +857,32 @@ const sqlVirtualMachine = new azure_native.sqlvirtualmachine.SqlVirtualMachine("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SqlVirtualMachineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1217,7 +1250,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1258,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autobackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autobackupsettings">pulumi.<wbr>Input<Auto<wbr>Backup<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1266,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#autopatchingsettings_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings</a></span>
+        <span class="property-type"><a href="#autopatchingsettings">pulumi.<wbr>Input<Auto<wbr>Patching<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1274,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1282,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#keyvaultcredentialsettings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettings">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1290,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1298,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#serverconfigurationsmanagementsettings_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Configurations<wbr>Management<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">pulumi.<wbr>Input<Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1306,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlimageoffer_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1314,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlimagesku_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlimagesku">Sql<wbr>Image<wbr>Sku</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sqlimagesku">pulumi.<wbr>Input<Sql<wbr>Image<wbr>Sku></a></span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1322,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlmanagement_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlmanagementmode">Sql<wbr>Management<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sqlmanagementmode">pulumi.<wbr>Input<Sql<wbr>Management<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1330,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlserverlicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Server<wbr>License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlserverlicensetype">Sql<wbr>Server<wbr>License<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sqlserverlicensetype">pulumi.<wbr>Input<Sql<wbr>Server<wbr>License<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1338,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlvirtualmachinegroupresourceid_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1346,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sqlvirtualmachinename_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1354,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageconfigurationsettings_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettings">pulumi.<wbr>Input<Storage<wbr>Configuration<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1362,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1370,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#virtualmachineresourceid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1378,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#wsfcdomaincredentials_nodejs" style="color: inherit; text-decoration: inherit;">wsfc<wbr>Domain<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentials">pulumi.<wbr>Input<Wsfc<wbr>Domain<wbr>Credentials<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1390,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1398,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_backup_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autobackupsettings">Auto<wbr>Backup<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autobackupsettings">Input[Auto<wbr>Backup<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto backup settings for SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1406,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_patching_settings_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autopatchingsettings">Auto<wbr>Patching<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#autopatchingsettings">Input[Auto<wbr>Patching<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto patching settings for applying critical security updates to SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1414,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Input[Resource<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory identity of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1422,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#key_vault_credential_settings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcredentialsettings">Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultcredentialsettings">Input[Key<wbr>Vault<wbr>Credential<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Key vault credential settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1430,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1438,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#server_configurations_management_settings_python" style="color: inherit; text-decoration: inherit;">server_<wbr>configurations_<wbr>management_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverconfigurationsmanagementsettings">Input[Server<wbr>Configurations<wbr>Management<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server configuration management settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1446,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_image_offer_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1454,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_image_sku_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sqlimagesku">Sql<wbr>Image<wbr>Sku</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sqlimagesku">Input[Sql<wbr>Image<wbr>Sku]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server edition type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1462,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_management_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sqlmanagementmode">Sql<wbr>Management<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sqlmanagementmode">Input[Sql<wbr>Management<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Management type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1470,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_server_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>server_<wbr>license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sqlserverlicensetype">Sql<wbr>Server<wbr>License<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sqlserverlicensetype">Input[Sql<wbr>Server<wbr>License<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server license type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1478,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_virtual_machine_group_resource_id_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>group_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1486,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sql_virtual_machine_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1461,7 +1494,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#storage_configuration_settings_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageconfigurationsettings">Storage<wbr>Configuration<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageconfigurationsettings">Input[Storage<wbr>Configuration<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage Configuration Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1469,7 +1502,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1477,7 +1510,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#virtual_machine_resource_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM Resource id of underlying virtual machine created from SQL marketplace image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1485,7 +1518,7 @@ The SqlVirtualMachine resource accepts the following [input]({{< relref "/docs/i
 <a href="#wsfc_domain_credentials_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomaincredentials">Wsfc<wbr>Domain<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsfcdomaincredentials">Input[Wsfc<wbr>Domain<wbr>Credentials<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1684,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>RServices<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1696,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>r_<wbr>services_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1734,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>RServices<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1746,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>r_<wbr>services_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable R services (SQL 2016 onwards).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1960,7 +1993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscheduletype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupscheduletype">Backup<wbr>Schedule<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupscheduletype">pulumi.<wbr>Input<Backup<wbr>Schedule<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +2001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsystemdbs_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>System<wbr>Dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +2009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#fullbackupfrequencytype">Full<wbr>Backup<wbr>Frequency<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#fullbackupfrequencytype">pulumi.<wbr>Input<Full<wbr>Backup<wbr>Frequency<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupwindowhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2032,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2040,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2048,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2060,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_schedule_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupscheduletype">Backup<wbr>Schedule<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupscheduletype">Input[Backup<wbr>Schedule<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2068,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_system_dbs_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>system_<wbr>dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2076,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2084,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2092,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#fullbackupfrequencytype">Full<wbr>Backup<wbr>Frequency<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#fullbackupfrequencytype">Input[Full<wbr>Backup<wbr>Frequency<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2100,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_start_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2108,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_window_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2116,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2124,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password for encryption on backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2140,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage account key where backup will be taken to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2148,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2330,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupscheduletype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2338,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupsystemdbs_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>System<wbr>Dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2346,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2362,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2370,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2378,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fullbackupwindowhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2386,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2394,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2402,7 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2414,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_schedule_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup schedule type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2422,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_system_dbs_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>system_<wbr>dbs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable autobackup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2438,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backup on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2446,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. In both cases, full backups begin during the next scheduled time window.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2454,7 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_start_time_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Start time of a given day during which full backups can take place. 0-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2462,7 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#full_backup_window_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place. 1-23 hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2470,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups. 5-60 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2478,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Retention period of backup: 1-30 days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2486,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage account url where backup will be taken to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2572,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<Day<wbr>Of<wbr>Week></a></span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2580,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindowduration_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2608,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2616,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2624,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_duration_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2632,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2718,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindowduration_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2742,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2754,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Day of week to apply the patch on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2762,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable autopatching on SQL virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2770,7 +2803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_duration_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Duration of patching.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2778,7 +2811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Hour of the day when patching is initiated. Local VM time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3060,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurekeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3068,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialname_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3076,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3084,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3092,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3104,7 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_key_vault_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3112,7 +3145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_name_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3120,7 +3153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3128,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3136,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service principal name secret to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3222,7 +3255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurekeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3230,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentialname_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3238,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3246,7 +3279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3258,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_key_vault_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Key Vault url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credential_name_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Credential name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3274,7 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable or disable key vault credential setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3282,7 +3315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service principal name to access key vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3320,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#identitytype">Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#identitytype">pulumi.<wbr>Input<Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3332,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#identitytype">Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#identitytype">Input[Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3402,7 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3410,7 +3443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3418,7 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3430,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3438,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3446,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type. Set this to 'SystemAssigned' in order to automatically create and assign an Azure Active Directory principal for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3500,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3508,7 +3541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3520,7 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3528,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3582,7 +3615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3590,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3602,7 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server default file path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3610,7 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}Logical Unit Numbers for the disks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3696,7 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">pulumi.<wbr>Input<Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3704,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">pulumi.<wbr>Input<Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3712,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">pulumi.<wbr>Input<Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3720,7 +3753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">pulumi.<wbr>Input<Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3732,7 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurations">Input[Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3740,7 +3773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettings">Input[Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3748,7 +3781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettings">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettings">Input[Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3756,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettings">Input[Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3842,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalfeaturesserverconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Features<wbr>Server<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">pulumi.<wbr>Input<Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3850,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlconnectivityupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3858,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlstorageupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Storage<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3866,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtypeupdatesettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3878,7 +3911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_features_server_configurations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>features_<wbr>server_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#additionalfeaturesserverconfigurationsresponse">Input[Additional<wbr>Features<wbr>Server<wbr>Configurations<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional SQL feature settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3886,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_connectivity_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlconnectivityupdatesettingsresponse">Input[Sql<wbr>Connectivity<wbr>Update<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL connectivity type settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3894,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_storage_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>storage_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstorageupdatesettingsresponse">Input[Sql<wbr>Storage<wbr>Update<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL storage update settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3902,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_update_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type_<wbr>update_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlworkloadtypeupdatesettingsresponse">Input[Sql<wbr>Workload<wbr>Type<wbr>Update<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL workload type settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3988,7 +4021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#connectivitytype">Connectivity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#connectivitytype">pulumi.<wbr>Input<Connectivity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3996,7 +4029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4004,7 +4037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlauthupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4012,7 +4045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlauthupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Auth<wbr>Update<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4024,7 +4057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#connectivitytype">Connectivity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#connectivitytype">Input[Connectivity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4032,7 +4065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}SQL Server port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4040,7 +4073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_auth_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server sysadmin login password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4048,7 +4081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_auth_update_user_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>auth_<wbr>update_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server sysadmin login to create.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4102,7 +4135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4110,7 +4143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}SQL Server port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4122,7 +4155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectivity_type_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server connectivity option.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4130,7 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}SQL Server port.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4298,7 +4331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskconfigurationtype">Disk<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#diskconfigurationtype">pulumi.<wbr>Input<Disk<wbr>Configuration<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4306,7 +4339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4314,7 +4347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startingdeviceid_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Device<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4326,7 +4359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#diskconfigurationtype">Disk<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#diskconfigurationtype">Input[Disk<wbr>Configuration<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4334,7 +4367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4342,7 +4375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starting_device_id_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>device_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4412,7 +4445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4420,7 +4453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskcount_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4428,7 +4461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startingdeviceid_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Device<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4440,7 +4473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4448,7 +4481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_count_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Virtual machine disk count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4456,7 +4489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starting_device_id_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>device_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Device id of the first disk to be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4524,7 +4557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlworkloadtype">Sql<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sqlworkloadtype">pulumi.<wbr>Input<Sql<wbr>Workload<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4536,7 +4569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sqlworkloadtype">Sql<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sqlworkloadtype">Input[Sql<wbr>Workload<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4574,7 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4586,7 +4619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_workload_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL Server workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4688,7 +4721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskconfigurationtype">Disk<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#diskconfigurationtype">pulumi.<wbr>Input<Disk<wbr>Configuration<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4696,7 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">pulumi.<wbr>Input<SQLStorage<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4704,7 +4737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">pulumi.<wbr>Input<SQLStorage<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4712,7 +4745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">pulumi.<wbr>Input<SQLStorage<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4720,7 +4753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#storageworkloadtype">Storage<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storageworkloadtype">pulumi.<wbr>Input<Storage<wbr>Workload<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4732,7 +4765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#diskconfigurationtype">Disk<wbr>Configuration<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#diskconfigurationtype">Input[Disk<wbr>Configuration<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4740,7 +4773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Input[SQLStorage<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4748,7 +4781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Input[SQLStorage<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4756,7 +4789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettings">SQLStorage<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettings">Input[SQLStorage<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4764,7 +4797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#storageworkloadtype">Storage<wbr>Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storageworkloadtype">Input[Storage<wbr>Workload<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4866,7 +4899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Configuration<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4874,7 +4907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqldatasettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">pulumi.<wbr>Input<SQLStorage<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4882,7 +4915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqllogsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">pulumi.<wbr>Input<SQLStorage<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4890,7 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqltempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">pulumi.<wbr>Input<SQLStorage<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4898,7 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4910,7 +4943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_configuration_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>configuration_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Disk configuration to apply to SQL Server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4918,7 +4951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_data_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Input[SQLStorage<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Data Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4926,7 +4959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_log_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Input[SQLStorage<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server Log Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4934,7 +4967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_temp_db_settings_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>temp_<wbr>db_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlstoragesettingsresponse">SQLStorage<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sqlstoragesettingsresponse">Input[SQLStorage<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SQL Server TempDb Storage Settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4942,7 +4975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage workload type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5042,7 +5075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterbootstrapaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5050,7 +5083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusteroperatoraccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5058,7 +5091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlserviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5070,7 +5103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_bootstrap_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5078,7 +5111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_operator_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5086,7 +5119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_service_account_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5156,7 +5189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterbootstrapaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5164,7 +5197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusteroperatoraccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5172,7 +5205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlserviceaccountpassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5184,7 +5217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_bootstrap_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster bootstrap account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5192,7 +5225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_operator_account_password_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cluster operator account password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5200,7 +5233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_service_account_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL service account password.{{% /md %}}</dd></dl>
 {{% /choosable %}}

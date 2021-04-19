@@ -783,19 +783,34 @@ const eventSubscription = new azure_native.eventgrid.EventSubscription("eventSub
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[StorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, EventDeliverySchema]]</span> = None<span class="p">, </span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionFilterArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[RetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StorageBlobDeadLetterDestinationArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AzureFunctionEventSubscriptionDestinationArgs, EventHubEventSubscriptionDestinationArgs, HybridConnectionEventSubscriptionDestinationArgs, ServiceBusQueueEventSubscriptionDestinationArgs, ServiceBusTopicEventSubscriptionDestinationArgs, StorageQueueEventSubscriptionDestinationArgs, WebHookEventSubscriptionDestinationArgs]]]</span> = None<span class="p">,</span>
+                      <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, EventDeliverySchema]]]</span> = None<span class="p">,</span>
+                      <span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionFilterArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                      <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RetryPolicyArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -830,22 +845,32 @@ const eventSubscription = new azure_native.eventgrid.EventSubscription("eventSub
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1085,7 +1110,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1118,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#deadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">pulumi.<wbr>Input<Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The DeadLetter destination of the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1126,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">pulumi.<wbr>Input<Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a> | <a href="#eventhubeventsubscriptiondestination">pulumi.<wbr>Input<Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a> | <a href="#hybridconnectioneventsubscriptiondestination">pulumi.<wbr>Input<Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a> | <a href="#servicebusqueueeventsubscriptiondestination">pulumi.<wbr>Input<Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a> | <a href="#servicebustopiceventsubscriptiondestination">pulumi.<wbr>Input<Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a> | <a href="#storagequeueeventsubscriptiondestination">pulumi.<wbr>Input<Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a> | <a href="#webhookeventsubscriptiondestination">pulumi.<wbr>Input<Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1134,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#eventdeliveryschema">Event<wbr>Delivery<wbr>Schema</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#eventdeliveryschema">pulumi.<wbr>Input<Event<wbr>Delivery<wbr>Schema></a></span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1142,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventsubscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Subscription<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1150,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Expiration time of the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1158,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilter">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Filter<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1166,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of user defined labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1174,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#retrypolicy">pulumi.<wbr>Input<Retry<wbr>Policy<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1161,7 +1186,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1194,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestination">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestination">Input[Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The DeadLetter destination of the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1202,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestination">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestination">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestination">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestination">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestination">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a> | <a href="#webhookeventsubscriptiondestination">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestination">Input[Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a> | <a href="#eventhubeventsubscriptiondestination">Input[Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a> | <a href="#hybridconnectioneventsubscriptiondestination">Input[Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a> | <a href="#servicebusqueueeventsubscriptiondestination">Input[Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a> | <a href="#servicebustopiceventsubscriptiondestination">Input[Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a> | <a href="#storagequeueeventsubscriptiondestination">Input[Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a> | <a href="#webhookeventsubscriptiondestination">Input[Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1210,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#eventdeliveryschema">Event<wbr>Delivery<wbr>Schema</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#eventdeliveryschema">Input[Event<wbr>Delivery<wbr>Schema]</a></span>
     </dt>
     <dd>{{% md %}}The event delivery schema for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1218,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#event_subscription_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>subscription_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1226,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Expiration time of the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1234,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionfilter">Event<wbr>Subscription<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionfilter">Input[Event<wbr>Subscription<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1242,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of user defined labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1250,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicy">Input[Retry<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1520,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1548,7 +1573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1556,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1564,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1662,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1732,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1752,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1760,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1814,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1822,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1834,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1842,7 +1867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1910,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1922,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1960,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1972,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2082,7 +2107,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2115,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2098,7 +2123,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#issubjectcasesensitive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Subject<wbr>Case<wbr>Sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
 should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2132,7 @@ should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="propert
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
 The format of this depends on the publisher of the events.
@@ -2117,7 +2142,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd><dt class="pr
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
@@ -2130,7 +2155,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2163,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2146,7 +2171,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#is_subject_case_sensitive_python" style="color: inherit; text-decoration: inherit;">is_<wbr>subject_<wbr>case_<wbr>sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
 should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="property-optional"
@@ -2155,7 +2180,7 @@ should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="propert
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
 The format of this depends on the publisher of the events.
@@ -2165,7 +2190,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd><dt class="pr
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
@@ -2276,7 +2301,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2309,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2317,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#issubjectcasesensitive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Subject<wbr>Case<wbr>Sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
 should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2326,7 @@ should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="propert
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
 The format of this depends on the publisher of the events.
@@ -2311,7 +2336,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd><dt class="pr
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
@@ -2324,7 +2349,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2357,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2365,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#is_subject_case_sensitive_python" style="color: inherit; text-decoration: inherit;">is_<wbr>subject_<wbr>case_<wbr>sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
 should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2374,7 @@ should be compared in a case sensitive manner.{{% /md %}}</dd><dt class="propert
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path prefix.
 The format of this depends on the publisher of the events.
@@ -2359,7 +2384,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd><dt class="pr
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional string to filter events for an event subscription based on a resource path suffix.
 Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
@@ -2398,7 +2423,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2410,7 +2435,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2448,7 +2473,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2460,7 +2485,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of an hybrid connection that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2514,7 +2539,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2522,7 +2547,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2534,7 +2559,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2542,7 +2567,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2596,7 +2621,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2629,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2616,7 +2641,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2624,7 +2649,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2678,7 +2703,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2686,7 +2711,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2698,7 +2723,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2706,7 +2731,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2760,7 +2785,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2768,7 +2793,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2780,7 +2805,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2788,7 +2813,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2842,7 +2867,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2850,7 +2875,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2862,7 +2887,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +2895,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2924,7 +2949,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2932,7 +2957,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2944,7 +2969,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2952,7 +2977,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3006,7 +3031,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3014,7 +3039,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3026,7 +3051,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3034,7 +3059,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3088,7 +3113,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3096,7 +3121,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3108,7 +3133,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3116,7 +3141,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3170,7 +3195,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3178,7 +3203,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3190,7 +3215,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3198,7 +3223,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3252,7 +3277,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3260,7 +3285,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3272,7 +3297,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3305,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3334,7 +3359,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3342,7 +3367,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3354,7 +3379,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3362,7 +3387,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3416,7 +3441,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3424,7 +3449,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3436,7 +3461,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3444,7 +3469,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[float]</span>
+        <span class="property-type">Input[float]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3498,7 +3523,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#eventtimetoliveinminutes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3506,7 +3531,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3518,7 +3543,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#event_time_to_live_in_minutes_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3526,7 +3551,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3580,7 +3605,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#eventtimetoliveinminutes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3588,7 +3613,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3600,7 +3625,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#event_time_to_live_in_minutes_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Time To Live (in minutes) for events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3608,7 +3633,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of delivery retry attempts for events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3646,7 +3671,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3658,7 +3683,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3696,7 +3721,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3708,7 +3733,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3746,7 +3771,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3758,7 +3783,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3796,7 +3821,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3808,7 +3833,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3862,7 +3887,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#blobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3870,7 +3895,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3882,7 +3907,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#blob_container_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3890,7 +3915,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3944,7 +3969,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#blobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3952,7 +3977,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3964,7 +3989,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#blob_container_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Storage blob container that is the destination of the deadletter events{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3972,7 +3997,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that is the destination of the deadletter events{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4026,7 +4051,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4034,7 +4059,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4046,7 +4071,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4054,7 +4079,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4108,7 +4133,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4116,7 +4141,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4128,7 +4153,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Storage queue under a storage account that is the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4136,7 +4161,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4190,7 +4215,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4198,7 +4223,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4210,7 +4235,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4218,7 +4243,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4272,7 +4297,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4280,7 +4305,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4292,7 +4317,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4300,7 +4325,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4354,7 +4379,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4362,7 +4387,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4374,7 +4399,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4382,7 +4407,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4436,7 +4461,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4444,7 +4469,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4456,7 +4481,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4464,7 +4489,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4518,7 +4543,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4526,7 +4551,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4538,7 +4563,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4546,7 +4571,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4600,7 +4625,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4608,7 +4633,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4620,7 +4645,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4628,7 +4653,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4682,7 +4707,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4690,7 +4715,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4702,7 +4727,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4710,7 +4735,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4764,7 +4789,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4772,7 +4797,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4784,7 +4809,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4792,7 +4817,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4846,7 +4871,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4854,7 +4879,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4866,7 +4891,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4874,7 +4899,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4928,7 +4953,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4936,7 +4961,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4948,7 +4973,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4956,7 +4981,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5074,7 +5099,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5082,7 +5107,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5090,7 +5115,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5098,7 +5123,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5106,7 +5131,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5114,7 +5139,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5126,7 +5151,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5134,7 +5159,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5142,7 +5167,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5150,7 +5175,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5158,7 +5183,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5166,7 +5191,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5268,7 +5293,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azureactivedirectoryapplicationidoruri_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5276,7 +5301,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azureactivedirectorytenantid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5284,7 +5309,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5292,7 +5317,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5300,7 +5325,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5312,7 +5337,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azure_active_directory_application_id_or_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>application_<wbr>id_<wbr>or_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5320,7 +5345,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azure_active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5328,7 +5353,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5336,7 +5361,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5344,7 +5369,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5462,7 +5487,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#endpointbaseurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The base URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5470,7 +5495,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azureactivedirectoryapplicationidoruri_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Application<wbr>Id<wbr>Or<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5478,7 +5503,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azureactivedirectorytenantid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5486,7 +5511,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5494,7 +5519,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5502,7 +5527,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5514,7 +5539,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#endpoint_base_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The base URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5522,7 +5547,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azure_active_directory_application_id_or_uri_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>application_<wbr>id_<wbr>or_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5530,7 +5555,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#azure_active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5538,7 +5563,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL that represents the endpoint of the destination of an event subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5546,7 +5571,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5554,7 +5579,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

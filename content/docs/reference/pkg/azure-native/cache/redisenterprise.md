@@ -73,7 +73,7 @@ package main
 
 import (
 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -185,19 +185,32 @@ const redisEnterprise = new azure_native.cache.RedisEnterprise("redisEnterprise"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, TlsVersion]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[EnterpriseSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, TlsVersion]]]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EnterpriseSkuArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRedisEnterprise</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RedisEnterprise</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRedisEnterprise</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RedisEnterprise</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RedisEnterprise</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RedisEnterpriseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -232,22 +245,32 @@ const redisEnterprise = new azure_native.cache.RedisEnterprise("redisEnterprise"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RedisEnterpriseArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -455,7 +478,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -463,7 +486,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisesku">Enterprise<wbr>Sku</a></span>
+        <span class="property-type"><a href="#enterprisesku">pulumi.<wbr>Input<Enterprise<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SKU to create, which affects price, performance, and features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -471,7 +494,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +502,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +510,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tlsversion">Tls<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#tlsversion">pulumi.<wbr>Input<Tls<wbr>Version></a></span>
     </dt>
     <dd>{{% md %}}The minimum TLS version for the cluster to support, e.g. '1.2'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +518,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +526,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The Availability Zones where this cluster will be deployed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -515,7 +538,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -523,7 +546,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enterprisesku">Enterprise<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#enterprisesku">Input[Enterprise<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SKU to create, which affects price, performance, and features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -531,7 +554,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the RedisEnterprise cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +562,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +570,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#tlsversion">Tls<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#tlsversion">Input[Tls<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}The minimum TLS version for the cluster to support, e.g. '1.2'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +578,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +586,7 @@ The RedisEnterprise resource accepts the following [input]({{< relref "/docs/int
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones where this cluster will be deployed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -906,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
     </dt>
     <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -926,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1008,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1142,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1150,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1158,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1166,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1186,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1194,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1202,7 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1210,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1218,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1264,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1276,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1346,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1354,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1362,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1374,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}

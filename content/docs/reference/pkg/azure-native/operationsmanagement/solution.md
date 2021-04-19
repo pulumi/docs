@@ -78,7 +78,7 @@ package main
 
 import (
 	operationsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationsmanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -202,19 +202,31 @@ const solution = new azure_native.operationsmanagement.Solution("solution", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[SolutionPlanArgs]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SolutionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SolutionPlanArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SolutionPropertiesArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Solution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Solution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -249,22 +261,32 @@ const solution = new azure_native.operationsmanagement.Solution("solution", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SolutionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,7 +478,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group to get. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +486,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -472,7 +494,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionplan">Solution<wbr>Plan</a></span>
+        <span class="property-type"><a href="#solutionplan">pulumi.<wbr>Input<Solution<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Plan for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +502,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties</a></span>
+        <span class="property-type"><a href="#solutionproperties">pulumi.<wbr>Input<Solution<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +510,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#solutionname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User Solution Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +518,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -508,7 +530,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to get. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +538,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +546,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionplan">Solution<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutionplan">Input[Solution<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plan for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -532,7 +554,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutionproperties">Input[Solution<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties for solution object supported by the OperationsManagement resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +562,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#solution_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User Solution Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -548,7 +570,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -763,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -771,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -779,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}promotionCode, Not really used now, can you left as empty{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Publisher name. For gallery solution, it is Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -799,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}promotionCode, Not really used now, can you left as empty{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Publisher name. For gallery solution, it is Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}promotionCode, Not really used now, can you left as empty{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Publisher name. For gallery solution, it is Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -945,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}promotionCode, Not really used now, can you left as empty{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Publisher name. For gallery solution, it is Microsoft.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The azure resourceId for the workspace where the solution will be deployed/enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containedresources_nodejs" style="color: inherit; text-decoration: inherit;">contained<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencedresources_nodejs" style="color: inherit; text-decoration: inherit;">referenced<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The azure resourceId for the workspace where the solution will be deployed/enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contained_resources_python" style="color: inherit; text-decoration: inherit;">contained_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenced_resources_python" style="color: inherit; text-decoration: inherit;">referenced_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state for the solution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1177,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The azure resourceId for the workspace where the solution will be deployed/enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containedresources_nodejs" style="color: inherit; text-decoration: inherit;">contained<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referencedresources_nodejs" style="color: inherit; text-decoration: inherit;">referenced<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state for the solution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1213,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The azure resourceId for the workspace where the solution will be deployed/enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contained_resources_python" style="color: inherit; text-decoration: inherit;">contained_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenced_resources_python" style="color: inherit; text-decoration: inherit;">referenced_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}

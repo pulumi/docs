@@ -91,7 +91,7 @@ package main
 
 import (
 	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -301,7 +301,7 @@ package main
 
 import (
 	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -788,19 +788,36 @@ const assignment = new azure_native.blueprint.Assignment("assignment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blueprint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locks</span><span class="p">:</span> <span class="nx">Optional[AssignmentLockSettingsArgs]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ParameterValueArgs]]</span> = None<span class="p">, </span><span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, ResourceGroupValueArgs]]</span> = None<span class="p">, </span><span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">assignment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">blueprint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedServiceIdentityArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">locks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AssignmentLockSettingsArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[ParameterValueArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[ResourceGroupValueArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -835,22 +852,32 @@ const assignment = new azure_native.blueprint.Assignment("assignment", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AssignmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1122,7 +1149,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1130,7 +1157,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Parameter<wbr>Value}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Parameter<wbr>Value<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Blueprint assignment parameter values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1138,7 +1165,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroups_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Resource<wbr>Group<wbr>Value}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Resource<wbr>Group<wbr>Value<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Names and locations of resource group placeholders.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1146,7 +1173,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcescope_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1181,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assignmentname_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1189,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#blueprintid_nodejs" style="color: inherit; text-decoration: inherit;">blueprint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the published version of a blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1197,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1205,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1213,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1221,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locks_nodejs" style="color: inherit; text-decoration: inherit;">locks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentlocksettings">Assignment<wbr>Lock<wbr>Settings</a></span>
+        <span class="property-type"><a href="#assignmentlocksettings">pulumi.<wbr>Input<Assignment<wbr>Lock<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines how resources deployed by a blueprint assignment are locked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1229,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1214,7 +1241,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Input[Managed<wbr>Service<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Managed identity for this blueprint assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1222,7 +1249,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Value<wbr>Args]</span>
+        <span class="property-type">Input[Parameter<wbr>Value<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Blueprint assignment parameter values.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1230,7 +1257,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_groups_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Resource<wbr>Group<wbr>Value<wbr>Args]</span>
+        <span class="property-type">Input[Resource<wbr>Group<wbr>Value<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Names and locations of resource group placeholders.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1238,7 +1265,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_scope_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1273,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assignment_name_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1281,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#blueprint_id_python" style="color: inherit; text-decoration: inherit;">blueprint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the published version of a blueprint definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1289,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Multi-line explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1297,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}One-liner string explain this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1305,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of this blueprint assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1313,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#locks_python" style="color: inherit; text-decoration: inherit;">locks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentlocksettings">Assignment<wbr>Lock<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentlocksettings">Input[Assignment<wbr>Lock<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines how resources deployed by a blueprint assignment are locked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1321,7 @@ The Assignment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1587,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedactions_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1603,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assignmentlockmode">Assignment<wbr>Lock<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#assignmentlockmode">pulumi.<wbr>Input<Assignment<wbr>Lock<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Lock mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1615,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_actions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_principals_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#assignmentlockmode">Assignment<wbr>Lock<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#assignmentlockmode">Input[Assignment<wbr>Lock<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Lock mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedactions_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Lock mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1729,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_actions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of management operations that are excluded from blueprint locks. Up to 200 actions are permitted. If the lock mode is set to 'AllResourcesReadOnly', then the following actions are automatically appended to 'excludedActions': '*/read', 'Microsoft.Network/virtualNetworks/subnets/join/action' and 'Microsoft.Authorization/locks/delete'. If the lock mode is set to 'AllResourcesDoNotDelete', then the following actions are automatically appended to 'excludedActions': 'Microsoft.Authorization/locks/delete'. Duplicate actions will get removed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_principals_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of AAD principals excluded from blueprint locks. Up to 5 principals are permitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Lock mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1815,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedresources_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of resources that were created by the blueprint assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1831,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timecreated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1843,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last modified time of this blueprint definition.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1851,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_resources_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of resources that were created by the blueprint assignment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1859,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_created_python" style="color: inherit; text-decoration: inherit;">time_<wbr>created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Creation time of this blueprint definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1897,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource ID of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1909,7 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource ID of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource ID of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1959,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource ID of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2045,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedserviceidentitytype">pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2053,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Assigned<wbr>Identity<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2081,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedserviceidentitytype">Input[Managed<wbr>Service<wbr>Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Assigned<wbr>Identity<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2191,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2215,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2227,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2235,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2243,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2251,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2335,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference</a></span>
+        <span class="property-type"><a href="#secretvaluereference">pulumi.<wbr>Input<Secret<wbr>Value<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2355,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereference">Secret<wbr>Value<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereference">Input[Secret<wbr>Value<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">pulumi.<wbr>Input<Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretvaluereferenceresponse">Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretvaluereferenceresponse">Input[Secret<wbr>Value<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameter value as reference type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2499,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2507,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Location of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2601,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Location of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2679,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Reference<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2687,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the secret to use. If left blank, the latest version of the secret is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2707,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Input[Key<wbr>Vault<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2715,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2723,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the secret to use. If left blank, the latest version of the secret is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2793,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2801,7 +2828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2809,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the secret to use. If left blank, the latest version of the secret is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2821,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyvaultreferenceresponse">Input[Key<wbr>Vault<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reference to a given Azure Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2829,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the secret to use. If left blank, the latest version of the secret is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2891,7 +2918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2899,7 +2926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2973,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2993,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client App Id associated with this identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3001,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}

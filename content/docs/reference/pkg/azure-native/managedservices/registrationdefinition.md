@@ -88,7 +88,7 @@ package main
 
 import (
 	managedservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/managedservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -232,19 +232,29 @@ const registrationDefinition = new azure_native.managedservices.RegistrationDefi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PlanArgs]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[RegistrationDefinitionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registration_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PlanArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RegistrationDefinitionPropertiesArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">registration_definition_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistrationDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistrationDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistrationDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistrationDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistrationDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegistrationDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,22 +289,32 @@ const registrationDefinition = new azure_native.managedservices.RegistrationDefi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RegistrationDefinitionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -454,7 +474,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Scope of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +482,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Plan</a></span>
+        <span class="property-type"><a href="#plan">pulumi.<wbr>Input<Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +490,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationdefinitionproperties">Registration<wbr>Definition<wbr>Properties</a></span>
+        <span class="property-type"><a href="#registrationdefinitionproperties">pulumi.<wbr>Input<Registration<wbr>Definition<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +498,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#registrationdefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Guid of the registration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -490,7 +510,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Scope of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +518,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#plan">Input[Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plan details for the managed services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +526,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationdefinitionproperties">Registration<wbr>Definition<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#registrationdefinitionproperties">Input[Registration<wbr>Definition<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of a registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +534,7 @@ The RegistrationDefinition resource accepts the following [input]({{< relref "/d
 <a href="#registration_definition_id_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Guid of the registration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegatedroledefinitionids_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaliddisplayname_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -773,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegated_role_definition_ids_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>role_<wbr>definition_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_display_name_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegatedroledefinitionids_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -899,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principaliddisplayname_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -911,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -919,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegated_role_definition_ids_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>role_<wbr>definition_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_display_name_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1029,7 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The product code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1037,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1045,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan's version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1057,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1065,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The product code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1073,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1081,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan's version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1175,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The product code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1183,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1191,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan's version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1203,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1211,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The product code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1219,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1227,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan's version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1313,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Authorization[]</a></span>
+        <span class="property-type"><a href="#authorization">pulumi.<wbr>Input<pulumi.<wbr>Input<Authorization<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1321,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedbytenantid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the managedBy tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Definition<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the registration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1349,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorization">Sequence[Authorization<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorization">Input[Authorization<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1357,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_by_tenant_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the managedBy tenant.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_definition_name_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>definition_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the registration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1491,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_nodejs" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Authorization<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Authorization<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedbytenantid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the managedBy tenant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1507,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managedbytenantname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By<wbr>Tenant<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the managedBy tenant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1515,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Current state of the registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1523,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1531,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationdefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Definition<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the registration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1543,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Input[Authorization<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1551,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_by_tenant_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the managedBy tenant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managed_by_tenant_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by_<wbr>tenant_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the managedBy tenant.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Current state of the registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the registration definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_definition_name_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>definition_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the registration definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}

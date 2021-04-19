@@ -164,19 +164,44 @@ const authorizationServer = new azure_native.apimanagement.AuthorizationServer("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[AuthorizationMethod]]</span> = None<span class="p">, </span><span class="nx">authsid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, BearerTokenSendingMethod]]]</span> = None<span class="p">, </span><span class="nx">client_authentication_method</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, ClientAuthenticationMethod]]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, GrantType]]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[TokenBodyParameterContractArgs]]</span> = None<span class="p">, </span><span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AuthorizationMethod]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">authsid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, BearerTokenSendingMethod]]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">client_authentication_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, ClientAuthenticationMethod]]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, GrantType]]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TokenBodyParameterContractArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthorizationServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthorizationServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthorizationServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthorizationServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +236,32 @@ const authorizationServer = new azure_native.apimanagement.AuthorizationServer("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AuthorizationServerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -626,7 +661,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -634,7 +669,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -642,7 +677,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientregistrationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Registration<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -650,7 +685,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -658,7 +693,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Grant<wbr>Type[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Grant<wbr>Type>[]></span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -666,7 +701,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -674,7 +709,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +717,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationmethods_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationmethod">Authorization<wbr>Method[]</a></span>
+        <span class="property-type"><a href="#authorizationmethod">pulumi.<wbr>Input<pulumi.<wbr>Input<Authorization<wbr>Method>[]></a></span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +725,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authsid_nodejs" style="color: inherit; text-decoration: inherit;">authsid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +733,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Bearer<wbr>Token<wbr>Sending<wbr>Method[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Bearer<wbr>Token<wbr>Sending<wbr>Method>[]></span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +741,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Client<wbr>Authentication<wbr>Method[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Client<wbr>Authentication<wbr>Method>[]></span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +749,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +757,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#defaultscope_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +765,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +773,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resourceownerpassword_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +781,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resourceownerusername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +789,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#supportstate_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +797,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#tokenbodyparameters_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Body<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenbodyparametercontract">Token<wbr>Body<wbr>Parameter<wbr>Contract[]</a></span>
+        <span class="property-type"><a href="#tokenbodyparametercontract">pulumi.<wbr>Input<pulumi.<wbr>Input<Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +805,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -782,7 +817,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -790,7 +825,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -798,7 +833,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_registration_endpoint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>registration_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -806,7 +841,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -814,7 +849,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Grant<wbr>Type]]</span>
+        <span class="property-type">Input[Union[str, Grant<wbr>Type]]]]</span>
     </dt>
     <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -822,7 +857,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -830,7 +865,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +873,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorization_methods_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationmethod">Sequence[Authorization<wbr>Method]</a></span>
+        <span class="property-type"><a href="#authorizationmethod">Input[Authorization<wbr>Method]]]</a></span>
     </dt>
     <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +881,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authsid_python" style="color: inherit; text-decoration: inherit;">authsid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +889,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Method]]</span>
+        <span class="property-type">Input[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Method]]]]</span>
     </dt>
     <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +897,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_authentication_method_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Client<wbr>Authentication<wbr>Method]]</span>
+        <span class="property-type">Input[Union[str, Client<wbr>Authentication<wbr>Method]]]]</span>
     </dt>
     <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +905,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +913,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#default_scope_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +921,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +929,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_owner_password_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +937,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_owner_username_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +945,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#support_state_python" style="color: inherit; text-decoration: inherit;">support_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +953,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#token_body_parameters_python" style="color: inherit; text-decoration: inherit;">token_<wbr>body_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tokenbodyparametercontract">Sequence[Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tokenbodyparametercontract">Input[Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +961,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1245,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1253,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1265,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1273,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1335,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1347,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}

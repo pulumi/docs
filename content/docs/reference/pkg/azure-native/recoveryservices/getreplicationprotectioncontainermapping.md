@@ -22,17 +22,22 @@ API Version: 2018-07-10.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationProtectionContainerMapping<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationProtectionContainerMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationProtectionContainerMappingResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationProtectionContainerMapping<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationProtectionContainerMappingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationProtectionContainerMappingResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_protection_container_mapping(</span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationProtectionContainerMappingResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_protection_container_mapping(</span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                 <span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                 <span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                 <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationProtectionContainerMappingResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationProtectionContainerMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationProtectionContainerMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationProtectionContainerMappingResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationProtectionContainerMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationProtectionContainerMappingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationProtectionContainerMappingResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationProtectionContainerMapping` in the Go SDK.
 
@@ -41,7 +46,7 @@ API Version: 2018-07-10.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationProtectionContainerMapping </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationProtectionContainerMappingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationProtectionContainerMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationProtectionContainerMappingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationProtectionContainerMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -656,7 +661,7 @@ The following output properties are available:
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1028,7 +1033,7 @@ The following output properties are available:
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1488,7 +1493,7 @@ The following output properties are available:
 <a href="#healtherrordetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1512,7 +1517,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1769,7 @@ The following output properties are available:
 <a href="#health_error_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1793,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#a2aprotectioncontainermappingdetailsresponse">A2AProtection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a> | <a href="#vmwarecbtprotectioncontainermappingdetailsresponse">VMware<wbr>Cbt<wbr>Protection<wbr>Container<wbr>Mapping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Provider specific provider details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

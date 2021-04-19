@@ -21,17 +21,19 @@ API Version: 2020-11-20.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getResourceTypeRegistration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetResourceTypeRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetResourceTypeRegistrationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getResourceTypeRegistration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetResourceTypeRegistrationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetResourceTypeRegistrationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_type_registration(</span><span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourceTypeRegistrationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_resource_type_registration(</span><span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetResourceTypeRegistrationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResourceTypeRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupResourceTypeRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupResourceTypeRegistrationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupResourceTypeRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupResourceTypeRegistrationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupResourceTypeRegistrationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupResourceTypeRegistration` in the Go SDK.
 
@@ -40,7 +42,7 @@ API Version: 2020-11-20.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetResourceTypeRegistration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetResourceTypeRegistrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetResourceTypeRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetResourceTypeRegistrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetResourceTypeRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -671,7 +673,7 @@ The following output properties are available:
 <a href="#hiddenpropertypaths_csharp" style="color: inherit; text-decoration: inherit;">Hidden<wbr>Property<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingruleresponsehiddenpropertypaths">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Logging<wbr>Rule<wbr>Response<wbr>Hidden<wbr>Property<wbr>Paths<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingruleresponsehiddenpropertypaths">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Logging<wbr>Rule<wbr>Response<wbr>Hidden<wbr>Property<wbr>Paths</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -779,7 +781,7 @@ The following output properties are available:
 <a href="#hidden_property_paths_python" style="color: inherit; text-decoration: inherit;">hidden_<wbr>property_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingruleresponsehiddenpropertypaths">Logging<wbr>Rule<wbr>Response<wbr>Hidden<wbr>Property<wbr>Paths<wbr>Args</a></span>
+        <span class="property-type"><a href="#loggingruleresponsehiddenpropertypaths">Logging<wbr>Rule<wbr>Response<wbr>Hidden<wbr>Property<wbr>Paths</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -895,7 +897,7 @@ The following output properties are available:
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcetypeextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Extension<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +905,7 @@ The following output properties are available:
 <a href="#featuresrule_csharp" style="color: inherit; text-decoration: inherit;">Features<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeendpointresponsefeaturesrule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Endpoint<wbr>Response<wbr>Features<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetypeendpointresponsefeaturesrule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Endpoint<wbr>Response<wbr>Features<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1077,7 @@ The following output properties are available:
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeextensionresponse">Sequence[Resource<wbr>Type<wbr>Extension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcetypeextensionresponse">Sequence[Resource<wbr>Type<wbr>Extension<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1085,7 @@ The following output properties are available:
 <a href="#features_rule_python" style="color: inherit; text-decoration: inherit;">features_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeendpointresponsefeaturesrule">Resource<wbr>Type<wbr>Endpoint<wbr>Response<wbr>Features<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetypeendpointresponsefeaturesrule">Resource<wbr>Type<wbr>Endpoint<wbr>Response<wbr>Features<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1461,7 @@ The following output properties are available:
 <a href="#resourcecreationbegin_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Creation<wbr>Begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeextensionoptionsresponseresourcecreationbegin">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Extension<wbr>Options<wbr>Response<wbr>Resource<wbr>Creation<wbr>Begin<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetypeextensionoptionsresponseresourcecreationbegin">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Extension<wbr>Options<wbr>Response<wbr>Resource<wbr>Creation<wbr>Begin</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1495,7 +1497,7 @@ The following output properties are available:
 <a href="#resource_creation_begin_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>creation_<wbr>begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeextensionoptionsresponseresourcecreationbegin">Resource<wbr>Type<wbr>Extension<wbr>Options<wbr>Response<wbr>Resource<wbr>Creation<wbr>Begin<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetypeextensionoptionsresponseresourcecreationbegin">Resource<wbr>Type<wbr>Extension<wbr>Options<wbr>Response<wbr>Resource<wbr>Creation<wbr>Begin</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1823,7 +1825,7 @@ The following output properties are available:
 <a href="#subscriptionstateoverrideactions_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>State<wbr>Override<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstateoverrideactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionstateoverrideactionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1883,7 +1885,7 @@ The following output properties are available:
 <a href="#subscription_state_override_actions_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>state_<wbr>override_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstateoverrideactionresponse">Sequence[Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subscriptionstateoverrideactionresponse">Sequence[Subscription<wbr>State<wbr>Override<wbr>Action<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1991,7 +1993,7 @@ The following output properties are available:
 <a href="#authorizationactionmappings_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Action<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationactionmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Authorization<wbr>Action<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#authorizationactionmappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Authorization<wbr>Action<wbr>Mapping<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +2001,7 @@ The following output properties are available:
 <a href="#checknameavailabilityspecifications_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Name<wbr>Availability<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsechecknameavailabilityspecifications">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Check<wbr>Name<wbr>Availability<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsechecknameavailabilityspecifications">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Check<wbr>Name<wbr>Availability<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2039,7 +2041,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcetypeendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Endpoint<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2049,7 @@ The following output properties are available:
 <a href="#extendedlocations_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationoptionsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Options<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#extendedlocationoptionsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Options<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2057,7 @@ The following output properties are available:
 <a href="#extensionoptions_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseextensionoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Extension<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseextensionoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Extension<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2063,7 +2065,7 @@ The following output properties are available:
 <a href="#featuresrule_csharp" style="color: inherit; text-decoration: inherit;">Features<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsefeaturesrule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Features<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsefeaturesrule">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Features<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2071,7 +2073,7 @@ The following output properties are available:
 <a href="#identitymanagement_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseidentitymanagement">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Identity<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseidentitymanagement">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Identity<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2089,7 @@ The following output properties are available:
 <a href="#linkedaccesschecks_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Access<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedaccesscheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Linked<wbr>Access<wbr>Check<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#linkedaccesscheckresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Linked<wbr>Access<wbr>Check<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2097,7 @@ The following output properties are available:
 <a href="#loggingrules_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Logging<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#loggingruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Logging<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2129,7 @@ The following output properties are available:
 <a href="#requestheaderoptions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponserequestheaderoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Request<wbr>Header<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponserequestheaderoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Request<wbr>Header<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2153,7 @@ The following output properties are available:
 <a href="#resourcemovepolicy_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseresourcemovepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Resource<wbr>Move<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseresourcemovepolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Resource<wbr>Move<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2169,7 @@ The following output properties are available:
 <a href="#servicetreeinfos_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tree<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetreeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Service<wbr>Tree<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#servicetreeinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Service<wbr>Tree<wbr>Info<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2177,7 @@ The following output properties are available:
 <a href="#subscriptionlifecyclenotificationspecifications_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsesubscriptionlifecyclenotificationspecifications">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsesubscriptionlifecyclenotificationspecifications">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2185,7 @@ The following output properties are available:
 <a href="#subscriptionstaterules_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>State<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstateruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Subscription<wbr>State<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#subscriptionstateruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Subscription<wbr>State<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2193,7 @@ The following output properties are available:
 <a href="#swaggerspecifications_csharp" style="color: inherit; text-decoration: inherit;">Swagger<wbr>Specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaggerspecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Swagger<wbr>Specification<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#swaggerspecificationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Swagger<wbr>Specification<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +2201,7 @@ The following output properties are available:
 <a href="#templatedeploymentoptions_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsetemplatedeploymentoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsetemplatedeploymentoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2209,7 @@ The following output properties are available:
 <a href="#throttlingrules_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlingruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Throttling<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#throttlingruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Throttling<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2699,7 +2701,7 @@ The following output properties are available:
 <a href="#authorization_action_mappings_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>action_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationactionmappingresponse">Sequence[Authorization<wbr>Action<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authorizationactionmappingresponse">Sequence[Authorization<wbr>Action<wbr>Mapping<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2707,7 +2709,7 @@ The following output properties are available:
 <a href="#check_name_availability_specifications_python" style="color: inherit; text-decoration: inherit;">check_<wbr>name_<wbr>availability_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsechecknameavailabilityspecifications">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Check<wbr>Name<wbr>Availability<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsechecknameavailabilityspecifications">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Check<wbr>Name<wbr>Availability<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2749,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetypeendpointresponse">Sequence[Resource<wbr>Type<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcetypeendpointresponse">Sequence[Resource<wbr>Type<wbr>Endpoint<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2755,7 +2757,7 @@ The following output properties are available:
 <a href="#extended_locations_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedlocationoptionsresponse">Sequence[Extended<wbr>Location<wbr>Options<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#extendedlocationoptionsresponse">Sequence[Extended<wbr>Location<wbr>Options<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2763,7 +2765,7 @@ The following output properties are available:
 <a href="#extension_options_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseextensionoptions">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Extension<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseextensionoptions">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Extension<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2771,7 +2773,7 @@ The following output properties are available:
 <a href="#features_rule_python" style="color: inherit; text-decoration: inherit;">features_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsefeaturesrule">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Features<wbr>Rule<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsefeaturesrule">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Features<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +2781,7 @@ The following output properties are available:
 <a href="#identity_management_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseidentitymanagement">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Identity<wbr>Management<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseidentitymanagement">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Identity<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2795,7 +2797,7 @@ The following output properties are available:
 <a href="#linked_access_checks_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>access_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedaccesscheckresponse">Sequence[Linked<wbr>Access<wbr>Check<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linkedaccesscheckresponse">Sequence[Linked<wbr>Access<wbr>Check<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2803,7 +2805,7 @@ The following output properties are available:
 <a href="#logging_rules_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingruleresponse">Sequence[Logging<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingruleresponse">Sequence[Logging<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2835,7 +2837,7 @@ The following output properties are available:
 <a href="#request_header_options_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponserequestheaderoptions">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Request<wbr>Header<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponserequestheaderoptions">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Request<wbr>Header<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2861,7 @@ The following output properties are available:
 <a href="#resource_move_policy_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>move_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseresourcemovepolicy">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Resource<wbr>Move<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponseresourcemovepolicy">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Resource<wbr>Move<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2877,7 @@ The following output properties are available:
 <a href="#service_tree_infos_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tree_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetreeinforesponse">Sequence[Service<wbr>Tree<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetreeinforesponse">Sequence[Service<wbr>Tree<wbr>Info<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2883,7 +2885,7 @@ The following output properties are available:
 <a href="#subscription_lifecycle_notification_specifications_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>lifecycle_<wbr>notification_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsesubscriptionlifecyclenotificationspecifications">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsesubscriptionlifecyclenotificationspecifications">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Subscription<wbr>Lifecycle<wbr>Notification<wbr>Specifications</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2891,7 +2893,7 @@ The following output properties are available:
 <a href="#subscription_state_rules_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>state_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionstateruleresponse">Sequence[Subscription<wbr>State<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subscriptionstateruleresponse">Sequence[Subscription<wbr>State<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2899,7 +2901,7 @@ The following output properties are available:
 <a href="#swagger_specifications_python" style="color: inherit; text-decoration: inherit;">swagger_<wbr>specifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaggerspecificationresponse">Sequence[Swagger<wbr>Specification<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#swaggerspecificationresponse">Sequence[Swagger<wbr>Specification<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2909,7 @@ The following output properties are available:
 <a href="#template_deployment_options_python" style="color: inherit; text-decoration: inherit;">template_<wbr>deployment_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsetemplatedeploymentoptions">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcetyperegistrationpropertiesresponsetemplatedeploymentoptions">Resource<wbr>Type<wbr>Registration<wbr>Properties<wbr>Response<wbr>Template<wbr>Deployment<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2915,7 +2917,7 @@ The following output properties are available:
 <a href="#throttling_rules_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlingruleresponse">Sequence[Throttling<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#throttlingruleresponse">Sequence[Throttling<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3391,7 +3393,7 @@ The following output properties are available:
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlingmetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Throttling<wbr>Metric<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#throttlingmetricresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Throttling<wbr>Metric<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3477,7 @@ The following output properties are available:
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#throttlingmetricresponse">Sequence[Throttling<wbr>Metric<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#throttlingmetricresponse">Sequence[Throttling<wbr>Metric<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

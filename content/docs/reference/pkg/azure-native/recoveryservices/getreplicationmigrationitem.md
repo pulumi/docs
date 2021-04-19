@@ -22,17 +22,22 @@ API Version: 2018-07-10.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationMigrationItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationMigrationItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationMigrationItemResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationMigrationItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationMigrationItemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationMigrationItemResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_migration_item(</span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migration_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationMigrationItemResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_migration_item(</span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">migration_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationMigrationItemResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationMigrationItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationMigrationItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationMigrationItemResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationMigrationItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationMigrationItemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationMigrationItemResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationMigrationItem` in the Go SDK.
 
@@ -41,7 +46,7 @@ API Version: 2018-07-10.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationMigrationItem </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationMigrationItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationMigrationItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationMigrationItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationMigrationItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -624,7 +629,7 @@ The following output properties are available:
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1001,7 @@ The following output properties are available:
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1461,7 @@ The following output properties are available:
 <a href="#currentjob_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1472,7 +1477,7 @@ The following output properties are available:
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1544,7 +1549,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,7 +1785,7 @@ The following output properties are available:
 <a href="#current_job_python" style="color: inherit; text-decoration: inherit;">current_<wbr>job</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentjobdetailsresponse">Current<wbr>Job<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The current job details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1796,7 +1801,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of health errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1868,7 +1873,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmwarecbtmigrationdetailsresponse">VMware<wbr>Cbt<wbr>Migration<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The migration provider custom settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1948,7 +1953,7 @@ The following output properties are available:
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +2009,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2344,7 +2349,7 @@ The following output properties are available:
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmwarecbtprotecteddiskdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2405,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmwarecbtnicdetailsresponse">Sequence[VMware<wbr>Cbt<wbr>Nic<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}

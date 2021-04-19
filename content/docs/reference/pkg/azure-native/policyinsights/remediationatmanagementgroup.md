@@ -58,7 +58,7 @@ package main
 
 import (
 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -134,19 +134,32 @@ const remediationAtManagementGroup = new azure_native.policyinsights.Remediation
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[RemediationFiltersArgs]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_groups_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_discovery_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ResourceDiscoveryMode]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                 <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RemediationFiltersArgs]]</span> = None<span class="p">,</span>
+                                 <span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                 <span class="nx">management_groups_namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                 <span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                 <span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                 <span class="nx">remediation_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                 <span class="nx">resource_discovery_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ResourceDiscoveryMode]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p">,</span>
+                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRemediationAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RemediationAtManagementGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRemediationAtManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RemediationAtManagementGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RemediationAtManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RemediationAtManagementGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -181,22 +194,32 @@ const remediationAtManagementGroup = new azure_native.policyinsights.Remediation
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RemediationAtManagementGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -404,7 +427,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#managementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Management group ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -412,7 +435,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#managementgroupsnamespace_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Groups<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -420,7 +443,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationfilters">Remediation<wbr>Filters</a></span>
+        <span class="property-type"><a href="#remediationfilters">pulumi.<wbr>Input<Remediation<wbr>Filters<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +451,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#policyassignmentid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Assignment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -436,7 +459,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -444,7 +467,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#remediationname_nodejs" style="color: inherit; text-decoration: inherit;">remediation<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -452,7 +475,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#resourcediscoverymode_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Discovery<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourcediscoverymode">Resource<wbr>Discovery<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#resourcediscoverymode">pulumi.<wbr>Input<Resource<wbr>Discovery<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -464,7 +487,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#management_group_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Management group ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -472,7 +495,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#management_groups_namespace_python" style="color: inherit; text-decoration: inherit;">management_<wbr>groups_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +503,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remediationfilters">Remediation<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#remediationfilters">Input[Remediation<wbr>Filters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The filters that will be applied to determine which resources to remediate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +511,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#policy_assignment_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>assignment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the policy assignment that should be remediated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -496,7 +519,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -504,7 +527,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#remediation_name_python" style="color: inherit; text-decoration: inherit;">remediation_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the remediation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -512,7 +535,7 @@ The RemediationAtManagementGroup resource accepts the following [input]({{< relr
 <a href="#resource_discovery_mode_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>discovery_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#resourcediscoverymode">Resource<wbr>Discovery<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#resourcediscoverymode">Input[Resource<wbr>Discovery<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -839,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#faileddeployments_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Deployments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successfuldeployments_nodejs" style="color: inherit; text-decoration: inherit;">successful<wbr>Deployments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totaldeployments_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Deployments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failed_deployments_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>deployments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have failed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successful_deployments_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>deployments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation that have succeeded.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_deployments_python" style="color: inherit; text-decoration: inherit;">total_<wbr>deployments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of deployments required by the remediation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -933,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -971,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The resource locations that will be remediated.{{% /md %}}</dd></dl>
 {{% /choosable %}}

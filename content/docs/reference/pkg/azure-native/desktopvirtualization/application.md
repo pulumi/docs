@@ -65,7 +65,7 @@ package main
 
 import (
 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -162,19 +162,39 @@ const application = new azure_native.desktopvirtualization.Application("applicat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, RemoteApplicationType]]</span> = None<span class="p">, </span><span class="nx">command_line_arguments</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">command_line_setting</span><span class="p">:</span> <span class="nx">Optional[Union[str, CommandLineSetting]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icon_index</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icon_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msix_package_application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msix_package_family_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_in_portal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">application_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">application_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, RemoteApplicationType]]]</span> = None<span class="p">,</span>
+                <span class="nx">command_line_arguments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">command_line_setting</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CommandLineSetting]]]</span> = None<span class="p">,</span>
+                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">file_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">icon_index</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                <span class="nx">icon_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">msix_package_application_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">msix_package_family_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">show_in_portal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,22 +229,32 @@ const application = new azure_native.desktopvirtualization.Application("applicat
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -544,7 +574,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationgroupname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the application group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -552,7 +582,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#commandlinesetting_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#commandlinesetting">Command<wbr>Line<wbr>Setting</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#commandlinesetting">pulumi.<wbr>Input<Command<wbr>Line<wbr>Setting></a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -560,7 +590,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +598,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the application within the specified application group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +606,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#remoteapplicationtype">Remote<wbr>Application<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#remoteapplicationtype">pulumi.<wbr>Input<Remote<wbr>Application<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +614,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#commandlinearguments_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Command Line Arguments for Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +622,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +630,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a path for the executable file for the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +638,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +646,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#iconindex_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Index of the icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +654,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#iconpath_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +662,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#msixpackageapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +670,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#msixpackagefamilyname_nodejs" style="color: inherit; text-decoration: inherit;">msix<wbr>Package<wbr>Family<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +678,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#showinportal_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>In<wbr>Portal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether to show the RemoteApp program in the RD Web Access server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -660,7 +690,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_group_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the application group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -668,7 +698,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#command_line_setting_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#commandlinesetting">Command<wbr>Line<wbr>Setting</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#commandlinesetting">Input[Command<wbr>Line<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -676,7 +706,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -684,7 +714,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the application within the specified application group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +722,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#remoteapplicationtype">Remote<wbr>Application<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#remoteapplicationtype">Input[Remote<wbr>Application<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Resource Type of Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +730,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#command_line_arguments_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Command Line Arguments for Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +738,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +746,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a path for the executable file for the application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +754,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of Application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +762,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#icon_index_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Index of the icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +770,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#icon_path_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Path to icon.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +778,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#msix_package_application_id_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the package application Id for MSIX applications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +786,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#msix_package_family_name_python" style="color: inherit; text-decoration: inherit;">msix_<wbr>package_<wbr>family_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the package family name for MSIX applications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +794,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#show_in_portal_python" style="color: inherit; text-decoration: inherit;">show_<wbr>in_<wbr>portal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to show the RemoteApp program in the RD Web Access server.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -76,7 +76,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -200,19 +200,34 @@ const proactiveDetectionConfiguration = new azure_native.insights.ProactiveDetec
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_updated_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_definitions</span><span class="p">:</span> <span class="nx">Optional[ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs]</span> = None<span class="p">, </span><span class="nx">send_emails_to_subscription_owners</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                    <span class="nx">configuration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">custom_emails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                                    <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                                    <span class="nx">last_updated_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                    <span class="nx">rule_definitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs]]</span> = None<span class="p">,</span>
+                                    <span class="nx">send_emails_to_subscription_owners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p">,</span>
+                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProactiveDetectionConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProactiveDetectionConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProactiveDetectionConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,22 +262,32 @@ const proactiveDetectionConfiguration = new azure_native.insights.ProactiveDetec
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProactiveDetectionConfigurationArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -502,7 +527,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -510,7 +535,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +543,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#configurationid_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ProactiveDetection configuration ID. This is unique within a Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +551,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Custom email addresses for this rule notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +559,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether this rule is enabled by the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +567,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The last time this rule was updated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +575,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +583,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#ruledefinitions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentproactivedetectionconfigurationruledefinitions">Application<wbr>Insights<wbr>Component<wbr>Proactive<wbr>Detection<wbr>Configuration<wbr>Rule<wbr>Definitions</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentproactivedetectionconfigurationruledefinitions">pulumi.<wbr>Input<Application<wbr>Insights<wbr>Component<wbr>Proactive<wbr>Detection<wbr>Configuration<wbr>Rule<wbr>Definitions<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Static definitions of the ProactiveDetection configuration rule (same values for all components).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +591,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#sendemailstosubscriptionowners_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Emails<wbr>To<wbr>Subscription<wbr>Owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag that indicated whether notifications on this rule should be sent to subscription owners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -578,7 +603,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -586,7 +611,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +619,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#configuration_id_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ProactiveDetection configuration ID. This is unique within a Application Insights component.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +627,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Custom email addresses for this rule notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -610,7 +635,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag that indicates whether this rule is enabled by the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +643,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The last time this rule was updated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -626,7 +651,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -634,7 +659,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#rule_definitions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationinsightscomponentproactivedetectionconfigurationruledefinitions">Application<wbr>Insights<wbr>Component<wbr>Proactive<wbr>Detection<wbr>Configuration<wbr>Rule<wbr>Definitions<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationinsightscomponentproactivedetectionconfigurationruledefinitions">Input[Application<wbr>Insights<wbr>Component<wbr>Proactive<wbr>Detection<wbr>Configuration<wbr>Rule<wbr>Definitions<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Static definitions of the ProactiveDetection configuration rule (same values for all components).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +667,7 @@ The ProactiveDetectionConfiguration resource accepts the following [input]({{< r
 <a href="#send_emails_to_subscription_owners_python" style="color: inherit; text-decoration: inherit;">send_<wbr>emails_<wbr>to_<wbr>subscription_<wbr>owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag that indicated whether notifications on this rule should be sent to subscription owners{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -857,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule name as it is displayed in UI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#helpurl_nodejs" style="color: inherit; text-decoration: inherit;">help<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL which displays additional info about the proactive detection rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabledbydefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is enabled by default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ishidden_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is hidden (from the UI){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isinpreview_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>In<wbr>Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is in preview{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supportsemailnotifications_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Email<wbr>Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether email notifications are supported for detections for this rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule name as it is displayed in UI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#help_url_python" style="color: inherit; text-decoration: inherit;">help_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL which displays additional info about the proactive detection rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_by_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is enabled by default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_hidden_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is hidden (from the UI){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_in_preview_python" style="color: inherit; text-decoration: inherit;">is_<wbr>in_<wbr>preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is in preview{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supports_email_notifications_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>email_<wbr>notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether email notifications are supported for detections for this rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1131,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule name as it is displayed in UI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#helpurl_nodejs" style="color: inherit; text-decoration: inherit;">help<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL which displays additional info about the proactive detection rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabledbydefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled<wbr>By<wbr>Default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is enabled by default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1163,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ishidden_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is hidden (from the UI){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isinpreview_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>In<wbr>Preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is in preview{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rule name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supportsemailnotifications_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Email<wbr>Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}A flag indicating whether email notifications are supported for detections for this rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule name as it is displayed in UI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#help_url_python" style="color: inherit; text-decoration: inherit;">help_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL which displays additional info about the proactive detection rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_by_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled_<wbr>by_<wbr>default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is enabled by default{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_hidden_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hidden</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is hidden (from the UI){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_in_preview_python" style="color: inherit; text-decoration: inherit;">is_<wbr>in_<wbr>preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the rule is in preview{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rule name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1255,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#supports_email_notifications_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>email_<wbr>notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether email notifications are supported for detections for this rule{{% /md %}}</dd></dl>
 {{% /choosable %}}

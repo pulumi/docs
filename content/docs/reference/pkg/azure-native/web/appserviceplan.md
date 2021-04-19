@@ -66,7 +66,7 @@ package main
 
 import (
 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -163,19 +163,44 @@ const appServicePlan = new azure_native.web.AppServicePlan("appServicePlan", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">free_offer_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentProfileArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_spot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_environment_profile</span><span class="p">:</span> <span class="nx">Optional[KubeEnvironmentProfileArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_elastic_worker_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">per_site_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">spot_expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_worker_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_worker_size_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_tier_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">free_offer_expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HostingEnvironmentProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">is_spot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">kube_environment_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KubeEnvironmentProfileArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">maximum_elastic_worker_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">per_site_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuDescriptionArgs]]</span> = None<span class="p">,</span>
+                   <span class="nx">spot_expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                   <span class="nx">target_worker_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">target_worker_size_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">worker_tier_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppServicePlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppServicePlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppServicePlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppServicePlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppServicePlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AppServicePlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -210,22 +235,32 @@ const appServicePlan = new azure_native.web.AppServicePlan("appServicePlan", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AppServicePlanArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -627,7 +662,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +670,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#freeofferexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Offer<wbr>Expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time when the server farm free offer expires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +678,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#hostingenvironmentprofile_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">pulumi.<wbr>Input<Hosting<wbr>Environment<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specification for the App Service Environment to use for the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +686,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#hyperv_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>V</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +694,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#isspot_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Spot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If <code>true</code>, this App Service Plan owns spot instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +702,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#isxenon_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Xenon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +710,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +718,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#kubeenvironmentprofile_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeenvironmentprofile">Kube<wbr>Environment<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubeenvironmentprofile">pulumi.<wbr>Input<Kube<wbr>Environment<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specification for the Kubernetes Environment to use for the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +726,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +734,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#maximumelasticworkercount_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Elastic<wbr>Worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -707,7 +742,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +750,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#persitescaling_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Site<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
 If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.{{% /md %}}</dd><dt class="property-optional"
@@ -724,7 +759,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#reserved_nodejs" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If Linux app service plan <code>true</code>, <code>false</code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +767,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Sku<wbr>Description</a></span>
+        <span class="property-type"><a href="#skudescription">pulumi.<wbr>Input<Sku<wbr>Description<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +775,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#spotexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time when the server farm expires. Valid only if it is a spot server farm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +783,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +791,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#targetworkercount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Scaling worker count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +799,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#targetworkersizeid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Worker<wbr>Size<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Scaling worker size ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +807,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#workertiername_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Tier<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Target worker tier assigned to the App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -784,7 +819,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +827,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#free_offer_expiration_time_python" style="color: inherit; text-decoration: inherit;">free_<wbr>offer_<wbr>expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time when the server farm free offer expires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +835,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#hosting_environment_profile_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">Input[Hosting<wbr>Environment<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification for the App Service Environment to use for the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +843,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#hyper_v_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +851,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#is_spot_python" style="color: inherit; text-decoration: inherit;">is_<wbr>spot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If <code>true</code>, this App Service Plan owns spot instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +859,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#is_xenon_python" style="color: inherit; text-decoration: inherit;">is_<wbr>xenon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +867,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +875,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#kube_environment_profile_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>environment_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubeenvironmentprofile">Kube<wbr>Environment<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubeenvironmentprofile">Input[Kube<wbr>Environment<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specification for the Kubernetes Environment to use for the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +883,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +891,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#maximum_elastic_worker_count_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>elastic_<wbr>worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +899,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the App Service plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +907,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#per_site_scaling_python" style="color: inherit; text-decoration: inherit;">per_<wbr>site_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
 If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.{{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +916,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#reserved_python" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If Linux app service plan <code>true</code>, <code>false</code> otherwise.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +924,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skudescription">Sku<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#skudescription">Input[Sku<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Description of a SKU for a scalable resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +932,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#spot_expiration_time_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time when the server farm expires. Valid only if it is a spot server farm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +940,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +948,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#target_worker_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Scaling worker count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +956,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#target_worker_size_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>worker_<wbr>size_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Scaling worker size ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +964,7 @@ If <code>false</code>, apps assigned to this App Service plan will scale to all 
 <a href="#worker_tier_name_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>tier_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Target worker tier assigned to the App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1320,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1336,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1348,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1356,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1364,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1434,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1450,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1462,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Reason of the SKU capability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Value of the SKU capability.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1516,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1528,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1606,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1626,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1634,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1680,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the Kubernetes Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1692,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Kubernetes Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1762,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Kubernetes Environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1770,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type of the Kubernetes Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1778,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID of the Kubernetes Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1790,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Kubernetes Environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1798,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type of the Kubernetes Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID of the Kubernetes Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1908,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticmaximum_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1932,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1940,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1952,7 +1987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1960,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_maximum_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1968,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1976,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2086,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2094,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elasticmaximum_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2102,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2118,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2130,7 +2165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Default number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#elastic_maximum_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of Elastic workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2146,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2154,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Minimum number of workers for this App Service plan SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2162,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Available scale configurations for an App Service plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Capability[]</a></span>
+        <span class="property-type"><a href="#capability">pulumi.<wbr>Input<pulumi.<wbr>Input<Capability<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity</a></span>
+        <span class="property-type"><a href="#skucapacity">pulumi.<wbr>Input<Sku<wbr>Capacity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2380,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capability">Input[Capability<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2388,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2396,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2404,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2412,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2420,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacity">Sku<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacity">Input[Sku<wbr>Capacity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2586,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Capability<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Capability<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2594,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2602,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2618,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2626,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2634,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skucapacity_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">pulumi.<wbr>Input<Sku<wbr>Capacity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2642,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2654,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilityresponse">Sequence[Capability<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capabilityresponse">Input[Capability<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Capabilities of the SKU, e.g., is traffic manager enabled?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2662,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Current number of instances assigned to the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2670,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Family code of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2678,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Locations of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2686,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2694,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size specifier of the resource SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_capacity_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapacityresponse">Sku<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#skucapacityresponse">Input[Sku<wbr>Capacity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Min, max, and default scale values of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2710,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Service tier of the resource SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}

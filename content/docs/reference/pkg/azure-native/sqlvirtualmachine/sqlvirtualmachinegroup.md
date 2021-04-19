@@ -73,7 +73,7 @@ package main
 
 import (
 	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -188,19 +188,32 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[Union[str, SqlVmGroupImageSku]]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">wsfc_domain_profile</span><span class="p">:</span> <span class="nx">Optional[WsfcDomainProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">sql_image_offer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">sql_image_sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SqlVmGroupImageSku]]]</span> = None<span class="p">,</span>
+                           <span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                           <span class="nx">wsfc_domain_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WsfcDomainProfileArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachineGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlVirtualMachineGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlVirtualMachineGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -235,22 +248,32 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SqlVirtualMachineGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -458,7 +481,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +489,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +497,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sqlimageoffer_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +505,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sqlimagesku_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sqlvmgroupimagesku">Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sqlvmgroupimagesku">pulumi.<wbr>Input<Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku></a></span>
     </dt>
     <dd>{{% md %}}SQL image sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +513,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sqlvirtualmachinegroupname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +521,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +529,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#wsfcdomainprofile_nodejs" style="color: inherit; text-decoration: inherit;">wsfc<wbr>Domain<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofile">pulumi.<wbr>Input<Wsfc<wbr>Domain<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +541,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +549,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +557,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sql_image_offer_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +565,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sql_image_sku_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sqlvmgroupimagesku">Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sqlvmgroupimagesku">Input[Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku]</a></span>
     </dt>
     <dd>{{% md %}}SQL image sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +573,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#sql_virtual_machine_group_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +581,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +589,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 <a href="#wsfc_domain_profile_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsfcdomainprofile">Input[Wsfc<wbr>Domain<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -999,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterbootstrapaccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusteroperatoraccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainfqdn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1023,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesharewitnesspath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Witness<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1031,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oupath_nodejs" style="color: inherit; text-decoration: inherit;">ou<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_bootstrap_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_operator_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_fqdn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1091,7 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_share_witness_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>witness_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1099,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ou_path_python" style="color: inherit; text-decoration: inherit;">ou_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1107,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_service_account_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1115,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_primary_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1257,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterbootstrapaccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusteroperatoraccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1273,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainfqdn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesharewitnesspath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Witness<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oupath_nodejs" style="color: inherit; text-decoration: inherit;">ou<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sqlserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_bootstrap_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_operator_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_fqdn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_share_witness_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>witness_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ou_path_python" style="color: inherit; text-decoration: inherit;">ou_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sql_service_account_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}

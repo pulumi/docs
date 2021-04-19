@@ -63,7 +63,7 @@ package main
 
 import (
 	management "github.com/pulumi/pulumi-azure-native/sdk/go/azure/management"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -148,19 +148,29 @@ const managementGroup = new azure_native.management.ManagementGroup("managementG
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[CreateManagementGroupDetailsArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreateManagementGroupDetailsArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ManagementGroupArgs]</a></span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagementGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -195,22 +205,32 @@ const managementGroup = new azure_native.management.ManagementGroup("managementG
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ManagementGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +390,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details</a></span>
+        <span class="property-type"><a href="#createmanagementgroupdetails">pulumi.<wbr>Input<Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The details of a management group used during creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +398,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The friendly name of the management group. If no value is passed then this  field will be set to the groupId.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +406,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Management Group ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +414,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the management group. For example, 00000000-0000-0000-0000-000000000000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -406,7 +426,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmanagementgroupdetails">Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#createmanagementgroupdetails">Input[Create<wbr>Management<wbr>Group<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The details of a management group used during creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -414,7 +434,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The friendly name of the management group. If no value is passed then this  field will be set to the groupId.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -422,7 +442,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Management Group ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -430,7 +450,7 @@ The ManagementGroup resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the management group. For example, 00000000-0000-0000-0000-000000000000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -661,7 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">pulumi.<wbr>Input<Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -673,7 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createparentgroupinfo">Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#createparentgroupinfo">Input[Create<wbr>Parent<wbr>Group<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group used during creation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -723,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -825,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_nodejs" style="color: inherit; text-decoration: inherit;">children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The friendly name of the child resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the child entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#children_python" style="color: inherit; text-decoration: inherit;">children</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementgroupchildinforesponse">Sequence[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementgroupchildinforesponse">Input[Management<wbr>Group<wbr>Child<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of children.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The friendly name of the child resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the child entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">pulumi.<wbr>Input<Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity of the principal or process that updated the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedtime_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The date and time when this object was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The version number of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1023,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentgroupinforesponse">Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#parentgroupinforesponse">Input[Parent<wbr>Group<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) The ID of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1031,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity of the principal or process that updated the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_time_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The date and time when this object was last updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The version number of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The friendly name of the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The friendly name of the group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1199,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The friendly name of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the parent management group{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The friendly name of the parent management group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the parent management group{{% /md %}}</dd></dl>
 {{% /choosable %}}

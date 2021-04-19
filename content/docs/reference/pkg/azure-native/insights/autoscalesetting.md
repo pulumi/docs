@@ -525,19 +525,34 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_setting_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleProfileArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">autoscale_setting_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AutoscaleNotificationArgs]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AutoscaleProfileArgs]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                     <span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaleSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscaleSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscaleSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscaleSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutoscaleSettingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -572,22 +587,32 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AutoscaleSettingArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -827,7 +852,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_nodejs" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofile">Autoscale<wbr>Profile[]</a></span>
+        <span class="property-type"><a href="#autoscaleprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Autoscale<wbr>Profile<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -835,7 +860,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +868,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#autoscalesettingname_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The autoscale setting name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +876,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +884,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,7 +892,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the name of the autoscale setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +900,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotification">Autoscale<wbr>Notification[]</a></span>
+        <span class="property-type"><a href="#autoscalenotification">pulumi.<wbr>Input<pulumi.<wbr>Input<Autoscale<wbr>Notification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +908,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +916,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#targetresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the resource identifier of the resource that the autoscale setting should be added to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +928,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscaleprofile">Sequence[Autoscale<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscaleprofile">Input[Autoscale<wbr>Profile<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -911,7 +936,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -919,7 +944,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#autoscale_setting_name_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The autoscale setting name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +952,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +960,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +968,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the name of the autoscale setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +976,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalenotification">Sequence[Autoscale<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalenotification">Input[Autoscale<wbr>Notification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}the collection of notifications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -959,7 +984,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +992,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#target_resource_uri_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the resource identifier of the resource that the autoscale setting should be added to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#operationtype">pulumi.<wbr>Input<Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}the operation associated with the notification and its value must be "scale"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification</a></span>
+        <span class="property-type"><a href="#emailnotification">pulumi.<wbr>Input<Email<wbr>Notification<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">Webhook<wbr>Notification[]</a></span>
+        <span class="property-type"><a href="#webhooknotification">pulumi.<wbr>Input<pulumi.<wbr>Input<Webhook<wbr>Notification<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#operationtype">Input[Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}the operation associated with the notification and its value must be "scale"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotification">Email<wbr>Notification<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotification">Input[Email<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotification">Sequence[Webhook<wbr>Notification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhooknotification">Input[Webhook<wbr>Notification<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1248,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the operation associated with the notification and its value must be "scale"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">pulumi.<wbr>Input<Email<wbr>Notification<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_nodejs" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">Webhook<wbr>Notification<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Webhook<wbr>Notification<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1276,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the operation associated with the notification and its value must be "scale"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailnotificationresponse">Email<wbr>Notification<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#emailnotificationresponse">Input[Email<wbr>Notification<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the email notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1292,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhooknotificationresponse">Sequence[Webhook<wbr>Notification<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhooknotificationresponse">Input[Webhook<wbr>Notification<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}the collection of webhook notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1394,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity</a></span>
+        <span class="property-type"><a href="#scalecapacity">pulumi.<wbr>Input<Scale<wbr>Capacity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1402,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the name of the profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1410,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">Scale<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#scalerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1418,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Time<wbr>Window</a></span>
+        <span class="property-type"><a href="#timewindow">pulumi.<wbr>Input<Time<wbr>Window<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Recurrence</a></span>
+        <span class="property-type"><a href="#recurrence">pulumi.<wbr>Input<Recurrence<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1438,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacity">Scale<wbr>Capacity<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacity">Input[Scale<wbr>Capacity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1446,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the name of the profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1454,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerule">Sequence[Scale<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalerule">Input[Scale<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindow">Time<wbr>Window<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindow">Input[Time<wbr>Window<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrence">Recurrence<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrence">Input[Recurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1572,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">pulumi.<wbr>Input<Scale<wbr>Capacity<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1580,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the name of the profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1588,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">Scale<wbr>Rule<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1596,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixeddate_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response</a></span>
+        <span class="property-type"><a href="#timewindowresponse">pulumi.<wbr>Input<Time<wbr>Window<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1604,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">pulumi.<wbr>Input<Recurrence<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1616,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalecapacityresponse">Scale<wbr>Capacity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scalecapacityresponse">Input[Scale<wbr>Capacity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the number of instances that can be used during this profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1624,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the name of the profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1632,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleruleresponse">Sequence[Scale<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scaleruleresponse">Input[Scale<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1640,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timewindowresponse">Time<wbr>Window<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timewindowresponse">Input[Time<wbr>Window<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the specific date-time for the profile. This element is not used if the Recurrence element is used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1648,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceresponse">Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrenceresponse">Input[Recurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the repeating times at which this profile begins. This element is not used if the FixedDate element is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1760,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendtosubscriptionadministrator_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendtosubscriptioncoadministrators_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription co-administrators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_to_subscription_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_to_subscription_co_administrators_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>co_<wbr>administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription co-administrators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1874,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1882,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendtosubscriptionadministrator_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sendtosubscriptioncoadministrators_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription co-administrators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1902,7 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1910,7 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_to_subscription_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>administrator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#send_to_subscription_co_administrators_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>co_<wbr>administrators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}a value indicating whether to send email to subscription co-administrators.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2134,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2142,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the resource identifier of the resource the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2150,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#comparisonoperationtype">Comparison<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#comparisonoperationtype">pulumi.<wbr>Input<Comparison<wbr>Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}the operator that is used to compare the metric data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2158,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatistictype">Metric<wbr>Statistic<wbr>Type</a></span>
+        <span class="property-type"><a href="#metricstatistictype">pulumi.<wbr>Input<Metric<wbr>Statistic<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}the metric statistic type. How the metrics from multiple instances are combined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2166,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}the threshold of the metric that triggers the scale action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2174,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeaggregationtype">Time<wbr>Aggregation<wbr>Type</a></span>
+        <span class="property-type"><a href="#timeaggregationtype">pulumi.<wbr>Input<Time<wbr>Aggregation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2182,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timegrain_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2190,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timewindow_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">Scale<wbr>Rule<wbr>Metric<wbr>Dimension[]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2206,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2218,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2226,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_resource_uri_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the resource identifier of the resource the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2234,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#comparisonoperationtype">Comparison<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type"><a href="#comparisonoperationtype">Input[Comparison<wbr>Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}the operator that is used to compare the metric data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2242,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricstatistictype">Metric<wbr>Statistic<wbr>Type</a></span>
+        <span class="property-type"><a href="#metricstatistictype">Input[Metric<wbr>Statistic<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}the metric statistic type. How the metrics from multiple instances are combined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2250,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}the threshold of the metric that triggers the scale action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2258,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeaggregationtype">Time<wbr>Aggregation<wbr>Type</a></span>
+        <span class="property-type"><a href="#timeaggregationtype">Input[Time<wbr>Aggregation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2266,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2274,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimension">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimension">Input[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2472,7 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2480,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the resource identifier of the resource the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2488,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the operator that is used to compare the metric data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2496,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the metric statistic type. How the metrics from multiple instances are combined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2504,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}the threshold of the metric that triggers the scale action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2512,7 +2537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2520,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timegrain_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2528,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timewindow_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2536,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2556,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2564,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_resource_uri_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the resource identifier of the resource the rule monitors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2572,7 +2597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the operator that is used to compare the metric data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2580,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the metric statistic type. How the metrics from multiple instances are combined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2588,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}the threshold of the metric that triggers the scale action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2596,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}time aggregation type. How the data that is collected should be combined over time. The default value is Average.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2604,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2612,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_window_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2620,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Sequence[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalerulemetricdimensionresponse">Input[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2628,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2704,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#recurrencefrequency">pulumi.<wbr>Input<Recurrence<wbr>Frequency></a></span>
     </dt>
     <dd>{{% md %}}the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2712,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#recurrentschedule">pulumi.<wbr>Input<Recurrent<wbr>Schedule<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2724,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+        <span class="property-type"><a href="#recurrencefrequency">Input[Recurrence<wbr>Frequency]</a></span>
     </dt>
     <dd>{{% md %}}the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2732,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentschedule">Recurrent<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentschedule">Input[Recurrent<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2836,7 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2844,7 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">pulumi.<wbr>Input<Recurrent<wbr>Schedule<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2856,7 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2864,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrentscheduleresponse">Recurrent<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recurrentscheduleresponse">Input[Recurrent<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the scheduling constraints for when the profile begins.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2950,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2958,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2966,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2974,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2986,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2994,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3002,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3010,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3096,7 +3121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3104,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3112,7 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3120,7 +3145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3132,7 +3157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3140,7 +3165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM times are not supported).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3148,7 +3173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[int]</span>
+        <span class="property-type">Input[int]]]</span>
     </dt>
     <dd>{{% md %}}A collection of minutes at which the profile takes effect at.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3156,7 +3181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3242,7 +3267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3250,7 +3275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaledirection">Scale<wbr>Direction</a></span>
+        <span class="property-type"><a href="#scaledirection">pulumi.<wbr>Input<Scale<wbr>Direction></a></span>
     </dt>
     <dd>{{% md %}}the scale direction. Whether the scaling action increases or decreases the number of instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3258,7 +3283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaletype">Scale<wbr>Type</a></span>
+        <span class="property-type"><a href="#scaletype">pulumi.<wbr>Input<Scale<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}the type of action that should occur when the scale rule fires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3278,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3286,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaledirection">Scale<wbr>Direction</a></span>
+        <span class="property-type"><a href="#scaledirection">Input[Scale<wbr>Direction]</a></span>
     </dt>
     <dd>{{% md %}}the scale direction. Whether the scaling action increases or decreases the number of instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3294,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaletype">Scale<wbr>Type</a></span>
+        <span class="property-type"><a href="#scaletype">Input[Scale<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}the type of action that should occur when the scale rule fires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3302,7 +3327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3388,7 +3413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3396,7 +3421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the scale direction. Whether the scaling action increases or decreases the number of instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3404,7 +3429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the type of action that should occur when the scale rule fires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3412,7 +3437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3424,7 +3449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week and 1 minute in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3432,7 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the scale direction. Whether the scaling action increases or decreases the number of instances.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3440,7 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the type of action that should occur when the scale rule fires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3448,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the number of instances that are involved in the scaling action. This value must be 1 or greater. The default value is 1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3518,7 +3543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3526,7 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3534,7 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the minimum number of instances for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3546,7 +3571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3554,7 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3562,7 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the minimum number of instances for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3632,7 +3657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3640,7 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_nodejs" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3648,7 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_nodejs" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the minimum number of instances for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3660,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3668,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maximum_python" style="color: inherit; text-decoration: inherit;">maximum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3676,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_python" style="color: inherit; text-decoration: inherit;">minimum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the minimum number of instances for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3760,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#metrictrigger">pulumi.<wbr>Input<Metric<wbr>Trigger<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3768,7 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action</a></span>
+        <span class="property-type"><a href="#scaleaction">pulumi.<wbr>Input<Scale<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3780,7 +3805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictrigger">Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictrigger">Input[Metric<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3788,7 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleaction">Scale<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleaction">Input[Scale<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3858,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionname_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the dimension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3866,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#scalerulemetricdimensionoperationtype">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#scalerulemetricdimensionoperationtype">pulumi.<wbr>Input<Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3874,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3886,7 +3911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the dimension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3894,7 +3919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#scalerulemetricdimensionoperationtype">Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#scalerulemetricdimensionoperationtype">Input[Scale<wbr>Rule<wbr>Metric<wbr>Dimension<wbr>Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3902,7 +3927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3998,7 +4023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimensionname_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the dimension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4006,7 +4031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4014,7 +4039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4026,7 +4051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the dimension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4034,7 +4059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4042,7 +4067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}list of dimension values. For example: ["App1","App2"].{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4096,7 +4121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">pulumi.<wbr>Input<Metric<wbr>Trigger<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4104,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaleaction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">pulumi.<wbr>Input<Scale<wbr>Action<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4116,7 +4141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metrictriggerresponse">Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#metrictriggerresponse">Input[Metric<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the trigger that results in a scaling action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4124,7 +4149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleactionresponse">Scale<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#scaleactionresponse">Input[Scale<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the parameters for the scaling action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4266,7 +4291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the end time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4274,7 +4299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the start time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4282,7 +4307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the timezone of the start and end times for the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4294,7 +4319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the end time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4302,7 +4327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the start time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4310,7 +4335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the timezone of the start and end times for the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4380,7 +4405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the end time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4388,7 +4413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the start time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4396,7 +4421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the timezone of the start and end times for the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4408,7 +4433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the end time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4416,7 +4441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the start time for the profile in ISO 8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4424,7 +4449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the timezone of the start and end times for the profile. Some examples of valid time zones are: Dateline Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3, Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4478,7 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4486,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the service address to receive the notification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4498,7 +4523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4506,7 +4531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the service address to receive the notification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4560,7 +4585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4568,7 +4593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}the service address to receive the notification.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4580,7 +4605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}a property bag of settings. This value can be empty.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4588,7 +4613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}the service address to receive the notification.{{% /md %}}</dd></dl>
 {{% /choosable %}}

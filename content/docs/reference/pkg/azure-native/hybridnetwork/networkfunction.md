@@ -109,7 +109,7 @@ package main
 
 import (
 	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -296,19 +296,35 @@ const networkFunction = new azure_native.hybridnetwork.NetworkFunction("networkF
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_application_parameters</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">network_function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_function_user_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkFunctionUserConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vendor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubResourceArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">managed_application_parameters</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+                    <span class="nx">network_function_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">network_function_user_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkFunctionUserConfigurationArgs]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                    <span class="nx">vendor_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkFunction</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkFunction</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkFunction</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkFunction</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkFunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -343,22 +359,32 @@ const networkFunction = new azure_native.hybridnetwork.NetworkFunction("networkF
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NetworkFunctionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -614,7 +640,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +648,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the device resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +656,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +664,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +680,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkfunctionname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource name for the network function resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +688,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkfunctionuserconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Function<wbr>User<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfiguration">Network<wbr>Function<wbr>User<wbr>Configuration[]</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The network function configurations from the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +696,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sku name for the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +704,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +712,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#vendorname_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The vendor name for the network function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -698,7 +724,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +732,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the device resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +740,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +748,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +764,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#network_function_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource name for the network function resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +772,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#network_function_user_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>function_<wbr>user_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfiguration">Sequence[Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfiguration">Input[Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The network function configurations from the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +780,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sku name for the network function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +788,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +796,7 @@ The NetworkFunction resource accepts the following [input]({{< relref "/docs/int
 <a href="#vendor_name_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The vendor name for the network function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Network<wbr>Interface[]</a></span>
+        <span class="property-type"><a href="#networkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Interface<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">pulumi.<wbr>Input<Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterface">Sequence[Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterface">Input[Network<wbr>Interface<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationosprofile">Input[Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Os<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1311,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1397,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Network<wbr>Interface<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Interface<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">pulumi.<wbr>Input<Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceresponse">Sequence[Network<wbr>Interface<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceresponse">Input[Network<wbr>Interface<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The network interface configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#networkfunctionuserconfigurationresponseosprofile">Input[Network<wbr>Function<wbr>User<wbr>Configuration<wbr>Response<wbr>Os<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operating system settings for the role instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network function role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the virtual machine. The maximum length of the binary array is 65535 bytes. <br><br> **Note: Do not pass any secrets or passwords in customData property** <br><br> This property cannot be updated after the VM is created. <br><br> customData is passed to the VM to be saved as a file. For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) <br><br> For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1593,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">Network<wbr>Interface<wbr>IPConfiguration[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Interface<wbr>IPConfiguration<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfacename_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vmswitchtype">VMSwitch<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#vmswitchtype">pulumi.<wbr>Input<VMSwitch<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">Input[Network<wbr>Interface<wbr>IPConfiguration<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#vmswitchtype">VMSwitch<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#vmswitchtype">Input[VMSwitch<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1771,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipallocationmethod">pulumi.<wbr>Input<IPAllocation<wbr>Method></a></span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipversion">IPVersion</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipversion">pulumi.<wbr>Input<IPVersion></a></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1823,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1847,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipallocationmethod">IPAllocation<wbr>Method</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipallocationmethod">Input[IPAllocation<wbr>Method]</a></span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipversion">IPVersion</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipversion">Input[IPVersion]</a></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1981,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1989,7 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2033,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of DNS servers IP addresses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}IP address version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2159,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkinterfacename_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2183,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmswitchtype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Switch<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2195,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Sequence[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfigurationresponse">Input[Network<wbr>Interface<wbr>IPConfiguration<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP configurations of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The MAC address of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_interface_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the network interface.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_switch_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>switch_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the VM switch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2257,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2269,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2307,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2319,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}

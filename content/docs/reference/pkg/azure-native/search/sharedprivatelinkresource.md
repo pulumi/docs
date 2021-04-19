@@ -63,7 +63,7 @@ package main
 
 import (
 	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -151,19 +151,29 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SharedPrivateLinkResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">search_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_private_link_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SharedPrivateLinkResourcePropertiesArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">search_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">shared_private_link_resource_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSharedPrivateLinkResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SharedPrivateLinkResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSharedPrivateLinkResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SharedPrivateLinkResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SharedPrivateLinkResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -198,22 +208,32 @@ const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResou
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SharedPrivateLinkResourceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -373,7 +393,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -381,7 +401,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#searchservicename_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -389,7 +409,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">pulumi.<wbr>Input<Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +417,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#sharedprivatelinkresourcename_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -409,7 +429,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -417,7 +437,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#search_service_name_python" style="color: inherit; text-decoration: inherit;">search_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Cognitive Search service associated with the specified resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +445,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceproperties">Input[Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +453,7 @@ The SharedPrivateLinkResource resource accepts the following [input]({{< relref 
 <a href="#shared_private_link_resource_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>private_<wbr>link_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -680,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">pulumi.<wbr>Input<Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmessage_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceregion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">pulumi.<wbr>Input<Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -732,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourceprovisioningstate">Input[Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Provisioning<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_message_python" style="color: inherit; text-decoration: inherit;">request_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_region_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status</a></span>
+        <span class="property-type"><a href="#sharedprivatelinkresourcestatus">Input[Shared<wbr>Private<wbr>Link<wbr>Resource<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -890,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requestmessage_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceregion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -942,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group id from the provider of resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id of the resource the shared private link resource is for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_message_python" style="color: inherit; text-decoration: inherit;">request_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The request message for requesting approval of the shared private link resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -974,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_region_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.{{% /md %}}</dd></dl>
 {{% /choosable %}}

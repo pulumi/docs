@@ -32,6 +32,6 @@ Explore the resources and functions of the azure-native.datamigration module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.8.0</dd>
+	<dd>1.0.0</dd>
 </dl>
 

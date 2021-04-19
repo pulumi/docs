@@ -135,19 +135,31 @@ const replicationNetworkMapping = new azure_native.recoveryservices.ReplicationN
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateNetworkMappingInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">network_mapping_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">network_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreateNetworkMappingInputPropertiesArgs]]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationNetworkMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationNetworkMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationNetworkMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationNetworkMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationNetworkMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationNetworkMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,22 +194,32 @@ const replicationNetworkMapping = new azure_native.recoveryservices.ReplicationN
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicationNetworkMappingArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -389,7 +411,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -397,7 +419,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#networkname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Primary network name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -405,7 +427,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -413,7 +435,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +443,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#networkmappingname_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mapping<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Network mapping name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +451,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createnetworkmappinginputproperties">Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createnetworkmappinginputproperties">pulumi.<wbr>Input<Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Input properties for creating network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -441,7 +463,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Primary fabric name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -449,7 +471,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#network_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Primary network name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -457,7 +479,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -465,7 +487,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -473,7 +495,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#network_mapping_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mapping_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Network mapping name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +503,7 @@ The ReplicationNetworkMapping resource accepts the following [input]({{< relref 
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createnetworkmappinginputproperties">Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createnetworkmappinginputproperties">Input[Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Input properties for creating network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -680,7 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary azure vnet Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -692,7 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_network_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary azure vnet Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -746,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryfabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -766,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_fabric_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_location_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery fabric location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -844,7 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input</a></span>
+        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">pulumi.<wbr>Input<Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args></a> | <a href="#vmmtoazurecreatenetworkmappinginput">pulumi.<wbr>Input<Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args></a> | <a href="#vmmtovmmcreatenetworkmappinginput">pulumi.<wbr>Input<Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Recovery fabric Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Recovery network Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -872,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_specific_details_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurecreatenetworkmappinginput">Input[Azure<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args]</a> | <a href="#vmmtoazurecreatenetworkmappinginput">Input[Vmm<wbr>To<wbr>Azure<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args]</a> | <a href="#vmmtovmmcreatenetworkmappinginput">Input[Vmm<wbr>To<wbr>Vmm<wbr>Create<wbr>Network<wbr>Mapping<wbr>Input<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Fabric specific input properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -880,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Recovery fabric Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -888,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_network_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Recovery network Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1054,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabricspecificsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Specific<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">pulumi.<wbr>Input<Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">pulumi.<wbr>Input<Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">pulumi.<wbr>Input<Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1070,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarynetworkfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabricarmid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Arm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverynetworkfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1110,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoverynetworkid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Network<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1130,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_specific_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>specific_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuretoazurenetworkmappingsettingsresponse">Input[Azure<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#vmmtoazurenetworkmappingsettingsresponse">Input[Vmm<wbr>To<wbr>Azure<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#vmmtovmmnetworkmappingsettingsresponse">Input[Vmm<wbr>To<wbr>Vmm<wbr>Network<wbr>Mapping<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fabric specific settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_network_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_network_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1162,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_arm_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>arm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery fabric ARM id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1170,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_network_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery network friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_network_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>network_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery network id for network mapping.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pairing state for network mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}

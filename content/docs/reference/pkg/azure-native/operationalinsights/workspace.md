@@ -66,7 +66,7 @@ package main
 
 import (
 	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -160,19 +160,38 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">force_cmk_for_query</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, WorkspaceEntityStatus]]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_ingestion</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccessType]]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_query</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccessType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[WorkspaceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_capping</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCappingArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
+              <span class="nx">force_cmk_for_query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, WorkspaceEntityStatus]]]</span> = None<span class="p">,</span>
+              <span class="nx">public_network_access_for_ingestion</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PublicNetworkAccessType]]]</span> = None<span class="p">,</span>
+              <span class="nx">public_network_access_for_query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PublicNetworkAccessType]]]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+              <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceSkuArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+              <span class="nx">workspace_capping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WorkspaceCappingArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,22 +226,32 @@ const workspace = new azure_native.operationalinsights.Workspace("workspace", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -526,7 +555,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +563,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +579,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#forcecmkforquery_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Cmk<wbr>For<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +587,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +595,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workspaceentitystatus">Workspace<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workspaceentitystatus">pulumi.<wbr>Input<Workspace<wbr>Entity<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +603,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#publicnetworkaccessforingestion_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>For<wbr>Ingestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccesstype">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +611,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#publicnetworkaccessforquery_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>For<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccesstype">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +619,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +627,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku</a></span>
+        <span class="property-type"><a href="#workspacesku">pulumi.<wbr>Input<Workspace<wbr>Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +635,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +643,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacecapping_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Capping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping</a></span>
+        <span class="property-type"><a href="#workspacecapping">pulumi.<wbr>Input<Workspace<wbr>Capping<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +651,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -634,7 +663,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -642,7 +671,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -658,7 +687,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#force_cmk_for_query_python" style="color: inherit; text-decoration: inherit;">force_<wbr>cmk_<wbr>for_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +695,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +703,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#workspaceentitystatus">Workspace<wbr>Entity<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workspaceentitystatus">Input[Workspace<wbr>Entity<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +711,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#public_network_access_for_ingestion_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>for_<wbr>ingestion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccesstype">Input[Public<wbr>Network<wbr>Access<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The network access type for accessing Log Analytics ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +719,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#public_network_access_for_query_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>for_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccesstype">Input[Public<wbr>Network<wbr>Access<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The network access type for accessing Log Analytics query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +727,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +735,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacesku">Workspace<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacesku">Input[Workspace<wbr>Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +743,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +751,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspace_capping_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>capping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacecapping">Workspace<wbr>Capping<wbr>Args</a></span>
+        <span class="property-type"><a href="#workspacecapping">Input[Workspace<wbr>Capping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The daily volume cap for ingestion.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +759,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scopeid_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1061,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1133,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyquotagb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Quota<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1145,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_quota_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>quota_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1215,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataingestionstatus_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Ingestion<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1223,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quotanextresettime_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Next<wbr>Reset<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dailyquotagb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Quota<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1243,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_ingestion_status_python" style="color: inherit; text-decoration: inherit;">data_<wbr>ingestion_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of data ingestion for this workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1251,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quota_next_reset_time_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>next_<wbr>reset_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time when the quota will be rest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1259,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#daily_quota_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>quota_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The workspace daily quota for ingestion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workspaceskunameenum">Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workspaceskunameenum">pulumi.<wbr>Input<Workspace<wbr>Sku<wbr>Name<wbr>Enum></a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1367,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#workspaceskunameenum">Workspace<wbr>Sku<wbr>Name<wbr>Enum</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workspaceskunameenum">Input[Workspace<wbr>Sku<wbr>Name<wbr>Enum]</a></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1523,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastskuupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sku<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxcapacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Reservation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1539,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1547,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityreservationlevel_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1559,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sku_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sku_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The last time when the sku was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>reservation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum capacity reservation level available for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1575,7 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_reservation_level_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd></dl>
 {{% /choosable %}}

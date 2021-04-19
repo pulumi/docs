@@ -36,7 +36,7 @@ class MyStack : Stack
         var account = new AzureNative.DeviceUpdate.Account("account", new AzureNative.DeviceUpdate.AccountArgs
         {
             AccountName = "contoso",
-            Location = "West US 2",
+            Location = "westus2",
             ResourceGroupName = "test-rg",
         });
     }
@@ -57,14 +57,14 @@ package main
 
 import (
 	deviceupdate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deviceupdate"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := deviceupdate.NewAccount(ctx, "account", &deviceupdate.AccountArgs{
 			AccountName:       pulumi.String("contoso"),
-			Location:          pulumi.String("West US 2"),
+			Location:          pulumi.String("westus2"),
 			ResourceGroupName: pulumi.String("test-rg"),
 		})
 		if err != nil {
@@ -89,7 +89,7 @@ import pulumi_azure_native as azure_native
 
 account = azure_native.deviceupdate.Account("account",
     account_name="contoso",
-    location="West US 2",
+    location="westus2",
     resource_group_name="test-rg")
 
 ```
@@ -107,7 +107,7 @@ import * as azure_native from "@pulumi/azure-native";
 
 const account = new azure_native.deviceupdate.Account("account", {
     accountName: "contoso",
-    location: "West US 2",
+    location: "westus2",
     resourceGroupName: "test-rg",
 });
 
@@ -130,19 +130,30 @@ const account = new azure_native.deviceupdate.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IdentityArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -177,22 +188,32 @@ const account = new azure_native.deviceupdate.Account("account", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -292,6 +313,14 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Inputs.<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -328,6 +357,14 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identity">Identity</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -352,7 +389,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -360,15 +397,23 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identity">pulumi.<wbr>Input<Identity<wbr>Args></a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -376,7 +421,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -388,7 +433,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -396,15 +441,23 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Account name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identity">Input[Identity<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -412,7 +465,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -459,6 +512,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -502,6 +563,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -547,6 +616,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -591,6 +668,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -605,6 +690,410 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="identity">Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Device<wbr>Update.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="identityresponse">Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

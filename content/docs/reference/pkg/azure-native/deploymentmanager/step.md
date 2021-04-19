@@ -408,19 +408,30 @@ const step = new azure_native.deploymentmanager.Step("step", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Step</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Step</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[HealthCheckStepPropertiesArgs, WaitStepPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[HealthCheckStepPropertiesArgs, WaitStepPropertiesArgs]]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">step_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Step</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Step</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStep</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Step</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Step</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Step</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StepArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -455,22 +466,32 @@ const step = new azure_native.deploymentmanager.Step("step", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">StepArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +667,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties</a> | <a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties</a></span>
+        <span class="property-type"><a href="#healthcheckstepproperties">pulumi.<wbr>Input<Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args></a> | <a href="#waitstepproperties">pulumi.<wbr>Input<Wait<wbr>Step<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -654,7 +675,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +683,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +691,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#stepname_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the deployment step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -678,7 +699,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -690,7 +711,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckstepproperties">Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args</a> | <a href="#waitstepproperties">Wait<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#healthcheckstepproperties">Input[Health<wbr>Check<wbr>Step<wbr>Properties<wbr>Args]</a> | <a href="#waitstepproperties">Input[Wait<wbr>Step<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that define the step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -698,7 +719,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +727,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +735,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#step_name_python" style="color: inherit; text-decoration: inherit;">step_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the deployment step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +743,7 @@ The Step resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restauthlocation">Rest<wbr>Auth<wbr>Location</a></span>
+        <span class="property-type"><a href="#restauthlocation">pulumi.<wbr>Input<Rest<wbr>Auth<wbr>Location></a></span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key name of the authentication key/value pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -937,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the authentication key/value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restauthlocation">Rest<wbr>Auth<wbr>Location</a></span>
+        <span class="property-type"><a href="#restauthlocation">Input[Rest<wbr>Auth<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -957,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key name of the authentication key/value pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -965,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the authentication key/value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1035,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in_nodejs" style="color: inherit; text-decoration: inherit;">in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1043,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The key name of the authentication key/value pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1051,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the authentication key/value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1063,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the authentication key/value pair in the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The key name of the authentication key/value pair.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the authentication key/value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1117,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">pulumi.<wbr>Input<Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1129,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributes">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributes">Input[Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1167,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">pulumi.<wbr>Input<Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resthealthcheckstepattributesresponse">Input[Rest<wbr>Health<wbr>Check<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The health check step attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1275,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for this check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1283,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Rest<wbr>Request</a></span>
+        <span class="property-type"><a href="#restrequest">pulumi.<wbr>Input<Rest<wbr>Request<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Rest<wbr>Response</a></span>
+        <span class="property-type"><a href="#restresponse">pulumi.<wbr>Input<Rest<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for this check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1311,7 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequest">Rest<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequest">Input[Rest<wbr>Request<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponse">Rest<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponse">Input[Rest<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1389,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique name for this check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1397,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response</a></span>
+        <span class="property-type"><a href="#restrequestresponse">pulumi.<wbr>Input<Rest<wbr>Request<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response</a></span>
+        <span class="property-type"><a href="#restresponseresponse">pulumi.<wbr>Input<Rest<wbr>Response<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique name for this check.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1425,7 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestresponse">Rest<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restrequestresponse">Input[Rest<wbr>Request<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The request to the health provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponse">Rest<wbr>Response<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponse">Input[Rest<wbr>Response<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">Rest<wbr>Health<wbr>Check[]</a></span>
+        <span class="property-type"><a href="#resthealthcheck">pulumi.<wbr>Input<pulumi.<wbr>Input<Rest<wbr>Health<wbr>Check<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthystateduration_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>State<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1535,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxelasticduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Elastic<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitduration_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which health check waits idly without any checks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1555,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheck">Sequence[Rest<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resthealthcheck">Input[Rest<wbr>Health<wbr>Check<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1563,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthy_state_duration_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>state_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1571,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_elastic_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>elastic_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1579,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wait_duration_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which health check waits idly without any checks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">Rest<wbr>Health<wbr>Check<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1673,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthystateduration_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>State<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxelasticduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Elastic<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#waitduration_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which health check waits idly without any checks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1701,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resthealthcheckresponse">Sequence[Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resthealthcheckresponse">Input[Rest<wbr>Health<wbr>Check<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of checks that form the health check step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1709,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthy_state_duration_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>state_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_elastic_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>elastic_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wait_duration_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format for which health check waits idly without any checks.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1821,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">pulumi.<wbr>Input<Api<wbr>Key<wbr>Authentication<wbr>Args></a> | <a href="#rolloutidentityauthentication">pulumi.<wbr>Input<Rollout<wbr>Identity<wbr>Authentication<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1829,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestmethod">Rest<wbr>Request<wbr>Method</a></span>
+        <span class="property-type"><a href="#restrequestmethod">pulumi.<wbr>Input<Rest<wbr>Request<wbr>Method></a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1837,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP URI to use for the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1849,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthentication">Api<wbr>Key<wbr>Authentication<wbr>Args</a> | <a href="#rolloutidentityauthentication">Rollout<wbr>Identity<wbr>Authentication<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthentication">Input[Api<wbr>Key<wbr>Authentication<wbr>Args]</a> | <a href="#rolloutidentityauthentication">Input[Rollout<wbr>Identity<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1857,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restrequestmethod">Rest<wbr>Request<wbr>Method</a></span>
+        <span class="property-type"><a href="#restrequestmethod">Input[Rest<wbr>Request<wbr>Method]</a></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1865,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP URI to use for the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1961,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">pulumi.<wbr>Input<Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args></a> | <a href="#rolloutidentityauthenticationresponse">pulumi.<wbr>Input<Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1969,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1977,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The HTTP URI to use for the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apikeyauthenticationresponse">Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#rolloutidentityauthenticationresponse">Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apikeyauthenticationresponse">Input[Api<wbr>Key<wbr>Authentication<wbr>Response<wbr>Args]</a> | <a href="#rolloutidentityauthenticationresponse">Input[Rollout<wbr>Identity<wbr>Authentication<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The authentication information required in the request to the health provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1997,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP method to use for the request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2005,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP URI to use for the request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2059,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex</a></span>
+        <span class="property-type"><a href="#restresponseregex">pulumi.<wbr>Input<Rest<wbr>Response<wbr>Regex<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2067,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successstatuscodes_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2079,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseregex">Rest<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseregex">Input[Rest<wbr>Response<wbr>Regex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_status_codes_python" style="color: inherit; text-decoration: inherit;">success_<wbr>status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2141,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Quantifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restmatchquantifier">Rest<wbr>Match<wbr>Quantifier</a></span>
+        <span class="property-type"><a href="#restmatchquantifier">pulumi.<wbr>Input<Rest<wbr>Match<wbr>Quantifier></a></span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matches_nodejs" style="color: inherit; text-decoration: inherit;">matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of regular expressions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2161,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_quantifier_python" style="color: inherit; text-decoration: inherit;">match_<wbr>quantifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restmatchquantifier">Rest<wbr>Match<wbr>Quantifier</a></span>
+        <span class="property-type"><a href="#restmatchquantifier">Input[Rest<wbr>Match<wbr>Quantifier]</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matches_python" style="color: inherit; text-decoration: inherit;">matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of regular expressions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">pulumi.<wbr>Input<Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#successstatuscodes_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2243,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#restresponseresponseregex">Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args</a></span>
+        <span class="property-type"><a href="#restresponseresponseregex">Input[Rest<wbr>Response<wbr>Response<wbr>Regex<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The regular expressions to match the response content with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2251,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#success_status_codes_python" style="color: inherit; text-decoration: inherit;">success_<wbr>status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2305,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchquantifier_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Quantifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2313,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matches_nodejs" style="color: inherit; text-decoration: inherit;">matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of regular expressions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2325,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_quantifier_python" style="color: inherit; text-decoration: inherit;">match_<wbr>quantifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether any or all of the expressions should match with the response content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matches_python" style="color: inherit; text-decoration: inherit;">matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of regular expressions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2407,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format of how long the wait should be.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2419,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format of how long the wait should be.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2457,7 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format of how long the wait should be.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2469,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration in ISO 8601 format of how long the wait should be.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2507,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#waitstepattributes">pulumi.<wbr>Input<Wait<wbr>Step<wbr>Attributes<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2519,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributes">Wait<wbr>Step<wbr>Attributes<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributes">Input[Wait<wbr>Step<wbr>Attributes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2557,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">pulumi.<wbr>Input<Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2569,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#waitstepattributesresponse">Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#waitstepattributesresponse">Input[Wait<wbr>Step<wbr>Attributes<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Wait attributes{{% /md %}}</dd></dl>
 {{% /choosable %}}

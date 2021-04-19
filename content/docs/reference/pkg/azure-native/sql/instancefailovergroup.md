@@ -81,7 +81,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -200,19 +200,32 @@ const instanceFailoverGroup = new azure_native.sql.InstanceFailoverGroup("instan
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">failover_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_instance_pairs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstancePairInfoArgs]]</span> = None<span class="p">, </span><span class="nx">partner_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PartnerRegionInfoArgs]]</span> = None<span class="p">, </span><span class="nx">read_only_endpoint</span><span class="p">:</span> <span class="nx">Optional[InstanceFailoverGroupReadOnlyEndpointArgs]</span> = None<span class="p">, </span><span class="nx">read_write_endpoint</span><span class="p">:</span> <span class="nx">Optional[InstanceFailoverGroupReadWriteEndpointArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                          <span class="nx">failover_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">location_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                          <span class="nx">managed_instance_pairs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ManagedInstancePairInfoArgs]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">partner_regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PartnerRegionInfoArgs]]]]</span> = None<span class="p">,</span>
+                          <span class="nx">read_only_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFailoverGroupReadOnlyEndpointArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">read_write_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceFailoverGroupReadWriteEndpointArgs]]</span> = None<span class="p">,</span>
+                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p">,</span>
+                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceFailoverGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFailoverGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceFailoverGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceFailoverGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceFailoverGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceFailoverGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,22 +260,32 @@ const instanceFailoverGroup = new azure_native.sql.InstanceFailoverGroup("instan
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">InstanceFailoverGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -470,7 +493,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#locationname_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the region where the resource is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +501,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#managedinstancepairs_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Pairs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinfo">Managed<wbr>Instance<wbr>Pair<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#managedinstancepairinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +509,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#partnerregions_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninfo">Partner<wbr>Region<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#partnerregioninfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Partner<wbr>Region<wbr>Info<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -494,7 +517,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#readwriteendpoint_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Write<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">pulumi.<wbr>Input<Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -502,7 +525,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +533,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#failovergroupname_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the failover group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +541,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#readonlyendpoint_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">pulumi.<wbr>Input<Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -530,7 +553,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the region where the resource is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -538,7 +561,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#managed_instance_pairs_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>pairs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedinstancepairinfo">Sequence[Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedinstancepairinfo">Input[Managed<wbr>Instance<wbr>Pair<wbr>Info<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of managed instance pairs in the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -546,7 +569,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#partner_regions_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#partnerregioninfo">Sequence[Partner<wbr>Region<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#partnerregioninfo">Input[Partner<wbr>Region<wbr>Info<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Partner region information for the failover group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -554,7 +577,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#read_write_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadwriteendpoint">Input[Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Write<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Read-write endpoint of the failover group instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -562,7 +585,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +593,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#failover_group_name_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the failover group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +601,7 @@ The InstanceFailoverGroup resource accepts the following [input]({{< relref "/do
 <a href="#read_only_endpoint_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args</a></span>
+        <span class="property-type"><a href="#instancefailovergroupreadonlyendpoint">Input[Instance<wbr>Failover<wbr>Group<wbr>Read<wbr>Only<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Read-only endpoint of the failover group instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -809,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readonlyendpointfailoverpolicy">Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#readonlyendpointfailoverpolicy">pulumi.<wbr>Input<Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -821,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#readonlyendpointfailoverpolicy">Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#readonlyendpointfailoverpolicy">Input[Read<wbr>Only<wbr>Endpoint<wbr>Failover<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -859,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -871,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-only endpoint for the failover group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#readwriteendpointfailoverpolicy">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#readwriteendpointfailoverpolicy">pulumi.<wbr>Input<Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverwithdatalossgraceperiodminutes_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>With<wbr>Data<wbr>Loss<wbr>Grace<wbr>Period<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -945,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#readwriteendpointfailoverpolicy">Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#readwriteendpointfailoverpolicy">Input[Read<wbr>Write<wbr>Endpoint<wbr>Failover<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_with_data_loss_grace_period_minutes_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>with_<wbr>data_<wbr>loss_<wbr>grace_<wbr>period_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1015,7 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverwithdatalossgraceperiodminutes_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>With<wbr>Data<wbr>Loss<wbr>Grace<wbr>Period<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1027,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_with_data_loss_grace_period_minutes_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>with_<wbr>data_<wbr>loss_<wbr>grace_<wbr>period_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnermanagedinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Managed<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of Partner Managed Instance in pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarymanagedinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Managed<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of Primary Managed Instance in pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1109,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of Partner Managed Instance in pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of Primary Managed Instance in pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1171,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partnermanagedinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Managed<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of Partner Managed Instance in pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarymanagedinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Managed<wbr>Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of Primary Managed Instance in pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partner_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of Partner Managed Instance in pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_managed_instance_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>managed_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of Primary Managed Instance in pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1237,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Geo location of the partner managed instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1249,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Geo location of the partner managed instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1303,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationrole_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Replication role of the partner managed instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Geo location of the partner managed instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_role_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Replication role of the partner managed instances.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Geo location of the partner managed instances.{{% /md %}}</dd></dl>
 {{% /choosable %}}

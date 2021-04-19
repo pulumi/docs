@@ -96,7 +96,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -311,7 +311,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -430,19 +430,37 @@ const backend = new azure_native.apimanagement.Backend("backend", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[BackendCredentialsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BackendPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, BackendProtocol]]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[BackendProxyContractArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[BackendTlsPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendCredentialsContractArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendPropertiesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, BackendProtocol]]]</span> = None<span class="p">,</span>
+            <span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendProxyContractArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackendTlsPropertiesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Backend</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Backend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Backend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -477,22 +495,32 @@ const backend = new azure_native.apimanagement.Backend("backend", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">BackendArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -780,7 +808,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backendprotocol">Backend<wbr>Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backendprotocol">pulumi.<wbr>Input<Backend<wbr>Protocol></a></span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -788,7 +816,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -796,7 +824,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -804,7 +832,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +840,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#backendid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -820,7 +848,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialscontract">Backend<wbr>Credentials<wbr>Contract</a></span>
+        <span class="property-type"><a href="#backendcredentialscontract">pulumi.<wbr>Input<Backend<wbr>Credentials<wbr>Contract<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +856,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backend Description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -836,7 +864,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproperties">Backend<wbr>Properties</a></span>
+        <span class="property-type"><a href="#backendproperties">pulumi.<wbr>Input<Backend<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +872,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_nodejs" style="color: inherit; text-decoration: inherit;">proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxycontract">Backend<wbr>Proxy<wbr>Contract</a></span>
+        <span class="property-type"><a href="#backendproxycontract">pulumi.<wbr>Input<Backend<wbr>Proxy<wbr>Contract<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +880,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +888,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backend Title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +896,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtlsproperties">Backend<wbr>Tls<wbr>Properties</a></span>
+        <span class="property-type"><a href="#backendtlsproperties">pulumi.<wbr>Input<Backend<wbr>Tls<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -880,7 +908,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backendprotocol">Backend<wbr>Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backendprotocol">Input[Backend<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -888,7 +916,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -896,7 +924,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -904,7 +932,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +940,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#backend_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +948,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendcredentialscontract">Backend<wbr>Credentials<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendcredentialscontract">Input[Backend<wbr>Credentials<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +956,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backend Description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -936,7 +964,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproperties">Backend<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendproperties">Input[Backend<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +972,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendproxycontract">Backend<wbr>Proxy<wbr>Contract<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendproxycontract">Input[Backend<wbr>Proxy<wbr>Contract<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -952,7 +980,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +988,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backend Title.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +996,7 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendtlsproperties">Backend<wbr>Tls<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendtlsproperties">Input[Backend<wbr>Tls<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1151,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1171,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1179,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1233,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1241,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1261,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">pulumi.<wbr>Input<Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateids_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string[]}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string[]}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentials">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentials">Input[Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_ids_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[str]]</span>
+        <span class="property-type">Input[str]]]]]</span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[str]]</span>
+        <span class="property-type">Input[str]]]]]</span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1541,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">pulumi.<wbr>Input<Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateids_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1565,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string[]}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string[]}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1585,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Input[Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_ids_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of Client Certificate Ids.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[str]]</span>
+        <span class="property-type">Input[str]]]]]</span>
     </dt>
     <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[str]]</span>
+        <span class="property-type">Input[str]]]]]</span>
     </dt>
     <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1655,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1667,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterproperties">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterproperties">Input[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1705,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicefabriccluster_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">pulumi.<wbr>Input<Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1717,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Input[Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1841,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1963,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1971,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2089,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementendpoints_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificatethumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxpartitionresolutionretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servercertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2129,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">X509Certificate<wbr>Name[]</a></span>
+        <span class="property-type"><a href="#x509certificatename">pulumi.<wbr>Input<pulumi.<wbr>Input<X509Certificate<wbr>Name<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2141,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificatethumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificatethumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_partition_resolution_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>resolution_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatename">Sequence[X509Certificate<wbr>Name<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x509certificatename">Input[X509Certificate<wbr>Name<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2299,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#managementendpoints_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2315,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificatethumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2323,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxpartitionresolutionretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2331,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servercertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2339,7 +2367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverx509names_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">X509Certificate<wbr>Name<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<X509Certificate<wbr>Name<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2351,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate id for the management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificatethumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificatethumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2375,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_partition_resolution_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>resolution_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2383,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">Input[X509Certificate<wbr>Name<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2445,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecertificatechain_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecertificatename_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2465,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_certificate_chain_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2473,7 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_certificate_name_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2527,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecertificatechain_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validatecertificatename_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2547,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_certificate_chain_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2555,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validate_certificate_name_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2609,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2629,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2691,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2699,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2711,7 +2739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2719,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}

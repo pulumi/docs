@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.ProtectionContai
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 {{% examples %}}
 
@@ -128,19 +128,33 @@ const protectionContainer = new azure_native.recoveryservices.ProtectionContaine
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureBackupServerContainerArgs, AzureIaaSClassicComputeVMContainerArgs, AzureIaaSComputeVMContainerArgs, AzureSQLAGWorkloadContainerProtectionContainerArgs, AzureSqlContainerArgs, AzureStorageContainerArgs, AzureVMAppContainerProtectionContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[AzureBackupServerContainerArgs, AzureIaaSClassicComputeVMContainerArgs, AzureIaaSComputeVMContainerArgs, AzureSQLAGWorkloadContainerProtectionContainerArgs, AzureSqlContainerArgs, AzureStorageContainerArgs, AzureVMAppContainerProtectionContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionContainer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectionContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectionContainer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProtectionContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -175,22 +189,32 @@ const protectionContainer = new azure_native.recoveryservices.ProtectionContaine
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProtectionContainerArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -414,7 +438,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -422,7 +446,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +454,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +462,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the container to be registered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +470,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +478,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +486,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a> | <a href="#dpmcontainer">Dpm<wbr>Container</a> | <a href="#genericcontainer">Generic<wbr>Container</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a> | <a href="#mabcontainer">Mab<wbr>Container</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">pulumi.<wbr>Input<Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args></a> | <a href="#azureiaasclassiccomputevmcontainer">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args></a> | <a href="#azureiaascomputevmcontainer">pulumi.<wbr>Input<Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args></a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">pulumi.<wbr>Input<Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args></a> | <a href="#azuresqlcontainer">pulumi.<wbr>Input<Azure<wbr>Sql<wbr>Container<wbr>Args></a> | <a href="#azurestoragecontainer">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Container<wbr>Args></a> | <a href="#azurevmappcontainerprotectioncontainer">pulumi.<wbr>Input<Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args></a> | <a href="#azureworkloadcontainer">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Args></a> | <a href="#dpmcontainer">pulumi.<wbr>Input<Dpm<wbr>Container<wbr>Args></a> | <a href="#genericcontainer">pulumi.<wbr>Input<Generic<wbr>Container<wbr>Args></a> | <a href="#iaasvmcontainer">pulumi.<wbr>Input<Iaa<wbr>SVMContainer<wbr>Args></a> | <a href="#mabcontainer">pulumi.<wbr>Input<Mab<wbr>Container<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +494,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -482,7 +506,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +514,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +522,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +530,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the container to be registered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +538,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +546,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +554,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Mab<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Input[Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args]</a> | <a href="#azureiaasclassiccomputevmcontainer">Input[Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args]</a> | <a href="#azureiaascomputevmcontainer">Input[Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args]</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Input[Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args]</a> | <a href="#azuresqlcontainer">Input[Azure<wbr>Sql<wbr>Container<wbr>Args]</a> | <a href="#azurestoragecontainer">Input[Azure<wbr>Storage<wbr>Container<wbr>Args]</a> | <a href="#azurevmappcontainerprotectioncontainer">Input[Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args]</a> | <a href="#azureworkloadcontainer">Input[Azure<wbr>Workload<wbr>Container<wbr>Args]</a> | <a href="#dpmcontainer">Input[Dpm<wbr>Container<wbr>Args]</a> | <a href="#genericcontainer">Input[Generic<wbr>Container<wbr>Args]</a> | <a href="#iaasvmcontainer">Input[Iaa<wbr>SVMContainer<wbr>Args]</a> | <a href="#mabcontainer">Input[Mab<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +562,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -881,7 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpmagentversion_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpmservers_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">pulumi.<wbr>Input<DPMContainer<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -961,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradeavailable_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -981,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">Input[DPMContainer<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1299,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpmagentversion_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpmservers_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1323,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">pulumi.<wbr>Input<DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1355,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradeavailable_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1383,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1391,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1399,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Input[DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1471,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1605,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1847,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1855,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1863,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1907,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1923,7 +1947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2089,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2129,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2149,7 +2173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2331,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2339,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2347,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2355,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2363,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2371,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2391,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2399,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2423,7 +2447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2431,7 +2455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2439,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2605,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2629,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2637,7 +2661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2645,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operationtype">pulumi.<wbr>Input<Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workloadtype">pulumi.<wbr>Input<Workload<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2681,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2689,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Input[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2697,7 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operationtype">Input[Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workloadtype">Input[Workload<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2911,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2927,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2943,7 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2951,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2975,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2987,7 +3011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2995,7 +3019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Input[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3003,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3011,7 +3035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3019,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3027,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3043,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3051,7 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3137,7 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3145,7 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3153,7 +3177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3161,7 +3185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3173,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3181,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3189,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3197,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3283,7 +3307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3291,7 +3315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3299,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3307,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3319,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3327,7 +3351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3335,7 +3359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3343,7 +3367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3493,7 +3517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3501,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3509,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3517,7 +3541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3525,7 +3549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3533,7 +3557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +3573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountversion_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage account version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3577,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3609,7 +3633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3617,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_version_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage account version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3767,7 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3783,7 +3807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3799,7 +3823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3807,7 +3831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3815,7 +3839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3823,7 +3847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountversion_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage account version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3835,7 +3859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3883,7 +3907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_version_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage account version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4057,7 +4081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4065,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4073,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4081,7 +4105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4089,7 +4113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operationtype">pulumi.<wbr>Input<Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4105,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4113,7 +4137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4121,7 +4145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workloadtype">pulumi.<wbr>Input<Workload<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4133,7 +4157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4141,7 +4165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Input[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4149,7 +4173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4157,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4165,7 +4189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4173,7 +4197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operationtype">Input[Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4181,7 +4205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4189,7 +4213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4197,7 +4221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workloadtype">Input[Workload<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4363,7 +4387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4371,7 +4395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4379,7 +4403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4387,7 +4411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4395,7 +4419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4403,7 +4427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4411,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4419,7 +4443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4427,7 +4451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4439,7 +4463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4447,7 +4471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Input[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4455,7 +4479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4463,7 +4487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4471,7 +4495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4479,7 +4503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4487,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4495,7 +4519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4503,7 +4527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4669,7 +4693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4677,7 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4685,7 +4709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4693,7 +4717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4701,7 +4725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4709,7 +4733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operationtype">pulumi.<wbr>Input<Operation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4717,7 +4741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4725,7 +4749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4733,7 +4757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#workloadtype">pulumi.<wbr>Input<Workload<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4745,7 +4769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4753,7 +4777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Input[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4769,7 +4793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4777,7 +4801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4785,7 +4809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#operationtype">Operation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operationtype">Input[Operation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4793,7 +4817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4801,7 +4825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4809,7 +4833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#workloadtype">Input[Workload<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4879,7 +4903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostservername_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4887,7 +4911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiryinfo_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinfo">Inquiry<wbr>Info</a></span>
+        <span class="property-type"><a href="#inquiryinfo">pulumi.<wbr>Input<Inquiry<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4895,7 +4919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeslist_nodejs" style="color: inherit; text-decoration: inherit;">nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinfo">Distributed<wbr>Nodes<wbr>Info[]</a></span>
+        <span class="property-type"><a href="#distributednodesinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Distributed<wbr>Nodes<wbr>Info<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4907,7 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_server_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4915,7 +4939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiry_info_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinfo">Inquiry<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryinfo">Input[Inquiry<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4923,7 +4947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_list_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinfo">Sequence[Distributed<wbr>Nodes<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributednodesinfo">Input[Distributed<wbr>Nodes<wbr>Info<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4993,7 +5017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostservername_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5001,7 +5025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiryinfo_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">pulumi.<wbr>Input<Inquiry<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5009,7 +5033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeslist_nodejs" style="color: inherit; text-decoration: inherit;">nodes<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">Distributed<wbr>Nodes<wbr>Info<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5021,7 +5045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_server_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5029,7 +5053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inquiry_info_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryinforesponse">Inquiry<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryinforesponse">Input[Inquiry<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5037,7 +5061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodes_list_python" style="color: inherit; text-decoration: inherit;">nodes_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributednodesinforesponse">Sequence[Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributednodesinforesponse">Input[Distributed<wbr>Nodes<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of the nodes in case of distributed container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5203,7 +5227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5211,7 +5235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">pulumi.<wbr>Input<Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5219,7 +5243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5227,7 +5251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5235,7 +5259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5243,7 +5267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5251,7 +5275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5259,7 +5283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5267,7 +5291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5279,7 +5303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5287,7 +5311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Input[Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5295,7 +5319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5303,7 +5327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5311,7 +5335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5319,7 +5343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5327,7 +5351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5335,7 +5359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5343,7 +5367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5561,7 +5585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5569,7 +5593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection container identity - Audience{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5577,7 +5601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalclientid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Service Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5585,7 +5609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquename_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5597,7 +5621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5605,7 +5629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection container identity - Audience{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5613,7 +5637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_client_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Service Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5621,7 +5645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_name_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5707,7 +5731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5715,7 +5739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection container identity - Audience{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5723,7 +5747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceprincipalclientid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Service Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5731,7 +5755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquename_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5743,7 +5767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Tenant{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5751,7 +5775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection container identity - Audience{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5759,7 +5783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_principal_client_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection container identity - AAD Service Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5767,7 +5791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_name_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5805,7 +5829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last refresh time of the DPMContainer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5817,7 +5841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last refresh time of the DPMContainer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5855,7 +5879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last refresh time of the DPMContainer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5867,7 +5891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last refresh time of the DPMContainer.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5923,7 +5947,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the node under a distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5931,7 +5955,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of this Node.
 Failed | Succeeded{{% /md %}}</dd></dl>
@@ -5944,7 +5968,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the node under a distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5952,7 +5976,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of this Node.
 Failed | Succeeded{{% /md %}}</dd></dl>
@@ -6025,7 +6049,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6033,7 +6057,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#nodename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the node under a distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6041,7 +6065,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of this Node.
 Failed | Succeeded{{% /md %}}</dd></dl>
@@ -6054,7 +6078,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6062,7 +6086,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#node_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the node under a distributed container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6070,7 +6094,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of this Node.
 Failed | Succeeded{{% /md %}}</dd></dl>
@@ -6285,7 +6309,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6293,7 +6317,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6301,7 +6325,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6309,7 +6333,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpmagentversion_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6317,7 +6341,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpmservers_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6325,7 +6349,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">pulumi.<wbr>Input<DPMContainer<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6333,7 +6357,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6341,7 +6365,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6349,7 +6373,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6357,7 +6381,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6365,7 +6389,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6373,7 +6397,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#upgradeavailable_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6385,7 +6409,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6393,7 +6417,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6401,7 +6425,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6409,7 +6433,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6417,7 +6441,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6425,7 +6449,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">Input[DPMContainer<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6433,7 +6457,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6441,7 +6465,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6449,7 +6473,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6457,7 +6481,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6465,7 +6489,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6473,7 +6497,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6687,7 +6711,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6695,7 +6719,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6703,7 +6727,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6711,7 +6735,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpmagentversion_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6719,7 +6743,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpmservers_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6727,7 +6751,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">pulumi.<wbr>Input<DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6735,7 +6759,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6743,7 +6767,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6751,7 +6775,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6759,7 +6783,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6767,7 +6791,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6775,7 +6799,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#upgradeavailable_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6787,7 +6811,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6795,7 +6819,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6803,7 +6827,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ID of container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6811,7 +6835,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6819,7 +6843,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6827,7 +6851,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Input[DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6835,7 +6859,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6843,7 +6867,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6851,7 +6875,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6859,7 +6883,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6867,7 +6891,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6875,7 +6899,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6945,7 +6969,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6953,7 +6977,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6961,7 +6985,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6973,7 +6997,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6981,7 +7005,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6989,7 +7013,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7107,7 +7131,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7115,7 +7139,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinformation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinfo">Generic<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinfo">pulumi.<wbr>Input<Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7123,7 +7147,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the container's fabric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7131,7 +7155,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7139,7 +7163,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7147,7 +7171,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7159,7 +7183,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7167,7 +7191,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_information_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinfo">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinfo">Input[Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7175,7 +7199,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the container's fabric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7183,7 +7207,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7191,7 +7215,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7199,7 +7223,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7269,7 +7293,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containeridentityinfo_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinfo">Container<wbr>Identity<wbr>Info</a></span>
+        <span class="property-type"><a href="#containeridentityinfo">pulumi.<wbr>Input<Container<wbr>Identity<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7277,7 +7301,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#rawcertdata_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Cert<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public key of container cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7285,7 +7309,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#serviceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Azure Backup Service Endpoints for the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7297,7 +7321,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_identity_info_python" style="color: inherit; text-decoration: inherit;">container_<wbr>identity_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinfo">Container<wbr>Identity<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#containeridentityinfo">Input[Container<wbr>Identity<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7305,7 +7329,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#raw_cert_data_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>cert_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public key of container cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7313,7 +7337,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#service_endpoints_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Azure Backup Service Endpoints for the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7383,7 +7407,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containeridentityinfo_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Identity<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">pulumi.<wbr>Input<Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7391,7 +7415,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#rawcertdata_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Cert<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public key of container cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7399,7 +7423,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#serviceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Azure Backup Service Endpoints for the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7411,7 +7435,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_identity_info_python" style="color: inherit; text-decoration: inherit;">container_<wbr>identity_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containeridentityinforesponse">Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#containeridentityinforesponse">Input[Container<wbr>Identity<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Container identity information{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7419,7 +7443,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#raw_cert_data_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>cert_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public key of container cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7427,7 +7451,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#service_endpoints_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Azure Backup Service Endpoints for the container{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7545,7 +7569,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7553,7 +7577,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinformation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">pulumi.<wbr>Input<Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7561,7 +7585,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the container's fabric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7569,7 +7593,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7577,7 +7601,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7585,7 +7609,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7597,7 +7621,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7605,7 +7629,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_information_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#genericcontainerextendedinforesponse">Input[Generic<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Extended information (not returned in List container API calls){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7613,7 +7637,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the container's fabric{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7621,7 +7645,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7629,7 +7653,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7637,7 +7661,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7771,7 +7795,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7779,7 +7803,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7787,7 +7811,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7795,7 +7819,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7803,7 +7827,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7811,7 +7835,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7819,7 +7843,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7831,7 +7855,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7839,7 +7863,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7847,7 +7871,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7855,7 +7879,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7863,7 +7887,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7871,7 +7895,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7879,7 +7903,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8013,7 +8037,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8021,7 +8045,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8029,7 +8053,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8037,7 +8061,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8045,7 +8069,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8053,7 +8077,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8061,7 +8085,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8073,7 +8097,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8081,7 +8105,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8089,7 +8113,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8097,7 +8121,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8105,7 +8129,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8113,7 +8137,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8121,7 +8145,7 @@ Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8179,7 +8203,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquirydetails_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetails">Workload<wbr>Inquiry<wbr>Details[]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetails">pulumi.<wbr>Input<pulumi.<wbr>Input<Workload<wbr>Inquiry<wbr>Details<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -8188,7 +8212,7 @@ For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</d
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for this container such as
 InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
@@ -8201,7 +8225,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiry_details_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetails">Sequence[Workload<wbr>Inquiry<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetails">Input[Workload<wbr>Inquiry<wbr>Details<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -8210,7 +8234,7 @@ For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</d
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Inquiry Status for this container such as
 InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
@@ -8285,7 +8309,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8293,7 +8317,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquirydetails_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">Workload<wbr>Inquiry<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -8302,7 +8326,7 @@ For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</d
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Inquiry Status for this container such as
 InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
@@ -8315,7 +8339,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error Details if the Status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8323,7 +8347,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiry_details_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workloadinquirydetailsresponse">Sequence[Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workloadinquirydetailsresponse">Input[Workload<wbr>Inquiry<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry Details which will have workload specific details.
 For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</dd><dt class="property-optional"
@@ -8332,7 +8356,7 @@ For e.g. - For SQL and oracle this will contain different details.{{% /md %}}</d
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Inquiry Status for this container such as
 InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
@@ -8371,7 +8395,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status for the Inquiry Validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8383,7 +8407,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status for the Inquiry Validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8453,7 +8477,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#additionaldetail_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Error Additional Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8461,7 +8485,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#errordetail_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8469,7 +8493,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status for the Inquiry Validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8481,7 +8505,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#additional_detail_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Error Additional Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8489,7 +8513,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#error_detail_python" style="color: inherit; text-decoration: inherit;">error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Error Detail in case the status is non-success.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8497,7 +8521,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status for the Inquiry Validation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8583,7 +8607,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8591,7 +8615,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8599,7 +8623,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8607,7 +8631,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8619,7 +8643,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8627,7 +8651,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8635,7 +8659,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8643,7 +8667,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8729,7 +8753,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8737,7 +8761,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8745,7 +8769,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8753,7 +8777,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8765,7 +8789,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8773,7 +8797,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8781,7 +8805,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8789,7 +8813,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8987,7 +9011,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Agent version of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8995,7 +9019,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupmanagementtype">pulumi.<wbr>Input<Backup<wbr>Management<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9003,7 +9027,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Can the container be registered one more time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9011,7 +9035,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containerhealthstate_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Health<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health state of mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9019,7 +9043,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9027,7 +9051,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinfo">Mab<wbr>Container<wbr>Extended<wbr>Info</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinfo">pulumi.<wbr>Input<Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9035,7 +9059,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9043,7 +9067,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9051,7 +9075,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mabcontainerhealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetails">MABContainer<wbr>Health<wbr>Details[]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetails">pulumi.<wbr>Input<pulumi.<wbr>Input<MABContainer<wbr>Health<wbr>Details<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9059,7 +9083,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9067,7 +9091,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9079,7 +9103,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Agent version of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9087,7 +9111,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupmanagementtype">Input[Backup<wbr>Management<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9095,7 +9119,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Can the container be registered one more time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9103,7 +9127,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_health_state_python" style="color: inherit; text-decoration: inherit;">container_<wbr>health_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health state of mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9111,7 +9135,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9119,7 +9143,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinfo">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinfo">Input[Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9127,7 +9151,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9135,7 +9159,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9143,7 +9167,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mab_container_health_details_python" style="color: inherit; text-decoration: inherit;">mab_<wbr>container_<wbr>health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetails">Sequence[MABContainer<wbr>Health<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetails">Input[MABContainer<wbr>Health<wbr>Details<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9151,7 +9175,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9159,7 +9183,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9261,7 +9285,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupitemtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Item<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#backupitemtype">Backup<wbr>Item<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#backupitemtype">pulumi.<wbr>Input<Backup<wbr>Item<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9269,7 +9293,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupitems_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9277,7 +9301,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Latest backup status of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9285,7 +9309,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9293,7 +9317,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup policy associated with this container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9305,7 +9329,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_item_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>item_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#backupitemtype">Backup<wbr>Item<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#backupitemtype">Input[Backup<wbr>Item<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9313,7 +9337,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_items_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9321,7 +9345,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Latest backup status of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9329,7 +9353,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9337,7 +9361,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup policy associated with this container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9439,7 +9463,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupitemtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Item<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9447,7 +9471,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupitems_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9455,7 +9479,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Latest backup status of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9463,7 +9487,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9471,7 +9495,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Backup policy associated with this container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9483,7 +9507,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_item_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>item_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9491,7 +9515,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_items_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of backup items associated with this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9499,7 +9523,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Latest backup status of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9507,7 +9531,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time stamp when this container was refreshed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9515,7 +9539,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Backup policy associated with this container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9713,7 +9737,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Agent version of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9721,7 +9745,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9729,7 +9753,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Can the container be registered one more time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9737,7 +9761,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containerhealthstate_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Health<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Health state of mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9745,7 +9769,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9753,7 +9777,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">pulumi.<wbr>Input<Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9761,7 +9785,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9769,7 +9793,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9777,7 +9801,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mabcontainerhealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">mab<wbr>Container<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">MABContainer<wbr>Health<wbr>Details<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9785,7 +9809,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9793,7 +9817,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9805,7 +9829,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Agent version of this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9813,7 +9837,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9821,7 +9845,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Can the container be registered one more time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9829,7 +9853,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_health_state_python" style="color: inherit; text-decoration: inherit;">container_<wbr>health_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Health state of mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9837,7 +9861,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9845,7 +9869,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabcontainerextendedinforesponse">Input[Mab<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9853,7 +9877,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9861,7 +9885,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9869,7 +9893,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#mab_container_health_details_python" style="color: inherit; text-decoration: inherit;">mab_<wbr>container_<wbr>health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">Sequence[MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mabcontainerhealthdetailsresponse">Input[MABContainer<wbr>Health<wbr>Details<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this mab container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9877,7 +9901,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9885,7 +9909,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9985,7 +10009,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiryvalidation_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidation">Inquiry<wbr>Validation</a></span>
+        <span class="property-type"><a href="#inquiryvalidation">pulumi.<wbr>Input<Inquiry<wbr>Validation<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9993,7 +10017,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#itemcount_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10001,7 +10025,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the Workload such as SQL, Oracle etc.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10013,7 +10037,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiry_validation_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidation">Inquiry<wbr>Validation<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryvalidation">Input[Inquiry<wbr>Validation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10021,7 +10045,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#item_count_python" style="color: inherit; text-decoration: inherit;">item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10029,7 +10053,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the Workload such as SQL, Oracle etc.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10099,7 +10123,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiryvalidation_nodejs" style="color: inherit; text-decoration: inherit;">inquiry<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">pulumi.<wbr>Input<Inquiry<wbr>Validation<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10107,7 +10131,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#itemcount_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10115,7 +10139,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the Workload such as SQL, Oracle etc.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10127,7 +10151,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#inquiry_validation_python" style="color: inherit; text-decoration: inherit;">inquiry_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inquiryvalidationresponse">Inquiry<wbr>Validation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#inquiryvalidationresponse">Input[Inquiry<wbr>Validation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Inquiry validation such as permissions and other backup validations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10135,7 +10159,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#item_count_python" style="color: inherit; text-decoration: inherit;">item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10143,7 +10167,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the Workload such as SQL, Oracle etc.{{% /md %}}</dd></dl>
 {{% /choosable %}}

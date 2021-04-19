@@ -75,7 +75,7 @@ package main
 
 import (
 	customproviders "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customproviders"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -182,19 +182,32 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomRPActionRouteDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomRPResourceTypeRouteDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomRPValidationsArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CustomRPActionRouteDefinitionArgs]]]]</span> = None<span class="p">,</span>
+                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_provider_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CustomRPResourceTypeRouteDefinitionArgs]]]]</span> = None<span class="p">,</span>
+                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                           <span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CustomRPValidationsArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCustomResourceProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomResourceProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCustomResourceProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomResourceProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CustomResourceProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CustomResourceProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -229,22 +242,32 @@ const customResourceProvider = new azure_native.customproviders.CustomResourcePr
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">CustomResourceProviderArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -452,7 +475,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -460,7 +483,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinition">Custom<wbr>RPAction<wbr>Route<wbr>Definition[]</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinition">pulumi.<wbr>Input<pulumi.<wbr>Input<Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -468,7 +491,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -476,7 +499,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resourceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -484,7 +507,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition[]</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">pulumi.<wbr>Input<pulumi.<wbr>Input<Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -492,7 +515,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -500,7 +523,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#validations_nodejs" style="color: inherit; text-decoration: inherit;">validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidations">Custom<wbr>RPValidations[]</a></span>
+        <span class="property-type"><a href="#customrpvalidations">pulumi.<wbr>Input<pulumi.<wbr>Input<Custom<wbr>RPValidations<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -512,7 +535,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -520,7 +543,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpactionroutedefinition">Sequence[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customrpactionroutedefinition">Input[Custom<wbr>RPAction<wbr>Route<wbr>Definition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -528,7 +551,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -536,7 +559,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -544,7 +567,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">Sequence[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customrpresourcetyperoutedefinition">Input[Custom<wbr>RPResource<wbr>Type<wbr>Route<wbr>Definition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types that the custom resource provider implements.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +575,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +583,7 @@ The CustomResourceProvider resource accepts the following [input]({{< relref "/d
 <a href="#validations_python" style="color: inherit; text-decoration: inherit;">validations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customrpvalidations">Sequence[Custom<wbr>RPValidations<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customrpvalidations">Input[Custom<wbr>RPValidations<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of validations to run on the custom resource provider's requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -813,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#actionrouting">Action<wbr>Routing</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#actionrouting">pulumi.<wbr>Input<Action<wbr>Routing></a></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -841,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -849,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#actionrouting">Action<wbr>Routing</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#actionrouting">Input[Action<wbr>Routing]</a></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -927,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -935,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -963,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for action requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1049,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#resourcetyperouting">Resource<wbr>Type<wbr>Routing</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#resourcetyperouting">pulumi.<wbr>Input<Resource<wbr>Type<wbr>Routing></a></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1077,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#resourcetyperouting">Resource<wbr>Type<wbr>Routing</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#resourcetyperouting">Input[Resource<wbr>Type<wbr>Routing]</a></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1155,7 +1178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1163,7 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1171,7 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingtype_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1183,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}'){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1191,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The routing types that are supported for resource requests.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationtype_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#validationtype">Validation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#validationtype">pulumi.<wbr>Input<Validation<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#validationtype">Validation<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#validationtype">Input[Validation<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1335,7 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#specification_nodejs" style="color: inherit; text-decoration: inherit;">specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1343,7 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validationtype_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#specification_python" style="color: inherit; text-decoration: inherit;">specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#validation_type_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of validation to run against a matching request.{{% /md %}}</dd></dl>
 {{% /choosable %}}

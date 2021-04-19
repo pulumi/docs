@@ -64,7 +64,7 @@ package main
 
 import (
 	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -155,19 +155,31 @@ const webAppPrivateEndpointConnectionSlot = new azure_native.web.WebAppPrivateEn
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[PrivateLinkConnectionStateArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                        <span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                        <span class="nx">private_link_service_connection_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PrivateLinkConnectionStateArgs]]</span> = None<span class="p">,</span>
+                                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                        <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppPrivateEndpointConnectionSlot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppPrivateEndpointConnectionSlot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppPrivateEndpointConnectionSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,22 +214,32 @@ const webAppPrivateEndpointConnectionSlot = new azure_native.web.WebAppPrivateEn
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WebAppPrivateEndpointConnectionSlotArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +431,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the site.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -417,7 +439,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -425,7 +447,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +455,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -441,7 +463,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#privateendpointconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -449,7 +471,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstate">Private<wbr>Link<wbr>Connection<wbr>State</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstate">pulumi.<wbr>Input<Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -461,7 +483,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the site.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -469,7 +491,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -477,7 +499,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +507,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -493,7 +515,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#private_endpoint_connection_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -501,7 +523,7 @@ The WebAppPrivateEndpointConnectionSlot resource accepts the following [input]({
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkconnectionstate">Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkconnectionstate">Input[Private<wbr>Link<wbr>Connection<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The state of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -732,7 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -744,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -842,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -928,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -936,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -956,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ActionsRequired for a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of a private link connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of a private link connection{{% /md %}}</dd></dl>
 {{% /choosable %}}

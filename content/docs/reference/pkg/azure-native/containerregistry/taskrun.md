@@ -145,19 +145,32 @@ const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_request</span><span class="p">:</span> <span class="nx">Optional[Union[DockerBuildRequestArgs, EncodedTaskRunRequestArgs, FileTaskRunRequestArgs, TaskRunRequestArgs]]</span> = None<span class="p">, </span><span class="nx">task_run_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">force_update_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IdentityPropertiesArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">run_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[DockerBuildRequestArgs, EncodedTaskRunRequestArgs, FileTaskRunRequestArgs, TaskRunRequestArgs]]]</span> = None<span class="p">,</span>
+            <span class="nx">task_run_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskRun</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskRun</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskRun</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskRun</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TaskRunArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,22 +205,32 @@ const taskRun = new azure_native.containerregistry.TaskRun("taskRun", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TaskRunArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -415,7 +438,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -423,7 +446,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +454,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}How the run should be forced to rerun even if the run request configuration has not changed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -439,7 +462,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
+        <span class="property-type"><a href="#identityproperties">pulumi.<wbr>Input<Identity<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +470,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -455,7 +478,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runrequest_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request</a> | <a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request</a> | <a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request</a> | <a href="#taskrunrequest">Task<wbr>Run<wbr>Request</a></span>
+        <span class="property-type"><a href="#dockerbuildrequest">pulumi.<wbr>Input<Docker<wbr>Build<wbr>Request<wbr>Args></a> | <a href="#encodedtaskrunrequest">pulumi.<wbr>Input<Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args></a> | <a href="#filetaskrunrequest">pulumi.<wbr>Input<File<wbr>Task<wbr>Run<wbr>Request<wbr>Args></a> | <a href="#taskrunrequest">pulumi.<wbr>Input<Task<wbr>Run<wbr>Request<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +486,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#taskrunname_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Run<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the task run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -475,7 +498,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -483,7 +506,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +514,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}How the run should be forced to rerun even if the run request configuration has not changed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +522,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#identityproperties">Input[Identity<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -507,7 +530,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +538,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#run_request_python" style="color: inherit; text-decoration: inherit;">run_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildrequest">Docker<wbr>Build<wbr>Request<wbr>Args</a> | <a href="#encodedtaskrunrequest">Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a> | <a href="#filetaskrunrequest">File<wbr>Task<wbr>Run<wbr>Request<wbr>Args</a> | <a href="#taskrunrequest">Task<wbr>Run<wbr>Request<wbr>Args</a></span>
+        <span class="property-type"><a href="#dockerbuildrequest">Input[Docker<wbr>Build<wbr>Request<wbr>Args]</a> | <a href="#encodedtaskrunrequest">Input[Encoded<wbr>Task<wbr>Run<wbr>Request<wbr>Args]</a> | <a href="#filetaskrunrequest">Input[File<wbr>Task<wbr>Run<wbr>Request<wbr>Args]</a> | <a href="#taskrunrequest">Input[Task<wbr>Run<wbr>Request<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The request (parameters) for the run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +546,7 @@ The TaskRun resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#task_run_name_python" style="color: inherit; text-decoration: inherit;">task_<wbr>run_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the task run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -786,7 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -798,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -836,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -848,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CPU configuration in terms of number of cores required for the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -956,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -964,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -984,7 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -992,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1000,7 +1023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1070,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1078,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1098,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the argument.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1106,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the argument.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the argument represents a secret and want to be removed from build logs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1172,7 +1195,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Custom<wbr>Registry<wbr>Credentials<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1182,7 +1205,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">pulumi.<wbr>Input<Source<wbr>Registry<wbr>Credentials<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1194,7 +1217,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Args]</span>
+        <span class="property-type">Input[Custom<wbr>Registry<wbr>Credentials<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1204,7 +1227,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentials">Source<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentials">Input[Source<wbr>Registry<wbr>Credentials<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1285,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: Custom<wbr>Registry<wbr>Credentials<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1272,7 +1295,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">pulumi.<wbr>Input<Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1307,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1294,7 +1317,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Input[Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1374,7 +1397,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
@@ -1386,7 +1409,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
+        <span class="property-type"><a href="#secretobject">pulumi.<wbr>Input<Secret<wbr>Object<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1418,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object</a></span>
+        <span class="property-type"><a href="#secretobject">pulumi.<wbr>Input<Secret<wbr>Object<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1430,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
@@ -1419,7 +1442,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Input[Secret<wbr>Object<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1428,7 +1451,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobject">Secret<wbr>Object<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobject">Input[Secret<wbr>Object<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1508,7 +1531,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
@@ -1520,7 +1543,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">pulumi.<wbr>Input<Secret<wbr>Object<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1552,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">pulumi.<wbr>Input<Secret<wbr>Object<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1541,7 +1564,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the managed identity assigned to the custom credential. If a user-assigned identity
 this value is the Client ID. If a system-assigned identity, the value will be `system`. In
@@ -1553,7 +1576,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Input[Secret<wbr>Object<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1585,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Input[Secret<wbr>Object<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1810,7 +1833,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Docker file path relative to the source location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1818,7 +1841,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
+        <span class="property-type"><a href="#platformproperties">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1849,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
+        <span class="property-type"><a href="#agentproperties">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1857,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1842,7 +1865,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Argument[]</a></span>
+        <span class="property-type"><a href="#argument">pulumi.<wbr>Input<pulumi.<wbr>Input<Argument<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1850,7 +1873,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials</a></span>
+        <span class="property-type"><a href="#credentials">pulumi.<wbr>Input<Credentials<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1881,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#imagenames_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1889,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1897,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#ispushenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Push<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1882,7 +1905,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1913,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1921,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#sourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -1907,7 +1930,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1938,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1950,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Docker file path relative to the source location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1935,7 +1958,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Input[Platform<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1966,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Input[Agent<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1951,7 +1974,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1982,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argument">Input[Argument<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1990,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Input[Credentials<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1998,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +2006,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2014,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_push_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>push_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +2022,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +2030,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2015,7 +2038,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -2024,7 +2047,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2032,7 +2055,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2280,7 +2303,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Docker file path relative to the source location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2288,7 +2311,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2296,7 +2319,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2304,7 +2327,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2312,7 +2335,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#argumentresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Argument<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2343,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#credentialsresponse">pulumi.<wbr>Input<Credentials<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2351,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#imagenames_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2359,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2367,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#ispushenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Push<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2375,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2360,7 +2383,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2368,7 +2391,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#sourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2400,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2385,7 +2408,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2397,7 +2420,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#docker_file_path_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Docker file path relative to the source location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2405,7 +2428,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Input[Platform<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2413,7 +2436,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Input[Agent<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2421,7 +2444,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2452,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Input[Argument<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2460,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Input[Credentials<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2468,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#image_names_python" style="color: inherit; text-decoration: inherit;">image_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The fully qualified image names including the repository and tag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2476,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2484,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_push_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>push_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image built should be pushed to the registry or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2492,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2500,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value of this property indicates whether the image cache is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2508,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -2494,7 +2517,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2502,7 +2525,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2702,7 +2725,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encodedtaskcontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2710,7 +2733,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
+        <span class="property-type"><a href="#platformproperties">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2718,7 +2741,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
+        <span class="property-type"><a href="#agentproperties">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2749,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2757,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials</a></span>
+        <span class="property-type"><a href="#credentials">pulumi.<wbr>Input<Credentials<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2742,7 +2765,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encodedvaluescontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2750,7 +2773,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2758,7 +2781,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2766,7 +2789,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#sourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -2775,7 +2798,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2783,7 +2806,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Set<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#setvalue">pulumi.<wbr>Input<pulumi.<wbr>Input<Set<wbr>Value<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2795,7 +2818,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2803,7 +2826,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Input[Platform<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2811,7 +2834,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Input[Agent<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2819,7 +2842,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2827,7 +2850,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Input[Credentials<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2835,7 +2858,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2843,7 +2866,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2874,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2882,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -2868,7 +2891,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2876,7 +2899,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalue">Input[Set<wbr>Value<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3076,7 +3099,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encodedtaskcontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Task<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3084,7 +3107,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3092,7 +3115,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3100,7 +3123,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3108,7 +3131,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#credentialsresponse">pulumi.<wbr>Input<Credentials<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3116,7 +3139,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encodedvaluescontent_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Values<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3124,7 +3147,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3132,7 +3155,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3140,7 +3163,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#sourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -3149,7 +3172,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3180,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Set<wbr>Value<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3169,7 +3192,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encoded_task_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>task_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the template/definition file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3177,7 +3200,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Input[Platform<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3208,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Input[Agent<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3216,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3224,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Input[Credentials<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3209,7 +3232,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#encoded_values_content_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>values_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded value of the parameters/values file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3217,7 +3240,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3225,7 +3248,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3233,7 +3256,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -3242,7 +3265,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3250,7 +3273,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Input[Set<wbr>Value<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3450,7 +3473,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties</a></span>
+        <span class="property-type"><a href="#platformproperties">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3458,7 +3481,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#taskfilepath_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template/definition file path relative to the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3466,7 +3489,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties</a></span>
+        <span class="property-type"><a href="#agentproperties">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3474,7 +3497,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3482,7 +3505,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials</a></span>
+        <span class="property-type"><a href="#credentials">pulumi.<wbr>Input<Credentials<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3490,7 +3513,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3498,7 +3521,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3506,7 +3529,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#sourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -3515,7 +3538,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3523,7 +3546,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Set<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#setvalue">pulumi.<wbr>Input<pulumi.<wbr>Input<Set<wbr>Value<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3531,7 +3554,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#valuesfilepath_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The values/parameters file path relative to the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3543,7 +3566,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformproperties">Platform<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformproperties">Input[Platform<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3551,7 +3574,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template/definition file path relative to the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3582,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentproperties">Agent<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentproperties">Input[Agent<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3567,7 +3590,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3575,7 +3598,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentials">Credentials<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentials">Input[Credentials<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3583,7 +3606,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3591,7 +3614,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3599,7 +3622,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -3608,7 +3631,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3616,7 +3639,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalue">Input[Set<wbr>Value<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3624,7 +3647,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The values/parameters file path relative to the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3824,7 +3847,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3832,7 +3855,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#taskfilepath_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template/definition file path relative to the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3840,7 +3863,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3848,7 +3871,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3856,7 +3879,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#credentialsresponse">pulumi.<wbr>Input<Credentials<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3864,7 +3887,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3872,7 +3895,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3903,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#sourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -3889,7 +3912,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3897,7 +3920,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Set<wbr>Value<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3905,7 +3928,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#valuesfilepath_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The values/parameters file path relative to the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3917,7 +3940,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Input[Platform<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3925,7 +3948,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#task_file_path_python" style="color: inherit; text-decoration: inherit;">task_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template/definition file path relative to the source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3956,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Input[Agent<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3941,7 +3964,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3949,7 +3972,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#credentialsresponse">Credentials<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#credentialsresponse">Input[Credentials<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes a set of credentials that will be used when this run is invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3957,7 +3980,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3965,7 +3988,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3973,7 +3996,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#source_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
 If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.{{% /md %}}</dd><dt class="property-optional"
@@ -3982,7 +4005,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Run timeout in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3990,7 +4013,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Input[Set<wbr>Value<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3998,7 +4021,7 @@ If it is relative URL, the relative path should be obtained from calling listBui
 <a href="#values_file_path_python" style="color: inherit; text-decoration: inherit;">values_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The values/parameters file path relative to the source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4090,7 +4113,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4098,7 +4121,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4106,7 +4129,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4114,7 +4137,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Properties<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4129,7 +4152,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4137,7 +4160,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4145,7 +4168,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4153,7 +4176,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Identity<wbr>Properties<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4248,7 +4271,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4256,7 +4279,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4264,7 +4287,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4272,7 +4295,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Properties<wbr>Response}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args>}></span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4287,7 +4310,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4295,7 +4318,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4303,7 +4326,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4311,7 +4334,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Input[User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]]]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -4400,7 +4423,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4408,7 +4431,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The registry login server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4416,7 +4439,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4424,7 +4447,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tag name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4436,7 +4459,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The sha256-based digest of the image manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4444,7 +4467,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The registry login server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4452,7 +4475,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4460,7 +4483,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tag name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4530,7 +4553,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique ID of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4538,7 +4561,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Descriptor<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of image updates that caused the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4546,7 +4569,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp when the image update happened.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4558,7 +4581,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique ID of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4566,7 +4589,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Input[Image<wbr>Descriptor<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of image updates that caused the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4574,7 +4597,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp when the image update happened.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4720,7 +4743,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Argument[]</a></span>
+        <span class="property-type"><a href="#argument">pulumi.<wbr>Input<pulumi.<wbr>Input<Argument<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4729,7 +4752,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source context against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4737,7 +4760,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4745,7 +4768,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4753,7 +4776,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#updatetriggertoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded update trigger token that will be attached with the base image trigger webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4784,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Set<wbr>Value[]</a></span>
+        <span class="property-type"><a href="#setvalue">pulumi.<wbr>Input<pulumi.<wbr>Input<Set<wbr>Value<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4773,7 +4796,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argument">Sequence[Argument<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argument">Input[Argument<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4782,7 +4805,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source context against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4790,7 +4813,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4798,7 +4821,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4806,7 +4829,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#update_trigger_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded update trigger token that will be attached with the base image trigger webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4814,7 +4837,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalue">Sequence[Set<wbr>Value<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalue">Input[Set<wbr>Value<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4934,7 +4957,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Argument<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#argumentresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Argument<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4943,7 +4966,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#contextpath_nodejs" style="color: inherit; text-decoration: inherit;">context<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source context against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4951,7 +4974,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The file against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4959,7 +4982,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4967,7 +4990,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#updatetriggertoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Base64 encoded update trigger token that will be attached with the base image trigger webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4975,7 +4998,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Set<wbr>Value<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Set<wbr>Value<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4987,7 +5010,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Input[Argument<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the collection of override arguments to be used when
 executing a build step.{{% /md %}}</dd><dt class="property-optional"
@@ -4996,7 +5019,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#context_path_python" style="color: inherit; text-decoration: inherit;">context_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source context against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5004,7 +5027,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The file against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5012,7 +5035,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the target build stage for the docker build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5020,7 +5043,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#update_trigger_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Base64 encoded update trigger token that will be attached with the base image trigger webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5028,7 +5051,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Input[Set<wbr>Value<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5098,7 +5121,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#os">OS</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#os">pulumi.<wbr>Input<OS></a></span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5106,7 +5129,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#architecture">Architecture</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#architecture">pulumi.<wbr>Input<Architecture></a></span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5114,7 +5137,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#variant">Variant</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#variant">pulumi.<wbr>Input<Variant></a></span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5126,7 +5149,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#os">OS</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#os">Input[OS]</a></span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5134,7 +5157,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#architecture">Architecture</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#architecture">Input[Architecture]</a></span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5142,7 +5165,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#variant">Variant</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#variant">Input[Variant]</a></span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5212,7 +5235,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5220,7 +5243,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5228,7 +5251,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5240,7 +5263,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operating system type required for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5248,7 +5271,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The OS architecture.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5256,7 +5279,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#variant_python" style="color: inherit; text-decoration: inherit;">variant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Variant of the CPU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5728,7 +5751,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5736,7 +5759,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logartifact_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">pulumi.<wbr>Input<Image<wbr>Descriptor<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The image description for the log artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5744,7 +5767,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5752,7 +5775,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#runerrormessage_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The error message received from backend systems after the run is scheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5760,7 +5783,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">pulumi.<wbr>Input<System<wbr>Data<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5768,7 +5791,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5776,7 +5799,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">pulumi.<wbr>Input<Agent<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5784,7 +5807,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5792,7 +5815,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time the run was scheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5800,7 +5823,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#customregistries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of custom registries that were logged in during this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5808,7 +5831,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#finishtime_nodejs" style="color: inherit; text-decoration: inherit;">finish<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time the run finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5816,7 +5839,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#imageupdatetrigger_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Update<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#imageupdatetriggerresponse">pulumi.<wbr>Input<Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The image update trigger that caused the run. This is applicable if the task has base image trigger configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5824,7 +5847,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5832,7 +5855,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The last updated time for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5840,7 +5863,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#outputimages_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Descriptor<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5848,7 +5871,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">pulumi.<wbr>Input<Platform<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run will happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5856,7 +5879,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of a run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5864,7 +5887,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#runid_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5872,7 +5895,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#runtype_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5880,7 +5903,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sourceregistryauth_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Registry<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The scope of the credentials that were used to login to the source registry during this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5888,7 +5911,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">pulumi.<wbr>Input<Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5896,7 +5919,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time the run started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5904,7 +5927,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current status of the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5912,7 +5935,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#task_nodejs" style="color: inherit; text-decoration: inherit;">task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The task against which run was scheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5920,7 +5943,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#timertrigger_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response</a></span>
+        <span class="property-type"><a href="#timertriggerdescriptorresponse">pulumi.<wbr>Input<Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The timer trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5928,7 +5951,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#updatetriggertoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The update trigger token passed for the Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5940,7 +5963,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5948,7 +5971,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#log_artifact_python" style="color: inherit; text-decoration: inherit;">log_<wbr>artifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Image<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Input[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The image description for the log artifact.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5956,7 +5979,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5964,7 +5987,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#run_error_message_python" style="color: inherit; text-decoration: inherit;">run_<wbr>error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The error message received from backend systems after the run is scheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5972,7 +5995,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Input[System<wbr>Data<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5980,7 +6003,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5988,7 +6011,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agent_configuration_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#agentpropertiesresponse">Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#agentpropertiesresponse">Input[Agent<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5996,7 +6019,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6004,7 +6027,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time the run was scheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6012,7 +6035,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of custom registries that were logged in during this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6020,7 +6043,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#finish_time_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time the run finished.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6028,7 +6051,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#image_update_trigger_python" style="color: inherit; text-decoration: inherit;">image_<wbr>update_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageupdatetriggerresponse">Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#imageupdatetriggerresponse">Input[Image<wbr>Update<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The image update trigger that caused the run. This is applicable if the task has base image trigger configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6036,7 +6059,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6044,7 +6067,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The last updated time for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6052,7 +6075,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#output_images_python" style="color: inherit; text-decoration: inherit;">output_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedescriptorresponse">Sequence[Image<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imagedescriptorresponse">Input[Image<wbr>Descriptor<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6060,7 +6083,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Input[Platform<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The platform properties against which the run will happen.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6068,7 +6091,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of a run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6076,7 +6099,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#run_id_python" style="color: inherit; text-decoration: inherit;">run_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6084,7 +6107,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#run_type_python" style="color: inherit; text-decoration: inherit;">run_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6092,7 +6115,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#source_registry_auth_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The scope of the credentials that were used to login to the source registry during this run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6100,7 +6123,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcetriggerdescriptorresponse">Input[Source<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6108,7 +6131,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time the run started.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6116,7 +6139,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current status of the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6124,7 +6147,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#task_python" style="color: inherit; text-decoration: inherit;">task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The task against which run was scheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6132,7 +6155,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#timer_trigger_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerdescriptorresponse">Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#timertriggerdescriptorresponse">Input[Timer<wbr>Trigger<wbr>Descriptor<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The timer trigger that caused the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6140,7 +6163,7 @@ executing a build step.{{% /md %}}</dd><dt class="property-optional"
 <a href="#update_trigger_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The update trigger token passed for the Run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6200,7 +6223,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#secretobjecttype">Secret<wbr>Object<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#secretobjecttype">pulumi.<wbr>Input<Secret<wbr>Object<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd><dt class="property-optional"
@@ -6209,7 +6232,7 @@ interpreted.{{% /md %}}</dd><dt class="property-optional"
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
@@ -6223,7 +6246,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#secretobjecttype">Secret<wbr>Object<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#secretobjecttype">Input[Secret<wbr>Object<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd><dt class="property-optional"
@@ -6232,7 +6255,7 @@ interpreted.{{% /md %}}</dd><dt class="property-optional"
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
@@ -6294,7 +6317,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd><dt class="property-optional"
@@ -6303,7 +6326,7 @@ interpreted.{{% /md %}}</dd><dt class="property-optional"
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
@@ -6317,7 +6340,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the secret object which determines how the value of the secret object has to be
 interpreted.{{% /md %}}</dd><dt class="property-optional"
@@ -6326,7 +6349,7 @@ interpreted.{{% /md %}}</dd><dt class="property-optional"
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the secret. The format of this value will be determined
 based on the type of the secret object. If the type is Opaque, the value will be
@@ -6424,7 +6447,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6432,7 +6455,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6440,7 +6463,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6452,7 +6475,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6460,7 +6483,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6468,7 +6491,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6538,7 +6561,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6546,7 +6569,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6554,7 +6577,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#issecret_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6566,7 +6589,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the overridable value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6574,7 +6597,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The overridable value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6582,7 +6605,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#is_secret_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether the value represents a secret or not.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6624,7 +6647,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sourceregistryloginmode">Source<wbr>Registry<wbr>Login<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#sourceregistryloginmode">pulumi.<wbr>Input<Source<wbr>Registry<wbr>Login<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -6638,7 +6661,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sourceregistryloginmode">Source<wbr>Registry<wbr>Login<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#sourceregistryloginmode">Input[Source<wbr>Registry<wbr>Login<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -6682,7 +6705,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -6696,7 +6719,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authentication mode which determines the source registry login scope. The credentials for the source registry
 will be generated using the given scope. These credentials will be used to login to
@@ -6858,7 +6881,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The branch name in the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6866,7 +6889,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#commitid_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique ID that identifies a commit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6874,7 +6897,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The event type of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6882,7 +6905,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique ID of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6890,7 +6913,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#providertype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The source control provider type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6898,7 +6921,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#pullrequestid_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The unique ID that identifies pull request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6906,7 +6929,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The repository URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6918,7 +6941,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The branch name in the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6926,7 +6949,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#commit_id_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique ID that identifies a commit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6934,7 +6957,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The event type of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6942,7 +6965,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique ID of the trigger.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6950,7 +6973,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#provider_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The source control provider type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6958,7 +6981,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#pull_request_id_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>request_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The unique ID that identifies pull request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6966,7 +6989,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The repository URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7084,7 +7107,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7092,7 +7115,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7100,7 +7123,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7108,7 +7131,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7116,7 +7139,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7124,7 +7147,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7136,7 +7159,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7144,7 +7167,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7152,7 +7175,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7160,7 +7183,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7168,7 +7191,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7176,7 +7199,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7278,7 +7301,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#taskid_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of task against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7286,7 +7309,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7294,7 +7317,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7302,7 +7325,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7310,7 +7333,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#overridetaskstepproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Task<wbr>Step<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties</a></span>
+        <span class="property-type"><a href="#overridetaskstepproperties">pulumi.<wbr>Input<Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7322,7 +7345,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#task_id_python" style="color: inherit; text-decoration: inherit;">task_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of task against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7330,7 +7353,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7338,7 +7361,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7346,7 +7369,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7354,7 +7377,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#override_task_step_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>task_<wbr>step_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetaskstepproperties">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetaskstepproperties">Input[Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7456,7 +7479,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#taskid_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of task against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7464,7 +7487,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7472,7 +7495,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#isarchiveenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Archive<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7480,7 +7503,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7488,7 +7511,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#overridetaskstepproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Task<wbr>Step<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#overridetasksteppropertiesresponse">pulumi.<wbr>Input<Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7500,7 +7523,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#task_id_python" style="color: inherit; text-decoration: inherit;">task_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of task against which run has to be queued.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7508,7 +7531,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The dedicated agent pool for the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7516,7 +7539,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#is_archive_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>archive_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The value that indicates whether archiving is enabled for the run or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7524,7 +7547,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7532,7 +7555,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#override_task_step_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>task_<wbr>step_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#overridetasksteppropertiesresponse">Input[Override<wbr>Task<wbr>Step<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of overridable parameters that can be passed when running a Task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7586,7 +7609,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#scheduleoccurrence_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The occurrence that triggered the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7594,7 +7617,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#timertriggername_nodejs" style="color: inherit; text-decoration: inherit;">timer<wbr>Trigger<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timer trigger name that caused the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7606,7 +7629,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#schedule_occurrence_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The occurrence that triggered the run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7614,7 +7637,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#timer_trigger_name_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>trigger_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timer trigger name that caused the run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7668,7 +7691,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7676,7 +7699,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7688,7 +7711,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7696,7 +7719,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7750,7 +7773,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7758,7 +7781,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7770,7 +7793,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7778,7 +7801,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}

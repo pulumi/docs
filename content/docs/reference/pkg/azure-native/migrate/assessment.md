@@ -97,7 +97,7 @@ package main
 
 import (
 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -281,19 +281,31 @@ const assessment = new azure_native.migrate.Assessment("assessment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[AssessmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AssessmentPropertiesArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAssessment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Assessment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AssessmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -328,22 +340,32 @@ const assessment = new azure_native.migrate.Assessment("assessment", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AssessmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -535,7 +557,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of a group within a project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -543,7 +565,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -551,7 +573,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#assessmentproperties">pulumi.<wbr>Input<Assessment<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -559,7 +581,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +589,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessmentname_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment within a project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +597,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -587,7 +609,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of a group within a project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -595,7 +617,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +625,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentproperties">Assessment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#assessmentproperties">Input[Assessment<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -611,7 +633,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +641,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assessment_name_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of an assessment within a project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +649,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For optimistic concurrency control.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1034,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredisktype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azuredisktype">Azure<wbr>Disk<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azuredisktype">pulumi.<wbr>Input<Azure<wbr>Disk<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1042,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurehybridusebenefit_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurehybridusebenefit">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azurehybridusebenefit">pulumi.<wbr>Input<Azure<wbr>Hybrid<wbr>Use<wbr>Benefit></a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1050,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurelocation">Azure<wbr>Location</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azurelocation">pulumi.<wbr>Input<Azure<wbr>Location></a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1058,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureoffercode_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Offer<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azureoffercode">Azure<wbr>Offer<wbr>Code</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azureoffercode">pulumi.<wbr>Input<Azure<wbr>Offer<wbr>Code></a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1066,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepricingtier_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurepricingtier">Azure<wbr>Pricing<wbr>Tier</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azurepricingtier">pulumi.<wbr>Input<Azure<wbr>Pricing<wbr>Tier></a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1074,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#azurestorageredundancy">Azure<wbr>Storage<wbr>Redundancy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#azurestorageredundancy">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Redundancy></a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1082,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Azure<wbr>Vm<wbr>Family[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Azure<wbr>Vm<wbr>Family>[]></span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1090,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_nodejs" style="color: inherit; text-decoration: inherit;">currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#currency">Currency</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#currency">pulumi.<wbr>Input<Currency></a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1098,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discountpercentage_nodejs" style="color: inherit; text-decoration: inherit;">discount<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1106,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_nodejs" style="color: inherit; text-decoration: inherit;">percentile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#percentile">Percentile</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#percentile">pulumi.<wbr>Input<Percentile></a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1114,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservedinstance_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#reservedinstance">Reserved<wbr>Instance</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#reservedinstance">pulumi.<wbr>Input<Reserved<wbr>Instance></a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1122,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalingfactor_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1130,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizingcriterion_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Criterion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmentsizingcriterion">Assessment<wbr>Sizing<wbr>Criterion</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#assessmentsizingcriterion">pulumi.<wbr>Input<Assessment<wbr>Sizing<wbr>Criterion></a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1138,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#assessmentstage">Assessment<wbr>Stage</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#assessmentstage">pulumi.<wbr>Input<Assessment<wbr>Stage></a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1146,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#timerange">Time<wbr>Range</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#timerange">pulumi.<wbr>Input<Time<wbr>Range></a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1154,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime</a></span>
+        <span class="property-type"><a href="#vmuptime">pulumi.<wbr>Input<Vm<wbr>Uptime<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1166,7 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_disk_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#azuredisktype">Azure<wbr>Disk<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azuredisktype">Input[Azure<wbr>Disk<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1174,7 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_hybrid_use_benefit_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>hybrid_<wbr>use_<wbr>benefit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#azurehybridusebenefit">Azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azurehybridusebenefit">Input[Azure<wbr>Hybrid<wbr>Use<wbr>Benefit]</a></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1182,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#azurelocation">Azure<wbr>Location</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azurelocation">Input[Azure<wbr>Location]</a></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1190,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_offer_code_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>offer_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#azureoffercode">Azure<wbr>Offer<wbr>Code</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azureoffercode">Input[Azure<wbr>Offer<wbr>Code]</a></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1198,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_pricing_tier_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>pricing_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#azurepricingtier">Azure<wbr>Pricing<wbr>Tier</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azurepricingtier">Input[Azure<wbr>Pricing<wbr>Tier]</a></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1206,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#azurestorageredundancy">Azure<wbr>Storage<wbr>Redundancy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#azurestorageredundancy">Input[Azure<wbr>Storage<wbr>Redundancy]</a></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1214,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Azure<wbr>Vm<wbr>Family]]</span>
+        <span class="property-type">Input[Union[str, Azure<wbr>Vm<wbr>Family]]]]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1222,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_python" style="color: inherit; text-decoration: inherit;">currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#currency">Currency</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#currency">Input[Currency]</a></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1230,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discount_percentage_python" style="color: inherit; text-decoration: inherit;">discount_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1238,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_python" style="color: inherit; text-decoration: inherit;">percentile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#percentile">Percentile</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#percentile">Input[Percentile]</a></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1246,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_instance_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#reservedinstance">Reserved<wbr>Instance</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#reservedinstance">Input[Reserved<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1254,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaling_factor_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1262,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizing_criterion_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>criterion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#assessmentsizingcriterion">Assessment<wbr>Sizing<wbr>Criterion</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#assessmentsizingcriterion">Input[Assessment<wbr>Sizing<wbr>Criterion]</a></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1270,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#assessmentstage">Assessment<wbr>Stage</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#assessmentstage">Input[Assessment<wbr>Stage]</a></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1278,7 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#timerange">Time<wbr>Range</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#timerange">Input[Time<wbr>Range]</a></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1286,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptime">Vm<wbr>Uptime<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptime">Input[Vm<wbr>Uptime<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuredisktype_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1796,7 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurehybridusebenefit_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Hybrid<wbr>Use<wbr>Benefit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1804,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurelocation_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1812,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureoffercode_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Offer<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1820,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurepricingtier_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Pricing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1828,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurestorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1836,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurevmfamilies_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vm<wbr>Families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1844,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidenceratinginpercentage_nodejs" style="color: inherit; text-decoration: inherit;">confidence<wbr>Rating<wbr>In<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Confidence rating percentage for assessment. Can be in the range [0, 100].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1852,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1860,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_nodejs" style="color: inherit; text-decoration: inherit;">currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1868,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discountpercentage_nodejs" style="color: inherit; text-decoration: inherit;">discount<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1876,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#easubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">ea<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Enterprise agreement subscription arm id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1884,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlybandwidthcost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Bandwidth<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1892,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlycomputecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Compute<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1900,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlypremiumstoragecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Premium<wbr>Storage<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1908,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlystandardssdstoragecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Standard<wbr>SSDStorage<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1916,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlystoragecost_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Storage<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1924,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofmachines_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of assessed machines part of this assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1932,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_nodejs" style="color: inherit; text-decoration: inherit;">percentile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1940,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfdataendtime_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Data<wbr>End<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}End time to consider performance data for assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1948,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perfdatastarttime_nodejs" style="color: inherit; text-decoration: inherit;">perf<wbr>Data<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Start time to consider performance data for assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1956,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pricestimestamp_nodejs" style="color: inherit; text-decoration: inherit;">prices<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1964,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reservedinstance_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1972,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scalingfactor_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1980,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizingcriterion_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Criterion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1988,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1996,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Whether the assessment has been created and is valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2004,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2012,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2020,7 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vmuptime_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">pulumi.<wbr>Input<Vm<wbr>Uptime<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2032,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_disk_type_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage type selected for this disk.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2040,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_hybrid_use_benefit_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>hybrid_<wbr>use_<wbr>benefit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}AHUB discount on windows virtual machines.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2048,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2056,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_offer_code_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>offer_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Offer code according to which cost estimation is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2064,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_pricing_tier_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>pricing_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Pricing tier for Size evaluation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2072,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Storage Redundancy type offered by Azure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2080,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_vm_families_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>families</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of azure VM families.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2088,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#confidence_rating_in_percentage_python" style="color: inherit; text-decoration: inherit;">confidence_<wbr>rating_<wbr>in_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Confidence rating percentage for assessment. Can be in the range [0, 100].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2096,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time when this project was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2104,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currency_python" style="color: inherit; text-decoration: inherit;">currency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Currency to report prices in.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2112,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discount_percentage_python" style="color: inherit; text-decoration: inherit;">discount_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Custom discount percentage to be applied on final costs. Can be in the range [0, 100].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2120,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ea_subscription_id_python" style="color: inherit; text-decoration: inherit;">ea_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Enterprise agreement subscription arm id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2128,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_bandwidth_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>bandwidth_<wbr>cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2136,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_compute_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>compute_<wbr>cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2144,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_premium_storage_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>premium_<wbr>storage_<wbr>cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2152,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_standard_ssd_storage_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>standard_<wbr>ssd_<wbr>storage_<wbr>cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2160,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_storage_cost_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>storage_<wbr>cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2168,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_machines_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>machines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Number of assessed machines part of this assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2176,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#percentile_python" style="color: inherit; text-decoration: inherit;">percentile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Percentile of performance data used to recommend Azure size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2184,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_data_end_time_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>data_<wbr>end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}End time to consider performance data for assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2192,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#perf_data_start_time_python" style="color: inherit; text-decoration: inherit;">perf_<wbr>data_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Start time to consider performance data for assessment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2200,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prices_timestamp_python" style="color: inherit; text-decoration: inherit;">prices_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2208,7 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reserved_instance_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure reserved instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2216,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scaling_factor_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2224,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizing_criterion_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>criterion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Assessment sizing criterion.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2232,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}User configurable setting that describes the status of the assessment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2240,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Whether the assessment has been created and is valid.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2248,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time range of performance data used to recommend a size.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2256,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_timestamp_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Time when this project was last updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2264,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vm_uptime_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmuptimeresponse">Vm<wbr>Uptime<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vmuptimeresponse">Input[Vm<wbr>Uptime<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify the duration for which the VMs are up in the on-premises environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3176,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayspermonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Per<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3184,7 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hoursperday_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>Per<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3196,7 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_per_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>per_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3204,7 +3226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_per_day_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>per_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3258,7 +3280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dayspermonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Per<wbr>Month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hoursperday_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>Per<wbr>Day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3278,7 +3300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_per_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>per_<wbr>month</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of days in a month for VM uptime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3286,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_per_day_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>per_<wbr>day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Number of hours per day for VM uptime.{{% /md %}}</dd></dl>
 {{% /choosable %}}

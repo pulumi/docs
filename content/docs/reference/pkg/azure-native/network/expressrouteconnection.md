@@ -65,7 +65,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -159,19 +159,36 @@ const expressRouteConnection = new azure_native.network.ExpressRouteConnection("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_internet_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringIdArgs]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_configuration</span><span class="p">:</span> <span class="nx">Optional[RoutingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                           <span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">enable_internet_security</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitPeeringIdArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                           <span class="nx">express_route_gateway_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                           <span class="nx">routing_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RoutingConfigurationArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p">,</span>
+                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExpressRouteConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -206,22 +223,32 @@ const expressRouteConnection = new azure_native.network.ExpressRouteConnection("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ExpressRouteConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -493,7 +520,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringid">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringid">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -501,7 +528,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#expressroutegatewayname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -509,7 +536,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -517,7 +544,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +552,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Authorization key to establish the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +560,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the connection subresource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,7 +568,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#enableinternetsecurity_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -549,7 +576,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +584,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -565,7 +592,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#routingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#routingconfiguration">pulumi.<wbr>Input<Routing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +600,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The routing weight associated to the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -585,7 +612,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringid">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringid">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The ExpressRoute circuit peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -593,7 +620,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#express_route_gateway_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -601,7 +628,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -609,7 +636,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -617,7 +644,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Authorization key to establish the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -625,7 +652,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the connection subresource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +660,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#enable_internet_security_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +668,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +676,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +684,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfiguration">Input[Routing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +692,7 @@ The ExpressRouteConnection resource accepts the following [input]({{< relref "/d
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The routing weight associated to the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -800,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute circuit peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -812,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute circuit peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -850,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute circuit peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -862,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute circuit peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -916,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -936,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -944,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1018,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1096,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">pulumi.<wbr>Input<Propagated<wbr>Route<wbr>Table<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route</a></span>
+        <span class="property-type"><a href="#vnetroute">pulumi.<wbr>Input<Vnet<wbr>Route<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1124,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">Input[Propagated<wbr>Route<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetroute">Input[Vnet<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1210,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1218,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">pulumi.<wbr>Input<Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">pulumi.<wbr>Input<Vnet<wbr>Route<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1238,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Input[Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Input[Vnet<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1324,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1332,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1340,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1352,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1360,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1438,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1446,7 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1466,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1474,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1482,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1520,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1532,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1570,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1582,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1620,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">Static<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#staticroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Static<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1632,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">Sequence[Static<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#staticroute">Input[Static<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1670,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Static<wbr>Route<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1682,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Input[Static<wbr>Route<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}

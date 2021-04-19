@@ -77,7 +77,7 @@ package main
 
 import (
 	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -197,19 +197,40 @@ const redis = new azure_native.cache.Redis("redis", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, TlsVersion]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">static_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">enable_non_ssl_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, TlsVersion]]]</span> = None<span class="p">,</span>
+          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PublicNetworkAccess]]]</span> = None<span class="p">,</span>
+          <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+          <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">static_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">tenant_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+          <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p">,</span>
+          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRedis</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Redis</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRedis</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Redis</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Redis</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RedisArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -244,22 +265,32 @@ const redis = new azure_native.cache.Redis("redis", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">RedisArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -595,7 +626,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +634,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Redis cache to deploy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +642,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enablenonsslport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Non<wbr>Ssl<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the non-ssl Redis server port (6379) is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +650,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +658,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#tlsversion">Tls<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#tlsversion">pulumi.<wbr>Input<Tls<wbr>Version></a></span>
     </dt>
     <dd>{{% md %}}Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +666,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +674,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccess">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access></a></span>
     </dt>
     <dd>{{% md %}}Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +682,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#redisconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +690,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of replicas to be created per master.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +698,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of shards to be created on a Premium Cluster Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +706,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#staticip_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +714,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +722,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +730,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tenantsettings_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}A dictionary of tenant settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -707,7 +738,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -719,7 +750,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -727,7 +758,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Redis cache to deploy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +766,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enable_non_ssl_port_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>non_<wbr>ssl_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the non-ssl Redis server port (6379) is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +774,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +782,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#tlsversion">Tls<wbr>Version</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#tlsversion">Input[Tls<wbr>Version]</a></span>
     </dt>
     <dd>{{% md %}}Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2'){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +790,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +798,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccess">Input[Public<wbr>Network<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +806,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#redis_configuration_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +814,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of replicas to be created per master.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +822,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of shards to be created on a Premium Cluster Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +830,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#static_ip_python" style="color: inherit; text-decoration: inherit;">static_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Static IP address. Required when deploying a Redis cache inside an existing Azure Virtual Network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +838,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +846,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +854,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tenant_settings_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A dictionary of tenant settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +862,7 @@ The Redis resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of availability zones denoting where the resource needs to come from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1334,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1342,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1350,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1358,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1366,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1386,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1394,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1402,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1410,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1418,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1464,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1476,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1546,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1554,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1562,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1574,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1670,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current primary key that clients can use to authenticate with Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1678,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The current secondary key that clients can use to authenticate with Redis cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1690,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current primary key that clients can use to authenticate with Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1698,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The current secondary key that clients can use to authenticate with Redis cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1800,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ismaster_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance is a master node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1808,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nonsslport_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Ssl<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If enableNonSslPort is true, provides Redis instance Non-SSL port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1816,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shardid_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}If clustering is enabled, the Shard ID of Redis Instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1824,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sslport_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Redis instance SSL port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1832,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If the Cache uses availability zones, specifies availability zone where this instance is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1844,7 +1875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_master_python" style="color: inherit; text-decoration: inherit;">is_<wbr>master</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance is a master node.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1852,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#non_ssl_port_python" style="color: inherit; text-decoration: inherit;">non_<wbr>ssl_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If enableNonSslPort is true, provides Redis instance Non-SSL port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1860,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shard_id_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}If clustering is enabled, the Shard ID of Redis Instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1868,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ssl_port_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Redis instance SSL port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1876,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If the Cache uses availability zones, specifies availability zone where this instance is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1914,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Linked server Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1926,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Linked server Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1996,7 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2004,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skufamily">Sku<wbr>Family</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skufamily">pulumi.<wbr>Input<Sku<wbr>Family></a></span>
     </dt>
     <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2012,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
     </dt>
     <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2024,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2032,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skufamily">Sku<wbr>Family</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skufamily">Input[Sku<wbr>Family]</a></span>
     </dt>
     <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2040,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
     </dt>
     <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2182,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2190,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2198,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2210,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2218,7 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2226,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium){{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -64,7 +64,7 @@ package main
 
 import (
 	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -155,19 +155,30 @@ const user = new azure_native.databoxedge.User("user", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserType]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AsymmetricEncryptedSecretArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+         <span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, UserType]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,22 +213,32 @@ const user = new azure_native.databoxedge.User("user", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -393,7 +414,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -401,7 +422,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -409,7 +430,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usertype">User<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#usertype">pulumi.<wbr>Input<User<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -417,7 +438,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">pulumi.<wbr>Input<Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The password details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +446,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The user name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -437,7 +458,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -445,7 +466,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -453,7 +474,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#usertype">User<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#usertype">Input[User<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Type of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -461,7 +482,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#asymmetricencryptedsecret">Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args</a></span>
+        <span class="property-type"><a href="#asymmetricencryptedsecret">Input[Asymmetric<wbr>Encrypted<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The password details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -469,7 +490,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The user name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -700,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encryptionalgorithm">pulumi.<wbr>Input<Encryption<wbr>Algorithm></a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -708,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -728,7 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encryptionalgorithm">Encryption<wbr>Algorithm</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encryptionalgorithm">Input[Encryption<wbr>Algorithm]</a></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -736,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -822,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptioncertthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Cert<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -842,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The algorithm used to encrypt "Value".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -850,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the secret.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_cert_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>cert_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Thumbprint certificate used to encrypt \"Value\". If the value is unencrypted, it will be null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -942,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -950,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The share ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -962,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -970,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The share ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1088,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1140,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

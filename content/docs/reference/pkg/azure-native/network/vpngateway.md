@@ -146,7 +146,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -388,19 +388,36 @@ const vpnGateway = new azure_native.network.VpnGateway("vpnGateway", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[BgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_routing_preference_internet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayNatRuleArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BgpSettingsArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnConnectionArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">is_routing_preference_internet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">nat_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnGatewayNatRuleArgs]]]]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+               <span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubResourceArgs]]</span> = None<span class="p">,</span>
+               <span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -435,22 +452,32 @@ const vpnGateway = new azure_native.network.VpnGateway("vpnGateway", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VpnGatewayArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -722,7 +749,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource group name of the VpnGateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -730,7 +757,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#bgpsettings">pulumi.<wbr>Input<Bgp<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +765,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnection">Vpn<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#vpnconnection">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Connection<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all vpn connections to the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -746,7 +773,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#gatewayname_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +781,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +789,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#isroutingpreferenceinternet_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Routing<wbr>Preference<wbr>Internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the VpnGateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +797,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +805,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#natrules_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaynatrule">Vpn<wbr>Gateway<wbr>Nat<wbr>Rule[]</a></span>
+        <span class="property-type"><a href="#vpngatewaynatrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Nat<wbr>Rule<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all the nat Rules associated with the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +813,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +821,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtualhub_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The VirtualHub to which the gateway belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +829,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpngatewayscaleunit_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Scale<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The scale unit for this vpn gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -814,7 +841,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource group name of the VpnGateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +849,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#bgpsettings">Input[Bgp<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +857,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnconnection">Sequence[Vpn<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnconnection">Input[Vpn<wbr>Connection<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn connections to the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +865,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#gateway_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +873,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +881,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#is_routing_preference_internet_python" style="color: inherit; text-decoration: inherit;">is_<wbr>routing_<wbr>preference_<wbr>internet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the VpnGateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +889,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +897,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#nat_rules_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaynatrule">Sequence[Vpn<wbr>Gateway<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpngatewaynatrule">Input[Vpn<wbr>Gateway<wbr>Nat<wbr>Rule<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all the nat Rules associated with the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +905,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +913,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The VirtualHub to which the gateway belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +921,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#vpn_gateway_scale_unit_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>scale_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The scale unit for this vpn gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address[]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">pulumi.<wbr>Input<pulumi.<wbr>Input<IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1241,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1249,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Input[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1359,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1367,7 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1387,7 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Input[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1515,7 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1523,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1535,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1543,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1629,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultbgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1637,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tunnelipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1673,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2023,7 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#dhgroup">Dh<wbr>Group</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#dhgroup">pulumi.<wbr>Input<Dh<wbr>Group></a></span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ikeencryption">Ike<wbr>Encryption</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ikeencryption">pulumi.<wbr>Input<Ike<wbr>Encryption></a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2039,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ikeintegrity">Ike<wbr>Integrity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ikeintegrity">pulumi.<wbr>Input<Ike<wbr>Integrity></a></span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2047,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipsecencryption">Ipsec<wbr>Encryption</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipsecencryption">pulumi.<wbr>Input<Ipsec<wbr>Encryption></a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2055,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ipsecintegrity">Ipsec<wbr>Integrity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipsecintegrity">pulumi.<wbr>Input<Ipsec<wbr>Integrity></a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2063,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#pfsgroup">Pfs<wbr>Group</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#pfsgroup">pulumi.<wbr>Input<Pfs<wbr>Group></a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2071,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2079,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2091,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#dhgroup">Dh<wbr>Group</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#dhgroup">Input[Dh<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2099,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ikeencryption">Ike<wbr>Encryption</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ikeencryption">Input[Ike<wbr>Encryption]</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2107,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ikeintegrity">Ike<wbr>Integrity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ikeintegrity">Input[Ike<wbr>Integrity]</a></span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2115,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipsecencryption">Ipsec<wbr>Encryption</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipsecencryption">Input[Ipsec<wbr>Encryption]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2123,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ipsecintegrity">Ipsec<wbr>Integrity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipsecintegrity">Input[Ipsec<wbr>Integrity]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2131,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#pfsgroup">Pfs<wbr>Group</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#pfsgroup">Input[Pfs<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2139,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sa_life_time_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>life_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2297,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2305,7 +2332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2313,7 +2340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2321,7 +2348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2329,7 +2356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2337,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2345,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2353,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Life<wbr>Time<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2365,7 +2392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2373,7 +2400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2381,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2389,7 +2416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2397,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2405,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for new child SA.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2413,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2421,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sa_life_time_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>life_<wbr>time_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2529,7 +2556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2549,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2631,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of resource ids of all the RouteTables.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2639,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2709,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">pulumi.<wbr>Input<Propagated<wbr>Route<wbr>Table<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route</a></span>
+        <span class="property-type"><a href="#vnetroute">pulumi.<wbr>Input<Vnet<wbr>Route<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2737,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetable">Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetable">Input[Propagated<wbr>Route<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetroute">Vnet<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetroute">Input[Vnet<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2823,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2831,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">pulumi.<wbr>Input<Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2839,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnetroutes_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">pulumi.<wbr>Input<Vnet<wbr>Route<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2851,7 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The resource id RouteTable associated with this RoutingConfiguration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propagatedroutetableresponse">Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#propagatedroutetableresponse">Input[Propagated<wbr>Route<wbr>Table<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of RouteTables to advertise the routes to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2867,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vnet_routes_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnetrouteresponse">Vnet<wbr>Route<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vnetrouteresponse">Input[Vnet<wbr>Route<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routes that control routing from VirtualHub into a virtual network connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2937,7 +2964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2945,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2965,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +3008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3051,7 +3078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3059,7 +3086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3067,7 +3094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nexthopipaddress_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of all address prefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3087,7 +3114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the StaticRoute that is unique within a VnetRoute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#next_hop_ip_address_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ip address of the next hop.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3133,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3145,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3183,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3195,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3249,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3257,7 +3284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3269,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3277,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3331,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3339,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteaddressranges_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3351,7 +3378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_address_ranges_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A collection of local address spaces in CIDR format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3359,7 +3386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_address_ranges_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A collection of remote address spaces in CIDR format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3423,7 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">Static<wbr>Route[]</a></span>
+        <span class="property-type"><a href="#staticroute">pulumi.<wbr>Input<pulumi.<wbr>Input<Static<wbr>Route<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3435,7 +3462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticroute">Sequence[Static<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#staticroute">Input[Static<wbr>Route<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3473,7 +3500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#staticroutes_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Static<wbr>Route<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Static<wbr>Route<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3485,7 +3512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#static_routes_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#staticrouteresponse">Sequence[Static<wbr>Route<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#staticrouteresponse">Input[Static<wbr>Route<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3779,7 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3787,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}DPD timeout in seconds for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3803,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableinternetsecurity_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableratelimiting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rate<wbr>Limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3819,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3827,7 +3854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Ipsec<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3835,7 +3862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotevpnsite_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#routingconfiguration">pulumi.<wbr>Input<Routing<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3867,7 +3894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3875,7 +3902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicy">Traffic<wbr>Selector<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Selector<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3883,7 +3910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnconnectionprotocoltype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#virtualnetworkgatewayconnectionprotocol">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol></a></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3907,7 +3934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnlinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkconnection">Vpn<wbr>Site<wbr>Link<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#vpnsitelinkconnection">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site link connections to the gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3919,7 +3946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3927,7 +3954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}DPD timeout in seconds for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3935,7 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3943,7 +3970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_internet_security_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3951,7 +3978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_rate_limiting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rate_<wbr>limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3959,7 +3986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3967,7 +3994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Sequence[Ipsec<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Input[Ipsec<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3975,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3983,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_vpn_site_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>vpn_<wbr>site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3991,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfiguration">Routing<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfiguration">Input[Routing<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3999,7 +4026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4007,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicy">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicy">Input[Traffic<wbr>Selector<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4023,7 +4050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4031,7 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4039,7 +4066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_connection_protocol_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>protocol_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#virtualnetworkgatewayconnectionprotocol">Input[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4047,7 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_link_connections_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkconnection">Sequence[Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnsitelinkconnection">Input[Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site link connections to the gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4421,7 +4448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4429,7 +4456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4437,7 +4464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4445,7 +4472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4453,7 +4480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN connection resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4461,7 +4488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4469,7 +4496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}DPD timeout in seconds for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4477,7 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4485,7 +4512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableinternetsecurity_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4493,7 +4520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableratelimiting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rate<wbr>Limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4501,7 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4509,7 +4536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ipsec<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4517,7 +4544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4525,7 +4552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotevpnsite_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4533,7 +4560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">pulumi.<wbr>Input<Routing<wbr>Configuration<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4541,7 +4568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4549,7 +4576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4557,7 +4584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trafficselectorpolicies_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicyresponse">Traffic<wbr>Selector<wbr>Policy<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Traffic<wbr>Selector<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4565,7 +4592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4573,7 +4600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4581,7 +4608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnconnectionprotocoltype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4589,7 +4616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnlinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkconnectionresponse">Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#vpnsitelinkconnectionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site link connections to the gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4601,7 +4628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4609,7 +4636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4617,7 +4644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4625,7 +4652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4633,7 +4660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN connection resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4641,7 +4668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4649,7 +4676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}DPD timeout in seconds for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4657,7 +4684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4665,7 +4692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_internet_security_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4673,7 +4700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_rate_limiting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rate_<wbr>limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4681,7 +4708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4689,7 +4716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Input[Ipsec<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4697,7 +4724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4705,7 +4732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_vpn_site_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>vpn_<wbr>site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4713,7 +4740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_configuration_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routingconfigurationresponse">Routing<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#routingconfigurationresponse">Input[Routing<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Routing Configuration indicating the associated and propagated route tables on this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4721,7 +4748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4729,7 +4756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4737,7 +4764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_selector_policies_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trafficselectorpolicyresponse">Sequence[Traffic<wbr>Selector<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#trafficselectorpolicyresponse">Input[Traffic<wbr>Selector<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The Traffic Selector Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4745,7 +4772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4753,7 +4780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4761,7 +4788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_connection_protocol_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>protocol_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4769,7 +4796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_link_connections_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnsitelinkconnectionresponse">Sequence[Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnsitelinkconnectionresponse">Input[Vpn<wbr>Site<wbr>Link<wbr>Connection<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site link connections to the gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4839,7 +4866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identifier of the IP configuration for a VPN Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4847,7 +4874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The private IP address of this IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4855,7 +4882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The public IP address of this IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4867,7 +4894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identifier of the IP configuration for a VPN Gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4875,7 +4902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The private IP address of this IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4883,7 +4910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The public IP address of this IP configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5017,7 +5044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalmappings_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5025,7 +5052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5033,7 +5060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internalmappings_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping[]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5041,7 +5068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5049,7 +5076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vpnnatrulemode">Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#vpnnatrulemode">pulumi.<wbr>Input<Vpn<wbr>Nat<wbr>Rule<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5057,7 +5084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5065,7 +5092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vpnnatruletype">Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#vpnnatruletype">pulumi.<wbr>Input<Vpn<wbr>Nat<wbr>Rule<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5077,7 +5104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_mappings_python" style="color: inherit; text-decoration: inherit;">external_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">Input[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5085,7 +5112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5093,7 +5120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_mappings_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemapping">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">Input[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5101,7 +5128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5109,7 +5136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#vpnnatrulemode">Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#vpnnatrulemode">Input[Vpn<wbr>Nat<wbr>Rule<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5117,7 +5144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5125,7 +5152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#vpnnatruletype">Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#vpnnatruletype">Input[Vpn<wbr>Nat<wbr>Rule<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5323,7 +5350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressvpnsitelinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5331,7 +5358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5339,7 +5366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressvpnsitelinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5347,7 +5374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the NAT Rule resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5355,7 +5382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5363,7 +5390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalmappings_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemappingresponse">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5371,7 +5398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5379,7 +5406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internalmappings_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemappingresponse">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5387,7 +5414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5395,7 +5422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5403,7 +5430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5415,7 +5442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_vpn_site_link_connections_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>vpn_<wbr>site_<wbr>link_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5423,7 +5450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5431,7 +5458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_vpn_site_link_connections_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>vpn_<wbr>site_<wbr>link_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5439,7 +5466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the NAT Rule resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5447,7 +5474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5455,7 +5482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_mappings_python" style="color: inherit; text-decoration: inherit;">external_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemappingresponse">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">Input[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5463,7 +5490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5471,7 +5498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#internal_mappings_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnnatrulemappingresponse">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">Input[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5479,7 +5506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5487,7 +5514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5495,7 +5522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5563,7 +5590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5575,7 +5602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5613,7 +5640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5625,7 +5652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5939,7 +5966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5947,7 +5974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5955,7 +5982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5963,7 +5990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableratelimiting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rate<wbr>Limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5971,7 +5998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5979,7 +6006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5987,7 +6014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Ipsec<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Ipsec<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5995,7 +6022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6003,7 +6030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6011,7 +6038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6019,7 +6046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6027,7 +6054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6035,7 +6062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnconnectionprotocoltype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#virtualnetworkgatewayconnectionprotocol">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol></a></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6043,7 +6070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnlinkconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#vpnlinkconnectionmode">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#vpnlinkconnectionmode">pulumi.<wbr>Input<Vpn<wbr>Link<wbr>Connection<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6051,7 +6078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnsitelink_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6063,7 +6090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6071,7 +6098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_nat_rules_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6079,7 +6106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6087,7 +6114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_rate_limiting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rate_<wbr>limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6095,7 +6122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6103,7 +6130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_nat_rules_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6111,7 +6138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicy">Sequence[Ipsec<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicy">Input[Ipsec<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6119,7 +6146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6127,7 +6154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6135,7 +6162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6143,7 +6170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6151,7 +6178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6159,7 +6186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_connection_protocol_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>protocol_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#virtualnetworkgatewayconnectionprotocol">Input[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6167,7 +6194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_link_connection_mode_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connection_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#vpnlinkconnectionmode">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#vpnlinkconnectionmode">Input[Vpn<wbr>Link<wbr>Connection<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6175,7 +6202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_site_link_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6533,7 +6560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6541,7 +6568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6549,7 +6576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6557,7 +6584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6565,7 +6592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site link connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6573,7 +6600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6581,7 +6608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6589,7 +6616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6597,7 +6624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6605,7 +6632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enableratelimiting_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rate<wbr>Limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6613,7 +6640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6621,7 +6648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6629,7 +6656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Ipsec<wbr>Policy<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ipsec<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6637,7 +6664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6645,7 +6672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6653,7 +6680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6661,7 +6688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uselocalazureipaddress_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Local<wbr>Azure<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6669,7 +6696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6677,7 +6704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnconnectionprotocoltype_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6685,7 +6712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnlinkconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6693,7 +6720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpnsitelink_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6705,7 +6732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The connection status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6713,7 +6740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6721,7 +6748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6729,7 +6756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6737,7 +6764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site link connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6745,7 +6772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6753,7 +6780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_bandwidth_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6761,7 +6788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_nat_rules_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6769,7 +6796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6777,7 +6804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_rate_limiting_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rate_<wbr>limiting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}EnableBgp flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6785,7 +6812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6793,7 +6820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_nat_rules_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6801,7 +6828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicyresponse">Sequence[Ipsec<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipsecpolicyresponse">Input[Ipsec<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Policies to be considered by this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6809,7 +6836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6817,7 +6844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Routing weight for vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6825,7 +6852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}SharedKey for the vpn connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6833,7 +6860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_local_azure_ip_address_python" style="color: inherit; text-decoration: inherit;">use_<wbr>local_<wbr>azure_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Use local azure ip to initiate connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6841,7 +6868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Enable policy-based traffic selectors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6849,7 +6876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_connection_protocol_type_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>protocol_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6857,7 +6884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_link_connection_mode_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connection_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6865,7 +6892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vpn_site_link_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd></dl>
 {{% /choosable %}}

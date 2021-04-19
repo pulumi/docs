@@ -63,7 +63,7 @@ package main
 
 import (
 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -151,19 +151,30 @@ const solution = new azure_native.migrate.Solution("solution", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migrate_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SolutionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">migrate_project_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SolutionPropertiesArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Solution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Solution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Solution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -198,22 +209,32 @@ const solution = new azure_native.migrate.Solution("solution", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SolutionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -389,7 +410,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#migrateprojectname_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -397,7 +418,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -405,7 +426,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the ETAG for optimistic concurrency control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -413,7 +434,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties</a></span>
+        <span class="property-type"><a href="#solutionproperties">pulumi.<wbr>Input<Solution<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +442,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#solutionname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -433,7 +454,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#migrate_project_name_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -441,7 +462,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -449,7 +470,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the ETAG for optimistic concurrency control.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -457,7 +478,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutionproperties">Solution<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutionproperties">Input[Solution<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the properties of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -465,7 +486,7 @@ The Solution resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#solution_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databaseinstancesassessedcount_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Instances<wbr>Assessed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of database instances assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databasesassessedcount_nodejs" style="color: inherit; text-decoration: inherit;">databases<wbr>Assessed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of databases assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationreadycount_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Ready<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of databases ready for migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -692,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#database_instances_assessed_count_python" style="color: inherit; text-decoration: inherit;">database_<wbr>instances_<wbr>assessed_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of database instances assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#databases_assessed_count_python" style="color: inherit; text-decoration: inherit;">databases_<wbr>assessed_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of databases assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_ready_count_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>ready_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of databases ready for migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -810,7 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessedcount_nodejs" style="color: inherit; text-decoration: inherit;">assessed<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoveredcount_nodejs" style="color: inherit; text-decoration: inherit;">discovered<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -826,7 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migratedcount_nodejs" style="color: inherit; text-decoration: inherit;">migrated<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers migrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -834,7 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicatingcount_nodejs" style="color: inherit; text-decoration: inherit;">replicating<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers being replicated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#testmigratedcount_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Migrated<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers test migrated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -854,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessed_count_python" style="color: inherit; text-decoration: inherit;">assessed_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers assessed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovered_count_python" style="color: inherit; text-decoration: inherit;">discovered_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers discovered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrated_count_python" style="color: inherit; text-decoration: inherit;">migrated_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers migrated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicating_count_python" style="color: inherit; text-decoration: inherit;">replicating_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers being replicated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#test_migrated_count_python" style="color: inherit; text-decoration: inherit;">test_<wbr>migrated_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of servers test migrated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -956,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmentcount_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendeddetails_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcount_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -984,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessment_count_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_details_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1000,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_count_python" style="color: inherit; text-decoration: inherit;">group_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1070,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessmentcount_nodejs" style="color: inherit; text-decoration: inherit;">assessment<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendeddetails_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupcount_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1098,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assessment_count_python" style="color: inherit; text-decoration: inherit;">assessment_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of assessments reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1106,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_details_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the extended details reported by the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_count_python" style="color: inherit; text-decoration: inherit;">group_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the count of groups reported by the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1232,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleanupstate_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details</a></span>
+        <span class="property-type"><a href="#solutiondetails">pulumi.<wbr>Input<Solution<wbr>Details<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1272,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_nodejs" style="color: inherit; text-decoration: inherit;">tool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1284,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleanup_state_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1292,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetails">Solution<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetails">Input[Solution<wbr>Details<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1300,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1308,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1316,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1324,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_python" style="color: inherit; text-decoration: inherit;">tool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1458,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleanupstate_nodejs" style="color: inherit; text-decoration: inherit;">cleanup<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">pulumi.<wbr>Input<Solution<wbr>Details<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1474,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1482,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1490,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1498,7 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">pulumi.<wbr>Input<Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args></a> | <a href="#serverssolutionsummaryresponse">pulumi.<wbr>Input<Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1506,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_nodejs" style="color: inherit; text-decoration: inherit;">tool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1518,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cleanup_state_python" style="color: inherit; text-decoration: inherit;">cleanup_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the cleanup state of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1526,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Input[Solution<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the goal of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1542,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the purpose of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the current status of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1558,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Input[Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args]</a> | <a href="#serverssolutionsummaryresponse">Input[Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tool_python" style="color: inherit; text-decoration: inherit;">tool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the tool being used in the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}

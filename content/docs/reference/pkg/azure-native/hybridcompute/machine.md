@@ -67,7 +67,7 @@ package main
 
 import (
 	hybridcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridcompute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -164,19 +164,33 @@ const machine = new azure_native.hybridcompute.Machine("machine", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[MachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location_data</span><span class="p">:</span> <span class="nx">Optional[LocationDataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">client_public_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MachineIdentityArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">location_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LocationDataArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">vm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Machine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Machine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Machine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +225,32 @@ const machine = new azure_native.hybridcompute.Machine("machine", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">MachineArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -450,7 +474,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +482,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientpublickey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +490,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineidentity">Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#machineidentity">pulumi.<wbr>Input<Machine<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +498,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +506,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#locationdata_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationdata">Location<wbr>Data</a></span>
+        <span class="property-type"><a href="#locationdata">pulumi.<wbr>Input<Location<wbr>Data<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +514,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +522,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +530,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -518,7 +542,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +550,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_public_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Public Key that the client provides to be used during initial resource onboarding{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +558,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineidentity">Machine<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineidentity">Input[Machine<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +566,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +574,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_data_python" style="color: inherit; text-decoration: inherit;">location_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#locationdata">Location<wbr>Data<wbr>Args</a></span>
+        <span class="property-type"><a href="#locationdata">Input[Location<wbr>Data<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to the geographic location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +582,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the hybrid machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +590,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +598,7 @@ The Machine resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vm_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the hybrid machine unique ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1269,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The error's code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1277,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A human readable error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Error<wbr>Detail<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1305,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The error's code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1313,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A human readable error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Input[Error<wbr>Detail<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Additional error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1329,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates which property in the request is responsible for the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#district_nodejs" style="color: inherit; text-decoration: inherit;">district</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1451,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1467,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#district_python" style="color: inherit; text-decoration: inherit;">district</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countryorregion_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Or<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#district_nodejs" style="color: inherit; text-decoration: inherit;">district</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1597,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A canonical name for the geographic or physical location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The city or locality where the resource is located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_or_region_python" style="color: inherit; text-decoration: inherit;">country_<wbr>or_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country or region where the resource is located{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#district_python" style="color: inherit; text-decoration: inherit;">district</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1707,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1715,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1723,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1731,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">pulumi.<wbr>Input<Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1743,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Input[Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1869,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1877,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1885,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1893,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1901,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1913,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1921,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1929,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1937,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1945,7 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1983,7 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1995,7 +2019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2033,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2045,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the host OS name of the hybrid machine.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2115,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2123,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2131,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2143,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity's principal id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2151,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity's tenant id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -121,7 +121,7 @@ package main
 
 import (
 	customerinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customerinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -353,19 +353,43 @@ const profile = new azure_native.customerinsights.Profile("profile", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_entity_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Sequence[str]]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[EntityTypes]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[PropertyDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">large_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">localized_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">medium_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_item_type_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">small_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">strong_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[StrongIdArgs]]</span> = None<span class="p">, </span><span class="nx">timestamp_field_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">api_entity_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[Sequence[pulumi.Input[str]]]]]]</span> = None<span class="p">,</span>
+            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+            <span class="nx">entity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EntityTypes]]</span> = None<span class="p">,</span>
+            <span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PropertyDefinitionArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">instances_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+            <span class="nx">large_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">localized_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[Mapping[str, pulumi.Input[str]]]]]]</span> = None<span class="p">,</span>
+            <span class="nx">medium_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">schema_item_type_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">small_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">strong_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StrongIdArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">timestamp_field_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Profile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Profile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -400,22 +424,32 @@ const profile = new azure_native.customerinsights.Profile("profile", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ProfileArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -799,7 +833,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -807,7 +841,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +849,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#apientitysetname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Entity<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -823,7 +857,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string[]}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
     </dt>
     <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +865,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +873,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +881,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">pulumi.<wbr>Input<Entity<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +889,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinition">Property<wbr>Definition[]</a></span>
+        <span class="property-type"><a href="#propertydefinition">pulumi.<wbr>Input<pulumi.<wbr>Input<Property<wbr>Definition<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +897,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#instancescount_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +905,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#largeimage_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -879,7 +913,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#localizedattributes_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: {[key: string]: string}}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}>}></span>
     </dt>
     <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -887,7 +921,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#mediumimage_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +929,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +937,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schemaitemtypelink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Type<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -911,7 +945,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#smallimage_nodejs" style="color: inherit; text-decoration: inherit;">small<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -919,7 +953,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#strongids_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#strongid">Strong<wbr>Id[]</a></span>
+        <span class="property-type"><a href="#strongid">pulumi.<wbr>Input<pulumi.<wbr>Input<Strong<wbr>Id<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -927,7 +961,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#timestampfieldname_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -935,7 +969,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -947,7 +981,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -955,7 +989,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +997,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#api_entity_set_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>entity_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +1005,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Sequence[str]]</span>
+        <span class="property-type">Input[str]]]]]</span>
     </dt>
     <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +1013,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +1021,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +1029,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitytypes">Entity<wbr>Types</a></span>
+        <span class="property-type"><a href="#entitytypes">Input[Entity<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +1037,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#propertydefinition">Sequence[Property<wbr>Definition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#propertydefinition">Input[Property<wbr>Definition<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +1045,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#instances_count_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +1053,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#large_image_python" style="color: inherit; text-decoration: inherit;">large_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1061,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#localized_attributes_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Mapping[str, str]]</span>
+        <span class="property-type">Input[str]]]]]</span>
     </dt>
     <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1069,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#medium_image_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1077,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1085,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#schema_item_type_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>type_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1093,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#small_image_python" style="color: inherit; text-decoration: inherit;">small_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1101,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#strong_ids_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#strongid">Sequence[Strong<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#strongid">Input[Strong<wbr>Id<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1109,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#timestamp_field_name_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1117,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1426,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data source reference id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1434,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1442,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1450,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data source name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1458,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The data source status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1466,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1478,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_reference_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data source reference id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1486,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data source type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1494,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1502,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data source name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1510,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The data source status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1518,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1606,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localizedvaluenames_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Value<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1626,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localized_value_names_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>value_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1688,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localizedvaluenames_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Value<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1696,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1708,7 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localized_value_names_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>value_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1716,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1978,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1986,7 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1994,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayvalueseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Value<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format[]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">pulumi.<wbr>Input<pulumi.<wbr>Input<Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isarray_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Array</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isavailableingraph_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Available<wbr>In<wbr>Graph</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2034,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isflagenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Flag<wbr>Enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2042,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isimage_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2050,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islocalizedstring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Localized<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isname_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2082,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertyid_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaitemproplink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Prop<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2102,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2110,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2118,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_value_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>value_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformat">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformat">Input[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_array_python" style="color: inherit; text-decoration: inherit;">is_<wbr>array</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_available_in_graph_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available_<wbr>in_<wbr>graph</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2158,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_flag_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>flag_<wbr>enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_image_python" style="color: inherit; text-decoration: inherit;">is_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_localized_string_python" style="color: inherit; text-decoration: inherit;">is_<wbr>localized_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_name_python" style="color: inherit; text-decoration: inherit;">is_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2190,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2198,7 +2232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2206,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2214,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_item_prop_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>prop_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2492,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourceprecedencerules_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Precedence<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2500,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2508,7 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2516,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arrayvalueseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Value<wbr>Separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2524,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2532,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isarray_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Array</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2540,7 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isavailableingraph_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Available<wbr>In<wbr>Graph</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2548,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2556,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isflagenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Flag<wbr>Enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isimage_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islocalizedstring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Localized<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2580,7 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isname_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2588,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2596,7 +2630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2604,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertyid_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2612,7 +2646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schemaitemproplink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Prop<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2624,7 +2658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_source_precedence_rules_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>precedence_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceprecedenceresponse">Input[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2632,7 +2666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2640,7 +2674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2648,7 +2682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#array_value_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>value_<wbr>separator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2656,7 +2690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Input[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2664,7 +2698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_array_python" style="color: inherit; text-decoration: inherit;">is_<wbr>array</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2672,7 +2706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_available_in_graph_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available_<wbr>in_<wbr>graph</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_flag_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>flag_<wbr>enum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_image_python" style="color: inherit; text-decoration: inherit;">is_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_localized_string_python" style="color: inherit; text-decoration: inherit;">is_<wbr>localized_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_name_python" style="color: inherit; text-decoration: inherit;">is_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2720,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2728,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2736,7 +2770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2744,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_item_prop_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>prop_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2830,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keypropertynames_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Property<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2838,7 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strongidname_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Id<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2846,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2854,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2866,7 +2900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_property_names_python" style="color: inherit; text-decoration: inherit;">key_<wbr>property_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2874,7 +2908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strong_id_name_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>id_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2882,7 +2916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2890,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2976,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keypropertynames_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Property<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2984,7 +3018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strongidname_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Id<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2992,7 +3026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3000,7 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3012,7 +3046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_property_names_python" style="color: inherit; text-decoration: inherit;">key_<wbr>property_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3020,7 +3054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#strong_id_name_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>id_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3028,7 +3062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3036,7 +3070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

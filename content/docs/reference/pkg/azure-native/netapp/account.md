@@ -72,7 +72,7 @@ package main
 
 import (
 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -180,19 +180,31 @@ const account = new azure_native.netapp.Account("account", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">active_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[ActiveDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[AccountEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+            <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">active_directories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ActiveDirectoryArgs]]]]</span> = None<span class="p">,</span>
+            <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountEncryptionArgs]]</span> = None<span class="p">,</span>
+            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -227,22 +239,32 @@ const account = new azure_native.netapp.Account("account", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,7 +456,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -442,7 +464,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -450,7 +472,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#activedirectories_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectory">Active<wbr>Directory[]</a></span>
+        <span class="property-type"><a href="#activedirectory">pulumi.<wbr>Input<pulumi.<wbr>Input<Active<wbr>Directory<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Active Directories{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -458,7 +480,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountencryption">Account<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#accountencryption">pulumi.<wbr>Input<Account<wbr>Encryption<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Encryption settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -466,7 +488,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -474,7 +496,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -486,7 +508,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +516,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +524,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#active_directories_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activedirectory">Sequence[Active<wbr>Directory<wbr>Args]</a></span>
+        <span class="property-type"><a href="#activedirectory">Input[Active<wbr>Directory<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Active Directories{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +532,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountencryption">Account<wbr>Encryption<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountencryption">Input[Account<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encryption settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +540,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -526,7 +548,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -757,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -769,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -807,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -819,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adname_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the active directory machine. This optional parameter is used only while creating kerberos volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aesencryption_nodejs" style="color: inherit; text-decoration: inherit;">aes<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowlocalnfsuserswithldap_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdcip_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapovertls_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Over<wbr>TLS</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be secured via TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapsigning_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Organizational Unit (OU) within the Windows Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Plain text password of Active Directory domain administrator, value is masked in the response{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityoperators_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverrootcacertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>CACertificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_nodejs" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Active Directory site the service will limit Domain Controller discovery to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smbservername_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username of Active Directory domain administrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1253,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ad_name_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the active directory machine. This optional parameter is used only while creating kerberos volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aes_encryption_python" style="color: inherit; text-decoration: inherit;">aes_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_local_nfs_users_with_ldap_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>local_<wbr>nfs_<wbr>users_<wbr>with_<wbr>ldap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdc_ip_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_over_tls_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>over_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be secured via TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1325,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_signing_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Organizational Unit (OU) within the Windows Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Plain text password of Active Directory domain administrator, value is masked in the response{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_operators_python" style="color: inherit; text-decoration: inherit;">security_<wbr>operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1357,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_root_ca_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Active Directory site the service will limit Domain Controller discovery to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_server_name_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username of Active Directory domain administrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1707,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Status of the Active Directory{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1715,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusdetails_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Any details in regards to the Status of the Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1723,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectoryid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Id of the Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1731,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adname_nodejs" style="color: inherit; text-decoration: inherit;">ad<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the active directory machine. This optional parameter is used only while creating kerberos volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aesencryption_nodejs" style="color: inherit; text-decoration: inherit;">aes<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowlocalnfsuserswithldap_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Local<wbr>Nfs<wbr>Users<wbr>With<wbr>Ldap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupoperators_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdcip_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapovertls_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Over<wbr>TLS</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be secured via TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapsigning_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Organizational Unit (OU) within the Windows Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Plain text password of Active Directory domain administrator, value is masked in the response{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securityoperators_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1827,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverrootcacertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>CACertificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_nodejs" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Active Directory site the service will limit Domain Controller discovery to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1843,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smbservername_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Username of Active Directory domain administrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1863,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Status of the Active Directory{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1871,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_details_python" style="color: inherit; text-decoration: inherit;">status_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Any details in regards to the Status of the Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Id of the Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ad_name_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the active directory machine. This optional parameter is used only while creating kerberos volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aes_encryption_python" style="color: inherit; text-decoration: inherit;">aes_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}If enabled, AES encryption will be enabled for SMB communication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_local_nfs_users_with_ldap_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>local_<wbr>nfs_<wbr>users_<wbr>with_<wbr>ldap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}} If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1911,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_operators_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the Active Directory domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kdc_ip_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1943,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_over_tls_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>over_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be secured via TLS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1951,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_signing_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>signing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the LDAP traffic needs to be signed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Organizational Unit (OU) within the Windows Active Directory{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Plain text password of Active Directory domain administrator, value is masked in the response{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_operators_python" style="color: inherit; text-decoration: inherit;">security_<wbr>operators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_root_ca_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>ca_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#site_python" style="color: inherit; text-decoration: inherit;">site</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Active Directory site the service will limit Domain Controller discovery to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_server_name_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Username of Active Directory domain administrator{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2125,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2141,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2149,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2157,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2193,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2201,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2217,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

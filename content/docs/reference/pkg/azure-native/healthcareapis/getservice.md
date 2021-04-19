@@ -22,17 +22,19 @@ API Version: 2021-01-11.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupService` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2021-01-11.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -508,7 +510,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -532,7 +534,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +666,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -688,7 +690,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1416,7 +1418,7 @@ The following output properties are available:
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1426,7 @@ The following output properties are available:
 <a href="#acrconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1434,7 @@ The following output properties are available:
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1442,7 @@ The following output properties are available:
 <a href="#corsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1448,7 +1450,7 @@ The following output properties are available:
 <a href="#cosmosdbconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cosmos<wbr>Db<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1456,7 +1458,7 @@ The following output properties are available:
 <a href="#exportconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1464,7 +1466,7 @@ The following output properties are available:
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Healthcare<wbr>Apis.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1644,7 +1646,7 @@ The following output properties are available:
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceaccesspolicyentryresponse">Sequence[Service<wbr>Access<wbr>Policy<wbr>Entry<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The access policies of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1652,7 +1654,7 @@ The following output properties are available:
 <a href="#acr_configuration_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceacrconfigurationinforesponse">Service<wbr>Acr<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The azure container registry settings used for convert data operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1662,7 @@ The following output properties are available:
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfigurationinforesponse">Service<wbr>Authentication<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration for the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1668,7 +1670,7 @@ The following output properties are available:
 <a href="#cors_configuration_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecorsconfigurationinforesponse">Service<wbr>Cors<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the CORS configuration of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1676,7 +1678,7 @@ The following output properties are available:
 <a href="#cosmos_db_configuration_python" style="color: inherit; text-decoration: inherit;">cosmos_<wbr>db_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicecosmosdbconfigurationinforesponse">Service<wbr>Cosmos<wbr>Db<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the Cosmos DB database backing the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1684,7 +1686,7 @@ The following output properties are available:
 <a href="#export_configuration_python" style="color: inherit; text-decoration: inherit;">export_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serviceexportconfigurationinforesponse">Service<wbr>Export<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The settings for the export operation of the service instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1694,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of private endpoint connections that are set up for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -67,7 +67,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -167,19 +167,43 @@ const galleryImage = new azure_native.compute.GalleryImage("galleryImage", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[DisallowedArgs]</span> = None<span class="p">, </span><span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[GalleryImageFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[GalleryImageIdentifierArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemStateTypes]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[ImagePurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[RecommendedMachineConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">disallowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DisallowedArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">end_of_life_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">eula</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GalleryImageFeatureArgs]]]]</span> = None<span class="p">,</span>
+                 <span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, HyperVGeneration]]]</span> = None<span class="p">,</span>
+                 <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GalleryImageIdentifierArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">os_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OperatingSystemStateTypes]]</span> = None<span class="p">,</span>
+                 <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OperatingSystemTypes]]</span> = None<span class="p">,</span>
+                 <span class="nx">privacy_statement_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ImagePurchasePlanArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">recommended</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RecommendedMachineConfigurationArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">release_note_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GalleryImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,22 +238,32 @@ const galleryImage = new azure_native.compute.GalleryImage("galleryImage", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">GalleryImageArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -613,7 +647,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#galleryname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -621,7 +655,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier</a></span>
+        <span class="property-type"><a href="#galleryimageidentifier">pulumi.<wbr>Input<Gallery<wbr>Image<wbr>Identifier<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -629,7 +663,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#osstate_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemstatetypes">Operating<wbr>System<wbr>State<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemstatetypes">pulumi.<wbr>Input<Operating<wbr>System<wbr>State<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -637,7 +671,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">pulumi.<wbr>Input<Operating<wbr>System<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -645,7 +679,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +687,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description of this gallery image definition resource. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +695,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#disallowed_nodejs" style="color: inherit; text-decoration: inherit;">disallowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowed">Disallowed</a></span>
+        <span class="property-type"><a href="#disallowed">pulumi.<wbr>Input<Disallowed<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +703,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#endoflifedate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Of<wbr>Life<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +711,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#eula_nodejs" style="color: inherit; text-decoration: inherit;">eula</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Eula agreement for the gallery image definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +719,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeature">Gallery<wbr>Image<wbr>Feature[]</a></span>
+        <span class="property-type"><a href="#galleryimagefeature">pulumi.<wbr>Input<pulumi.<wbr>Input<Gallery<wbr>Image<wbr>Feature<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +727,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#galleryimagename_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +735,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#hypervgeneration">Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hypervgeneration">pulumi.<wbr>Input<Hyper<wbr>VGeneration></a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +743,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +751,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#privacystatementuri_nodejs" style="color: inherit; text-decoration: inherit;">privacy<wbr>Statement<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The privacy statement uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +759,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan</a></span>
+        <span class="property-type"><a href="#imagepurchaseplan">pulumi.<wbr>Input<Image<wbr>Purchase<wbr>Plan<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +767,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recommended_nodejs" style="color: inherit; text-decoration: inherit;">recommended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfiguration">pulumi.<wbr>Input<Recommended<wbr>Machine<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +775,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#releasenoteuri_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Note<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The release note uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +783,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -761,7 +795,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gallery_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -769,7 +803,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageidentifier">Gallery<wbr>Image<wbr>Identifier<wbr>Args</a></span>
+        <span class="property-type"><a href="#galleryimageidentifier">Input[Gallery<wbr>Image<wbr>Identifier<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is the gallery image definition identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -777,7 +811,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemstatetypes">Operating<wbr>System<wbr>State<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemstatetypes">Input[Operating<wbr>System<wbr>State<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}This property allows the user to specify whether the virtual machines created under this image are 'Generalized' or 'Specialized'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -785,7 +819,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#operatingsystemtypes">Operating<wbr>System<wbr>Types</a></span>
+        <span class="property-type"><a href="#operatingsystemtypes">Input[Operating<wbr>System<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -793,7 +827,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +835,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description of this gallery image definition resource. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +843,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#disallowed_python" style="color: inherit; text-decoration: inherit;">disallowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disallowed">Disallowed<wbr>Args</a></span>
+        <span class="property-type"><a href="#disallowed">Input[Disallowed<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the disallowed disk types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +851,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#end_of_life_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>of_<wbr>life_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +859,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#eula_python" style="color: inherit; text-decoration: inherit;">eula</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Eula agreement for the gallery image definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +867,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimagefeature">Sequence[Gallery<wbr>Image<wbr>Feature<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryimagefeature">Input[Gallery<wbr>Image<wbr>Feature<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of gallery image features.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +875,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gallery_image_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +883,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#hypervgeneration">Hyper<wbr>VGeneration</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hypervgeneration">Input[Hyper<wbr>VGeneration]</a></span>
     </dt>
     <dd>{{% md %}}The hypervisor generation of the Virtual Machine. Applicable to OS disks only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +891,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +899,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#privacy_statement_uri_python" style="color: inherit; text-decoration: inherit;">privacy_<wbr>statement_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The privacy statement uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +907,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagepurchaseplan">Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+        <span class="property-type"><a href="#imagepurchaseplan">Input[Image<wbr>Purchase<wbr>Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the gallery image definition purchase plan. This is used by marketplace images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +915,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recommended_python" style="color: inherit; text-decoration: inherit;">recommended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recommendedmachineconfiguration">Recommended<wbr>Machine<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#recommendedmachineconfiguration">Input[Recommended<wbr>Machine<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +923,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#release_note_uri_python" style="color: inherit; text-decoration: inherit;">release_<wbr>note_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The release note uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +931,7 @@ The GalleryImage resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1096,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktypes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1108,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_types_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disktypes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1158,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_types_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}A list of disk types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1212,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the gallery image feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1232,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the gallery image feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1294,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1302,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The value of the gallery image feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1314,7 +1348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The value of the gallery image feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1392,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1400,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1408,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1420,7 +1454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1428,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1436,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1506,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1514,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1522,7 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1534,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition offer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1542,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1550,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1646,7 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The product ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1674,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The product ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1760,7 +1794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The product ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The plan ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The product ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1910,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
+        <span class="property-type"><a href="#resourcerange">pulumi.<wbr>Input<Resource<wbr>Range<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>CPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range</a></span>
+        <span class="property-type"><a href="#resourcerange">pulumi.<wbr>Input<Resource<wbr>Range<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1930,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Input[Resource<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerange">Resource<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerange">Input[Resource<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1992,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">pulumi.<wbr>Input<Resource<wbr>Range<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>CPUs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">pulumi.<wbr>Input<Resource<wbr>Range<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2012,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Input[Resource<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2020,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#v_cpus_python" style="color: inherit; text-decoration: inherit;">v_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerangeresponse">Resource<wbr>Range<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourcerangeresponse">Input[Resource<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the resource range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2074,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2082,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2094,7 +2128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2102,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2156,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum number of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2164,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The minimum number of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2176,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum number of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The minimum number of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

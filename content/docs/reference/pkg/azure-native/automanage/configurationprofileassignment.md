@@ -63,7 +63,7 @@ package main
 
 import (
 	automanage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automanage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -151,19 +151,29 @@ const configurationProfileAssignment = new azure_native.automanage.Configuration
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">configuration_profile_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConfigurationProfileAssignmentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                   <span class="nx">configuration_profile_assignment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConfigurationProfileAssignmentPropertiesArgs]]</span> = None<span class="p">,</span>
+                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                   <span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p">,</span>
+                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfileAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfileAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfileAssignment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -198,22 +208,32 @@ const configurationProfileAssignment = new azure_native.automanage.Configuration
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfileAssignmentArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -373,7 +393,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -381,7 +401,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#vmname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -389,7 +409,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#configurationprofileassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Assignment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile assignment. Only default is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -397,7 +417,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentproperties">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentproperties">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -409,7 +429,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -417,7 +437,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#vm_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -425,7 +445,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#configuration_profile_assignment_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>assignment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile assignment. Only default is supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -433,7 +453,7 @@ The ConfigurationProfileAssignment resource accepts the following [input]({{< re
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentproperties">Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentproperties">Input[Configuration<wbr>Profile<wbr>Assignment<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile assignment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -626,7 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatestatus_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -638,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#update_status_python" style="color: inherit; text-decoration: inherit;">update_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of compliance, which only appears in the response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -724,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationprofile_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#configurationprofile">Configuration<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#configurationprofile">pulumi.<wbr>Input<Configuration<wbr>Profile></a></span>
     </dt>
     <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationprofilepreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Preference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -760,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_profile_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#configurationprofile">Configuration<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#configurationprofile">Input[Configuration<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_profile_preference_id_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>preference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -902,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliance_nodejs" style="color: inherit; text-decoration: inherit;">compliance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationprofile_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationprofilepreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Preference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -954,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of onboarding, which only appears in the response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Automanage account ARM Resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliance_python" style="color: inherit; text-decoration: inherit;">compliance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileassignmentcomplianceresponse">Input[Configuration<wbr>Profile<wbr>Assignment<wbr>Compliance<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_profile_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A value indicating configuration profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_profile_preference_id_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>preference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The configuration profile custom preferences ARM resource URI{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd></dl>
 {{% /choosable %}}

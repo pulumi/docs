@@ -21,17 +21,20 @@ API Version: 2016-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">job_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">job_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -40,7 +43,7 @@ API Version: 2016-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -595,7 +598,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Basic<wbr>Authentication<wbr>Response</a> | <a href="#clientcertauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Client<wbr>Cert<wbr>Authentication<wbr>Response</a> | <a href="#oauthauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +730,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response<wbr>Args</a> | <a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#basicauthenticationresponse">Basic<wbr>Authentication<wbr>Response</a> | <a href="#clientcertauthenticationresponse">Client<wbr>Cert<wbr>Authentication<wbr>Response</a> | <a href="#oauthauthenticationresponse">OAuth<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the authentication method of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +778,7 @@ The following output properties are available:
 <a href="#erroraction_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Error<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +786,7 @@ The following output properties are available:
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +794,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +802,7 @@ The following output properties are available:
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +810,7 @@ The following output properties are available:
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +818,7 @@ The following output properties are available:
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +958,7 @@ The following output properties are available:
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#joberroractionresponse">Job<wbr>Error<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the error action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +966,7 @@ The following output properties are available:
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +974,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +982,7 @@ The following output properties are available:
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +990,7 @@ The following output properties are available:
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +998,7 @@ The following output properties are available:
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +1022,7 @@ The following output properties are available:
 <a href="#queuemessage_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1030,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1038,7 @@ The following output properties are available:
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1046,7 @@ The following output properties are available:
 <a href="#servicebusqueuemessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Queue<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1054,7 @@ The following output properties are available:
 <a href="#servicebustopicmessage_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Topic<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1178,7 @@ The following output properties are available:
 <a href="#queue_message_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storagequeuemessageresponse">Storage<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the storage queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1186,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#httprequestresponse">Http<wbr>Request<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the http requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1194,7 @@ The following output properties are available:
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#retrypolicyresponse">Retry<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the retry policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1202,7 @@ The following output properties are available:
 <a href="#service_bus_queue_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusqueuemessageresponse">Service<wbr>Bus<wbr>Queue<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus queue message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1210,7 @@ The following output properties are available:
 <a href="#service_bus_topic_message_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebustopicmessageresponse">Service<wbr>Bus<wbr>Topic<wbr>Message<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the service bus topic message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1234,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1242,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1250,7 @@ The following output properties are available:
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1366,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the job status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1374,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobactionresponse">Job<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1382,7 @@ The following output properties are available:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrenceresponse">Job<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the job recurrence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1446,7 @@ The following output properties are available:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1575,7 +1578,7 @@ The following output properties are available:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#jobrecurrencescheduleresponse">Job<wbr>Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1699,7 +1702,7 @@ The following output properties are available:
 <a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1831,7 +1834,7 @@ The following output properties are available:
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobrecurrenceschedulemonthlyoccurrenceresponse">Sequence[Job<wbr>Recurrence<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2851,7 +2854,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2859,7 +2862,7 @@ The following output properties are available:
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3031,7 +3034,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3039,7 +3042,7 @@ The following output properties are available:
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +3098,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3103,7 +3106,7 @@ The following output properties are available:
 <a href="#brokeredmessageproperties_csharp" style="color: inherit; text-decoration: inherit;">Brokered<wbr>Message<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Scheduler.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3278,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusauthenticationresponse">Service<wbr>Bus<wbr>Authentication<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the Service Bus authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3286,7 @@ The following output properties are available:
 <a href="#brokered_message_properties_python" style="color: inherit; text-decoration: inherit;">brokered_<wbr>message_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicebusbrokeredmessagepropertiesresponse">Service<wbr>Bus<wbr>Brokered<wbr>Message<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the brokered message properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

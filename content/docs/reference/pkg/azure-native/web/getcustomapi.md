@@ -22,17 +22,20 @@ API Version: 2016-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomApi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomApiResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomApi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomApiArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomApiResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_api(</span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomApiResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_api(</span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomApiResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCustomApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCustomApiResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomApi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCustomApiArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCustomApiResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCustomApi` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2016-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCustomApi </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomApiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -560,7 +563,7 @@ The following output properties are available:
 <a href="#customparameters_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +743,7 @@ The following output properties are available:
 <a href="#custom_parameters_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Api<wbr>OAuth<wbr>Settings<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}OAuth parameters key is the name of parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +927,7 @@ The following output properties are available:
 <a href="#oauthsettings_csharp" style="color: inherit; text-decoration: inherit;">OAuth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>OAuth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +987,7 @@ The following output properties are available:
 <a href="#o_auth_settings_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apioauthsettingsresponse">Api<wbr>OAuth<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth settings for the connection provider{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1008,7 +1011,7 @@ The following output properties are available:
 <a href="#apidefinitions_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1024,7 +1027,7 @@ The following output properties are available:
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1051,7 @@ The following output properties are available:
 <a href="#connectionparameters_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Parameter<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1099,7 @@ The following output properties are available:
 <a href="#wsdldefinition_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1308,7 +1311,7 @@ The following output properties are available:
 <a href="#api_definitions_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcedefinitionsresponse">Api<wbr>Resource<wbr>Definitions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}API Definitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1324,7 +1327,7 @@ The following output properties are available:
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiresourcebackendserviceresponse">Api<wbr>Resource<wbr>Backend<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The API backend service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1348,7 +1351,7 @@ The following output properties are available:
 <a href="#connection_parameters_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Connection<wbr>Parameter<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, Connection<wbr>Parameter<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Connection parameters{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1396,7 +1399,7 @@ The following output properties are available:
 <a href="#wsdl_definition_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdldefinitionresponse">Wsdl<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The WSDL definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1428,7 +1431,7 @@ The following output properties are available:
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1539,7 @@ The following output properties are available:
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The service with name and endpoint names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

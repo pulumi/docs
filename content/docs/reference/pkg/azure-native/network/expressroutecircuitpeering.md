@@ -61,7 +61,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -146,19 +146,46 @@ const expressRouteCircuitPeering = new azure_native.network.ExpressRouteCircuitP
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExpressRouteCircuitConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringType]]</span> = None<span class="p">, </span><span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringState]]</span> = None<span class="p">, </span><span class="nx">stats</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitStatsArgs]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                               <span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                               <span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ExpressRouteCircuitConnectionArgs]]]]</span> = None<span class="p">,</span>
+                               <span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Ipv6ExpressRouteCircuitPeeringConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitPeeringConfigArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
+                               <span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ExpressRoutePeeringType]]]</span> = None<span class="p">,</span>
+                               <span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">route_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubResourceArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                               <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ExpressRoutePeeringState]]]</span> = None<span class="p">,</span>
+                               <span class="nx">stats</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitStatsArgs]]</span> = None<span class="p">,</span>
+                               <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">,</span>
+                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitPeering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitPeering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -193,22 +220,32 @@ const expressRouteCircuitPeering = new azure_native.network.ExpressRouteCircuitP
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -640,7 +677,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#circuitname_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -648,7 +685,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +693,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#azureasn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Azure ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +701,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitconnection">Express<wbr>Route<wbr>Circuit<wbr>Connection[]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitconnection">pulumi.<wbr>Input<pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of circuit connections associated with Azure Private Peering for this circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +709,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#gatewaymanageretag_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Manager<wbr>Etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The GatewayManager Etag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +717,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +725,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#ipv6peeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">pulumi.<wbr>Input<Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +733,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +741,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +749,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +757,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peeringname_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +765,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutepeeringtype">Express<wbr>Route<wbr>Peering<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#expressroutepeeringtype">pulumi.<wbr>Input<Express<wbr>Route<wbr>Peering<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The peering type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +773,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#primaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Azure<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +781,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +789,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#routefilter_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +797,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +805,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +813,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shared key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +821,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutepeeringstate">Express<wbr>Route<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#expressroutepeeringstate">pulumi.<wbr>Input<Express<wbr>Route<wbr>Peering<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The peering state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +829,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#stats_nodejs" style="color: inherit; text-decoration: inherit;">stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitstats">Express<wbr>Route<wbr>Circuit<wbr>Stats</a></span>
+        <span class="property-type"><a href="#expressroutecircuitstats">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The peering stats of express route circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +837,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -812,7 +849,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#circuit_name_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -820,7 +857,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +865,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The Azure ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -836,7 +873,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitconnection">Sequence[Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitconnection">Input[Express<wbr>Route<wbr>Circuit<wbr>Connection<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of circuit connections associated with Azure Private Peering for this circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +881,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#gateway_manager_etag_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>manager_<wbr>etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The GatewayManager Etag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -852,7 +889,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -860,7 +897,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#ipv6_peering_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6expressroutecircuitpeeringconfig">Input[Ipv6Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +905,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +913,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +921,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +929,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +937,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#expressroutepeeringtype">Express<wbr>Route<wbr>Peering<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#expressroutepeeringtype">Input[Express<wbr>Route<wbr>Peering<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The peering type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +945,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#primary_azure_port_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>azure_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +953,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +961,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +969,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#secondary_azure_port_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>azure_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary port.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +977,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +985,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shared key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +993,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#expressroutepeeringstate">Express<wbr>Route<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#expressroutepeeringstate">Input[Express<wbr>Route<wbr>Peering<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The peering state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +1001,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#stats_python" style="color: inherit; text-decoration: inherit;">stats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitstats">Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitstats">Input[Express<wbr>Route<wbr>Circuit<wbr>Stats<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The peering stats of express route circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +1009,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1363,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6circuitconnectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Circuit<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Ipv6Circuit<wbr>Connection<wbr>Config</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">pulumi.<wbr>Input<Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerexpressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6_circuit_connection_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>circuit_<wbr>connection_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Input[Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1463,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1471,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1677,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1685,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the express route circuit connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1693,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6circuitconnectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Circuit<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">pulumi.<wbr>Input<Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1741,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1749,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerexpressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1761,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1769,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1777,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the express route circuit connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1785,7 +1822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipv6_circuit_connection_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>circuit_<wbr>connection_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfigresponse">Input[Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedcommunities_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The communities of bgp peering. Specified for microsoft peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1951,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The reference to AdvertisedPublicPrefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacymode_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The legacy mode of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RoutingRegistryName of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1987,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_communities_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The communities of bgp peering. Specified for microsoft peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1995,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The reference to AdvertisedPublicPrefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2003,7 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2011,7 +2048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacy_mode_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The legacy mode of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RoutingRegistryName of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedpublicprefixesstate_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The advertised public prefix state of the Peering resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2145,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedcommunities_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The communities of bgp peering. Specified for microsoft peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The reference to AdvertisedPublicPrefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacymode_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The legacy mode of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The RoutingRegistryName of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2189,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_public_prefixes_state_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The advertised public prefix state of the Peering resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_communities_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>communities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The communities of bgp peering. Specified for microsoft peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The reference to AdvertisedPublicPrefixes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2213,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2221,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#legacy_mode_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The legacy mode of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2229,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The RoutingRegistryName of the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2341,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_nodejs" style="color: inherit; text-decoration: inherit;">primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2349,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_nodejs" style="color: inherit; text-decoration: inherit;">primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2357,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_nodejs" style="color: inherit; text-decoration: inherit;">secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2365,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_nodejs" style="color: inherit; text-decoration: inherit;">secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2377,7 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2385,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2487,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_nodejs" style="color: inherit; text-decoration: inherit;">primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2495,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_nodejs" style="color: inherit; text-decoration: inherit;">primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2503,7 +2540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_nodejs" style="color: inherit; text-decoration: inherit;">secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2511,7 +2548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_nodejs" style="color: inherit; text-decoration: inherit;">secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2523,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2531,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2539,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2547,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2585,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRouteConnection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2597,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRouteConnection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2691,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2703,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2757,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2887,7 +2924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2895,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2903,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2911,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#expressroutecircuitpeeringstate">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#expressroutecircuitpeeringstate">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2931,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfig">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2947,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2963,7 +3000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#expressroutecircuitpeeringstate">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#expressroutecircuitpeeringstate">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3065,7 +3102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3073,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routefilter_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3089,7 +3126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The secondary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3109,7 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringconfigresponse">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft peering configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3117,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3125,7 +3162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#route_filter_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The reference to the RouteFilter resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The secondary address prefix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3141,7 +3178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of peering.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3339,7 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3347,7 +3384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3355,7 +3392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state of the peer express route circuit connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3363,7 +3400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3371,7 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3379,7 +3416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authresourceguid_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Resource<wbr>Guid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit connection resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3395,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3411,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3419,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerexpressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3431,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3439,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3447,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the peer express route circuit connection resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3455,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3463,7 +3500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3471,7 +3508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_resource_guid_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>resource_<wbr>guid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource guid of the authorization used for the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3479,7 +3516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit connection resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3487,7 +3524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3495,7 +3532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3503,7 +3540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,7 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3549,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3599,7 +3636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3611,7 +3648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}

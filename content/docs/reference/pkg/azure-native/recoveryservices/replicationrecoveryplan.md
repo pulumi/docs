@@ -80,7 +80,7 @@ package main
 
 import (
 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -199,19 +199,29 @@ const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRec
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CreateRecoveryPlanInputPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreateRecoveryPlanInputPropertiesArgs]]</span> = None<span class="p">,</span>
+                            <span class="nx">recovery_plan_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryPlan</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationRecoveryPlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationRecoveryPlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -246,22 +256,32 @@ const replicationRecoveryPlan = new azure_native.recoveryservices.ReplicationRec
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ReplicationRecoveryPlanArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -421,7 +441,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#createrecoveryplaninputproperties">pulumi.<wbr>Input<Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Recovery plan creation properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -429,7 +449,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -437,7 +457,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +465,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#recoveryplanname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Plan<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Recovery plan name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -457,7 +477,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createrecoveryplaninputproperties">Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#createrecoveryplaninputproperties">Input[Create<wbr>Recovery<wbr>Plan<wbr>Input<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Recovery plan creation properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -465,7 +485,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -473,7 +493,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +501,7 @@ The ReplicationRecoveryPlan resource accepts the following [input]({{< relref "/
 <a href="#recovery_plan_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>plan_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Recovery plan name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -744,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">Recovery<wbr>Plan<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -752,7 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary fabric Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -760,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery fabric Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdeploymentmodel_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Deployment<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#failoverdeploymentmodel">Failover<wbr>Deployment<wbr>Model</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#failoverdeploymentmodel">pulumi.<wbr>Input<Failover<wbr>Deployment<wbr>Model></a></span>
     </dt>
     <dd>{{% md %}}The failover deployment model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificinput_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">Recovery<wbr>Plan<wbr>A2AInput[]</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>A2AInput<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -788,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroup">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplangroup">Input[Recovery<wbr>Plan<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -796,7 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_fabric_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary fabric Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -804,7 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery fabric Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_deployment_model_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>deployment_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#failoverdeploymentmodel">Failover<wbr>Deployment<wbr>Model</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#failoverdeploymentmodel">Input[Failover<wbr>Deployment<wbr>Model]</a></span>
     </dt>
     <dd>{{% md %}}The failover deployment model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -820,7 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_input_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2ainput">Sequence[Recovery<wbr>Plan<wbr>A2AInput<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplana2ainput">Input[Recovery<wbr>Plan<wbr>A2AInput<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The provider specific input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -890,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}ARM Id of the job being executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scenarioname_nodejs" style="color: inherit; text-decoration: inherit;">scenario<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Scenario name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Start time of the workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -918,7 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}ARM Id of the job being executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scenario_name_python" style="color: inherit; text-decoration: inherit;">scenario_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Scenario name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Start time of the workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1044,7 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryzone_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1052,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryzone_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1064,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_zone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_zone_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1126,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryzone_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryzone_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_zone_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_zone_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1224,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1232,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdirections_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Directions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Possible<wbr>Operations<wbr>Directions[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Possible<wbr>Operations<wbr>Directions>[]></span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1240,7 +1260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failovertypes_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Replication<wbr>Protected<wbr>Item<wbr>Operation[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Replication<wbr>Protected<wbr>Item<wbr>Operation>[]></span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1252,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1260,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_directions_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>directions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Possible<wbr>Operations<wbr>Directions]]</span>
+        <span class="property-type">Input[Union[str, Possible<wbr>Operations<wbr>Directions]]]]</span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1268,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_types_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Replication<wbr>Protected<wbr>Item<wbr>Operation]]</span>
+        <span class="property-type">Input[Union[str, Replication<wbr>Protected<wbr>Item<wbr>Operation]]]]</span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1354,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1362,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customdetails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#recoveryplanmanualactiondetailsresponse">pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args></a> | <a href="#recoveryplanscriptactiondetailsresponse">pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1370,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdirections_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Directions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1378,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failovertypes_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1390,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1398,7 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_details_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanmanualactiondetailsresponse">Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#recoveryplanscriptactiondetailsresponse">Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#recoveryplanautomationrunbookactiondetailsresponse">Input[Recovery<wbr>Plan<wbr>Automation<wbr>Runbook<wbr>Action<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#recoveryplanmanualactiondetailsresponse">Input[Recovery<wbr>Plan<wbr>Manual<wbr>Action<wbr>Details<wbr>Response<wbr>Args]</a> | <a href="#recoveryplanscriptactiondetailsresponse">Input[Recovery<wbr>Plan<wbr>Script<wbr>Action<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The custom details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1406,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_directions_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>directions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of failover directions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1414,7 +1434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_types_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of failover types.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1484,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runbookid_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The runbook ARM Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1500,7 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The runbook timeout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1512,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_location_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fabric location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1520,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runbook_id_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The runbook ARM Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1528,7 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The runbook timeout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1614,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouptype_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#recoveryplangrouptype">Recovery<wbr>Plan<wbr>Group<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#recoveryplangrouptype">pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Group<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The group type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1622,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">Recovery<wbr>Plan<wbr>Protected<wbr>Item[]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Recovery<wbr>Plan<wbr>Action[]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Action<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1650,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_type_python" style="color: inherit; text-decoration: inherit;">group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#recoveryplangrouptype">Recovery<wbr>Plan<wbr>Group<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#recoveryplangrouptype">Input[Recovery<wbr>Plan<wbr>Group<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The group type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Input[Recovery<wbr>Plan<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditem">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditem">Input[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanaction">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanaction">Input[Recovery<wbr>Plan<wbr>Action<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1760,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grouptype_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The group type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1768,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1776,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationprotecteditems_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Protected<wbr>Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1784,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startgroupactions_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Group<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Recovery<wbr>Plan<wbr>Action<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1796,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_type_python" style="color: inherit; text-decoration: inherit;">group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The group type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1804,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_group_actions_python" style="color: inherit; text-decoration: inherit;">end_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Input[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The end group actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1812,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_protected_items_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>protected_<wbr>items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Sequence[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanprotecteditemresponse">Input[Recovery<wbr>Plan<wbr>Protected<wbr>Item<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1820,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_group_actions_python" style="color: inherit; text-decoration: inherit;">start_<wbr>group_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplanactionresponse">Sequence[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplanactionresponse">Input[Recovery<wbr>Plan<wbr>Action<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The start group actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1888,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The manual action description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1900,7 +1920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The manual action description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2178,7 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#providerspecificdetails_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2186,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedoperations_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of allowed operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2194,7 +2214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenario_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">pulumi.<wbr>Input<Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2202,7 +2222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenariostatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Scenario<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery plan status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2210,7 +2230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentscenariostatusdescription_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Scenario<wbr>Status<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery plan status description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2218,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverdeploymentmodel_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Deployment<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The failover deployment model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2226,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2234,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">Recovery<wbr>Plan<wbr>Group<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2242,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastplannedfailovertime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Planned<wbr>Failover<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start time of the last planned failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2250,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lasttestfailovertime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Test<wbr>Failover<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start time of the last test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastunplannedfailovertime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Unplanned<wbr>Failover<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start time of the last unplanned failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Fabric<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The primary fabric Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabricfriendlyname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The recovery fabric Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationproviders_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of replication providers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2310,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Sequence[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplana2adetailsresponse">Input[Recovery<wbr>Plan<wbr>A2ADetails<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The provider id and provider specific details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2318,7 +2338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_operations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of allowed operations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2326,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Input[Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current scenario details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_scenario_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery plan status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_scenario_status_description_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario_<wbr>status_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery plan status description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_deployment_model_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>deployment_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The failover deployment model.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2358,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,7 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recoveryplangroupresponse">Sequence[Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recoveryplangroupresponse">Input[Recovery<wbr>Plan<wbr>Group<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The recovery plan groups.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2374,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_planned_failover_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>planned_<wbr>failover_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start time of the last planned failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_test_failover_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>test_<wbr>failover_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start time of the last test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_unplanned_failover_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>unplanned_<wbr>failover_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start time of the last unplanned failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2398,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2406,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_fabric_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>fabric_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The primary fabric Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2414,7 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_friendly_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery fabric friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2422,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recovery_fabric_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The recovery fabric Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_providers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>providers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of replication providers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2484,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARM Id of the recovery plan protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The virtual machine Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2504,7 +2524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARM Id of the recovery plan protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2512,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The virtual machine Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2566,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The ARM Id of the recovery plan protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2574,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The virtual machine Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2586,7 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The ARM Id of the recovery plan protected item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2594,7 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The virtual machine Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2664,7 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabriclocation_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The fabric location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2672,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The script path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The script timeout.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2692,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fabric_location_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The fabric location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2700,7 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The script path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2708,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The script timeout.{{% /md %}}</dd></dl>
 {{% /choosable %}}

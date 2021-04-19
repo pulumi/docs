@@ -22,17 +22,20 @@ API Version: 2020-04-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSystemTopicEventSubscription<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSystemTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSystemTopicEventSubscriptionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSystemTopicEventSubscription<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSystemTopicEventSubscriptionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSystemTopicEventSubscriptionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_system_topic_event_subscription(</span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSystemTopicEventSubscriptionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_system_topic_event_subscription(</span><span class="nx">event_subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">system_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSystemTopicEventSubscriptionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSystemTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSystemTopicEventSubscriptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSystemTopicEventSubscriptionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSystemTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSystemTopicEventSubscriptionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSystemTopicEventSubscriptionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSystemTopicEventSubscription` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-04-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSystemTopicEventSubscription </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSystemTopicEventSubscriptionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSystemTopicEventSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSystemTopicEventSubscriptionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSystemTopicEventSubscriptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -900,7 +903,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#deadletterdestination_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +912,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -963,7 +966,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageblobdeadletterdestinationresponse">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -972,7 +975,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when dead-lettering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -988,7 +991,7 @@ Uses the managed identity setup on the parent resource (namely, topic or domain)
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#webhookeventsubscriptiondestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +1000,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1054,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a> | <a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefunctioneventsubscriptiondestinationresponse">Azure<wbr>Function<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#eventhubeventsubscriptiondestinationresponse">Event<wbr>Hub<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#hybridconnectioneventsubscriptiondestinationresponse">Hybrid<wbr>Connection<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebusqueueeventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#servicebustopiceventsubscriptiondestinationresponse">Service<wbr>Bus<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#storagequeueeventsubscriptiondestinationresponse">Storage<wbr>Queue<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a> | <a href="#webhookeventsubscriptiondestinationresponse">Web<wbr>Hook<wbr>Event<wbr>Subscription<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the destination where events have to be delivered for the event subscription.
 Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.{{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1063,7 @@ Uses Azure Event Grid's identity to acquire the authentication tokens being used
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#eventsubscriptionidentityresponse">Event<wbr>Subscription<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity to use when delivering events.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1272,7 +1275,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd></dl>
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

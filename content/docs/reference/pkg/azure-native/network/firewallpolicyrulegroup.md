@@ -319,19 +319,32 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[FirewallPolicyFilterRuleArgs, FirewallPolicyNatRuleArgs]]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                            <span class="nx">firewall_policy_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">rule_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                            <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[FirewallPolicyFilterRuleArgs, FirewallPolicyNatRuleArgs]]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">,</span>
+                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -366,22 +379,32 @@ const firewallPolicyRuleGroup = new azure_native.network.FirewallPolicyRuleGroup
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">FirewallPolicyRuleGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -589,7 +612,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#firewallpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -597,7 +620,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +628,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -613,7 +636,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -621,7 +644,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Group resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +652,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#rulegroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the FirewallPolicyRuleGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +660,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule | Firewall<wbr>Policy<wbr>Nat<wbr>Rule[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Args | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -649,7 +672,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#firewall_policy_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -657,7 +680,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +688,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +696,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +704,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Group resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +712,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the FirewallPolicyRuleGroup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -697,7 +720,7 @@ The FirewallPolicyRuleGroup resource accepts the following [input]({{< relref "/
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Args, Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Args, Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1008,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1016,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1024,7 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdntags_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetfqdns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1076,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1092,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1100,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocol">Input[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1282,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdntags_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1314,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1330,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1338,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetfqdns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1350,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1366,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1374,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicyruleconditionapplicationprotocolresponse">Input[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1492,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleaction">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1500,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1508,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1516,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition | Nat<wbr>Rule<wbr>Condition | Network<wbr>Rule<wbr>Condition[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Rule<wbr>Condition<wbr>Args | Nat<wbr>Rule<wbr>Condition<wbr>Args | Network<wbr>Rule<wbr>Condition<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1528,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleaction">Input[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1536,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1544,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Application<wbr>Rule<wbr>Condition<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyfilterruleactiontype">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#firewallpolicyfilterruleactiontype">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1602,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#firewallpolicyfilterruleactiontype">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#firewallpolicyfilterruleactiontype">Input[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1640,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleconditions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Application<wbr>Rule<wbr>Condition<wbr>Response | Nat<wbr>Rule<wbr>Condition<wbr>Response | Network<wbr>Rule<wbr>Condition<wbr>Response[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args | Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args | Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1800,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicyfilterruleactionresponse">Input[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_conditions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}Collection of rule conditions used by a rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleaction">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1958,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition</a></span>
+        <span class="property-type"><a href="#applicationrulecondition">pulumi.<wbr>Input<Application<wbr>Rule<wbr>Condition<wbr>Args></a> | <a href="#natrulecondition">pulumi.<wbr>Input<Nat<wbr>Rule<wbr>Condition<wbr>Args></a> | <a href="#networkrulecondition">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Condition<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleaction">Input[Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2002,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2010,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2018,7 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrulecondition">Application<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#natrulecondition">Nat<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#networkrulecondition">Network<wbr>Rule<wbr>Condition<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationrulecondition">Input[Application<wbr>Rule<wbr>Condition<wbr>Args]</a> | <a href="#natrulecondition">Input[Nat<wbr>Rule<wbr>Condition<wbr>Args]</a> | <a href="#networkrulecondition">Input[Network<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2034,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2072,7 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicynatruleactiontype">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#firewallpolicynatruleactiontype">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2084,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#firewallpolicynatruleactiontype">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#firewallpolicynatruleactiontype">Input[Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2122,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2134,7 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2274,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2298,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rulecondition_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">pulumi.<wbr>Input<Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args></a> | <a href="#natruleconditionresponse">pulumi.<wbr>Input<Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args></a> | <a href="#networkruleconditionresponse">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2306,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2326,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#firewallpolicynatruleactionresponse">Input[Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2334,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2342,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_condition_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a> | <a href="#networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationruleconditionresponse">Input[Application<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]</a> | <a href="#natruleconditionresponse">Input[Nat<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]</a> | <a href="#networkruleconditionresponse">Input[Network<wbr>Rule<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The match conditions for incoming traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2358,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2366,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2420,7 +2443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#firewallpolicyruleconditionapplicationprotocoltype">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#firewallpolicyruleconditionapplicationprotocoltype">pulumi.<wbr>Input<Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2440,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2448,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#firewallpolicyruleconditionapplicationprotocoltype">Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#firewallpolicyruleconditionapplicationprotocoltype">Input[Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Application<wbr>Protocol<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2502,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2510,7 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2522,7 +2545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2530,7 +2553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2724,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2732,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2740,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2748,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol>[]></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2756,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2764,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2784,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2792,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2808,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol]]</span>
+        <span class="property-type">Input[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol]]]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2816,7 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2824,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2832,7 +2855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2966,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2974,7 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2982,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2990,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2998,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3006,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3014,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3026,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3034,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3042,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3050,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3058,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3066,7 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3074,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3224,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3232,7 +3255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3248,7 +3271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3256,7 +3279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol>[]></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3264,7 +3287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3272,7 +3295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3280,7 +3303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3292,7 +3315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3300,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3308,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3324,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol]]</span>
+        <span class="property-type">Input[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Condition<wbr>Network<wbr>Protocol]]]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3332,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3340,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3348,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3498,7 +3521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3506,7 +3529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3514,7 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3522,7 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3530,7 +3553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3538,7 +3561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3546,7 +3569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3554,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3566,7 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3574,7 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3582,7 +3605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3590,7 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3598,7 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleConditionNetworkProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3606,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the rule condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3622,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}

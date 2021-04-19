@@ -72,7 +72,7 @@ package main
 
 import (
 	portal "github.com/pulumi/pulumi-azure-native/sdk/go/azure/portal"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -181,19 +181,27 @@ const userSettings = new azure_native.portal.UserSettings("userSettings", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[UserPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">user_settings_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                 <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPropertiesArgs]]</span> = None<span class="p">,</span>
+                 <span class="nx">user_settings_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">,</span>
+                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserSettings</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserSettings</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserSettings</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserSettings</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserSettings</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserSettingsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -228,22 +236,32 @@ const userSettings = new azure_native.portal.UserSettings("userSettings", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">UserSettingsArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,7 +389,7 @@ The UserSettings resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperties">User<wbr>Properties</a></span>
+        <span class="property-type"><a href="#userproperties">pulumi.<wbr>Input<User<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -379,7 +397,7 @@ The UserSettings resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#usersettingsname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the user settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -391,7 +409,7 @@ The UserSettings resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userproperties">User<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#userproperties">Input[User<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -399,7 +417,7 @@ The UserSettings resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#user_settings_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the user settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -654,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -682,7 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -698,7 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -768,7 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -796,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -866,7 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontsize_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#fontsize">Font<wbr>Size</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#fontsize">pulumi.<wbr>Input<Font<wbr>Size></a></span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontstyle_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#fontstyle">Font<wbr>Style</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#fontstyle">pulumi.<wbr>Input<Font<wbr>Style></a></span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -886,7 +904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#font_size_python" style="color: inherit; text-decoration: inherit;">font_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#fontsize">Font<wbr>Size</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#fontsize">Input[Font<wbr>Size]</a></span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#font_style_python" style="color: inherit; text-decoration: inherit;">font_<wbr>style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#fontstyle">Font<wbr>Style</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#fontstyle">Input[Font<wbr>Style]</a></span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -948,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontsize_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fontstyle_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -968,7 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#font_size_python" style="color: inherit; text-decoration: inherit;">font_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#font_style_python" style="color: inherit; text-decoration: inherit;">font_<wbr>style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1078,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredlocation_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1086,7 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredostype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#ostype">Os<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ostype">pulumi.<wbr>Input<Os<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1094,7 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredshelltype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shell<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shelltype">Shell<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#shelltype">pulumi.<wbr>Input<Shell<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1102,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
+        <span class="property-type"><a href="#storageprofile">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1110,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_nodejs" style="color: inherit; text-decoration: inherit;">terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings</a></span>
+        <span class="property-type"><a href="#terminalsettings">pulumi.<wbr>Input<Terminal<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1122,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_location_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1130,7 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_os_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#ostype">Os<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ostype">Input[Os<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1138,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_shell_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shell_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#shelltype">Shell<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#shelltype">Input[Shell<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1146,7 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofile">Input[Storage<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1154,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettings">Terminal<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettings">Input[Terminal<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1256,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredlocation_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1264,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredostype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1272,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferredshelltype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shell<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1280,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">pulumi.<wbr>Input<Storage<wbr>Profile<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1288,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminalsettings_nodejs" style="color: inherit; text-decoration: inherit;">terminal<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">pulumi.<wbr>Input<Terminal<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1300,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_location_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1308,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_os_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1316,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preferred_shell_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shell_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1324,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#storageprofileresponse">Input[Storage<wbr>Profile<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1332,7 +1350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#terminalsettingsresponse">Input[Terminal<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}

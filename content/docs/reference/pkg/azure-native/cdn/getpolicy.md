@@ -22,17 +22,19 @@ API Version: 2020-09-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy(</span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy(</span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPolicy` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-09-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -704,7 +706,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#customruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Custom<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -740,7 +742,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customruleresponse">Sequence[Custom<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -764,7 +766,7 @@ The following output properties are available:
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -896,7 +898,7 @@ The following output properties are available:
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -944,7 +946,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1004,7 +1006,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedruleoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules that will be disabled. If none specified, all rules in the group will be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1136,7 +1138,7 @@ The following output properties are available:
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1172,7 +1174,7 @@ The following output properties are available:
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulesetresponse">Sequence[Managed<wbr>Rule<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rule sets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1212,7 +1214,7 @@ The following output properties are available:
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1320,7 +1322,7 @@ The following output properties are available:
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedrulegroupoverrideresponse">Sequence[Managed<wbr>Rule<wbr>Group<wbr>Override<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Defines the rule overrides to apply to the rule set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1728,7 +1730,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Rate<wbr>Limit<wbr>Rule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1764,7 +1766,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ratelimitruleresponse">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ratelimitruleresponse">Sequence[Rate<wbr>Limit<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1788,7 +1790,7 @@ The following output properties are available:
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cdn.<wbr>Inputs.<wbr>Match<wbr>Condition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1968,7 +1970,7 @@ The following output properties are available:
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#matchconditionresponse">Sequence[Match<wbr>Condition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of match conditions.{{% /md %}}</dd><dt class="property-required"
             title="Required">

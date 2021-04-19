@@ -22,17 +22,19 @@ API Version: 2020-12-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAccount` in the Go SDK.
 
@@ -41,7 +43,7 @@ API Version: 2020-12-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -222,6 +224,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountpropertiesresponsesystemdata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Outputs.<wbr>Account<wbr>Properties<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -362,6 +372,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountpropertiesresponsesystemdata">Account<wbr>Properties<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -504,6 +522,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountpropertiesresponsesystemdata">Account<wbr>Properties<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -644,6 +670,14 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the state of the provisioning.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountpropertiesresponsesystemdata">Account<wbr>Properties<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -939,6 +973,218 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the managed storage account resource identifier.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountpropertiesresponsesystemdata">Account<wbr>Properties<wbr>Response<wbr>System<wbr>Data</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the last modification the resource (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the last modification the resource (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the last modification the resource (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of the last modification the resource (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountskuresponse">Account<wbr>Sku<wbr>Response</h4>
@@ -1240,7 +1486,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1494,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Purview.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1396,7 +1642,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1650,7 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state.{{% /md %}}</dd></dl>
 {{% /choosable %}}

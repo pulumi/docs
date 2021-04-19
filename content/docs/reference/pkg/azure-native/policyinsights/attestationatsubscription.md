@@ -57,7 +57,7 @@ package main
 
 import (
 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -168,7 +168,7 @@ package main
 
 import (
 	policyinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/policyinsights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -267,19 +267,33 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comments</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compliance_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ComplianceState]]</span> = None<span class="p">, </span><span class="nx">evidence</span><span class="p">:</span> <span class="nx">Optional[Sequence[AttestationEvidenceArgs]]</span> = None<span class="p">, </span><span class="nx">expires_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                              <span class="nx">attestation_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">comments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">compliance_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ComplianceState]]]</span> = None<span class="p">,</span>
+                              <span class="nx">evidence</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AttestationEvidenceArgs]]]]</span> = None<span class="p">,</span>
+                              <span class="nx">expires_on</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">policy_assignment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                              <span class="nx">policy_definition_reference_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p">,</span>
+                              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestationAtSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttestationAtSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestationAtSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AttestationAtSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AttestationAtSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AttestationAtSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -314,22 +328,32 @@ const attestationAtSubscription = new azure_native.policyinsights.AttestationAtS
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">AttestationAtSubscriptionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -553,7 +577,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#policyassignmentid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Assignment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -561,7 +585,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#attestationname_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -569,7 +593,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -577,7 +601,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#compliancestate_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#compliancestate">Compliance<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#compliancestate">pulumi.<wbr>Input<Compliance<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -585,7 +609,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#evidence_nodejs" style="color: inherit; text-decoration: inherit;">evidence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationevidence">Attestation<wbr>Evidence[]</a></span>
+        <span class="property-type"><a href="#attestationevidence">pulumi.<wbr>Input<pulumi.<wbr>Input<Attestation<wbr>Evidence<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +617,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#expireson_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +625,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -609,7 +633,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#policydefinitionreferenceid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -621,7 +645,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#policy_assignment_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>assignment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource ID of the policy assignment that the attestation is setting the state for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -629,7 +653,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#attestation_name_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -637,7 +661,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Comments describing why this attestation was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -645,7 +669,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#compliance_state_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#compliancestate">Compliance<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#compliancestate">Input[Compliance<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The compliance state that should be set on the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -653,7 +677,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#evidence_python" style="color: inherit; text-decoration: inherit;">evidence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestationevidence">Sequence[Attestation<wbr>Evidence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#attestationevidence">Input[Attestation<wbr>Evidence<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The evidence supporting the compliance state set in this attestation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +685,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#expires_on_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The time the compliance state should expire.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +693,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +701,7 @@ The AttestationAtSubscription resource accepts the following [input]({{< relref 
 <a href="#policy_definition_reference_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -956,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -976,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1038,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1046,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1058,7 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The description for this piece of evidence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI location of the evidence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1214,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1266,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1274,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1306,7 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

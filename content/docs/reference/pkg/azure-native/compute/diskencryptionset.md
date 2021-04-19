@@ -66,7 +66,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -199,7 +199,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -302,19 +302,33 @@ const diskEncryptionSet = new azure_native.compute.DiskEncryptionSet("diskEncryp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_key</span><span class="p">:</span> <span class="nx">Optional[KeyForDiskEncryptionSetArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DiskEncryptionSetType]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_to_latest_key_version_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                      <span class="nx">active_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KeyForDiskEncryptionSetArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">disk_encryption_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">encryption_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DiskEncryptionSetType]]]</span> = None<span class="p">,</span>
+                      <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionSetIdentityArgs]]</span> = None<span class="p">,</span>
+                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                      <span class="nx">rotation_to_latest_key_version_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">,</span>
+                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiskEncryptionSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiskEncryptionSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiskEncryptionSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiskEncryptionSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DiskEncryptionSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -349,22 +363,32 @@ const diskEncryptionSet = new azure_native.compute.DiskEncryptionSet("diskEncryp
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">DiskEncryptionSetArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -588,7 +612,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -596,7 +620,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#activekey_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">pulumi.<wbr>Input<Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -604,7 +628,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#diskencryptionsetname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -612,7 +636,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskencryptionsettype">Disk<wbr>Encryption<wbr>Set<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#diskencryptionsettype">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Set<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -620,7 +644,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsetidentity">Encryption<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#encryptionsetidentity">pulumi.<wbr>Input<Encryption<wbr>Set<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +652,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +660,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#rotationtolatestkeyversionenabled_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>To<wbr>Latest<wbr>Key<wbr>Version<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +668,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -656,7 +680,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +688,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#active_key_python" style="color: inherit; text-decoration: inherit;">active_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Input[Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +696,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#disk_encryption_set_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +704,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#diskencryptionsettype">Disk<wbr>Encryption<wbr>Set<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#diskencryptionsettype">Input[Disk<wbr>Encryption<wbr>Set<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of key used to encrypt the data of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +712,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsetidentity">Encryption<wbr>Set<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#encryptionsetidentity">Input[Encryption<wbr>Set<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +720,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +728,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#rotation_to_latest_key_version_enabled_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>to_<wbr>latest_<wbr>key_<wbr>version_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +736,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1027,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#diskencryptionsetidentitytype">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#diskencryptionsetidentitytype">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#diskencryptionsetidentitytype">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#diskencryptionsetidentitytype">Input[Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1109,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1117,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1137,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The object id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-identity-principal-id header in the PUT request if the resource has a systemAssigned(implicit) identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1145,7 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id of the Managed Identity Resource. This will be sent to the RP from ARM via the x-ms-client-tenant-id header in the PUT request if the resource has a systemAssigned(implicit) identity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1207,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#sourcevault">pulumi.<wbr>Input<Source<wbr>Vault<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1235,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevault">Input[Source<wbr>Vault<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1297,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">pulumi.<wbr>Input<Source<wbr>Vault<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1309,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault. Version segment of the Url is required regardless of rotationToLatestKeyVersionEnabled value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Input[Source<wbr>Vault<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1367,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1417,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -132,19 +132,30 @@ const transform = new azure_native.media.Transform("transform", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TransformOutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TransformOutputArgs]]]]</span> = None<span class="p">,</span>
+              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+              <span class="nx">transform_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,22 +190,32 @@ const transform = new azure_native.media.Transform("transform", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">TransformArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -370,7 +391,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -378,7 +399,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">Transform<wbr>Output[]</a></span>
+        <span class="property-type"><a href="#transformoutput">pulumi.<wbr>Input<pulumi.<wbr>Input<Transform<wbr>Output<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}An array of one or more TransformOutputs that the Transform should generate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -386,7 +407,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +415,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional verbose description of the Transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +423,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#transformname_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Transform name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -414,7 +435,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -422,7 +443,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">Sequence[Transform<wbr>Output<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformoutput">Input[Transform<wbr>Output<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more TransformOutputs that the Transform should generate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -430,7 +451,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -438,7 +459,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional verbose description of the Transform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +467,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#transform_name_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Transform name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -773,7 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -789,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -797,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aacaudioprofile">Aac<wbr>Audio<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#aacaudioprofile">pulumi.<wbr>Input<Aac<wbr>Audio<wbr>Profile></a></span>
     </dt>
     <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -805,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -817,7 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#aacaudioprofile">Aac<wbr>Audio<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#aacaudioprofile">Input[Aac<wbr>Audio<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -981,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1025,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1033,7 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1057,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1205,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1333,7 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#audioanalysismode">pulumi.<wbr>Input<Audio<wbr>Analysis<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#audioanalysismode">Input[Audio<wbr>Analysis<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1439,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1455,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1467,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1601,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputlabel_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiogainlevel_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1617,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeinduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeoutduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1653,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1811,7 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputlabel_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiogainlevel_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1827,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1835,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeinduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1843,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeoutduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1863,7 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1871,7 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1895,7 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +2034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2025,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2125,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presetname_nodejs" style="color: inherit; text-decoration: inherit;">preset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#encodernamedpreset">Encoder<wbr>Named<wbr>Preset</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#encodernamedpreset">pulumi.<wbr>Input<Encoder<wbr>Named<wbr>Preset></a></span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2137,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_name_python" style="color: inherit; text-decoration: inherit;">preset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#encodernamedpreset">Encoder<wbr>Named<wbr>Preset</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#encodernamedpreset">Input[Encoder<wbr>Named<wbr>Preset]</a></span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2175,7 +2196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#presetname_nodejs" style="color: inherit; text-decoration: inherit;">preset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_name_python" style="color: inherit; text-decoration: inherit;">preset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2225,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2237,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2275,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2287,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2325,7 +2346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2337,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2375,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2387,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2441,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deinterlacemode">Deinterlace<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#deinterlacemode">pulumi.<wbr>Input<Deinterlace<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2449,7 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_nodejs" style="color: inherit; text-decoration: inherit;">parity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#deinterlaceparity">Deinterlace<wbr>Parity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#deinterlaceparity">pulumi.<wbr>Input<Deinterlace<wbr>Parity></a></span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2461,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#deinterlacemode">Deinterlace<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#deinterlacemode">Input[Deinterlace<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_python" style="color: inherit; text-decoration: inherit;">parity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#deinterlaceparity">Deinterlace<wbr>Parity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#deinterlaceparity">Input[Deinterlace<wbr>Parity]</a></span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2579,7 +2600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2587,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_nodejs" style="color: inherit; text-decoration: inherit;">parity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2599,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The deinterlacing mode. Defaults to AutoPixelAdaptive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2607,7 +2628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parity_python" style="color: inherit; text-decoration: inherit;">parity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The field parity for de-interlacing, defaults to Auto.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2801,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blurtype_nodejs" style="color: inherit; text-decoration: inherit;">blur<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#blurtype">Blur<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#blurtype">pulumi.<wbr>Input<Blur<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Blur type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2809,7 +2830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2817,7 +2838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#faceredactormode">Face<wbr>Redactor<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#faceredactormode">pulumi.<wbr>Input<Face<wbr>Redactor<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2825,7 +2846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#analysisresolution">Analysis<wbr>Resolution</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#analysisresolution">pulumi.<wbr>Input<Analysis<wbr>Resolution></a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2837,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blur_type_python" style="color: inherit; text-decoration: inherit;">blur_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#blurtype">Blur<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#blurtype">Input[Blur<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Blur type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2853,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#faceredactormode">Face<wbr>Redactor<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#faceredactormode">Input[Face<wbr>Redactor<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2861,7 +2882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#analysisresolution">Analysis<wbr>Resolution</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#analysisresolution">Input[Analysis<wbr>Resolution]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2947,7 +2968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blurtype_nodejs" style="color: inherit; text-decoration: inherit;">blur<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Blur type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2963,7 +2984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2971,7 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2983,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#blur_type_python" style="color: inherit; text-decoration: inherit;">blur_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Blur type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2991,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3007,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3123,7 +3144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
+        <span class="property-type"><a href="#rectangle">pulumi.<wbr>Input<Rectangle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3131,7 +3152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_nodejs" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Deinterlace</a></span>
+        <span class="property-type"><a href="#deinterlace">pulumi.<wbr>Input<Deinterlace<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3139,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Overlay | Video<wbr>Overlay[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Overlay<wbr>Args | Video<wbr>Overlay<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3147,7 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_nodejs" style="color: inherit; text-decoration: inherit;">rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#rotation">Rotation</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#rotation">pulumi.<wbr>Input<Rotation></a></span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3159,7 +3180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Input[Rectangle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3167,7 +3188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlace">Deinterlace<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlace">Input[Deinterlace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3175,7 +3196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Args, Video<wbr>Overlay<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Audio<wbr>Overlay<wbr>Args, Video<wbr>Overlay<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3183,7 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_python" style="color: inherit; text-decoration: inherit;">rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#rotation">Rotation</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#rotation">Input[Rotation]</a></span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3269,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_nodejs" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+        <span class="property-type"><a href="#rectangleresponse">pulumi.<wbr>Input<Rectangle<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3277,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_nodejs" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">pulumi.<wbr>Input<Deinterlace<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3285,7 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_nodejs" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Overlay<wbr>Response | Video<wbr>Overlay<wbr>Response[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Audio<wbr>Overlay<wbr>Response<wbr>Args | Video<wbr>Overlay<wbr>Response<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_nodejs" style="color: inherit; text-decoration: inherit;">rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3305,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_python" style="color: inherit; text-decoration: inherit;">crop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Input[Rectangle<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the rectangular window with which to crop the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3313,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deinterlace_python" style="color: inherit; text-decoration: inherit;">deinterlace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deinterlaceresponse">Deinterlace<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#deinterlaceresponse">Input[Deinterlace<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The de-interlacing settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3321,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#overlays_python" style="color: inherit; text-decoration: inherit;">overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Overlay<wbr>Response<wbr>Args, Video<wbr>Overlay<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Audio<wbr>Overlay<wbr>Response<wbr>Args, Video<wbr>Overlay<wbr>Response<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}The properties of overlays to be applied to the input video. These could be audio, image or video overlays.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rotation_python" style="color: inherit; text-decoration: inherit;">rotation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3605,7 +3626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3613,7 +3634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptivebframe_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>BFrame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3621,7 +3642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bframes_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3629,7 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bufferwindow_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3637,7 +3658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropymode_nodejs" style="color: inherit; text-decoration: inherit;">entropy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#entropymode">Entropy<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#entropymode">pulumi.<wbr>Input<Entropy<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3645,7 +3666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3653,7 +3674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3661,7 +3682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3669,7 +3690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3677,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbitrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3685,7 +3706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#h264videoprofile">H264Video<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#h264videoprofile">pulumi.<wbr>Input<H264Video<wbr>Profile></a></span>
     </dt>
     <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3693,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenceframes_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_nodejs" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3721,7 +3742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3729,7 +3750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptive_b_frame_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>b_<wbr>frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3737,7 +3758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_frames_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3745,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buffer_window_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3753,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropy_mode_python" style="color: inherit; text-decoration: inherit;">entropy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#entropymode">Entropy<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#entropymode">Input[Entropy<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_bitrate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#h264videoprofile">H264Video<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#h264videoprofile">Input[H264Video<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_frames_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3817,7 +3838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_python" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3825,7 +3846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4071,7 +4092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4079,7 +4100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptivebframe_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>BFrame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4087,7 +4108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bframes_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4095,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bufferwindow_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4103,7 +4124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropymode_nodejs" style="color: inherit; text-decoration: inherit;">entropy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4119,7 +4140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4127,7 +4148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4135,7 +4156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4143,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbitrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4151,7 +4172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4159,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenceframes_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4167,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_nodejs" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4175,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4187,7 +4208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4195,7 +4216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptive_b_frame_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>b_<wbr>frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4203,7 +4224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_frames_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4211,7 +4232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buffer_window_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4219,7 +4240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#entropy_mode_python" style="color: inherit; text-decoration: inherit;">entropy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4227,7 +4248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4235,7 +4256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4243,7 +4264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4251,7 +4272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4259,7 +4280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_bitrate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4267,7 +4288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4275,7 +4296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_frames_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4283,7 +4304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_python" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4291,7 +4312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4425,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_nodejs" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#h264complexity">H264Complexity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#h264complexity">pulumi.<wbr>Input<H264Complexity></a></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4433,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4441,7 +4462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4449,7 +4470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layer">H264Layer[]</a></span>
+        <span class="property-type"><a href="#h264layer">pulumi.<wbr>Input<pulumi.<wbr>Input<H264Layer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4457,7 +4478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scenechangedetection_nodejs" style="color: inherit; text-decoration: inherit;">scene<wbr>Change<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4465,7 +4486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#stretchmode">pulumi.<wbr>Input<Stretch<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4473,7 +4494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#videosyncmode">pulumi.<wbr>Input<Video<wbr>Sync<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4485,7 +4506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_python" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#h264complexity">H264Complexity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#h264complexity">Input[H264Complexity]</a></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4493,7 +4514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4501,7 +4522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4509,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layer">Sequence[H264Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h264layer">Input[H264Layer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4517,7 +4538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scene_change_detection_python" style="color: inherit; text-decoration: inherit;">scene_<wbr>change_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4525,7 +4546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#stretchmode">Input[Stretch<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4533,7 +4554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#videosyncmode">Input[Video<wbr>Sync<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4709,7 +4730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_nodejs" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4717,7 +4738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4725,7 +4746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4733,7 +4754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">H264Layer<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#h264layerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<H264Layer<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4741,7 +4762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scenechangedetection_nodejs" style="color: inherit; text-decoration: inherit;">scene<wbr>Change<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4749,7 +4770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4757,7 +4778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4769,7 +4790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_python" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4777,7 +4798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4785,7 +4806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4793,7 +4814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h264layerresponse">Sequence[H264Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h264layerresponse">Input[H264Layer<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4801,7 +4822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scene_change_detection_python" style="color: inherit; text-decoration: inherit;">scene_<wbr>change_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4809,7 +4830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4817,7 +4838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5077,7 +5098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5085,7 +5106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptivebframe_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>BFrame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5093,7 +5114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bframes_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5101,7 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bufferwindow_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5109,7 +5130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5117,7 +5138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5125,7 +5146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5133,7 +5154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5141,7 +5162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbitrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5149,7 +5170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#h265videoprofile">H265Video<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#h265videoprofile">pulumi.<wbr>Input<H265Video<wbr>Profile></a></span>
     </dt>
     <dd>{{% md %}}We currently support Main. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5157,7 +5178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenceframes_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5165,7 +5186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_nodejs" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5173,7 +5194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5185,7 +5206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5193,7 +5214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptive_b_frame_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>b_<wbr>frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5201,7 +5222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_frames_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5209,7 +5230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buffer_window_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5217,7 +5238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5225,7 +5246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5233,7 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5241,7 +5262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5249,7 +5270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_bitrate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5257,7 +5278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#h265videoprofile">H265Video<wbr>Profile</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#h265videoprofile">Input[H265Video<wbr>Profile]</a></span>
     </dt>
     <dd>{{% md %}}We currently support Main. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5265,7 +5286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_frames_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5273,7 +5294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_python" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5281,7 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5511,7 +5532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5519,7 +5540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptivebframe_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>BFrame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5527,7 +5548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bframes_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5535,7 +5556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bufferwindow_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5543,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5551,7 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5559,7 +5580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5567,7 +5588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5575,7 +5596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxbitrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5583,7 +5604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}We currently support Main. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5591,7 +5612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#referenceframes_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5599,7 +5620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_nodejs" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5607,7 +5628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5619,7 +5640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. For example: a target bitrate of 3000Kbps or 3Mbps means this value should be 3000000 This is a required field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5627,7 +5648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#adaptive_b_frame_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>b_<wbr>frame</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5635,7 +5656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#b_frames_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5643,7 +5664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#buffer_window_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5651,7 +5672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5659,7 +5680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5667,7 +5688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5675,7 +5696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.265 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5683,7 +5704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_bitrate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bitrate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5691,7 +5712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}We currently support Main. Default is Auto.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5699,7 +5720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reference_frames_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>frames</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5707,7 +5728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#slices_python" style="color: inherit; text-decoration: inherit;">slices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5715,7 +5736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5849,7 +5870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_nodejs" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#h265complexity">H265Complexity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#h265complexity">pulumi.<wbr>Input<H265Complexity></a></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5857,7 +5878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5865,7 +5886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5873,7 +5894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layer">H265Layer[]</a></span>
+        <span class="property-type"><a href="#h265layer">pulumi.<wbr>Input<pulumi.<wbr>Input<H265Layer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5881,7 +5902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scenechangedetection_nodejs" style="color: inherit; text-decoration: inherit;">scene<wbr>Change<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5889,7 +5910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#stretchmode">pulumi.<wbr>Input<Stretch<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5897,7 +5918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#videosyncmode">pulumi.<wbr>Input<Video<wbr>Sync<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5909,7 +5930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_python" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#h265complexity">H265Complexity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#h265complexity">Input[H265Complexity]</a></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5917,7 +5938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5925,7 +5946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5933,7 +5954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layer">Sequence[H265Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h265layer">Input[H265Layer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5941,7 +5962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scene_change_detection_python" style="color: inherit; text-decoration: inherit;">scene_<wbr>change_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5949,7 +5970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#stretchmode">Input[Stretch<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5957,7 +5978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#videosyncmode">Input[Video<wbr>Sync<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6117,7 +6138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_nodejs" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6125,7 +6146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6133,7 +6154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6141,7 +6162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">H265Layer<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#h265layerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<H265Layer<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6149,7 +6170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scenechangedetection_nodejs" style="color: inherit; text-decoration: inherit;">scene<wbr>Change<wbr>Detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6157,7 +6178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6165,7 +6186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6177,7 +6198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#complexity_python" style="color: inherit; text-decoration: inherit;">complexity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Tells the encoder how to choose its encoding settings.  Quality will provide for a higher compression ratio but at a higher cost and longer compute time.  Speed will produce a relatively larger file but is faster and more economical. The default value is Balanced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6185,7 +6206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6193,7 +6214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6201,7 +6222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#h265layerresponse">Sequence[H265Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#h265layerresponse">Input[H265Layer<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The collection of output H.265 layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6209,7 +6230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scene_change_detection_python" style="color: inherit; text-decoration: inherit;">scene_<wbr>change_<wbr>detection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6217,7 +6238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6225,7 +6246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6359,7 +6380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6367,7 +6388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6375,7 +6396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6383,7 +6404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6391,7 +6412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6399,7 +6420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#stretchmode">pulumi.<wbr>Input<Stretch<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6407,7 +6428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#videosyncmode">pulumi.<wbr>Input<Video<wbr>Sync<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6419,7 +6440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6427,7 +6448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6435,7 +6456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6443,7 +6464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6451,7 +6472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6459,7 +6480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#stretchmode">Input[Stretch<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6467,7 +6488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#videosyncmode">Input[Video<wbr>Sync<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6505,7 +6526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6517,7 +6538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6555,7 +6576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6567,7 +6588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6701,7 +6722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6709,7 +6730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6717,7 +6738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6725,7 +6746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6733,7 +6754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6741,7 +6762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6749,7 +6770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6761,7 +6782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6769,7 +6790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6777,7 +6798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6785,7 +6806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6793,7 +6814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6801,7 +6822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6809,7 +6830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6877,7 +6898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6889,7 +6910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6927,7 +6948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6939,7 +6960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7105,7 +7126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7113,7 +7134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7121,7 +7142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7129,7 +7150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayer">Jpg<wbr>Layer[]</a></span>
+        <span class="property-type"><a href="#jpglayer">pulumi.<wbr>Input<pulumi.<wbr>Input<Jpg<wbr>Layer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7137,7 +7158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7145,7 +7166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spritecolumn_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7153,7 +7174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7161,7 +7182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#stretchmode">pulumi.<wbr>Input<Stretch<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7169,7 +7190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#videosyncmode">pulumi.<wbr>Input<Video<wbr>Sync<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7181,7 +7202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7189,7 +7210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7197,7 +7218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7205,7 +7226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayer">Sequence[Jpg<wbr>Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jpglayer">Input[Jpg<wbr>Layer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7213,7 +7234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7221,7 +7242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_column_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7229,7 +7250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7237,7 +7258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#stretchmode">Input[Stretch<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7245,7 +7266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#videosyncmode">Input[Video<wbr>Sync<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7411,7 +7432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7419,7 +7440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7427,7 +7448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7435,7 +7456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">Jpg<wbr>Layer<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Jpg<wbr>Layer<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7443,7 +7464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7451,7 +7472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spritecolumn_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7459,7 +7480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7467,7 +7488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7475,7 +7496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7487,7 +7508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7495,7 +7516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7503,7 +7524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7511,7 +7532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jpglayerresponse">Sequence[Jpg<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jpglayerresponse">Input[Jpg<wbr>Layer<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7519,7 +7540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7527,7 +7548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sprite_column_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7535,7 +7556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7543,7 +7564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7551,7 +7572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7637,7 +7658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7645,7 +7666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7653,7 +7674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_nodejs" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7661,7 +7682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7673,7 +7694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7681,7 +7702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7689,7 +7710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_python" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7697,7 +7718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7783,7 +7804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7791,7 +7812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7799,7 +7820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_nodejs" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7807,7 +7828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7819,7 +7840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7827,7 +7848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7835,7 +7856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#quality_python" style="color: inherit; text-decoration: inherit;">quality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7843,7 +7864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7897,7 +7918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7905,7 +7926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
+        <span class="property-type"><a href="#outputfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>File<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7917,7 +7938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7925,7 +7946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfile">Input[Output<wbr>File<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7979,7 +8000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7987,7 +8008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>File<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7999,7 +8020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8007,7 +8028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Input[Output<wbr>File<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8061,7 +8082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8069,7 +8090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
+        <span class="property-type"><a href="#outputfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>File<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8081,7 +8102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8089,7 +8110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfile">Input[Output<wbr>File<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8143,7 +8164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8151,7 +8172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>File<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8163,7 +8184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8171,7 +8192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Input[Output<wbr>File<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8235,7 +8256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8247,7 +8268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8285,7 +8306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8297,7 +8318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8335,7 +8356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8347,7 +8368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8385,7 +8406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8397,7 +8418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8547,7 +8568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8555,7 +8576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8563,7 +8584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8571,7 +8592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayer">Png<wbr>Layer[]</a></span>
+        <span class="property-type"><a href="#pnglayer">pulumi.<wbr>Input<pulumi.<wbr>Input<Png<wbr>Layer<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8579,7 +8600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8587,7 +8608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8595,7 +8616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#stretchmode">pulumi.<wbr>Input<Stretch<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8603,7 +8624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#videosyncmode">pulumi.<wbr>Input<Video<wbr>Sync<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8615,7 +8636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8623,7 +8644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8631,7 +8652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8639,7 +8660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayer">Sequence[Png<wbr>Layer<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pnglayer">Input[Png<wbr>Layer<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8647,7 +8668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8655,7 +8676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8663,7 +8684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#stretchmode">Input[Stretch<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8671,7 +8692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#videosyncmode">Input[Video<wbr>Sync<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8821,7 +8842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8829,7 +8850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8837,7 +8858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8845,7 +8866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">Png<wbr>Layer<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Png<wbr>Layer<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8853,7 +8874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8861,7 +8882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8869,7 +8890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8877,7 +8898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8889,7 +8910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8897,7 +8918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8905,7 +8926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8913,7 +8934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pnglayerresponse">Sequence[Png<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pnglayerresponse">Input[Png<wbr>Layer<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8921,7 +8942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8929,7 +8950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8937,7 +8958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8945,7 +8966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9015,7 +9036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9023,7 +9044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9031,7 +9052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9043,7 +9064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9051,7 +9072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9059,7 +9080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9129,7 +9150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9137,7 +9158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9145,7 +9166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9157,7 +9178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9165,7 +9186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9173,7 +9194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9289,7 +9310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9297,7 +9318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_nodejs" style="color: inherit; text-decoration: inherit;">left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9305,7 +9326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9313,7 +9334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9325,7 +9346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9333,7 +9354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_python" style="color: inherit; text-decoration: inherit;">left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9341,7 +9362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9349,7 +9370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9435,7 +9456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9443,7 +9464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_nodejs" style="color: inherit; text-decoration: inherit;">left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9451,7 +9472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_nodejs" style="color: inherit; text-decoration: inherit;">top</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9459,7 +9480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9471,7 +9492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9479,7 +9500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#left_python" style="color: inherit; text-decoration: inherit;">left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of pixels from the left-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9487,7 +9508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#top_python" style="color: inherit; text-decoration: inherit;">top</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The number of pixels from the top-margin. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9495,7 +9516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The width of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9607,7 +9628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aac<wbr>Audio | Audio | Copy<wbr>Audio | Copy<wbr>Video | H264Video | H265Video | Image | Jpg<wbr>Image | Png<wbr>Image | Video[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Aac<wbr>Audio<wbr>Args | Audio<wbr>Args | Copy<wbr>Audio<wbr>Args | Copy<wbr>Video<wbr>Args | H264Video<wbr>Args | H265Video<wbr>Args | Image<wbr>Args | Jpg<wbr>Image<wbr>Args | Png<wbr>Image<wbr>Args | Video<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9615,7 +9636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format | Jpg<wbr>Format | Mp4Format | Multi<wbr>Bitrate<wbr>Format | Png<wbr>Format | Transport<wbr>Stream<wbr>Format[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Format<wbr>Args | Jpg<wbr>Format<wbr>Args | Mp4Format<wbr>Args | Multi<wbr>Bitrate<wbr>Format<wbr>Args | Png<wbr>Format<wbr>Args | Transport<wbr>Stream<wbr>Format<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9623,7 +9644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Filters</a></span>
+        <span class="property-type"><a href="#filters">pulumi.<wbr>Input<Filters<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9635,7 +9656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Args, Audio<wbr>Args, Copy<wbr>Audio<wbr>Args, Copy<wbr>Video<wbr>Args, H264Video<wbr>Args, H265Video<wbr>Args, Image<wbr>Args, Jpg<wbr>Image<wbr>Args, Png<wbr>Image<wbr>Args, Video<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Aac<wbr>Audio<wbr>Args, Audio<wbr>Args, Copy<wbr>Audio<wbr>Args, Copy<wbr>Video<wbr>Args, H264Video<wbr>Args, H265Video<wbr>Args, Image<wbr>Args, Jpg<wbr>Image<wbr>Args, Png<wbr>Image<wbr>Args, Video<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9643,7 +9664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Args, Jpg<wbr>Format<wbr>Args, Mp4Format<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Args, Png<wbr>Format<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Image<wbr>Format<wbr>Args, Jpg<wbr>Format<wbr>Args, Mp4Format<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Args, Png<wbr>Format<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9651,7 +9672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filters">Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#filters">Input[Filters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9721,7 +9742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aac<wbr>Audio<wbr>Response | Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | H264Video<wbr>Response | H265Video<wbr>Response | Image<wbr>Response | Jpg<wbr>Image<wbr>Response | Png<wbr>Image<wbr>Response | Video<wbr>Response[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Aac<wbr>Audio<wbr>Response<wbr>Args | Audio<wbr>Response<wbr>Args | Copy<wbr>Audio<wbr>Response<wbr>Args | Copy<wbr>Video<wbr>Response<wbr>Args | H264Video<wbr>Response<wbr>Args | H265Video<wbr>Response<wbr>Args | Image<wbr>Response<wbr>Args | Jpg<wbr>Image<wbr>Response<wbr>Args | Png<wbr>Image<wbr>Response<wbr>Args | Video<wbr>Response<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9729,7 +9750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format<wbr>Response | Jpg<wbr>Format<wbr>Response | Mp4Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response | Png<wbr>Format<wbr>Response | Transport<wbr>Stream<wbr>Format<wbr>Response[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Image<wbr>Format<wbr>Response<wbr>Args | Jpg<wbr>Format<wbr>Response<wbr>Args | Mp4Format<wbr>Response<wbr>Args | Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args | Png<wbr>Format<wbr>Response<wbr>Args | Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args>[]></span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9737,7 +9758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response</a></span>
+        <span class="property-type"><a href="#filtersresponse">pulumi.<wbr>Input<Filters<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9749,7 +9770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Response<wbr>Args, Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, H264Video<wbr>Response<wbr>Args, H265Video<wbr>Response<wbr>Args, Image<wbr>Response<wbr>Args, Jpg<wbr>Image<wbr>Response<wbr>Args, Png<wbr>Image<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Aac<wbr>Audio<wbr>Response<wbr>Args, Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, H264Video<wbr>Response<wbr>Args, H265Video<wbr>Response<wbr>Args, Image<wbr>Response<wbr>Args, Jpg<wbr>Image<wbr>Response<wbr>Args, Png<wbr>Image<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9757,7 +9778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response<wbr>Args, Jpg<wbr>Format<wbr>Response<wbr>Args, Mp4Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args, Png<wbr>Format<wbr>Response<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Input[Union[Image<wbr>Format<wbr>Response<wbr>Args, Jpg<wbr>Format<wbr>Response<wbr>Args, Mp4Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args, Png<wbr>Format<wbr>Response<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args]]]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9765,7 +9786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filtersresponse">Filters<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#filtersresponse">Input[Filters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more filtering operations that are applied to the input media before encoding.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9913,7 +9934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9921,7 +9942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9929,7 +9950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9937,7 +9958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9945,7 +9966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9953,7 +9974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9965,7 +9986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9973,7 +9994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9981,7 +10002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9989,7 +10010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9997,7 +10018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10005,7 +10026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10075,7 +10096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">pulumi.<wbr>Input<Audio<wbr>Analyzer<wbr>Preset<wbr>Args></a> | <a href="#builtinstandardencoderpreset">pulumi.<wbr>Input<Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args></a> | <a href="#facedetectorpreset">pulumi.<wbr>Input<Face<wbr>Detector<wbr>Preset<wbr>Args></a> | <a href="#standardencoderpreset">pulumi.<wbr>Input<Standard<wbr>Encoder<wbr>Preset<wbr>Args></a> | <a href="#videoanalyzerpreset">pulumi.<wbr>Input<Video<wbr>Analyzer<wbr>Preset<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10083,7 +10104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerror_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#onerrortype">On<wbr>Error<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#onerrortype">pulumi.<wbr>Input<On<wbr>Error<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10091,7 +10112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepriority_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#priority">Priority</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#priority">pulumi.<wbr>Input<Priority></a></span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10103,7 +10124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Input[Audio<wbr>Analyzer<wbr>Preset<wbr>Args]</a> | <a href="#builtinstandardencoderpreset">Input[Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args]</a> | <a href="#facedetectorpreset">Input[Face<wbr>Detector<wbr>Preset<wbr>Args]</a> | <a href="#standardencoderpreset">Input[Standard<wbr>Encoder<wbr>Preset<wbr>Args]</a> | <a href="#videoanalyzerpreset">Input[Video<wbr>Analyzer<wbr>Preset<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10111,7 +10132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#onerrortype">On<wbr>Error<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#onerrortype">Input[On<wbr>Error<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10119,7 +10140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_priority_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#priority">Priority</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#priority">Input[Priority]</a></span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10189,7 +10210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">pulumi.<wbr>Input<Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args></a> | <a href="#builtinstandardencoderpresetresponse">pulumi.<wbr>Input<Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args></a> | <a href="#facedetectorpresetresponse">pulumi.<wbr>Input<Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args></a> | <a href="#standardencoderpresetresponse">pulumi.<wbr>Input<Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args></a> | <a href="#videoanalyzerpresetresponse">pulumi.<wbr>Input<Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10197,7 +10218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#onerror_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10205,7 +10226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepriority_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10217,7 +10238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Input[Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args]</a> | <a href="#builtinstandardencoderpresetresponse">Input[Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args]</a> | <a href="#facedetectorpresetresponse">Input[Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args]</a> | <a href="#standardencoderpresetresponse">Input[Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args]</a> | <a href="#videoanalyzerpresetresponse">Input[Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10225,7 +10246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#on_error_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10233,7 +10254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_priority_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10287,7 +10308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10295,7 +10316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
+        <span class="property-type"><a href="#outputfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>File<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10307,7 +10328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10315,7 +10336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfile">Input[Output<wbr>File<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10369,7 +10390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10377,7 +10398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>File<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10389,7 +10410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10397,7 +10418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#outputfileresponse">Input[Output<wbr>File<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10483,7 +10504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10491,7 +10512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10499,7 +10520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#stretchmode">pulumi.<wbr>Input<Stretch<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10507,7 +10528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#videosyncmode">pulumi.<wbr>Input<Video<wbr>Sync<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10519,7 +10540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10527,7 +10548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10535,7 +10556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#stretchmode">Input[Stretch<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10543,7 +10564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#videosyncmode">Input[Video<wbr>Sync<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10629,7 +10650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10637,7 +10658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10645,7 +10666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insightstoextract_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>To<wbr>Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#insightstype">Insights<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#insightstype">pulumi.<wbr>Input<Insights<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10653,7 +10674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#audioanalysismode">pulumi.<wbr>Input<Audio<wbr>Analysis<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10665,7 +10686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10673,7 +10694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10681,7 +10702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insights_to_extract_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>to_<wbr>extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#insightstype">Insights<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#insightstype">Input[Insights<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10689,7 +10710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#audioanalysismode">Input[Audio<wbr>Analysis<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10775,7 +10796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10783,7 +10804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10791,7 +10812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insightstoextract_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>To<wbr>Extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10799,7 +10820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10811,7 +10832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10819,7 +10840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10827,7 +10848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#insights_to_extract_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>to_<wbr>extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10835,7 +10856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11001,7 +11022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputlabel_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11009,7 +11030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiogainlevel_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11017,7 +11038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_nodejs" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
+        <span class="property-type"><a href="#rectangle">pulumi.<wbr>Input<Rectangle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11025,7 +11046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11033,7 +11054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeinduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11041,7 +11062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeoutduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11049,7 +11070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#opacity_nodejs" style="color: inherit; text-decoration: inherit;">opacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11057,7 +11078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle</a></span>
+        <span class="property-type"><a href="#rectangle">pulumi.<wbr>Input<Rectangle<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11065,7 +11086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11077,7 +11098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11085,7 +11106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11093,7 +11114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Input[Rectangle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11101,7 +11122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11109,7 +11130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11117,7 +11138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11125,7 +11146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#opacity_python" style="color: inherit; text-decoration: inherit;">opacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11133,7 +11154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangle">Rectangle<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangle">Input[Rectangle<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11141,7 +11162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11307,7 +11328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputlabel_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11315,7 +11336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audiogainlevel_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Gain<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11323,7 +11344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#croprectangle_nodejs" style="color: inherit; text-decoration: inherit;">crop<wbr>Rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+        <span class="property-type"><a href="#rectangleresponse">pulumi.<wbr>Input<Rectangle<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11331,7 +11352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11339,7 +11360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeinduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>In<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11347,7 +11368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fadeoutduration_nodejs" style="color: inherit; text-decoration: inherit;">fade<wbr>Out<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11355,7 +11376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#opacity_nodejs" style="color: inherit; text-decoration: inherit;">opacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11363,7 +11384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response</a></span>
+        <span class="property-type"><a href="#rectangleresponse">pulumi.<wbr>Input<Rectangle<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11371,7 +11392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11383,7 +11404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#input_label_python" style="color: inherit; text-decoration: inherit;">input_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11391,7 +11412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audio_gain_level_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>gain_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11399,7 +11420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crop_rectangle_python" style="color: inherit; text-decoration: inherit;">crop_<wbr>rectangle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Input[Rectangle<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An optional rectangular window used to crop the overlay image or video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11407,7 +11428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11415,7 +11436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_in_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>in_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11423,7 +11444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fade_out_duration_python" style="color: inherit; text-decoration: inherit;">fade_<wbr>out_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11431,7 +11452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#opacity_python" style="color: inherit; text-decoration: inherit;">opacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11439,7 +11460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rectangleresponse">Rectangle<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#rectangleresponse">Input[Rectangle<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The location in the input video where the overlay is applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11447,7 +11468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11533,7 +11554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11541,7 +11562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11549,7 +11570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11557,7 +11578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11569,7 +11590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11577,7 +11598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11585,7 +11606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11593,7 +11614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd></dl>
 {{% /choosable %}}

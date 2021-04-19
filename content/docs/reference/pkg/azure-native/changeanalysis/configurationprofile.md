@@ -55,7 +55,7 @@ package main
 
 import (
 	changeanalysis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/changeanalysis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -143,7 +143,7 @@ package main
 
 import (
 	changeanalysis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/changeanalysis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -207,19 +207,28 @@ const configurationProfile = new azure_native.changeanalysis.ConfigurationProfil
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConfigurationProfileResourcePropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdentityArgs]]</span> = None<span class="p">,</span>
+                         <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConfigurationProfileResourcePropertiesArgs]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ConfigurationProfileArgs]</a></span> = None<span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfile</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConfigurationProfileArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -254,22 +263,32 @@ const configurationProfile = new azure_native.changeanalysis.ConfigurationProfil
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ConfigurationProfileArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,7 +432,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity</a></span>
+        <span class="property-type"><a href="#resourceidentity">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -421,7 +440,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -429,7 +448,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileresourceproperties">Configuration<wbr>Profile<wbr>Resource<wbr>Properties</a></span>
+        <span class="property-type"><a href="#configurationprofileresourceproperties">pulumi.<wbr>Input<Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The properties of a configuration profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -441,7 +460,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#resourceidentity">Input[Resource<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -449,7 +468,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -457,7 +476,7 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationprofileresourceproperties">Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationprofileresourceproperties">Input[Configuration<wbr>Profile<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The properties of a configuration profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -672,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -692,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -754,7 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -774,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -782,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,7 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#notificationsettings">pulumi.<wbr>Input<Notification<wbr>Settings<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -832,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettings">Input[Notification<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -870,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">pulumi.<wbr>Input<Notification<wbr>Settings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -882,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#notificationsettingsresponse">Input[Notification<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings of change notification configuration for a subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -962,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationstate_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notificationsstate">Notifications<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#notificationsstate">pulumi.<wbr>Input<Notifications<wbr>State></a></span>
     </dt>
     <dd>{{% md %}}The state of notifications feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">pulumi.<wbr>Input<Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -982,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_state_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#notificationsstate">Notifications<wbr>State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#notificationsstate">Input[Notifications<wbr>State]</a></span>
     </dt>
     <dd>{{% md %}}The state of notifications feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_workspace_properties_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>workspace_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspaceproperties">Input[Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1044,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activationstate_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of notifications feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1052,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azuremonitorworkspaceproperties_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Monitor<wbr>Workspace<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">pulumi.<wbr>Input<Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1064,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activation_state_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of notifications feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_monitor_workspace_properties_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>monitor_<wbr>workspace_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuremonitorworkspacepropertiesresponse">Input[Azure<wbr>Monitor<wbr>Workspace<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration properties of an Azure Monitor workspace that receives change notifications.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1140,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedidentitytypes">pulumi.<wbr>Input<Managed<wbr>Identity<wbr>Types></a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1152,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedidentitytypes">Input[Managed<wbr>Identity<wbr>Types]</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1222,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The principal id of the identity. This property will only be provided for a system-assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1230,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1250,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The principal id of the identity. This property will only be provided for a system-assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1258,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the resource's identity. This property will only be provided for a system-assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1266,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1392,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1400,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity, key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1408,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1416,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1424,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1436,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1444,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1452,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity, key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1460,7 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1468,7 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1476,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd></dl>
 {{% /choosable %}}

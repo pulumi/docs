@@ -22,17 +22,20 @@ API Version: 2020-06-25.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGuestConfigurationAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGuestConfigurationAssignmentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGuestConfigurationAssignment<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGuestConfigurationAssignmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_guest_configuration_assignment(</span><span class="nx">guest_configuration_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGuestConfigurationAssignmentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_guest_configuration_assignment(</span><span class="nx">guest_configuration_assignment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGuestConfigurationAssignmentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGuestConfigurationAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGuestConfigurationAssignmentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGuestConfigurationAssignmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGuestConfigurationAssignment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGuestConfigurationAssignmentArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGuestConfigurationAssignmentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGuestConfigurationAssignment` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-06-25.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGuestConfigurationAssignment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetGuestConfigurationAssignmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGuestConfigurationAssignmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGuestConfigurationAssignmentArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -372,7 +375,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -432,7 +435,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationinforesponse">Configuration<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -556,7 +559,7 @@ The following output properties are available:
 <a href="#reasons_csharp" style="color: inherit; text-decoration: inherit;">Reasons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -664,7 +667,7 @@ The following output properties are available:
 <a href="#reasons_python" style="color: inherit; text-decoration: inherit;">reasons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourcecompliancereasonresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Compliance<wbr>Reason<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Compliance reason and reason code for a resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -728,7 +731,7 @@ The following output properties are available:
 <a href="#assignment_csharp" style="color: inherit; text-decoration: inherit;">Assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +739,7 @@ The following output properties are available:
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +747,7 @@ The following output properties are available:
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>VMInfo<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vminforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>VMInfo<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -956,7 +959,7 @@ The following output properties are available:
 <a href="#assignment_python" style="color: inherit; text-decoration: inherit;">assignment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentinforesponse">Assignment<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration details of the guest configuration assignment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +967,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresourceresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#assignmentreportresourceresponse">Sequence[Assignment<wbr>Report<wbr>Resource<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of resources for which guest configuration assignment compliance is checked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +975,7 @@ The following output properties are available:
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#vminforesponse">VMInfo<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1424,7 +1427,7 @@ The following output properties are available:
 <a href="#guestconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1435,7 @@ The following output properties are available:
 <a href="#latestassignmentreport_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Assignment<wbr>Report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1652,7 +1655,7 @@ The following output properties are available:
 <a href="#guest_configuration_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#guestconfigurationnavigationresponse">Guest<wbr>Configuration<wbr>Navigation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The guest configuration to assign.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1660,7 +1663,7 @@ The following output properties are available:
 <a href="#latest_assignment_report_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>assignment_<wbr>report</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#assignmentreportresponse">Assignment<wbr>Report<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Last reported guest configuration assignment report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1692,7 +1695,7 @@ The following output properties are available:
 <a href="#configurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Parameter<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1700,7 +1703,7 @@ The following output properties are available:
 <a href="#configurationsetting_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Guest<wbr>Configuration.<wbr>Inputs.<wbr>Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1875,7 @@ The following output properties are available:
 <a href="#configuration_parameter_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configurationparameterresponse">Sequence[Configuration<wbr>Parameter<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The configuration parameters for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,7 +1883,7 @@ The following output properties are available:
 <a href="#configuration_setting_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#configurationsettingresponse">Configuration<wbr>Setting<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration setting for the guest configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

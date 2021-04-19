@@ -70,7 +70,7 @@ package main
 
 import (
 	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -169,19 +169,30 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SecurityContactArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SecurityContactArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_notifications</span><span class="p">:</span> <span class="nx">Optional[SecurityContactPropertiesAlertNotificationsArgs]</span> = None<span class="p">, </span><span class="nx">emails</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications_by_role</span><span class="p">:</span> <span class="nx">Optional[SecurityContactPropertiesNotificationsByRoleArgs]</span> = None<span class="p">, </span><span class="nx">phone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_contact_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                    <span class="nx">alert_notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecurityContactPropertiesAlertNotificationsArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">emails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">notifications_by_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecurityContactPropertiesNotificationsByRoleArgs]]</span> = None<span class="p">,</span>
+                    <span class="nx">phone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                    <span class="nx">security_contact_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SecurityContactArgs]</a></span> = None<span class="p">,</span>
+                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityContact</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SecurityContactArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityContact</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityContact</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SecurityContactArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityContact</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecurityContactArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityContact</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityContactArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -216,22 +227,32 @@ const securityContact = new azure_native.security.SecurityContact("securityConta
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">SecurityContactArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -407,7 +428,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#alertnotifications_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">pulumi.<wbr>Input<Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -415,7 +436,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -423,7 +444,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#notificationsbyrole_nodejs" style="color: inherit; text-decoration: inherit;">notifications<wbr>By<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">pulumi.<wbr>Input<Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -431,7 +452,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#phone_nodejs" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -439,7 +460,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#securitycontactname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Contact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -451,7 +472,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#alert_notifications_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesalertnotifications">Input[Security<wbr>Contact<wbr>Properties<wbr>Alert<wbr>Notifications<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications about new security alerts{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +480,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -467,7 +488,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#notifications_by_role_python" style="color: inherit; text-decoration: inherit;">notifications_<wbr>by_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role<wbr>Args</a></span>
+        <span class="property-type"><a href="#securitycontactpropertiesnotificationsbyrole">Input[Security<wbr>Contact<wbr>Properties<wbr>Notifications<wbr>By<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -475,7 +496,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#phone_python" style="color: inherit; text-decoration: inherit;">phone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The security contact's phone number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +504,7 @@ The SecurityContact resource accepts the following [input]({{< relref "/docs/int
 <a href="#security_contact_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>contact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the security contact object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -730,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimalseverity_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#minimalseverity">Minimal<wbr>Severity</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#minimalseverity">pulumi.<wbr>Input<Minimal<wbr>Severity></a></span>
     </dt>
     <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -738,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#state">State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#state">pulumi.<wbr>Input<State></a></span>
     </dt>
     <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -750,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimal_severity_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#minimalseverity">Minimal<wbr>Severity</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#minimalseverity">Input[Minimal<wbr>Severity]</a></span>
     </dt>
     <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#state">State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#state">Input[State]</a></span>
     </dt>
     <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -812,7 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Roles[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Roles>[]></span>
     </dt>
     <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -820,7 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#state">State</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#state">pulumi.<wbr>Input<State></a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -832,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Roles]]</span>
+        <span class="property-type">Input[Union[str, Roles]]]]</span>
     </dt>
     <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#state">State</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#state">Input[State]</a></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -894,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimalseverity_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -914,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimal_severity_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines the minimal alert severity which will be sent as email notifications{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines if email notifications will be sent about new security alerts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -976,7 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -984,7 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -996,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles: {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}

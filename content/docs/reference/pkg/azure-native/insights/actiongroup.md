@@ -182,7 +182,7 @@ import (
 	"fmt"
 
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -527,19 +527,41 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ArmRoleReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutomationRunbookReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureAppPushReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AzureFunctionReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[EmailReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ItsmReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogicAppReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[SmsReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[VoiceReceiverArgs]]</span> = None<span class="p">, </span><span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookReceiverArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                <span class="nx">action_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">arm_role_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ArmRoleReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">automation_runbook_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AutomationRunbookReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">azure_app_push_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AzureAppPushReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">azure_function_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AzureFunctionReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">email_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EmailReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                <span class="nx">group_short_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">itsm_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ItsmReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">logic_app_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LogicAppReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                <span class="nx">sms_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SmsReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                <span class="nx">voice_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VoiceReceiverArgs]]]]</span> = None<span class="p">,</span>
+                <span class="nx">webhook_receivers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[WebhookReceiverArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span>
+                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewActionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ActionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ActionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ActionGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -574,22 +596,32 @@ const actionGroup = new azure_native.insights.ActionGroup("actionGroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ActionGroupArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -941,7 +973,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -949,7 +981,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#groupshortname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Short<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -957,7 +989,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +997,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +1005,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#armrolereceivers_nodejs" style="color: inherit; text-decoration: inherit;">arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiver">Arm<wbr>Role<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#armrolereceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Arm<wbr>Role<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +1013,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automationrunbookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiver">Automation<wbr>Runbook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Automation<wbr>Runbook<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +1021,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureapppushreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiver">Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#azureapppushreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +1029,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azurefunctionreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiver">Azure<wbr>Function<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Function<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1037,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#emailreceivers_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiver">Email<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#emailreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Email<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +1045,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsmreceivers_nodejs" style="color: inherit; text-decoration: inherit;">itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiver">Itsm<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#itsmreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Itsm<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +1053,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1061,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logicappreceivers_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiver">Logic<wbr>App<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#logicappreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Logic<wbr>App<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1069,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#smsreceivers_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiver">Sms<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#smsreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Sms<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1077,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1085,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voicereceivers_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiver">Voice<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#voicereceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Voice<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1093,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiver">Webhook<wbr>Receiver[]</a></span>
+        <span class="property-type"><a href="#webhookreceiver">pulumi.<wbr>Input<pulumi.<wbr>Input<Webhook<wbr>Receiver<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1073,7 +1105,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1081,7 +1113,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#group_short_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>short_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1089,7 +1121,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1129,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#action_group_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1137,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrolereceiver">Sequence[Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armrolereceiver">Input[Arm<wbr>Role<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1145,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrunbookreceiver">Sequence[Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrunbookreceiver">Input[Automation<wbr>Runbook<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of AutomationRunbook receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1153,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureapppushreceiver">Sequence[Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureapppushreceiver">Input[Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of AzureAppPush receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1161,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefunctionreceiver">Sequence[Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefunctionreceiver">Input[Azure<wbr>Function<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of azure function receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1169,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#emailreceiver">Sequence[Email<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#emailreceiver">Input[Email<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of email receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1177,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#itsmreceiver">Sequence[Itsm<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#itsmreceiver">Input[Itsm<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of ITSM receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1185,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1193,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logicappreceiver">Sequence[Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#logicappreceiver">Input[Logic<wbr>App<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of logic app receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1201,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smsreceiver">Sequence[Sms<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#smsreceiver">Input[Sms<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of SMS receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1209,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1217,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#voicereceiver">Sequence[Voice<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#voicereceiver">Input[Voice<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of voice receivers that are part of this action group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1225,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookreceiver">Sequence[Webhook<wbr>Receiver<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookreceiver">Input[Webhook<wbr>Receiver<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of webhook receivers that are part of this action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1456,7 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the arm role receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1464,7 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1472,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1484,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the arm role receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1492,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1500,7 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1570,7 +1602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the arm role receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1578,7 +1610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1586,7 +1618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the arm role receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1606,7 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The arm role id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1614,7 +1646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure automation account Id which holds this runbook and authenticate to Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1756,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobalrunbook_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1764,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runbookname_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1772,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1780,7 +1812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhookresourceid_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates name of the webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1796,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1808,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure automation account Id which holds this runbook and authenticate to Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1816,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1824,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runbook_name_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1832,7 +1864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1840,7 +1872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1848,7 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates name of the webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1990,7 +2022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The Azure automation account Id which holds this runbook and authenticate to Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1998,7 +2030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isglobalrunbook_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2006,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runbookname_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2014,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2022,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhookresourceid_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates name of the webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2050,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The Azure automation account Id which holds this runbook and authenticate to Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2058,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2066,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runbook_name_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2074,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2082,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates name of the webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2098,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2152,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address registered for the Azure mobile app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2160,7 +2192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2172,7 +2204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address registered for the Azure mobile app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2180,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2234,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address registered for the Azure mobile app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2242,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2254,7 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address registered for the Azure mobile app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2262,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2364,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The azure resource id of the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2372,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2380,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httptriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2388,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2396,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2408,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The azure resource id of the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2416,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2424,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2432,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2440,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2542,7 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The azure resource id of the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2550,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2558,7 +2590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httptriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2566,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2574,7 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2586,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The azure resource id of the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2594,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2602,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2610,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the azure function receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2618,7 +2650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2688,7 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2696,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2704,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2716,7 +2748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2724,7 +2756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2732,7 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2818,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2826,7 +2858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2834,7 +2866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2842,7 +2874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2854,7 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2862,7 +2894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2870,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The receiver status of the e-mail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2878,7 +2910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2980,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique identification of ITSM connection among multiple defined in above workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2988,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Itsm receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2996,7 +3028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3004,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ticketconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3012,7 +3044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OMS LA instance identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3024,7 +3056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique identification of ITSM connection among multiple defined in above workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3032,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Itsm receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3040,7 +3072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3048,7 +3080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3056,7 +3088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OMS LA instance identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3158,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Unique identification of ITSM connection among multiple defined in above workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3166,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the Itsm receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3174,7 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3182,7 +3214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ticketconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3190,7 +3222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}OMS LA instance identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3202,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Unique identification of ITSM connection among multiple defined in above workspace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3210,7 +3242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Itsm receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3218,7 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3226,7 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3234,7 +3266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}OMS LA instance identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3320,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3328,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3336,7 +3368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3344,7 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3356,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3364,7 +3396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3372,7 +3404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3380,7 +3412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3466,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3474,7 +3506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3482,7 +3514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3490,7 +3522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3502,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3510,7 +3542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3518,7 +3550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The azure resource id of the logic app receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3526,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3596,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3604,7 +3636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3612,7 +3644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3624,7 +3656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3632,7 +3664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3640,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3726,7 +3758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3734,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3742,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3750,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The status of the receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3762,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3770,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3778,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3786,7 +3818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The status of the receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3856,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3864,7 +3896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3872,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3884,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3892,7 +3924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3900,7 +3932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3970,7 +4002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3978,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3986,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3998,7 +4030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4006,7 +4038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4014,7 +4046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4148,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4156,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4164,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4172,7 +4204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifieruri_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the identifier uri for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4180,7 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the webhook app object Id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4188,7 +4220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the tenant id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4196,7 +4228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useaadauth_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Aad<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4208,7 +4240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4216,7 +4248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4224,7 +4256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4232,7 +4264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the identifier uri for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4240,7 +4272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the webhook app object Id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4248,7 +4280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the tenant id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4256,7 +4288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_aad_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aad_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4390,7 +4422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4398,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4406,7 +4438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4414,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifieruri_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the identifier uri for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4422,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the webhook app object Id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4430,7 +4462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Indicates the tenant id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4438,7 +4470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#useaadauth_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Aad<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4450,7 +4482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique across all receivers within an action group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4458,7 +4490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4466,7 +4498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use common alert schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4474,7 +4506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the identifier uri for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4482,7 +4514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the webhook app object Id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4490,7 +4522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Indicates the tenant id for aad auth.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4498,7 +4530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_aad_auth_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aad_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not use AAD authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}

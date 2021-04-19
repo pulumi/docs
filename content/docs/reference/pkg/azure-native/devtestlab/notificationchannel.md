@@ -68,7 +68,7 @@ package main
 
 import (
 	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -164,19 +164,35 @@ const notificationChannel = new azure_native.devtestlab.NotificationChannel("not
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recipient</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventArgs]]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_locale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">web_hook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">email_recipient</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">events</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EventArgs]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">notification_locale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+                        <span class="nx">web_hook_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationChannel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationChannel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NotificationChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,22 +227,32 @@ const notificationChannel = new azure_native.devtestlab.NotificationChannel("not
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NotificationChannelArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +508,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +516,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +524,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Description of notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +532,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#emailrecipient_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +540,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#event">Event[]</a></span>
+        <span class="property-type"><a href="#event">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of event for which this notification is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +548,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +556,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the notification channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +564,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#notificationlocale_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +572,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +580,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#webhookurl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The webhook URL to send notifications to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -566,7 +592,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -574,7 +600,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +608,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Description of notification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +616,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#email_recipient_python" style="color: inherit; text-decoration: inherit;">email_<wbr>recipient</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +624,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#event">Sequence[Event<wbr>Args]</a></span>
+        <span class="property-type"><a href="#event">Input[Event<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of event for which this notification is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +632,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +640,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the notification channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -622,7 +648,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#notification_locale_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>locale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +656,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +664,7 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 <a href="#web_hook_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The webhook URL to send notifications to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -869,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#notificationchanneleventtype">Notification<wbr>Channel<wbr>Event<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#notificationchanneleventtype">pulumi.<wbr>Input<Notification<wbr>Channel<wbr>Event<wbr>Type></a></span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -881,7 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#notificationchanneleventtype">Notification<wbr>Channel<wbr>Event<wbr>Type</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#notificationchanneleventtype">Input[Notification<wbr>Channel<wbr>Event<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -919,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -931,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The event type for which this notification is enabled (i.e. AutoShutdown, Cost){{% /md %}}</dd></dl>
 {{% /choosable %}}

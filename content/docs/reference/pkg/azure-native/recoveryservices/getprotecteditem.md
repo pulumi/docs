@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.recoveryservices.getProtectedItem
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup items.
-API Version: 2021-01-01.
+API Version: 2021-02-01.
 
 
 
@@ -22,17 +22,23 @@ API Version: 2021-01-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectedItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtectedItemResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtectedItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtectedItemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtectedItemResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_protected_item(</span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProtectedItemResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_protected_item(</span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProtectedItemResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectedItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProtectedItemResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProtectedItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProtectedItemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProtectedItemResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProtectedItem` in the Go SDK.
 
@@ -41,7 +47,7 @@ API Version: 2021-01-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProtectedItem </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtectedItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtectedItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -752,7 +758,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +798,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1244,7 +1250,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1290,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1418,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1426,7 @@ The following output properties are available:
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1442,7 @@ The following output properties are available:
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1476,7 +1482,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2030,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2032,7 +2038,7 @@ The following output properties are available:
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2048,7 +2054,7 @@ The following output properties are available:
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2094,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2238,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2246,7 @@ The following output properties are available:
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2262,7 @@ The following output properties are available:
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2296,7 +2302,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2850,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2858,7 @@ The following output properties are available:
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2874,7 @@ The following output properties are available:
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2908,7 +2914,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3316,7 +3322,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3324,7 +3330,7 @@ The following output properties are available:
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3340,7 +3346,7 @@ The following output properties are available:
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3380,7 +3386,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3928,7 +3934,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3936,7 +3942,7 @@ The following output properties are available:
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3952,7 +3958,7 @@ The following output properties are available:
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3992,7 +3998,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4252,7 +4258,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4648,7 +4654,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4900,7 +4906,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4940,7 +4946,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4948,7 +4954,7 @@ The following output properties are available:
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5536,7 +5542,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5576,7 +5582,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5584,7 +5590,7 @@ The following output properties are available:
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5752,7 +5758,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5792,7 +5798,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5800,7 +5806,7 @@ The following output properties are available:
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6388,7 +6394,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6428,7 +6434,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6436,7 +6442,7 @@ The following output properties are available:
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6604,7 +6610,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6644,7 +6650,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6652,7 +6658,7 @@ The following output properties are available:
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7240,7 +7246,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7280,7 +7286,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7288,7 +7294,7 @@ The following output properties are available:
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7456,7 +7462,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7496,7 +7502,7 @@ The following output properties are available:
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7504,7 +7510,7 @@ The following output properties are available:
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8092,7 +8098,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8132,7 +8138,7 @@ The following output properties are available:
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8140,7 +8146,7 @@ The following output properties are available:
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8784,7 +8790,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9204,7 +9210,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9492,7 +9498,7 @@ The following output properties are available:
 <a href="#diskexclusionproperties_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9528,7 +9534,7 @@ The following output properties are available:
 <a href="#disk_exclusion_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10172,7 +10178,7 @@ The following output properties are available:
 <a href="#resourcehealthdetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Health<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10232,7 +10238,7 @@ The following output properties are available:
 <a href="#resource_health_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcehealthdetailsresponse">Sequence[Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcehealthdetailsresponse">Sequence[Resource<wbr>Health<wbr>Details<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10436,7 +10442,7 @@ The following output properties are available:
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10928,7 +10934,7 @@ The following output properties are available:
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

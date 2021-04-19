@@ -22,17 +22,20 @@ API Version: 2020-11-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServer` in the Go SDK.
 
@@ -41,7 +44,7 @@ API Version: 2020-11-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -788,7 +791,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +799,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -872,7 +875,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -880,7 +883,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1088,7 +1091,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response&gt;</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1196,7 +1199,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response<wbr>Args]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response]</span>
     </dt>
     <dd>{{% md %}}The resource ids of the user assigned identities to use{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1432,7 +1435,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1492,7 +1495,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connection properties{{% /md %}}</dd></dl>
 {{% /choosable %}}

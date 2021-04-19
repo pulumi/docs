@@ -105,7 +105,7 @@ package main
 
 import (
 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -317,7 +317,7 @@ package main
 
 import (
 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -414,19 +414,43 @@ const nodeType = new azure_native.servicefabric.NodeType("nodeType", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_ports</span><span class="p">:</span> <span class="nx">Optional[EndpointRangeDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">capacities</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ephemeral_ports</span><span class="p">:</span> <span class="nx">Optional[EndpointRangeDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">is_primary</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vm_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[VMSSExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">vm_image_offer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_publisher</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vm_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[VaultSecretGroupArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">application_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointRangeDescriptionArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">capacities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">ephemeral_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointRangeDescriptionArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">is_primary</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+             <span class="nx">node_type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">placement_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VMSSExtensionArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_image_offer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_image_publisher</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_image_sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_image_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_instance_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VaultSecretGroupArgs]]]]</span> = None<span class="p">,</span>
+             <span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">,</span>
+             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeType</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeType</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeType</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeType</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -461,22 +485,32 @@ const nodeType = new azure_native.servicefabric.NodeType("nodeType", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">NodeTypeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -860,7 +894,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -868,7 +902,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Disk size for each vm in the node type in GBs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -876,7 +910,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#isprimary_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -884,7 +918,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -892,7 +926,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vminstancecount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +934,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">pulumi.<wbr>Input<Endpoint<wbr>Range<wbr>Description<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +942,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capacities_nodejs" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +950,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">pulumi.<wbr>Input<Endpoint<wbr>Range<wbr>Description<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +958,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#nodetypename_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the node type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +966,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#placementproperties_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +974,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +982,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmextensions_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmssextension">VMSSExtension[]</a></span>
+        <span class="property-type"><a href="#vmssextension">pulumi.<wbr>Input<pulumi.<wbr>Input<VMSSExtension<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Set of extensions that should be installed onto the virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +990,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmimageoffer_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image<wbr>Offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +998,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmimagepublisher_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image<wbr>Publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -972,7 +1006,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmimagesku_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image<wbr>Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +1014,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmimageversion_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -988,7 +1022,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmsecrets_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">Vault<wbr>Secret<wbr>Group[]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Vault<wbr>Secret<wbr>Group<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The secrets to install in the virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -996,7 +1030,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1008,7 +1042,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1016,7 +1050,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Disk size for each vm in the node type in GBs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1024,7 +1058,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1032,7 +1066,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1040,7 +1074,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_instance_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1082,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Input[Endpoint<wbr>Range<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1090,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1098,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Input[Endpoint<wbr>Range<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1106,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#node_type_name_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the node type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1080,7 +1114,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1122,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1130,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_extensions_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmssextension">Sequence[VMSSExtension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vmssextension">Input[VMSSExtension<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Set of extensions that should be installed onto the virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1138,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_image_offer_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image_<wbr>offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The offer type of the Azure Virtual Machines Marketplace image. For example, UbuntuServer or WindowsServer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1146,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_image_publisher_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image_<wbr>publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The publisher of the Azure Virtual Machines Marketplace image. For example, Canonical or MicrosoftWindowsServer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1154,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_image_sku_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image_<wbr>sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The SKU of the Azure Virtual Machines Marketplace image. For example, 14.04.0-LTS or 2012-R2-Datacenter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1162,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_image_version_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The version of the Azure Virtual Machines Marketplace image. A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1136,7 +1170,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_secrets_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultsecretgroup">Sequence[Vault<wbr>Secret<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultsecretgroup">Input[Vault<wbr>Secret<wbr>Group<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The secrets to install in the virtual machines.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1144,7 +1178,7 @@ The NodeType resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The size of virtual machines in the pool. All virtual machines in a pool are the same size. For example, Standard_D3.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1359,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1367,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1387,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1449,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1461,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1469,7 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1557,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1569,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Azure resource identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1735,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1743,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1751,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1759,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1767,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1791,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1811,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1819,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1827,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1835,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1843,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2065,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2073,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2081,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2089,7 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2141,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2149,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2157,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2165,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2173,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">Input[str]]]</span>
     </dt>
     <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatestore_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2275,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2287,7 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2295,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2349,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatestore_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2357,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2369,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2377,7 +2411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2431,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2439,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">Vault<wbr>Certificate[]</a></span>
+        <span class="property-type"><a href="#vaultcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vault<wbr>Certificate<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2451,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2459,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificate">Sequence[Vault<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultcertificate">Input[Vault<wbr>Certificate<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2513,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2521,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Vault<wbr>Certificate<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Vault<wbr>Certificate<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2533,7 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Input[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2541,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultcertificateresponse">Sequence[Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultcertificateresponse">Input[Vault<wbr>Certificate<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd></dl>
 {{% /choosable %}}

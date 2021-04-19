@@ -67,7 +67,7 @@ package main
 
 import (
 	storagesync "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagesync"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -170,19 +170,39 @@ const serverEndpoint = new azure_native.storagesync.ServerEndpoint("serverEndpoi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, InitialDownloadPolicy]]</span> = None<span class="p">, </span><span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, LocalCacheMode]]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[Union[str, FeatureStatus]]</span> = None<span class="p">, </span><span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                   <span class="nx">cloud_tiering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, FeatureStatus]]]</span> = None<span class="p">,</span>
+                   <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">initial_download_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, InitialDownloadPolicy]]]</span> = None<span class="p">,</span>
+                   <span class="nx">local_cache_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, LocalCacheMode]]]</span> = None<span class="p">,</span>
+                   <span class="nx">offline_data_transfer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, FeatureStatus]]]</span> = None<span class="p">,</span>
+                   <span class="nx">offline_data_transfer_share_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">server_local_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">server_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                   <span class="nx">tier_files_older_than_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+                   <span class="nx">volume_free_space_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">,</span>
+                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,22 +237,32 @@ const serverEndpoint = new azure_native.storagesync.ServerEndpoint("serverEndpoi
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ServerEndpointArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +582,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -560,7 +590,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storagesyncservicename_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -568,7 +598,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +606,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloudtiering_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#featurestatus">Feature<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#featurestatus">pulumi.<wbr>Input<Feature<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +614,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +622,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initialdownloadpolicy_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Download<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#initialdownloadpolicy">Initial<wbr>Download<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#initialdownloadpolicy">pulumi.<wbr>Input<Initial<wbr>Download<wbr>Policy></a></span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +630,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#localcachemode_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Cache<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#localcachemode">Local<wbr>Cache<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#localcachemode">pulumi.<wbr>Input<Local<wbr>Cache<wbr>Mode></a></span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +638,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offlinedatatransfer_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#featurestatus">Feature<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#featurestatus">pulumi.<wbr>Input<Feature<wbr>Status></a></span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +646,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offlinedatatransfersharename_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +654,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#serverendpointname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +662,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#serverlocalpath_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Local<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Server Local path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +670,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#serverresourceid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +678,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tierfilesolderthandays_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>Files<wbr>Older<wbr>Than<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +686,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volumefreespacepercent_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Free<wbr>Space<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -668,7 +698,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -676,7 +706,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_sync_service_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -684,7 +714,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -692,7 +722,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cloud_tiering_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#featurestatus">Feature<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#featurestatus">Input[Feature<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Cloud Tiering.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -700,7 +730,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -708,7 +738,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#initial_download_policy_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>download_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#initialdownloadpolicy">Initial<wbr>Download<wbr>Policy</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#initialdownloadpolicy">Input[Initial<wbr>Download<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Policy for how namespace and files are recalled during FastDr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -716,7 +746,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#local_cache_mode_python" style="color: inherit; text-decoration: inherit;">local_<wbr>cache_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#localcachemode">Local<wbr>Cache<wbr>Mode</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#localcachemode">Input[Local<wbr>Cache<wbr>Mode]</a></span>
     </dt>
     <dd>{{% md %}}Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -724,7 +754,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offline_data_transfer_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#featurestatus">Feature<wbr>Status</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#featurestatus">Input[Feature<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Offline data transfer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +762,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#offline_data_transfer_share_name_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Offline data transfer share name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -740,7 +770,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#server_endpoint_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of Server Endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -748,7 +778,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#server_local_path_python" style="color: inherit; text-decoration: inherit;">server_<wbr>local_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Server Local path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +786,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#server_resource_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Server Resource Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +794,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tier_files_older_than_days_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>files_<wbr>older_<wbr>than_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Tier files older than days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +802,7 @@ The ServerEndpoint resource accepts the following [input]({{< relref "/docs/intr
 <a href="#volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Level of free space to be maintained by Cloud Tiering if it is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1243,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachehitbytes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Hit<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1251,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachehitbytespercent_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Hit<wbr>Bytes<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1259,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachemissbytes_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Miss<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1267,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_hit_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1287,7 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_hit_bytes_percent_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>hit_<wbr>bytes_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Percentage of total bytes (hit + miss) that were served from the local server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1295,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_miss_bytes_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>miss_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of bytes that were served from the cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1303,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1365,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tieredfilesmostrecentaccesstimestamp_nodejs" style="color: inherit; text-decoration: inherit;">tiered<wbr>Files<wbr>Most<wbr>Recent<wbr>Access<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1377,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1385,7 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tiered_files_most_recent_access_timestamp_python" style="color: inherit; text-decoration: inherit;">tiered_<wbr>files_<wbr>most_<wbr>recent_<wbr>access_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Most recent access time of tiered files{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1471,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalfilecount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>File<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1483,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">Input[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1491,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1499,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_file_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>file_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachedsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1625,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1633,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavingsbytes_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1641,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavingspercent_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1649,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalsizecloudbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Size<wbr>Cloud<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1657,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1669,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cached_size_bytes_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Cached content size on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1677,7 +1707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1685,7 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_bytes_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of bytes saved on the server{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1693,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_percent_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Percentage of cached size over total size{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1701,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_size_cloud_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>size_<wbr>cloud_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Total size of content in the azure file share{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1709,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_size_bytes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Volume size{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1779,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentvolumefreespacepercent_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Volume<wbr>Free<wbr>Space<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1787,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effectivevolumefreespacepolicy_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1795,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1807,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_volume_free_space_percent_python" style="color: inherit; text-decoration: inherit;">current_<wbr>volume_<wbr>free_<wbr>space_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Current volume free space percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1815,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#effective_volume_free_space_policy_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>volume_<wbr>free_<wbr>space_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}In the case where multiple server endpoints are present in a volume, an effective free space policy is applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1823,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filecount_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1923,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1931,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_count_python" style="color: inherit; text-decoration: inherit;">file_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of files with this error{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2169,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheperformance_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">pulumi.<wbr>Input<Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2177,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">pulumi.<wbr>Input<Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2185,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnottiering_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">pulumi.<wbr>Input<Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2193,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_nodejs" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2201,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthlastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2209,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastcloudtieringresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Cloud<wbr>Tiering<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2217,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsuccesstimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Success<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2225,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2233,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spacesavings_nodejs" style="color: inherit; text-decoration: inherit;">space<wbr>Savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">pulumi.<wbr>Input<Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2241,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumefreespacepolicystatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">pulumi.<wbr>Input<Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_performance_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Input[Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2261,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#date_policy_status_python" style="color: inherit; text-decoration: inherit;">date_<wbr>policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Input[Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2269,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_not_tiering_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Input[Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2277,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_python" style="color: inherit; text-decoration: inherit;">health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Cloud tiering health state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2285,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">health_<wbr>last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The last updated timestamp of health state{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2293,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_cloud_tiering_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>cloud_<wbr>tiering_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Last cloud tiering result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2301,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_success_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>success_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last cloud tiering success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2309,7 +2339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2317,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#space_savings_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Input[Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2325,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_free_space_policy_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Input[Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2395,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2403,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentcount_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientcount_nodejs" style="color: inherit; text-decoration: inherit;">transient<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2423,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2431,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing with the specified error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2439,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transient_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing with the specified error code{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2493,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2501,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2513,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of occurences of the error{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2521,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Error code (HResult){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2591,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2599,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recallerrors_nodejs" style="color: inherit; text-decoration: inherit;">recall<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2607,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalrecallerrorscount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Recall<wbr>Errors<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2619,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last updated timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2627,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recall_errors_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Input[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2635,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_recall_errors_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>recall_<wbr>errors_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Total count of recall errors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2753,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appliedbytes_nodejs" style="color: inherit; text-decoration: inherit;">applied<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2761,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applieditemcount_nodejs" style="color: inherit; text-decoration: inherit;">applied<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2769,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peritemerrorcount_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2777,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2785,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2793,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalitemcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2805,7 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applied_bytes_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Applied bytes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2813,7 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applied_item_count_python" style="color: inherit; text-decoration: inherit;">applied_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Applied item count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2821,7 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#per_item_error_count_python" style="color: inherit; text-decoration: inherit;">per_<wbr>item_<wbr>error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Per item error count{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2829,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Timestamp when properties were updated{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2837,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Total bytes (if available){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2845,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_item_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Total item count (if available){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2979,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesnotsyncingerrors_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Not<wbr>Syncing<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2987,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsyncperitemerrorcount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Per<wbr>Item<wbr>Error<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2995,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsyncresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3003,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsyncsuccesstimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Success<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3011,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsynctimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3019,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistentfilesnotsyncingcount_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3027,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transientfilesnotsyncingcount_nodejs" style="color: inherit; text-decoration: inherit;">transient<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,7 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#files_not_syncing_errors_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>syncing_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Input[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3047,7 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_per_item_error_count_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>per_<wbr>item_<wbr>error_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Last sync per item error count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3055,7 +3085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}Last sync result (HResult){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3063,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_success_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>success_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last sync success timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3071,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last sync timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3079,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of persistent files not syncing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3087,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transient_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">transient_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Count of transient files not syncing.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3285,7 +3315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combinedhealth_nodejs" style="color: inherit; text-decoration: inherit;">combined<wbr>Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3293,7 +3323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadactivity_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">pulumi.<wbr>Input<Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3301,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadhealth_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Download Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3309,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#downloadstatus_nodejs" style="color: inherit; text-decoration: inherit;">download<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">pulumi.<wbr>Input<Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3317,7 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3325,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinedatatransferstatus_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Data<wbr>Transfer<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3333,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncactivity_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3341,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalpersistentfilesnotsyncingcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Persistent<wbr>Files<wbr>Not<wbr>Syncing<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3349,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadactivity_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">pulumi.<wbr>Input<Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3357,7 +3387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadhealth_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3365,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadstatus_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">pulumi.<wbr>Input<Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3377,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#combined_health_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Combined Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3385,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_activity_python" style="color: inherit; text-decoration: inherit;">download_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Input[Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3393,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_health_python" style="color: inherit; text-decoration: inherit;">download_<wbr>health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Download Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3401,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#download_status_python" style="color: inherit; text-decoration: inherit;">download_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Input[Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3409,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Last Updated Timestamp{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3417,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_data_transfer_status_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>data_<wbr>transfer_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Offline Data Transfer State{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3425,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_activity_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3433,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_persistent_files_not_syncing_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>persistent_<wbr>files_<wbr>not_<wbr>syncing_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type">pulumi.<wbr>Input[float]</span>
     </dt>
     <dd>{{% md %}}Total count of persistent files not syncing (combined upload + download).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3441,7 +3471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_activity_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Input[Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3449,7 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_health_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>health</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Upload Health Status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3457,7 +3487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Input[Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}

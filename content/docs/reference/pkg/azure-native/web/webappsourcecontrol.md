@@ -28,19 +28,35 @@ $ pulumi import azure-native:web:WebAppSourceControl myresource1 /subscriptions/
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_rollback_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">git_hub_action_configuration</span><span class="p">:</span> <span class="nx">Optional[GitHubActionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">is_git_hub_action</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_manual_integration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_mercurial</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                        <span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">deployment_rollback_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">git_hub_action_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GitHubActionConfigurationArgs]]</span> = None<span class="p">,</span>
+                        <span class="nx">is_git_hub_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">is_manual_integration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">is_mercurial</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+                        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">repo_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppSourceControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppSourceControl</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppSourceControl</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppSourceControl</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppSourceControl</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppSourceControlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,22 +91,32 @@ $ pulumi import azure-native:web:WebAppSourceControl myresource1 /subscriptions/
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">WebAppSourceControlArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -346,7 +372,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -354,7 +380,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -362,7 +388,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Name of branch to use for deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -370,7 +396,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#deploymentrollbackenabled_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Rollback<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable deployment rollback; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -378,7 +404,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#githubactionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactionconfiguration">Git<wbr>Hub<wbr>Action<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#githubactionconfiguration">pulumi.<wbr>Input<Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -386,7 +412,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#isgithubaction_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Git<wbr>Hub<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}<code>true</code> if this is deployed via GitHub action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +420,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#ismanualintegration_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Manual<wbr>Integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}<code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -402,7 +428,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#ismercurial_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mercurial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}<code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -410,7 +436,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,7 +444,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#repourl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Repository or source control URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -430,7 +456,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -438,7 +464,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -446,7 +472,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Name of branch to use for deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +480,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#deployment_rollback_enabled_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>rollback_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable deployment rollback; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -462,7 +488,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#git_hub_action_configuration_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactionconfiguration">Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactionconfiguration">Input[Git<wbr>Hub<wbr>Action<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If GitHub Action is selected, than the associated configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,7 +496,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#is_git_hub_action_python" style="color: inherit; text-decoration: inherit;">is_<wbr>git_<wbr>hub_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if this is deployed via GitHub action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +504,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#is_manual_integration_python" style="color: inherit; text-decoration: inherit;">is_<wbr>manual_<wbr>integration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +512,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#is_mercurial_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mercurial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}<code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +520,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +528,7 @@ The WebAppSourceControl resource accepts the following [input]({{< relref "/docs
 <a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Repository or source control URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -653,7 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestack_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Stack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -673,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_stack_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>stack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -735,7 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimestack_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Stack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -755,7 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_stack_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>stack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime stack is used to determine the workflow file content for code base apps.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Runtime version is used to determine what build version to set in the workflow file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -849,7 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfiguration">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfiguration">pulumi.<wbr>Input<Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfiguration">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfiguration">pulumi.<wbr>Input<Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generateworkflowfile_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Workflow<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islinux_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfiguration">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfiguration">Input[Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfiguration">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfiguration">Input[Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generate_workflow_file_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>workflow_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_linux_python" style="color: inherit; text-decoration: inherit;">is_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -995,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codeconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">pulumi.<wbr>Input<Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">pulumi.<wbr>Input<Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generateworkflowfile_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Workflow<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#islinux_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1031,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_configuration_python" style="color: inherit; text-decoration: inherit;">code_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncodeconfigurationresponse">Input[Git<wbr>Hub<wbr>Action<wbr>Code<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action code configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_configuration_python" style="color: inherit; text-decoration: inherit;">container_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#githubactioncontainerconfigurationresponse">Input[Git<wbr>Hub<wbr>Action<wbr>Container<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GitHub Action container configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#generate_workflow_file_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>workflow_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Workflow option to determine whether the workflow file should be generated and written to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1055,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_linux_python" style="color: inherit; text-decoration: inherit;">is_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}This will help determine the workflow configuration to select.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1141,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverurl_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_url_python" style="color: inherit; text-decoration: inherit;">server_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1287,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverurl_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1323,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The image name for the build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The password used to upload the image to the container registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_url_python" style="color: inherit; text-decoration: inherit;">server_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The server URL for the container registry where the build will be hosted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The username used to upload the image to the container registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -72,7 +72,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
@@ -181,19 +181,36 @@ const expressRouteCircuitConnection = new azure_native.network.ExpressRouteCircu
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_circuit_connection_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6CircuitConnectionConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                                  <span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubResourceArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">ipv6_circuit_connection_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Ipv6CircuitConnectionConfigArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">peer_express_route_circuit_peering</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubResourceArgs]]</span> = None<span class="p">,</span>
+                                  <span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">,</span>
+                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -228,22 +245,32 @@ const expressRouteCircuitConnection = new azure_native.network.ExpressRouteCircu
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">ExpressRouteCircuitConnectionArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -515,7 +542,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#circuitname_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -523,7 +550,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#peeringname_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -531,7 +558,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +566,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +574,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +582,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +590,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#expressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +598,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +606,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#ipv6circuitconnectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Circuit<wbr>Connection<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Ipv6Circuit<wbr>Connection<wbr>Config</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">pulumi.<wbr>Input<Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +614,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +622,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#peerexpressroutecircuitpeering_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
+        <span class="property-type"><a href="#subresource">pulumi.<wbr>Input<Sub<wbr>Resource<wbr>Args></a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -607,7 +634,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#circuit_name_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -615,7 +642,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -623,7 +650,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +658,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/29 IP address space to carve out Customer addresses for tunnels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -639,7 +666,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The authorization key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +674,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +682,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +690,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -671,7 +698,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#ipv6_circuit_connection_config_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>circuit_<wbr>connection_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args</a></span>
+        <span class="property-type"><a href="#ipv6circuitconnectionconfig">Input[Ipv6Circuit<wbr>Connection<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IPv6 Address PrefixProperties of the express route circuit connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -679,7 +706,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -687,7 +714,7 @@ The ExpressRouteCircuitConnection resource accepts the following [input]({{< rel
 <a href="#peer_express_route_circuit_peering_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>express_<wbr>route_<wbr>circuit_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
+        <span class="property-type"><a href="#subresource">Input[Sub<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Reference to Express Route Circuit Private Peering Resource of the peered circuit.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -918,7 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -930,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -984,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuitconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -992,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1004,7 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#circuit_connection_status_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Express Route Circuit connection state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}/125 IP address space to carve out customer addresses for global reach.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1050,7 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1062,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1100,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1112,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
