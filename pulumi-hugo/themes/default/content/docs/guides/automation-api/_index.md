@@ -83,10 +83,10 @@ Like all of Pulumi, Automation API is available in multiple languages, so you ca
 
 |                                                        | Language                                                                | Status                                                            |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/automation/" >}}) | Stable                                                            |
-| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi/automation" >}}) | Stable                                                            |
+| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable                                                            |
+| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable                                                            |
 | <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi/#module-pulumi.automation" >}}) | Stable                                                           |
-| <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET]({{< relref "/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html">}}) | Stable |
+| <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.html) | Stable |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto?tab=doc) | Stable |
 
 ## Blog Posts

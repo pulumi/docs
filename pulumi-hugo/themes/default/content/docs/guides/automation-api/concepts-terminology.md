@@ -33,7 +33,7 @@ The `LocalWorkspace` class is the default implementation of `Workspace`. This im
 
 ## Stack
 
-The `Stack` class represents an isolated, independently configurable instance of a Pulumi program. `Stack` exposes methods for the full pulumi lifecycle (`up`/`preview`/`refresh`/`destroy`), as well as managing configuration. Multiple Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev). You can learn more about stacks in the [intro docs]({{< relref "/docs/intro/concepts/stack/" >}}).
+The `Stack` class represents an isolated, independently configurable instance of a Pulumi program. `Stack` exposes methods for the full pulumi lifecycle (`up`/`preview`/`refresh`/`destroy`), as well as managing configuration. Multiple Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev). You can learn more about stacks in the [intro docs]({{< relref "/docs/intro/concepts/stack" >}}).
 
 ## Local Program
 
