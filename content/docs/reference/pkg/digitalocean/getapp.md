@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -122,18 +122,17 @@ export const defaultIngress = example.then(example => example.defaultIngress);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAppArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAppResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAppResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_app(</span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAppResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_app(</span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAppResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAppArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAppResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAppResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApp` in the Go SDK.
 
@@ -142,7 +141,7 @@ export const defaultIngress = example.then(example => example.defaultIngress);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApp </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -546,7 +545,7 @@ The following output properties are available:
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecdatabase">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Database&gt;</a></span>
+        <span class="property-type"><a href="#getappspecdatabase">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Database<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +553,7 @@ The following output properties are available:
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Env&gt;</a></span>
+        <span class="property-type"><a href="#getappspecenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +562,7 @@ The following output properties are available:
 <a href="#jobs_csharp" style="color: inherit; text-decoration: inherit;">Jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjob">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job&gt;</a></span>
+        <span class="property-type"><a href="#getappspecjob">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +578,7 @@ The following output properties are available:
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservice">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service&gt;</a></span>
+        <span class="property-type"><a href="#getappspecservice">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +586,7 @@ The following output properties are available:
 <a href="#staticsites_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsite">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site&gt;</a></span>
+        <span class="property-type"><a href="#getappspecstaticsite">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +594,7 @@ The following output properties are available:
 <a href="#workers_csharp" style="color: inherit; text-decoration: inherit;">Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworker">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker&gt;</a></span>
+        <span class="property-type"><a href="#getappspecworker">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -780,7 +779,7 @@ The following output properties are available:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecdatabase">Sequence[Get<wbr>App<wbr>Spec<wbr>Database]</a></span>
+        <span class="property-type"><a href="#getappspecdatabase">Sequence[Get<wbr>App<wbr>Spec<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +787,7 @@ The following output properties are available:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Env]</a></span>
+        <span class="property-type"><a href="#getappspecenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -797,7 +796,7 @@ The following output properties are available:
 <a href="#jobs_python" style="color: inherit; text-decoration: inherit;">jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjob">Sequence[Get<wbr>App<wbr>Spec<wbr>Job]</a></span>
+        <span class="property-type"><a href="#getappspecjob">Sequence[Get<wbr>App<wbr>Spec<wbr>Job<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +812,7 @@ The following output properties are available:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservice">Sequence[Get<wbr>App<wbr>Spec<wbr>Service]</a></span>
+        <span class="property-type"><a href="#getappspecservice">Sequence[Get<wbr>App<wbr>Spec<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +820,7 @@ The following output properties are available:
 <a href="#static_sites_python" style="color: inherit; text-decoration: inherit;">static_<wbr>sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsite">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site]</a></span>
+        <span class="property-type"><a href="#getappspecstaticsite">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +828,7 @@ The following output properties are available:
 <a href="#workers_python" style="color: inherit; text-decoration: inherit;">workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworker">Sequence[Get<wbr>App<wbr>Spec<wbr>Worker]</a></span>
+        <span class="property-type"><a href="#getappspecworker">Sequence[Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1317,7 +1316,7 @@ The following output properties are available:
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env&gt;</a></span>
+        <span class="property-type"><a href="#getappspecjobenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1325,7 @@ The following output properties are available:
 <a href="#git_csharp" style="color: inherit; text-decoration: inherit;">Git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobgit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecjobgit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1334,7 @@ The following output properties are available:
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobgithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecjobgithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1343,7 @@ The following output properties are available:
 <a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobgitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecjobgitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1352,7 @@ The following output properties are available:
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image</a></span>
+        <span class="property-type"><a href="#getappspecjobimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1719,7 +1718,7 @@ The following output properties are available:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env]</a></span>
+        <span class="property-type"><a href="#getappspecjobenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1728,7 +1727,7 @@ The following output properties are available:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobgit">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecjobgit">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1736,7 @@ The following output properties are available:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobgithub">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecjobgithub">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1745,7 @@ The following output properties are available:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobgitlab">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecjobgitlab">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1754,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecjobimage">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image</a></span>
+        <span class="property-type"><a href="#getappspecjobimage">Get<wbr>App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2515,7 +2514,7 @@ The following output properties are available:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceroute">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route&gt;</a></span>
+        <span class="property-type"><a href="#getappspecserviceroute">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2559,7 +2558,7 @@ The following output properties are available:
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Env&gt;</a></span>
+        <span class="property-type"><a href="#getappspecserviceenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2567,7 @@ The following output properties are available:
 <a href="#git_csharp" style="color: inherit; text-decoration: inherit;">Git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicegit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecservicegit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2576,7 @@ The following output properties are available:
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicegithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecservicegithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2585,7 @@ The following output properties are available:
 <a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecservicegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2594,7 @@ The following output properties are available:
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicehealthcheck">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#getappspecservicehealthcheck">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2603,7 @@ The following output properties are available:
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image</a></span>
+        <span class="property-type"><a href="#getappspecserviceimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2983,7 +2982,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceroute">Sequence[Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route]</a></span>
+        <span class="property-type"><a href="#getappspecserviceroute">Sequence[Get<wbr>App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3027,7 +3026,7 @@ The following output properties are available:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Service<wbr>Env]</a></span>
+        <span class="property-type"><a href="#getappspecserviceenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Service<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3036,7 +3035,7 @@ The following output properties are available:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicegit">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecservicegit">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +3044,7 @@ The following output properties are available:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicegithub">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecservicegithub">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3054,7 +3053,7 @@ The following output properties are available:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +3062,7 @@ The following output properties are available:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecservicehealthcheck">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#getappspecservicehealthcheck">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3072,7 +3071,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecserviceimage">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image</a></span>
+        <span class="property-type"><a href="#getappspecserviceimage">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4102,7 +4101,7 @@ The following output properties are available:
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteroute">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route&gt;</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteroute">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4146,7 +4145,7 @@ The following output properties are available:
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env&gt;</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4164,7 +4163,7 @@ The following output properties are available:
 <a href="#git_csharp" style="color: inherit; text-decoration: inherit;">Git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsitegit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecstaticsitegit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4173,7 +4172,7 @@ The following output properties are available:
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsitegithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecstaticsitegithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4182,7 +4181,7 @@ The following output properties are available:
 <a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsitegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecstaticsitegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4489,7 +4488,7 @@ The following output properties are available:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteroute">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route]</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteroute">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4533,7 +4532,7 @@ The following output properties are available:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsiteenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env]</a></span>
+        <span class="property-type"><a href="#getappspecstaticsiteenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4551,7 +4550,7 @@ The following output properties are available:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsitegit">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecstaticsitegit">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4560,7 +4559,7 @@ The following output properties are available:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsitegithub">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecstaticsitegithub">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4569,7 +4568,7 @@ The following output properties are available:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5217,7 +5216,7 @@ The following output properties are available:
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Env&gt;</a></span>
+        <span class="property-type"><a href="#getappspecworkerenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5226,7 +5225,7 @@ The following output properties are available:
 <a href="#git_csharp" style="color: inherit; text-decoration: inherit;">Git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkergit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecworkergit">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5235,7 +5234,7 @@ The following output properties are available:
 <a href="#github_csharp" style="color: inherit; text-decoration: inherit;">Github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkergithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecworkergithub">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5244,7 +5243,7 @@ The following output properties are available:
 <a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkergitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecworkergitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5253,7 +5252,7 @@ The following output properties are available:
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image</a></span>
+        <span class="property-type"><a href="#getappspecworkerimage">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5580,7 +5579,7 @@ The following output properties are available:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Env]</a></span>
+        <span class="property-type"><a href="#getappspecworkerenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5589,7 +5588,7 @@ The following output properties are available:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkergit">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git</a></span>
+        <span class="property-type"><a href="#getappspecworkergit">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5598,7 +5597,7 @@ The following output properties are available:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkergithub">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github</a></span>
+        <span class="property-type"><a href="#getappspecworkergithub">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5607,7 +5606,7 @@ The following output properties are available:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
+        <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5616,7 +5615,7 @@ The following output properties are available:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappspecworkerimage">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image</a></span>
+        <span class="property-type"><a href="#getappspecworkerimage">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"

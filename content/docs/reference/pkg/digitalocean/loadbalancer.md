@@ -152,38 +152,19 @@ const _public = new digitalocean.LoadBalancer("public", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">droplet_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">enable_backend_keepalive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerForwardingRuleArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerHealthcheckArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">redirect_http_to_https</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">sticky_sessions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerStickySessionsArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">droplet_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backend_keepalive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerForwardingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_http_to_https</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_sessions</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerStickySessionsArgs]</span> = None<span class="p">, </span><span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -218,32 +199,22 @@ const _public = new digitalocean.LoadBalancer("public", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -252,7 +223,7 @@ const _public = new digitalocean.LoadBalancer("public", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -276,7 +247,7 @@ const _public = new digitalocean.LoadBalancer("public", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -591,7 +562,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#forwardingrules_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerforwardingrule">pulumi<wbr>Input<pulumi<wbr>Input<Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancerforwardingrule">Load<wbr>Balancer<wbr>Forwarding<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
@@ -601,7 +572,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<Region></span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region to start in
 {{% /md %}}</dd><dt class="property-optional"
@@ -610,7 +581,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<Algorithm></span>
+        <span class="property-type">Algorithm</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
@@ -621,7 +592,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +601,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#droplettag_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +610,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#enablebackendkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Keepalive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +619,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
@@ -659,7 +630,7 @@ the backend service. Default value is `false`.
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Healthcheck<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -669,7 +640,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +649,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#redirecthttptohttps_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>To<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
@@ -689,7 +660,7 @@ Default value is `false`.
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +669,7 @@ Default value is `false`.
 <a href="#stickysessions_nodejs" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstickysessions">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</a></span>
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
@@ -708,7 +679,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd></dl>
@@ -721,7 +692,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#forwarding_rules_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerforwardingrule">Input[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancerforwardingrule">Sequence[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
@@ -731,7 +702,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to start in
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +711,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
@@ -751,7 +722,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -760,7 +731,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#droplet_tag_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +740,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#enable_backend_keepalive_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>keepalive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -778,7 +749,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
@@ -789,7 +760,7 @@ the backend service. Default value is `false`.
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Input[Load<wbr>Balancer<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -799,7 +770,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,7 +779,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#redirect_http_to_https_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>to_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
@@ -819,7 +790,7 @@ Default value is `false`.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +799,7 @@ Default value is `false`.
 <a href="#sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstickysessions">Input[Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
@@ -838,7 +809,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd></dl>
@@ -1007,38 +978,20 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
-        <span class="nx">droplet_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_backend_keepalive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerForwardingRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerHealthcheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancer_urn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">redirect_http_to_https</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sticky_sessions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerStickySessionsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">droplet_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backend_keepalive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">forwarding_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerForwardingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_http_to_https</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sticky_sessions</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerStickySessionsArgs]</span> = None<span class="p">, </span><span class="nx">vpc_uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1457,7 +1410,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<Algorithm></span>
+        <span class="property-type">Algorithm</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
@@ -1468,7 +1421,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1430,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_droplettag_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1439,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_enablebackendkeepalive_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Keepalive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1448,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_enableproxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Proxy<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
@@ -1506,7 +1459,7 @@ the backend service. Default value is `false`.
 <a href="#state_forwardingrules_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerforwardingrule">pulumi<wbr>Input<pulumi<wbr>Input<Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancerforwardingrule">Load<wbr>Balancer<wbr>Forwarding<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
@@ -1516,7 +1469,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#state_healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Healthcheck<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -1526,7 +1479,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1534,7 +1487,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_loadbalancerurn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Urn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1543,7 +1496,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1505,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_redirecthttptohttps_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>To<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
@@ -1563,7 +1516,7 @@ Default value is `false`.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<Region></span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region to start in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1525,7 @@ Default value is `false`.
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1534,7 @@ Default value is `false`.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1589,7 +1542,7 @@ Default value is `false`.
 <a href="#state_stickysessions_nodejs" style="color: inherit; text-decoration: inherit;">sticky<wbr>Sessions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstickysessions">pulumi<wbr>Input<Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</a></span>
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
@@ -1599,7 +1552,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#state_vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd></dl>
@@ -1612,7 +1565,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used to determine
 which backend Droplet will be selected by a client. It must be either `round_robin`
@@ -1623,7 +1576,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1585,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_droplet_tag_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1594,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_enable_backend_keepalive_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>keepalive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets. Default value is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1603,7 @@ or `least_connections`. The default value is `round_robin`.
 <a href="#state_enable_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>proxy_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether PROXY
 Protocol should be used to pass information from connecting client requests to
@@ -1661,7 +1614,7 @@ the backend service. Default value is `false`.
 <a href="#state_forwarding_rules_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerforwardingrule">Input[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancerforwardingrule">Sequence[Load<wbr>Balancer<wbr>Forwarding<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of `forwarding_rule` to be assigned to the
 Load Balancer. The `forwarding_rule` block is documented below.
@@ -1671,7 +1624,7 @@ Load Balancer. The `forwarding_rule` block is documented below.
 <a href="#state_healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerhealthcheck">Input[Load<wbr>Balancer<wbr>Healthcheck<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `healthcheck` block to be assigned to the
 Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck is allowed.
@@ -1681,7 +1634,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1642,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_load_balancer_urn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>urn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1651,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Load Balancer name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1660,7 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 <a href="#state_redirect_http_to_https_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>to_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether
 HTTP requests to the Load Balancer on port 80 will be redirected to HTTPS on port 443.
@@ -1718,7 +1671,7 @@ Default value is `false`.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to start in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1727,7 +1680,7 @@ Default value is `false`.
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the Load Balancer. It must be either `lb-small`, `lb-medium`, or `lb-large`. Defaults to `lb-small`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1689,7 @@ Default value is `false`.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1744,7 +1697,7 @@ Default value is `false`.
 <a href="#state_sticky_sessions_python" style="color: inherit; text-decoration: inherit;">sticky_<wbr>sessions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerstickysessions">Input[Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
@@ -1754,7 +1707,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#state_vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd></dl>
@@ -1912,7 +1865,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#entryport_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on which the Load Balancer instance will listen.
 {{% /md %}}</dd><dt class="property-required"
@@ -1921,7 +1874,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#entryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1930,7 +1883,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#targetport_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
 {{% /md %}}</dd><dt class="property-required"
@@ -1939,7 +1892,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#targetprotocol_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1948,7 +1901,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1957,7 +1910,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +1919,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#tlspassthrough_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Passthrough</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
 {{% /md %}}</dd></dl>
@@ -1979,7 +1932,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#entry_port_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on which the Load Balancer instance will listen.
 {{% /md %}}</dd><dt class="property-required"
@@ -1988,7 +1941,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#entry_protocol_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic to the Load Balancer. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1997,7 +1950,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#target_port_python" style="color: inherit; text-decoration: inherit;">target_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets to which the Load Balancer will send traffic.
 {{% /md %}}</dd><dt class="property-required"
@@ -2006,7 +1959,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#target_protocol_python" style="color: inherit; text-decoration: inherit;">target_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for traffic from the Load Balancer to the backend Droplets. The possible values are: `http`, `https`, `http2` or `tcp`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2015,7 +1968,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}**Deprecated** The ID of the TLS certificate to be used for SSL termination.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Certificate IDs may change, for example when a Let&#39;s Encrypt certificate is auto-renewed. Please specify &#39;certificate_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2024,7 +1977,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the TLS certificate to be used for SSL termination.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2033,7 +1986,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#tls_passthrough_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>passthrough</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value indicating whether SSL encrypted traffic will be passed through to the backend Droplets. The default value is `false`.
 {{% /md %}}</dd></dl>
@@ -2182,7 +2135,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets on which the health check will attempt a connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2191,7 +2144,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2200,7 +2153,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#checkintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2209,7 +2162,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2218,7 +2171,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on the backend Droplets to which the Load Balancer instance will send a request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2227,7 +2180,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#responsetimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2236,7 +2189,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
 {{% /md %}}</dd></dl>
@@ -2249,7 +2202,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the port on the backend Droplets on which the health check will attempt a connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -2258,7 +2211,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for health checks sent to the backend Droplets. The possible values are `http`, `https` or `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2220,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between between two consecutive health checks. If not specified, the default value is `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2276,7 +2229,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must pass for a backend Droplet to be marked "healthy" and be re-added to the pool. If not specified, the default value is `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2238,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path on the backend Droplets to which the Load Balancer instance will send a request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2247,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#response_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the Load Balancer instance will wait for a response until marking a health check as failed. If not specified, the default value is `5`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2256,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a health check must fail for a backend Droplet to be marked "unhealthy" and be removed from the pool. If not specified, the default value is `3`.
 {{% /md %}}</dd></dl>
@@ -2380,7 +2333,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2389,7 +2342,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#cookiettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2351,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
 {{% /md %}}</dd></dl>
@@ -2411,7 +2364,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to be used for the cookie sent to the client. This attribute is required when using `cookies` for the sticky sessions type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2373,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#cookie_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds until the cookie set by the Load Balancer expires. This attribute is required when using `cookies` for the sticky sessions type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2429,7 +2382,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An attribute indicating how and if requests from a client will be persistently served by the same backend Droplet. The possible values are `cookies` or `none`. If not specified, the default value is `none`.
 {{% /md %}}</dd></dl>

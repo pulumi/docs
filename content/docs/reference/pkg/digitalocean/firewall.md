@@ -304,30 +304,19 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
-             <span class="nx">inbound_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallInboundRuleArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallOutboundRuleArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[FirewallArgs]</a></span> = None<span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">inbound_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -362,32 +351,22 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FirewallArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -396,7 +375,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -420,7 +399,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -579,7 +558,7 @@ The `outbound_rule` block is documented below.
 <a href="#dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -589,7 +568,7 @@ to the Firewall.
 <a href="#inboundrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Inbound<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -599,7 +578,7 @@ The `inbound_rule` block is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +587,7 @@ The `inbound_rule` block is documented below.
 <a href="#outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Outbound<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -618,7 +597,7 @@ The `outbound_rule` block is documented below.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd></dl>
@@ -631,7 +610,7 @@ The `outbound_rule` block is documented below.
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -641,7 +620,7 @@ to the Firewall.
 <a href="#inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">Input[Firewall<wbr>Inbound<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">Sequence[Firewall<wbr>Inbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -651,7 +630,7 @@ The `inbound_rule` block is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +639,7 @@ The `inbound_rule` block is documented below.
 <a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">Input[Firewall<wbr>Outbound<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">Sequence[Firewall<wbr>Outbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -670,7 +649,7 @@ The `outbound_rule` block is documented below.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd></dl>
@@ -867,30 +846,20 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]</span> = None<span class="p">,</span>
-        <span class="nx">inbound_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallInboundRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallOutboundRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">pending_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallPendingChangeArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">droplet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">inbound_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallInboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallOutboundRuleArgs]]</span> = None<span class="p">, </span><span class="nx">pending_changes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallPendingChangeArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1167,7 +1136,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
@@ -1177,7 +1146,7 @@ that represents when the Firewall was created.
 <a href="#state_dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -1187,7 +1156,7 @@ to the Firewall.
 <a href="#state_inboundrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Inbound<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -1197,7 +1166,7 @@ The `inbound_rule` block is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1175,7 @@ The `inbound_rule` block is documented below.
 <a href="#state_outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Outbound<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -1216,7 +1185,7 @@ The `outbound_rule` block is documented below.
 <a href="#state_pendingchanges_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpendingchange">pulumi<wbr>Input<pulumi<wbr>Input<Firewall<wbr>Pending<wbr>Change<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallpendingchange">Firewall<wbr>Pending<wbr>Change[]</a></span>
     </dt>
     <dd>{{% md %}}An list of object containing the fields, "droplet_id",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -1228,7 +1197,7 @@ have been successfully applied.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1238,7 +1207,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd></dl>
@@ -1251,7 +1220,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
@@ -1261,7 +1230,7 @@ that represents when the Firewall was created.
 <a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
@@ -1271,7 +1240,7 @@ to the Firewall.
 <a href="#state_inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallinboundrule">Input[Firewall<wbr>Inbound<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallinboundrule">Sequence[Firewall<wbr>Inbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
@@ -1281,7 +1250,7 @@ The `inbound_rule` block is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firewall name
 {{% /md %}}</dd><dt class="property-optional"
@@ -1290,7 +1259,7 @@ The `inbound_rule` block is documented below.
 <a href="#state_outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalloutboundrule">Input[Firewall<wbr>Outbound<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewalloutboundrule">Sequence[Firewall<wbr>Outbound<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
@@ -1300,7 +1269,7 @@ The `outbound_rule` block is documented below.
 <a href="#state_pending_changes_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpendingchange">Input[Firewall<wbr>Pending<wbr>Change<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallpendingchange">Sequence[Firewall<wbr>Pending<wbr>Change<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An list of object containing the fields, "droplet_id",
 "removing", and "status".  It is provided to detail exactly which Droplets
@@ -1312,7 +1281,7 @@ have been successfully applied.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1322,7 +1291,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
 {{% /md %}}</dd></dl>
@@ -1482,7 +1451,7 @@ will be accepted.
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
@@ -1492,7 +1461,7 @@ This may be one of "tcp", "udp", or "icmp".
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ports on which traffic will be allowed
 specified as a string containing a single port, a range (e.g. "8000-9000"),
@@ -1504,7 +1473,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
@@ -1515,7 +1484,7 @@ inbound traffic will be accepted.
 <a href="#sourcedropletids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Droplet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
@@ -1525,7 +1494,7 @@ the Droplets from which the inbound traffic will be accepted.
 <a href="#sourceloadbalanceruids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Load<wbr>Balancer<wbr>Uids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
@@ -1535,7 +1504,7 @@ of the Load Balancers from which the inbound traffic will be accepted.
 <a href="#sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
@@ -1550,7 +1519,7 @@ will be accepted.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
@@ -1560,7 +1529,7 @@ This may be one of "tcp", "udp", or "icmp".
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ports on which traffic will be allowed
 specified as a string containing a single port, a range (e.g. "8000-9000"),
@@ -1572,7 +1541,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
@@ -1583,7 +1552,7 @@ inbound traffic will be accepted.
 <a href="#source_droplet_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>droplet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
@@ -1593,7 +1562,7 @@ the Droplets from which the inbound traffic will be accepted.
 <a href="#source_load_balancer_uids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>load_<wbr>balancer_<wbr>uids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
@@ -1603,7 +1572,7 @@ of the Load Balancers from which the inbound traffic will be accepted.
 <a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
@@ -1758,7 +1727,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
@@ -1768,7 +1737,7 @@ This may be one of "tcp", "udp", or "icmp".
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
@@ -1779,7 +1748,7 @@ outbound traffic will be allowed.
 <a href="#destinationdropletids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Droplet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
@@ -1789,7 +1758,7 @@ the Droplets to which the outbound traffic will be allowed.
 <a href="#destinationloadbalanceruids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
@@ -1799,7 +1768,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
 <a href="#destinationtags_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets to which the outbound traffic will
@@ -1811,7 +1780,7 @@ traffic.
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ports on which traffic will be allowed
 specified as a string containing a single port, a range (e.g. "8000-9000"),
@@ -1827,7 +1796,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
@@ -1837,7 +1806,7 @@ This may be one of "tcp", "udp", or "icmp".
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
@@ -1848,7 +1817,7 @@ outbound traffic will be allowed.
 <a href="#destination_droplet_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>droplet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
@@ -1858,7 +1827,7 @@ the Droplets to which the outbound traffic will be allowed.
 <a href="#destination_load_balancer_uids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>load_<wbr>balancer_<wbr>uids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
@@ -1868,7 +1837,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
 <a href="#destination_tags_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets to which the outbound traffic will
@@ -1880,7 +1849,7 @@ traffic.
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ports on which traffic will be allowed
 specified as a string containing a single port, a range (e.g. "8000-9000"),
@@ -1958,7 +1927,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#dropletid_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1935,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#removing_nodejs" style="color: inherit; text-decoration: inherit;">removing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1943,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
@@ -1988,7 +1957,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#droplet_id_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1996,7 +1965,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#removing_python" style="color: inherit; text-decoration: inherit;">removing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2004,7 +1973,7 @@ This can be "waiting", "succeeded", or "failed".
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
