@@ -176,9 +176,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -548,30 +548,19 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateCertificateArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateCertificatePolicyArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -606,32 +595,22 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CertificateArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -640,7 +619,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -664,7 +643,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -817,7 +796,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -826,7 +805,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -835,7 +814,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -844,7 +823,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +832,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -866,7 +845,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -875,7 +854,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -884,7 +863,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Input[Certificate<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -893,7 +872,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -902,7 +881,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1187,33 +1166,20 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certificate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certificate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateCertificateArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CertificateCertificateAttributeArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_data_base64</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateCertificatePolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateCertificateAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertificateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certificate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CertificateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certificate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CertificateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1528,7 +1494,7 @@ The following state arguments are supported:
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1503,7 @@ The following state arguments are supported:
 <a href="#state_certificateattributes_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificateattribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">Certificate<wbr>Certificate<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1512,7 @@ The following state arguments are supported:
 <a href="#state_certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1521,7 @@ The following state arguments are supported:
 <a href="#state_certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1530,7 @@ The following state arguments are supported:
 <a href="#state_certificatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1539,7 @@ The following state arguments are supported:
 <a href="#state_keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1591,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1575,7 @@ The following state arguments are supported:
 <a href="#state_thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1618,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
 {{% /md %}}</dd></dl>
@@ -1631,7 +1597,7 @@ The following state arguments are supported:
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Input[Certificate<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_certificate_attributes_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificateattribute">Input[Certificate<wbr>Certificate<wbr>Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">Sequence[Certificate<wbr>Certificate<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1615,7 @@ The following state arguments are supported:
 <a href="#state_certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1633,7 @@ The following state arguments are supported:
 <a href="#state_certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1678,7 @@ The following state arguments are supported:
 <a href="#state_thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
 {{% /md %}}</dd></dl>
@@ -1789,7 +1755,7 @@ The following state arguments are supported:
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded certificate contents. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1764,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1811,7 +1777,7 @@ The following state arguments are supported:
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded certificate contents. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1786,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1951,7 +1917,7 @@ The following state arguments are supported:
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create time of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +1926,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether the Key Vault Certificate is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1969,7 +1935,7 @@ The following state arguments are supported:
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expires time of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1978,7 +1944,7 @@ The following state arguments are supported:
 <a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +1953,7 @@ The following state arguments are supported:
 <a href="#recoverylevel_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +1962,7 @@ The following state arguments are supported:
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recent update time of the Key Vault Certificate.
 {{% /md %}}</dd></dl>
@@ -2009,7 +1975,7 @@ The following state arguments are supported:
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The create time of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2018,7 +1984,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the Key Vault Certificate is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2027,7 +1993,7 @@ The following state arguments are supported:
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expires time of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2036,7 +2002,7 @@ The following state arguments are supported:
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2045,7 +2011,7 @@ The following state arguments are supported:
 <a href="#recovery_level_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2054,7 +2020,7 @@ The following state arguments are supported:
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The recent update time of the Key Vault Certificate.
 {{% /md %}}</dd></dl>
@@ -2167,7 +2133,7 @@ The following state arguments are supported:
 <a href="#issuerparameters_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2176,7 +2142,7 @@ The following state arguments are supported:
 <a href="#keyproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2185,7 +2151,7 @@ The following state arguments are supported:
 <a href="#secretproperties_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2160,7 @@ The following state arguments are supported:
 <a href="#lifetimeactions_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2203,7 +2169,7 @@ The following state arguments are supported:
 <a href="#x509certificateproperties_nodejs" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd></dl>
@@ -2216,7 +2182,7 @@ The following state arguments are supported:
 <a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2225,7 +2191,7 @@ The following state arguments are supported:
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2234,7 +2200,7 @@ The following state arguments are supported:
 <a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2209,7 @@ The following state arguments are supported:
 <a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Sequence[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2218,7 @@ The following state arguments are supported:
 <a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd></dl>
@@ -2293,7 +2259,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer. Possible values include `Self` (for self-signed certificate), or `Unknown` (for a certificate issuing authority like `Let's Encrypt` and Azure direct supported ones). Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2306,7 +2272,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer. Possible values include `Self` (for self-signed certificate), or `Unknown` (for a certificate issuing authority like `Let's Encrypt` and Azure direct supported ones). Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2401,7 +2367,7 @@ The following state arguments are supported:
 <a href="#exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2410,7 +2376,7 @@ The following state arguments are supported:
 <a href="#keysize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate. Possible values include `2048`, `3072`, and `4096`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2419,7 +2385,7 @@ The following state arguments are supported:
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, such as `RSA`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2428,7 +2394,7 @@ The following state arguments are supported:
 <a href="#reusekey_nodejs" style="color: inherit; text-decoration: inherit;">reuse<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the key reusable? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2441,7 +2407,7 @@ The following state arguments are supported:
 <a href="#exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable? Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2450,7 +2416,7 @@ The following state arguments are supported:
 <a href="#key_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate. Possible values include `2048`, `3072`, and `4096`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2459,7 +2425,7 @@ The following state arguments are supported:
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, such as `RSA`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2468,7 +2434,7 @@ The following state arguments are supported:
 <a href="#reuse_key_python" style="color: inherit; text-decoration: inherit;">reuse_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2527,7 +2493,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2536,7 +2502,7 @@ The following state arguments are supported:
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2549,7 +2515,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2558,7 +2524,7 @@ The following state arguments are supported:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2599,7 +2565,7 @@ The following state arguments are supported:
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec. Possible values include `AutoRenew` and `EmailContacts`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2612,7 +2578,7 @@ The following state arguments are supported:
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec. Possible values include `AutoRenew` and `EmailContacts`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2671,7 +2637,7 @@ The following state arguments are supported:
 <a href="#daysbeforeexpiry_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Before<wbr>Expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `lifetime_percentage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2646,7 @@ The following state arguments are supported:
 <a href="#lifetimepercentage_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `days_before_expiry`.
 {{% /md %}}</dd></dl>
@@ -2693,7 +2659,7 @@ The following state arguments are supported:
 <a href="#days_before_expiry_python" style="color: inherit; text-decoration: inherit;">days_<wbr>before_<wbr>expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `lifetime_percentage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2668,7 @@ The following state arguments are supported:
 <a href="#lifetime_percentage_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `days_before_expiry`.
 {{% /md %}}</dd></dl>
@@ -2743,7 +2709,7 @@ The following state arguments are supported:
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, such as `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2756,7 +2722,7 @@ The following state arguments are supported:
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, such as `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2869,7 +2835,7 @@ The following state arguments are supported:
 <a href="#keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key. Possible values include `cRLSign`, `dataEncipherment`, `decipherOnly`, `digitalSignature`, `encipherOnly`, `keyAgreement`, `keyCertSign`, `keyEncipherment` and `nonRepudiation` and are case-sensitive. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2878,7 +2844,7 @@ The following state arguments are supported:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2887,7 +2853,7 @@ The following state arguments are supported:
 <a href="#validityinmonths_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>In<wbr>Months</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2896,7 +2862,7 @@ The following state arguments are supported:
 <a href="#extendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2905,7 +2871,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">pulumi.<wbr>Input<Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2918,7 +2884,7 @@ The following state arguments are supported:
 <a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key. Possible values include `cRLSign`, `dataEncipherment`, `decipherOnly`, `digitalSignature`, `encipherOnly`, `keyAgreement`, `keyCertSign`, `keyEncipherment` and `nonRepudiation` and are case-sensitive. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2927,7 +2893,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2936,7 +2902,7 @@ The following state arguments are supported:
 <a href="#validity_in_months_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>in_<wbr>months</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2945,7 +2911,7 @@ The following state arguments are supported:
 <a href="#extended_key_usages_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2954,7 +2920,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Input[Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3031,7 +2997,7 @@ The following state arguments are supported:
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3040,7 +3006,7 @@ The following state arguments are supported:
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3049,7 +3015,7 @@ The following state arguments are supported:
 <a href="#upns_nodejs" style="color: inherit; text-decoration: inherit;">upns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3062,7 +3028,7 @@ The following state arguments are supported:
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3071,7 +3037,7 @@ The following state arguments are supported:
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3080,7 +3046,7 @@ The following state arguments are supported:
 <a href="#upns_python" style="color: inherit; text-decoration: inherit;">upns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>

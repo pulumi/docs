@@ -174,38 +174,19 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                             <span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                             <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkConnectionMonitorDestinationArgs]]</span> = None<span class="p">,</span>
-                             <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkConnectionMonitorEndpointArgs]]]]</span> = None<span class="p">,</span>
-                             <span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                             <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkConnectionMonitorSourceArgs]]</span> = None<span class="p">,</span>
-                             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                             <span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkConnectionMonitorTestConfigurationArgs]]]]</span> = None<span class="p">,</span>
-                             <span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkConnectionMonitorTestGroupArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestGroupArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkConnectionMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkConnectionMonitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkConnectionMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,32 +221,22 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NetworkConnectionMonitorArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -274,7 +245,7 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -298,7 +269,7 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -587,7 +558,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -596,7 +567,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#networkwatcherid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -605,7 +576,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -614,7 +585,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -623,7 +594,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#autostart_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -631,7 +602,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -639,7 +610,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +618,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +627,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +636,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +645,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#outputworkspaceresourceids_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -683,7 +654,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +662,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
 {{% /md %}}</dd></dl>
@@ -704,7 +675,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Input[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -713,7 +684,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#network_watcher_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -722,7 +693,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -731,7 +702,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -740,7 +711,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#auto_start_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -748,7 +719,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Input[Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -756,7 +727,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +735,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +744,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +753,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +762,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#output_workspace_resource_ids_python" style="color: inherit; text-decoration: inherit;">output_<wbr>workspace_<wbr>resource_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -800,7 +771,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Input[Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +779,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
 {{% /md %}}</dd></dl>
@@ -877,35 +848,20 @@ Get an existing NetworkConnectionMonitor resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkConnectionMonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkConnectionMonitor</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkConnectionMonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkConnectionMonitor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkConnectionMonitorDestinationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkConnectionMonitorEndpointArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkConnectionMonitorSourceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkConnectionMonitorTestConfigurationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NetworkConnectionMonitorTestGroupArgs]]]]</span> = None<span class="p">) -&gt;</span> NetworkConnectionMonitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">test_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">test_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkConnectionMonitorTestGroupArgs]]</span> = None<span class="p">) -&gt;</span> NetworkConnectionMonitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkConnectionMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkConnectionMonitorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkConnectionMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkConnectionMonitorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkConnectionMonitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkConnectionMonitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NetworkConnectionMonitorState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkConnectionMonitor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NetworkConnectionMonitorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1248,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_autostart_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1256,7 +1212,7 @@ The following state arguments are supported:
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1220,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1273,7 +1229,7 @@ The following state arguments are supported:
 <a href="#state_intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1237,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1290,7 +1246,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1299,7 +1255,7 @@ The following state arguments are supported:
 <a href="#state_networkwatcherid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1264,7 @@ The following state arguments are supported:
 <a href="#state_notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_outputworkspaceresourceids_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1326,7 +1282,7 @@ The following state arguments are supported:
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1334,7 +1290,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1365,7 +1321,7 @@ The following state arguments are supported:
 <a href="#state_auto_start_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1373,7 +1329,7 @@ The following state arguments are supported:
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Input[Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1381,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Input[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpoint">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1390,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1398,7 +1354,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_network_watcher_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1390,7 @@ The following state arguments are supported:
 <a href="#state_output_workspace_resource_ids_python" style="color: inherit; text-decoration: inherit;">output_<wbr>workspace_<wbr>resource_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1443,7 +1399,7 @@ The following state arguments are supported:
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Input[Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1407,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1425,7 @@ The following state arguments are supported:
 <a href="#state_test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestgroup">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1555,7 +1511,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1564,7 +1520,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1573,7 +1529,7 @@ The following state arguments are supported:
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
@@ -1586,7 +1542,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1595,7 +1551,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1604,7 +1560,7 @@ The following state arguments are supported:
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
@@ -1699,7 +1655,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint for the Network Connection Monitor .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1708,7 +1664,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1673,7 @@ The following state arguments are supported:
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1682,7 @@ The following state arguments are supported:
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
 {{% /md %}}</dd></dl>
@@ -1739,7 +1695,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint for the Network Connection Monitor .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1704,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1713,7 @@ The following state arguments are supported:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Input[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1722,7 @@ The following state arguments are supported:
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
 {{% /md %}}</dd></dl>
@@ -1825,7 +1781,7 @@ The following state arguments are supported:
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1834,7 +1790,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour type of this endpoint filter. Currently the only allowed value is `Include`. Defaults to `Include`.
 {{% /md %}}</dd></dl>
@@ -1847,7 +1803,7 @@ The following state arguments are supported:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Input[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1856,7 +1812,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behaviour type of this endpoint filter. Currently the only allowed value is `Include`. Defaults to `Include`.
 {{% /md %}}</dd></dl>
@@ -1915,7 +1871,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the filter item.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1880,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of items included in the filter. Possible values are `AgentAddress`. Defaults to `AgentAddress`.
 {{% /md %}}</dd></dl>
@@ -1937,7 +1893,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the filter item.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1946,7 +1902,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of items included in the filter. Possible values are `AgentAddress`. Defaults to `AgentAddress`.
 {{% /md %}}</dd></dl>
@@ -2005,7 +1961,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2014,7 +1970,7 @@ The following state arguments are supported:
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
@@ -2027,7 +1983,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2036,7 +1992,7 @@ The following state arguments are supported:
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
@@ -2203,7 +2159,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of test configuration for the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-required"
@@ -2212,7 +2168,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used to evaluate tests. Possible values are `Tcp`, `Http` and `Icmp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2177,7 @@ The following state arguments are supported:
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2186,7 @@ The following state arguments are supported:
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2195,7 @@ The following state arguments are supported:
 <a href="#preferredipversion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Ip<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred IP version which is used in the test evaluation. Possible values are `IPv4` and `IPv6`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2248,7 +2204,7 @@ The following state arguments are supported:
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2257,7 +2213,7 @@ The following state arguments are supported:
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2222,7 @@ The following state arguments are supported:
 <a href="#testfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time interval in seconds at which the test evaluation will happen. Defaults to `60`.
 {{% /md %}}</dd></dl>
@@ -2279,7 +2235,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of test configuration for the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-required"
@@ -2288,7 +2244,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used to evaluate tests. Possible values are `Tcp`, `Http` and `Icmp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2253,7 @@ The following state arguments are supported:
 <a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2262,7 @@ The following state arguments are supported:
 <a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2271,7 @@ The following state arguments are supported:
 <a href="#preferred_ip_version_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>ip_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred IP version which is used in the test evaluation. Possible values are `IPv4` and `IPv6`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2280,7 @@ The following state arguments are supported:
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2289,7 @@ The following state arguments are supported:
 <a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2298,7 @@ The following state arguments are supported:
 <a href="#test_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">test_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time interval in seconds at which the test evaluation will happen. Defaults to `60`.
 {{% /md %}}</dd></dl>
@@ -2473,7 +2429,7 @@ The following state arguments are supported:
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Possible values are `Get` and `Post`. Defaults to `Get`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2438,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path component of the URI. It only accepts the absolute path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2447,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2456,7 @@ The following state arguments are supported:
 <a href="#preferhttps_nodejs" style="color: inherit; text-decoration: inherit;">prefer<wbr>Https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should HTTPS be preferred over HTTP in cases where the choice is not explicit? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2465,7 @@ The following state arguments are supported:
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2518,7 +2474,7 @@ The following state arguments are supported:
 <a href="#validstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Status<wbr>Code<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes to consider successful. For instance, `2xx`, `301-304` and `418`.
 {{% /md %}}</dd></dl>
@@ -2531,7 +2487,7 @@ The following state arguments are supported:
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Possible values are `Get` and `Post`. Defaults to `Get`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2540,7 +2496,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path component of the URI. It only accepts the absolute path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2549,7 +2505,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2558,7 +2514,7 @@ The following state arguments are supported:
 <a href="#prefer_https_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>https</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTPS be preferred over HTTP in cases where the choice is not explicit? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2523,7 @@ The following state arguments are supported:
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Input[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2576,7 +2532,7 @@ The following state arguments are supported:
 <a href="#valid_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>status_<wbr>code_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes to consider successful. For instance, `2xx`, `301-304` and `418`.
 {{% /md %}}</dd></dl>
@@ -2635,7 +2591,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header.
 {{% /md %}}</dd><dt class="property-required"
@@ -2644,7 +2600,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP header.
 {{% /md %}}</dd></dl>
@@ -2657,7 +2613,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header.
 {{% /md %}}</dd><dt class="property-required"
@@ -2666,7 +2622,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP header.
 {{% /md %}}</dd></dl>
@@ -2707,7 +2663,7 @@ The following state arguments are supported:
 <a href="#tracerouteenabled_nodejs" style="color: inherit; text-decoration: inherit;">trace<wbr>Route<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -2720,7 +2676,7 @@ The following state arguments are supported:
 <a href="#trace_route_enabled_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>route_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -2779,7 +2735,7 @@ The following state arguments are supported:
 <a href="#checksfailedpercent_nodejs" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to be successful.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2788,7 +2744,7 @@ The following state arguments are supported:
 <a href="#roundtriptimems_nodejs" style="color: inherit; text-decoration: inherit;">round<wbr>Trip<wbr>Time<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to be successful.
 {{% /md %}}</dd></dl>
@@ -2801,7 +2757,7 @@ The following state arguments are supported:
 <a href="#checks_failed_percent_python" style="color: inherit; text-decoration: inherit;">checks_<wbr>failed_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to be successful.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2766,7 @@ The following state arguments are supported:
 <a href="#round_trip_time_ms_python" style="color: inherit; text-decoration: inherit;">round_<wbr>trip_<wbr>time_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to be successful.
 {{% /md %}}</dd></dl>
@@ -2869,7 +2825,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2878,7 +2834,7 @@ The following state arguments are supported:
 <a href="#tracerouteenabled_nodejs" style="color: inherit; text-decoration: inherit;">trace<wbr>Route<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -2891,7 +2847,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2900,7 +2856,7 @@ The following state arguments are supported:
 <a href="#trace_route_enabled_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>route_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -3013,7 +2969,7 @@ The following state arguments are supported:
 <a href="#destinationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of destination endpoint names.
 {{% /md %}}</dd><dt class="property-required"
@@ -3022,7 +2978,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test group for the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-required"
@@ -3031,7 +2987,7 @@ The following state arguments are supported:
 <a href="#sourceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of source endpoint names.
 {{% /md %}}</dd><dt class="property-required"
@@ -3040,7 +2996,7 @@ The following state arguments are supported:
 <a href="#testconfigurationnames_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configuration<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of test configuration names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3049,7 +3005,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the test group be enabled? Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -3062,7 +3018,7 @@ The following state arguments are supported:
 <a href="#destination_endpoints_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of destination endpoint names.
 {{% /md %}}</dd><dt class="property-required"
@@ -3071,7 +3027,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test group for the Network Connection Monitor.
 {{% /md %}}</dd><dt class="property-required"
@@ -3080,7 +3036,7 @@ The following state arguments are supported:
 <a href="#source_endpoints_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of source endpoint names.
 {{% /md %}}</dd><dt class="property-required"
@@ -3089,7 +3045,7 @@ The following state arguments are supported:
 <a href="#test_configuration_names_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configuration_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of test configuration names.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3098,7 +3054,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the test group be enabled? Defaults to `true`.
 {{% /md %}}</dd></dl>

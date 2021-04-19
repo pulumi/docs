@@ -68,9 +68,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/mssql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -179,37 +179,19 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">auto_backup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineAutoBackupArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineAutoPatchingArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineKeyVaultCredentialArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineStorageConfigurationArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoBackupArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -244,32 +226,22 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -278,7 +250,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -302,7 +274,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -581,7 +553,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sqllicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -590,7 +562,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +571,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autobackup_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackup">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +580,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -617,7 +589,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#keyvaultcredential_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -626,7 +598,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Services<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +607,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sqlconnectivityport_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +616,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sqlconnectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -653,7 +625,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sqlconnectivityupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +634,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sqlconnectivityupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +643,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfiguration">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +652,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -693,7 +665,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sql_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -702,7 +674,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -711,7 +683,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#auto_backup_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackup">Input[Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -720,7 +692,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Input[Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +701,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Input[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -738,7 +710,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#r_services_enabled_python" style="color: inherit; text-decoration: inherit;">r_<wbr>services_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -747,7 +719,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sql_connectivity_port_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +728,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sql_connectivity_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +737,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sql_connectivity_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +746,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sql_connectivity_update_username_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +755,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storage_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +764,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -861,34 +833,20 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auto_backup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineAutoBackupArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineAutoPatchingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineKeyVaultCredentialArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualMachineStorageConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoBackupArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1221,7 +1179,7 @@ The following state arguments are supported:
 <a href="#state_autobackup_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackup">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1188,7 @@ The following state arguments are supported:
 <a href="#state_autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1197,7 @@ The following state arguments are supported:
 <a href="#state_keyvaultcredential_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1206,7 @@ The following state arguments are supported:
 <a href="#state_rservicesenabled_nodejs" style="color: inherit; text-decoration: inherit;">r<wbr>Services<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1215,7 @@ The following state arguments are supported:
 <a href="#state_sqlconnectivityport_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_sqlconnectivitytype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1233,7 @@ The following state arguments are supported:
 <a href="#state_sqlconnectivityupdatepassword_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1242,7 @@ The following state arguments are supported:
 <a href="#state_sqlconnectivityupdateusername_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Connectivity<wbr>Update<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1251,7 @@ The following state arguments are supported:
 <a href="#state_sqllicensetype_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>License<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1260,7 @@ The following state arguments are supported:
 <a href="#state_storageconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfiguration">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1269,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1278,7 @@ The following state arguments are supported:
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1333,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_auto_backup_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackup">Input[Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1300,7 @@ The following state arguments are supported:
 <a href="#state_auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Input[Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1309,7 @@ The following state arguments are supported:
 <a href="#state_key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Input[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1318,7 @@ The following state arguments are supported:
 <a href="#state_r_services_enabled_python" style="color: inherit; text-decoration: inherit;">r_<wbr>services_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_sql_connectivity_port_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1336,7 @@ The following state arguments are supported:
 <a href="#state_sql_connectivity_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1345,7 @@ The following state arguments are supported:
 <a href="#state_sql_connectivity_update_password_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1354,7 @@ The following state arguments are supported:
 <a href="#state_sql_connectivity_update_username_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>connectivity_<wbr>update_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_sql_license_type_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_storage_configuration_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1390,7 @@ The following state arguments are supported:
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1590,7 +1548,7 @@ The following state arguments are supported:
 <a href="#retentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1599,7 +1557,7 @@ The following state arguments are supported:
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account where backups will be kept.
 {{% /md %}}</dd><dt class="property-required"
@@ -1608,7 +1566,7 @@ The following state arguments are supported:
 <a href="#storageblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1575,7 @@ The following state arguments are supported:
 <a href="#encryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1584,7 @@ The following state arguments are supported:
 <a href="#encryptionpassword_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1593,7 @@ The following state arguments are supported:
 <a href="#manualschedule_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1602,7 @@ The following state arguments are supported:
 <a href="#systemdatabasesbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Databases<wbr>Backup<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -1657,7 +1615,7 @@ The following state arguments are supported:
 <a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1666,7 +1624,7 @@ The following state arguments are supported:
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account where backups will be kept.
 {{% /md %}}</dd><dt class="property-required"
@@ -1675,7 +1633,7 @@ The following state arguments are supported:
 <a href="#storage_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1642,7 @@ The following state arguments are supported:
 <a href="#encryption_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1651,7 @@ The following state arguments are supported:
 <a href="#encryption_password_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1660,7 @@ The following state arguments are supported:
 <a href="#manual_schedule_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Input[Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1669,7 @@ The following state arguments are supported:
 <a href="#system_databases_backup_enabled_python" style="color: inherit; text-decoration: inherit;">system_<wbr>databases_<wbr>backup_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -1806,7 +1764,7 @@ The following state arguments are supported:
 <a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd><dt class="property-required"
@@ -1815,7 +1773,7 @@ The following state arguments are supported:
 <a href="#fullbackupstarthour_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd><dt class="property-required"
@@ -1824,7 +1782,7 @@ The following state arguments are supported:
 <a href="#fullbackupwindowinhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd><dt class="property-required"
@@ -1833,7 +1791,7 @@ The following state arguments are supported:
 <a href="#logbackupfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd></dl>
@@ -1846,7 +1804,7 @@ The following state arguments are supported:
 <a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd><dt class="property-required"
@@ -1855,7 +1813,7 @@ The following state arguments are supported:
 <a href="#full_backup_start_hour_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd><dt class="property-required"
@@ -1864,7 +1822,7 @@ The following state arguments are supported:
 <a href="#full_backup_window_in_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd><dt class="property-required"
@@ -1873,7 +1831,7 @@ The following state arguments are supported:
 <a href="#log_backup_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
 {{% /md %}}</dd></dl>
@@ -1950,7 +1908,7 @@ The following state arguments are supported:
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
 {{% /md %}}</dd><dt class="property-required"
@@ -1959,7 +1917,7 @@ The following state arguments are supported:
 <a href="#maintenancewindowdurationinminutes_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
 {{% /md %}}</dd><dt class="property-required"
@@ -1968,7 +1926,7 @@ The following state arguments are supported:
 <a href="#maintenancewindowstartinghour_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
 {{% /md %}}</dd></dl>
@@ -1981,7 +1939,7 @@ The following state arguments are supported:
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
 {{% /md %}}</dd><dt class="property-required"
@@ -1990,7 +1948,7 @@ The following state arguments are supported:
 <a href="#maintenance_window_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
 {{% /md %}}</dd><dt class="property-required"
@@ -1999,7 +1957,7 @@ The following state arguments are supported:
 <a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
 {{% /md %}}</dd></dl>
@@ -2094,7 +2052,7 @@ The following state arguments are supported:
 <a href="#keyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2103,7 +2061,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credential name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2112,7 +2070,7 @@ The following state arguments are supported:
 <a href="#serviceprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2121,7 +2079,7 @@ The following state arguments are supported:
 <a href="#serviceprincipalsecret_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2134,7 +2092,7 @@ The following state arguments are supported:
 <a href="#key_vault_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2143,7 +2101,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credential name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2152,7 +2110,7 @@ The following state arguments are supported:
 <a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2161,7 +2119,7 @@ The following state arguments are supported:
 <a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2274,7 +2232,7 @@ The following state arguments are supported:
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2283,7 +2241,7 @@ The following state arguments are supported:
 <a href="#storageworkloadtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Workload<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2292,7 +2250,7 @@ The following state arguments are supported:
 <a href="#datasettings_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2259,7 @@ The following state arguments are supported:
 <a href="#logsettings_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2310,7 +2268,7 @@ The following state arguments are supported:
 <a href="#tempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd></dl>
@@ -2323,7 +2281,7 @@ The following state arguments are supported:
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of disk configuration to apply to the SQL Server. Valid values include `NEW`, `EXTEND`, or `ADD`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2332,7 +2290,7 @@ The following state arguments are supported:
 <a href="#storage_workload_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>workload_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of storage workload. Valid values include `GENERAL`, `OLTP`, or `DW`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2341,7 +2299,7 @@ The following state arguments are supported:
 <a href="#data_settings_python" style="color: inherit; text-decoration: inherit;">data_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2350,7 +2308,7 @@ The following state arguments are supported:
 <a href="#log_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2317,7 @@ The following state arguments are supported:
 <a href="#temp_db_settings_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>db_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Input[Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd></dl>
@@ -2418,7 +2376,7 @@ The following state arguments are supported:
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
 {{% /md %}}</dd><dt class="property-required"
@@ -2427,7 +2385,7 @@ The following state arguments are supported:
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd></dl>
@@ -2440,7 +2398,7 @@ The following state arguments are supported:
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
 {{% /md %}}</dd><dt class="property-required"
@@ -2449,7 +2407,7 @@ The following state arguments are supported:
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd></dl>
@@ -2508,7 +2466,7 @@ The following state arguments are supported:
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
 {{% /md %}}</dd><dt class="property-required"
@@ -2517,7 +2475,7 @@ The following state arguments are supported:
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd></dl>
@@ -2530,7 +2488,7 @@ The following state arguments are supported:
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
 {{% /md %}}</dd><dt class="property-required"
@@ -2539,7 +2497,7 @@ The following state arguments are supported:
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd></dl>
@@ -2598,7 +2556,7 @@ The following state arguments are supported:
 <a href="#defaultfilepath_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
 {{% /md %}}</dd><dt class="property-required"
@@ -2607,7 +2565,7 @@ The following state arguments are supported:
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd></dl>
@@ -2620,7 +2578,7 @@ The following state arguments are supported:
 <a href="#default_file_path_python" style="color: inherit; text-decoration: inherit;">default_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SQL Server default path
 {{% /md %}}</dd><dt class="property-required"
@@ -2629,7 +2587,7 @@ The following state arguments are supported:
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of Logical Unit Numbers for the disks.
 {{% /md %}}</dd></dl>

@@ -90,9 +90,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -225,37 +225,19 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                           <span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnServerConfigurationClientRevokedCertificateArgs]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnServerConfigurationClientRootCertificateArgs]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VpnServerConfigurationIpsecPolicyArgs]]</span> = None<span class="p">,</span>
-                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">radius</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VpnServerConfigurationRadiusArgs]]</span> = None<span class="p">,</span>
-                           <span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VpnServerConfigurationRadiusServerArgs]]</span> = None<span class="p">,</span>
-                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusArgs]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnServerConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnServerConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnServerConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnServerConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -290,32 +272,22 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VpnServerConfigurationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -324,7 +296,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -348,7 +320,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -627,7 +599,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -636,7 +608,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -645,7 +617,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#azureactivedirectoryauthentications_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +626,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#clientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -663,7 +635,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -672,7 +644,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -681,7 +653,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -690,7 +662,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -699,7 +671,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_nodejs" style="color: inherit; text-decoration: inherit;">radius</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradius">pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -708,7 +680,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
@@ -717,7 +689,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +698,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd></dl>
@@ -739,7 +711,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -748,7 +720,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -757,7 +729,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +738,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +747,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,7 +756,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +765,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +774,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +783,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_python" style="color: inherit; text-decoration: inherit;">radius</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradius">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -820,7 +792,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
@@ -829,7 +801,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +810,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd></dl>
@@ -907,34 +879,20 @@ Get an existing VpnServerConfiguration resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VpnServerConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpnServerConfiguration</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VpnServerConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpnServerConfiguration</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnServerConfigurationClientRevokedCertificateArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnServerConfigurationClientRootCertificateArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VpnServerConfigurationIpsecPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">radius</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VpnServerConfigurationRadiusArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VpnServerConfigurationRadiusServerArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> VpnServerConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_active_directory_authentications</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs]]</span> = None<span class="p">, </span><span class="nx">client_revoked_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRevokedCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">client_root_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnServerConfigurationClientRootCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">radius</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusArgs]</span> = None<span class="p">, </span><span class="nx">radius_server</span><span class="p">:</span> <span class="nx">Optional[VpnServerConfigurationRadiusServerArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpn_authentication_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> VpnServerConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnServerConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VpnServerConfigurationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnServerConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VpnServerConfigurationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnServerConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpnServerConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VpnServerConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpnServerConfiguration</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VpnServerConfigurationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1267,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_azureactivedirectoryauthentications_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1234,7 @@ The following state arguments are supported:
 <a href="#state_clientrevokedcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1243,7 @@ The following state arguments are supported:
 <a href="#state_clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1252,7 @@ The following state arguments are supported:
 <a href="#state_ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1261,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1279,7 @@ The following state arguments are supported:
 <a href="#state_radius_nodejs" style="color: inherit; text-decoration: inherit;">radius</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradius">pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1330,7 +1288,7 @@ The following state arguments are supported:
 <a href="#state_radiusserver_nodejs" style="color: inherit; text-decoration: inherit;">radius<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1339,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,7 +1306,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1315,7 @@ The following state arguments are supported:
 <a href="#state_vpnauthenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Authentication<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1324,7 @@ The following state arguments are supported:
 <a href="#state_vpnprotocols_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd></dl>
@@ -1379,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_azure_active_directory_authentications_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory_<wbr>authentications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_client_revoked_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>revoked_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1355,7 @@ The following state arguments are supported:
 <a href="#state_client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1364,7 @@ The following state arguments are supported:
 <a href="#state_ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1373,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1382,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_radius_python" style="color: inherit; text-decoration: inherit;">radius</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradius">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1442,7 +1400,7 @@ The following state arguments are supported:
 <a href="#state_radius_server_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1451,7 +1409,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1418,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1427,7 @@ The following state arguments are supported:
 <a href="#state_vpn_authentication_types_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>authentication_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1436,7 @@ The following state arguments are supported:
 <a href="#state_vpn_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd></dl>
@@ -1564,7 +1522,7 @@ The following state arguments are supported:
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
 {{% /md %}}</dd><dt class="property-required"
@@ -1573,7 +1531,7 @@ The following state arguments are supported:
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
 {{% /md %}}</dd><dt class="property-required"
@@ -1582,7 +1540,7 @@ The following state arguments are supported:
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
 {{% /md %}}</dd></dl>
@@ -1595,7 +1553,7 @@ The following state arguments are supported:
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
 {{% /md %}}</dd><dt class="property-required"
@@ -1604,7 +1562,7 @@ The following state arguments are supported:
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
 {{% /md %}}</dd><dt class="property-required"
@@ -1613,7 +1571,7 @@ The following state arguments are supported:
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
 {{% /md %}}</dd></dl>
@@ -1672,7 +1630,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -1681,7 +1639,7 @@ The following state arguments are supported:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -1694,7 +1652,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -1703,7 +1661,7 @@ The following state arguments are supported:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -1762,7 +1720,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -1771,7 +1729,7 @@ The following state arguments are supported:
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd></dl>
@@ -1784,7 +1742,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -1793,7 +1751,7 @@ The following state arguments are supported:
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd></dl>
@@ -1960,7 +1918,7 @@ The following state arguments are supported:
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1969,7 +1927,7 @@ The following state arguments are supported:
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1978,7 +1936,7 @@ The following state arguments are supported:
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1987,7 +1945,7 @@ The following state arguments are supported:
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1996,7 +1954,7 @@ The following state arguments are supported:
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2005,7 +1963,7 @@ The following state arguments are supported:
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2014,7 +1972,7 @@ The following state arguments are supported:
 <a href="#sadatasizekilobytes_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd><dt class="property-required"
@@ -2023,7 +1981,7 @@ The following state arguments are supported:
 <a href="#salifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd></dl>
@@ -2036,7 +1994,7 @@ The following state arguments are supported:
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2045,7 +2003,7 @@ The following state arguments are supported:
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2054,7 +2012,7 @@ The following state arguments are supported:
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2063,7 +2021,7 @@ The following state arguments are supported:
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2072,7 +2030,7 @@ The following state arguments are supported:
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2081,7 +2039,7 @@ The following state arguments are supported:
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2090,7 +2048,7 @@ The following state arguments are supported:
 <a href="#sa_data_size_kilobytes_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd><dt class="property-required"
@@ -2099,7 +2057,7 @@ The following state arguments are supported:
 <a href="#sa_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd></dl>
@@ -2176,7 +2134,7 @@ The following state arguments are supported:
 <a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2143,7 @@ The following state arguments are supported:
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2152,7 @@ The following state arguments are supported:
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2207,7 +2165,7 @@ The following state arguments are supported:
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2174,7 @@ The following state arguments are supported:
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2183,7 @@ The following state arguments are supported:
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2284,7 +2242,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2293,7 +2251,7 @@ The following state arguments are supported:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2306,7 +2264,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2315,7 +2273,7 @@ The following state arguments are supported:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2410,7 +2368,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -2419,7 +2377,7 @@ The following state arguments are supported:
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -2428,7 +2386,7 @@ The following state arguments are supported:
 <a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2395,7 @@ The following state arguments are supported:
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2450,7 +2408,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -2459,7 +2417,7 @@ The following state arguments are supported:
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -2468,7 +2426,7 @@ The following state arguments are supported:
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2477,7 +2435,7 @@ The following state arguments are supported:
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Input[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2536,7 +2494,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2545,7 +2503,7 @@ The following state arguments are supported:
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2558,7 +2516,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2567,7 +2525,7 @@ The following state arguments are supported:
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd></dl>
@@ -2626,7 +2584,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2635,7 +2593,7 @@ The following state arguments are supported:
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd></dl>
@@ -2648,7 +2606,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2657,7 +2615,7 @@ The following state arguments are supported:
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd></dl>
@@ -2716,7 +2674,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2725,7 +2683,7 @@ The following state arguments are supported:
 <a href="#publiccertdata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd></dl>
@@ -2738,7 +2696,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2747,7 +2705,7 @@ The following state arguments are supported:
 <a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd></dl>

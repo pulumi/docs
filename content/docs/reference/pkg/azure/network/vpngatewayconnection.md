@@ -19,31 +19,19 @@ Manages a VPN Gateway Connection.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">remote_vpn_site_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">routings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnGatewayConnectionRoutingArgs]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">vpn_links</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnGatewayConnectionVpnLinkArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_vpn_site_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routings</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayConnectionRoutingArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_links</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayConnectionVpnLinkArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnGatewayConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGatewayConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpnGatewayConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGatewayConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpnGatewayConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpnGatewayConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -78,32 +66,22 @@ Manages a VPN Gateway Connection.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VpnGatewayConnectionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -112,7 +90,7 @@ Manages a VPN Gateway Connection.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -136,7 +114,7 @@ Manages a VPN Gateway Connection.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -307,7 +285,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#remotevpnsiteid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -316,7 +294,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -325,7 +303,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vpnlinks_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -334,7 +312,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -343,7 +321,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -352,7 +330,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#routings_nodejs" style="color: inherit; text-decoration: inherit;">routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionrouting">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionrouting">Vpn<wbr>Gateway<wbr>Connection<wbr>Routing[]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
 {{% /md %}}</dd></dl>
@@ -365,7 +343,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#remote_vpn_site_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>vpn_<wbr>site_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -374,7 +352,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -383,7 +361,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#vpn_links_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Input[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -392,7 +370,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -401,7 +379,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -410,7 +388,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 <a href="#routings_python" style="color: inherit; text-decoration: inherit;">routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionrouting">Input[Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionrouting">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
 {{% /md %}}</dd></dl>
@@ -479,28 +457,20 @@ Get an existing VpnGatewayConnection resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VpnGatewayConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpnGatewayConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VpnGatewayConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpnGatewayConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">remote_vpn_site_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">routings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnGatewayConnectionRoutingArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpn_links</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VpnGatewayConnectionVpnLinkArgs]]]]</span> = None<span class="p">) -&gt;</span> VpnGatewayConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">internet_security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_vpn_site_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routings</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayConnectionRoutingArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_links</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayConnectionVpnLinkArgs]]</span> = None<span class="p">) -&gt;</span> VpnGatewayConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VpnGatewayConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGatewayConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnGatewayConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VpnGatewayConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpnGatewayConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpnGatewayConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VpnGatewayConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpnGatewayConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VpnGatewayConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -725,7 +695,7 @@ The following state arguments are supported:
 <a href="#state_internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +704,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +713,7 @@ The following state arguments are supported:
 <a href="#state_remotevpnsiteid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +722,7 @@ The following state arguments are supported:
 <a href="#state_routings_nodejs" style="color: inherit; text-decoration: inherit;">routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionrouting">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionrouting">Vpn<wbr>Gateway<wbr>Connection<wbr>Routing[]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +731,7 @@ The following state arguments are supported:
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +740,7 @@ The following state arguments are supported:
 <a href="#state_vpnlinks_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -783,7 +753,7 @@ The following state arguments are supported:
 <a href="#state_internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +762,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +771,7 @@ The following state arguments are supported:
 <a href="#state_remote_vpn_site_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>vpn_<wbr>site_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +780,7 @@ The following state arguments are supported:
 <a href="#state_routings_python" style="color: inherit; text-decoration: inherit;">routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionrouting">Input[Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionrouting">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +789,7 @@ The following state arguments are supported:
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +798,7 @@ The following state arguments are supported:
 <a href="#state_vpn_links_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Input[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -896,7 +866,7 @@ The following state arguments are supported:
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Table associated with this VPN Connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -905,7 +875,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list IDs of Route Tables to advertise the routes of this VPN Connection.
 {{% /md %}}</dd></dl>
@@ -918,7 +888,7 @@ The following state arguments are supported:
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Table associated with this VPN Connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -927,7 +897,7 @@ The following state arguments are supported:
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list IDs of Route Tables to advertise the routes of this VPN Connection.
 {{% /md %}}</dd></dl>
@@ -1148,7 +1118,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Link Connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -1157,7 +1127,7 @@ The following state arguments are supported:
 <a href="#vpnsitelinkid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the connected VPN Site Link. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1166,7 +1136,7 @@ The following state arguments are supported:
 <a href="#bandwidthmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected connection bandwidth in MBPS. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1175,7 +1145,7 @@ The following state arguments are supported:
 <a href="#bgpenabled_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the BGP be enabled? Defaults to `false`. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1184,7 +1154,7 @@ The following state arguments are supported:
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1193,7 +1163,7 @@ The following state arguments are supported:
 <a href="#localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use local azure ip to initiate connection? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1172,7 @@ The following state arguments are supported:
 <a href="#policybasedtrafficselectorenabled_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Based<wbr>Traffic<wbr>Selector<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable policy-based traffic selectors? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1181,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for this VPN Link Connection. Possible values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1190,7 @@ The following state arguments are supported:
 <a href="#ratelimitenabled_nodejs" style="color: inherit; text-decoration: inherit;">ratelimit<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the rate limit be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1199,7 @@ The following state arguments are supported:
 <a href="#routeweight_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Routing weight for this VPN Link Connection. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1208,7 @@ The following state arguments are supported:
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for this VPN Link Connection.
 {{% /md %}}</dd></dl>
@@ -1251,7 +1221,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Link Connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -1260,7 +1230,7 @@ The following state arguments are supported:
 <a href="#vpn_site_link_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>link_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the connected VPN Site Link. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1239,7 @@ The following state arguments are supported:
 <a href="#bandwidth_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>mbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected connection bandwidth in MBPS. Defaults to `10`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1248,7 @@ The following state arguments are supported:
 <a href="#bgp_enabled_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the BGP be enabled? Defaults to `false`. Changing this forces a new VPN Gateway Connection to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1257,7 @@ The following state arguments are supported:
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Input[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1266,7 @@ The following state arguments are supported:
 <a href="#local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use local azure ip to initiate connection? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1275,7 @@ The following state arguments are supported:
 <a href="#policy_based_traffic_selector_enabled_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>based_<wbr>traffic_<wbr>selector_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable policy-based traffic selectors? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1284,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for this VPN Link Connection. Possible values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1293,7 @@ The following state arguments are supported:
 <a href="#ratelimit_enabled_python" style="color: inherit; text-decoration: inherit;">ratelimit_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the rate limit be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1332,7 +1302,7 @@ The following state arguments are supported:
 <a href="#route_weight_python" style="color: inherit; text-decoration: inherit;">route_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Routing weight for this VPN Link Connection. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1341,7 +1311,7 @@ The following state arguments are supported:
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SharedKey for this VPN Link Connection.
 {{% /md %}}</dd></dl>
@@ -1508,7 +1478,7 @@ The following state arguments are supported:
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA. Possible values are `None`, `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1517,7 +1487,7 @@ The following state arguments are supported:
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1). Possible values are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1526,7 +1496,7 @@ The following state arguments are supported:
 <a href="#ikeencryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2). Possible values are `DES`, `DES3`, `AES128`, `AES192`, `AES256`, `GCMAES128`, `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1535,7 +1505,7 @@ The following state arguments are supported:
 <a href="#ikeintegrityalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2). Possible values are `MD5`, `SHA1`, `SHA256`, `SHA384`, `GCMAES128`, `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1544,7 +1514,7 @@ The following state arguments are supported:
 <a href="#integrityalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">integrity<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1). Possible values are `MD5`, `SHA1`, `SHA256`, `GCMAES128`, `GCMAES192`, `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1553,7 +1523,7 @@ The following state arguments are supported:
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for the new child SA. Possible values are `None`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM`, `ECP256`, `ECP384`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1562,7 +1532,7 @@ The following state arguments are supported:
 <a href="#sadatasizekb_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for the site to site VPN tunnel.
 {{% /md %}}</dd><dt class="property-required"
@@ -1571,7 +1541,7 @@ The following state arguments are supported:
 <a href="#salifetimesec_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for the site to site VPN tunnel.
 {{% /md %}}</dd></dl>
@@ -1584,7 +1554,7 @@ The following state arguments are supported:
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA. Possible values are `None`, `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1593,7 +1563,7 @@ The following state arguments are supported:
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1). Possible values are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, `None`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1602,7 +1572,7 @@ The following state arguments are supported:
 <a href="#ike_encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2). Possible values are `DES`, `DES3`, `AES128`, `AES192`, `AES256`, `GCMAES128`, `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1611,7 +1581,7 @@ The following state arguments are supported:
 <a href="#ike_integrity_algorithm_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2). Possible values are `MD5`, `SHA1`, `SHA256`, `SHA384`, `GCMAES128`, `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1620,7 +1590,7 @@ The following state arguments are supported:
 <a href="#integrity_algorithm_python" style="color: inherit; text-decoration: inherit;">integrity_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1). Possible values are `MD5`, `SHA1`, `SHA256`, `GCMAES128`, `GCMAES192`, `GCMAES256`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1629,7 +1599,7 @@ The following state arguments are supported:
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for the new child SA. Possible values are `None`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM`, `ECP256`, `ECP384`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1638,7 +1608,7 @@ The following state arguments are supported:
 <a href="#sa_data_size_kb_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for the site to site VPN tunnel.
 {{% /md %}}</dd><dt class="property-required"
@@ -1647,7 +1617,7 @@ The following state arguments are supported:
 <a href="#sa_lifetime_sec_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for the site to site VPN tunnel.
 {{% /md %}}</dd></dl>

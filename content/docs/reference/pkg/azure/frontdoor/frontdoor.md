@@ -26,38 +26,19 @@ Front Doors can be imported using the `resource id`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorBackendPoolHealthProbeArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorBackendPoolLoadBalancingArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorBackendPoolArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-              <span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorFrontendEndpointArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorRoutingRuleArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontdoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Frontdoor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFrontdoor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Frontdoor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Frontdoor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FrontdoorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -92,32 +73,22 @@ Front Doors can be imported using the `resource id`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FrontdoorArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -126,7 +97,7 @@ Front Doors can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -150,7 +121,7 @@ Front Doors can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -447,7 +418,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolhealthprobes_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -456,7 +427,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolloadbalancings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -465,7 +436,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -474,7 +445,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enforcebackendpoolscertificatenamecheck_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 {{% /md %}}</dd><dt class="property-required"
@@ -483,7 +454,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -492,7 +463,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -501,7 +472,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Routing<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">Frontdoor<wbr>Routing<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -510,7 +481,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolssendreceivetimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -519,7 +490,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the Front Door service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -528,7 +499,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#loadbalancerenabled_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -537,7 +508,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
@@ -546,7 +517,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Front Door service. Must be globally unique. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -555,7 +526,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -568,7 +539,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -577,7 +548,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -586,7 +557,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -595,7 +566,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#enforce_backend_pools_certificate_name_check_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>backend_<wbr>pools_<wbr>certificate_<wbr>name_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 {{% /md %}}</dd><dt class="property-required"
@@ -604,7 +575,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">Input[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">Sequence[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -613,7 +584,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -622,7 +593,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">Input[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">Sequence[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -631,7 +602,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pools_send_receive_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +611,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for the Front Door service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +620,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#load_balancer_enabled_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -658,7 +629,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
@@ -667,7 +638,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Front Door service. Must be globally unique. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -676,7 +647,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -997,42 +968,20 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FrontdoorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Frontdoor</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FrontdoorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Frontdoor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorBackendPoolHealthProbeArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_pool_health_probes_map</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_pool_load_balancing_settings_map</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorBackendPoolLoadBalancingArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorBackendPoolArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_pools_map</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorFrontendEndpointArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">frontend_endpoints_map</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FrontdoorRoutingRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">routing_rules_map</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancing_settings_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">routing_rules_map</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFrontdoor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FrontdoorState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Frontdoor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFrontdoor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FrontdoorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Frontdoor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Frontdoor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FrontdoorState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Frontdoor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FrontdoorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1509,7 +1458,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolhealthprobes_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1518,7 +1467,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolhealthprobesmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Health<wbr>Probes<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1527,7 +1476,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolloadbalancingsettingsmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Settings<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1536,7 +1485,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolloadbalancings_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1494,7 @@ The following state arguments are supported:
 <a href="#state_backendpools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1503,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolsmap_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1512,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolssendreceivetimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pools<wbr>Send<wbr>Receive<wbr>Timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1521,7 @@ The following state arguments are supported:
 <a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1530,7 @@ The following state arguments are supported:
 <a href="#state_enforcebackendpoolscertificatenamecheck_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Backend<wbr>Pools<wbr>Certificate<wbr>Name<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1539,7 @@ The following state arguments are supported:
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name for the Front Door service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_frontendendpointsmap_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_headerfrontdoorid_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Frontdoor<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1575,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancerenabled_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1635,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
@@ -1644,7 +1593,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Front Door service. Must be globally unique. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1602,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1662,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Routing<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">Frontdoor<wbr>Routing<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1620,7 @@ The following state arguments are supported:
 <a href="#state_routingrulesmap_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1680,7 +1629,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1693,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_health_probes_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Backend Pool Health Probe Names (key) to the Backend Pool Health Probe ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_load_balancing_settings_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancing_<wbr>settings_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Backend Pool Load Balancing Setting Names (key) to the Backend Pool Load Balancing Setting ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1678,7 @@ The following state arguments are supported:
 <a href="#state_backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_backend_pools_map_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Backend Pool Names (key) to the Backend Pool ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1696,7 @@ The following state arguments are supported:
 <a href="#state_backend_pools_send_receive_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools_<wbr>send_<wbr>receive_<wbr>timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the send and receive timeout on forwarding request to the backend. When the timeout is reached, the request fails and returns. Possible values are between `0` - `240`. Defaults to `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1705,7 @@ The following state arguments are supported:
 <a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1714,7 @@ The following state arguments are supported:
 <a href="#state_enforce_backend_pools_certificate_name_check_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>backend_<wbr>pools_<wbr>certificate_<wbr>name_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enforce certificate name check on `HTTPS` requests to all backend pools, this setting will have no effect on `HTTP` requests. Permitted values are `true` or `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name for the Front Door service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">Input[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">Sequence[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_frontend_endpoints_map_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_header_frontdoor_id_python" style="color: inherit; text-decoration: inherit;">header_<wbr>frontdoor_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of the Front Door which is embedded into the incoming headers `X-Azure-FDID` attribute and maybe used to filter traffic sent by the Front Door to your backend.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_load_balancer_enabled_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Front Door Load Balancer be Enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1819,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
@@ -1828,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Front Door service. Must be globally unique. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door service should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">Input[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">Sequence[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_routing_rules_map_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map/dictionary of Routing Rule Names (key) to the Routing Rule ID (value)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1986,7 +1935,7 @@ The following state arguments are supported:
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">pulumi.<wbr>Input<pulumi.<wbr>Input<Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1995,7 +1944,7 @@ The following state arguments are supported:
 <a href="#healthprobename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2004,7 +1953,7 @@ The following state arguments are supported:
 <a href="#loadbalancingname_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the `backend_pool_load_balancing` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2013,7 +1962,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2022,7 +1971,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd></dl>
@@ -2035,7 +1984,7 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Input[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2044,7 +1993,7 @@ The following state arguments are supported:
 <a href="#health_probe_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the `backend_pool_health_probe` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2053,7 +2002,7 @@ The following state arguments are supported:
 <a href="#load_balancing_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the `backend_pool_load_balancing` block within this resource to use for this `Backend Pool`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2062,7 +2011,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2071,7 +2020,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd></dl>
@@ -2220,7 +2169,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the backend (IP address or FQDN)
 {{% /md %}}</dd><dt class="property-required"
@@ -2229,7 +2178,7 @@ The following state arguments are supported:
 <a href="#hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to use as the host header sent to the backend.
 {{% /md %}}</dd><dt class="property-required"
@@ -2238,7 +2187,7 @@ The following state arguments are supported:
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP TCP port number. Possible values are between `1` - `65535`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2247,7 +2196,7 @@ The following state arguments are supported:
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTPS TCP port number. Possible values are between `1` - `65535`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2205,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the backend is enabled or not. Valid options are `true` or `false`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2214,7 @@ The following state arguments are supported:
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2274,7 +2223,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight of this endpoint for load balancing purposes. Defaults to `50`.
 {{% /md %}}</dd></dl>
@@ -2287,7 +2236,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the backend (IP address or FQDN)
 {{% /md %}}</dd><dt class="property-required"
@@ -2296,7 +2245,7 @@ The following state arguments are supported:
 <a href="#host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to use as the host header sent to the backend.
 {{% /md %}}</dd><dt class="property-required"
@@ -2305,7 +2254,7 @@ The following state arguments are supported:
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP TCP port number. Possible values are between `1` - `65535`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2314,7 +2263,7 @@ The following state arguments are supported:
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS TCP port number. Possible values are between `1` - `65535`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2272,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the backend is enabled or not. Valid options are `true` or `false`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2332,7 +2281,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy. Defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2341,7 +2290,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of this endpoint for load balancing purposes. Defaults to `50`.
 {{% /md %}}</dd></dl>
@@ -2490,7 +2439,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Health Probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2448,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this health probe enabled? Dafaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2457,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2466,7 @@ The following state arguments are supported:
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between each Health Probe. Defaults to `120`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2526,7 +2475,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to use for the Health Probe. Default is `/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2535,7 +2484,7 @@ The following state arguments are supported:
 <a href="#probemethod_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies HTTP method the health probe uses when querying the backend pool instances. Possible values include: `Get` and `Head`. Defaults to `Get`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2493,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for the Health Probe. Defaults to `Http`.
 {{% /md %}}</dd></dl>
@@ -2557,7 +2506,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Health Probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2566,7 +2515,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this health probe enabled? Dafaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2575,7 +2524,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2584,7 +2533,7 @@ The following state arguments are supported:
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between each Health Probe. Defaults to `120`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2593,7 +2542,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to use for the Health Probe. Default is `/`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2602,7 +2551,7 @@ The following state arguments are supported:
 <a href="#probe_method_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies HTTP method the health probe uses when querying the backend pool instances. Possible values include: `Get` and `Head`. Defaults to `Get`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2611,7 +2560,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol scheme to use for the Health Probe. Defaults to `Http`.
 {{% /md %}}</dd></dl>
@@ -2724,7 +2673,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2733,7 +2682,7 @@ The following state arguments are supported:
 <a href="#additionallatencymilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2691,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2751,7 +2700,7 @@ The following state arguments are supported:
 <a href="#samplesize_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions. Defaults to `4`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2760,7 +2709,7 @@ The following state arguments are supported:
 <a href="#successfulsamplesrequired_nodejs" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed. Defaults to `2`.
 {{% /md %}}</dd></dl>
@@ -2773,7 +2722,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Load Balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2782,7 +2731,7 @@ The following state arguments are supported:
 <a href="#additional_latency_milliseconds_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>latency_<wbr>milliseconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2791,7 +2740,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2800,7 +2749,7 @@ The following state arguments are supported:
 <a href="#sample_size_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of samples to consider for load balancing decisions. Defaults to `4`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2809,7 +2758,7 @@ The following state arguments are supported:
 <a href="#successful_samples_required_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>samples_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of samples within the sample period that must succeed. Defaults to `2`.
 {{% /md %}}</dd></dl>
@@ -2976,7 +2925,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the host name of the `frontend_endpoint`. Must be a domain name. In order to use a name.azurefd.net domain, the name value must match the Front Door name.
 {{% /md %}}</dd><dt class="property-required"
@@ -2985,7 +2934,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the `frontend_endpoint`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2994,7 +2943,7 @@ The following state arguments are supported:
 <a href="#customhttpsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">pulumi.<wbr>Input<Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -3003,7 +2952,7 @@ The following state arguments are supported:
 <a href="#customhttpsprovisioningenabled_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Https<wbr>Provisioning<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd><dt class="property-optional"
@@ -3012,7 +2961,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3021,7 +2970,7 @@ The following state arguments are supported:
 <a href="#sessionaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are `true` or `false` Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3030,7 +2979,7 @@ The following state arguments are supported:
 <a href="#sessionaffinityttlseconds_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL to use in seconds for session affinity, if applicable. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3039,7 +2988,7 @@ The following state arguments are supported:
 <a href="#webapplicationfirewallpolicylinkid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy `ID` for each host.
 {{% /md %}}</dd></dl>
@@ -3052,7 +3001,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the host name of the `frontend_endpoint`. Must be a domain name. In order to use a name.azurefd.net domain, the name value must match the Front Door name.
 {{% /md %}}</dd><dt class="property-required"
@@ -3061,7 +3010,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the `frontend_endpoint`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3070,7 +3019,7 @@ The following state arguments are supported:
 <a href="#custom_https_configuration_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Input[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -3079,7 +3028,7 @@ The following state arguments are supported:
 <a href="#custom_https_provisioning_enabled_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>provisioning_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the HTTPS protocol be enabled for a custom domain associated with the Front Door?
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd><dt class="property-optional"
@@ -3088,7 +3037,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3097,7 +3046,7 @@ The following state arguments are supported:
 <a href="#session_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow session affinity on this host. Valid options are `true` or `false` Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3106,7 +3055,7 @@ The following state arguments are supported:
 <a href="#session_affinity_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>ttl_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL to use in seconds for session affinity, if applicable. Defaults to `0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3115,7 +3064,7 @@ The following state arguments are supported:
 <a href="#web_application_firewall_policy_link_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>policy_<wbr>link_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy `ID` for each host.
 {{% /md %}}</dd></dl>
@@ -3264,7 +3213,7 @@ The following state arguments are supported:
 <a href="#azurekeyvaultcertificatesecretname_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Key Vault secret representing the full certificate PFX.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3273,7 +3222,7 @@ The following state arguments are supported:
 <a href="#azurekeyvaultcertificatesecretversion_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3282,7 +3231,7 @@ The following state arguments are supported:
 <a href="#azurekeyvaultcertificatevaultid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault containing the SSL certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3291,7 +3240,7 @@ The following state arguments are supported:
 <a href="#certificatesource_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate source to encrypted `HTTPS` traffic with. Allowed values are `FrontDoor` or `AzureKeyVault`. Defaults to `FrontDoor`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3300,7 +3249,7 @@ The following state arguments are supported:
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum client TLS version supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3309,7 +3258,7 @@ The following state arguments are supported:
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3318,7 +3267,7 @@ The following state arguments are supported:
 <a href="#provisioningsubstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Substate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning substate of the Front Door
 {{% /md %}}</dd></dl>
@@ -3331,7 +3280,7 @@ The following state arguments are supported:
 <a href="#azure_key_vault_certificate_secret_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Key Vault secret representing the full certificate PFX.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3340,7 +3289,7 @@ The following state arguments are supported:
 <a href="#azure_key_vault_certificate_secret_version_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>secret_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the Key Vault secret representing the full certificate PFX.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3349,7 +3298,7 @@ The following state arguments are supported:
 <a href="#azure_key_vault_certificate_vault_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault containing the SSL certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3358,7 +3307,7 @@ The following state arguments are supported:
 <a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate source to encrypted `HTTPS` traffic with. Allowed values are `FrontDoor` or `AzureKeyVault`. Defaults to `FrontDoor`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3367,7 +3316,7 @@ The following state arguments are supported:
 <a href="#minimum_tls_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum client TLS version supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3376,7 +3325,7 @@ The following state arguments are supported:
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Front Door.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3385,7 +3334,7 @@ The following state arguments are supported:
 <a href="#provisioning_substate_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>substate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning substate of the Front Door
 {{% /md %}}</dd></dl>
@@ -3552,7 +3501,7 @@ The following state arguments are supported:
 <a href="#acceptedprotocols_nodejs" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for the Backend Routing Rule. Defaults to `Http`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3561,7 +3510,7 @@ The following state arguments are supported:
 <a href="#frontendendpoints_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3570,7 +3519,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Routing Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -3579,7 +3528,7 @@ The following state arguments are supported:
 <a href="#patternstomatches_nodejs" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The route patterns for the Backend Routing Rule. Defaults to `/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3588,7 +3537,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`Enable` or `Disable` use of this Backend Routing Rule. Permitted values are `true` or `false`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3597,7 +3546,7 @@ The following state arguments are supported:
 <a href="#forwardingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">pulumi.<wbr>Input<Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3606,7 +3555,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3615,7 +3564,7 @@ The following state arguments are supported:
 <a href="#redirectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">pulumi.<wbr>Input<Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3628,7 +3577,7 @@ The following state arguments are supported:
 <a href="#accepted_protocols_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Protocol schemes to match for the Backend Routing Rule. Defaults to `Http`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3637,7 +3586,7 @@ The following state arguments are supported:
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the `frontend_endpoint` blocks within this resource to associate with this `routing_rule`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3646,7 +3595,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Routing Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -3655,7 +3604,7 @@ The following state arguments are supported:
 <a href="#patterns_to_matches_python" style="color: inherit; text-decoration: inherit;">patterns_<wbr>to_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The route patterns for the Backend Routing Rule. Defaults to `/*`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3664,7 +3613,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`Enable` or `Disable` use of this Backend Routing Rule. Permitted values are `true` or `false`. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3673,7 +3622,7 @@ The following state arguments are supported:
 <a href="#forwarding_configuration_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Input[Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3682,7 +3631,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FrontDoor.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3691,7 +3640,7 @@ The following state arguments are supported:
 <a href="#redirect_configuration_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Input[Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3822,7 +3771,7 @@ The following state arguments are supported:
 <a href="#backendpoolname_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Pool to forward the incoming traffic to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3831,7 +3780,7 @@ The following state arguments are supported:
 <a href="#cacheenabled_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to Enable caching or not. Valid options are `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3840,7 +3789,7 @@ The following state arguments are supported:
 <a href="#cachequeryparameterstripdirective_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll` or `StripNone`. Defaults to `StripAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3849,7 +3798,7 @@ The following state arguments are supported:
 <a href="#cacheusedynamiccompression_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Use<wbr>Dynamic<wbr>Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression when caching. Valid options are `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3858,7 +3807,7 @@ The following state arguments are supported:
 <a href="#customforwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to use when constructing the request to forward to the backend. This functions as a URL Rewrite. Default behaviour preserves the URL path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3867,7 +3816,7 @@ The following state arguments are supported:
 <a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol to use when redirecting. Valid options are `HttpOnly`, `HttpsOnly`, or `MatchRequest`. Defaults to `HttpsOnly`.
 {{% /md %}}</dd></dl>
@@ -3880,7 +3829,7 @@ The following state arguments are supported:
 <a href="#backend_pool_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Pool to forward the incoming traffic to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3889,7 +3838,7 @@ The following state arguments are supported:
 <a href="#cache_enabled_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to Enable caching or not. Valid options are `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3898,7 +3847,7 @@ The following state arguments are supported:
 <a href="#cache_query_parameter_strip_directive_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>query_<wbr>parameter_<wbr>strip_<wbr>directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll` or `StripNone`. Defaults to `StripAll`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3907,7 +3856,7 @@ The following state arguments are supported:
 <a href="#cache_use_dynamic_compression_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>use_<wbr>dynamic_<wbr>compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression when caching. Valid options are `true` or `false`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3916,7 +3865,7 @@ The following state arguments are supported:
 <a href="#custom_forwarding_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>forwarding_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to use when constructing the request to forward to the backend. This functions as a URL Rewrite. Default behaviour preserves the URL path.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3925,7 +3874,7 @@ The following state arguments are supported:
 <a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol to use when redirecting. Valid options are `HttpOnly`, `HttpsOnly`, or `MatchRequest`. Defaults to `HttpsOnly`.
 {{% /md %}}</dd></dl>
@@ -4056,7 +4005,7 @@ The following state arguments are supported:
 <a href="#redirectprotocol_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol to use when redirecting. Valid options are `HttpOnly`, `HttpsOnly`, or `MatchRequest`. Defaults to `MatchRequest`
 {{% /md %}}</dd><dt class="property-required"
@@ -4065,7 +4014,7 @@ The following state arguments are supported:
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status code for the redirect. Valida options are `Moved`, `Found`, `TemporaryRedirect`, `PermanentRedirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4074,7 +4023,7 @@ The following state arguments are supported:
 <a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination fragment in the portion of URL after '#'. Set this to add a fragment to the redirect URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4083,7 +4032,7 @@ The following state arguments are supported:
 <a href="#customhost_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set this to change the URL for the redirection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4092,7 +4041,7 @@ The following state arguments are supported:
 <a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to retain as per the incoming request, or update in the URL for the redirection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4101,7 +4050,7 @@ The following state arguments are supported:
 <a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Replace any existing query string from the incoming request URL.
 {{% /md %}}</dd></dl>
@@ -4114,7 +4063,7 @@ The following state arguments are supported:
 <a href="#redirect_protocol_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol to use when redirecting. Valid options are `HttpOnly`, `HttpsOnly`, or `MatchRequest`. Defaults to `MatchRequest`
 {{% /md %}}</dd><dt class="property-required"
@@ -4123,7 +4072,7 @@ The following state arguments are supported:
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status code for the redirect. Valida options are `Moved`, `Found`, `TemporaryRedirect`, `PermanentRedirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4132,7 +4081,7 @@ The following state arguments are supported:
 <a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination fragment in the portion of URL after '#'. Set this to add a fragment to the redirect URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4141,7 +4090,7 @@ The following state arguments are supported:
 <a href="#custom_host_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set this to change the URL for the redirection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4150,7 +4099,7 @@ The following state arguments are supported:
 <a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to retain as per the incoming request, or update in the URL for the redirection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4159,7 +4108,7 @@ The following state arguments are supported:
 <a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Replace any existing query string from the incoming request URL.
 {{% /md %}}</dd></dl>

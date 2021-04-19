@@ -76,10 +76,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/eventgrid"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -199,45 +199,19 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionAdvancedFilterArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionAzureFunctionEndpointArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionEventhubEndpointArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionHybridConnectionEndpointArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionRetryPolicyArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionStorageBlobDeadLetterDestinationArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionStorageQueueEndpointArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionSubjectFilterArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionWebhookEndpointArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -272,32 +246,22 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EventSubscriptionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -306,7 +270,7 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -330,7 +294,7 @@ const defaultEventSubscription = new azure.eventgrid.EventSubscription("defaultE
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -753,7 +717,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -762,7 +726,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -771,7 +735,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +744,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -789,7 +753,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -798,7 +762,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhubendpointid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +771,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -816,7 +780,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -825,7 +789,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#hybridconnectionendpointid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +798,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +807,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +816,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +825,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +834,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#servicebusqueueendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +843,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#servicebustopicendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +852,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +861,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -906,7 +870,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -915,7 +879,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -924,7 +888,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -937,7 +901,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +910,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#advanced_filter_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +919,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#azure_function_endpoint_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Input[Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +928,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -973,7 +937,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhub_endpoint_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Input[Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -982,7 +946,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhub_endpoint_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +955,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1000,7 +964,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#hybrid_connection_endpoint_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Input[Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1009,7 +973,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#hybrid_connection_endpoint_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +982,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +991,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1000,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1009,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Input[Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1018,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#service_bus_queue_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1027,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#service_bus_topic_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1036,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#storage_blob_dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Input[Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1081,7 +1045,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#storage_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Input[Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1054,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Input[Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1099,7 +1063,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1108,7 +1072,7 @@ The EventSubscription resource accepts the following [input]({{< relref "/docs/i
 <a href="#webhook_endpoint_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Input[Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1177,42 +1141,20 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EventSubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventSubscription</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EventSubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventSubscription</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionAdvancedFilterArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionAzureFunctionEndpointArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionEventhubEndpointArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionHybridConnectionEndpointArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionRetryPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionStorageBlobDeadLetterDestinationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionStorageQueueEndpointArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionSubjectFilterArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventSubscriptionWebhookEndpointArgs]]</span> = None<span class="p">) -&gt;</span> EventSubscription</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionEventhubEndpointArgs]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionHybridConnectionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[EventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">) -&gt;</span> EventSubscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EventSubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EventSubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventSubscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EventSubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventSubscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EventSubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1689,7 +1631,7 @@ The following state arguments are supported:
 <a href="#state_advancedfilter_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1640,7 @@ The following state arguments are supported:
 <a href="#state_azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_eventdeliveryschema_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1716,7 +1658,7 @@ The following state arguments are supported:
 <a href="#state_eventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1725,7 +1667,7 @@ The following state arguments are supported:
 <a href="#state_eventhubendpointid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1676,7 @@ The following state arguments are supported:
 <a href="#state_expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1743,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_hybridconnectionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1752,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_hybridconnectionendpointid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_includedeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Event<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_servicebusqueueendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Queue<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_servicebustopicendpointid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Topic<wbr>Endpoint<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_storageblobdeadletterdestination_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1775,7 @@ The following state arguments are supported:
 <a href="#state_storagequeueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1784,7 @@ The following state arguments are supported:
 <a href="#state_subjectfilter_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1851,7 +1793,7 @@ The following state arguments are supported:
 <a href="#state_topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1860,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_webhookendpoint_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1873,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_advanced_filter_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilter">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_azure_function_endpoint_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Input[Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionazurefunctionendpoint">Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1833,7 @@ The following state arguments are supported:
 <a href="#state_event_delivery_schema_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventSchemaV1_0`, `CustomInputSchema`. Defaults to `EventGridSchema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1900,7 +1842,7 @@ The following state arguments are supported:
 <a href="#state_eventhub_endpoint_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Input[Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptioneventhubendpoint">Event<wbr>Subscription<wbr>Eventhub<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `eventhub_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `eventhub_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1909,7 +1851,7 @@ The following state arguments are supported:
 <a href="#state_eventhub_endpoint_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Event Hub is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1860,7 @@ The following state arguments are supported:
 <a href="#state_expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the expiration time of the event subscription (Datetime Format `RFC 3339`).
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1927,7 +1869,7 @@ The following state arguments are supported:
 <a href="#state_hybrid_connection_endpoint_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Input[Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionhybridconnectionendpoint">Event<wbr>Subscription<wbr>Hybrid<wbr>Connection<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hybrid_connection_endpoint` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `hybrid_connection_endpoint_id`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1936,7 +1878,7 @@ The following state arguments are supported:
 <a href="#state_hybrid_connection_endpoint_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Hybrid Connection is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1887,7 @@ The following state arguments are supported:
 <a href="#state_included_event_types_python" style="color: inherit; text-decoration: inherit;">included_<wbr>event_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of applicable event types that need to be part of the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1954,7 +1896,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of labels to assign to the event subscription.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +1905,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +1914,7 @@ The following state arguments are supported:
 <a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Input[Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionretrypolicy">Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1981,7 +1923,7 @@ The following state arguments are supported:
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +1932,7 @@ The following state arguments are supported:
 <a href="#state_service_bus_queue_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>queue_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Queue is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1999,7 +1941,7 @@ The following state arguments are supported:
 <a href="#state_service_bus_topic_endpoint_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>topic_<wbr>endpoint_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id where the Service Bus Topic is located.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2008,7 +1950,7 @@ The following state arguments are supported:
 <a href="#state_storage_blob_dead_letter_destination_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>dead_<wbr>letter_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Input[Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstorageblobdeadletterdestination">Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2017,7 +1959,7 @@ The following state arguments are supported:
 <a href="#state_storage_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Input[Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionstoragequeueendpoint">Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2026,7 +1968,7 @@ The following state arguments are supported:
 <a href="#state_subject_filter_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Input[Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionsubjectfilter">Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2035,7 +1977,7 @@ The following state arguments are supported:
 <a href="#state_topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional/ **Deprecated) Specifies the name of the topic to associate with the event subscription.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been updated to readonly field since Apr 25, 2019 so no longer has any affect and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2044,7 +1986,7 @@ The following state arguments are supported:
 <a href="#state_webhook_endpoint_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Input[Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionwebhookendpoint">Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2292,7 +2234,7 @@ The following state arguments are supported:
 <a href="#boolequals_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2243,7 @@ The following state arguments are supported:
 <a href="#numbergreaterthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2310,7 +2252,7 @@ The following state arguments are supported:
 <a href="#numbergreaterthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2319,7 +2261,7 @@ The following state arguments are supported:
 <a href="#numberins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2328,7 +2270,7 @@ The following state arguments are supported:
 <a href="#numberlessthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2279,7 @@ The following state arguments are supported:
 <a href="#numberlessthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2346,7 +2288,7 @@ The following state arguments are supported:
 <a href="#numbernotins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2355,7 +2297,7 @@ The following state arguments are supported:
 <a href="#stringbeginswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Begins<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2364,7 +2306,7 @@ The following state arguments are supported:
 <a href="#stringcontains_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Contains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2373,7 +2315,7 @@ The following state arguments are supported:
 <a href="#stringendswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ends<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2382,7 +2324,7 @@ The following state arguments are supported:
 <a href="#stringins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2391,7 +2333,7 @@ The following state arguments are supported:
 <a href="#stringnotins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd></dl>
@@ -2404,7 +2346,7 @@ The following state arguments are supported:
 <a href="#bool_equals_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterboolequal">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2413,7 +2355,7 @@ The following state arguments are supported:
 <a href="#number_greater_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>than_<wbr>or_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthanorequal">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2364,7 @@ The following state arguments are supported:
 <a href="#number_greater_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbergreaterthan">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2431,7 +2373,7 @@ The following state arguments are supported:
 <a href="#number_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2440,7 +2382,7 @@ The following state arguments are supported:
 <a href="#number_less_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>than_<wbr>or_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthanorequal">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2449,7 +2391,7 @@ The following state arguments are supported:
 <a href="#number_less_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumberlessthan">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2400,7 @@ The following state arguments are supported:
 <a href="#number_not_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>not_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilternumbernotin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2467,7 +2409,7 @@ The following state arguments are supported:
 <a href="#string_begins_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>begins_<wbr>withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringbeginswith">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2476,7 +2418,7 @@ The following state arguments are supported:
 <a href="#string_contains_python" style="color: inherit; text-decoration: inherit;">string_<wbr>contains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringcontain">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2485,7 +2427,7 @@ The following state arguments are supported:
 <a href="#string_ends_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ends_<wbr>withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringendswith">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2494,7 +2436,7 @@ The following state arguments are supported:
 <a href="#string_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2503,7 +2445,7 @@ The following state arguments are supported:
 <a href="#string_not_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Input[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventsubscriptionadvancedfilterstringnotin">Sequence[Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd></dl>
@@ -2562,7 +2504,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2571,7 +2513,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2584,7 +2526,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2593,7 +2535,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2652,7 +2594,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2661,7 +2603,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2674,7 +2616,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2683,7 +2625,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2742,7 +2684,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2751,7 +2693,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2764,7 +2706,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2773,7 +2715,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2832,7 +2774,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2841,7 +2783,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -2854,7 +2796,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2863,7 +2805,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -2922,7 +2864,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2931,7 +2873,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -2944,7 +2886,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -2953,7 +2895,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -3012,7 +2954,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3021,7 +2963,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -3034,7 +2976,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3043,7 +2985,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
 {{% /md %}}</dd></dl>
@@ -3102,7 +3044,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3111,7 +3053,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3124,7 +3066,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3133,7 +3075,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3192,7 +3134,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3201,7 +3143,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3214,7 +3156,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3223,7 +3165,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3282,7 +3224,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3291,7 +3233,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3304,7 +3246,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3313,7 +3255,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3372,7 +3314,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3381,7 +3323,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3394,7 +3336,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3403,7 +3345,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3462,7 +3404,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3471,7 +3413,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3484,7 +3426,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3493,7 +3435,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3552,7 +3494,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3561,7 +3503,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3574,7 +3516,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd><dt class="property-required"
@@ -3583,7 +3525,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3660,7 +3602,7 @@ The following state arguments are supported:
 <a href="#functionid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3669,7 +3611,7 @@ The following state arguments are supported:
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3678,7 +3620,7 @@ The following state arguments are supported:
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd></dl>
@@ -3691,7 +3633,7 @@ The following state arguments are supported:
 <a href="#function_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Function where the Event Subscription will receive events. This must be the functions ID in format {function_app.id}/functions/{name}.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3700,7 +3642,7 @@ The following state arguments are supported:
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3709,7 +3651,7 @@ The following state arguments are supported:
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd></dl>
@@ -3750,7 +3692,7 @@ The following state arguments are supported:
 <a href="#eventhubid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the eventhub where the Event Subscription will receive events.
 {{% /md %}}</dd></dl>
@@ -3763,7 +3705,7 @@ The following state arguments are supported:
 <a href="#eventhub_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the eventhub where the Event Subscription will receive events.
 {{% /md %}}</dd></dl>
@@ -3804,7 +3746,7 @@ The following state arguments are supported:
 <a href="#hybridconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">hybrid<wbr>Connection<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the hybrid connection where the Event Subscription will receive events.
 {{% /md %}}</dd></dl>
@@ -3817,7 +3759,7 @@ The following state arguments are supported:
 <a href="#hybrid_connection_id_python" style="color: inherit; text-decoration: inherit;">hybrid_<wbr>connection_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the hybrid connection where the Event Subscription will receive events.
 {{% /md %}}</dd></dl>
@@ -3876,7 +3818,7 @@ The following state arguments are supported:
 <a href="#eventtimetolive_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>To<wbr>Live</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3885,7 +3827,7 @@ The following state arguments are supported:
 <a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
 {{% /md %}}</dd></dl>
@@ -3898,7 +3840,7 @@ The following state arguments are supported:
 <a href="#event_time_to_live_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>to_<wbr>live</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (in minutes) for events. Supported range is `1` to `1440`. Defaults to `1440`. See [official documentation](https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-retry-policy) for more details.
 {{% /md %}}</dd><dt class="property-required"
@@ -3907,7 +3849,7 @@ The following state arguments are supported:
 <a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of delivery retry attempts for events.
 {{% /md %}}</dd></dl>
@@ -3966,7 +3908,7 @@ The following state arguments are supported:
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage blob is located.
 {{% /md %}}</dd><dt class="property-required"
@@ -3975,7 +3917,7 @@ The following state arguments are supported:
 <a href="#storageblobcontainername_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
 {{% /md %}}</dd></dl>
@@ -3988,7 +3930,7 @@ The following state arguments are supported:
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage blob is located.
 {{% /md %}}</dd><dt class="property-required"
@@ -3997,7 +3939,7 @@ The following state arguments are supported:
 <a href="#storage_blob_container_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Storage blob container that is the destination of the deadletter events.
 {{% /md %}}</dd></dl>
@@ -4056,7 +3998,7 @@ The following state arguments are supported:
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
 {{% /md %}}</dd><dt class="property-required"
@@ -4065,7 +4007,7 @@ The following state arguments are supported:
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage queue is located.
 {{% /md %}}</dd></dl>
@@ -4078,7 +4020,7 @@ The following state arguments are supported:
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage queue where the Event Subscription will receive events.
 {{% /md %}}</dd><dt class="property-required"
@@ -4087,7 +4029,7 @@ The following state arguments are supported:
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account id where the storage queue is located.
 {{% /md %}}</dd></dl>
@@ -4164,7 +4106,7 @@ The following state arguments are supported:
 <a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if `subject_begins_with` and `subject_ends_with` case sensitive. This value defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4173,7 +4115,7 @@ The following state arguments are supported:
 <a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path prefix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4182,7 +4124,7 @@ The following state arguments are supported:
 <a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path suffix.
 {{% /md %}}</dd></dl>
@@ -4195,7 +4137,7 @@ The following state arguments are supported:
 <a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `subject_begins_with` and `subject_ends_with` case sensitive. This value defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4204,7 +4146,7 @@ The following state arguments are supported:
 <a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path prefix.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4213,7 +4155,7 @@ The following state arguments are supported:
 <a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string to filter events for an event subscription based on a resource path suffix.
 {{% /md %}}</dd></dl>
@@ -4344,7 +4286,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4353,7 +4295,7 @@ The following state arguments are supported:
 <a href="#activedirectoryappidoruri_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>App<wbr>Id<wbr>Or<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4362,7 +4304,7 @@ The following state arguments are supported:
 <a href="#activedirectorytenantid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4371,7 +4313,7 @@ The following state arguments are supported:
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4380,7 +4322,7 @@ The following state arguments are supported:
 <a href="#maxeventsperbatch_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Events<wbr>Per<wbr>Batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4389,7 +4331,7 @@ The following state arguments are supported:
 <a href="#preferredbatchsizeinkilobytes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Batch<wbr>Size<wbr>In<wbr>Kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd></dl>
@@ -4402,7 +4344,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the url of the webhook where the Event Subscription will receive events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4411,7 +4353,7 @@ The following state arguments are supported:
 <a href="#active_directory_app_id_or_uri_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>app_<wbr>id_<wbr>or_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4420,7 +4362,7 @@ The following state arguments are supported:
 <a href="#active_directory_tenant_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4429,7 +4371,7 @@ The following state arguments are supported:
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base url of the webhook where the Event Subscription will receive events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4438,7 +4380,7 @@ The following state arguments are supported:
 <a href="#max_events_per_batch_python" style="color: inherit; text-decoration: inherit;">max_<wbr>events_<wbr>per_<wbr>batch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of events per batch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4447,7 +4389,7 @@ The following state arguments are supported:
 <a href="#preferred_batch_size_in_kilobytes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>batch_<wbr>size_<wbr>in_<wbr>kilobytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Preferred batch size in Kilobytes.
 {{% /md %}}</dd></dl>

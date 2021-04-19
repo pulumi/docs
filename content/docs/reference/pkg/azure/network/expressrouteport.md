@@ -59,9 +59,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -144,35 +144,19 @@ const exampleExpressRoutePort = new azure.network.ExpressRoutePort("exampleExpre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRoutePortIdentityArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">link1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRoutePortLink1Args]]</span> = None<span class="p">,</span>
-                     <span class="nx">link2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRoutePortLink2Args]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ExpressRoutePortIdentityArgs]</span> = None<span class="p">, </span><span class="nx">link1</span><span class="p">:</span> <span class="nx">Optional[ExpressRoutePortLink1Args]</span> = None<span class="p">, </span><span class="nx">link2</span><span class="p">:</span> <span class="nx">Optional[ExpressRoutePortLink2Args]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRoutePort</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRoutePort</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRoutePort</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRoutePort</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRoutePort</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRoutePortArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,32 +191,22 @@ const exampleExpressRoutePort = new azure.network.ExpressRoutePort("exampleExpre
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ExpressRoutePortArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -241,7 +215,7 @@ const exampleExpressRoutePort = new azure.network.ExpressRoutePort("exampleExpre
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -265,7 +239,7 @@ const exampleExpressRoutePort = new azure.network.ExpressRoutePort("exampleExpre
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -508,7 +482,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#bandwidthingbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Gbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -517,7 +491,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_nodejs" style="color: inherit; text-decoration: inherit;">encapsulation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation method used for the Express Route Port. Changing this forces a new Express Route Port to be created. Possible values are: `Dot1Q`, `QinQ`.
 {{% /md %}}</dd><dt class="property-required"
@@ -526,7 +500,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering location that this Express Route Port is physically mapped to. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -535,7 +509,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -544,7 +518,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportidentity">pulumi.<wbr>Input<Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +527,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#link1_nodejs" style="color: inherit; text-decoration: inherit;">link1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink1">pulumi.<wbr>Input<Express<wbr>Route<wbr>Port<wbr>Link1Args></a></span>
+        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -562,7 +536,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#link2_nodejs" style="color: inherit; text-decoration: inherit;">link2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink2">pulumi.<wbr>Input<Express<wbr>Route<wbr>Port<wbr>Link2Args></a></span>
+        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -571,7 +545,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -580,7 +554,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Express Route Port. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +563,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Express Route Port.
 {{% /md %}}</dd></dl>
@@ -602,7 +576,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#bandwidth_in_gbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>gbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -611,7 +585,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#encapsulation_python" style="color: inherit; text-decoration: inherit;">encapsulation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encapsulation method used for the Express Route Port. Changing this forces a new Express Route Port to be created. Possible values are: `Dot1Q`, `QinQ`.
 {{% /md %}}</dd><dt class="property-required"
@@ -620,7 +594,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#peering_location_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering location that this Express Route Port is physically mapped to. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -629,7 +603,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +612,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportidentity">Input[Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +621,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#link1_python" style="color: inherit; text-decoration: inherit;">link1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink1">Input[Express<wbr>Route<wbr>Port<wbr>Link1Args]</a></span>
+        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +630,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#link2_python" style="color: inherit; text-decoration: inherit;">link2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink2">Input[Express<wbr>Route<wbr>Port<wbr>Link2Args]</a></span>
+        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +639,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +648,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Express Route Port. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +657,7 @@ The ExpressRoutePort resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Express Route Port.
 {{% /md %}}</dd></dl>
@@ -860,35 +834,20 @@ Get an existing ExpressRoutePort resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ExpressRoutePortState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ExpressRoutePort</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ExpressRoutePortState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ExpressRoutePort</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ethertype</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRoutePortIdentityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">link1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRoutePortLink1Args]]</span> = None<span class="p">,</span>
-        <span class="nx">link2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRoutePortLink2Args]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> ExpressRoutePort</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encapsulation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ethertype</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ExpressRoutePortIdentityArgs]</span> = None<span class="p">, </span><span class="nx">link1</span><span class="p">:</span> <span class="nx">Optional[ExpressRoutePortLink1Args]</span> = None<span class="p">, </span><span class="nx">link2</span><span class="p">:</span> <span class="nx">Optional[ExpressRoutePortLink2Args]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ExpressRoutePort</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExpressRoutePort<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ExpressRoutePortState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRoutePort</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExpressRoutePort<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ExpressRoutePortState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRoutePort</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ExpressRoutePort</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ExpressRoutePortState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ExpressRoutePort</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ExpressRoutePortState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1239,7 +1198,7 @@ The following state arguments are supported:
 <a href="#state_bandwidthingbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Gbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1207,7 @@ The following state arguments are supported:
 <a href="#state_encapsulation_nodejs" style="color: inherit; text-decoration: inherit;">encapsulation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation method used for the Express Route Port. Changing this forces a new Express Route Port to be created. Possible values are: `Dot1Q`, `QinQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1216,7 @@ The following state arguments are supported:
 <a href="#state_ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The EtherType of the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_guid_nodejs" style="color: inherit; text-decoration: inherit;">guid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource GUID of the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1234,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportidentity">pulumi.<wbr>Input<Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1243,7 @@ The following state arguments are supported:
 <a href="#state_link1_nodejs" style="color: inherit; text-decoration: inherit;">link1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink1">pulumi.<wbr>Input<Express<wbr>Route<wbr>Port<wbr>Link1Args></a></span>
+        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1252,7 @@ The following state arguments are supported:
 <a href="#state_link2_nodejs" style="color: inherit; text-decoration: inherit;">link2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink2">pulumi.<wbr>Input<Express<wbr>Route<wbr>Port<wbr>Link2Args></a></span>
+        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1261,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit of the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1279,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Express Route Port. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1288,7 @@ The following state arguments are supported:
 <a href="#state_peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering location that this Express Route Port is physically mapped to. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1306,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Express Route Port.
 {{% /md %}}</dd></dl>
@@ -1360,7 +1319,7 @@ The following state arguments are supported:
 <a href="#state_bandwidth_in_gbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>gbps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Bandwidth of the Express Route Port in Gbps. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_encapsulation_python" style="color: inherit; text-decoration: inherit;">encapsulation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encapsulation method used for the Express Route Port. Changing this forces a new Express Route Port to be created. Possible values are: `Dot1Q`, `QinQ`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The EtherType of the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_guid_python" style="color: inherit; text-decoration: inherit;">guid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource GUID of the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1355,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportidentity">Input[Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressrouteportidentity">Express<wbr>Route<wbr>Port<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1364,7 @@ The following state arguments are supported:
 <a href="#state_link1_python" style="color: inherit; text-decoration: inherit;">link1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink1">Input[Express<wbr>Route<wbr>Port<wbr>Link1Args]</a></span>
+        <span class="property-type"><a href="#expressrouteportlink1">Express<wbr>Route<wbr>Port<wbr>Link1Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1373,7 @@ The following state arguments are supported:
 <a href="#state_link2_python" style="color: inherit; text-decoration: inherit;">link2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressrouteportlink2">Input[Express<wbr>Route<wbr>Port<wbr>Link2Args]</a></span>
+        <span class="property-type"><a href="#expressrouteportlink2">Express<wbr>Route<wbr>Port<wbr>Link2Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `link` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1382,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit of the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1400,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Express Route Port. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1409,7 @@ The following state arguments are supported:
 <a href="#state_peering_location_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering location that this Express Route Port is physically mapped to. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1459,7 +1418,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Express Route Port should exist. Changing this forces a new Express Route Port to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1427,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Express Route Port.
 {{% /md %}}</dd></dl>
@@ -1536,7 +1495,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the identity used for the Express Route Port. Currently, the only possible values is `UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,7 +1504,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list with a single user managed identity id to be assigned to the Express Route Port. Currently, exactly one id is allowed to specify.
 {{% /md %}}</dd></dl>
@@ -1558,7 +1517,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the identity used for the Express Route Port. Currently, the only possible values is `UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1526,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list with a single user managed identity id to be assigned to the Express Route Port. Currently, exactly one id is allowed to specify.
 {{% /md %}}</dd></dl>
@@ -1770,7 +1729,7 @@ The following state arguments are supported:
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether enable administration state on the Express Route Port Link? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1738,7 @@ The following state arguments are supported:
 <a href="#connectortype_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connector type of the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1747,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1756,7 @@ The following state arguments are supported:
 <a href="#interfacename_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interface name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1765,7 @@ The following state arguments are supported:
 <a href="#macseccakkeyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Cak<wbr>Keyvault<wbr>Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the Mac security CAK key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1774,7 @@ The following state arguments are supported:
 <a href="#macseccipher_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MACSec cipher used for this Express Route Port Link. Possible values are `GcmAes128` and `GcmAes256`. Defaults to `GcmAes128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1783,7 @@ The following state arguments are supported:
 <a href="#macseccknkeyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Ckn<wbr>Keyvault<wbr>Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the MACSec CKN key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1792,7 @@ The following state arguments are supported:
 <a href="#patchpanelid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Panel<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the Express Route Port Link to the patch panel port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1801,7 @@ The following state arguments are supported:
 <a href="#rackid_nodejs" style="color: inherit; text-decoration: inherit;">rack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the patch panel port to the rack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1810,7 @@ The following state arguments are supported:
 <a href="#routername_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd></dl>
@@ -1864,7 +1823,7 @@ The following state arguments are supported:
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable administration state on the Express Route Port Link? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1832,7 @@ The following state arguments are supported:
 <a href="#connector_type_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connector type of the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1841,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1850,7 @@ The following state arguments are supported:
 <a href="#interface_name_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interface name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1859,7 @@ The following state arguments are supported:
 <a href="#macsec_cak_keyvault_secret_id_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>cak_<wbr>keyvault_<wbr>secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the Mac security CAK key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1868,7 @@ The following state arguments are supported:
 <a href="#macsec_cipher_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MACSec cipher used for this Express Route Port Link. Possible values are `GcmAes128` and `GcmAes256`. Defaults to `GcmAes128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1877,7 @@ The following state arguments are supported:
 <a href="#macsec_ckn_keyvault_secret_id_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>ckn_<wbr>keyvault_<wbr>secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the MACSec CKN key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1886,7 @@ The following state arguments are supported:
 <a href="#patch_panel_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>panel_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the Express Route Port Link to the patch panel port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1895,7 @@ The following state arguments are supported:
 <a href="#rack_id_python" style="color: inherit; text-decoration: inherit;">rack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the patch panel port to the rack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1904,7 @@ The following state arguments are supported:
 <a href="#router_name_python" style="color: inherit; text-decoration: inherit;">router_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd></dl>
@@ -2148,7 +2107,7 @@ The following state arguments are supported:
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether enable administration state on the Express Route Port Link? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2157,7 +2116,7 @@ The following state arguments are supported:
 <a href="#connectortype_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connector type of the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2125,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2134,7 @@ The following state arguments are supported:
 <a href="#interfacename_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interface name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2143,7 @@ The following state arguments are supported:
 <a href="#macseccakkeyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Cak<wbr>Keyvault<wbr>Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the Mac security CAK key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2193,7 +2152,7 @@ The following state arguments are supported:
 <a href="#macseccipher_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MACSec cipher used for this Express Route Port Link. Possible values are `GcmAes128` and `GcmAes256`. Defaults to `GcmAes128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2202,7 +2161,7 @@ The following state arguments are supported:
 <a href="#macseccknkeyvaultsecretid_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Ckn<wbr>Keyvault<wbr>Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the MACSec CKN key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2170,7 @@ The following state arguments are supported:
 <a href="#patchpanelid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Panel<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the Express Route Port Link to the patch panel port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +2179,7 @@ The following state arguments are supported:
 <a href="#rackid_nodejs" style="color: inherit; text-decoration: inherit;">rack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the patch panel port to the rack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2188,7 @@ The following state arguments are supported:
 <a href="#routername_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd></dl>
@@ -2242,7 +2201,7 @@ The following state arguments are supported:
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable administration state on the Express Route Port Link? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2251,7 +2210,7 @@ The following state arguments are supported:
 <a href="#connector_type_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connector type of the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2260,7 +2219,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2269,7 +2228,7 @@ The following state arguments are supported:
 <a href="#interface_name_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interface name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2278,7 +2237,7 @@ The following state arguments are supported:
 <a href="#macsec_cak_keyvault_secret_id_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>cak_<wbr>keyvault_<wbr>secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the Mac security CAK key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2287,7 +2246,7 @@ The following state arguments are supported:
 <a href="#macsec_cipher_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>cipher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MACSec cipher used for this Express Route Port Link. Possible values are `GcmAes128` and `GcmAes256`. Defaults to `GcmAes128`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2296,7 +2255,7 @@ The following state arguments are supported:
 <a href="#macsec_ckn_keyvault_secret_id_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>ckn_<wbr>keyvault_<wbr>secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret that contains the MACSec CKN key for this Express Route Port Link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,7 +2264,7 @@ The following state arguments are supported:
 <a href="#patch_panel_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>panel_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the Express Route Port Link to the patch panel port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2314,7 +2273,7 @@ The following state arguments are supported:
 <a href="#rack_id_python" style="color: inherit; text-decoration: inherit;">rack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID that maps from the patch panel port to the rack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2282,7 @@ The following state arguments are supported:
 <a href="#router_name_python" style="color: inherit; text-decoration: inherit;">router_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure router associated with the Express Route Port Link.
 {{% /md %}}</dd></dl>
