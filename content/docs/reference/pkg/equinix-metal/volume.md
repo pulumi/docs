@@ -18,19 +18,33 @@ meta_desc: "Documentation for the equinix-metal.Volume resource with examples, i
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[Union[str, Facility]]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeSnapshotPolicyArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, BillingCycle]]]</span> = None<span class="p">,</span>
+           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Facility]]]</span> = None<span class="p">,</span>
+           <span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+           <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+           <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+           <span class="nx">snapshot_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VolumeSnapshotPolicyArgs]]]]</span> = None<span class="p">)</span>
+<span class=nd>@overload</span>
+<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span>
+           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -65,22 +79,32 @@ meta_desc: "Documentation for the equinix-metal.Volume resource with examples, i
 
 {{% choosable language python %}}
 
-<dl class="resources-properties">
-    <dt class="property-required" title="Required">
+<dl class="resources-properties"><dt
+        class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>The unique name of the resource.</dd>
-    <dt class="property-optional" title="Optional">
+    <dd>
+      The unique name of the resource.
+    </dd><dt
+        class="property-required" title="Required">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
+    </dt>
+    <dd>
+      The arguments to resource properties.
+    </dd><dt
+        class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">
-            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
-        </span>
+        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>A bag of options that control this resource's behavior.</dd>
-</dl>
+    <dd>
+      Bag of options to control resource&#39;s behavior.
+    </dd></dl>
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +113,7 @@ meta_desc: "Documentation for the equinix-metal.Volume resource with examples, i
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +137,7 @@ meta_desc: "Documentation for the equinix-metal.Volume resource with examples, i
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -320,7 +344,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#facility">pulumi<wbr>Input<Facility></a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd><dt class="property-required"
@@ -329,7 +353,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd><dt class="property-required"
@@ -338,7 +362,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
 {{% /md %}}</dd><dt class="property-required"
@@ -347,7 +371,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -356,7 +380,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#billingcycle">pulumi<wbr>Input<Billing<wbr>Cycle></a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd><dt class="property-optional"
@@ -365,7 +389,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -374,7 +398,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -383,7 +407,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshotpolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#volumesnapshotpolicy">pulumi<wbr>Input<pulumi<wbr>Input<Volume<wbr>Snapshot<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd></dl>
@@ -396,7 +420,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#facility">Input[Facility]</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd><dt class="property-required"
@@ -405,7 +429,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd><dt class="property-required"
@@ -414,7 +438,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
 {{% /md %}}</dd><dt class="property-required"
@@ -423,7 +447,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -432,7 +456,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#billingcycle">Input[Billing<wbr>Cycle]</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd><dt class="property-optional"
@@ -441,7 +465,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -450,7 +474,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -459,7 +483,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshot_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpolicy">Sequence[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumesnapshotpolicy">Input[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd></dl>
@@ -708,20 +732,35 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeAttachmentArgs]]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[Union[str, Facility]]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeSnapshotPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">attachments</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VolumeAttachmentArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, BillingCycle]]]</span> = None<span class="p">,</span>
+        <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Facility]]]</span> = None<span class="p">,</span>
+        <span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
+        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VolumeSnapshotPolicyArgs]]]]</span> = None<span class="p">,</span>
+        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
+        <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1072,7 +1111,7 @@ The following state arguments are supported:
 <a href="#state_attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachment">Volume<wbr>Attachment[]</a></span>
+        <span class="property-type"><a href="#volumeattachment">pulumi<wbr>Input<pulumi<wbr>Input<Volume<wbr>Attachment<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd><dt class="property-optional"
@@ -1081,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#billingcycle">pulumi<wbr>Input<Billing<wbr>Cycle></a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1129,7 @@ The following state arguments are supported:
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1138,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#facility">pulumi<wbr>Input<Facility></a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">pulumi.<wbr>Input<boolean></span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_snapshotpolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy[]</a></span>
+        <span class="property-type"><a href="#volumesnapshotpolicy">pulumi<wbr>Input<pulumi<wbr>Input<Volume<wbr>Snapshot<wbr>Policy<wbr>Args>[]></a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd></dl>
@@ -1193,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachment">Sequence[Volume<wbr>Attachment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumeattachment">Input[Volume<wbr>Attachment<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#billingcycle">Input[Billing<wbr>Cycle]</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#facility">Facility</a></span>
+        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#facility">Input[Facility]</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">pulumi.<wbr>Input[bool]</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The name of the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_snapshot_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpolicy">Sequence[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumesnapshotpolicy">Input[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]]]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The state of the volume
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
 {{% /md %}}</dd></dl>
@@ -1497,7 +1536,7 @@ The following state arguments are supported:
 <a href="#href_nodejs" style="color: inherit; text-decoration: inherit;">href</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1509,7 +1548,7 @@ The following state arguments are supported:
 <a href="#href_python" style="color: inherit; text-decoration: inherit;">href</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1563,7 +1602,7 @@ The following state arguments are supported:
 <a href="#snapshotcount_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">pulumi.<wbr>Input<number></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1610,7 @@ The following state arguments are supported:
 <a href="#snapshotfrequency_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">pulumi.<wbr>Input<string></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1583,7 +1622,7 @@ The following state arguments are supported:
 <a href="#snapshot_count_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">pulumi.<wbr>Input[int]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1591,7 +1630,7 @@ The following state arguments are supported:
 <a href="#snapshot_frequency_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">pulumi.<wbr>Input[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
